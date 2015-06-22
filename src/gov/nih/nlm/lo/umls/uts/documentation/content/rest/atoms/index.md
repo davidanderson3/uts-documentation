@@ -55,7 +55,7 @@ Calls under /atoms will return JSON objects of classType='Atom'.
 **The default for calls under /atom is to return Atom Information.**
 
 ```
-//json
+json
 [
     {
         "name": "Benign paroxysmal positional vertigo",
