@@ -17,6 +17,6 @@ POST | [https://utslogin.nlm.nih.gov/cas/v1/tickets/{TGT}](authentication.html) 
 ### Webservice URIs (Base URI - https://uts-ws.nlm.nih.gov)
 Method Type|Sample URI|Description
 --- | --- | ---
-GET | [/rest/{version}/search](/rest/search/index.html)| Retrieves CUIs when searching by term or code.
-GET | [/rest/content/{version}/CUI/{CUI}](/rest/concepts/index.html) | Retrieves concepts and information about concepts.
-GET | [/rest/content/{version}/CUI/{CUI}/atoms/](/rest/atoms/index.html) | Retrieves atoms and information about atoms.
+GET | [/rest/{version}/search](/rest/search/)| Retrieves CUIs when searching by term or code.
+GET | [/rest/content/{version}/CUI/{CUI}](/rest/concept/) | Retrieves concepts and information about concepts.
+GET | [/rest/content/{version}/CUI/{CUI}/atoms/](/rest/atoms/) | Retrieves atoms and information about atoms.
