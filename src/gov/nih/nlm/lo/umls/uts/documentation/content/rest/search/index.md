@@ -54,8 +54,7 @@ you will get back source-asserted identifiers instead of CUIs.
 
 **The default for calls under /search is to return UMLS CUIs.**
 
-```
-//json
+~~~~json
 {
 
     "results": 
@@ -85,13 +84,11 @@ you will get back source-asserted identifiers instead of CUIs.
     "classType": "searchResults"
 
 }
-
-```
+~~~~
 
 **Specifying returnIdType = 'code','sourceConcept',or 'sourceDescriptor' will result in output as follows:**
 
-```
-//json
+~~~~json
 {
 
     "results": 
@@ -125,4 +122,4 @@ you will get back source-asserted identifiers instead of CUIs.
 
 }
 
-```
+~~~~

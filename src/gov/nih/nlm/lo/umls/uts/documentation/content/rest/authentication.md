@@ -19,9 +19,9 @@ The UTS REST authentication involves 2 steps:
 
 Use your service tickets the value for the 'ticket' query parameter in GET calls to https://uts-ws.nlm.nih.gov/rest, such as:
 
-```
+~~~~xml
 https://uts-ws.nlm.nih.gov/rest/content/current/CUI/C0018787?ticket=ST-134-HUbXGfI765aSj0UqtdvU-cas
-```
+~~~~
 
 
 ### URIs
@@ -35,23 +35,21 @@ Call # | Type of Request|URI|Required Parameters| Parameter values |Description
 
 ###Sample Output:
 
-**The response to the POST call for getting a TGT (your TGT of course will be unique)**
+**The response to the POST call for getting a TGT (your TGT of course will be unique):**
 
-<pre>
-&lt;!DOCTYPE HTML PUBLIC "-//IETF//DTD HTML 2.0//EN"&gt;&lt;html&gt;
-&lt;head&gt;
-&lt;title&gt;201 The request has been fulfilled and resulted in a new resource being created&lt;/title&gt;&lt;/head&gt;
-&lt;body&gt;&lt;h1&gt;TGT Created&lt;/h1&gt;
-&lt;form action="https://utslogin.nlm.nih.gov/cas/v1/tickets/TGT-36471-aYqNLN2rFIJPXKzxwdTNC5ZT7z3B3cTAKfSc5ndHQcUxeaDOLN-cas" method="POST"&gt;Service:&lt;input type="text" name="service" value=""&gt;
-&lt;br&gt;&lt;input type="submit" value="Submit"&gt;&lt;/form&gt;
-&lt;/body&gt;&lt;/html&gt;
+~~~~xml
+<!DOCTYPE HTML PUBLIC "-//IETF//DTD HTML 2.0//EN"><html>
+<head>
+<title>201 The request has been fulfilled and resulted in a new resource being created</title></head>
+<body><h1>TGT Created</h1>
+<form action="https://utslogin.nlm.nih.gov/cas/v1/tickets/TGT-36471-aYqNLN2rFIJPXKzxwdTNC5ZT7z3B3cTAKfSc5ndHQcUxeaDOLN-cas" method="POST">Service:<input type="text" name="service" value="">
+<br><input type="submit" value="Submit"></form>
+</body></html>
 
-take the 'action' attribute of the form element and re-use it as your URI to get a service ticket as in call #2 above.
+<!--take the 'action' attribute of the form element and re-use it as your URI to get a service ticket as in call #2 above.-->
+~~~~
 
-</pre>
-
-
-**Service Ticket**
+**Response to a POST call for a service ticket:**
 ```
 ST-134-HUbXGfI765aSj0UqtdvU-cas
 ```

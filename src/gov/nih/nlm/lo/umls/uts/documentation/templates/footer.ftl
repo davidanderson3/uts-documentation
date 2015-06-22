@@ -15,12 +15,5 @@
     <script src="<#if (content.rootpath)??>${content.rootpath}<#else></#if>js/bootstrap.min.js"></script>
     <script src="<#if (content.rootpath)??>${content.rootpath}<#else></#if>js/prettify.js"></script>
     <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/8.6/highlight.min.js"></script>
-    <script language = "text/javascript">
-    $(document).ready(function() {
-       $('pre code').each(function(i, block) {
-       hljs.highlightBlock(block);
-       });
-    });  
-    </script>
   </body>
 </html>

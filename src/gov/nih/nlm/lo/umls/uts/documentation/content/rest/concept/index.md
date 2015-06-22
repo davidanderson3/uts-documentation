@@ -50,8 +50,7 @@ pageSize | N | Whole number that specifies the number of results to include per 
 
 **The default for calls under /search is to return UMLS CUIs.**
 
-```
-//json
+~~~~json
 {
     "name": "Closed fracture carpal bone",
     "dateAdded": "09-30-1990",
@@ -71,4 +70,4 @@ pageSize | N | Whole number that specifies the number of results to include per 
     "ui": "C0009044",
     "classType": "Concept"
 }
-```
+~~~~
