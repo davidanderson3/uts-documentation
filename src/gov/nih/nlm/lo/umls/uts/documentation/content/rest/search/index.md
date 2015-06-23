@@ -1,4 +1,4 @@
-title=Searching the UTS REST API (alpha)
+title=Searching the UMLS
 date=2015-06-08
 type=page
 status=published

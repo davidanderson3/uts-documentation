@@ -14,6 +14,7 @@
     <link href="<#if (content.rootpath)??>${content.rootpath}<#else></#if>css/asciidoctor.css" rel="stylesheet">
     <link href="<#if (content.rootpath)??>${content.rootpath}<#else></#if>css/base.css" rel="stylesheet">
     <link href="<#if (content.rootpath)??>${content.rootpath}<#else></#if>css/prettify.css" rel="stylesheet">
+    <link href="<#if (content.rootpath)??>${content.rootpath}<#else></#if>css/uts-docs.css" rel="stylesheet">
     <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/8.6/styles/default.min.css">
 
     <!-- HTML5 shim, for IE6-8 support of HTML5 elements -->
@@ -34,9 +35,4 @@
      <div class="container-fluid">
       <!--header to hold banner + top navigation area -->
       <!-- responsive design header using bootstrap css framework -->
-     <div class = "row header">
-     <div class="container-fluid col-md-6 col-sm-8 col-xs-12">
-     <a href="${content.rootpath}rest/home.html"><img class= "nlm-logo img-responsive" alt="National Library of Medicine" src="<#if (content.rootpath)??>${content.rootpath}<#else></#if>images/uts_tree_sm.jpg"></a>
-     </div>
-     </div>
    
