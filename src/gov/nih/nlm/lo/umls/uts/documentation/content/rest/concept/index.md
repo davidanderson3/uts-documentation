@@ -28,7 +28,7 @@ You may use any valid UMLS release back to 2008AA in your URI if you would like 
 Sample URI|Description
 --- | ---
 [/content/current/CUI/C0009044/](#samples.html)| Retrieves CUI
-[/content/current/CUI/C0009044/atoms/](/atoms/index.html) | Retrieve atoms in a CUI
+[/content/current/CUI/C0009044/atoms/](/rest/atoms/index.html) | Retrieve atoms in a CUI
 /content/current/CUI/C0009044/definitions | Retrieve CUI definitions
 /content/current/CUI/C0009044/relations | Retrieve CUI relations
 
