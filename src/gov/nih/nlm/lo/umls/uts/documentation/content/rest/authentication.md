@@ -1,4 +1,4 @@
-title=UTS REST API Authentication
+title=User Authentication
 date=2015-06-10
 type=page
 status=published
@@ -7,7 +7,6 @@ status=published
 
 **API Version:** 0.1 alpha
 
-## User Authentication
 
 **Each call to https://uts-ws.nlm.nih.gov/rest requires a Service Ticket as a query parmeter.
 A service ticket is good for one call and will expire after 5 minutes if not used.**

@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!DOCTYPE html>  
 <html lang="en">
   <head>
     <meta charset="utf-8"/>
@@ -31,5 +31,12 @@
 
   </head>
   <body onload="prettyPrint();hljs.initHighlighting();">
-    <div id="wrap">
+     <div class="container-fluid">
+      <!--header to hold banner + top navigation area -->
+      <!-- responsive design header using bootstrap css framework -->
+     <div class = "row header">
+     <div class="container-fluid col-md-6 col-sm-8 col-xs-12">
+     <a href="${content.rootpath}rest/home.html"><img class= "nlm-logo img-responsive" alt="National Library of Medicine" src="<#if (content.rootpath)??>${content.rootpath}<#else></#if>images/uts_tree_sm.jpg"></a>
+     </div>
+     </div>
    

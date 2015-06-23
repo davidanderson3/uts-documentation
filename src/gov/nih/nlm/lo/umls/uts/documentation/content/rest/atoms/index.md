@@ -1,4 +1,4 @@
-title=Finding UMLS Atom Information with the UTS REST API
+title=Retrieving atoms in the UMLS
 date=2015-06-12
 type=page
 status=published
@@ -9,7 +9,6 @@ status=published
 
 [URIs](#uris) | [Query Parameters](#parameters) | [Sample Output](#samples)
 
-## Finding UMLS Atom Information over REST URIs.
 URIs with /atoms support the following use cases
 
 *  Retreive atoms of a UMLS concept (CUI).

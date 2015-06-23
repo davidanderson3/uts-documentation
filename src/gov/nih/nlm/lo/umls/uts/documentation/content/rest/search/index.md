@@ -9,7 +9,6 @@ status=published
 
 [URIs](#uris) | [Query Parameters](#parameters) | [Sample Output](#samples)
 
-## Searching the UMLS over REST URIs.
 URIs with /search support the following use cases
 
 *  Return a list of CUIs and their names when searching a human readable term.

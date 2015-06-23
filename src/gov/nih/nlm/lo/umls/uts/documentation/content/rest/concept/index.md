@@ -1,4 +1,4 @@
-title=Finding UMLS Concept Information with the UTS REST API
+title=Retrieving concept information in the UMLS
 date=2015-06-12
 type=page
 status=published
@@ -8,8 +8,6 @@ status=published
 **API Version:** 0.1 alpha
 
 [URIs](#uris) | [Query Parameters](#parameters) | [Sample Output](#samples)
-
-## Finding UMLS Concept Information over REST URIs.
 
 URIs with /CUI support the following use cases:
 

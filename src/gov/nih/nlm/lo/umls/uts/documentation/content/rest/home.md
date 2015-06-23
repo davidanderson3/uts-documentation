@@ -4,8 +4,6 @@ type=page
 status=published
 ~~~~~~
 
-## UTS REST API home page
-
 **API Version:** 0.1 alpha
 
 ### Authentication Service URIs
