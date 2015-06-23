@@ -11,7 +11,7 @@ status=published
 
 URIs with /atoms support the following use cases
 
-*  Retreive atoms of a UMLS concept (CUI).
+*  Retrieve atoms of a UMLS concept (CUI).
 *  Retrieve atoms of a source-asserted identifier or code.
 *  Retrieve atom information, such as relations to other atoms, attributes, or definitions.
 *  Retrieve membership information of an atom (to which CUI, code, or content view does an atom belong).

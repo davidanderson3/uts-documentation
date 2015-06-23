@@ -34,21 +34,24 @@ Call # | Type of Request|URI|Required Parameters| Parameter values |Description
 
 ###Sample Output:
 
-**The response to the POST call for getting a TGT (your TGT of course will be unique):**
+**Sample response to the POST call for getting a TGT (your TGT of course will be unique):**
 
 ~~~~xml
-<!DOCTYPE HTML PUBLIC "-//IETF//DTD HTML 2.0//EN"><html>
+<!DOCTYPE HTML PUBLIC "-//IETF//DTD HTML 2.0//EN">
+<html>
 <head>
 <title>201 The request has been fulfilled and resulted in a new resource being created</title></head>
 <body><h1>TGT Created</h1>
 <form action="https://utslogin.nlm.nih.gov/cas/v1/tickets/TGT-36471-aYqNLN2rFIJPXKzxwdTNC5ZT7z3B3cTAKfSc5ndHQcUxeaDOLN-cas" method="POST">Service:<input type="text" name="service" value="">
 <br><input type="submit" value="Submit"></form>
-</body></html>
+</body>
+</html>
 
 <!--take the 'action' attribute of the form element and re-use it as your URI to get a service ticket as in call #2 above.-->
 ~~~~
 
-**Response to a POST call for a service ticket:**
-```
+**Sample Response to a POST call for a service ticket:**
+
+~~~~tex
 ST-134-HUbXGfI765aSj0UqtdvU-cas
-```
+~~~~

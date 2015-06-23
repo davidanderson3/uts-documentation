@@ -1,14 +1,31 @@
+.header {
+   background-color:#134181; 
+}
+
+.uts-nav{
+    
+    padding:.2em;
+    border:none;
+    border-top: solid 2px white;
+    border-radius: 0 !important;
+}
+
+
 h1 {
 font-size: 2em;    
 }
 
-.title {
+.uts-title {
 
 font-size: 1.5em;
 font-weight: bold;
-margin-left:10px;
+padding-top:.5em;
+margin-left:3em;
 
 }
 .orange{  
 color: #ff9900;
 }
+
+
+
