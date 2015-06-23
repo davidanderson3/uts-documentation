@@ -4,7 +4,7 @@
   </div>
 </div>
 <div class = "row uts-nav">
-  <div class="container-fluid navbar navbar-default col-md-12 col-sm-8 col-xs-6" role="navigation"">
+  <div class="container-fluid navbar navbar-default col-md-12 col-sm-8 col-xs-6" role="navigation">
         <a href="${content.rootpath}rest/home.html"><img class= "img-responsive pull-left" style = "padding-top:.2em; padding-left:1em;" alt="National Library of Medicine" style="margin-right:1em;" src="<#if (content.rootpath)??>${content.rootpath}<#else></#if>umls-xs.gif"></a>
         <p class = "orange uts-title">  UMLS REST API Technical Documentation</p>
      <div class = "row">
