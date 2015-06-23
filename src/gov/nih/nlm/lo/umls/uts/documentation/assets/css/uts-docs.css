@@ -1,12 +1,13 @@
 .header {
-   background-color:#134181; 
+   background-color:#134181;
+   border-bottom:solid 2px #4F88D9;
 }
 
 .uts-nav{
     
     padding:.2em;
     border:none;
-    border-top: solid 2px white;
+    border: solid 2px #e7eeeb;
     border-radius: 0 !important;
 }
 
