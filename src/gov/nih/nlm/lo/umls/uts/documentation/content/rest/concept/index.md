@@ -9,7 +9,7 @@ status=published
 
 [URIs](#uris) | [Query Parameters](#parameters) | [Sample Output](#samples)
 
-URIs with /CUI support the following use cases:
+URIs with /concept/{CUI} support the following use cases:
 
 *  Retrieve information (name, semantic types, number of atoms, etc) for a known CUI from latest UMLS version or a specific release.
 *  Retrieve atoms for a known CUI.
@@ -34,7 +34,7 @@ Sample URI|Description
 
 
 <a name = "parameters"></a>
-### Available query parameters in /search
+### Available query parameters in /concept/{CUI}
 
 Parameter name | Required? Y/N | Description|  Valid Values | Default value | Usage Note
 --- | ---
@@ -46,7 +46,7 @@ pageSize | N | Whole number that specifies the number of results to include per 
 ### Sample Output
 
 
-**The default for calls under /search is to return UMLS CUIs.**
+**The default for calls under /concept/{CUI} is to return UMLS CUIs.**
 
 ~~~~json
 {
