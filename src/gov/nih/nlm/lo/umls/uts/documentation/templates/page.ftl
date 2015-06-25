@@ -5,7 +5,6 @@
 	<div class = "container-fluid col-md-12 col-sm-8 col-xs-6">
         <p style="color:red;font-weight:bold;">NOTE: The UMLS REST API is currently in alpha mode and is not production ready.</p>
 	<h1><#escape x as x?xml>${content.title}</#escape></h1>
-	<p><em>Last updated: ${content.date?string("dd MMMM yyyy")}</em></p>
 	${content.body}
 
 	</div><!--end row-->
