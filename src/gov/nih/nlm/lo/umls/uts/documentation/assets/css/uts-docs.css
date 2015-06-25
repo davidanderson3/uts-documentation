@@ -28,5 +28,14 @@ margin-left:3em;
 color: #ff9900;
 }
 
+.white{
+   
+   color:white;
+}
 
+#footer {
+   
+  background-color: #134181; 
+  border-top:solid 2px #4F88D9;
 
+}
