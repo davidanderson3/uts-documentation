@@ -37,7 +37,7 @@ GET|/content/current/CUI/C3853540/atoms/?sabs=SNOMEDCT_US,ICD9CM&ttys=PT | Retri
 
 Parameter name | Required? Y/N | Description|  Valid Values | Default value | Usage Note
 --- | ---
-ticket | Y | A single-use service ticket is required for each call to the API. See [authentication](authentication.html) for more information | n/a | n/a | n/a
+ticket | Y | A single-use service ticket is required for each call to the API. See [authentication](../authentication.html) for more information | n/a | n/a | n/a
 sabs| N | One or more source abbreviations | Any root source abbreviation in the UMLS |n/a| Use a comma between each source abbreviation to specify more than one.
 ttys | N | One or more term types | Any valid term type in the UMLS | n/a| Use a comma between each [term type](http://www.nlm.nih.gov/research/umls/knowledge_sources/metathesaurus/release/precedence_suppressibility.html) to specify more than one.
 -obsolete | N |  Include content that is obsolete according to the content provider | true or false | false | n/a
