@@ -9,7 +9,7 @@ status=published
 **API Version:** 0.1 alpha
 
 
-**Each call to https://uts-ws.nlm.nih.gov/rest requires a Service Ticket as a query parmeter.
+**Each call to https://uts-ws.nlm.nih.gov/rest requires a Service Ticket as a query parameter.
 A service ticket is good for one call and will expire after 5 minutes if not used.**
 
 The UTS REST authentication involves 2 steps:
