@@ -28,8 +28,8 @@ You may use any valid UMLS release back to 2008AA in your URI if you would like 
 
 Sample URI|Description
 --- | ---
-[/content/current/CUI/C0009044/](#samples.html)| Retrieves CUI
-[/content/current/CUI/C0009044/atoms/](../atoms/index.html) | Retrieve atoms in a CUI
+[/content/current/CUI/C0009044](#samples.html)| Retrieves CUI
+[/content/current/CUI/C0009044/atoms](../atoms/index.html) | Retrieve atoms in a CUI
 /content/current/CUI/C0009044/definitions | Retrieve CUI definitions
 /content/current/CUI/C0009044/relations | Retrieve CUI relations
 
@@ -55,8 +55,8 @@ pageSize | N | Whole number that specifies the number of results to include per 
     "dateAdded": "09-30-1990",
     "majorRevisionDate": "07-04-2012",
     "definitions": "NONE",
-    "atoms": "https://uts-ws.nlm.nih.gov/rest/content/2015AA/CUI/C0009044/atoms/",
-    "relations": "https://uts-ws.nlm.nih.gov/rest/content/2015AACUI/C0009044/relations/",
+    "atoms": "https://uts-ws.nlm.nih.gov/rest/content/2015AA/CUI/C0009044/atoms",
+    "relations": "https://uts-ws.nlm.nih.gov/rest/content/2015AACUI/C0009044/relations",
     "attributeCount": 0,
     "semanticTypes": [
         "T037" //to-do: link to semantic type identifier

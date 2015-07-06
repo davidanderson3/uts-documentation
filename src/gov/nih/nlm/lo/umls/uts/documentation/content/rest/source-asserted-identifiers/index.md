@@ -28,10 +28,10 @@ You may use any valid UMLS release back to 2008AA in your URI if you would like 
 
 Sample URI|Description
 --- | ---
-[/content/current/source/SNOMEDCT_US/226617008]| Retrieves Source Concept
-[/content/current/source/CSP/1250-9110]| Retrieves Source Descriptor
-[/content/current/source/UMD/27-742]| Retrieves Code
-[/content/current/source/SNOMEDCT_US/226617008/atoms]| Retrieve atoms in a CUI
+/content/current/source/SNOMEDCT_US/226617008| Retrieves Source Concept
+/content/current/source/CSP/1250-9110| Retrieves Source Descriptor
+/content/current/source/UMD/27-742| Retrieves Code
+/content/current/source/SNOMEDCT_US/226617008/atoms| Retrieve atoms in a CUI
 /content/current/source/SNOMEDCT_US/226617008/parents | Retrieve Source Asserted Identifier parents
 /content/current/source/SNOMEDCT_US/226617008/children | Retrieve Source Asserted Identifier children
 
@@ -65,10 +65,10 @@ pageSize | N | Whole number that specifies the number of results to include per 
         "rootSource": "SNOMEDCT_US",
         "atomCount": 3,
         "cVMemberCount": 0,
-        "attributes": "https://uts-ws-qa.nlm.nih.gov/rest/content/2015AA/SNOMEDCT_US/226617008/attributes",
-        "atoms": "https://uts-ws-qa.nlm.nih.gov/rest/content/2015AA/SNOMEDCT_US/226617008/atoms",
-        "parents": "https://uts-ws-qa.nlm.nih.gov/rest/content/2015AA/SNOMEDCT_US/226617008/parents",
-        "children": "https://uts-ws-qa.nlm.nih.gov/rest/content/2015AA/SNOMEDCT_US/226617008/children",
+        "attributes": "https://uts-ws.nlm.nih.gov/rest/content/2015AA/SNOMEDCT_US/226617008/attributes",
+        "atoms": "https://uts-ws.nlm.nih.gov/rest/content/2015AA/SNOMEDCT_US/226617008/atoms",
+        "parents": "https://uts-ws.nlm.nih.gov/rest/content/2015AA/SNOMEDCT_US/226617008/parents",
+        "children": "https://uts-ws.nlm.nih.gov/rest/content/2015AA/SNOMEDCT_US/226617008/children",
         "relations": "NONE",
         "defintions": "NONE",
         "memberships": null,

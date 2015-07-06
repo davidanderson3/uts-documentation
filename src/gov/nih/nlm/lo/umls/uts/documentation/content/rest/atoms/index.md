@@ -29,8 +29,8 @@ You may use any valid UMLS release back to 2008AA in your URI if you would like 
 
 Type of call|Sample URI|Description
 --- | --- | ---
-GET|/content/current/CUI/C0155502/atoms/|Retrieves all atoms for C0155502
-GET|/content/current/CUI/C3853540/atoms/?sabs=SNOMEDCT_US,ICD9CM&ttys=PT | Retrieve SNOMEDCT_US and ICD9CM preferred terms in C3853540.
+GET|/content/current/CUI/C0155502/atoms|Retrieves all atoms for C0155502
+GET|/content/current/CUI/C3853540/atoms?sabs=SNOMEDCT_US,ICD9CM&ttys=PT | Retrieve SNOMEDCT_US and ICD9CM preferred terms in C3853540.
 
 <a name = "parameters"></a>
 ### Available query parameters in /atoms
@@ -62,10 +62,10 @@ Calls under /atoms will return JSON objects of classType='Atom'.
         "children": null,
         "memberships": {
             "code": "https://uts-ws.nlm.nih.gov/rest/content/2015AA/source/ICD9CM/386.11",
-            "concept": "https://uts-ws.nlm.nih.gov/rest/content/2015AA/CUI/C0155502/",
-            "sourceDescriptor": "https://uts-ws.nlm.nih.gov/rest/content/2015AA/source/ICD9CM/386.11/"
+            "concept": "https://uts-ws.nlm.nih.gov/rest/content/2015AA/CUI/C0155502",
+            "sourceDescriptor": "https://uts-ws.nlm.nih.gov/rest/content/2015AA/source/ICD9CM/386.11"
         },
-        "relations": "https://uts-ws.nlm.nih.gov/rest/content/2015AA/AUI/A8345234/relations/",
+        "relations": "https://uts-ws.nlm.nih.gov/rest/content/2015AA/AUI/A8345234/relations",
         "parents": null,
         "definitions": "NONE",
         "termType": "PT",
@@ -77,12 +77,12 @@ Calls under /atoms will return JSON objects of classType='Atom'.
     },
     {
         "name": "Benign paroxysmal positional vertigo",
-        "attributes": "https://uts-ws.nlm.nih.gov/rest/content/2015AA/AUI/A2892933/attributes/",
+        "attributes": "https://uts-ws.nlm.nih.gov/rest/content/2015AA/AUI/A2892933/attributes",
         "children": null,
         "memberships": {
             "code": "https://uts-ws.nlm.nih.gov/rest/content/2015AA/source/SNOMEDCT_US/111541001",
-            "concept": "https://uts-ws.nlm.nih.gov/rest/content/2015AA/CUI/C0155502/",
-            "sourceConcept": "https://uts-ws.nlm.nih.gov/rest/content/2015AA/source/SNOMEDCT_US/111541001/"
+            "concept": "https://uts-ws.nlm.nih.gov/rest/content/2015AA/CUI/C0155502",
+            "sourceConcept": "https://uts-ws.nlm.nih.gov/rest/content/2015AA/source/SNOMEDCT_US/111541001"
         },
         "relations": "NONE",
         "parents": null,
@@ -96,12 +96,12 @@ Calls under /atoms will return JSON objects of classType='Atom'.
     },
     {
         "name": "Benign recurrent vertigo",
-        "attributes": "https://uts-ws.nlm.nih.gov/rest/content/2015AA/AUI/A3101021/attributes/",
+        "attributes": "https://uts-ws.nlm.nih.gov/rest/content/2015AA/AUI/A3101021/attributes",
         "children": null,
         "memberships": {
             "code": "https://uts-ws.nlm.nih.gov/rest/content/2015AA/source/SNOMEDCT_US/232285008",
-            "concept": "https://uts-ws.nlm.nih.gov/rest/content/2015AA/CUI/C0155502/",
-            "sourceConcept": "https://uts-ws.nlm.nih.gov/rest/content/2015AA/source/SNOMEDCT_US/232285008/"
+            "concept": "https://uts-ws.nlm.nih.gov/rest/content/2015AA/CUI/C0155502",
+            "sourceConcept": "https://uts-ws.nlm.nih.gov/rest/content/2015AA/source/SNOMEDCT_US/232285008"
         },
         "relations": "NONE",
         "parents": null,
