@@ -11,7 +11,7 @@
       <div class = "col-md-12 col-sm-8 col-xs-6">
           <a class = "btn" href = "${content.rootpath}rest/authentication.html">User Authentication</a> | <a class = "btn" href = "${content.rootpath}rest/search/">Searching UMLS</a>
     | <a class = "btn" href = "${content.rootpath}rest/concept/">Retrieving Concept Information</a> | <a class = "btn" href = "${content.rootpath}rest/atoms/">Retrieving Atoms</a> 
-    | <a class = "btn" href = "${content.rootpath}rest/source-asserted-identifiers/">Retrieving Source Asserted Data</a>
+    | <a class = "btn" href = "${content.rootpath}rest/source-asserted-identifiers/">Retrieving Source Asserted Data</a> | <a class = "btn" href = "${content.rootpath}rest/parents-and-children/">Retrieving Parents and Children information</a>
       </div>
     </div>
   </div>

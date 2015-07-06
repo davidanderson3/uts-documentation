@@ -10,7 +10,7 @@ status=draft
 
 [URIs](#uris) | [Query Parameters](#parameters) | [Sample Output](#samples)
 
-URIs with /concept/{CUI} support the following use cases:
+URIs with /Source Asserted Identifier support the following use cases:
 
 *  Retrieve information (name, attributes, term types, number of atoms, memberships etc) for a known 'Source Asserted Identifier' like source concept, source descriptor or code from latest UMLS version or a specific release.
 *  Retrieve atoms for a known source asserted identifier.
@@ -28,25 +28,22 @@ You may use any valid UMLS release back to 2008AA in your URI if you would like 
 
 Sample URI|Description
 --- | ---
-/content/current/source/SNOMEDCT_US/226617008| Retrieves Source Concept
+/content/current/source/SNOMEDCT_US/9468002| Retrieves Source Concept
 /content/current/source/CSP/1250-9110| Retrieves Source Descriptor
 /content/current/source/UMD/27-742| Retrieves Code
-/content/current/source/SNOMEDCT_US/226617008/atoms| Retrieve atoms in a CUI
-/content/current/source/SNOMEDCT_US/226617008/parents | Retrieve Source Asserted Identifier parents
-/content/current/source/SNOMEDCT_US/226617008/children | Retrieve Source Asserted Identifier children
+[/content/current/source/SNOMEDCT_US/226617008/atoms](../atoms/index.html)| Retrieve atoms in a CUI
+[/content/current/source/SNOMEDCT_US/226617008/parents](../parents-and-children/index.html) | Retrieve Source Asserted Identifier parents
+[/content/current/source/SNOMEDCT_US/226617008/children](../parents-and-children/index.html) | Retrieve Source Asserted Identifier children
 
 
 <a name = "parameters"></a>
-### Available query parameters in /concept/{CUI}
+### Available query parameters in /Source Asserted Identifier
 
 Parameter name | Required? Y/N | Description|  Valid Values | Default value | Usage Note
 --- | ---
 ticket | Y | A single-use service ticket is required for each call to the API. See [authentication](../authentication.html) for more information | n/a | n/a | n/a
-rsabs| N | One or more source abbreviations | Any root source abbreviation in the UMLS |n/a| Use a comma between each source abbreviation to specify more than one.
-obsolete | N |  Include content that is obsolete according to the content provider | true or false | false | n/a
-suppressible | N |  Include content that is suppressible according to NLM Editors| true or false | false | n/a
-page | N | Whole number that specifies which page of results to fetch. | 1,2,3, etc | 1 | n/a
-pageSize | N | Whole number that specifies the number of results to include per page. | 1,2,3, etc | 25 | n/a
+sabs| N | One or more source abbreviations | Any root source abbreviation in the UMLS |n/a| Use a comma between each source abbreviation to specify more than one.
+
 
 <a name = "samples"></a>
 ### Sample Output
@@ -56,23 +53,24 @@ pageSize | N | Whole number that specifies the number of results to include per 
 
 ~~~~json
 {
+
     "result": {
         "classType": "SourceAtomCluster",
-        "ui": "226617008",
+        "ui": "9468002",
         "suppressible": false,
-        "sourceUi": "226617008",
+        "sourceUi": "9468002",
         "obsolete": false,
         "rootSource": "SNOMEDCT_US",
-        "atomCount": 3,
+        "atomCount": 6,
         "cVMemberCount": 0,
-        "attributes": "https://uts-ws.nlm.nih.gov/rest/content/2015AA/SNOMEDCT_US/226617008/attributes",
-        "atoms": "https://uts-ws.nlm.nih.gov/rest/content/2015AA/SNOMEDCT_US/226617008/atoms",
-        "parents": "https://uts-ws.nlm.nih.gov/rest/content/2015AA/SNOMEDCT_US/226617008/parents",
-        "children": "https://uts-ws.nlm.nih.gov/rest/content/2015AA/SNOMEDCT_US/226617008/children",
+        "attributes": "https://uts-ws-qa.nlm.nih.gov/rest/content/2015AA/SNOMEDCT_US/9468002/attributes",
+        "atoms": "https://uts-ws-qa.nlm.nih.gov/rest/content/2015AA/SNOMEDCT_US/9468002/atoms",
+        "parents": "https://uts-ws-qa.nlm.nih.gov/rest/content/2015AA/SNOMEDCT_US/9468002/parents",
+        "children": "https://uts-ws-qa.nlm.nih.gov/rest/content/2015AA/SNOMEDCT_US/9468002/children",
         "relations": "NONE",
         "defintions": "NONE",
         "memberships": null,
-        "name": "Porridge"
+        "name": "Closed fracture carpal bone"
     },
     "pageNum": 0,
     "pageSize": 0

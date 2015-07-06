@@ -51,22 +51,26 @@ pageSize | N | Whole number that specifies the number of results to include per 
 
 ~~~~json
 {
-    "name": "Closed fracture carpal bone",
-    "dateAdded": "09-30-1990",
-    "majorRevisionDate": "07-04-2012",
-    "definitions": "NONE",
-    "atoms": "https://uts-ws.nlm.nih.gov/rest/content/2015AA/CUI/C0009044/atoms",
-    "relations": "https://uts-ws.nlm.nih.gov/rest/content/2015AACUI/C0009044/relations",
-    "attributeCount": 0,
-    "semanticTypes": [
-        "T037" //to-do: link to semantic type identifier
-    ],
-    "relationCount": 5,
-    "cvMemberCount": 0,
-    "atomCount": 63,
-    "status": "R",
-    "suppressible": false,
-    "ui": "C0009044",
-    "classType": "Concept"
+    "result": {
+        "classType": "Concept",
+        "ui": "C0009044",
+        "suppressible": false,
+        "dateAdded": "09-30-1990",
+        "majorRevisionDate": "07-04-2012",
+        "status": "R",
+        "semanticTypes": [
+            "T037"
+        ],
+        "atomCount": 63,
+        "attributeCount": 0,
+        "cvMemberCount": 0,
+        "atoms": "https://uts-ws-qa.nlm.nih.gov/rest/content/2015AA/CUI/C0009044/atoms",
+        "definitions": "NONE",
+        "relations": "https://uts-ws-qa.nlm.nih.gov/rest/content/2015AACUI/C0009044/relations",
+        "relationCount": 5,
+        "name": "Closed fracture carpal bone"
+    },
+    "pageNum": 0,
+    "pageSize": 0
 }
 ~~~~
