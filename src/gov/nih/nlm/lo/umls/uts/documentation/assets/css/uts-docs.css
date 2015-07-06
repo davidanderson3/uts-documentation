@@ -24,18 +24,27 @@ padding-top:.5em;
 margin-left:3em;
 
 }
-.orange{  
+
+.orange{
+   
 color: #ff9900;
+
 }
 
-.white{
+.white, .white a{
    
    color:white;
 }
+
 
 #footer {
    
   background-color: #134181; 
   border-top:solid 2px #4F88D9;
 
+}
+
+#footer * > a{
+   
+   text-decoration: underline;
 }
