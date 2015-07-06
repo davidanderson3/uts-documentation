@@ -1,20 +1,21 @@
 <#include "header.ftl">
 	
-	<#include "menu.ftl">
+	<#include "uts-documentation-menu.ftl">
+	<h1><#escape x as x?xml>UTS Technical Documentation Sitemap</#escape></h1>
+         
+        <div class = "row">
+	<div class = "container-fluid col-md-12 col-sm-8 col-xs-6">
+        <p style="color:red;font-weight:bold;">NOTE: The UMLS REST API is currently in alpha mode and is not production ready.</p>
 
-	<div class="page-header">
-		<h1>Blog</h1>
-	</div>
-	<#list posts as post>
-  		<#if (post.status == "published")>
-  			<a href="${post.uri}"><h1><#escape x as x?xml>${post.title}</#escape></h1></a>
-  			<p>${post.date?string("dd MMMM yyyy")}</p>
-  			<p>${post.body}</p>
+	<#list published_pages as page>
+  		<#if (page.status == "published")>
+  			<a href="${page.uri}"><h4><#escape x as x?xml>${page.title}</#escape></h4></a>
+  			<p>${page.date?string("dd MMMM yyyy")}</p>
+  			
   		</#if>
   	</#list>
 	
-	<hr />
-	
-	<p>Older posts are available in the <a href="${content.rootpath}${config.archive_file}">archive</a>.</p>
+	</div>
+	</div>
 
 <#include "footer.ftl">
