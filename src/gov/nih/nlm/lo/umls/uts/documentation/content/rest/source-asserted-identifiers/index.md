@@ -2,7 +2,7 @@ title=Retrieving source asserted information in the UMLS
 date=2015-07-01
 updated=2015-07-01
 type=page
-status=published
+status=draft
 ~~~~~~
 
 
