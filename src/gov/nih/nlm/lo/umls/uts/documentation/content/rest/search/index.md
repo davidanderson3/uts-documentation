@@ -6,8 +6,6 @@ status=published
 ~~~~~~
 
 
-**API Version:** 0.1 alpha
-
 [URIs](#uris) | [Query Parameters](#parameters) | [Sample Output](#samples)
 
 URIs with /search support the following use cases

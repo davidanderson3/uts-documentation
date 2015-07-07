@@ -6,8 +6,6 @@ status=published
 ~~~~~~
 
 
-**API Version:** 0.1 alpha
-
 [URIs](#uris) | [Query Parameters](#parameters) | [Sample Output](#samples)
 
 URIs with /atoms support the following use cases
@@ -30,8 +28,8 @@ You may use any valid UMLS release back to 2008AA in your URI if you would like 
 Type of call|Sample URI|Description
 --- | --- | ---
 GET|/content/current/CUI/C0155502/atoms|Retrieves all atoms for C0155502
-GET|/content/current/CUI/C3853540/atoms?sabs=SNOMEDCT_US,ICD9CM&ttys=PT | Retrieve SNOMEDCT_US and ICD9CM preferred terms in C3853540.
-
+GET|/content/current/CUI/C3853540/atoms?sabs=SNOMEDCT_US,ICD9CM&ttys=PT | Retrieve SNOMEDCT_US and ICD9CM preferred terms in C3853540
+GET|/content/current/source/SNOMEDCT_US/9468002/atoms | Retrieve atoms belonging to SNOMED CT concept 9468002
 <a name = "parameters"></a>
 ### Available query parameters in /atoms
 
@@ -51,8 +49,6 @@ pageSize | N | Whole number that specifies the number of results to include per 
 ### Sample Output
 
 Calls under /atoms will return JSON objects of classType='Atom'.
-
-**The default for calls under /atom is to return Atom Information.**
 
 ~~~~json
 [

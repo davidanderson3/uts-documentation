@@ -6,7 +6,7 @@ status=published
 ~~~~~~
 
 
-**API Version:** 0.1 alpha
+
 
 
 **Each call to https://uts-ws.nlm.nih.gov/rest requires a Service Ticket as a query parameter.

@@ -5,8 +5,6 @@ type=page
 status=published
 ~~~~~~
 
-**API Version:** 0.1 alpha
-
 ### Authentication Service URIs
 Method Type|URI|Description
 --- | --- | ---
