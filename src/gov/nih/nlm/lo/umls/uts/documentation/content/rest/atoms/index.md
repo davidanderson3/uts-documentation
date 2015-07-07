@@ -29,7 +29,7 @@ Type of call|Sample URI|Description
 --- | --- | ---
 GET|/content/current/CUI/C0155502/atoms|Retrieves all atoms for C0155502
 GET|/content/current/CUI/C3853540/atoms?sabs=SNOMEDCT_US,ICD9CM&ttys=PT | Retrieve SNOMEDCT_US and ICD9CM preferred terms in C3853540
-GET|/content/current/source/SNOMEDCT_US/9468002/atoms | Retrieve atoms belonging to SNOMED CT concept 9468002
+GET|/content/current/source/SNOMEDCT_US/111541001/atoms | Retrieve atoms belonging to SNOMED CT concept 111541001
 <a name = "parameters"></a>
 ### Available query parameters in /atoms
 
