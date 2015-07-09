@@ -20,7 +20,7 @@ Users can now retrieve parents and children of source-asserted identifiers.  See
 
 
 #### Change to JSON output
-JSON output is now wrapped in an outer 'result' object, as such
+JSON output is now wrapped in a 'result' object, as such
 
 ~~~~json
 
