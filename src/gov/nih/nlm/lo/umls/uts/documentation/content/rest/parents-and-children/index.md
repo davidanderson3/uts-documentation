@@ -34,7 +34,6 @@ Sample URI|Description
 Parameter name | Required? Y/N | Description|  Valid Values | Default value | Usage Note
 --- | ---
 ticket | Y | A single-use service ticket is required for each call to the API. See [authentication](../authentication.html) for more information | n/a | n/a | n/a
-sabs| N | One or more source abbreviations | Any root source abbreviation in the UMLS |n/a| Use a comma between each source abbreviation to specify more than one.
 page | N | Whole number that specifies which page of results to fetch. | 1,2,3, etc | 1 | n/a
 pageSize | N | Whole number that specifies the number of results to include per page. | 1,2,3, etc | 25 | n/a
 
@@ -43,7 +42,7 @@ pageSize | N | Whole number that specifies the number of results to include per 
 ### Sample Output
 
 
-**The default for calls under /parents is to return the immediate parents of the concept provided.**
+*Calls under /parents or /children will return a classType of 'AtomClusterAtomClusterRelation'*
 
 ~~~~json
 {
