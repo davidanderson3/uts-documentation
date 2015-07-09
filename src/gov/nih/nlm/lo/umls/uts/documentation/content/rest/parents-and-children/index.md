@@ -60,7 +60,7 @@ pageSize | N | Whole number that specifies the number of results to include per 
             "groupId": null,
             "attributeCount": 0,
             "relatedAtom": "",
-            "relatedConcept": "https://uts-ws-qa.nlm.nih.gov/rest/content/2015AA/source/SNOMEDCT_US/226598007"
+            "relatedConcept": "https://uts-ws.nlm.nih.gov/rest/content/2015AA/source/SNOMEDCT_US/226598007"
         }
     ],
     "pageNum": 1,
