@@ -28,7 +28,8 @@ You may use any valid UMLS release back to 2008AA in your URI if you would like 
 Type of call|Sample URI|Description
 --- | --- | ---
 GET|/content/current/CUI/C0155502/atoms|Retrieves all atoms for C0155502
-GET|/content/current/CUI/C3853540/atoms?sabs=SNOMEDCT_US,ICD9CM&ttys=PT | Retrieve SNOMEDCT_US and ICD9CM preferred terms in C3853540
+GET|/content/current/CUI/C0155502/atoms?language=ENG|Retrieves all English language atoms for C0155502
+GET|/content/current/CUI/C0155502/atoms?sabs=SNOMEDCT_US,ICD9CM&ttys=PT | Retrieve SNOMEDCT_US and ICD9CM preferred terms in C0155502
 GET|/content/current/source/SNOMEDCT_US/111541001/atoms | Retrieve atoms belonging to SNOMED CT concept 111541001
 <a name = "parameters"></a>
 ### Available query parameters in /atoms
@@ -38,6 +39,7 @@ Parameter name | Required? Y/N | Description|  Valid Values | Default value | Us
 ticket | Y | A single-use service ticket is required for each call to the API. See [authentication](../authentication.html) for more information | n/a | n/a | n/a
 sabs| N | One or more source abbreviations | Any root source abbreviation in the UMLS |n/a| Use a comma between each source abbreviation to specify more than one.
 ttys | N | One or more term types | Any valid term type in the UMLS | n/a| Use a comma between each [term type](http://www.nlm.nih.gov/research/umls/knowledge_sources/metathesaurus/release/precedence_suppressibility.html) to specify more than one.
+language | N | Retrieve only atoms that have a specific language | Any 3 letter language abbreviation in the UMLS, such as "ENG","FRE","SPA","GER","DUT","JPN", etc | All languages are returned by default | Currently only filtering by one language is supported.
 -obsolete | N |  Include content that is obsolete according to the content provider | true or false | false | n/a
 -suppressible | N |  Include content that is suppressible according to NLM Editors| true or false | false | n/a
 page | N | Whole number that specifies which page of results to fetch. | 1,2,3, etc | 1 | n/a
