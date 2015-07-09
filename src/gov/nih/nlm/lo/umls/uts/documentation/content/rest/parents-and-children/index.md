@@ -49,7 +49,7 @@ pageSize | N | Whole number that specifies the number of results to include per 
     "result": [
         {
             "classType": "AtomClusterAtomClusterRelation",
-            "ui": "6ca734fcc6f51b5a7464d32004218005",
+            "ui": "e50f3647a92e85415e8b8c5cde3e5f4c",
             "suppressible": false,
             "sourceUi": null,
             "obsolete": false,
@@ -60,42 +60,13 @@ pageSize | N | Whole number that specifies the number of results to include per 
             "groupId": null,
             "attributeCount": 0,
             "relatedAtom": "",
-            "relatedConcept": "https://uts-ws.nlm.nih.gov/rest/content/2015AA/source/SNOMEDCT_US/20511007"
-        },
-        {
-            "classType": "AtomClusterAtomClusterRelation",
-            "ui": "95b9721325649c164a488a92a89dc16a",
-            "suppressible": false,
-            "sourceUi": null,
-            "obsolete": false,
-            "sourceOriginated": true,
-            "rootSource": "SNOMEDCT_US",
-            "relationLabel": "PAR",
-            "additionalRelationLabel": "isa",
-            "groupId": null,
-            "attributeCount": 0,
-            "relatedAtom": "",
-            "relatedConcept": "https://uts-ws.nlm.nih.gov/rest/content/2015AA/source/SNOMEDCT_US/82065001"
-        },
-        {
-            "classType": "AtomClusterAtomClusterRelation",
-            "ui": "fefc70e0043ac9c4319de31fd7baf4ed",
-            "suppressible": false,
-            "sourceUi": null,
-            "obsolete": false,
-            "sourceOriginated": true,
-            "rootSource": "SNOMEDCT_US",
-            "relationLabel": "PAR",
-            "additionalRelationLabel": "isa",
-            "groupId": null,
-            "attributeCount": 0,
-            "relatedAtom": "",
-            "relatedConcept": "https://uts-ws.nlm.nih.gov/rest/content/2015AA/source/SNOMEDCT_US/36991002"
+            "relatedConcept": "https://uts-ws-qa.nlm.nih.gov/rest/content/2015AA/source/SNOMEDCT_US/226598007"
         }
     ],
-    "pageNum": 0,
-    "pageSize": 0
+    "pageNum": 1,
+    "pageSize": 25
 }
+
 
 ~~~~
 
@@ -152,8 +123,8 @@ pageSize | N | Whole number that specifies the number of results to include per 
             "relatedConcept": "https://uts-ws.nlm.nih.gov/rest/content/2015AA/source/SNOMEDCT_US/10934361000119105"
         }
     ],
-    "pageNum": 0,
-    "pageSize": 0
+    "pageNum": 1,
+    "pageSize": 25
 }
 
 ~~~~
