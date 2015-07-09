@@ -14,6 +14,12 @@ POST | [https://utslogin.nlm.nih.gov/cas/v1/tickets/{TGT}](authentication.html) 
 ### Webservice URIs (Base URI - https://uts-ws.nlm.nih.gov)
 Method Type|Sample URI|Description
 --- | --- | ---
-GET | [/rest/{version}/search](search/)| Retrieves CUIs when searching by term or code.
-GET | [/rest/content/{version}/CUI/{CUI}](concept/) | Retrieves concepts and information about concepts.
-GET | [/rest/content/{version}/CUI/{CUI}/atoms/](atoms/) | Retrieves atoms and information about atoms.
+GET | [/rest/{version}/search](search/)| Retrieves CUIs when searching by term or code
+GET | [/rest/content/{version}/CUI/{CUI}](concept/) | Retrieves information about a known CUI
+GET | [/rest/content/{version}/CUI/{CUI}/atoms](atoms/) | Retrieves atoms and information about atoms for a known CUI
+GET | [rest/content/{version}/CUI/{CUI}/definitions](definitions/) | Retrieves definitions for a known CUI
+GET | rest/content/{version}/CUI/{CUI}/relations | Retrieves relationships for a known CUI
+GET | [rest/content/{version}/source/{source}/{id}](source-asserted-identifiers/) | Retrieves information about a known source-asserted identifier
+GET | [rest/content/{version}/source/{source}/{id}/atoms](atoms/) | Retrieves information about atoms for a known source-asserted identifier
+GET | [rest/content/{version}/source/{source}/{id}/parents](parents-and-children/) | Retrieves immediate parents of a source-asserted identifier
+GET | [rest/content/{version}/source/{source}/{id}/children](parents-and-children/) | Retrieves immediate children of a source-asserted identifier
