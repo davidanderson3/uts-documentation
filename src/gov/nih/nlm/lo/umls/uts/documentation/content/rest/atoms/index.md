@@ -39,13 +39,11 @@ Parameter name | Required? Y/N | Description|  Valid Values | Default value | Us
 ticket | Y | A single-use service ticket is required for each call to the API. See [authentication](../authentication.html) for more information | n/a | n/a | n/a
 sabs| N | One or more source abbreviations | Any root source abbreviation in the UMLS |n/a| Use a comma between each source abbreviation to specify more than one.
 ttys | N | One or more term types | Any valid term type in the UMLS | n/a| Use a comma between each [term type](http://www.nlm.nih.gov/research/umls/knowledge_sources/metathesaurus/release/precedence_suppressibility.html) to specify more than one.
-language | N | Retrieve only atoms that have a specific language | Any 3 letter language abbreviation in the UMLS, such as "ENG","FRE","SPA","GER","DUT","JPN", etc | All languages are returned by default | Currently only filtering by one language is supported.
--obsolete | N |  Include content that is obsolete according to the content provider | true or false | false | n/a
--suppressible | N |  Include content that is suppressible according to NLM Editors| true or false | false | n/a
+language | N | Retrieve only atoms that have a specific language | Any 3 letter language abbreviation in the UMLS, such as "ENG","FRE","SPA","GER","DUT","JPN", etc | All languages are returned by default | Currently filtering by one language is supported.
+includeObsolete | N |  Include content that is obsolete according to the content provider or NLM. | true or false | false | n/a
+includeSuppressible | N |  Include content that is suppressible according to NLM Editors .| true or false | false | n/a
 page | N | Whole number that specifies which page of results to fetch. | 1,2,3, etc | 1 | n/a
 pageSize | N | Whole number that specifies the number of results to include per page. | 1,2,3, etc | 25 | n/a
-
--not yet implemented
 
 <a name = "samples"></a>
 ### Sample Output
