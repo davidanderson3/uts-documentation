@@ -6,7 +6,7 @@ status=published
 ~~~~~~
 
 
-[URIs](#uris) | [Query Parameters](#parameters) | [Sample Output](#samples)
+[URIs](#uris) | [Query Parameters](#query-parameters) | [Sample Output](#sample-output)
 
 URIs with /parents or /children support the following use cases:
 
@@ -17,10 +17,9 @@ Note that 'current' in the URI can always be used to search against the latest U
 You may use any valid UMLS release back to 2008AA in your URI if you would like to search against a particular version of the UMLS.
 
 
-<a name = "uris"></a>
 ### URIs
 
-*The base URI is https://uts-ws.nlm.nih.gov/rest*
+**The base URI is https://uts-ws.nlm.nih.gov/rest**
 
 Sample URI|Description
 --- | ---
@@ -28,8 +27,7 @@ Sample URI|Description
 /content/current/source/SNOMEDCT_US/9468002/children| Retrieves children of the SNOMED concept
 
 
-<a name = "parameters"></a>
-### Available query parameters in /parents or /children calls
+### Query Parameters
 
 Parameter name | Required? Y/N | Description|  Valid Values | Default value | Usage Note
 --- | ---
@@ -38,7 +36,6 @@ page | N | Whole number that specifies which page of results to fetch. | 1,2,3, 
 pageSize | N | Whole number that specifies the number of results to include per page. | 1,2,3, etc | 25 | n/a
 
 
-<a name = "samples"></a>
 ### Sample Output
 
 

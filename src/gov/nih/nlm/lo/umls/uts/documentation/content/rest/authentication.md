@@ -26,7 +26,7 @@ https://uts-ws.nlm.nih.gov/rest/content/current/CUI/C0018787?ticket=ST-134-HUbXG
 
 ### URIs
 
-*The base URI for authentication is https://utslogin.nlm.nih.gov*
+**The base URI for authentication is https://utslogin.nlm.nih.gov**
 
 Call # | Type of Request|URI|Required Parameters| Parameter values |Description
 --- | --- | --
