@@ -6,7 +6,7 @@ status=published
 ~~~~~~
 
 
-[URIs](#uris) | [Query Parameters](#parameters) | [Sample Output](#samples)
+[URIs](#uris) | [Query Parameters](#query-parameters) | [Sample Output](#sample-output)
 
 URIs with /source/{source}/{id} support the following use cases:
 
@@ -18,11 +18,9 @@ URIs with /source/{source}/{id} support the following use cases:
 Note that 'current' in the URI can always be used to search against the latest UMLS publication.
 You may use any valid UMLS release back to 2008AA in your URI if you would like to search against a particular version of the UMLS.
 
-
-<a name = "uris"></a>
 ### URIs
 
-*The base URI is https://uts-ws.nlm.nih.gov/rest*
+**The base URI is https://uts-ws.nlm.nih.gov/rest**
 
 Sample URI|Description
 --- | ---
@@ -34,15 +32,13 @@ Sample URI|Description
 [/content/current/source/SNOMEDCT_US/226617008/children](../parents-and-children/index.html) | Retrieve immediate children of source-asserted identifier
 
 
-<a name = "parameters"></a>
-### Available query parameters in /Source Asserted Identifier
+### Query Parameters
 
 Parameter name | Required? Y/N | Description|  Valid Values | Default value | Usage Note
 --- | ---
 ticket | Y | A single-use service ticket is required for each call to the API. See [authentication](../authentication.html) for more information | n/a | n/a | n/a
 
 
-<a name = "samples"></a>
 ### Sample Output
 
 
