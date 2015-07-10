@@ -6,7 +6,7 @@ status=published
 ~~~~~~
 
 
-[URIs](#uris) | [Query Parameters](#parameters) | [Sample Output](#samples)
+[URIs](#uris) | [Query Parameters](#query-parameters) | [Sample Output](#sample-output)
 
 URIs with /atoms support the following use cases
 
@@ -20,10 +20,9 @@ Note that 'current' in the URI can always be used to search against the latest U
 You may use any valid UMLS release back to 2008AA in your URI if you would like to search against a particular version of the UMLS.
 
 
-<a name = "uris"></a>
 ### URIs
 
-*The base URI is https://uts-ws.nlm.nih.gov/rest*
+**The base URI is https://uts-ws.nlm.nih.gov/rest**
 
 Type of call|Sample URI|Description
 --- | --- | ---
@@ -31,8 +30,9 @@ GET|/content/current/CUI/C0155502/atoms|Retrieves all atoms for C0155502
 GET|/content/current/CUI/C0155502/atoms?language=ENG|Retrieves all English language atoms for C0155502
 GET|/content/current/CUI/C0155502/atoms?sabs=SNOMEDCT_US,ICD9CM&ttys=PT | Retrieve SNOMEDCT_US and ICD9CM preferred terms in C0155502
 GET|/content/current/source/SNOMEDCT_US/111541001/atoms | Retrieve atoms belonging to SNOMED CT concept 111541001
-<a name = "parameters"></a>
-### Available query parameters in /atoms
+
+
+### Query Parameters
 
 Parameter name | Required? Y/N | Description|  Valid Values | Default value | Usage Note
 --- | ---
@@ -45,7 +45,7 @@ includeSuppressible | N |  Include content that is suppressible according to NLM
 page | N | Whole number that specifies which page of results to fetch. | 1,2,3, etc | 1 | n/a
 pageSize | N | Whole number that specifies the number of results to include per page. | 1,2,3, etc | 25 | n/a
 
-<a name = "samples"></a>
+
 ### Sample Output
 
 Calls under /atoms will return JSON objects of classType='Atom'.

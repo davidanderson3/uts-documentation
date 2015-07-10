@@ -6,7 +6,7 @@ status=published
 ~~~~~~
 
 
-[URIs](#uris) | [Query Parameters](#parameters) | [Sample Output](#samples)
+[URIs](#uris) | [Query Parameters](#query-parameters) | [Sample Output](#sample-output)
 
 URIs with /search support the following use cases
 
@@ -17,11 +17,9 @@ URIs with /search support the following use cases
 Note that 'current' in the URI can always be used to search against the latest UMLS publication.
 You may use any valid UMLS release back to 2008AA in your URI if you would like to search against a particular version of the UMLS.
 
-
-<a name = "uris"></a>
 ### URIs
 
-*The base URI is https://uts-ws.nlm.nih.gov/rest*
+**The base URI is https://uts-ws.nlm.nih.gov/rest**
 
 Sample URI|Description
 --- | ---
@@ -30,8 +28,7 @@ Sample URI|Description
 /search/current?string=fracture of carpal bone&sabs=SNOMEDCT_US&returnType=codes | Returns SNOMEDCT concepts associated with a search term.
 /search/current?string=82065001&inputType=code&searchType=exact&sabs=SNOMEDCT_US | Returns UMLS CUIs associated with a SNOMEDCT_US concept.
 
-<a name = "parameters"></a>
-### Available query parameters in /search
+### Query Parameters
 
 Parameter name | Required? Y/N | Description|  Valid Values | Default value | Usage Note
 --- | ---
@@ -43,7 +40,7 @@ sabs | N | Comma-separated list of source vocabularies to include in your search
 searchType | N | Type of search you wish to use | 'exact','words','leftTruncation', 'rightTruncation','approximate' | 'words' | Use 'exact' when using inputType = 'code', 'sourceConcept', or 'sourceDescriptor'.
 page | N | Whole number that specifies which page of results to fetch. | 1,2,3, etc | 1 | n/a
 pageSize | N | Whole number that specifies the number of results to include per page. | 1,2,3, etc | 25 | n/a
-<a name = "samples"></a>
+
 ### Sample Output
 
 Calls under /search will return a JSON object of classType 'searchResults'.
