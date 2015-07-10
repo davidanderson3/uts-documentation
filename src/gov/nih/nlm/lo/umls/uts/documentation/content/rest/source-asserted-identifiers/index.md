@@ -50,7 +50,6 @@ ticket | Y | A single-use service ticket is required for each call to the API. S
 
 ~~~~json
 {
-
     "result": {
         "classType": "SourceAtomCluster",
         "ui": "9468002",
@@ -65,12 +64,11 @@ ticket | Y | A single-use service ticket is required for each call to the API. S
         "parents": "https://uts-ws-qa.nlm.nih.gov/rest/content/2015AA/SNOMEDCT_US/9468002/parents",
         "children": "https://uts-ws-qa.nlm.nih.gov/rest/content/2015AA/SNOMEDCT_US/9468002/children",
         "relations": "NONE",
-        "defintions": "NONE",
+        "definitions": "NONE",
         "memberships": null,
         "name": "Closed fracture carpal bone"
     },
-    "pageNum": 0,
-    "pageSize": 0
-
+    "pageNum": 1,
+    "pageSize": 25
 }
 ~~~~
