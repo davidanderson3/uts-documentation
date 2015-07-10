@@ -64,11 +64,11 @@ pageSize | N | Whole number that specifies the number of results to include per 
         "cvMemberCount": 0,
         "atoms": "https://uts-ws-qa.nlm.nih.gov/rest/content/2015AA/CUI/C0009044/atoms",
         "definitions": "NONE",
-        "relations": "https://uts-ws-qa.nlm.nih.gov/rest/content/2015AACUI/C0009044/relations",
+        "relations": "https://uts-ws-qa.nlm.nih.gov/rest/content/2015AA/CUI/C0009044/relations",
         "relationCount": 5,
         "name": "Closed fracture carpal bone"
     },
-    "pageNum": 0,
-    "pageSize": 0
+    "pageNum": 1,
+    "pageSize": 25
 }
 ~~~~
