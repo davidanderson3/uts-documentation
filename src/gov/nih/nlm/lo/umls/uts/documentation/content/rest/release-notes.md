@@ -32,6 +32,10 @@ JSON output is now wrapped in a 'result' object, as such
 #### Change to URL request structure
 Users no longer need to include a trailing forward slash at the end of their REST calls. For example, _/CUI/C0018787/atoms_ - without a forward slash following the word 'atoms' - is a valid call in Version 0.2 alpha. The JSON output from the REST API no longer includes trailing forward slashes either.
 
+#### Change to results under /search endpoint
+
+The uri field of search results is now populated with a URL to the relevant unique identifier.
+An additional 'ui' field has been added, which is populated with the string literal unique identifier.
 
 #### Change to HTTP Binding
 Under the /content endpoint, searches on invalid identifiers will return an http status of 404.
