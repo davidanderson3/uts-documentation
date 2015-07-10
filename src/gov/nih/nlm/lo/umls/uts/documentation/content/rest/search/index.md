@@ -55,31 +55,44 @@ you will get back source-asserted identifiers instead of CUIs.
 ~~~~json
 {
 
+    "result": 
+
+{
+
+    "classType": "searchResults",
     "results": 
 
 [
 
 {
 
-    "name": "Closed fracture carpal bone",
-    "ui": "https://uts-ws.nlm.nih.gov/rest/content/2015AA/CUI/C0009044/"
+    "ui": "C0009044",
+    "rootSource": "SNOMEDCT_US",
+    "uri": "https://uts-ws-qa.nlm.nih.gov/rest/content/2015AA/CUI/C0009044",
+    "name": "Closed fracture carpal bone"
 
 },
 {
 
-    "name": "Fracture of carpal bone",
-    "ui": "https://uts-ws.nlm.nih.gov/rest/content/2015AA/CUI/C0016644/"
+    "ui": "C0016644",
+    "rootSource": "MTH",
+    "uri": "https://uts-ws-qa.nlm.nih.gov/rest/content/2015AA/CUI/C0016644",
+    "name": "Fracture of carpal bone"
 
 },
 {
 
-    "name": "Open fracture of carpal bone, unspecified",
-    "ui": "https://uts-ws.nlm.nih.gov/rest/content/2015AA/CUI/C0159765/"
+    "ui": "C0159765",
+    "rootSource": "MTH",
+    "uri": "https://uts-ws-qa.nlm.nih.gov/rest/content/2015AA/CUI/C0159765",
+    "name": "Open fracture of carpal bone, unspecified"
 
 },
 ...
-    ],
-    "classType": "searchResults"
+]
+},
+    "pageNum": 1,
+    "pageSize": 25
 
 }
 ~~~~
@@ -89,35 +102,44 @@ you will get back source-asserted identifiers instead of CUIs.
 ~~~~json
 {
 
+    "result": 
+
+{
+
+    "classType": "searchResults",
     "results": 
 
 [
 
 {
 
-    "name": "Closed fracture carpal bone",
-    "ui": "https://uts-ws-qa.nlm.nih.gov/rest/content/2015AA/source/SNOMEDCT_US/9468002/",
-    "rootSource": "SNOMEDCT_US"
+    "ui": "9468002",
+    "rootSource": "SNOMEDCT_US",
+    "uri": "https://uts-ws-qa.nlm.nih.gov/rest/content/2015AA/SNOMEDCT_US/9468002",
+    "name": "Closed fracture carpal bone"
 
 },
 {
 
-    "name": "Fracture of carpal bone",
-    "ui": "https://uts-ws-qa.nlm.nih.gov/rest/content/2015AA/source/SNOMEDCT_US/157222007/",
-    "rootSource": "SNOMEDCT_US"
+    "ui": "C34488",
+    "rootSource": "NCI",
+    "uri": "https://uts-ws-qa.nlm.nih.gov/rest/content/2015AA/NCI/C34488",
+    "name": "Closed Fracture of Carpal Bone"
 
 },
 {
 
-    "name": "Fracture of carpal bone",
-    "ui": "https://uts-ws-qa.nlm.nih.gov/rest/content/2015AA/source/SNOMEDCT_US/82065001/",
-    "rootSource": "SNOMEDCT_US"
+    "ui": "34696",
+    "rootSource": "MEDCIN",
+    "uri": "https://uts-ws-qa.nlm.nih.gov/rest/content/2015AA/MEDCIN/34696",
+    "name": "closed fracture of carpal bone"
 
 },
 ...
-    ],
-    "classType": "searchResults"
+]
+},
+    "pageNum": 1,
+    "pageSize": 25
 
 }
-
 ~~~~
