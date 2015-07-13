@@ -1,6 +1,6 @@
 		</div>
     <div id="footer">
-    <div class="container">
+    <div class="container-fluid">
     <div class = "row">
         <div class = "col-md-12 col-sm-8 col-xs-6">
 	<p class = "white"><#if (content.updated)??><b>Content last updated:</b> ${content.updated}</#if>
