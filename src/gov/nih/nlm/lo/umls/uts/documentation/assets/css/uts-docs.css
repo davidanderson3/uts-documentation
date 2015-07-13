@@ -3,6 +3,17 @@
    border-bottom:solid 2px #4F88D9;
 }
 
+.header * > a:hover{
+   
+   color:white;
+}
+
+.header * > a {
+ 
+ margin-top:.5em;  
+   
+}
+
 .uts-nav{
     
     padding:.2em;
@@ -10,6 +21,23 @@
     border: solid 2px #e7eeeb;
     border-radius: 0 !important;
 }
+
+.navbar * > button:hover, .navbar  * > a:hover, .dropdown-menu > li a:hover {
+   
+   color: #78a22f;
+      
+}
+.navbar  * > a {
+   
+  color: #000;
+   
+}
+.navbar * > a:hover, .dropdown-menu > li a:hover {
+   
+   text-decoration: underline;
+}
+
+
 
 .dropdown-toggle {
    
