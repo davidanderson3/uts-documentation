@@ -1,6 +1,6 @@
 .header {
    background-color:#134181;
-   border-bottom:solid 2px #4F88D9;
+   border-bottom:solid 1px #4F88D9;
 }
 
 .header * > a:hover{
@@ -18,7 +18,7 @@
     
     padding:.2em;
     border:none;
-    border: solid 2px #e7eeeb;
+    border: solid 1px #e7eeeb;
     border-radius: 0 !important;
 }
 
