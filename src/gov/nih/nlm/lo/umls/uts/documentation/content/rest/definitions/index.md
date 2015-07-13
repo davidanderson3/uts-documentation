@@ -1,8 +1,9 @@
-title=Retrieving definitions in the UMLS
+title=Retrieving Concept Definitions
 date=2015-07-09
 updated=2015-07-09
 type=page
 status=published
+category=UMLS Concepts
 ~~~~~~
 
 

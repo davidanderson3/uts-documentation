@@ -11,6 +11,11 @@
     border-radius: 0 !important;
 }
 
+.dropdown-toggle {
+   
+  background-color:#f8f8f8;
+  border:none;
+}
 
 h1 {
 font-size: 2em;    
@@ -24,6 +29,7 @@ padding-top:.5em;
 margin-left:3em;
 
 }
+
 
 .orange{
    
@@ -52,3 +58,4 @@ color: #ff9900;
    
    text-decoration: underline;
 }
+

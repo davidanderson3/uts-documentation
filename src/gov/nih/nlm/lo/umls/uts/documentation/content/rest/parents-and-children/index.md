@@ -1,8 +1,9 @@
-title=Retrieving parents and children information in the UMLS
+title=Retrieving parents and children
 date=2015-07-06
 updated=2015-07-08
 type=page
 status=published
+category=Source-asserted data
 ~~~~~~
 
 

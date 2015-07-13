@@ -1,8 +1,9 @@
-title=Retrieving source asserted information in the UMLS
+title=Retrieving source asserted data
 date=2015-07-01
 updated=2015-07-06
 type=page
 status=published
+category=Source-asserted data
 ~~~~~~
 
 

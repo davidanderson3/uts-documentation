@@ -5,6 +5,7 @@ type=page
 status=published
 ~~~~~~
 
+
 ### Authentication Service URIs
 
 Method Type|URI|Description
