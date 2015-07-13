@@ -6,6 +6,7 @@
 </div>
 <div class = "row">
   <div class="container-fluid uts-nav col-md-12 col-sm-8 col-xs-6">
+        <a class = "pull-right" style = "margin-right:1em;" href="http://apps.nlm.nih.gov/mainweb/siebel/nlm/index.cfm">Contact NLM</a>
         <a href="${content.rootpath}rest/home.html"><img class= "img-responsive pull-left" style = "padding-top:.2em; padding-left:1em;" alt="UTS Logo" style="margin-right:1em;" src="<#if (content.rootpath)??>${content.rootpath}<#else></#if>umls-xs.gif"></a>
         <p class = "orange uts-title">UMLS REST API Technical Documentation</p>
   </div>
