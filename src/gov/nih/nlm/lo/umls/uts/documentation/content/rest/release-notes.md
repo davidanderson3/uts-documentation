@@ -24,7 +24,12 @@ JSON output is now wrapped in a 'result' object, as such
 
 ~~~~json
 
-{"result" ... }
+{
+  "result":{
+   ...
+  
+  }
+}
 
 ~~~~
 
