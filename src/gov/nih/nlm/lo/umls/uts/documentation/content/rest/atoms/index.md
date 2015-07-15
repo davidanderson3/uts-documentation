@@ -62,9 +62,9 @@ Calls under /atoms will return JSON objects of classType='Atom'.
             "rootSource": "ICD9CM",
             "termType": "PT",
             "memberships": {
-                "concept": "https://uts-ws-qa.nlm.nih.gov/rest/content/2015AA/CUI/C0155502",
-                "sourceDescriptor": "https://uts-ws-qa.nlm.nih.gov/rest/content/2015AA/source/ICD9CM/386.11",
-                "code": "https://uts-ws-qa.nlm.nih.gov/rest/content/2015AA/source/ICD9CM/386.11"
+                "concept": "https://uts-ws.nlm.nih.gov/rest/content/2015AA/CUI/C0155502",
+                "sourceDescriptor": "https://uts-ws.nlm.nih.gov/rest/content/2015AA/source/ICD9CM/386.11",
+                "code": "https://uts-ws.nlm.nih.gov/rest/content/2015AA/source/ICD9CM/386.11"
             },
             "attributes": "NONE",
             "parents": "NONE",
@@ -82,11 +82,11 @@ Calls under /atoms will return JSON objects of classType='Atom'.
             "rootSource": "SNOMEDCT_US",
             "termType": "PT",
             "memberships": {
-                "concept": "https://uts-ws-qa.nlm.nih.gov/rest/content/2015AA/CUI/C0155502",
-                "sourceConcept": "https://uts-ws-qa.nlm.nih.gov/rest/content/2015AA/source/SNOMEDCT_US/111541001",
-                "code": "https://uts-ws-qa.nlm.nih.gov/rest/content/2015AA/source/SNOMEDCT_US/111541001"
+                "concept": "https://uts-ws.nlm.nih.gov/rest/content/2015AA/CUI/C0155502",
+                "sourceConcept": "https://uts-ws.nlm.nih.gov/rest/content/2015AA/source/SNOMEDCT_US/111541001",
+                "code": "https://uts-ws.nlm.nih.gov/rest/content/2015AA/source/SNOMEDCT_US/111541001"
             },
-            "attributes": "https://uts-ws-qa.nlm.nih.gov/rest/content/2015AA/AUI/A2892933/attributes",
+            "attributes": "https://uts-ws.nlm.nih.gov/rest/content/2015AA/AUI/A2892933/attributes",
             "parents": "NONE",
             "children": "NONE",
             "relations": "NONE",
@@ -102,11 +102,11 @@ Calls under /atoms will return JSON objects of classType='Atom'.
             "rootSource": "SNOMEDCT_US",
             "termType": "PT",
             "memberships": {
-                "concept": "https://uts-ws-qa.nlm.nih.gov/rest/content/2015AA/CUI/C0155502",
-                "sourceConcept": "https://uts-ws-qa.nlm.nih.gov/rest/content/2015AA/source/SNOMEDCT_US/232285008",
-                "code": "https://uts-ws-qa.nlm.nih.gov/rest/content/2015AA/source/SNOMEDCT_US/232285008"
+                "concept": "https://uts-ws.nlm.nih.gov/rest/content/2015AA/CUI/C0155502",
+                "sourceConcept": "https://uts-ws.nlm.nih.gov/rest/content/2015AA/source/SNOMEDCT_US/232285008",
+                "code": "https://uts-ws.nlm.nih.gov/rest/content/2015AA/source/SNOMEDCT_US/232285008"
             },
-            "attributes": "https://uts-ws-qa.nlm.nih.gov/rest/content/2015AA/AUI/A3101021/attributes",
+            "attributes": "https://uts-ws.nlm.nih.gov/rest/content/2015AA/AUI/A3101021/attributes",
             "parents": "NONE",
             "children": "NONE",
             "relations": "NONE",

@@ -48,7 +48,7 @@ Invalid terms or IDs that are presented to the /search endpoint will return an H
 
 ~~~~xml
 <!--search on 'foo bar baz' -->
-https://uts-ws-qa.nlm.nih.gov/rest/search/2015AA?string=foo%20bar%20baz&ticket=ST...
+https://uts-ws.nlm.nih.gov/rest/search/2015AA?string=foo%20bar%20baz&ticket=ST...
 ~~~~
 
 ~~~~json

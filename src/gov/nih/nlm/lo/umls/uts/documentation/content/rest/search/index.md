@@ -65,7 +65,7 @@ you will get back source-asserted identifiers instead of CUIs.
 
     "ui": "C0009044",
     "rootSource": "SNOMEDCT_US",
-    "uri": "https://uts-ws-qa.nlm.nih.gov/rest/content/2015AA/CUI/C0009044",
+    "uri": "https://uts-ws.nlm.nih.gov/rest/content/2015AA/CUI/C0009044",
     "name": "Closed fracture carpal bone"
 
 },
@@ -73,7 +73,7 @@ you will get back source-asserted identifiers instead of CUIs.
 
     "ui": "C0016644",
     "rootSource": "MTH",
-    "uri": "https://uts-ws-qa.nlm.nih.gov/rest/content/2015AA/CUI/C0016644",
+    "uri": "https://uts-ws.nlm.nih.gov/rest/content/2015AA/CUI/C0016644",
     "name": "Fracture of carpal bone"
 
 },
@@ -81,7 +81,7 @@ you will get back source-asserted identifiers instead of CUIs.
 
     "ui": "C0159765",
     "rootSource": "MTH",
-    "uri": "https://uts-ws-qa.nlm.nih.gov/rest/content/2015AA/CUI/C0159765",
+    "uri": "https://uts-ws.nlm.nih.gov/rest/content/2015AA/CUI/C0159765",
     "name": "Open fracture of carpal bone, unspecified"
 
 },
@@ -112,7 +112,7 @@ you will get back source-asserted identifiers instead of CUIs.
 
     "ui": "9468002",
     "rootSource": "SNOMEDCT_US",
-    "uri": "https://uts-ws-qa.nlm.nih.gov/rest/content/2015AA/SNOMEDCT_US/9468002",
+    "uri": "https://uts-ws.nlm.nih.gov/rest/content/2015AA/SNOMEDCT_US/9468002",
     "name": "Closed fracture carpal bone"
 
 },
@@ -120,7 +120,7 @@ you will get back source-asserted identifiers instead of CUIs.
 
     "ui": "C34488",
     "rootSource": "NCI",
-    "uri": "https://uts-ws-qa.nlm.nih.gov/rest/content/2015AA/NCI/C34488",
+    "uri": "https://uts-ws.nlm.nih.gov/rest/content/2015AA/NCI/C34488",
     "name": "Closed Fracture of Carpal Bone"
 
 },
@@ -128,7 +128,7 @@ you will get back source-asserted identifiers instead of CUIs.
 
     "ui": "34696",
     "rootSource": "MEDCIN",
-    "uri": "https://uts-ws-qa.nlm.nih.gov/rest/content/2015AA/MEDCIN/34696",
+    "uri": "https://uts-ws.nlm.nih.gov/rest/content/2015AA/MEDCIN/34696",
     "name": "closed fracture of carpal bone"
 
 },
