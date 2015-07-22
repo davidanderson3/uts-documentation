@@ -3,7 +3,7 @@ date=2015-07-09
 updated=2015-07-09
 type=page
 status=published
-category=UMLS Concepts
+category=Retrieving UMLS Concepts
 ~~~~~~
 
 

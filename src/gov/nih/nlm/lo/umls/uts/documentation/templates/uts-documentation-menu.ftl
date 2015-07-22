@@ -1,4 +1,4 @@
-<#assign categories = ['UMLS Concepts','Source-asserted data']>
+<#assign categories = ['Retrieving UMLS Concepts','Retrieving source-asserted data']>
 <div class = "row header">
   <div class="container-fluid col-md-12 col-sm-12 col-xs-12">
      <div class = "row">

@@ -3,7 +3,7 @@ date=2015-07-06
 updated=2015-07-08
 type=page
 status=published
-category=Source-asserted data
+category=Retrieving source-asserted data
 ~~~~~~
 
 
