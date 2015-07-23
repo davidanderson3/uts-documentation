@@ -13,7 +13,7 @@
 </div>
 <div class = "row">
   <div class="container-fluid uts-nav col-md-12 col-sm-8 col-xs-6">
-        <a href="${content.rootpath}rest/home.html"><img class= "img-responsive pull-left" style = "padding-top:.2em; padding-left:1em;" alt="UTS Logo" style="margin-right:1em;" src="<#if (content.rootpath)??>${content.rootpath}<#else></#if>umls-xs.gif"></a>
+        <a href="${content.rootpath}rest/home.html"><img class= "img-responsive pull-left" style = "padding-top:.2em; padding-left:1em; margin-right:1em;" alt="UTS Logo" src="<#if (content.rootpath)??>${content.rootpath}<#else></#if>umls-xs.gif"></a>
         <p class = "orange uts-title">UMLS REST API Technical Documentation</p>
   </div>
 </div>
@@ -21,7 +21,7 @@
   <div class = "container-fluid col-md-12 col-sm-8 col-xs-6 navbar navbar-default" role = "navigation">
    <div class="btn-group navbar-btn visible-lg visible-md" role="group">
     <#list published_pages?sort_by('navorder') as page>
-    <#if !(page.category)?? && page.uri != "rest/home.html"><#if (content.rootpath)??><a class = "btn btn-md" role = "button" href = "${content.rootpath}${page.uri}">${page.title}</a></li><#else></#if></#if>
+    <#if !(page.category)?? && page.uri != "rest/home.html"><#if (content.rootpath)??><a class = "btn btn-md" role = "button" href = "${content.rootpath}${page.uri}">${page.title}</a><#else></#if></#if>
     </#list>
       <#list categories as cat>
       <div class="btn-group" role="group">

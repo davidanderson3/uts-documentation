@@ -2,30 +2,32 @@
 <html lang="en">
   <head>
     <meta charset="utf-8"/>
-    <title><#if (page.title)??><#escape x as x?xml>${page.title}</#escape><#else>JBake</#if></title>
+    <title><#if (page.title)??><#escape x as x?xml>${page.title}</#escape><#else>UMLS Terminology Services REST API Technical Documentation</#if></title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="">
-    <meta name="author" content="">
-    <meta name="keywords" content="">
+    <meta name="DC.Title" content = "UMLS Terminology Services REST API Technical Documentation" />
+    <meta name="DC.Publisher" content="U.S. National Library of Medicine" />
+    <meta name="DC.Subject.Keyword" content="Unified Medical Language System API, UTS REST API, Terminology Service, Biomedical Terminology Endpoint">
+    <meta name="DC.Rights" content="Public Domain" />
+    <meta name="DC.Language" content="eng" />
     <meta name="generator" content="JBake">
     <meta http-equiv="X-UA-Compatible" content="IE=edge;IE=9;IE=8;"/>
 
     <!-- Le styles -->
-    <link href="<#if (content.rootpath)??>${content.rootpath}<#else></#if>css/bootstrap.min.css" rel="stylesheet">
-    <link href="<#if (content.rootpath)??>${content.rootpath}<#else></#if>css/asciidoctor.css" rel="stylesheet">
-    <link href="<#if (content.rootpath)??>${content.rootpath}<#else></#if>css/prettify.css" rel="stylesheet">
-    <link href="<#if (content.rootpath)??>${content.rootpath}<#else></#if>css/uts-docs.css" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/8.6/styles/default.min.css">
+    <link href="<#if (content.rootpath)??>${content.rootpath}<#else></#if>css/bootstrap.min.css" rel="stylesheet" type="text/css">
+    <link href="<#if (content.rootpath)??>${content.rootpath}<#else></#if>css/asciidoctor.css" rel="stylesheet" type="text/css">
+    <link href="<#if (content.rootpath)??>${content.rootpath}<#else></#if>css/prettify.css" rel="stylesheet" type="text/css">
+    <link href="<#if (content.rootpath)??>${content.rootpath}<#else></#if>css/uts-docs.css" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/8.6/styles/default.min.css" type="text/css">
 
-    <script src="//code.jquery.com/jquery-1.11.3.min.js"></script>
-    <script src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
-    <script src="<#if (content.rootpath)??>${content.rootpath}<#else></#if>js/bootstrap.min.js"></script>
-    <script src="<#if (content.rootpath)??>${content.rootpath}<#else></#if>js/prettify.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/8.6/highlight.min.js"></script>
+    <script src="//code.jquery.com/jquery-1.11.3.min.js" type="text/javascript"></script>
+    <script src="//code.jquery.com/jquery-migrate-1.2.1.min.js" type="text/javascript"></script>
+    <script src="<#if (content.rootpath)??>${content.rootpath}<#else></#if>js/bootstrap.min.js" type="text/javascript"></script>
+    <script src="<#if (content.rootpath)??>${content.rootpath}<#else></#if>js/prettify.js" type="text/javascript"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/8.6/highlight.min.js" type="text/javascript"></script>
     
     <!-- HTML5 shim, for IE6-8 support of HTML5 elements -->
     <!--[if lt IE 9]>
-      <script src="<#if (content.rootpath)??>${content.rootpath}<#else></#if>js/html5shiv.min.js"></script>
+    <script src="<#if (content.rootpath)??>${content.rootpath}<#else></#if>js/html5shiv.min.js" type="text/javascript"></script>
     <![endif]-->
     <link rel="shortcut icon" href="<#if (content.rootpath)??>${content.rootpath}<#else></#if>favicon.ico">
     
