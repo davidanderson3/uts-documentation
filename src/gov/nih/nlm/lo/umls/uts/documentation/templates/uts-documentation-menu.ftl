@@ -1,4 +1,4 @@
-<#assign categories = ['Retrieving UMLS Concepts','Retrieving source-asserted data']>
+<#assign categories = ['Retrieving UMLS Concepts', 'Retrieving Source-Asserted Data']>
 <div class = "row header">
   <div class="container-fluid col-md-12 col-sm-12 col-xs-12">
      <div class = "row">
@@ -20,14 +20,14 @@
 <div class = "row">
   <div class = "container-fluid col-md-12 col-sm-8 col-xs-6 navbar navbar-default" role = "navigation">
    <div class="btn-group navbar-btn visible-lg visible-md" role="group">
-    <#list published_pages as page>
+    <#list published_pages?sort_by('navorder') as page>
     <#if !(page.category)?? && page.uri != "rest/home.html"><#if (content.rootpath)??><a class = "btn btn-md" role = "button" href = "${content.rootpath}${page.uri}">${page.title}</a></li><#else></#if></#if>
     </#list>
       <#list categories as cat>
       <div class="btn-group" role="group">
         <button type="button" class="btn btn-md dropdown-toggle" data-toggle="dropdown" aria-expanded="false">${cat}<span class = "caret"/></button>    
          <ul class = "dropdown-menu" role = "menu">
-          <#list published_pages as page>
+          <#list published_pages?sort_by('navorder') as page>
            <#if (page.category)?? && page.category = cat><li><#if (content.rootpath)??><a href = "${content.rootpath}${page.uri}">${page.title}</a></li><#else></#if></#if>
           </#list>
          </ul>

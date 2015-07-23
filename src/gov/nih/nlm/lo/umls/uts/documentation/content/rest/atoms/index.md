@@ -1,9 +1,10 @@
-title=Retrieving UMLS atoms
+title=Retrieving UMLS Atoms
 date=2015-06-12
 updated=2015-06-25
 type=page
 status=published
 category=Retrieving UMLS Concepts
+navorder=2
 ~~~~~~
 
 
