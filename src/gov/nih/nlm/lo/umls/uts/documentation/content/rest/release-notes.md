@@ -3,6 +3,7 @@ date=2015-07-06
 updated=2015-07-06
 type=page
 status=published
+navorder=1
 ~~~~~~
 
 Released: July 10, 2015

@@ -1,9 +1,10 @@
-title=Retrieving parents and children
+title=Retrieving Parents and Children
 date=2015-07-06
 updated=2015-07-08
 type=page
 status=published
-category=Retrieving source-asserted data
+category=Retrieving Source-Asserted Data
+navorder=2
 ~~~~~~
 
 
