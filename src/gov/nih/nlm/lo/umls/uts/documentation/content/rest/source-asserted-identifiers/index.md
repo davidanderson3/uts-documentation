@@ -1,6 +1,6 @@
 title=Retrieving Source-Asserted Identifier Information
 date=2015-07-01
-updated=2015-07-06
+updated=2015-07-24
 type=page
 status=published
 category=Retrieving Source-Asserted Data
