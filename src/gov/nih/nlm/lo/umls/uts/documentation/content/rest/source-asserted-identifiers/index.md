@@ -27,13 +27,12 @@ You may use any valid UMLS release back to 2008AA in your URI if you would like 
 Sample URI|Description
 --- | ---
 /content/current/source/SNOMEDCT_US/9468002 | Retrieves Source Concept
--- /content/current/source/MSH/D015242 | Retrieves Source Descriptor
+/content/current/source/MSH/D015242 | Retrieves Source Descriptor
 /content/current/source/LNC/54112-8 | Retrieves Code
 [/content/current/source/SNOMEDCT_US/9468002/atoms](../atoms/index.html)| Retrieve atoms in a source-asserted identifier
 [/content/current/source/SNOMEDCT_US/9468002/parents](../parents-and-children/index.html) | Retrieve immediate parents of a source-asserted identifier
 [/content/current/source/SNOMEDCT_US/9468002/children](../parents-and-children/index.html) | Retrieve immediate children of source-asserted identifier
 
--- Code entities that are represented as source descriptors (MeSH, ICD10CM, MDR) are not yet implemented
 
 ### Query Parameters
 
