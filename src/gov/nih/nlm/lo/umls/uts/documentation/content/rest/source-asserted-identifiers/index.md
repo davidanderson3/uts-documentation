@@ -38,7 +38,7 @@ Sample URI|Description
 
 Parameter name | Required? Y/N | Description|  Valid Values | Default value | Usage Note
 --- | ---
-ticket | Y | A single-use service ticket is required for each call to the API. See [authentication](../authentication.html) for more information |  |  | 
+ticket | Y | A single-use service ticket is required for each call to the API. See [authentication](../authentication.html) for more information | n/a | n/a | n/a
 
 
 ### Sample Output
