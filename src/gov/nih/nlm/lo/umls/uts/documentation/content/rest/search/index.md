@@ -33,14 +33,14 @@ Sample URI|Description
 
 Parameter name | Required? Y/N | Description|  Valid Values | Default value | Usage Note
 --- | ---
-ticket | Y | A single-use service ticket is required for each call to the API. See [authentication](../authentication.html) for more information | n/a | n/a | n/a
-string | Y|  A human readable term, such as 'gestatational diabetes', or a code from a source vocabulary, such as 11687002 from SNOMEDCT_US. | Any term or code in the UMLS. | n/a | n/a
-inputType | N | Specifies the data type you are using as your search parameter.  | 'atom', 'code','sourceConcept','sourceDescriptor' | 'atom' | n/a
+ticket | Y | A single-use service ticket is required for each call to the API. See [authentication](../authentication.html) for more information |  |  | 
+string | Y|  A human readable term, such as 'gestatational diabetes', or a code from a source vocabulary, such as 11687002 from SNOMEDCT_US. | Any term or code in the UMLS. |  | 
+inputType | N | Specifies the data type you are using as your search parameter.  | 'atom', 'code','sourceConcept','sourceDescriptor' | 'atom' | 
 returnIdType | N | Specifies the type of identifier you wish to retrieve. | 'aui','concept','code','sourceConcept','sourceDescriptor' | 'concept' | Use 'code','sourceConcept', or 'sourceDescriptor' if you prefer source-asserted identifiers rather than CUIs in your search results.
-sabs | N | Comma-separated list of source vocabularies to include in your search | Any [root source abbreviation](http://www.nlm.nih.gov/research/umls/knowledge_sources/metathesaurus/release/source_vocabularies.html) in the UMLS. | All UMLS sources | n/a
+sabs | N | Comma-separated list of source vocabularies to include in your search | Any [root source abbreviation](http://www.nlm.nih.gov/research/umls/knowledge_sources/metathesaurus/release/source_vocabularies.html) in the UMLS. | All UMLS sources | 
 searchType | N | Type of search you wish to use | 'exact','words','leftTruncation', 'rightTruncation','approximate' | 'words' | Use 'exact' when using inputType = 'code', 'sourceConcept', or 'sourceDescriptor'.
-page | N | Whole number that specifies which page of results to fetch. | 1,2,3, etc | 1 | n/a
-pageSize | N | Whole number that specifies the number of results to include per page. | 1,2,3, etc | 25 | n/a
+page | N | Whole number that specifies which page of results to fetch. | 1,2,3, etc | 1 | 
+pageSize | N | Whole number that specifies the number of results to include per page. | 1,2,3, etc | 25 | 
 
 ### Sample Output
 
