@@ -12,8 +12,8 @@ navorder=3
 URIs with /search support the following use cases
 
 *  Return a list of CUIs and their names when searching a human readable term.
-*  Return a list of CUIs and their names when searching a source-asserted identifier (code).
 *  Return a list of source-asserted identifiers (codes) and their names when searching a human readable term.
+*  Mapping source-asserted identifiers to UMLS CUIs.
 
 Note that 'current' in the URI can always be used to search against the latest UMLS publication.
 You may use any valid UMLS release back to 2008AA in your URI if you would like to search against a particular version of the UMLS.
