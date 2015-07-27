@@ -1,6 +1,6 @@
 title=Searching the UMLS
 date=2015-06-08
-updated=2015-06-25
+updated=2015-07-27
 type=page
 status=published
 navorder=3
