@@ -1,6 +1,6 @@
 title=Retrieving UMLS Concept Information
 date=2015-06-12
-updated=2015-07-10
+updated=2015-07-28
 type=page
 status=published
 category=Retrieving UMLS Concepts
