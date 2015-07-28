@@ -10,7 +10,7 @@ navorder=4
 
 [URIs](#uris) | [Query Parameters](#query-parameters) | [Sample Output](#sample-output)
 
-URIs with /relations/{CUI} support the following use cases:
+URIs with /relations support the following use cases:
 
 *  Retrieve the NLM-asserted relationships for a known CUI.
 

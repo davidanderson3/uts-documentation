@@ -50,7 +50,7 @@ pageSize | N | Whole number that specifies the number of results to include per 
 
 ### Sample Output
 
-Calls under /atoms will return JSON objects of classType='Atom'.
+**Calls under /atoms will return JSON objects of classType='Atom'.**
 
 ~~~~json
 {

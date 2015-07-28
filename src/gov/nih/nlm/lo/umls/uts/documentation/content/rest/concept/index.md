@@ -10,7 +10,7 @@ navorder=1
 
 [URIs](#uris) | [Query Parameters](#query-parameters) | [Sample Output](#sample-output)
 
-URIs with /concept/{CUI} support the following use cases:
+URIs with /CUI support the following use cases:
 
 *  Retrieve information (name, semantic types, number of atoms, etc) for a known CUI from latest UMLS version or a specific release.
 *  Retrieve atoms for a known CUI.
@@ -30,7 +30,7 @@ Sample URI|Description
 [/content/current/CUI/C0009044](#sample-output)| Retrieves CUI
 [/content/current/CUI/C0009044/atoms](../atoms/index.html) | Retrieve atoms in a CUI
 [/content/current/CUI/C0009044/definitions](../definitions/index.html) | Retrieve CUI definitions
-/content/current/CUI/C0009044/relations | Retrieve CUI relations
+[/content/current/CUI/C0009044/relations](../relationships/index.html) | Retrieve CUI relations
 
 ### Query Parameters
 
@@ -44,7 +44,7 @@ pageSize | N | Whole number that specifies the number of results to include per 
 ### Sample Output
 
 
-**The default for calls under /concept/{CUI} is to return UMLS CUIs.**
+**The default for calls under /CUI/{CUI} is to return UMLS CUIs.**
 
 ~~~~json
 {
