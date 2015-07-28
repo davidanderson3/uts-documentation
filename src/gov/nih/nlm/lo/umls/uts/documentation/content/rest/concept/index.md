@@ -30,7 +30,7 @@ Sample URI|Description
 [/content/current/CUI/C0009044](#sample-output)| Retrieves CUI
 [/content/current/CUI/C0009044/atoms](../atoms/index.html) | Retrieve atoms in a CUI
 [/content/current/CUI/C0009044/definitions](../definitions/index.html) | Retrieve CUI definitions
-[/content/current/CUI/C0009044/relations](../relationships/index.html) | Retrieve CUI relations
+[/content/current/CUI/C0009044/relations](../relations/index.html) | Retrieve CUI relations
 
 ### Query Parameters
 

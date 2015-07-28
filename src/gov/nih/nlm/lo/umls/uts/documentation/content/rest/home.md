@@ -22,7 +22,7 @@ GET | [/search/{version}](search/)| Retrieves CUIs when searching by term or cod
 GET | [/content/{version}/CUI/{CUI}](concept/) | Retrieves information about a known CUI
 GET | [/content/{version}/CUI/{CUI}/atoms](atoms/) | Retrieves atoms and information about atoms for a known CUI
 GET | [/content/{version}/CUI/{CUI}/definitions](definitions/) | Retrieves definitions for a known CUI
-GET | [/content/{version}/CUI/{CUI}/relations](relationships/) | Retrieves NLM-asserted relationships for a known CUI
+GET | [/content/{version}/CUI/{CUI}/relations](relations/) | Retrieves NLM-asserted relationships for a known CUI
 GET | [/content/{version}/source/{source}/{id}](source-asserted-identifiers/) | Retrieves information about a known source-asserted identifier
 GET | [/content/{version}/source/{source}/{id}/atoms](atoms/) | Retrieves information about atoms for a known source-asserted identifier
 GET | [/content/{version}/source/{source}/{id}/parents](parents-and-children/) | Retrieves immediate parents of a source-asserted identifier
