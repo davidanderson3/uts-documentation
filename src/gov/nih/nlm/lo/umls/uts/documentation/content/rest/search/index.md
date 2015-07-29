@@ -26,7 +26,7 @@ Sample URI|Description
 --- | ---
 /search/current?string=fracture of carpal bone | Retrieves CUIs for a search term
 /search/current?string=fracture of carpal bone&searchType=exact | Uses 'exact' searching
-/search/current?string=fracture of carpal bone&sabs=SNOMEDCT_US&returnType=codes | Returns SNOMEDCT concepts associated with a search term.
+/search/current?string=fracture of carpal bone&sabs=SNOMEDCT_US&returnIdType=codes | Returns SNOMEDCT concepts associated with a search term.
 /search/current?string=82065001&inputType=code&searchType=exact&sabs=SNOMEDCT_US | Returns UMLS CUIs associated with a SNOMEDCT_US concept.
 
 ### Query Parameters
