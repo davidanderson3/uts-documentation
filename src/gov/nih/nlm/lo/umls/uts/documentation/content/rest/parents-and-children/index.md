@@ -41,7 +41,7 @@ pageSize | N | Whole number that specifies the number of results to include per 
 ### Sample Output
 
 
-*Calls under /parents or /children will return a classType of 'AtomClusterAtomClusterRelation'*
+**Calls under /parents or /children will return a classType of 'AtomClusterAtomClusterRelation'.**
 
 ~~~~json
 {

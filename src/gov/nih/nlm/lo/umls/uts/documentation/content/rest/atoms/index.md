@@ -10,7 +10,7 @@ navorder=2
 
 [URIs](#uris) | [Query Parameters](#query-parameters) | [Sample Output](#sample-output)
 
-URIs with /atoms support the following use cases
+URIs with /atoms support the following use cases:
 
 *  Retrieve atoms of a UMLS concept (CUI).
 *  Retrieve atoms of a source-asserted identifier or code.
