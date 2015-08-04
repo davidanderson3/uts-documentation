@@ -1,6 +1,6 @@
 title=Retrieving Concept Relations
 date=2015-07-28
-updated=2015-07-28
+updated=2015-08-04
 type=page
 status=published
 category=Retrieving UMLS Concepts
@@ -34,15 +34,18 @@ Sample URI|Description
 
 Parameter name | Required? Y/N | Description|  Valid Values | Default value | Usage Note
 --- | ---
-ticket | Y | A single-use service ticket is required for each call to the API. See [authentication](../authentication.html) for more information | n/a | n/a | n/a 
+ticket | Y | A single-use service ticket is required for each call to the API. See [authentication](../authentication.html) for more information | n/a | n/a | n/a
 page | N | Whole number that specifies which page of results to fetch. | 1,2,3, etc | 1 | n/a
 pageSize | N | Whole number that specifies the number of results to include per page. | 1,2,3, etc | 25 | n/a
+
 
 
 ### Sample Output
 
 
 **Calls using /CUI/{CUI}/relations will return a JSON object with a classType of 'ConceptRelation'.**
+
+Sample output for /content/current/CUI/C0009044/relations?ticket=ST...
 
 ~~~~json
 {

@@ -1,6 +1,6 @@
 title=Retrieving Source-Asserted Identifier Information
 date=2015-07-01
-updated=2015-07-24
+updated=2015-08-04
 type=page
 status=published
 category=Retrieving Source-Asserted Data
@@ -45,6 +45,8 @@ ticket | Y | A single-use service ticket is required for each call to the API. S
 
 
 **Calls using /source/{source}/{id} will return a JSON object with a classType of 'SourceAtomCluster'.**
+
+Sample output for /content/current/source/SNOMEDCT_US/9468002?ticket=ST...
 
 ~~~~json
 {

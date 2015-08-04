@@ -1,6 +1,6 @@
 title=Retrieving UMLS Concept Information
 date=2015-06-12
-updated=2015-07-28
+updated=2015-08-04
 type=page
 status=published
 category=Retrieving UMLS Concepts
@@ -45,6 +45,8 @@ pageSize | N | Whole number that specifies the number of results to include per 
 
 
 **The default for calls under /CUI/{CUI} is to return UMLS CUIs.**
+
+Sample output for /content/current/CUI/C0009044?ticket=ST...
 
 ~~~~json
 {

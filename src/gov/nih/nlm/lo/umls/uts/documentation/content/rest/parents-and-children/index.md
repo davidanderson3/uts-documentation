@@ -1,6 +1,6 @@
 title=Retrieving Parents and Children
 date=2015-07-06
-updated=2015-07-08
+updated=2015-08-04
 type=page
 status=published
 category=Retrieving Source-Asserted Data
@@ -41,89 +41,98 @@ pageSize | N | Whole number that specifies the number of results to include per 
 ### Sample Output
 
 
-*Calls under /parents or /children will return a classType of 'AtomClusterAtomClusterRelation'*
+**Calls under /parents or /children will return a classType of 'AtomClusterAtomClusterRelation'.**
+
+Sample output for /content/current/source/SNOMEDCT_US/226598007/parents?ticket=ST...
 
 ~~~~json
 {
-    "result": [
+
+    "result": 
+
+[
+
         {
             "classType": "AtomClusterAtomClusterRelation",
-            "ui": "e50f3647a92e85415e8b8c5cde3e5f4c",
+            "ui": "acaf07dfc5df88c46a4e0a0dcdb475b8",
             "suppressible": false,
-            "sourceUi": null,
+            "sourceUi": "NONE",
             "obsolete": false,
             "sourceOriginated": true,
             "rootSource": "SNOMEDCT_US",
             "relationLabel": "PAR",
             "additionalRelationLabel": "isa",
-            "groupId": null,
+            "groupId": "NONE",
             "attributeCount": 0,
             "relatedAtom": "",
-            "relatedConcept": "https://uts-ws.nlm.nih.gov/rest/content/2015AA/source/SNOMEDCT_US/226598007"
+            "relatedConcept": "https://uts-ws.nlm.nih.gov/rest/content/2015AA/source/SNOMEDCT_US/226529007"
         }
     ],
     "pageNum": 1,
     "pageSize": 25
+
 }
-
-
 ~~~~
 
 
 **The default for calls under /children is to return the immediate children of the concept provided.**
 
+Sample output for /content/current/source/SNOMEDCT_US/9468002/children?ticket=ST...
+
 ~~~~json
+
 
 {
     "result": [
         {
             "classType": "AtomClusterAtomClusterRelation",
-            "ui": "3044515a9559e835bc8ed5bf7099fddc",
+            "ui": "f22c54b32695c7bcb4d96c5620d6987f",
             "suppressible": false,
-            "sourceUi": null,
+            "sourceUi": "NONE",
             "obsolete": false,
             "sourceOriginated": true,
             "rootSource": "SNOMEDCT_US",
             "relationLabel": "CHD",
             "additionalRelationLabel": "isa",
-            "groupId": null,
+            "groupId": "NONE",
             "attributeCount": 0,
             "relatedAtom": "",
-            "relatedConcept": "https://uts-ws.nlm.nih.gov/rest/content/2015AA/source/SNOMEDCT_US/10934401000119101"
+            "relatedConcept": "https://uts-ws.nlm.nih.gov/rest/content/2015AA/source/SNOMEDCT_US/10934361000119105"
         },
         {
             "classType": "AtomClusterAtomClusterRelation",
             "ui": "5a14b35f8b85af14f2f5e39b1e7408a6",
             "suppressible": false,
-            "sourceUi": null,
+            "sourceUi": "NONE",
             "obsolete": false,
             "sourceOriginated": true,
             "rootSource": "SNOMEDCT_US",
             "relationLabel": "CHD",
             "additionalRelationLabel": "isa",
-            "groupId": null,
+            "groupId": "NONE",
             "attributeCount": 0,
             "relatedAtom": "",
             "relatedConcept": "https://uts-ws.nlm.nih.gov/rest/content/2015AA/source/SNOMEDCT_US/208375001"
         },
         {
             "classType": "AtomClusterAtomClusterRelation",
-            "ui": "f22c54b32695c7bcb4d96c5620d6987f",
+            "ui": "3044515a9559e835bc8ed5bf7099fddc",
             "suppressible": false,
-            "sourceUi": null,
+            "sourceUi": "NONE",
             "obsolete": false,
             "sourceOriginated": true,
             "rootSource": "SNOMEDCT_US",
             "relationLabel": "CHD",
             "additionalRelationLabel": "isa",
-            "groupId": null,
+            "groupId": "NONE",
             "attributeCount": 0,
             "relatedAtom": "",
-            "relatedConcept": "https://uts-ws.nlm.nih.gov/rest/content/2015AA/source/SNOMEDCT_US/10934361000119105"
+            "relatedConcept": "https://uts-ws.nlm.nih.gov/rest/content/2015AA/source/SNOMEDCT_US/10934401000119101"
         }
     ],
     "pageNum": 1,
     "pageSize": 25
 }
+
 
 ~~~~

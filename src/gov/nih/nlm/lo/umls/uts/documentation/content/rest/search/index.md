@@ -9,11 +9,11 @@ navorder=3
 
 [URIs](#uris) | [Query Parameters](#query-parameters) | [Sample Output](#sample-output)
 
-URIs with /search support the following use cases
+URIs with /search support the following use cases:
 
 *  Return a list of CUIs and their names when searching a human readable term.
 *  Return a list of source-asserted identifiers (codes) and their names when searching a human readable term.
-*  Mapping source-asserted identifiers to UMLS CUIs.
+*  Map source-asserted identifiers to UMLS CUIs.
 
 Note that 'current' in the URI can always be used to search against the latest UMLS publication.
 You may use any valid UMLS release back to 2008AA in your URI if you would like to search against a particular version of the UMLS.
@@ -44,11 +44,10 @@ pageSize | N | Whole number that specifies the number of results to include per 
 
 ### Sample Output
 
-Calls under /search will return a JSON object of classType 'searchResults'.
+**Calls under /search will return a JSON object of classType 'searchResults'.**
 The default search parameters will return CUIs and their names.  If you ask for codes, sourceConcept, or sourceDescriptor as your returnIdType,
 you will get back source-asserted identifiers instead of CUIs.
 
-**The default for calls under /search is to return UMLS CUIs.**
 
 Sample output for /search/current?string=fracture of carpal bone&ticket=ST...
 
