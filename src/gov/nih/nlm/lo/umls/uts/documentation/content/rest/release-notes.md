@@ -1,6 +1,6 @@
 title=Release Notes
 date=2015-07-06
-updated=2015-07-06
+updated=2015-08-04
 type=page
 status=published
 navorder=1
@@ -60,7 +60,7 @@ https://uts-ws.nlm.nih.gov/rest/search/2015AA?string=foo%20bar%20baz&ticket=ST..
     "results":
     [
       {
-      "ui":null,
+      "ui":"NONE",
       "name":"NO RESULTS"
       }
     ]
