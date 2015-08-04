@@ -1,6 +1,6 @@
 title=Retrieving UMLS Atoms
 date=2015-06-12
-updated=2015-07-28
+updated=2015-08-04
 type=page
 status=published
 category=Retrieving UMLS Concepts
@@ -51,6 +51,8 @@ pageSize | N | Whole number that specifies the number of results to include per 
 ### Sample Output
 
 **Calls under /atoms will return JSON objects of classType='Atom'.**
+
+Sample output for /content/current/CUI/C0155502/atoms?ttys=PT&sabs=SNOMEDCT_US%2CICD9CM&ticket=ST...
 
 ~~~~json
 {

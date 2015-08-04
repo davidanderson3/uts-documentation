@@ -1,6 +1,6 @@
 title=Retrieving Concept Definitions
 date=2015-07-09
-updated=2015-07-09
+updated=2015-08-04
 type=page
 status=published
 category=Retrieving UMLS Concepts
@@ -40,6 +40,8 @@ pageSize | N | Whole number that specifies the number of results to include per 
 ### Sample Output
 
 **Calls using /CUI/{CUI}/definitions will return a JSON object with a classType of 'Definition'.**
+
+Sample output for /content/current/CUI/C0155502/definitions?ticket=ST...
 
 ~~~~json
 {

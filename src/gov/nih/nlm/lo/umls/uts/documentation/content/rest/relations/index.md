@@ -1,6 +1,6 @@
 title=Retrieving Concept Relations
 date=2015-07-28
-updated=2015-07-30
+updated=2015-08-04
 type=page
 status=published
 category=Retrieving UMLS Concepts
@@ -44,6 +44,8 @@ pageSize | N | Whole number that specifies the number of results to include per 
 
 
 **Calls using /CUI/{CUI}/relations will return a JSON object with a classType of 'ConceptRelation'.**
+
+Sample output for /content/current/CUI/C0009044/relations?ticket=ST...
 
 ~~~~json
 {
