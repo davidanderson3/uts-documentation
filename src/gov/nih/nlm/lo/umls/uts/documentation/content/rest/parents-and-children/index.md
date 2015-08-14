@@ -1,6 +1,6 @@
 title=Retrieving Parents and Children
 date=2015-07-06
-updated=2015-08-04
+updated=2015-08-13
 type=page
 status=published
 category=Retrieving Source-Asserted Data
@@ -43,18 +43,14 @@ pageSize | N | Whole number that specifies the number of results to include per 
 
 **Calls under /parents or /children will return a classType of 'AtomClusterAtomClusterRelation'.**
 
-Sample output for /content/current/source/SNOMEDCT_US/226598007/parents?ticket=ST...
+Sample output for /content/current/source/SNOMEDCT_US/9468002/parents?ticket=ST...
 
 ~~~~json
 {
-
-    "result": 
-
-[
-
+    "result": [
         {
             "classType": "AtomClusterAtomClusterRelation",
-            "ui": "acaf07dfc5df88c46a4e0a0dcdb475b8",
+            "ui": "6ca734fcc6f51b5a7464d32004218005",
             "suppressible": false,
             "sourceUi": "NONE",
             "obsolete": false,
@@ -65,12 +61,41 @@ Sample output for /content/current/source/SNOMEDCT_US/226598007/parents?ticket=S
             "groupId": "NONE",
             "attributeCount": 0,
             "relatedAtom": "",
-            "relatedConcept": "https://uts-ws.nlm.nih.gov/rest/content/2015AA/source/SNOMEDCT_US/226529007"
+            "relatedConcept": "https://uts-ws.nlm.nih.gov/rest/content/2015AA/source/SNOMEDCT_US/20511007"
+        },
+        {
+            "classType": "AtomClusterAtomClusterRelation",
+            "ui": "95b9721325649c164a488a92a89dc16a",
+            "suppressible": false,
+            "sourceUi": "NONE",
+            "obsolete": false,
+            "sourceOriginated": true,
+            "rootSource": "SNOMEDCT_US",
+            "relationLabel": "PAR",
+            "additionalRelationLabel": "isa",
+            "groupId": "NONE",
+            "attributeCount": 0,
+            "relatedAtom": "",
+            "relatedConcept": "https://uts-ws.nlm.nih.gov/rest/content/2015AA/source/SNOMEDCT_US/82065001"
+        },
+        {
+            "classType": "AtomClusterAtomClusterRelation",
+            "ui": "fefc70e0043ac9c4319de31fd7baf4ed",
+            "suppressible": false,
+            "sourceUi": "NONE",
+            "obsolete": false,
+            "sourceOriginated": true,
+            "rootSource": "SNOMEDCT_US",
+            "relationLabel": "PAR",
+            "additionalRelationLabel": "isa",
+            "groupId": "NONE",
+            "attributeCount": 0,
+            "relatedAtom": "",
+            "relatedConcept": "https://uts-ws.nlm.nih.gov/rest/content/2015AA/source/SNOMEDCT_US/36991002"
         }
     ],
     "pageNum": 1,
     "pageSize": 25
-
 }
 ~~~~
 
