@@ -10,36 +10,40 @@ navorder=1
 
 ### Use cases and methods
 
-Section|Use case|Method|Description
---- | --- | --- | ---
-Installation|[Installation](../installation/index.html)||
-PSF|[Paging](../paging/index.html)||
-  |[Sorting](../sorting/index.html)||
-  |[Filtering](../filtering/index.html)||
-Content|[Concept](../concept/index.html)||
-Content|[Atom](../atom/index.html)||
-Content|[Definitions](../definitions/index.html)||
-Content|[Term](../term/index.html)||
-Content|[SUI](../sui/index.html)||
-Content|[Atom Cluster](../atomcluster/index.html)||
-Content|[Content View](../contentview/index.html)||
-Content|[Subset](../subset/index.html)||
-Content|[Mappings](../mappings/index.html)||
-Content|[Relationships](../relationships/index.html)||
-Content|[Attributes](../attributes/index.html)||
-Content|[Tree Positions](../treepositions/index.html)||
-Metadata|[UMLS Version](../umlsversionmetadata/index.html)||
-Metadata|[Source Metadata](../sourcemetadata/index.html)||
-Metadata|[Co-occurrenceType Metadata](../cooccurancemetadata/index.html)||
-Metadata|[IdentifierType Metadata](../identifiertypemetadata/index.html)||
-Metadata|[Language Metadata](../languagemetadata/index.html)||
-Metadata|[Source Citation Metadata](../sourcecitationmetadata/index.html)||
-Metadata|[TermType Metadata](../termtypemetadata/index.html)||
-Metadata|[Subheading Metadata](../subheadingmetadata/index.html)||
-Metadata|[Relation Metadata](../relationmetadata/index.html)||
-Metadata|[Attribute Metadata](../attributemetadata/index.html)||
-Semantic Types|[Semantic Type](../semantictypes/index.html)||
-Semantic Types|[Semantic Group](../semantictypes/index.html)||
-Concept History|[Concept History](../concepthistory/index.html)||
-Finder|[Finder](../search/index.html)||
+Section|Method|Use Case
+--- | --- | ---
+**Installation**|[Installation](../installation/index.html)|Install the API
+**PSF**|||
+ |[Paging](../paging/index.html)| Paging Results
+ |[Sorting](../sorting/index.html)| Sort Results
+ |[Filtering](../filtering/index.html)| Filter Results
+**Searching the UMLS**|||
+ |[Finder](../search/index.html) | Search the UMLS
+**UMLS Content**|||
+ |[Concept](../concept/index.html)| Retrieve UMLS Concept Information 
+ |[Atom](../atom/index.html)| Retrieve UMLS Atoms 
+ |[Definitions](../definitions/index.html)| Retrieve UMLS Definitions 
+ |[Term](../term/index.html)| Retrieve UMLS Terms
+ |[SUI](../sui/index.html)| Retrieve UMLS Strings  
+ |[Atom Cluster](../atomcluster/index.html)| Retrieve source-asserted data
+ |[Content View](../contentview/index.html) | Retrieve UMLS content views
+ |[Subset](../subset/index.html)| Retrieve UMLS subsets
+ |[Mappings](../mappings/index.html) | Retrieve UMLS mappings
+ |[Relationships](../relationships/index.html) | Retrieve UMLS relationships
+ |[Attributes](../attributes/index.html) | Retrieve CUI and code attributes
+ |[Tree Positions](../treepositions/index.html) | Retrieve Tree Positions
+**Source vocabulary metadata**|||
+ |[UMLS Version](../umlsversionmetadata/index.html) | Retrieve information about UMLS versions
+ |[Source Metadata](../sourcemetadata/index.html) | Retrieve information about UMLS source vocabularies
+ |[Language Metadata](../languagemetadata/index.html) | Retrieve information about which languages are in the UMLS
+ |[Source Citation Metadata](../sourcecitationmetadata/index.html) | Retrieve source vocabulary citation information
+ |[TermType Metadata](../termtypemetadata/index.html) | Retrieve information about UMLS term types
+ |[Relation Metadata](../relationmetadata/index.html) | Retrieve information about relationships
+ |[Attribute Metadata](../attributemetadata/index.html) | Retrieve information about attributes
+**Semantic Types**|||
+ |[Semantic Type](../semantictypes/index.html) | Retrieve information about semantic types
+ |[Semantic Group](../semantictypes/index.html) | Retrieve information about semantic groups
+**Concept History**|||
+ |[Concept History](../concepthistory/index.html) | Retrieve concept history
+
 
