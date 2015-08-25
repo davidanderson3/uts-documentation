@@ -9,8 +9,7 @@ navorder=1
 
 #### Getting Started
 
-Installation of UTS API 2.0 involves running wsimport commands to parse
-the appropriate WSDLs and generate the needed JAX-WS files.
+Installation of UTS API 2.0 involves running wsimport commands to parse the appropriate WSDLs and generate the needed JAX-WS files.
 
 Before you install the UTS API 2.0:
 
@@ -68,8 +67,6 @@ The UTS API 2.0 uses two types of "tickets" to authenticate users and calls:
 -   **Proxy Grant Ticket** (valid for 8 hours) This kind of ticket validates your UTS username and password. **It is not necessary to obtain a new Proxy Grant Ticket each time you make a call to the API. However, it is necessary to use the proxy grant ticket each time you make a call to the API to request a single-use ticket.** A Proxy Grant Ticket could be considered "the ticket that gets you a ticket."
 -   **"Single-Use" Ticket** - This ticket expires after an individual call is completed. Therefore, each time you make a call to the API, you must request a new Proxy Ticket.
 
-Please see [this very simple client example](../soap/simpleClient.html) that demonstrates using the Proxy Grant/Single-Use Tickets
-
 
 ##### Proxy Grant Ticket
 ~~~~
@@ -101,3 +98,14 @@ private String serviceName = "http://umlsks.nlm.nih.gov";
 
 //Pass the Single-Use ticket as a parameter with each call to the API. 
 ~~~~
+>
+
+####Here are steps on how to create the reference variables for each web service:
+
+[Content](../installation/content.html)
+[Metadata](../installation/metadata.html)
+[Semantic Network](../installation/semanticnetwork.html)
+[Concept History](../installation/concepthistory.html)
+[Finder](../installation/finder.html)
+[Paging, Sorting, Filtering](../installation/psf.html)
+>

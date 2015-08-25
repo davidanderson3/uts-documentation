@@ -7,37 +7,13 @@ navorder=2
 ~~~~~~
 
 
-The Finder Service allows you to retrieve identifiers, for words or codes, and pass these retrieved identifiers to other methods to retrieve more granular data (especially using the methods associated with the UtsWsContentController object). You can perform searches such as:
-
--   starting with a search term, retrieve CUIs, SDUIs, SCUIs, and atoms
--   starting with a code, retrieve CUIs, SDUIs, SCUIs and atoms
-
-To use the finder service, create an instance of a UtsWsFinderController object, as well as the UtsWsSecurityController object (if not already created).
-
-~~~~
-//create the reference variables
- private UtsWsFinderController utsFinderService;
- private UtsWsSecurityController utsSecurityService;
-
-//instantiate and handshake
- try {
- utsFinderService = (new UtsWsFinderControllerImplService()).getUtsWsFinderControllerImplPort();
-
- utsSecurityService = (new UtsWsSecurityControllerImplService()).getUtsWsSecurityControllerImplPort();
- }
-
- catch (Exception e) {
- out.println("Error!!!" + e.getMessage());
- }
-~~~~
->
-
 **Method:**findConcepts(String ticket,String version,String target,String str, String searchType,PSF psf)
+
 **Returns:**ArrayList<UiLabel> 
 
 
 **Use Case:**You want to see a list of UMLS CUIs and their associated preferred names. You have a search string "lou gehrig disease" and want to return a list of CUIs having at least one atom that contains all of those words.
- ***It's important to note that the preferred names of the concepts returned may not match your search string.
+ ***It's important to note that the preferred names of the concepts returned may not match your search string.***
 
 ~~~~
 **Note:**The "target" parameter indicates what kind of cluster on which you're basing a search. In findConcepts, the following values can be passed for target:
@@ -122,6 +98,7 @@ Finder.psf myPsf = new Finder.psf();
 
 
 **Method:**findAtoms(String ticket,String version,String target,String str,String searchType,PSF psf)
+
 **Returns:** ArrayList<UiLabel>
 
 **Use Case:** Given a UMLS release, a searchType, and the string or code you would like to search, this call returns a set of atom unique identifiers (AUI) each with its corresponding atom name (Label), that meet your search criteria.
@@ -195,6 +172,7 @@ Finder.psf myPsf = new Finder.psf();
 >
 
 **Method:**findCodes(String ticket,String version,String target,String str,String searchType,PSF psf)
+
 **Returns:**ArrayList<UiLabelRootSource> 
 
 
@@ -292,6 +270,7 @@ Finder.psf myPsf = new Finder.psf();
 
 
 **Method:**findSourceConcepts(String ticket,String version,String target,String str,String searchType,PSF psf);
+
 **Returns:**ArrayList<UiLabelRootSource>
 
 **Use Case:**Starting with an atom, code, source descriptor, or aui, you want to find source concepts, their preferred names, and the source vocabularies that provide them.
@@ -379,6 +358,7 @@ Finder.psf myPsf = new Finder.psf();
 
 
 **Method:**findSourceDescriptors(String ticket,String version,String target,String str,String searchType,PSF psf)
+
 **Returns:**ArrayList<UiLabelRootSource>;
 
 **Use Case:**Given a UMLS release, a searchType, the string or code you would like to search, and a root source abbreviation (RSAB), this call returns a set of source descriptor identifiers (SDUI) each with its corresponding name (Label), for the specified RSAB.

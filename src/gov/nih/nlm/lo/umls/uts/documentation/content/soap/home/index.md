@@ -37,12 +37,13 @@ Section|Method|Use Case
  |[Source Metadata](../sourcemetadata/index.html) | Retrieve information about UMLS source vocabularies
  |[Language Metadata](../languagemetadata/index.html) | Retrieve information about which languages are in the UMLS
  |[Source Citation Metadata](../sourcecitationmetadata/index.html) | Retrieve source vocabulary citation information
+ |[Subheading Metadata](../subheading/index.html) | Retrieve source vocabulary subheading information
  |[TermType Metadata](../termtypemetadata/index.html) | Retrieve information about UMLS term types
- |[Relation Metadata](../relationmetadata/index.html) | Retrieve information about relationships
+ |[Relationship Metadata](../relationshipmetadata/index.html) | Retrieve information about relationships
  |[Attribute Metadata](../attributemetadata/index.html) | Retrieve information about attributes
 **Semantic Types**|||
  |[Semantic Type](../semantictypes/index.html) | Retrieve information about semantic types
- |[Semantic Group](../semantictypes/index.html) | Retrieve information about semantic groups
+ |[Semantic Group](../semanticgroup/index.html) | Retrieve information about semantic groups
 **Concept History**|||
  |[Concept History](../concepthistory/index.html) | Retrieve concept history
 

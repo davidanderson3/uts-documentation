@@ -6,45 +6,10 @@ status=unpublished
 navorder=3
 ~~~~~~
 
-The UtsWsContentController object allows access to the "meat and bones" of the Metathesaurus:
-
--   Concepts (CUIs), Terms (LUIs), Strings (SUIs), Atoms (AUIs), etc.
-
-One of the features of the new UTS API 2.0 is the ability to view other data "clusters" that come into the Metathesuarus through its source vocabularies:
-
--   SUIs (string unique identifiers), LUIs (lexical unique identifiers), SCUIs (source-asserted concepts), SDUIs (source-asserted descriptors), SAUIs (source-asserted atoms)
-
-Although the UMLS Metathesaurus is concept (CUI)-oriented database, you can use the UTS API 2.0 to aggregate data at levels other than the CUI from the diverse set of source vocabularies.
-
-For example, you can see all the SCUI-SCUI relations (parent/child or qualifying) between two SNOMED CT® concept identifiers.
-
-In order to make calls on Metathesaurus content, you must create/instantiate reference variables for UtsWsContentController and UtsWsSecurityController objects somewhere in your code:
-
-~~~~
-//create the reference variables
- private UtsWsContentController utsContentService;
- private UtsWsSecurityController utsSecurityService;
-
-//instantiate and handshake
- try {
- utsContentService = (new UtsWsContentControllerImplService()).getUtsWsContentControllerImplPort();
-
- utsSecurityService = (new UtsWsSecurityControllerImplService()).getUtsWsSecurityControllerImplPort();
- }
-
- catch (Exception e) {
- out.println("Error!!!" + e.getMessage());
- }
-~~~~
-
-
-The sample methods below would be run on an object similar to the utsContentService object that we just created.
-
-> 
 
 **Method: **getConcept(String ticket,String version,String conceptId)
 
-**Returns:**ConceptDTO(see javadocs)</span>](javadocs/gov/nih/nlm/umls/dto/content/ConceptDTO.html)
+**Returns:**ConceptDTO
 
 **Use Case:** Get the properties of a UMLS Concept, such as the preferred name, semantic types, and the number of atoms included in a concept. Other properties are included in the ConceptDTO Javadocs. In the example below, we retrieve information about C0004057, the UMLS concept for "aspirin".
 
@@ -78,7 +43,7 @@ content.conceptDTO myConcept = utsContentService.getConcept(ticket,"2011AB", "C0
 
 **Method: **(String ticket,String version,PSF psf)
 
-**Returns:**ArrayList<ConceptDTO>(see javadocs)</span>](javadocs/gov/nih/nlm/umls/dto/content/ConceptDTO.html)
+**Returns:**ArrayList< ConceptDTO>
 
 **Use Case:** Get all new UMLS Concepts for a given release, and it's related properties such as the preferred name, semantic types, date added, status etc.
 
@@ -118,7 +83,7 @@ C3667115|Colloidal oatmeal / Menthol|R|2014-05-01T00:00:00-04:00|[T121]
 
 **Method: **getNewConceptsCount(String ticket,String version)
 
-**Returns:**ArrayList<ConceptDTO>(see javadocs)(javadocs/gov/nih/nlm/umls/dto/content/ConceptDTO.html)
+**Returns:**ArrayList< ConceptDTO>
 
 **Use Case:** Get all new UMLS Concepts for a given release, and it's related properties such as the preferred name, semantic types, date added, status etc.
 
@@ -140,7 +105,7 @@ BigDecimal myConcept = new BigDecimal(0);
 
 **Method: **getConceptAtoms(String ticket,String version,String conceptId,PSF psf)
 
-**Returns:**ArrayList<AtomDTO>(see javadocs)</span>](javadocs/gov/nih/nlm/umls/dto/content/AtomDTO.html)
+**Returns:**ArrayList< AtomDTO>
 
 **Use Case:** You have a CUI and want to look at its individual atoms and their properties. Use the psf object to exclude sources, term types, relations, etc., that are not of interest to you Look at properties of the AtomDTO such as its identifier (AUI), term type, originating source vocabulary, and name. Also see the number of Content Views to which the atom belongs. Other properties are listed in the AtomDTO Javadocs.
 
@@ -228,7 +193,7 @@ content.psf myPsf = new content.psf();
 
 **Method: **getConceptAttributes(String ticket,String version,String conceptId,PSF psf)
 
-**Returns:**ArrayList<AttributeDTO>(see javadocs)</span>](javadocs/gov/nih/nlm/umls/dto/content/AttributeDTO.html)
+**Returns:**ArrayList< AttributeDTO>
 
 **Use Case:** You have a known UMLS CUI and want to see attributes suchas the name/value pair of the attribute. Other properties are available (see the Javadocs).
 
