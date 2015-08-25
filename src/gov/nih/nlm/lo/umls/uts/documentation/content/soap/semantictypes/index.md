@@ -1,12 +1,1316 @@
-title=Semantic Network
-date=2015-08-13
-updated=2015-08-13
+title=Semantic Type
+date=2015-08-26
+updated=2015-08-26
 type=page
 status=unpublished
 navorder=5
 ~~~~~~
 
 
+**Method: **getSemanticType(String ticket,String version,String semanticTypeId)
+
+**Returns:**SemanticTypeDTO
+
+**Use Case:** This method takes a Semantic Type Unique Identifier (TUI) as an argument, and returns information such as the Semantic Type's definition, Tree Number, number of children, etc. In the example below we use the identifier for the Semantic Type "Medical Device"
+
+
+#### Sample Input (Java):
+
+~~~~
+mySemTyRelDTO = utsSemanticNetworkService.getSemanticType(ticket, umlsRelease, "T121");
+ String abbreviation = mySemTyRelDTO.getAbbreviation();
+ String definition = mySemTyRelDTO.getDefinition();
+ int childCnt = mySemTyRelDTO.getChildCount();
+ int relCnt = mySemTyRelDTO.getRelationCount();
+ String treeNum = mySemTyRelDTO.getTreeNumber();
+ String ui = mySemTyRelDTO.getUi();
+ String value = mySemTyRelDTO.getValue();
+~~~~
+
+#### Sample Input (C♯):
+
+~~~~
+utsSemanticNetwork.getSemanticType(ticket, "2011AB", "T121");
+~~~~
+
+#### Sample Output:
+
+Abbreviation |  Definition  |  Child Count  | Relation Count |Tree Number |  Ui  |   Value  
+--- | --- | ---  | --- | --- | --- | ---
+phsu     |      A substance used in the treatment or prevention of pathologic disorders. This includes substances that occur naturally in the body and are administered therapeutically. |  1   |   13    | A1.4.1.1.1  |  T121 |  Pharmacologic Substance 
+>
+
+
+**Method: **<span class="method-name">getAllSemanticTypes</span><span
+class="method-parameters">(String ticket,String version)</span>
+**Returns:** <span
+class="method-return-type">ArrayList&lt;SemanticTypeDTO&gt; </span>
+
+<div class="method-description">
+
+**Use Case:** This method returns all Semantic Types for a given UMLS
+release. In the example below, we show only the output for the first and
+last member of the ArrayList returned (since there are over 130 Semantic
+Types in the UMLS).
+
+</div>
+
+<div class="sample content-block">
+
+</div>
+
+#### Sample Input (Java):
+
+<div class="input rounded-content-block">
+
+myarrSemTyRelDTO = utsSemanticNetworkService.getAllSemanticTypes
+(ticket, umlsRelease);\
+\
+ for (int i = 0; i &lt; myarrSemTyRelDTO.size(); i++) {\
+\
+ SemanticTypeDTO mySemTyRel = myarrSemTyRelDTO.get(i);\
+ String abbreviation = mySemTyRel.getAbbreviation();\
+ String definition = mySemTyRel.getDefinition();\
+ int childCnt = mySemTyRel.getChildCount();\
+ int relCnt = mySemTyRel.getRelationCount();\
+ String example = mySemTyRel.getExample();\
+ String nonHuman = mySemTyRel.getNonHuman();\
+ String treeNum = mySemTyRel.getTreeNumber();\
+ String ui = mySemTyRel.getUi();\
+ String value = mySemTyRel.getValue();\
+ }\
+
+</div>
+
+#### Sample Input (C♯):
+
+<div class="input rounded-content-block">
+
+utsSemanticNetwork.getAllSemanticTypeGroups(ticket, "2011AB");
+
+</div>
+
+#### Sample Output:
+
++--------------------------------------------------------------------------+
+|   Abbreviation   Definition                                              |
+|                                                                          |
+|                                                                          |
+|                                                                          |
+|                                                                          |
+|                                                                          |
+|                                                                          |
+|                                                 Child Count   Relation C |
+| ount   Tree Number      Ui     Value                                     |
+|   -------------- ------------------------------------------------------- |
+| ------------------------------------------------------------------------ |
+| ------------------------------------------------------------------------ |
+| ------------------------------------------------------------------------ |
+| ------------------------------------------------------------------------ |
+| ------------------------------------------------------------------------ |
+| ------------------------------------------------------------------------ |
+| ----------------------------------------------- ------------- ---------- |
+| ------ ---------------- ------ ----------------------------------------- |
+| --                                                                       |
+|   aapp           Amino acids and chains of amino acids connected by pept |
+| ide linkages.                                                            |
+|                                                                          |
+|                                                                          |
+|                                                                          |
+|                                                                          |
+|                                                                          |
+|                                                 0             2          |
+|        A1.4.1.2.1.7     T116   Amino Acid, Peptide, or Protein           |
+|   acab           An abnormal structure, or one that is abnormal in size  |
+| or location, found in or deriving from a previously normal structure. Ac |
+| quired abnormalities are distinguished from diseases even though they ma |
+| y result in pathological functioning (e.g., "hernias incarcerate").      |
+|                                                                          |
+|                                                                          |
+|                                                                          |
+|                                                 0             3          |
+|        A1.2.2.2         T020   Acquired Abnormality                      |
+|   acty           An operation or series of operations that an organism o |
+| r machine carries out or participates in.                                |
+|                                                                          |
+|                                                                          |
+|                                                                          |
+|                                                                          |
+|                                                                          |
+|                                                 4             1          |
+|        B1               T052   Activity                                  |
+|   aggp           An individual or individuals classified according to th |
+| eir age.                                                                 |
+|                                                                          |
+|                                                                          |
+|                                                                          |
+|                                                                          |
+|                                                                          |
+|                                                 0             1          |
+|        A2.9.4           T100   Age Group                                 |
+|   amas           The sequence of amino acids as arrayed in chains, sheet |
+| s, etc., within the protein molecule. It is of fundamental importance in |
+|  determining protein structure.                                          |
+|                                                                          |
+|                                                                          |
+|                                                                          |
+|                                                                          |
+|                                                 0             3          |
+|        A2.1.5.3.2       T087   Amino Acid Sequence                       |
+|   amph           A cold-blooded, smooth-skinned vertebrate which charact |
+| eristically hatches as an aquatic larva, breathing by gills. When mature |
+| , the amphibian breathes with lungs.                                     |
+|                                                                          |
+|                                                                          |
+|                                                                          |
+|                                                                          |
+|                                                 0             1          |
+|        A1.1.3.1.1.1     T011   Amphibian                                 |
+|   anab           An abnormal structure, or one that is abnormal in size  |
+| or location.                                                             |
+|                                                                          |
+|                                                                          |
+|                                                                          |
+|                                                                          |
+|                                                                          |
+|                                                 2             12         |
+|        A1.2.2           T190   Anatomical Abnormality                    |
+|   anim           An organism with eukaryotic cells, and lacking stiff ce |
+| ll walls, plastids and photosynthetic pigments.                          |
+|                                                                          |
+|                                                                          |
+|                                                                          |
+|                                                                          |
+|                                                                          |
+|                                                 1             2          |
+|        A1.1.3.1         T008   Animal                                    |
+|   anst           A normal or pathological part of the anatomy or structu |
+| ral organization of an organism.                                         |
+|                                                                          |
+|                                                                          |
+|                                                                          |
+|                                                                          |
+|                                                                          |
+|                                                 3             5          |
+|        A1.2             T017   Anatomical Structure                      |
+|   antb           A pharmacologically active compound produced by growing |
+|  microorganisms which kill or inhibit growth of other microorganisms.    |
+|                                                                          |
+|                                                                          |
+|                                                                          |
+|                                                                          |
+|                                                                          |
+|                                                 0             1          |
+|        A1.4.1.1.1.1     T195   Antibiotic                                |
+|   arch           A member of one of the three domains of life, formerly  |
+| called Archaebacteria under the taxon Bacteria, but now considered separ |
+| ate and distinct. Archaea are characterized by: 1) the presence of chara |
+| cteristic tRNAs and ribosomal RNAs; 2) the absence of peptidoglycan cell |
+|  walls; 3) the presence of ether-linked lipids built from branched-chain |
+|  subunits; and 4) their occurrence in unusual habitats. While archaea re |
+| semble bacteria in morphology and genomic organization, they resemble eu |
+| karya in their method of genomic replication.   0             1          |
+|        A1.1.1           T194   Archaeon                                  |
+|   bacs           A generally endogenous substance produced or required b |
+| y an organism, of primary interest because of its role in the biologic f |
+| unctioning of the organism that produces it.                             |
+|                                                                          |
+|                                                                          |
+|                                                                          |
+|                                                                          |
+|                                                 6             8          |
+|        A1.4.1.1.3       T123   Biologically Active Substance             |
+|   bact           A small, typically one-celled, prokaryotic micro-organi |
+| sm.                                                                      |
+|                                                                          |
+|                                                                          |
+|                                                                          |
+|                                                                          |
+|                                                                          |
+|                                                 0             3          |
+|        A1.1.2           T007   Bacterium                                 |
+|   bdsu           Extracellular material, or mixtures of cells and extrac |
+| ellular material, produced, excreted, or accreted by the body. Included  |
+| here are substances such as saliva, dental enamel, sweat, and gastric ac |
+| id.                                                                      |
+|                                                                          |
+|                                                                          |
+|                                                                          |
+|                                                 0             8          |
+|        A1.4.2           T031   Body Substance                            |
+|   bdsy           A complex of anatomical structures that performs a comm |
+| on function.                                                             |
+|                                                                          |
+|                                                                          |
+|                                                                          |
+|                                                                          |
+|                                                                          |
+|                                                 0             3          |
+|        A2.1.4.1         T022   Body System                               |
+|   bhvr           Any of the psycho-social activities of humans or animal |
+| s that can be observed directly by others or can be made systematically  |
+| observable by the use of special strategies.                             |
+|                                                                          |
+|                                                                          |
+|                                                                          |
+|                                                                          |
+|                                                 2             11         |
+|        B1.1             T053   Behavior                                  |
+|   biof           A state, activity or process of the body or one of its  |
+| systems or parts.                                                        |
+|                                                                          |
+|                                                                          |
+|                                                                          |
+|                                                                          |
+|                                                                          |
+|                                                 2             5          |
+|        B2.2.1           T038   Biologic Function                         |
+|   bird           A vertebrate having a constant body temperature and cha |
+| racterized by the presence of feathers.                                  |
+|                                                                          |
+|                                                                          |
+|                                                                          |
+|                                                                          |
+|                                                                          |
+|                                                 0             1          |
+|        A1.1.3.1.1.2     T012   Bird                                      |
+|   blor           An area, subdivision, or region of the body demarcated  |
+| for the purpose of topographical description.                            |
+|                                                                          |
+|                                                                          |
+|                                                                          |
+|                                                                          |
+|                                                                          |
+|                                                 0             17         |
+|        A2.1.5.2         T029   Body Location or Region                   |
+|   bmod           A vocation, academic discipline, or field of study rela |
+| ted to biomedicine.                                                      |
+|                                                                          |
+|                                                                          |
+|                                                                          |
+|                                                                          |
+|                                                                          |
+|                                                 0             1          |
+|        A2.6.1           T091   Biomedical Occupation or Discipline       |
+|   bodm           A substance used in biomedicine or dentistry predominan |
+| tly for its physical, as opposed to chemical, properties. Included here  |
+| are biocompatible materials, tissue adhesives, bone cements, resins, too |
+| thpastes, etc.                                                           |
+|                                                                          |
+|                                                                          |
+|                                                                          |
+|                                                 0             1          |
+|        A1.4.1.1.2       T122   Biomedical or Dental Material             |
+|   bpoc           A collection of cells and tissues which are localized t |
+| o a specific area or combine and carry out one or more specialized funct |
+| ions of an organism. This ranges from gross structures to small componen |
+| ts of complex organs. These structures are relatively localized in compa |
+| rison to tissues.                                                        |
+|                                                                          |
+|                                                                          |
+|                                                 0             24         |
+|        A1.2.3.1         T023   Body Part, Organ, or Organ Component      |
+|   bsoj           An area enclosed or surrounded by body parts or organs  |
+| or the place where two anatomical structures meet or connect.            |
+|                                                                          |
+|                                                                          |
+|                                                                          |
+|                                                                          |
+|                                                                          |
+|                                                 0             20         |
+|        A2.1.5.1         T030   Body Space or Junction                    |
+|   carb           A generic term that includes monosaccharides, oligosacc |
+| harides, and polysaccharides as well as substances derived from monosacc |
+| harides by reduction of the carbonyl group (alditols), by oxidation of o |
+| ne or more terminal group to carboxylic acids, or by replacement of one  |
+| or more hydroxy groups by a hydrogen atom, an amino group, a thiol group |
+|  or similar heteroatomic groups. It also includes derivatives of these c |
+| ompounds. Included here are sugar phosphates. Excluded are glycolipids a |
+| nd glycoproteins.                               0             1          |
+|        A1.4.1.2.1.8     T118   Carbohydrate                              |
+|   celc           A part of a cell or the intercellular matrix, generally |
+|  visible by light microscopy.                                            |
+|                                                                          |
+|                                                                          |
+|                                                                          |
+|                                                                          |
+|                                                                          |
+|                                                 0             13         |
+|        A1.2.3.4         T026   Cell Component                            |
+|   celf           A physiologic function inherent to cells or cell compon |
+| ents.                                                                    |
+|                                                                          |
+|                                                                          |
+|                                                                          |
+|                                                                          |
+|                                                                          |
+|                                                 0             1          |
+|        B2.2.1.1.3       T043   Cell Function                             |
+|   cell           The fundamental structural and functional unit of livin |
+| g organisms.                                                             |
+|                                                                          |
+|                                                                          |
+|                                                                          |
+|                                                                          |
+|                                                                          |
+|                                                 0             11         |
+|        A1.2.3.3         T025   Cell                                      |
+|   cgab           An abnormal structure, or one that is abnormal in size  |
+| or location, present at birth or evolving over time as a result of a def |
+| ect in embryogenesis.                                                    |
+|                                                                          |
+|                                                                          |
+|                                                                          |
+|                                                                          |
+|                                                 0             1          |
+|        A1.2.2.1         T019   Congenital Abnormality                    |
+|   chem           Compounds or substances of definite molecular compositi |
+| on. Chemicals are viewed from two distinct perspectives in the network,  |
+| functionally and structurally. Almost every chemical concept is assigned |
+|  at least two types, generally one from the structure hierarchy and at l |
+| east one from the function hierarchy.                                    |
+|                                                                          |
+|                                                                          |
+|                                                 2             3          |
+|        A1.4.1           T103   Chemical                                  |
+|   chvf           A chemical viewed from the perspective of its functiona |
+| l characteristics or pharmacological activities.                         |
+|                                                                          |
+|                                                                          |
+|                                                                          |
+|                                                                          |
+|                                                                          |
+|                                                 5             1          |
+|        A1.4.1.1         T120   Chemical Viewed Functionally              |
+|   chvs           A chemical or chemicals viewed from the perspective of  |
+| their structural characteristics. Included here are concepts which can m |
+| ean either a salt, an ion, or a compound (e.g., "Bromates" and "Bromides |
+| ").                                                                      |
+|                                                                          |
+|                                                                          |
+|                                                                          |
+|                                                 3             1          |
+|        A1.4.1.2         T104   Chemical Viewed Structurally              |
+|   clas           A term or system of terms denoting an arrangement by cl |
+| ass or category.                                                         |
+|                                                                          |
+|                                                                          |
+|                                                                          |
+|                                                                          |
+|                                                                          |
+|                                                 0             1          |
+|        A2.4.1           T185   Classification                            |
+|   clna           An observable or measurable property or state of an org |
+| anism of clinical interest.                                              |
+|                                                                          |
+|                                                                          |
+|                                                                          |
+|                                                                          |
+|                                                                          |
+|                                                 0             1          |
+|        A2.3.1           T201   Clinical Attribute                        |
+|   clnd           A pharmaceutical preparation as produced by the manufac |
+| turer. The name usually includes the substance, its strength, and the fo |
+| rm, but may include the substance and only one of the other two items.   |
+|                                                                          |
+|                                                                          |
+|                                                                          |
+|                                                                          |
+|                                                 0             1          |
+|        A1.3.3           T200   Clinical Drug                             |
+|   cnce           A broad type for grouping abstract entities or concepts |
+| .                                                                        |
+|                                                                          |
+|                                                                          |
+|                                                                          |
+|                                                                          |
+|                                                                          |
+|                                                 9             1          |
+|        A2               T077   Conceptual Entity                         |
+|   comd           A pathologic function inherent to cells, parts of cells |
+| , or molecules.                                                          |
+|                                                                          |
+|                                                                          |
+|                                                                          |
+|                                                                          |
+|                                                                          |
+|                                                 0             1          |
+|        B2.2.1.2.2       T049   Cell or Molecular Dysfunction             |
+|   crbs           The sequence of carbohydrates within polysaccharides, g |
+| lycoproteins, and glycolipids.                                           |
+|                                                                          |
+|                                                                          |
+|                                                                          |
+|                                                                          |
+|                                                                          |
+|                                                 0             1          |
+|        A2.1.5.3.3       T088   Carbohydrate Sequence                     |
+|   diap           A procedure, method, or technique used to determine the |
+|  nature or identity of a disease or disorder. This excludes procedures w |
+| hich are primarily carried out on specimens in a laboratory.             |
+|                                                                          |
+|                                                                          |
+|                                                                          |
+|                                                                          |
+|                                                 0             18         |
+|        B1.3.1.2         T060   Diagnostic Procedure                      |
+|   dora           An activity carried out for recreation or exercise, or  |
+| as part of daily life.                                                   |
+|                                                                          |
+|                                                                          |
+|                                                                          |
+|                                                                          |
+|                                                                          |
+|                                                 0             4          |
+|        B1.2             T056   Daily or Recreational Activity            |
+|   drdd           A medical device that contains a clinical drug or drugs |
+| .                                                                        |
+|                                                                          |
+|                                                                          |
+|                                                                          |
+|                                                                          |
+|                                                                          |
+|                                                 0             2          |
+|        A1.3.1.1         T203   Drug Delivery Device                      |
+|   dsyn           A condition which alters or interferes with a normal pr |
+| ocess, state, or activity of an organism. It is usually characterized by |
+|  the abnormal functioning of one or more of the host's systems, parts, o |
+| r organs. Included here is a complex of symptoms descriptive of a disord |
+| er.                                                                      |
+|                                                                          |
+|                                                                          |
+|                                                 2             3          |
+|        B2.2.1.2.1       T047   Disease or Syndrome                       |
+|   edac           An activity related to the organization and provision o |
+| f education.                                                             |
+|                                                                          |
+|                                                                          |
+|                                                                          |
+|                                                                          |
+|                                                                          |
+|                                                 0             1          |
+|        B1.3.4           T065   Educational Activity                      |
+|   eehu           A change in the natural environment that is a result of |
+|  the activities of human beings.                                         |
+|                                                                          |
+|                                                                          |
+|                                                                          |
+|                                                                          |
+|                                                                          |
+|                                                 0             1          |
+|        B2.1.1           T069   Environmental Effect of Humans            |
+|   eico           An oxygenated metabolite from polyunsaturated 20 carbon |
+|  fatty acids including lipoxygenase and cyclooxygenase products and thei |
+| r synthetic analogs. This includes the prostaglandins and thromboxanes.  |
+|                                                                          |
+|                                                                          |
+|                                                                          |
+|                                                                          |
+|                                                 0             1          |
+|        A1.4.1.2.1.9.2   T111   Eicosanoid                                |
+|   elii           One of the 109 presently known fundamental substances t |
+| hat comprise all matter at and above the atomic level. This includes ele |
+| mental metals, rare gases, and most abundant naturally occurring radioac |
+| tive elements, as well as the ionic counterparts of elements (NA+, Cl-), |
+|  and the less abundant isotopic forms. This does not include organic ion |
+| s such as iodoacetate to which the type 'Organic Chemical' is assigned.  |
+|                                                                          |
+|                                                 0             1          |
+|        A1.4.1.2.3       T196   Element, Ion, or Isotope                  |
+|   emod           A representation in a non-human organism of a human dis |
+| ease for the purpose of research into its mechanism or treatment.        |
+|                                                                          |
+|                                                                          |
+|                                                                          |
+|                                                                          |
+|                                                                          |
+|                                                 0             1          |
+|        B2.2.1.2.3       T050   Experimental Model of Disease             |
+|   emst           An anatomical structure that exists only before the org |
+| anism is fully formed; in mammals, for example, a structure that exists  |
+| only prior to the birth of the organism. This structure may be normal or |
+|  abnormal.                                                               |
+|                                                                          |
+|                                                                          |
+|                                                                          |
+|                                                 0             12         |
+|        A1.2.1           T018   Embryonic Structure                       |
+|   enty           A broad type for grouping physical and conceptual entit |
+| ies.                                                                     |
+|                                                                          |
+|                                                                          |
+|                                                                          |
+|                                                                          |
+|                                                                          |
+|                                                 2             1          |
+|        A                T071   Entity                                    |
+|   enzy           A complex chemical, usually a protein, that is produced |
+|  by living cells and which catalyzes specific biochemical reactions. The |
+| re are six main types of enzymes: oxidoreductases, transferases, hydrola |
+| ses, lyases, isomerases, and ligases.                                    |
+|                                                                          |
+|                                                                          |
+|                                                                          |
+|                                                 0             1          |
+|        A1.4.1.1.3.3     T126   Enzyme                                    |
+|   euka           One of the three domains of life (the others being Bact |
+| eria and Archaea), also called Eukarya. These are organisms whose cells  |
+| are enclosed in membranes and possess a nucleus. They comprise almost al |
+| l multicellular and many unicellular organisms, and are traditionally di |
+| vided into groups (sometimes called kingdoms) including Animals, Plants, |
+|  Fungi, various Algae, and other taxa that were previously part of the o |
+| ld kingdom Protista.                                                     |
+|                                                 3             1          |
+|        A1.1.3           T204   Eukaryote                                 |
+|   evnt           A broad type for grouping activities, processes and sta |
+| tes.                                                                     |
+|                                                                          |
+|                                                                          |
+|                                                                          |
+|                                                                          |
+|                                                                          |
+|                                                 2             1          |
+|        B                T051   Event                                     |
+|   famg           An individual or individuals classified according to th |
+| eir family relationships or relative position in the family unit.        |
+|                                                                          |
+|                                                                          |
+|                                                                          |
+|                                                                          |
+|                                                                          |
+|                                                 0             1          |
+|        A2.9.3           T099   Family Group                              |
+|   ffas           An anatomical structure in a fully formed organism; in  |
+| mammals, for example, a structure in the body after the birth of the org |
+| anism.                                                                   |
+|                                                                          |
+|                                                                          |
+|                                                                          |
+|                                                                          |
+|                                                 5             8          |
+|        A1.2.3           T021   Fully Formed Anatomical Structure         |
+|   fish           A cold-blooded aquatic vertebrate characterized by fins |
+|  and breathing by gills. Included here are fishes having either a bony s |
+| keleton, such as a perch, or a cartilaginous skeleton, such as a shark,  |
+| or those lacking a jaw, such as a lamprey or hagfish.                    |
+|                                                                          |
+|                                                                          |
+|                                                                          |
+|                                                 0             1          |
+|        A1.1.3.1.1.3     T013   Fish                                      |
+|   fndg           That which is discovered by direct observation or measu |
+| rement of an organism attribute or condition, including the clinical his |
+| tory of the patient. The history of the presence of a disease is a 'Find |
+| ing' and is distinguished from the disease itself.                       |
+|                                                                          |
+|                                                                          |
+|                                                                          |
+|                                                 2             10         |
+|        A2.2             T033   Finding                                   |
+|   fngs           A eukaryotic organism characterized by the absence of c |
+| hlorophyll and the presence of a rigid cell wall. Included here are both |
+|  slime molds and true fungi such as yeasts, molds, mildews, and mushroom |
+| s.                                                                       |
+|                                                                          |
+|                                                                          |
+|                                                                          |
+|                                                 0             3          |
+|        A1.1.3.2         T004   Fungus                                    |
+|   food           Any substance generally containing nutrients, such as c |
+| arbohydrates, proteins, and fats, that can be ingested by a living organ |
+| ism and metabolized into energy and body tissue. Some foods are naturall |
+| y occurring, others are either partially or entirely made by humans.     |
+|                                                                          |
+|                                                                          |
+|                                                                          |
+|                                                 0             2          |
+|        A1.4.3           T168   Food                                      |
+|   ftcn           A concept which is of interest because it pertains to t |
+| he carrying out of a process or activity.                                |
+|                                                                          |
+|                                                                          |
+|                                                                          |
+|                                                                          |
+|                                                                          |
+|                                                 1             1          |
+|        A2.1.4           T169   Functional Concept                        |
+|   genf           Functions of or related to the maintenance, translation |
+|  or expression of the genetic material.                                  |
+|                                                                          |
+|                                                                          |
+|                                                                          |
+|                                                                          |
+|                                                                          |
+|                                                 0             2          |
+|        B2.2.1.1.4.1     T045   Genetic Function                          |
+|   geoa           A geographic location, generally having definite bounda |
+| ries.                                                                    |
+|                                                                          |
+|                                                                          |
+|                                                                          |
+|                                                                          |
+|                                                                          |
+|                                                 0             4          |
+|        A2.1.5.4         T083   Geographic Area                           |
+|   gngm           A specific sequence, or in the case of the genome the c |
+| omplete sequence, of nucleotides along a molecule of DNA or RNA (in the  |
+| case of some viruses) which represent the functional units of heredity.  |
+|                                                                          |
+|                                                                          |
+|                                                                          |
+|                                                                          |
+|                                                 0             8          |
+|        A1.2.3.5         T028   Gene or Genome                            |
+|   gora           An activity carried out by officially constituted gover |
+| nments, or an activity related to the creation or enforcement of the rul |
+| es or regulations governing some field of endeavor.                      |
+|                                                                          |
+|                                                                          |
+|                                                                          |
+|                                                                          |
+|                                                 0             1          |
+|        B1.3.3           T064   Governmental or Regulatory Activity       |
+|   grpa           A conceptual entity which refers to the frequency or di |
+| stribution of certain characteristics or phenomena in certain groups.    |
+|                                                                          |
+|                                                                          |
+|                                                                          |
+|                                                                          |
+|                                                                          |
+|                                                 0             2          |
+|        A2.8             T102   Group Attribute                           |
+|   grup           A conceptual entity referring to the classification of  |
+| individuals according to certain shared characteristics.                 |
+|                                                                          |
+|                                                                          |
+|                                                                          |
+|                                                                          |
+|                                                                          |
+|                                                 5             8          |
+|        A2.9             T096   Group                                     |
+|   hcpp           A phenomenon or process that is a result of the activit |
+| ies of human beings.                                                     |
+|                                                                          |
+|                                                                          |
+|                                                                          |
+|                                                                          |
+|                                                                          |
+|                                                 1             1          |
+|        B2.1             T068   Human-caused Phenomenon or Process        |
+|   hcro           An established organization which carries out specific  |
+| functions related to health care delivery or research in the life scienc |
+| es.                                                                      |
+|                                                                          |
+|                                                                          |
+|                                                                          |
+|                                                                          |
+|                                                 0             2          |
+|        A2.7.1           T093   Health Care Related Organization          |
+|   hlca           An activity of or relating to the practice of medicine  |
+| or involving the care of patients.                                       |
+|                                                                          |
+|                                                                          |
+|                                                                          |
+|                                                                          |
+|                                                                          |
+|                                                 3             2          |
+|        B1.3.1           T058   Health Care Activity                      |
+|   hops           A substance of concern because of its potentially hazar |
+| dous or toxic effects. This would include most drugs of abuse, as well a |
+| s agents that require special handling because of their toxicity.        |
+|                                                                          |
+|                                                                          |
+|                                                                          |
+|                                                                          |
+|                                                 0             7          |
+|        A1.4.1.1.5       T131   Hazardous or Poisonous Substance          |
+|   horm           In animals, a chemical usually secreted by an endocrine |
+|  gland whose products are released into the circulating fluid. Hormones  |
+| act as chemical messengers and regulate various physiologic processes su |
+| ch as growth, reproduction, metabolism, etc. They usually fall into two  |
+| broad classes, steroid hormones and peptide hormones.                    |
+|                                                                          |
+|                                                                          |
+|                                                 0             1          |
+|        A1.4.1.1.3.2     T125   Hormone                                   |
+|   humn           Modern man, the only remaining species of the Homo genu |
+| s.                                                                       |
+|                                                                          |
+|                                                                          |
+|                                                                          |
+|                                                                          |
+|                                                                          |
+|                                                 0             1          |
+|        A1.1.3.1.1.4.1   T016   Human                                     |
+|   idcn           An abstract concept, such as a social, religious or phi |
+| losophical concept.                                                      |
+|                                                                          |
+|                                                                          |
+|                                                                          |
+|                                                                          |
+|                                                                          |
+|                                                 5             3          |
+|        A2.1             T078   Idea or Concept                           |
+|   imft           A biologically active substance whose activities affect |
+|  or play a role in the functioning of the immune system.                 |
+|                                                                          |
+|                                                                          |
+|                                                                          |
+|                                                                          |
+|                                                                          |
+|                                                 0             4          |
+|        A1.4.1.1.3.5     T129   Immunologic Factor                        |
+|   inbe           Behavior exhibited by a human or an animal that is not  |
+| a direct result of interaction with other members of the species, but wh |
+| ich may have an effect on others.                                        |
+|                                                                          |
+|                                                                          |
+|                                                                          |
+|                                                                          |
+|                                                 0             6          |
+|        B1.1.2           T055   Individual Behavior                       |
+|   inch           Chemical elements and their compounds, excluding the hy |
+| drocarbons and their derivatives (except carbides, carbonates, cyanides, |
+|  cyanates and carbon disulfide). Generally inorganic compounds contain i |
+| onic bonds. Included here are inorganic acids and salts, alloys, alkalie |
+| s, and minerals.                                                         |
+|                                                                          |
+|                                                                          |
+|                                                 0             1          |
+|        A1.4.1.2.2       T197   Inorganic Chemical                        |
+|   inpo           A traumatic wound, injury, or poisoning caused by an ex |
+| ternal agent or force.                                                   |
+|                                                                          |
+|                                                                          |
+|                                                                          |
+|                                                                          |
+|                                                                          |
+|                                                 0             11         |
+|        B2.3             T037   Injury or Poisoning                       |
+|   inpr           A conceptual entity resulting from human endeavor. Conc |
+| epts assigned to this type generally refer to information created by hum |
+| ans for some purpose.                                                    |
+|                                                                          |
+|                                                                          |
+|                                                                          |
+|                                                                          |
+|                                                 2             3          |
+|        A2.4             T170   Intellectual Product                      |
+|   irda           A substance primarily of interest for its use in labora |
+| tory or diagnostic tests and procedures to detect, measure, examine, or  |
+| analyze other chemicals, processes, or conditions.                       |
+|                                                                          |
+|                                                                          |
+|                                                                          |
+|                                                                          |
+|                                                 0             1          |
+|        A1.4.1.1.4       T130   Indicator, Reagent, or Diagnostic Aid     |
+|   lang           The system of communication used by a particular nation |
+|  or people.                                                              |
+|                                                                          |
+|                                                                          |
+|                                                                          |
+|                                                                          |
+|                                                                          |
+|                                                 0             1          |
+|        A2.5             T171   Language                                  |
+|   lbpr           A procedure, method, or technique used to determine the |
+|  composition, quantity, or concentration of a specimen, and which is car |
+| ried out in a clinical laboratory. Included here are procedures which me |
+| asure the times and rates of reactions.                                  |
+|                                                                          |
+|                                                                          |
+|                                                                          |
+|                                                 0             17         |
+|        B1.3.1.1         T059   Laboratory Procedure                      |
+|   lbtr           The outcome of a specific test to measure an attribute  |
+| or to determine the presence, absence, or degree of a condition.         |
+|                                                                          |
+|                                                                          |
+|                                                                          |
+|                                                                          |
+|                                                                          |
+|                                                 0             9          |
+|        A2.2.1           T034   Laboratory or Test Result                 |
+|   lipd           An inclusive group of fat or fat-derived substances tha |
+| t are soluble in nonpolar solvents related to fatty acid esters, fatty a |
+| lcohols, sterols, waxes, etc. Included in this group are the saponifiabl |
+| e lipids such as glycerides (fats and oils), essential (volatile) oils,  |
+| and phospholipids.                                                       |
+|                                                                          |
+|                                                                          |
+|                                                 2             1          |
+|        A1.4.1.2.1.9     T119   Lipid                                     |
+|   mamm           A vertebrate having a constant body temperature and cha |
+| racterized by the presence of hair, mammary glands and sweat glands.     |
+|                                                                          |
+|                                                                          |
+|                                                                          |
+|                                                                          |
+|                                                                          |
+|                                                 1             1          |
+|        A1.1.3.1.1.4     T015   Mammal                                    |
+|   mbrt           Any of the techniques used in the study of or the direc |
+| ted modification of the gene complement of a living organism.            |
+|                                                                          |
+|                                                                          |
+|                                                                          |
+|                                                                          |
+|                                                                          |
+|                                                 0             3          |
+|        B1.3.2.1         T063   Molecular Biology Research Technique      |
+|   mcha           An activity carried out primarily or exclusively by mac |
+| hines.                                                                   |
+|                                                                          |
+|                                                                          |
+|                                                                          |
+|                                                                          |
+|                                                                          |
+|                                                 0             4          |
+|        B1.4             T066   Machine Activity                          |
+|   medd           A manufactured object used primarily in the diagnosis,  |
+| treatment, or prevention of physiologic or anatomic disorders.           |
+|                                                                          |
+|                                                                          |
+|                                                                          |
+|                                                                          |
+|                                                                          |
+|                                                 1             7          |
+|        A1.3.1           T074   Medical Device                            |
+|   menp           A physiologic function involving the mind or cognitive  |
+| processing.                                                              |
+|                                                                          |
+|                                                                          |
+|                                                                          |
+|                                                                          |
+|                                                                          |
+|                                                 0             7          |
+|        B2.2.1.1.1.1     T041   Mental Process                            |
+|   mnob           A physical object made by human beings.                 |
+|                                                                          |
+|                                                                          |
+|                                                                          |
+|                                                                          |
+|                                                                          |
+|                                                                          |
+|                                                 3             4          |
+|        A1.3             T073   Manufactured Object                       |
+|   mobd           A clinically significant dysfunction whose major manife |
+| station is behavioral or psychological. These dysfunctions may have iden |
+| tified or presumed biological etiologies or manifestations.              |
+|                                                                          |
+|                                                                          |
+|                                                                          |
+|                                                                          |
+|                                                 0             6          |
+|        B2.2.1.2.1.1     T048   Mental or Behavioral Dysfunction          |
+|   moft           A physiologic function occurring at the molecular level |
+| .                                                                        |
+|                                                                          |
+|                                                                          |
+|                                                                          |
+|                                                                          |
+|                                                                          |
+|                                                 1             1          |
+|        B2.2.1.1.4       T044   Molecular Function                        |
+|   mosq           A broad type for grouping the collected sequences of am |
+| ino acids, carbohydrates, and nucleotide sequences. Descriptions of thes |
+| e sequences are generally reported in the published literature and/or ar |
+| e deposited in and maintained by databanks such as GenBank, European Mol |
+| ecular Biology Laboratory (EMBL), National Biomedical Research Foundatio |
+| n (NBRF), or other sequence repositories.                                |
+|                                                                          |
+|                                                 3             1          |
+|        A2.1.5.3         T085   Molecular Sequence                        |
+|   neop           A new and abnormal growth of tissue in which the growth |
+|  is uncontrolled and progressive. The growths may be malignant or benign |
+| .                                                                        |
+|                                                                          |
+|                                                                          |
+|                                                                          |
+|                                                                          |
+|                                                 0             1          |
+|        B2.2.1.2.1.2     T191   Neoplastic Process                        |
+|   nnon           A complex compound of high molecular weight occurring i |
+| n living cells. These are basically of two types, ribonucleic (RNA) and  |
+| deoxyribonucleic (DNA) acids. Nucleic acids are made of nucleotides (nit |
+| rogen-containing base, a 5-carbon sugar, and one or more phosphate group |
+| ) linked together by a phosphodiester bond between the 5' and 3' carbon  |
+| atoms. Nucleosides are compounds composed of a purine or pyrimidine base |
+|  (usually adenine, cytosine, guanine, thymine, uracil) linked to either  |
+| a ribose or a deoxyribose sugar.                0             1          |
+|        A1.4.1.2.1.5     T114   Nucleic Acid, Nucleoside, or Nucleotide   |
+|   npop           A phenomenon or process that occurs irrespective of the |
+|  activities of human beings.                                             |
+|                                                                          |
+|                                                                          |
+|                                                                          |
+|                                                                          |
+|                                                                          |
+|                                                 1             3          |
+|        B2.2             T070   Natural Phenomenon or Process             |
+|   nsba           An endogenous substance whose activities affect or play |
+|  an important role in the functioning of the nervous system. Included he |
+| re are catecholamines, neuroregulators, neurophysins, etc.               |
+|                                                                          |
+|                                                                          |
+|                                                                          |
+|                                                                          |
+|                                                 0             1          |
+|        A1.4.1.1.3.1     T124   Neuroreactive Substance or Biogenic Amine |
+|   nusq           The sequence of purines and pyrimidines in nucleic acid |
+| s and polynucleotides. Included here are nucleotide-rich regions, conser |
+| ved sequence, and DNA transforming region.                               |
+|                                                                          |
+|                                                                          |
+|                                                                          |
+|                                                                          |
+|                                                 0             4          |
+|        A2.1.5.3.1       T086   Nucleotide Sequence                       |
+|   ocac           An activity carried out as part of an occupation or job |
+| .                                                                        |
+|                                                                          |
+|                                                                          |
+|                                                                          |
+|                                                                          |
+|                                                                          |
+|                                                 4             5          |
+|        B1.3             T057   Occupational Activity                     |
+|   ocdi           A vocation, academic discipline, or field of study, or  |
+| a subpart of an occupation or discipline.                                |
+|                                                                          |
+|                                                                          |
+|                                                                          |
+|                                                                          |
+|                                                                          |
+|                                                 1             2          |
+|        A2.6             T090   Occupation or Discipline                  |
+|   opco           An organic compound containing phosphorus as a constitu |
+| ent. Included here are organic phosphinic, phosphonic and phosphoric aci |
+| d derivatives and their thiophosphorus counterparts. Excluded are phosph |
+| olipids, sugar phosphates, phosphoproteins, nucleotides, and nucleic aci |
+| ds.                                                                      |
+|                                                                          |
+|                                                                          |
+|                                                 0             1          |
+|        A1.4.1.2.1.6     T115   Organophosphorus Compound                 |
+|   orch           The general class of carbon-containing compounds, usual |
+| ly based on carbon chains or rings, and also containing hydrogen (hydroc |
+| arbons), with or without nitrogen, oxygen, or other elements in which th |
+| e bonding between elements is generally covalent.                        |
+|                                                                          |
+|                                                                          |
+|                                                                          |
+|                                                 5             1          |
+|        A1.4.1.2.1       T109   Organic Chemical                          |
+|   orga           A property of the organism or its major parts.          |
+|                                                                          |
+|                                                                          |
+|                                                                          |
+|                                                                          |
+|                                                                          |
+|                                                                          |
+|                                                 1             7          |
+|        A2.3             T032   Organism Attribute                        |
+|   orgf           A physiologic function of the organism as a whole, of m |
+| ultiple organ systems, or of multiple organs or tissues.                 |
+|                                                                          |
+|                                                                          |
+|                                                                          |
+|                                                                          |
+|                                                                          |
+|                                                 1             5          |
+|        B2.2.1.1.1       T040   Organism Function                         |
+|   orgm           Generally, a living individual, including all plants an |
+| d animals.                                                               |
+|                                                                          |
+|                                                                          |
+|                                                                          |
+|                                                                          |
+|                                                                          |
+|                                                 4             2          |
+|        A1.1             T001   Organism                                  |
+|   orgt           The result of uniting for a common purpose or function. |
+|  The continued existence of an organization is not dependent on any of i |
+| ts members, its location, or particular facility. Components or subparts |
+|  of organizations are also included here. Although the names of organiza |
+| tions are sometimes used to refer to the buildings in which they reside, |
+|  they are not inherently physical in nature.                             |
+|                                                                          |
+|                                                 3             4          |
+|        A2.7             T092   Organization                              |
+|   ortf           A physiologic function of a particular organ, organ sys |
+| tem, or tissue.                                                          |
+|                                                                          |
+|                                                                          |
+|                                                                          |
+|                                                                          |
+|                                                                          |
+|                                                 0             4          |
+|        B2.2.1.1.2       T042   Organ or Tissue Function                  |
+|   patf           A disordered process, activity, or state of the organis |
+| m as a whole, of a body system or systems, or of multiple organs or tiss |
+| ues. Included here are normal responses to a negative stimulus as well a |
+| s patholologic conditions or states that are less specific than a diseas |
+| e. Pathologic functions frequently have systemic effects.                |
+|                                                                          |
+|                                                                          |
+|                                                 3             19         |
+|        B2.2.1.2         T046   Pathologic Function                       |
+|   phob           An object perceptible to the sense of vision or touch.  |
+|                                                                          |
+|                                                                          |
+|                                                                          |
+|                                                                          |
+|                                                                          |
+|                                                                          |
+|                                                 4             1          |
+|        A1               T072   Physical Object                           |
+|   phpr           A process or state which occurs naturally or as a resul |
+| t of an activity.                                                        |
+|                                                                          |
+|                                                                          |
+|                                                                          |
+|                                                                          |
+|                                                                          |
+|                                                 3             3          |
+|        B2               T067   Phenomenon or Process                     |
+|   phsf           A normal process, activity, or state of the body.       |
+|                                                                          |
+|                                                                          |
+|                                                                          |
+|                                                                          |
+|                                                                          |
+|                                                                          |
+|                                                 4             5          |
+|        B2.2.1.1         T039   Physiologic Function                      |
+|   phsu           A substance used in the treatment or prevention of path |
+| ologic disorders. This includes substances that occur naturally in the b |
+| ody and are administered therapeutically.                                |
+|                                                                          |
+|                                                                          |
+|                                                                          |
+|                                                                          |
+|                                                 1             13         |
+|        A1.4.1.1.1       T121   Pharmacologic Substance                   |
+|   plnt           An organism having cellulose cell walls, growing by syn |
+| thesis of inorganic substances, generally distinguished by the presence  |
+| of chlorophyll, and lacking the power of locomotion. Plant parts are inc |
+| luded here as well.                                                      |
+|                                                                          |
+|                                                                          |
+|                                                                          |
+|                                                 0             2          |
+|        A1.1.3.3         T002   Plant                                     |
+|   podg           An individual or individuals classified according to a  |
+| disability, disease, condition or treatment.                             |
+|                                                                          |
+|                                                                          |
+|                                                                          |
+|                                                                          |
+|                                                                          |
+|                                                 0             1          |
+|        A2.9.5           T101   Patient or Disabled Group                 |
+|   popg           An indivdual or individuals classified according to the |
+| ir sex, racial origin, religion, common place of living, financial or so |
+| cial status, or some other cultural or behavioral attribute.             |
+|                                                                          |
+|                                                                          |
+|                                                                          |
+|                                                                          |
+|                                                 0             4          |
+|        A2.9.2           T098   Population Group                          |
+|   prog           An individual or individuals classified according to th |
+| eir vocation.                                                            |
+|                                                                          |
+|                                                                          |
+|                                                                          |
+|                                                                          |
+|                                                                          |
+|                                                 0             5          |
+|        A2.9.1           T097   Professional or Occupational Group        |
+|   pros           An organization uniting those who have a common vocatio |
+| n or who are involved with a common field of study.                      |
+|                                                                          |
+|                                                                          |
+|                                                                          |
+|                                                                          |
+|                                                                          |
+|                                                 0             1          |
+|        A2.7.2           T094   Professional Society                      |
+|   qlco           A concept which is an assessment of some quality, rathe |
+| r than a direct measurement.                                             |
+|                                                                          |
+|                                                                          |
+|                                                                          |
+|                                                                          |
+|                                                                          |
+|                                                 0             2          |
+|        A2.1.2           T080   Qualitative Concept                       |
+|   qnco           A concept which involves the dimensions, quantity or ca |
+| pacity of something using some unit of measure, or which involves the qu |
+| antitative comparison of entities.                                       |
+|                                                                          |
+|                                                                          |
+|                                                                          |
+|                                                                          |
+|                                                 0             4          |
+|        A2.1.3           T081   Quantitative Concept                      |
+|   rcpt           A specific structure or site on the cell surface or wit |
+| hin its cytoplasm that recognizes and binds with other specific molecule |
+| s. These include the proteins on the surface of an immunocompetent cell  |
+| that binds with antigens, or proteins found on the surface molecules tha |
+| t bind with hormones or neurotransmitters and react with other molecules |
+|  that respond in a specific way.                                         |
+|                                                                          |
+|                                                 0             1          |
+|        A1.4.1.1.3.6     T192   Receptor                                  |
+|   rept           A cold-blooded vertebrate having an external covering o |
+| f scales or horny plates. Reptiles breathe by means of lungs and are gen |
+| erally egg-laying.                                                       |
+|                                                                          |
+|                                                                          |
+|                                                                          |
+|                                                                          |
+|                                                 0             1          |
+|        A1.1.3.1.1.5     T014   Reptile                                   |
+|   resa           An activity carried out as part of research or experime |
+| ntation.                                                                 |
+|                                                                          |
+|                                                                          |
+|                                                                          |
+|                                                                          |
+|                                                                          |
+|                                                 1             9          |
+|        B1.3.2           T062   Research Activity                         |
+|   resd           A manufactured object used primarily in carrying out sc |
+| ientific research or experimentation.                                    |
+|                                                                          |
+|                                                                          |
+|                                                                          |
+|                                                                          |
+|                                                                          |
+|                                                 0             1          |
+|        A1.3.2           T075   Research Device                           |
+|   rnlw           An intellectual product resulting from legislative or r |
+| egulatory activity.                                                      |
+|                                                                          |
+|                                                                          |
+|                                                                          |
+|                                                                          |
+|                                                                          |
+|                                                 0             3          |
+|        A2.4.2           T089   Regulation or Law                         |
+|   sbst           A material with definite or fairly definite chemical co |
+| mposition.                                                               |
+|                                                                          |
+|                                                                          |
+|                                                                          |
+|                                                                          |
+|                                                                          |
+|                                                 3             5          |
+|        A1.4             T167   Substance                                 |
+|   shro           An organization whose purpose and function is to provid |
+| e assistance to the needy or to offer support to those sharing similar p |
+| roblems.                                                                 |
+|                                                                          |
+|                                                                          |
+|                                                                          |
+|                                                                          |
+|                                                 0             2          |
+|        A2.7.3           T095   Self-help or Relief Organization          |
+|   socb           Behavior that is a direct result or function of the int |
+| eraction of humans or animals with their fellows. This includes behavior |
+|  that may be considered anti-social.                                     |
+|                                                                          |
+|                                                                          |
+|                                                                          |
+|                                                                          |
+|                                                 0             2          |
+|        B1.1.1           T054   Social Behavior                           |
+|   sosy           An observable manifestation of a disease or condition b |
+| ased on clinical judgment, or a manifestation of a disease or condition  |
+| which is experienced by the patient and reported as a subjective observa |
+| tion.                                                                    |
+|                                                                          |
+|                                                                          |
+|                                                                          |
+|                                                 0             5          |
+|        A2.2.2           T184   Sign or Symptom                           |
+|   spco           A location, region, or space, generally having definite |
+|  boundaries.                                                             |
+|                                                                          |
+|                                                                          |
+|                                                                          |
+|                                                                          |
+|                                                                          |
+|                                                 4             1          |
+|        A2.1.5           T082   Spatial Concept                           |
+|   strd           One of a group of polycyclic, 17-carbon-atom, fused-rin |
+| g compounds occurring both in natural and synthetic forms. Included here |
+|  are naturally occurring and synthetic steroids, bufanolides, cardanolid |
+| es, homosteroids, norsteroids, and secosteroids.                         |
+|                                                                          |
+|                                                                          |
+|                                                                          |
+|                                                 0             1          |
+|        A1.4.1.2.1.9.1   T110   Steroid                                   |
+|   tisu           An aggregation of similarly specialized cells and the a |
+| ssociated intercellular substance. Tissues are relatively non-localized  |
+| in comparison to body parts, organs or organ components.                 |
+|                                                                          |
+|                                                                          |
+|                                                                          |
+|                                                                          |
+|                                                 0             17         |
+|        A1.2.3.2         T024   Tissue                                    |
+|   tmco           A concept which pertains to time or duration.           |
+|                                                                          |
+|                                                                          |
+|                                                                          |
+|                                                                          |
+|                                                                          |
+|                                                                          |
+|                                                 0             5          |
+|        A2.1.1           T079   Temporal Concept                          |
+|   topp           A procedure, method, or technique designed to prevent a |
+|  disease or a disorder, or to improve physical function, or used in the  |
+| process of treating a disease or injury.                                 |
+|                                                                          |
+|                                                                          |
+|                                                                          |
+|                                                                          |
+|                                                 0             12         |
+|        B1.3.1.3         T061   Therapeutic or Preventive Procedure       |
+|   virs           An organism consisting of a core of a single nucleic ac |
+| id enclosed in a protective coat of protein. A virus may replicate only  |
+| inside a host living cell. A virus exhibits some but not all of the usua |
+| l characteristics of living things.                                      |
+|                                                                          |
+|                                                                          |
+|                                                                          |
+|                                                 0             3          |
+|        A1.1.4           T005   Virus                                     |
+|   vita           A substance, usually an organic chemical complex, prese |
+| nt in natural products or made synthetically, which is essential in the  |
+| diet of man or other higher animals. Included here are vitamin precursor |
+| s, provitamins, and vitamin supplements.                                 |
+|                                                                          |
+|                                                                          |
+|                                                                          |
+|                                                 0             1          |
+|        A1.4.1.1.3.4     T127   Vitamin                                   |
+|   vtbt           An animal which has a spinal column.                    |
+|                                                                          |
+|                                                                          |
+|                                                                          |
+|                                                                          |
+|                                                                          |
+|                                                                          |
+|                                                 5             1          |
+|        A1.1.3.1.1       T010   Vertebrate                                |
++--------------------------------------------------------------------------+
+=======
 The UtsWsSemanticNetworkController object allows you to query the UMLS Semantic Network. You can use this object to get information on:
 
 -   What is the name of a Semantic Type for a given Semantic Term Unique Identifer (TUI)?
@@ -19,6 +1323,7 @@ To make query the Semantic Network, create an instance of a UtsWsSemanticNetwork
 //create the reference variables
  private UtsWsSemanticNetworkController utsSemanticNetworkService;
  private UtsWsSecurityController utsSecurityService;
+>>>>>>> .merge_file_a08792
 
 //instantiate and handshake
  try {
@@ -5399,234 +6704,3 @@ utsSemanticNetwork.getSemanticType(ticket, "2011AB", "T121");
 | 186   0                                                                  |
 +--------------------------------------------------------------------------+
 
-</div>
-
-</div>
-
-\
-### Semantic Group <span class="nav">[return to top of page](#semtype)</span>
-
-<div class="group rounded-content-block">
-
-<div id="getSemanticTypeGroup" class="method rounded-content-block">
-
-**Method: **<span class="method-name">getSemanticTypeGroup</span><span
-class="method-parameters">(String ticket,String version,String
-semanticGroup)</span>
-**Returns:** <span
-class="method-return-type">SemanticTypeGroupDTO </span>
-
-<div class="method-description">
-
-**Use Case:** Given a UMLS release and a semantic type group
-abbreviation, this call returns the expanded form and abbreviation of
-the semantic type group, and the semantic type count for the group.
-
-</div>
-
-<div class="sample content-block">
-
-</div>
-
-#### Sample Input (Java):
-
-<div class="input rounded-content-block">
-
-mySemTyRelDTO = utsSemanticNetworkService.getSemanticTypeGroup (ticket,
-umlsRelease, "GEOG");\
-\
- String abbreviation = mySemTyRelDTO.getAbbreviation();\
- String expandedForm = mySemTyRelDTO.getExpandedForm();\
- int semTypeCnt = mySemTyRelDTO.getSemanticTypeCount();\
-
-</div>
-
-#### Sample Output:
-
-  -----------------------------------
-  Abbreviation: GEOG\
-   Expanded Form: Geographic Areas\
-   Semantic Type Count: 1\
-  -----------------------------------
-
-</div>
-
-<div id="getSemanticTypeByGroup" class="method rounded-content-block">
-
-**Method: **<span class="method-name">getSemanticTypeByGroup</span><span
-class="method-parameters">(String ticket,String version,String
-semanticGroup)</span>
-**Returns:** <span
-class="method-return-type">ArrayList<SemanticTypeDTO> </span>
-
-<div class="method-description">
-
-**Use Case:** Given a UMLS release and a semantic type group
-abbreviation, this call returns all the semantic types in the given
-group.
-
-</div>
-
-<div class="sample content-block">
-
-</div>
-
-#### Sample Input (Java):
-
-<div class="input rounded-content-block">
-
-myarrSemTyRelDTO = utsSemanticNetworkService.getSemanticTypeByGroup
-(ticket, umlsRelease, "DISO");\
-\
- for (int i = 0; i < myarrSemTyRelDTO.size(); i++) {\
-\
- SemanticTypeDTO mySemTyRel = myarrSemTyRelDTO.get(i);\
- String abbreviation = mySemTyRel.getAbbreviation();\
- String definition = mySemTyRel.getDefinition();\
- int childCnt = mySemTyRel.getChildCount();\
- int relCnt = mySemTyRel.getRelationCount();\
- String example = mySemTyRel.getExample();\
- String nonHuman = mySemTyRel.getNonHuman();\
- String treeNum = mySemTyRel.getTreeNumber();\
- String ui = mySemTyRel.getUi();\
- String value = mySemTyRel.getValue();\
- }\
-
-</div>
-
-#### Sample Output:
-
-+--------------------------------------------------------------------------+
-|   Abbreviation   Definition                                              |
-|                                                                          |
-|                                                                          |
-|                                                                          |
-|                                                             Child Count  |
-|   Relation Count   Tree Number    Ui     Value                           |
-|   -------------- ------------------------------------------------------- |
-| ------------------------------------------------------------------------ |
-| ------------------------------------------------------------------------ |
-| ------------------------------------------------------------------------ |
-| ----------------------------------------------------------- ------------ |
-| - ---------------- -------------- ------ ------------------------------- |
-| ---                                                                      |
-|   sosy           An observable manifestation of a disease or condition b |
-| ased on clinical judgment, or a manifestation of a disease or condition  |
-| which is experienced by the patient and reported as a subjective observa |
-| tion.                                                                    |
-|                                                             0            |
-|   5                A2.2.2         T184   Sign or Symptom                 |
-|   anab           An abnormal structure, or one that is abnormal in size  |
-| or location.                                                             |
-|                                                                          |
-|                                                                          |
-|                                                             2            |
-|   12               A1.2.2         T190   Anatomical Abnormality          |
-|   neop           A new and abnormal growth of tissue in which the growth |
-|  is uncontrolled and progressive. The growths may be malignant or benign |
-| .                                                                        |
-|                                                                          |
-|                                                             0            |
-|   1                B2.2.1.2.1.2   T191   Neoplastic Process              |
-|   cgab           An abnormal structure, or one that is abnormal in size  |
-| or location, present at birth or evolving over time as a result of a def |
-| ect in embryogenesis.                                                    |
-|                                                                          |
-|                                                             0            |
-|   1                A1.2.2.1       T019   Congenital Abnormality          |
-|   acab           An abnormal structure, or one that is abnormal in size  |
-| or location, found in or deriving from a previously normal structure. Ac |
-| quired abnormalities are distinguished from diseases even though they ma |
-| y result in pathological functioning (e.g., "hernias incarcerate").      |
-|                                                             0            |
-|   3                A1.2.2.2       T020   Acquired Abnormality            |
-|   fndg           That which is discovered by direct observation or measu |
-| rement of an organism attribute or condition, including the clinical his |
-| tory of the patient. The history of the presence of a disease is a 'Find |
-| ing' and is distinguished from the disease itself.                       |
-|                                                             2            |
-|   10               A2.2           T033   Finding                         |
-|   inpo           A traumatic wound, injury, or poisoning caused by an ex |
-| ternal agent or force.                                                   |
-|                                                                          |
-|                                                                          |
-|                                                             0            |
-|   11               B2.3           T037   Injury or Poisoning             |
-|   patf           A disordered process, activity, or state of the organis |
-| m as a whole, of a body system or systems, or of multiple organs or tiss |
-| ues. Included here are normal responses to a negative stimulus as well a |
-| s patholologic conditions or states that are less specific than a diseas |
-| e. Pathologic functions frequently have systemic effects.   3            |
-|   19               B2.2.1.2       T046   Pathologic Function             |
-|   dsyn           A condition which alters or interferes with a normal pr |
-| ocess, state, or activity of an organism. It is usually characterized by |
-|  the abnormal functioning of one or more of the host's systems, parts, o |
-| r organs. Included here is a complex of symptoms descriptive of a disord |
-| er.                                                         2            |
-|   3                B2.2.1.2.1     T047   Disease or Syndrome             |
-|   mobd           A clinically significant dysfunction whose major manife |
-| station is behavioral or psychological. These dysfunctions may have iden |
-| tified or presumed biological etiologies or manifestations.              |
-|                                                                          |
-|                                                             0            |
-|   6                B2.2.1.2.1.1   T048   Mental or Behavioral Dysfunctio |
-| n                                                                        |
-|   comd           A pathologic function inherent to cells, parts of cells |
-| , or molecules.                                                          |
-|                                                                          |
-|                                                                          |
-|                                                             0            |
-|   1                B2.2.1.2.2     T049   Cell or Molecular Dysfunction   |
-|   emod           A representation in a non-human organism of a human dis |
-| ease for the purpose of research into its mechanism or treatment.        |
-|                                                                          |
-|                                                                          |
-|                                                             0            |
-|   1                B2.2.1.2.3     T050   Experimental Model of Disease   |
-+--------------------------------------------------------------------------+
-
-</div>
-
-
-**Method: **getAllSemanticTypeGroups(String ticket,String version)
-
-**Returns:**ArrayList<SemanticTypeGroupDTO>
-
-**Use Case:** Given a UMLS release, this call returns all the semantic type groups used in the version. Each returned object specifies a semantic type group, including the name and semantic type count for the group.
-
-
-#### Sample Input (Java):
-
-myarrSemTyRelDTO = utsSemanticNetworkService.getAllSemanticTypeGroups
-(ticket, umlsRelease);\
-\
- for (int i = 0; i < myarrSemTyRelDTO.size(); i++) {\
- SemanticTypeGroupDTO mySemTyRel = myarrSemTyRelDTO.get(i);\
- String abbreviation = mySemTyRel.getAbbreviation();\
- String expandedForm = mySemTyRel.getExpandedForm();\
- int semTypeCnt = mySemTyRel.getSemanticTypeCount();\
- }\
-
-
-
-#### Sample Output:
-
-+--------------------------------------------------------------------------+
-|   Abbreviation   Expanded Form                 Semantic Type Count       |
-|   -------------- ----------------------------- ---------------------     |
-|   ACTI           Activities & Behaviors        9                         |
-|   ANAT           Anatomy                       11                        |
-|   CHEM           Chemicals & Drugs             26                        |
-|   CONC           Concepts & Ideas              12                        |
-|   DEVI           Devices                       3                         |
-|   DISO           Disorders                     12                        |
-|   GENE           Genes & Molecular Sequences   5                         |
-|   GEOG           Geographic Areas              1                         |
-|   LIVB           Living Beings                 21                        |
-|   OBJC           Objects                       5                         |
-|   OCCU           Occupations                   2                         |
-|   ORGA           Organizations                 4                         |
-|   PHEN           Phenomena                     6                         |
-|   PHYS           Physiology                    9                         |
-|   PROC           Procedures                    7                         |
-+--------------------------------------------------------------------------+
