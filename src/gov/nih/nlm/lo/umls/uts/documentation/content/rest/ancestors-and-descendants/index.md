@@ -1,19 +1,19 @@
-title=Retrieving Parents and Children
-date=2015-07-06
+title=Retrieving Ancestors and Descendants
+date=2015-08-28
 updated=2015-08-28
 type=page
 status=published
 category=Retrieving Source-Asserted Data
-navorder=2
+navorder=3
 ~~~~~~
 
 
 [URIs](#uris) | [Query Parameters](#query-parameters) | [Sample Output](#sample-output)
 
-URIs with /parents or /children support the following use cases:
+URIs with /ancestors or /descendants support the following use cases:
 
-*  Retrieve the immediate parents of a known source asserted identifier.
-*  Retrieve all immediate children of a known source asserted identifier.
+*  Retrieve all ancestors of a known source asserted identifier.
+*  Retrieve all descendants of a known source asserted identifier.
 
 Note that 'current' in the URI can always be used to search against the latest UMLS publication.
 You may use any valid UMLS release back to 2008AA in your URI if you would like to search against a particular version of the UMLS.
@@ -25,8 +25,8 @@ You may use any valid UMLS release back to 2008AA in your URI if you would like 
 
 Sample URI|Description
 --- | ---
-/content/current/source/SNOMEDCT_US/9468002/parents| Retrieves parents of the SNOMED concept
-/content/current/source/SNOMEDCT_US/9468002/children| Retrieves children of the SNOMED concept
+/content/current/source/SNOMEDCT_US/9468002/ancestors| Retrieves ancestors of the SNOMED concept
+/content/current/source/SNOMEDCT_US/9468002/descendants| Retrieves descendants of the SNOMED concept
 
 
 ### Query Parameters
@@ -41,87 +41,89 @@ pageSize | N | Whole number that specifies the number of results to include per 
 ### Sample Output
 
 
-**Calls under /parents or /children will return a classType of 'AtomClusterAtomClusterRelation'.**
+**Calls under /ancestors or /descendants will return a classType of 'AtomClusterAtomClusterRelation'.**
 
-Sample output for /content/current/source/SNOMEDCT_US/9468002/parents?ticket=ST...
+Sample output for /content/current/source/SNOMEDCT_US/9468002/ancestors?ticket=ST...
 
 ~~~~json
 {
     "result": [
         {
             "classType": "SourceAtomCluster",
-            "ui": "20511007",
+            "ui": "105606008",
             "suppressible": false,
-            "sourceUi": "20511007",
+            "sourceUi": "105606008",
             "obsolete": false,
             "rootSource": "SNOMEDCT_US",
-            "atomCount": 6,
+            "atomCount": 3,
             "cVMemberCount": 0,
-            "attributes": "https://uts-ws.nlm.nih.gov/rest/content/2015AA/SNOMEDCT_US/20511007/attributes",
-            "atoms": "https://uts-ws.nlm.nih.gov/rest/content/2015AA/SNOMEDCT_US/20511007/atoms",
-            "descendants": "https://uts-ws.nlm.nih.gov/rest/content/2015AA/SNOMEDCT_US/20511007/descendants",
-            "ancestors": "https://uts-ws.nlm.nih.gov/rest/content/2015AA/SNOMEDCT_US/20511007/ancestors",
-            "parents": "https://uts-ws.nlm.nih.gov/rest/content/2015AA/SNOMEDCT_US/20511007/parents",
-            "children": "https://uts-ws.nlm.nih.gov/rest/content/2015AA/SNOMEDCT_US/20511007/children",
+            "attributes": "https://uts-ws.nlm.nih.gov/rest/content/2015AA/SNOMEDCT_US/105606008/attributes",
+            "atoms": "https://uts-ws.nlm.nih.gov/rest/content/2015AA/SNOMEDCT_US/105606008/atoms",
+            "descendants": "https://uts-ws.nlm.nih.gov/rest/content/2015AA/SNOMEDCT_US/105606008/descendants",
+            "ancestors": "https://uts-ws.nlm.nih.gov/rest/content/2015AA/SNOMEDCT_US/105606008/ancestors",
+            "parents": "https://uts-ws.nlm.nih.gov/rest/content/2015AA/SNOMEDCT_US/105606008/parents",
+            "children": "https://uts-ws.nlm.nih.gov/rest/content/2015AA/SNOMEDCT_US/105606008/children",
             "relations": "NONE",
             "definitions": "NONE",
             "memberships": "NONE",
-            "name": "Fracture of hand"
+            "name": "Injury of musculoskeletal system"
         },
         {
             "classType": "SourceAtomCluster",
-            "ui": "36991002",
+            "ui": "105969002",
             "suppressible": false,
-            "sourceUi": "36991002",
+            "sourceUi": "105969002",
             "obsolete": false,
             "rootSource": "SNOMEDCT_US",
             "atomCount": 5,
             "cVMemberCount": 0,
-            "attributes": "https://uts-ws.nlm.nih.gov/rest/content/2015AA/SNOMEDCT_US/36991002/attributes",
-            "atoms": "https://uts-ws.nlm.nih.gov/rest/content/2015AA/SNOMEDCT_US/36991002/atoms",
-            "descendants": "https://uts-ws.nlm.nih.gov/rest/content/2015AA/SNOMEDCT_US/36991002/descendants",
-            "ancestors": "https://uts-ws.nlm.nih.gov/rest/content/2015AA/SNOMEDCT_US/36991002/ancestors",
-            "parents": "https://uts-ws.nlm.nih.gov/rest/content/2015AA/SNOMEDCT_US/36991002/parents",
-            "children": "https://uts-ws.nlm.nih.gov/rest/content/2015AA/SNOMEDCT_US/36991002/children",
+            "attributes": "https://uts-ws.nlm.nih.gov/rest/content/2015AA/SNOMEDCT_US/105969002/attributes",
+            "atoms": "https://uts-ws.nlm.nih.gov/rest/content/2015AA/SNOMEDCT_US/105969002/atoms",
+            "descendants": "https://uts-ws.nlm.nih.gov/rest/content/2015AA/SNOMEDCT_US/105969002/descendants",
+            "ancestors": "https://uts-ws.nlm.nih.gov/rest/content/2015AA/SNOMEDCT_US/105969002/ancestors",
+            "parents": "https://uts-ws.nlm.nih.gov/rest/content/2015AA/SNOMEDCT_US/105969002/parents",
+            "children": "https://uts-ws.nlm.nih.gov/rest/content/2015AA/SNOMEDCT_US/105969002/children",
             "relations": "NONE",
             "definitions": "NONE",
             "memberships": "NONE",
-            "name": "Closed fracture of upper limb"
+            "name": "Disorder of connective tissue"
         },
         {
             "classType": "SourceAtomCluster",
-            "ui": "82065001",
+            "ui": "106028002",
             "suppressible": false,
-            "sourceUi": "82065001",
+            "sourceUi": "106028002",
             "obsolete": false,
             "rootSource": "SNOMEDCT_US",
-            "atomCount": 7,
+            "atomCount": 5,
             "cVMemberCount": 0,
-            "attributes": "https://uts-ws.nlm.nih.gov/rest/content/2015AA/SNOMEDCT_US/82065001/attributes",
-            "atoms": "https://uts-ws.nlm.nih.gov/rest/content/2015AA/SNOMEDCT_US/82065001/atoms",
-            "descendants": "https://uts-ws.nlm.nih.gov/rest/content/2015AA/SNOMEDCT_US/82065001/descendants",
-            "ancestors": "https://uts-ws.nlm.nih.gov/rest/content/2015AA/SNOMEDCT_US/82065001/ancestors",
-            "parents": "https://uts-ws.nlm.nih.gov/rest/content/2015AA/SNOMEDCT_US/82065001/parents",
-            "children": "https://uts-ws.nlm.nih.gov/rest/content/2015AA/SNOMEDCT_US/82065001/children",
+            "attributes": "https://uts-ws.nlm.nih.gov/rest/content/2015AA/SNOMEDCT_US/106028002/attributes",
+            "atoms": "https://uts-ws.nlm.nih.gov/rest/content/2015AA/SNOMEDCT_US/106028002/atoms",
+            "descendants": "https://uts-ws.nlm.nih.gov/rest/content/2015AA/SNOMEDCT_US/106028002/descendants",
+            "ancestors": "https://uts-ws.nlm.nih.gov/rest/content/2015AA/SNOMEDCT_US/106028002/ancestors",
+            "parents": "https://uts-ws.nlm.nih.gov/rest/content/2015AA/SNOMEDCT_US/106028002/parents",
+            "children": "https://uts-ws.nlm.nih.gov/rest/content/2015AA/SNOMEDCT_US/106028002/children",
             "relations": "NONE",
             "definitions": "NONE",
             "memberships": "NONE",
-            "name": "Fracture of carpal bone"
-        }
+            "name": "Musculoskeletal finding"
+        },
+        
+...
+
     ],
     "pageNumber": 1,
     "pageSize": 25,
-    "pageCount": 1
+    "pageCount": 2
 }
 ~~~~
 
 
-**The default for calls under /children is to return the immediate children of the concept provided.**
+**The default for calls under /descendants is to return all descendants of the concept provided.**
 
-Sample output for /content/current/source/SNOMEDCT_US/9468002/children?ticket=ST...
+Sample output for /content/current/source/SNOMEDCT_US/9468002/descendants?ticket=ST...
 
 ~~~~json
-
 
 {
     "result": [
@@ -190,6 +192,4 @@ Sample output for /content/current/source/SNOMEDCT_US/9468002/children?ticket=ST
     "pageSize": 25,
     "pageCount": 1
 }
-
-
 ~~~~

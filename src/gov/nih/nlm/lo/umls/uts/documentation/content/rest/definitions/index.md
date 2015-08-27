@@ -1,6 +1,6 @@
 title=Retrieving Concept Definitions
 date=2015-07-09
-updated=2015-07-09
+updated=2015-08-28
 type=page
 status=published
 category=Retrieving UMLS Concepts
@@ -32,8 +32,8 @@ Sample URI|Description
 Parameter name | Required? Y/N | Description|  Valid Values | Default value | Usage Note
 --- | ---
 ticket | Y | A single-use service ticket is required for each call to the API. See [authentication](../authentication.html) for more information | n/a | n/a | n/a
-sabs| N | One or more source abbreviations | Any root source abbreviation in the UMLS |n/a| Use a comma between each source abbreviation to specify more than one.
-page | N | Whole number that specifies which page of results to fetch. | 1,2,3, etc | 1 | n/a
+sabs| N | One or more source abbreviations | Any [root source abbreviation](http://www.nlm.nih.gov/research/umls/knowledge_sources/metathesaurus/release/source_vocabularies.html) in the UMLS |n/a| Use a comma between each source abbreviation to specify more than one.
+pageNumber | N | Whole number that specifies which page of results to fetch. | 1,2,3, etc | 1 | n/a
 pageSize | N | Whole number that specifies the number of results to include per page. | 1,2,3, etc | 25 | n/a
 
 
@@ -41,9 +41,15 @@ pageSize | N | Whole number that specifies the number of results to include per 
 
 **Calls using /CUI/{CUI}/definitions will return a JSON object with a classType of 'Definition'.**
 
+Sample output for /content/current/CUI/C0155502/definitions?ticket=ST...
+
 ~~~~json
 {
-    "result": [
+
+    "result": 
+
+[
+
         {
             "classType": "Definition",
             "sourceOriginated": true,
@@ -51,8 +57,10 @@ pageSize | N | Whole number that specifies the number of results to include per 
             "value": "Idiopathic recurrent VERTIGO associated with POSITIONAL NYSTAGMUS. It is associated with a vestibular loss without other neurological or auditory signs. Unlike in LABYRINTHITIS and VESTIBULAR NEURONITIS inflammation in the ear is not observed."
         }
     ],
-    "pageNum": 1,
-    "pageSize": 25
+    "pageNumber": 1,
+    "pageSize": 25,
+    "pageCount": 1
+
 }
 
 ~~~~
