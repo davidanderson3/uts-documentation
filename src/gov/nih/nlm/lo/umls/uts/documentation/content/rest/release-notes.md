@@ -1,75 +1,21 @@
 title=Release Notes
-date=2015-07-06
-updated=2015-08-04
+date=2015-07-10
+updated=2015-08-28
 type=page
 status=published
 navorder=1
 ~~~~~~
 
-Released: July 10, 2015
+Released: August 28, 2015
 
+#### New Feature: Retrieving ancestors of source-asserted identifiers.
+Users can now retrieve ancestors of source-asserted identifiers. See [Retrieving ancestors](/rest/ancestors-and-descendants/) for details.
 
+#### New Feature: Retrieving descendants of source-asserted identifiers.
+Users can now retrieve descendants of source-asserted identifiers.  See [Retrieving descendants](/rest/ancestors-and-descendants/) for details.
 
-#### New Feature: Retrieving atoms for source asserted identifiers
-Users can retrieve all of the atoms associated with a source asserted identifier. See [Retrieving atoms](/rest/atoms/) for details.
+#### New Feature: Code sample repository on GitHub.
+Users can access code samples for authenticating and making other API calls in Perl and Java with more programming languages and samples to follow. See the [code sample repository on GitHub](https://github.com/HHS/uts-rest-api) for details.
 
-#### New Feature: Retrieving concept definitions.
-Users can now retrieve definitions for CUIs in the UMLS.  See [Retrieving definitions](/rest/definitions/) for details.
-
-#### New Feature: Retrieving immediate parents and children of source-asserted identifiers.
-Users can now retrieve parents and children of source-asserted identifiers.  See [Retrieving parents and children](/rest/parents-and-children/) for details.
-
-
-#### Change to JSON output
-JSON output is now wrapped in a 'result' object, as such
-
-~~~~json
-
-{
-  "result":{
-   ...
-  
-  }
-}
-
-~~~~
-
-
-#### Change to URL request structure
-Users no longer need to include a trailing forward slash at the end of their REST calls. For example, _/CUI/C0018787/atoms_ - without a forward slash following the word 'atoms' - is a valid call in Version 0.2 alpha. The JSON output from the REST API no longer includes trailing forward slashes either.
-
-#### Change to results under /search endpoint
-
-The uri field of search results is now populated with a URL to the relevant unique identifier.
-An additional 'ui' field has been added, which is populated with the string literal unique identifier.
-
-#### Change to HTTP Binding
-Under the /content endpoint, searches on invalid identifiers will return an http status of 404.
-Invalid terms or IDs that are presented to the /search endpoint will return an HTTP status 200.  The returned object will contain a name field populated with 'NO RESULTS'.  Example:
-
-~~~~xml
-<!--search on 'foo bar baz' -->
-https://uts-ws.nlm.nih.gov/rest/search/2015AA?string=foo%20bar%20baz&ticket=ST...
-~~~~
-
-~~~~json
-{
-  "result":
-    {
-    "classType":"searchResults",
-    "results":
-    [
-      {
-      "ui":"NONE",
-      "name":"NO RESULTS"
-      }
-    ]
-    },
-    "pageNum":1,
-    "pageSize":25
-}
-
-
-~~~~
-
-
+#### Change to Pagination fields
+A 'pageCount' field has been added, which is populated with a whole number that specifies the number of pages of results. Also, the 'pageNum' field has been relabeled 'pageNumber'.

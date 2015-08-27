@@ -1,6 +1,6 @@
 title=Searching the UMLS
 date=2015-06-08
-updated=2015-07-27
+updated=2015-08-28
 type=page
 status=published
 navorder=3
@@ -39,7 +39,7 @@ inputType | N | Specifies the data type you are using as your search parameter. 
 returnIdType | N | Specifies the type of identifier you wish to retrieve. | 'aui','concept','code','sourceConcept','sourceDescriptor' | 'concept' | Use 'code','sourceConcept', or 'sourceDescriptor' if you prefer source-asserted identifiers rather than CUIs in your search results.
 sabs | N | Comma-separated list of source vocabularies to include in your search | Any [root source abbreviation](http://www.nlm.nih.gov/research/umls/knowledge_sources/metathesaurus/release/source_vocabularies.html) in the UMLS. | All UMLS sources | n/a
 searchType | N | Type of search you wish to use | 'exact','words','leftTruncation', 'rightTruncation','approximate', 'normalizedString' | 'words' | Use 'exact' when using inputType = 'code', 'sourceConcept', or 'sourceDescriptor'.
-page | N | Whole number that specifies which page of results to fetch. | 1,2,3, etc | 1 | n/a
+pageNumber | N | Whole number that specifies which page of results to fetch. | 1,2,3, etc | 1 | n/a
 pageSize | N | Whole number that specifies the number of results to include per page. | 1,2,3, etc | 25 | n/a
 
 ### Sample Output
@@ -90,8 +90,10 @@ Sample output for /search/current?string=fracture of carpal bone&ticket=ST...
 ...
 ]
 },
-    "pageNum": 1,
-    "pageSize": 25
+
+	"pageNumber":1,
+	"pageSize":25,
+	"pageCount":1
 
 }
 ~~~~
@@ -139,8 +141,11 @@ Sample output for /search/current?string=fracture of carpal bone&returnIdType=so
 ...
 ]
 },
-    "pageNum": 1,
-    "pageSize": 25
+
+	"pageNumber":1,
+	"pageSize":25,
+	"pageCount":1
+
 
 }
 ~~~~

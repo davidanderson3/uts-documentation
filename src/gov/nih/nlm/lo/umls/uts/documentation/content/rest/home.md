@@ -1,6 +1,6 @@
 title=UTS REST API Home Page
 date=2015-06-10
-updated=2015-07-28
+updated=2015-08-28
 type=page
 status=published
 navorder=1
@@ -27,3 +27,8 @@ GET | [/content/{version}/source/{source}/{id}](source-asserted-identifiers/) | 
 GET | [/content/{version}/source/{source}/{id}/atoms](atoms/) | Retrieves information about atoms for a known source-asserted identifier
 GET | [/content/{version}/source/{source}/{id}/parents](parents-and-children/) | Retrieves immediate parents of a source-asserted identifier
 GET | [/content/{version}/source/{source}/{id}/children](parents-and-children/) | Retrieves immediate children of a source-asserted identifier
+GET | [/content/{version}/source/{source}/{id}/ancestors](ancestors-and-descendants/) | Retrieves all ancestors of a source-asserted identifier
+GET | [/content/{version}/source/{source}/{id}/descendants](ancestors-and-descendants/) | Retrieves all descendants of a source-asserted identifier
+
+### Code Sample Repository
+The [Code Sample Repository on GitHub](https://github.com/HHS/uts-rest-api) features code samples in various languages that show how to use the UTS REST API. The repository currently includes code samples in Java and Perl with more samples in more programming languages to follow.
