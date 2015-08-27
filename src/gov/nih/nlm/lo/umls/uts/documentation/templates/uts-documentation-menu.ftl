@@ -11,6 +11,15 @@
     </div>
   </div>
 </div>
+<div class = "row nlm-dropdown-menu">
+  <div class = "container-fluid">
+      <div id = "nav">
+         <ul class = "topnav">
+         <li></li>
+         </ul>
+      </div>
+  </div>
+</div>
 <div class = "row">
   <div class="container-fluid uts-nav">
         <a href="${content.rootpath}rest/home.html"><img class= "img-responsive pull-left" style = "padding-top:.2em; padding-left:1em; margin-right:1em;" alt="UTS Logo" src="<#if (content.rootpath)??>${content.rootpath}<#else></#if>umls-xs.gif"></a>
