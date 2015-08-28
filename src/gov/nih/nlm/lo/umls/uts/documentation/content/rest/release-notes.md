@@ -21,4 +21,5 @@ Users can now retrieve NLM-asserted relationship information for UMLS concepts. 
 Users can access code samples for authenticating and making other API calls in Perl and Java with more programming languages and samples to follow. See the [code sample repository on GitHub](https://github.com/HHS/uts-rest-api) for details.
 
 #### Change: Pagination fields
-A 'pageCount' field has been added, which is populated with a whole number that specifies the number of pages of results. Also, the 'pageNum' field has been relabeled 'pageNumber'.
+* A 'pageCount' field has been added to the Json output, which is populated with a whole number that specifies the number of pages of results.
+* The 'pageNum' query parameter has been relabeled 'pageNumber'.
