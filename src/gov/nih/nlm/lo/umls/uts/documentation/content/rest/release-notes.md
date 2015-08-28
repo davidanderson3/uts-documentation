@@ -14,8 +14,11 @@ Users can now retrieve ancestors of source-asserted identifiers. See [Retrieving
 #### New Feature: Retrieving descendants of source-asserted identifiers.
 Users can now retrieve descendants of source-asserted identifiers.  See [Retrieving descendants](/rest/ancestors-and-descendants/) for details.
 
+#### New Feature: Retrieving relations for UMLS concepts.
+Users can now retrieve NLM-asserted relationship information for UMLS concepts.  See [Retrieving concept relations](/rest/relations/) for details.
+
 #### New Feature: Code sample repository on GitHub.
 Users can access code samples for authenticating and making other API calls in Perl and Java with more programming languages and samples to follow. See the [code sample repository on GitHub](https://github.com/HHS/uts-rest-api) for details.
 
-#### Change to Pagination fields
+#### Change: Pagination fields
 A 'pageCount' field has been added, which is populated with a whole number that specifies the number of pages of results. Also, the 'pageNum' field has been relabeled 'pageNumber'.
