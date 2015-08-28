@@ -34,7 +34,7 @@
     </#list>
       <#list categories as cat>
       <div class="btn-group" role="group">
-        <button type="button" class="btn btn-md dropdown-toggle" data-toggle="dropdown" aria-expanded="false">${cat}<span class = "caret"/></button>    
+        <button type="button" class="btn btn-md dropdown-toggle" data-toggle="dropdown" aria-expanded="false">${cat}<span class = "caret"></span></button>    
          <ul class = "dropdown-menu" role = "menu">
           <#list published_pages?sort_by('navorder') as page>
            <#if (page.category)?? && page.category = cat><li><#if (content.rootpath)??><a href = "${content.rootpath}${page.uri}">${page.title}</a></li><#else></#if></#if>
