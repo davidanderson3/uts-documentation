@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<sitenav>
+<!--Databases-->
+<nav>
+  <topnav>Databases</topnav>
+
+
+<subnav><subtitle>PubMed/MEDLINE</subtitle><location>http://www.ncbi.nlm.nih.gov/pubmed/</location></subnav>            
+
+<subnav><subtitle>MeSH</subtitle><location>/mesh/MeshBrowser.html</location></subnav>            
+
+<subnav><subtitle>UMLS</subtitle><location>/research/umls/</location></subnav>            
+
+<subnav><subtitle>ClinicalTrials.gov</subtitle><location>http://clinicaltrials.gov/</location></subnav>            
+
+<subnav><subtitle>MedlinePlus</subtitle><location>http://www.nlm.nih.gov/medlineplus/</location></subnav>            
+
+<subnav><subtitle>TOXNET</subtitle><location>http://toxnet.nlm.nih.gov/</location></subnav>            
+
+<subnav><subtitle>Images from the History of Medicine</subtitle><location>http://ihm.nlm.nih.gov/luna/servlet/view/all</location></subnav>            
+
+<subnav><subtitle>Digital Collections</subtitle><location>http://collections.nlm.nih.gov/</location></subnav>            
+
+<subnav><subtitle>LocatorPlus</subtitle><location>http://locatorplus.gov</location></subnav>            
+
+<subnav><subtitle>All NLM Databases &amp; APIs</subtitle><location>http://wwwcf2.nlm.nih.gov/nlm_eresources/eresources/search_database.cfm</location></subnav>            
+
+
+</nav>
+<!--Find, Read, Learn-->
+<nav>
+  <topnav>Find, Read, Learn</topnav>
+
+
+<subnav><subtitle>Search biomedical literature</subtitle><location>http://www.ncbi.nlm.nih.gov/pubmed/</location></subnav>            
+
+<subnav><subtitle>Find medical terminologies</subtitle><location>/medical-terms.html</location></subnav>            
+
+<subnav><subtitle>Search NLM collections</subtitle><location>http://locatorplus.gov/</location></subnav>            
+
+<subnav><subtitle>Read about diseases</subtitle><location>http://www.nlm.nih.gov/medlineplus/healthtopics.html</location></subnav>            
+
+<subnav><subtitle>Learn about drugs</subtitle><location>/learn-about-drugs.html</location></subnav>            
+
+<subnav><subtitle>Explore history</subtitle><location>/hmd/explore-history.html</location></subnav>            
+
+<subnav><subtitle>Find a clinical trial</subtitle><location>http://clinicaltrials.gov/</location></subnav>            
+
+<subnav><subtitle>Use a medical dictionary</subtitle><location>http://www.nlm.nih.gov/medlineplus/mplusdictionary.html</location></subnav>            
+
+<subnav><subtitle>Find free full-text articles</subtitle><location>http://www.ncbi.nlm.nih.gov/pmc/</location></subnav>            
+
+
+</nav>
+<!--Explore NLM-->
+<nav>
+  <topnav>Explore NLM</topnav>
+
+
+<subnav><subtitle>About NLM</subtitle><location>/about/index.html</location></subnav>            
+
+<subnav><subtitle>Health Information</subtitle><location>/hinfo.html</location></subnav>            
+
+<subnav><subtitle>Library Catalog &amp; Services</subtitle><location>/libserv.html</location></subnav>            
+
+<subnav><subtitle>History of Medicine</subtitle><location>/hmd/index.html</location></subnav>            
+
+<subnav><subtitle>Online Exhibitions &amp; Digital Projects</subtitle><location>/onlineexhibitions.html</location></subnav>            
+
+<subnav><subtitle>Information for Publishers</subtitle><location>/portals/publishers.html</location></subnav>            
+
+<subnav><subtitle>Visit the Library</subtitle><location>/about/visitor.html</location></subnav>            
+
+
+</nav>
+<!--Research at NLM-->
+<nav>
+  <topnav>Research at NLM</topnav>
+
+
+<subnav><subtitle>Human Genome Resources</subtitle><location>http://www.ncbi.nlm.nih.gov/genome/guide/human/resources.shtml</location></subnav>            
+
+<subnav><subtitle>Biomedical Research &amp; Informatics</subtitle><location>/biomedical.html</location></subnav>            
+
+<subnav><subtitle>Environmental Health &amp; Toxicology</subtitle><location>http://sis.nlm.nih.gov/enviro.html</location></subnav>            
+
+<subnav><subtitle>Health Services Research &amp; Public Health</subtitle><location>/hsrph.html</location></subnav>            
+
+<subnav><subtitle>Health Information Technology</subtitle><location>/healthit.html</location></subnav>            
+
+
+</nav>
+<!--NLM for You-->
+<nav>
+  <topnav>NLM for You</topnav>
+
+
+<subnav><subtitle>Grants &amp; Funding</subtitle><location>/grants.html</location></subnav>            
+
+<subnav><subtitle>Meaningful Use Tools</subtitle><location>/healthit/meaningful_use.html</location></subnav>            
+
+<subnav><subtitle>Training &amp; Outreach</subtitle><location>/training.html</location></subnav>            
+
+<subnav><subtitle>Network of Medical Libraries</subtitle><location>/network.html</location></subnav>            
+
+<subnav><subtitle>Regional Activities</subtitle><location>/regional-activities.html</location></subnav>            
+
+<subnav><subtitle>Careers @ NLM</subtitle><location>/careers/careers.html</location></subnav>            
+
+<subnav><subtitle>Mobile Gallery</subtitle><location>/mobile/index.html</location></subnav>            
+
+
+</nav>
+</sitenav>
+

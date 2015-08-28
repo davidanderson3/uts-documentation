@@ -13,14 +13,16 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge;IE=9;IE=8;"/>
 
     <!-- Le styles -->
+    <link href="<#if (content.rootpath)??>${content.rootpath}<#else></#if>css/nlm-dropdown.css" rel="stylesheet" type="text/css">
     <link href="<#if (content.rootpath)??>${content.rootpath}<#else></#if>css/bootstrap.min.css" rel="stylesheet" type="text/css">
     <link href="<#if (content.rootpath)??>${content.rootpath}<#else></#if>css/asciidoctor.css" rel="stylesheet" type="text/css">
     <link href="<#if (content.rootpath)??>${content.rootpath}<#else></#if>css/prettify.css" rel="stylesheet" type="text/css">
     <link href="<#if (content.rootpath)??>${content.rootpath}<#else></#if>css/uts-docs.css" rel="stylesheet" type="text/css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/8.6/styles/default.min.css" type="text/css">
-
+       
     <script src="//code.jquery.com/jquery-1.11.3.min.js" type="text/javascript"></script>
     <script src="//code.jquery.com/jquery-migrate-1.2.1.min.js" type="text/javascript"></script>
+    <script src="<#if (content.rootpath)??>${content.rootpath}<#else></#if>js/master.js" type="text/javascript"></script>
     <script src="<#if (content.rootpath)??>${content.rootpath}<#else></#if>js/bootstrap.min.js" type="text/javascript"></script>
     <script src="<#if (content.rootpath)??>${content.rootpath}<#else></#if>js/prettify.js" type="text/javascript"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/8.6/highlight.min.js" type="text/javascript"></script>
