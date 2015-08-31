@@ -41,7 +41,7 @@ content.conceptDTO myConcept = utsContentService.getConcept(ticket,"2011AB", "C0
 ~~~~
 >
 
-**Method: **(String ticket,String version,PSF psf)
+**Method: **getNewConcepts(String ticket,String version,PSF psf)
 
 **Returns:**ArrayList< ConceptDTO>
 

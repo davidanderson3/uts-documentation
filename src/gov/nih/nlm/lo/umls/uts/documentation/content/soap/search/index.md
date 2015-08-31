@@ -9,7 +9,7 @@ navorder=2
 
 **Method:**findConcepts(String ticket,String version,String target,String str, String searchType,PSF psf)
 
-**Returns:**ArrayList<UiLabel> 
+**Returns:**ArrayList< UiLabel> 
 
 
 **Use Case:**You want to see a list of UMLS CUIs and their associated preferred names. You have a search string "lou gehrig disease" and want to return a list of CUIs having at least one atom that contains all of those words.
@@ -99,7 +99,7 @@ Finder.psf myPsf = new Finder.psf();
 
 **Method:**findAtoms(String ticket,String version,String target,String str,String searchType,PSF psf)
 
-**Returns:** ArrayList<UiLabel>
+**Returns:**�ArrayList< UiLabel>
 
 **Use Case:** Given a UMLS release, a searchType, and the string or code you would like to search, this call returns a set of atom unique identifiers (AUI) each with its corresponding atom name (Label), that meet your search criteria.
 
@@ -173,7 +173,7 @@ Finder.psf myPsf = new Finder.psf();
 
 **Method:**findCodes(String ticket,String version,String target,String str,String searchType,PSF psf)
 
-**Returns:**ArrayList<UiLabelRootSource> 
+**Returns:**ArrayList< UiLabelRootSource> 
 
 
 **Use Case:** Starting with an atom, source concept, source descriptor, or aui, you want to find codes, their preferred names, and the source vocabularies that provide them.
@@ -271,7 +271,7 @@ Finder.psf myPsf = new Finder.psf();
 
 **Method:**findSourceConcepts(String ticket,String version,String target,String str,String searchType,PSF psf);
 
-**Returns:**ArrayList<UiLabelRootSource>
+**Returns:**ArrayList< UiLabelRootSource>
 
 **Use Case:**Starting with an atom, code, source descriptor, or aui, you want to find source concepts, their preferred names, and the source vocabularies that provide them.
 
@@ -359,7 +359,7 @@ Finder.psf myPsf = new Finder.psf();
 
 **Method:**findSourceDescriptors(String ticket,String version,String target,String str,String searchType,PSF psf)
 
-**Returns:**ArrayList<UiLabelRootSource>;
+**Returns:**ArrayList< UiLabelRootSource>;
 
 **Use Case:**Given a UMLS release, a searchType, the string or code you would like to search, and a root source abbreviation (RSAB), this call returns a set of source descriptor identifiers (SDUI) each with its corresponding name (Label), for the specified RSAB.
 
