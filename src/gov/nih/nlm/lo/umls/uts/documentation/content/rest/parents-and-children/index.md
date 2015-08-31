@@ -1,6 +1,6 @@
 title=Retrieving Parents and Children
 date=2015-07-06
-updated=2015-08-28
+updated=2015-08-31
 type=page
 status=published
 category=Retrieving Source-Asserted Data
@@ -41,7 +41,7 @@ pageSize | N | Whole number that specifies the number of results to include per 
 ### Sample Output
 
 
-**Calls under /parents or /children will return a classType of 'AtomClusterAtomClusterRelation'.**
+**Calls under /parents or /children will return a classType of 'SourceAtomCluster'.**
 
 Sample output for /content/current/source/SNOMEDCT_US/9468002/parents?ticket=ST...
 
