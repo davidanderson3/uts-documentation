@@ -3,6 +3,7 @@ date=2015-07-10
 updated=2015-08-28
 type=page
 status=published
+category=Release Information
 navorder=1
 ~~~~~~
 
