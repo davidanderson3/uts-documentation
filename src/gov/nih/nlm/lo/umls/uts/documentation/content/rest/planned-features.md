@@ -7,7 +7,7 @@ category=Release Information
 navorder=2
 ~~~~~~
 
-The following new items are planned for the next release of the API.  return
+The following new items are planned for the next release of the API.    
 
 #### New Feature: Paging for /search results.
 View the total number of results pages, the current page, and the current page size for /search calls.
