@@ -33,12 +33,22 @@
     <![endif]-->
     <link rel="shortcut icon" href="<#if (content.rootpath)??>${content.rootpath}<#else></#if>favicon.ico">
     
-    <script type = "text/javascript">
+    <script type = "text/javascript" language = "javascript">
+      var $ = jQuery.noConflict();
+      
       $(document).ready(function() {
         
        $("th").attr("scope","col");
-      
+       
+        $("input#search.search-input").click(function(){
+          $(this).attr("value","");
+          
+        });
+       
       });
+      
+      
+       
     </script>
   </head>
   <body onload="prettyPrint();hljs.initHighlighting();">
