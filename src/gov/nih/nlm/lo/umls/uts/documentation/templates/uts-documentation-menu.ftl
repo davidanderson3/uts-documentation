@@ -5,8 +5,15 @@
         <div class = "col-md-6 col-sm-6 col-xs-6">
             <a href = "https://www.nlm.nih.gov"><img class= "nlm-logo img-responsive" alt="National Library of Medicine" style="margin-right:1em;" src="<#if (content.rootpath)??>${content.rootpath}<#else></#if>nlm-logo.png"></a>
         </div>
+        <div class = "col-md-6 col-sm-6 col-xs-6" id = "search-form">
+         <form method="get" action="//vsearch.nlm.nih.gov/vivisimo/cgi-bin/query-meta" target="_self" name="searchForm" id="searchForm">
+         <label for="search" class="hidden">Search</label>
+         <input type="text" name="query" value="Search" class="search-input" id="search"/>
+         <input type="hidden" name="v:project" value="nlm-main-website" />
+         </form>
+       </div>
        <div class = "col-md-6 col-sm-6 col-xs-6">
-           <a class = "pull-right white" style = "margin-right:1em;" href="http://apps.nlm.nih.gov/mainweb/siebel/nlm/index.cfm">Contact NLM</a>
+           <a class = "pull-right white" style = "margin-right:1em;" href="http://apps.nlm.nih.gov/mainweb/siebel/nlm/index.cfm"><b>Contact NLM</b></a>
        </div>
     </div>
   </div>
