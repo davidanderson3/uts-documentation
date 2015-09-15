@@ -1,4 +1,4 @@
-title=Retrieving Source-Asserted Identifier Information
+title=Retrieving Source-Asserted Information
 date=2015-07-01
 updated=2015-08-28
 type=page

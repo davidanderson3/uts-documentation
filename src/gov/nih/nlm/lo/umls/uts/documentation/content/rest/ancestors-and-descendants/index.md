@@ -1,4 +1,4 @@
-title=Retrieving Ancestors and Descendants
+title=Retrieving Source-Asserted Ancestors and Descendants
 date=2015-08-28
 updated=2015-08-31
 type=page
