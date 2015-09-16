@@ -1,4 +1,4 @@
-title=Retrieving Concept Relations
+title=Retrieving UMLS Concept Relations
 date=2015-07-28
 updated=2015-08-28
 type=page
