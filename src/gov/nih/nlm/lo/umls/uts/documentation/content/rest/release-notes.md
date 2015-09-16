@@ -1,6 +1,6 @@
-title=Release Notes
+title=Release Notes and Roadmap
 date=2015-07-10
-updated=2015-09-15
+updated=2015-09-16
 type=page
 status=published
 navorder=1
@@ -34,6 +34,4 @@ The following new items are planned for upcoming versions of the API.
 * **Python code samples in repository**
   Python code samples for authenticating and making other API calls will be added to the code sample repository. See the [code sample repository on GitHub](https://github.com/HHS/uts-rest-api) for details.
 
-##### Change:
-* **Paging for /search results**
-  View the total number of results pages, the current page, and the current page size for /search calls.
+

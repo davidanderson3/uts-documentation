@@ -42,12 +42,15 @@ searchType | N | Type of search you wish to use | 'exact','words','leftTruncatio
 pageNumber | N | Whole number that specifies which page of results to fetch. | 1,2,3, etc | 1 | n/a
 pageSize | N | Whole number that specifies the number of results to include per page. | 1,2,3, etc | 25 | n/a
 
+
+
 ### Sample Output
 
 **Calls under /search will return a JSON object of classType 'searchResults'.**
 The default search parameters will return CUIs and their names.  If you ask for codes, sourceConcept, or sourceDescriptor as your returnIdType,
 you will get back source-asserted identifiers instead of CUIs.
 
+Note: Paging is not available for /search call results. When users reach the final result in the search output, the next result will have a name of 'NO RESULTS', which designates the end of the output.
 
 Sample output for /search/current?string=fracture of carpal bone&ticket=ST...
 
