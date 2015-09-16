@@ -32,7 +32,45 @@ var menuCounter = 0;
 	}
 			});
 	
+	
+	
 });
+
+
+function loadScript(url, callback){
+
+    var script = document.createElement("script");
+	script.type = "text/javascript";
+        script.async = true;
+
+    if (script.readyState){  //IE
+        script.onreadystatechange = function(){
+            if (script.readyState == "loaded" ||
+		script.readyState == "complete"){
+                script.onreadystatechange = null;
+                callback();
+            }
+        };
+    } else {  //Others
+        script.onload = function(){
+            callback();
+        };
+    }
+
+    script.src = url;
+    var x = document.getElementsByTagName("script")[0];
+    x.parentNode.insertBefore(script, x);
+
+    return script;
+
+} // loadScript
+
+loadScript("https://www.nlm.nih.gov/core/nlm-autocomplete/1.0/nlm-autocomplete.min.js", function() {
+        $nlm(document).ready(function() {
+            nlm.autocomplete.add({element: "#search", dictionary: "nlm-ac-dictionary", width: 0});
+        });
+});
+
 
 if("PIE" in window) {
 	$nlm(function() {
