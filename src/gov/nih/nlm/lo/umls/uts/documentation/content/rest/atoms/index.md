@@ -1,6 +1,6 @@
 title=Retrieving UMLS Atoms
 date=2015-06-12
-updated=2015-08-28
+updated=2015-09-18
 type=page
 status=published
 category=Retrieving UMLS Concepts
@@ -14,6 +14,7 @@ URIs with /atoms support the following use cases:
 
 *  Retrieve atoms of a UMLS concept (CUI).
 *  Retrieve atoms of a source-asserted identifier or code.
+*  Retrieve information about an individual atom (AUI).
 *  Retrieve atom information, such as relations to other atoms, attributes, or definitions.
 *  Retrieve membership information of an atom (to which CUI, code, or content view does an atom belong).
 *  Retrieve atom information such as term type, language, and restriction level
@@ -32,6 +33,7 @@ GET|/content/current/CUI/C0155502/atoms|Retrieves all atoms for C0155502
 GET|/content/current/CUI/C0155502/atoms?language=ENG|Retrieves all English language atoms for C0155502
 GET|/content/current/CUI/C0155502/atoms?sabs=SNOMEDCT_US,ICD9CM&ttys=PT | Retrieve SNOMEDCT_US and ICD9CM preferred terms in C0155502
 GET|/content/current/source/SNOMEDCT_US/111541001/atoms | Retrieve atoms belonging to SNOMED CT concept 111541001
+GET|/content/2015AA/AUI/A8345234 | Retrieve information about AUI A8345234.
 
 
 ### Query Parameters
