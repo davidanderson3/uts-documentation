@@ -24,7 +24,7 @@ You may use any valid UMLS release back to 2008AA in your URI if you would like 
 
 Sample URI|Description
 --- | ---
-/content/current/source/SNOMEDCT_US/9468002/relations| Retrieves relationships of the SNOMED concept
+/content/current/source/SNOMEDCT_US/77147000/relations| Retrieves relationships of the SNOMED concept
 
 
 ### Query Parameters
@@ -39,72 +39,72 @@ pageSize | N | Whole number that specifies the number of results to include per 
 ### Sample Output
 
 
-**Calls under /relations will return a classType of 'SourceAtomCluster'.**
+**Calls under /relations will return a classType of 'AtomClusterAtomClusterRelation'.**
 
-Sample output for /content/current/source/SNOMEDCT_US/9468002/relations?ticket=ST...
+Sample output for /content/2015AA/source/SNOMEDCT_US/77147000/relations?ticket=ST...
 
 ~~~~json
 {
     "result": [
         {
-            "classType": "SourceAtomCluster",
-            "ui": "20511007",
+            "classType": "AtomClusterAtomClusterRelation",
+            "ui": "R84490076",
             "suppressible": false,
-            "sourceUi": "20511007",
+            "sourceUi": "NONE",
             "obsolete": false,
+            "sourceOriginated": true,
             "rootSource": "SNOMEDCT_US",
-            "atomCount": 6,
-            "cVMemberCount": 0,
-            "attributes": "https://uts-ws.nlm.nih.gov/rest/content/2015AA/SNOMEDCT_US/20511007/attributes",
-            "atoms": "https://uts-ws.nlm.nih.gov/rest/content/2015AA/SNOMEDCT_US/20511007/atoms",
-            "descendants": "https://uts-ws.nlm.nih.gov/rest/content/2015AA/SNOMEDCT_US/20511007/descendants",
-            "ancestors": "https://uts-ws.nlm.nih.gov/rest/content/2015AA/SNOMEDCT_US/20511007/ancestors",
-            "parents": "https://uts-ws.nlm.nih.gov/rest/content/2015AA/SNOMEDCT_US/20511007/parents",
-            "children": "https://uts-ws.nlm.nih.gov/rest/content/2015AA/SNOMEDCT_US/20511007/children",
-            "relations": "NONE",
-            "definitions": "NONE",
-            "memberships": "NONE",
-            "name": "Fracture of hand"
+            "relationLabel": "RN",
+            "additionalRelationLabel": "mapped_to",
+            "groupId": "NONE",
+            "attributeCount": 0,
+            "relatedAtom": "NONE",
+            "relatedConcept": "https://uts-ws.nlm.nih.gov/rest/content/2015AA/source/SNOMEDCT_US/579.9"
         },
         {
-            "classType": "SourceAtomCluster",
-            "ui": "36991002",
+            "classType": "AtomClusterAtomClusterRelation",
+            "ui": "R19807467",
             "suppressible": false,
-            "sourceUi": "36991002",
+            "sourceUi": "273426023",
             "obsolete": false,
+            "sourceOriginated": true,
             "rootSource": "SNOMEDCT_US",
-            "atomCount": 5,
-            "cVMemberCount": 0,
-            "attributes": "https://uts-ws.nlm.nih.gov/rest/content/2015AA/SNOMEDCT_US/36991002/attributes",
-            "atoms": "https://uts-ws.nlm.nih.gov/rest/content/2015AA/SNOMEDCT_US/36991002/atoms",
-            "descendants": "https://uts-ws.nlm.nih.gov/rest/content/2015AA/SNOMEDCT_US/36991002/descendants",
-            "ancestors": "https://uts-ws.nlm.nih.gov/rest/content/2015AA/SNOMEDCT_US/36991002/ancestors",
-            "parents": "https://uts-ws.nlm.nih.gov/rest/content/2015AA/SNOMEDCT_US/36991002/parents",
-            "children": "https://uts-ws.nlm.nih.gov/rest/content/2015AA/SNOMEDCT_US/36991002/children",
-            "relations": "NONE",
-            "definitions": "NONE",
-            "memberships": "NONE",
-            "name": "Closed fracture of upper limb"
+            "relationLabel": "CHD",
+            "additionalRelationLabel": "isa",
+            "groupId": "NONE",
+            "attributeCount": 0,
+            "relatedAtom": "NONE",
+            "relatedConcept": "https://uts-ws.nlm.nih.gov/rest/content/2015AA/source/SNOMEDCT_US/32230006"
         },
         {
-            "classType": "SourceAtomCluster",
-            "ui": "82065001",
+            "classType": "AtomClusterAtomClusterRelation",
+            "ui": "R20059020",
             "suppressible": false,
-            "sourceUi": "82065001",
+            "sourceUi": "2042729024",
             "obsolete": false,
+            "sourceOriginated": true,
             "rootSource": "SNOMEDCT_US",
-            "atomCount": 7,
-            "cVMemberCount": 0,
-            "attributes": "https://uts-ws.nlm.nih.gov/rest/content/2015AA/SNOMEDCT_US/82065001/attributes",
-            "atoms": "https://uts-ws.nlm.nih.gov/rest/content/2015AA/SNOMEDCT_US/82065001/atoms",
-            "descendants": "https://uts-ws.nlm.nih.gov/rest/content/2015AA/SNOMEDCT_US/82065001/descendants",
-            "ancestors": "https://uts-ws.nlm.nih.gov/rest/content/2015AA/SNOMEDCT_US/82065001/ancestors",
-            "parents": "https://uts-ws.nlm.nih.gov/rest/content/2015AA/SNOMEDCT_US/82065001/parents",
-            "children": "https://uts-ws.nlm.nih.gov/rest/content/2015AA/SNOMEDCT_US/82065001/children",
-            "relations": "NONE",
-            "definitions": "NONE",
-            "memberships": "NONE",
-            "name": "Fracture of carpal bone"
+            "relationLabel": "CHD",
+            "additionalRelationLabel": "isa",
+            "groupId": "NONE",
+            "attributeCount": 0,
+            "relatedAtom": "NONE",
+            "relatedConcept": "https://uts-ws.nlm.nih.gov/rest/content/2015AA/source/SNOMEDCT_US/85919009"
+        },
+        {
+            "classType": "AtomClusterAtomClusterRelation",
+            "ui": "R13983646",
+            "suppressible": false,
+            "sourceUi": "2042730025",
+            "obsolete": false,
+            "sourceOriginated": true,
+            "rootSource": "SNOMEDCT_US",
+            "relationLabel": "RO",
+            "additionalRelationLabel": "has_finding_site",
+            "groupId": "0",
+            "attributeCount": 0,
+            "relatedAtom": "NONE",
+            "relatedConcept": "https://uts-ws.nlm.nih.gov/rest/content/2015AA/source/SNOMEDCT_US/113276009"
         }
     ],
     "pageNumber": 1,
