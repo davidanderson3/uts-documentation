@@ -43,6 +43,7 @@ pageSize | N | Whole number that specifies the number of results to include per 
 
 ### Sample Output
 
+**Calls under /CUI will return a JSON object of classType 'Concept'.**
 
 **The default for calls under /CUI/{CUI} is to return UMLS CUIs.**
 
