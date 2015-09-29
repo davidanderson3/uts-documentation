@@ -1,9 +1,9 @@
 title=Retrieving Source-Asserted Subsets
-date=2015-09-22
-updated=2015-09-22
+date=2015-09-30
+updated=2015-09-30
 type=page
 status=draft
-category=Retrieving Source-Asserted Subsets
+category=Retrieving Source-Asserted Data
 navorder=5
 ~~~~~~
 
@@ -70,162 +70,7 @@ Sample output for /content/2015AA/subsets?ticket=ST...
             "relationMemberCount": 0,
             "uri": "https://uts-ws-qa.nlm.nih.gov/rest/content/2015AA/subsets/source/SCTSPA/900000000000534007"
         },
-        {
-            "classType": "Subset",
-            "ui": "C3853923",
-            "sourceUi": "450828004",
-            "rootSource": "SCTSPA",
-            "name": "conjunto de referencias de lenguaje castellano para Am\u00e9rica Latina",
-            "description": "conjunto de referencias de lenguaje castellano para Am\u00e9rica Latina",
-            "attributeCount": 1,
-            "atomMemberCount": 1000011,
-            "sourceConceptMemberCount": 0,
-            "relationMemberCount": 0,
-            "uri": "https://uts-ws-qa.nlm.nih.gov/rest/content/2015AA/subsets/source/SCTSPA/450828004"
-        },
-        {
-            "classType": "Subset",
-            "ui": "C3853925",
-            "sourceUi": "900000000000456007",
-            "rootSource": "SCTSPA",
-            "name": "conjunto de referencias descriptivas de la estructura de otros conjuntos de referencias",
-            "description": "conjunto de referencias descriptivas de la estructura de otros conjuntos de referencias",
-            "attributeCount": 1,
-            "atomMemberCount": 0,
-            "sourceConceptMemberCount": 0,
-            "relationMemberCount": 0,
-            "uri": "https://uts-ws-qa.nlm.nih.gov/rest/content/2015AA/subsets/source/SCTSPA/900000000000456007"
-        },
-        {
-            "classType": "Subset",
-            "ui": "C3692150",
-            "sourceUi": "900000000000490003",
-            "rootSource": "SCTSPA",
-            "name": "conjunto de referencias atributo-valor de motivo de inactivaci\u00f3n de descripciones",
-            "description": "conjunto de referencias atributo-valor de motivo de inactivaci\u00f3n de descripciones",
-            "attributeCount": 1,
-            "atomMemberCount": 471721,
-            "sourceConceptMemberCount": 0,
-            "relationMemberCount": 0,
-            "uri": "https://uts-ws-qa.nlm.nih.gov/rest/content/2015AA/subsets/source/SCTSPA/900000000000490003"
-        },
-        {
-            "classType": "Subset",
-            "ui": "C3645685",
-            "sourceUi": "447565001",
-            "rootSource": "SNOMEDCT_US",
-            "name": "Virtual therapeutic moiety simple reference set",
-            "description": "Virtual therapeutic moiety simple reference set",
-            "attributeCount": 1,
-            "atomMemberCount": 0,
-            "sourceConceptMemberCount": 3566,
-            "relationMemberCount": 0,
-            "uri": "https://uts-ws-qa.nlm.nih.gov/rest/content/2015AA/subsets/source/SNOMEDCT_US/447565001"
-        },
-        {
-            "classType": "Subset",
-            "ui": "C3683780",
-            "sourceUi": "900000000000490003",
-            "rootSource": "SNOMEDCT_US",
-            "name": "Description inactivation indicator reference set",
-            "description": "Description inactivation indicator reference set",
-            "attributeCount": 1,
-            "atomMemberCount": 0,
-            "sourceConceptMemberCount": 0,
-            "relationMemberCount": 0,
-            "uri": "https://uts-ws-qa.nlm.nih.gov/rest/content/2015AA/subsets/source/SNOMEDCT_US/900000000000490003"
-        },
-        {
-            "classType": "Subset",
-            "ui": "C3645684",
-            "sourceUi": "447566000",
-            "rootSource": "SNOMEDCT_US",
-            "name": "Virtual medicinal product simple reference set",
-            "description": "Virtual medicinal product simple reference set",
-            "attributeCount": 1,
-            "atomMemberCount": 0,
-            "sourceConceptMemberCount": 10803,
-            "relationMemberCount": 0,
-            "uri": "https://uts-ws-qa.nlm.nih.gov/rest/content/2015AA/subsets/source/SNOMEDCT_US/447566000"
-        },
-        {
-            "classType": "Subset",
-            "ui": "C3714467",
-            "sourceUi": "447562003",
-            "rootSource": "SNOMEDCT_US",
-            "name": "ICD-10 complex map reference set",
-            "description": "ICD-10 complex map reference set",
-            "attributeCount": 1,
-            "atomMemberCount": 0,
-            "sourceConceptMemberCount": 43041,
-            "relationMemberCount": 0,
-            "uri": "https://uts-ws-qa.nlm.nih.gov/rest/content/2015AA/subsets/source/SNOMEDCT_US/447562003"
-        },
-        {
-            "classType": "Subset",
-            "ui": "C3669743",
-            "sourceUi": "900000000000534007",
-            "rootSource": "SNOMEDCT_US",
-            "name": "Module dependency",
-            "description": "Module dependency",
-            "attributeCount": 1,
-            "atomMemberCount": 0,
-            "sourceConceptMemberCount": 0,
-            "relationMemberCount": 0,
-            "uri": "https://uts-ws-qa.nlm.nih.gov/rest/content/2015AA/subsets/source/SNOMEDCT_US/900000000000534007"
-        },
-        {
-            "classType": "Subset",
-            "ui": "C3714471",
-            "sourceUi": "900000000000524003",
-            "rootSource": "SNOMEDCT_US",
-            "name": "MOVED TO association reference set",
-            "description": "MOVED TO association reference set",
-            "attributeCount": 1,
-            "atomMemberCount": 0,
-            "sourceConceptMemberCount": 0,
-            "relationMemberCount": 0,
-            "uri": "https://uts-ws-qa.nlm.nih.gov/rest/content/2015AA/subsets/source/SNOMEDCT_US/900000000000524003"
-        },
-        {
-            "classType": "Subset",
-            "ui": "C3539934",
-            "sourceUi": "900000000000538005",
-            "rootSource": "SNOMEDCT_US",
-            "name": "Description format",
-            "description": "Description format",
-            "attributeCount": 1,
-            "atomMemberCount": 0,
-            "sourceConceptMemberCount": 3,
-            "relationMemberCount": 0,
-            "uri": "https://uts-ws-qa.nlm.nih.gov/rest/content/2015AA/subsets/source/SNOMEDCT_US/900000000000538005"
-        },
-        {
-            "classType": "Subset",
-            "ui": "C3714473",
-            "sourceUi": "447563008",
-            "rootSource": "SNOMEDCT_US",
-            "name": "ICD-9-CM equivalence complex map reference set",
-            "description": "ICD-9-CM equivalence complex map reference set",
-            "attributeCount": 1,
-            "atomMemberCount": 0,
-            "sourceConceptMemberCount": 121098,
-            "relationMemberCount": 0,
-            "uri": "https://uts-ws-qa.nlm.nih.gov/rest/content/2015AA/subsets/source/SNOMEDCT_US/447563008"
-        },
-        {
-            "classType": "Subset",
-            "ui": "C3683520",
-            "sourceUi": "900000000000489007",
-            "rootSource": "SNOMEDCT_US",
-            "name": "Concept inactivation indicator reference set",
-            "description": "Concept inactivation indicator reference set",
-            "attributeCount": 1,
-            "atomMemberCount": 1193,
-            "sourceConceptMemberCount": 99329,
-            "relationMemberCount": 0,
-            "uri": "https://uts-ws-qa.nlm.nih.gov/rest/content/2015AA/subsets/source/SNOMEDCT_US/900000000000489007"
-        },
+...
         {
             "classType": "Subset",
             "ui": "C3645703",
@@ -239,32 +84,7 @@ Sample output for /content/2015AA/subsets?ticket=ST...
             "relationMemberCount": 0,
             "uri": "https://uts-ws-qa.nlm.nih.gov/rest/content/2015AA/subsets/source/SNOMEDCT_US/446608001"
         },
-        {
-            "classType": "Subset",
-            "ui": "C3645553",
-            "sourceUi": "900000000000531004",
-            "rootSource": "SNOMEDCT_US",
-            "name": "REFERS TO concept association reference set",
-            "description": "REFERS TO concept association reference set",
-            "attributeCount": 1,
-            "atomMemberCount": 865,
-            "sourceConceptMemberCount": 0,
-            "relationMemberCount": 0,
-            "uri": "https://uts-ws-qa.nlm.nih.gov/rest/content/2015AA/subsets/source/SNOMEDCT_US/900000000000531004"
-        },
-        {
-            "classType": "Subset",
-            "ui": "C3645556",
-            "sourceUi": "900000000000528000",
-            "rootSource": "SNOMEDCT_US",
-            "name": "WAS A association reference set",
-            "description": "WAS A association reference set",
-            "attributeCount": 1,
-            "atomMemberCount": 0,
-            "sourceConceptMemberCount": 20998,
-            "relationMemberCount": 0,
-            "uri": "https://uts-ws-qa.nlm.nih.gov/rest/content/2015AA/subsets/source/SNOMEDCT_US/900000000000528000"
-        },
+...
         {
             "classType": "Subset",
             "ui": "C3645570",
@@ -278,110 +98,7 @@ Sample output for /content/2015AA/subsets?ticket=ST...
             "relationMemberCount": 0,
             "uri": "https://uts-ws-qa.nlm.nih.gov/rest/content/2015AA/subsets/source/SNOMEDCT_US/900000000000509007"
         },
-        {
-            "classType": "Subset",
-            "ui": "C3645554",
-            "sourceUi": "900000000000530003",
-            "rootSource": "SNOMEDCT_US",
-            "name": "ALTERNATIVE association reference set",
-            "description": "ALTERNATIVE association reference set",
-            "attributeCount": 1,
-            "atomMemberCount": 0,
-            "sourceConceptMemberCount": 165,
-            "relationMemberCount": 0,
-            "uri": "https://uts-ws-qa.nlm.nih.gov/rest/content/2015AA/subsets/source/SNOMEDCT_US/900000000000530003"
-        },
-        {
-            "classType": "Subset",
-            "ui": "C3669402",
-            "sourceUi": "900000000000456007",
-            "rootSource": "SNOMEDCT_US",
-            "name": "Reference set descriptor",
-            "description": "Reference set descriptor",
-            "attributeCount": 1,
-            "atomMemberCount": 0,
-            "sourceConceptMemberCount": 31,
-            "relationMemberCount": 0,
-            "uri": "https://uts-ws-qa.nlm.nih.gov/rest/content/2015AA/subsets/source/SNOMEDCT_US/900000000000456007"
-        },
-        {
-            "classType": "Subset",
-            "ui": "C3645581",
-            "sourceUi": "900000000000497000",
-            "rootSource": "SNOMEDCT_US",
-            "name": "CTV3 simple map",
-            "description": "CTV3 simple map",
-            "attributeCount": 1,
-            "atomMemberCount": 0,
-            "sourceConceptMemberCount": 417209,
-            "relationMemberCount": 0,
-            "uri": "https://uts-ws-qa.nlm.nih.gov/rest/content/2015AA/subsets/source/SNOMEDCT_US/900000000000497000"
-        },
-        {
-            "classType": "Subset",
-            "ui": "C3882623",
-            "sourceUi": "6011000124106",
-            "rootSource": "SNOMEDCT_US",
-            "name": "ICD-10-CM complex map reference set",
-            "description": "ICD-10-CM complex map reference set",
-            "attributeCount": 1,
-            "atomMemberCount": 0,
-            "sourceConceptMemberCount": 54262,
-            "relationMemberCount": 0,
-            "uri": "https://uts-ws-qa.nlm.nih.gov/rest/content/2015AA/subsets/source/SNOMEDCT_US/6011000124106"
-        },
-        {
-            "classType": "Subset",
-            "ui": "C3714465",
-            "sourceUi": "900000000000527005",
-            "rootSource": "SNOMEDCT_US",
-            "name": "SAME AS association reference set",
-            "description": "SAME AS association reference set",
-            "attributeCount": 1,
-            "atomMemberCount": 0,
-            "sourceConceptMemberCount": 47524,
-            "relationMemberCount": 0,
-            "uri": "https://uts-ws-qa.nlm.nih.gov/rest/content/2015AA/subsets/source/SNOMEDCT_US/900000000000527005"
-        },
-        {
-            "classType": "Subset",
-            "ui": "C3714470",
-            "sourceUi": "900000000000526001",
-            "rootSource": "SNOMEDCT_US",
-            "name": "REPLACED BY association reference set",
-            "description": "REPLACED BY association reference set",
-            "attributeCount": 1,
-            "atomMemberCount": 0,
-            "sourceConceptMemberCount": 9715,
-            "relationMemberCount": 0,
-            "uri": "https://uts-ws-qa.nlm.nih.gov/rest/content/2015AA/subsets/source/SNOMEDCT_US/900000000000526001"
-        },
-        {
-            "classType": "Subset",
-            "ui": "C3645571",
-            "sourceUi": "900000000000508004",
-            "rootSource": "SNOMEDCT_US",
-            "name": "GB English",
-            "description": "GB English",
-            "attributeCount": 1,
-            "atomMemberCount": 1205756,
-            "sourceConceptMemberCount": 0,
-            "relationMemberCount": 0,
-            "uri": "https://uts-ws-qa.nlm.nih.gov/rest/content/2015AA/subsets/source/SNOMEDCT_US/900000000000508004"
-        },
-        {
-            "classType": "Subset",
-            "ui": "C3714472",
-            "sourceUi": "900000000000525002",
-            "rootSource": "SNOMEDCT_US",
-            "name": "MOVED FROM association reference set",
-            "description": "MOVED FROM association reference set",
-            "attributeCount": 1,
-            "atomMemberCount": 0,
-            "sourceConceptMemberCount": 5,
-            "relationMemberCount": 0,
-            "uri": "https://uts-ws-qa.nlm.nih.gov/rest/content/2015AA/subsets/source/SNOMEDCT_US/900000000000525002"
-        }
+...
     ]
 }
 

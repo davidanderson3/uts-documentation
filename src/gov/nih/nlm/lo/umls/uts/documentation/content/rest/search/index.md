@@ -1,6 +1,6 @@
 title=Searching the UMLS
 date=2015-06-08
-updated=2015-08-28
+updated=2015-09-30
 type=page
 status=published
 navorder=3
@@ -52,11 +52,13 @@ you will get back source-asserted identifiers instead of CUIs.
 
 Note: Paging is not available for /search call results. When users reach the final result in the search output, the next result will have a name of 'NO RESULTS', which designates the end of the output.
 
-Sample output for /search/current?string=fracture of carpal bone&ticket=ST...
+Sample output for /search/current?string=fracture%20of%20carpal%20bone&ticket=ST...
 
 ~~~~json
 {
 
+    "pageSize": 25,
+    "pageNumber": 1,
     "result": 
 
 {
@@ -91,23 +93,21 @@ Sample output for /search/current?string=fracture of carpal bone&ticket=ST...
 
 },
 ...
-]
-},
-
-	"pageNumber":1,
-	"pageSize":25,
-	"pageCount":1
+        ]
+    }
 
 }
 ~~~~
 
 **Specifying returnIdType = 'code','sourceConcept',or 'sourceDescriptor' will result in output as follows:**
 
-Sample output for /search/current?string=fracture of carpal bone&returnIdType=sourceConcept&ticket=ST...
+Sample output for /search/current?string=fracture%20of%20carpal%20bone&returnIdType=sourceConcept&ticket=ST...
 
 ~~~~json
 {
 
+    "pageSize": 25,
+    "pageNumber": 1,
     "result": 
 
 {
@@ -142,13 +142,8 @@ Sample output for /search/current?string=fracture of carpal bone&returnIdType=so
 
 },
 ...
-]
-},
-
-	"pageNumber":1,
-	"pageSize":25,
-	"pageCount":1
-
+        ]
+    }
 
 }
 ~~~~

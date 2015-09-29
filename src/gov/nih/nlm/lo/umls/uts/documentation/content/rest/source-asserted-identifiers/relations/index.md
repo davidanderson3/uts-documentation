@@ -1,6 +1,6 @@
 title=Retrieving Source-Asserted Relations
-date=2015-09-15
-updated=2015-09-15
+date=2015-09-30
+updated=2015-09-30
 type=page
 status=draft
 category=Retrieving Source-Asserted Data
@@ -24,7 +24,7 @@ You may use any valid UMLS release back to 2008AA in your URI if you would like 
 
 Sample URI|Description
 --- | ---
-/content/current/source/SNOMEDCT_US/77147000/relations| Retrieves relationships of the SNOMED concept
+/content/current/source/SNOMEDCT_US/9468002/relations| Retrieves relationships of the SNOMED concept
 
 
 ### Query Parameters
@@ -32,6 +32,8 @@ Sample URI|Description
 Parameter name | Required? Y/N | Description|  Valid Values | Default value | Usage Note
 --- | ---
 ticket | Y | A single-use service ticket is required for each call to the API. See [authentication](../authentication.html) for more information | n/a | n/a | n/a
+includeRelationLabels | N | One or more relation labels | Any [relation label](https://www.nlm.nih.gov/research/umls/knowledge_sources/metathesaurus/release/abbreviations.html#mrdoc_REL) in the UMLS |n/a| Use a comma between each relation label to specify more than one.
+includeAdditionalRelationLabels | N | One or more relation attribute | Any [relation attribute](https://www.nlm.nih.gov/research/umls/knowledge_sources/metathesaurus/release/abbreviations.html#mrdoc_RELA) in the UMLS |n/a| Use a comma between each relation attribute to specify more than one.
 pageNumber | N | Whole number that specifies which page of results to fetch. | 1,2,3, etc | 1 | n/a
 pageSize | N | Whole number that specifies the number of results to include per page. | 1,2,3, etc | 25 | n/a
 
@@ -41,75 +43,61 @@ pageSize | N | Whole number that specifies the number of results to include per 
 
 **Calls under /relations will return a classType of 'AtomClusterAtomClusterRelation'.**
 
-Sample output for /content/2015AA/source/SNOMEDCT_US/77147000/relations?ticket=ST...
+Sample output for /content/2015AA/source/SNOMEDCT_US/9468002/relations?ticket=ST...
 
 ~~~~json
 {
+    "pageSize": 25,
+    "pageNumber": 1,
+    "pageCount": 2,
     "result": [
         {
             "classType": "AtomClusterAtomClusterRelation",
-            "ui": "R84490076",
+            "ui": "R88901452",
             "suppressible": false,
             "sourceUi": "NONE",
             "obsolete": false,
             "sourceOriginated": true,
-            "rootSource": "SNOMEDCT_US",
-            "relationLabel": "RN",
-            "additionalRelationLabel": "mapped_to",
+            "rootSource": "MEDCIN",
+            "relationLabel": "SY",
+            "additionalRelationLabel": "same_as",
             "groupId": "NONE",
             "attributeCount": 0,
             "relatedAtom": "NONE",
-            "relatedConcept": "https://uts-ws.nlm.nih.gov/rest/content/2015AA/source/SNOMEDCT_US/579.9"
+            "relatedConcept": "https://uts-ws.nlm.nih.gov/rest/content/2015AA/source/MEDCIN/34696"
         },
         {
             "classType": "AtomClusterAtomClusterRelation",
-            "ui": "R19807467",
+            "ui": "R88701069",
             "suppressible": false,
-            "sourceUi": "273426023",
+            "sourceUi": "NONE",
             "obsolete": false,
             "sourceOriginated": true,
-            "rootSource": "SNOMEDCT_US",
-            "relationLabel": "CHD",
-            "additionalRelationLabel": "isa",
+            "rootSource": "MEDCIN",
+            "relationLabel": "RB",
+            "additionalRelationLabel": "inverse_isa",
             "groupId": "NONE",
             "attributeCount": 0,
             "relatedAtom": "NONE",
-            "relatedConcept": "https://uts-ws.nlm.nih.gov/rest/content/2015AA/source/SNOMEDCT_US/32230006"
+            "relatedConcept": "https://uts-ws.nlm.nih.gov/rest/content/2015AA/source/MEDCIN/91573"
         },
         {
             "classType": "AtomClusterAtomClusterRelation",
-            "ui": "R20059020",
+            "ui": "R88980836",
             "suppressible": false,
-            "sourceUi": "2042729024",
+            "sourceUi": "NONE",
             "obsolete": false,
             "sourceOriginated": true,
-            "rootSource": "SNOMEDCT_US",
-            "relationLabel": "CHD",
-            "additionalRelationLabel": "isa",
+            "rootSource": "MEDCIN",
+            "relationLabel": "RB",
+            "additionalRelationLabel": "inverse_isa",
             "groupId": "NONE",
             "attributeCount": 0,
             "relatedAtom": "NONE",
-            "relatedConcept": "https://uts-ws.nlm.nih.gov/rest/content/2015AA/source/SNOMEDCT_US/85919009"
+            "relatedConcept": "https://uts-ws.nlm.nih.gov/rest/content/2015AA/source/MEDCIN/91574"
         },
-        {
-            "classType": "AtomClusterAtomClusterRelation",
-            "ui": "R13983646",
-            "suppressible": false,
-            "sourceUi": "2042730025",
-            "obsolete": false,
-            "sourceOriginated": true,
-            "rootSource": "SNOMEDCT_US",
-            "relationLabel": "RO",
-            "additionalRelationLabel": "has_finding_site",
-            "groupId": "0",
-            "attributeCount": 0,
-            "relatedAtom": "NONE",
-            "relatedConcept": "https://uts-ws.nlm.nih.gov/rest/content/2015AA/source/SNOMEDCT_US/113276009"
-        }
-    ],
-    "pageNumber": 1,
-    "pageSize": 25,
-    "pageCount": 1
+...
+    ]
 }
 ~~~~
 
