@@ -2,7 +2,7 @@ title=Retrieving Source-Asserted Subsets
 date=2015-09-30
 updated=2015-09-30
 type=page
-status=draft
+status=published
 category=Retrieving Source-Asserted Data
 navorder=5
 ~~~~~~
@@ -17,6 +17,7 @@ URIs with /subsets support the following use cases:
 * Retrieve all members of a known subset.
 * Retrieve attributes for a member of a known subset.
 
+
 Note that 'current' in the URI can always be used to search against the latest UMLS publication.
 You may use any valid UMLS release back to 2008AA in your URI if you would like to search against a particular version of the UMLS.
 
@@ -25,12 +26,13 @@ You may use any valid UMLS release back to 2008AA in your URI if you would like 
 
 **The base URI is https://uts-ws.nlm.nih.gov/rest**
 
-Sample URI|Description
+Sample URI|Description|Returned classType
 --- | ---
-/content/current/subsets | Retrieve information about all subsets from latest UMLS version or a specific release.
-/content/2015AA/subsets/source/SNOMEDCT_US/6011000124106 | Retrieves information for a known subset.
-/content/2015AA/subsets/source/SNOMEDCT_US/6011000124106/members | Retrieves all members of a known subset
-/content/2015AA/subsets/source/SNOMEDCT_US/6011000124106/members/77147000/attributes | Retrieve attribute information for a specified member of a known subset
+/content/current/subsets | Retrieve information about all subsets from latest UMLS version or a specific release. | Subset
+/content/2015AA/subsets/source/SNOMEDCT_US/6011000124106 | Retrieves information for a known subset. | Subset
+/content/2015AA/subsets/source/SNOMEDCT_US/6011000124106/attributes | Retrieves attributes for a known subset. | Attribute
+/content/2015AA/subsets/source/SNOMEDCT_US/6011000124106/members | Retrieves all members of a known subset. | SourceConceptSubsetMember
+/content/2015AA/subsets/source/SNOMEDCT_US/6011000124106/members/77147000/attributes | Retrieve attribute information for a specified member of a known subset. | Attribute
 
 
 ### Query Parameters
@@ -43,11 +45,6 @@ pageSize | N | Whole number that specifies the number of results to include per 
 
 
 ### Sample Output
-
-
-* **Calls under /{version}/subsets and /{version}/subsets/source/{source}/{subset identifier} will return a classType of 'Subset'.** 
-* **Calls under /{version}/subsets/source/{source}/{subset identifier}/members will return a classType of 'SourceConceptSubsetMember'.** 
-* **Calls under /{version}/subsets/source/{source}/{subset identifier}/members/{subset member identifier}/attributes will return a classType of 'Attribute'.**
 
 Sample output for /content/2015AA/subsets?ticket=ST...
 

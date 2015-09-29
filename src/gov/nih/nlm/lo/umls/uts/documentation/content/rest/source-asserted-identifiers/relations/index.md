@@ -2,7 +2,7 @@ title=Retrieving Source-Asserted Relations
 date=2015-09-30
 updated=2015-09-30
 type=page
-status=draft
+status=published
 category=Retrieving Source-Asserted Data
 navorder=4
 ~~~~~~
@@ -41,7 +41,7 @@ pageSize | N | Whole number that specifies the number of results to include per 
 ### Sample Output
 
 
-**Calls under /relations will return a classType of 'AtomClusterAtomClusterRelation'.**
+**Calls under /relations will return a JSON object of classType 'AtomClusterAtomClusterRelation'.**
 
 Sample output for /content/2015AA/source/SNOMEDCT_US/9468002/relations?ticket=ST...
 
