@@ -14,8 +14,9 @@ URIs with /subsets support the following use cases:
 
 * Retrieve all subsets for a known UMLS Release. 
 * Retrieve information (name, description, member count, etc.) for a known subset.
+* Retrieve all attributes of a known subset.
 * Retrieve all members of a known subset.
-* Retrieve attributes for a member of a known subset.
+* Retrieve all attributes for a member of a known subset.
 
 
 Note that 'current' in the URI can always be used to search against the latest UMLS publication.
@@ -26,13 +27,13 @@ You may use any valid UMLS release back to 2008AA in your URI if you would like 
 
 **The base URI is https://uts-ws.nlm.nih.gov/rest**
 
-Sample URI|Description|Returned classType
+Sample URI|Description|Returned JSON Object classType
 --- | ---
-/content/current/subsets | Retrieve information about all subsets from latest UMLS version or a specific release. | Subset
-/content/2015AA/subsets/source/SNOMEDCT_US/6011000124106 | Retrieves information for a known subset. | Subset
-/content/2015AA/subsets/source/SNOMEDCT_US/6011000124106/attributes | Retrieves attributes for a known subset. | Attribute
-/content/2015AA/subsets/source/SNOMEDCT_US/6011000124106/members | Retrieves all members of a known subset. | SourceConceptSubsetMember
-/content/2015AA/subsets/source/SNOMEDCT_US/6011000124106/members/77147000/attributes | Retrieve attribute information for a specified member of a known subset. | Attribute
+/content/current/subsets | Retrieves information about all subsets from the current release | Subset
+/content/2015AA/subsets/source/SNOMEDCT_US/6011000124106 | Retrieves information for a SNOMED CT subset | Subset
+/content/2015AA/subsets/source/SNOMEDCT_US/6011000124106/attributes | Retrieves attributes for a SNOMED CT subset | Attribute
+/content/2015AA/subsets/source/SNOMEDCT_US/6011000124106/members | Retrieves members of a SNOMED CT subset | SourceConceptSubsetMember
+/content/2015AA/subsets/source/SNOMEDCT_US/6011000124106/members/77147000/attributes | Retrieves attribute information for a specified member of a SNOMED CT subset | Attribute
 
 
 ### Query Parameters
@@ -65,7 +66,7 @@ Sample output for /content/2015AA/subsets?ticket=ST...
             "atomMemberCount": 0,
             "sourceConceptMemberCount": 4,
             "relationMemberCount": 0,
-            "uri": "https://uts-ws-qa.nlm.nih.gov/rest/content/2015AA/subsets/source/SCTSPA/900000000000534007"
+            "uri": "https://uts-ws.nlm.nih.gov/rest/content/2015AA/subsets/source/SCTSPA/900000000000534007"
         },
 ...
         {
@@ -79,7 +80,7 @@ Sample output for /content/2015AA/subsets?ticket=ST...
             "atomMemberCount": 0,
             "sourceConceptMemberCount": 26175,
             "relationMemberCount": 0,
-            "uri": "https://uts-ws-qa.nlm.nih.gov/rest/content/2015AA/subsets/source/SNOMEDCT_US/446608001"
+            "uri": "https://uts-ws.nlm.nih.gov/rest/content/2015AA/subsets/source/SNOMEDCT_US/446608001"
         },
 ...
         {
@@ -93,7 +94,7 @@ Sample output for /content/2015AA/subsets?ticket=ST...
             "atomMemberCount": 1213661,
             "sourceConceptMemberCount": 0,
             "relationMemberCount": 0,
-            "uri": "https://uts-ws-qa.nlm.nih.gov/rest/content/2015AA/subsets/source/SNOMEDCT_US/900000000000509007"
+            "uri": "https://uts-ws.nlm.nih.gov/rest/content/2015AA/subsets/source/SNOMEDCT_US/900000000000509007"
         },
 ...
     ]

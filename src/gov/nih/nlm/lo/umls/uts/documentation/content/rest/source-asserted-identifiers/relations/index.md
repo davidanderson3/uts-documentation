@@ -12,7 +12,7 @@ navorder=4
 
 URIs with /relations support the following use cases:
 
-*  Retrieve the sources-asserted relationships for a known source-asserted identifier.
+*  Retrieve the source-asserted relationships for a known source-asserted identifier.
 
 Note that 'current' in the URI can always be used to search against the latest UMLS publication.
 You may use any valid UMLS release back to 2008AA in your URI if you would like to search against a particular version of the UMLS.
@@ -22,9 +22,9 @@ You may use any valid UMLS release back to 2008AA in your URI if you would like 
 
 **The base URI is https://uts-ws.nlm.nih.gov/rest**
 
-Sample URI|Description
+Sample URI|Description|Returned JSON Object classType
 --- | ---
-/content/current/source/SNOMEDCT_US/9468002/relations| Retrieves relationships of the SNOMED concept
+/content/current/source/SNOMEDCT_US/9468002/relations| Retrieves relationships of the SNOMED concept | AtomClusterAtomClusterRelation
 
 
 ### Query Parameters
@@ -39,9 +39,6 @@ pageSize | N | Whole number that specifies the number of results to include per 
 
 
 ### Sample Output
-
-
-**Calls under /relations will return a JSON object of classType 'AtomClusterAtomClusterRelation'.**
 
 Sample output for /content/2015AA/source/SNOMEDCT_US/9468002/relations?ticket=ST...
 

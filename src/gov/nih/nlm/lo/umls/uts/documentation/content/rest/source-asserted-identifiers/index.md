@@ -24,16 +24,16 @@ You may use any valid UMLS release back to 2008AA in your URI if you would like 
 
 **The base URI is https://uts-ws.nlm.nih.gov/rest**
 
-Sample URI|Description
+Sample URI|Description|Returned JSON Object classType
 --- | ---
-/content/current/source/SNOMEDCT_US/9468002 | Retrieves Source Concept
-/content/current/source/MSH/D015242 | Retrieves Source Descriptor
-/content/current/source/LNC/54112-8 | Retrieves Code
-[/content/current/source/SNOMEDCT_US/9468002/atoms](../atoms/index.html)| Retrieve atoms in a source-asserted identifier
-[/content/current/source/SNOMEDCT_US/9468002/parents](../parents-and-children/index.html) | Retrieve immediate parents of a source-asserted identifier
-[/content/current/source/SNOMEDCT_US/9468002/children](../parents-and-children/index.html) | Retrieve immediate children of source-asserted identifier
-[/content/current/source/SNOMEDCT_US/9468002/ancestors](../ancestors-and-descendants/index.html) | Retrieve all ancestors of a source-asserted identifier
-[/content/current/source/SNOMEDCT_US/9468002/descendants](../ancestors-and-descendants/index.html) | Retrieve all descendants of source-asserted identifier
+/content/current/source/SNOMEDCT_US/9468002 | Retrieves Source Concept | SourceAtomCluster
+/content/current/source/MSH/D015242 | Retrieves Source Descriptor | SourceAtomCluster
+/content/current/source/LNC/54112-8 | Retrieves Code | SourceAtomCluster
+[/content/current/source/SNOMEDCT_US/9468002/atoms](../atoms/index.html)| Retrieve atoms in a source-asserted identifier | SourceAtomCluster
+[/content/current/source/SNOMEDCT_US/9468002/parents](../parents-and-children/index.html) | Retrieve immediate parents of a source-asserted identifier | SourceAtomCluster
+[/content/current/source/SNOMEDCT_US/9468002/children](../parents-and-children/index.html) | Retrieve immediate children of source-asserted identifier | SourceAtomCluster
+[/content/current/source/SNOMEDCT_US/9468002/ancestors](../ancestors-and-descendants/index.html) | Retrieve all ancestors of a source-asserted identifier | SourceAtomCluster
+[/content/current/source/SNOMEDCT_US/9468002/descendants](../ancestors-and-descendants/index.html) | Retrieve all descendants of source-asserted identifier | SourceAtomCluster
 
 
 ### Query Parameters
@@ -46,9 +46,6 @@ pageSize | N | Whole number that specifies the number of results to include per 
 
 
 ### Sample Output
-
-
-**Calls using /source/{source}/{id} will return a JSON object with a classType of 'SourceAtomCluster'.**
 
 Sample output for /content/current/source/SNOMEDCT_US/9468002?ticket=ST...
 
