@@ -1,6 +1,6 @@
 title=Retrieving UMLS Concept Information
 date=2015-06-12
-updated=2015-08-28
+updated=2015-09-30
 type=page
 status=published
 category=Retrieving UMLS Concepts
@@ -25,12 +25,12 @@ You may use any valid UMLS release back to 2008AA in your URI if you would like 
 
 **The base URI is https://uts-ws.nlm.nih.gov/rest**
 
-Sample URI|Description
+Sample URI|Description|Returned JSON Object classType
 --- | ---
-[/content/current/CUI/C0009044](#sample-output)| Retrieves CUI
-[/content/current/CUI/C0009044/atoms](../atoms/index.html) | Retrieve atoms in a CUI
-[/content/current/CUI/C0009044/definitions](../definitions/index.html) | Retrieve CUI definitions
-[/content/current/CUI/C0009044/relations](../relations/index.html) | Retrieve CUI relations
+[/content/current/CUI/C0009044](#sample-output)| Retrieves CUI | Concept
+[/content/current/CUI/C0009044/atoms](../atoms/index.html) | Retrieve atoms in a CUI | Atom
+[/content/current/CUI/C0009044/definitions](../definitions/index.html) | Retrieve CUI definitions | Definition
+[/content/current/CUI/C0009044/relations](../relations/index.html) | Retrieve CUI relations | ConceptRelation
 
 ### Query Parameters
 
@@ -43,14 +43,15 @@ pageSize | N | Whole number that specifies the number of results to include per 
 
 ### Sample Output
 
-**Calls under /CUI will return a JSON object of classType 'Concept'.**
-
 **The default for calls under /CUI/{CUI} is to return UMLS CUIs.**
 
 Sample output for /content/current/CUI/C0009044?ticket=ST...
 
 ~~~~json
 {
+    "pageSize": 25,
+    "pageNumber": 1,
+    "pageCount": 1,
     "result": {
         "classType": "Concept",
         "ui": "C0009044",
@@ -69,9 +70,6 @@ Sample output for /content/current/CUI/C0009044?ticket=ST...
         "relations": "https://uts-ws.nlm.nih.gov/rest/content/2015AA/CUI/C0009044/relations",
         "relationCount": 5,
         "name": "Closed fracture carpal bone"
-    },
-    "pageNumber": 1,
-    "pageSize": 25,
-    "pageCount": 1
+    }
 }
 ~~~~

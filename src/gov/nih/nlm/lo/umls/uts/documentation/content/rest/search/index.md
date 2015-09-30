@@ -22,12 +22,12 @@ You may use any valid UMLS release back to 2008AA in your URI if you would like 
 
 **The base URI is https://uts-ws.nlm.nih.gov/rest**
 
-Sample URI|Description
+Sample URI|Description|Returned JSON Object classType
 --- | ---
-/search/current?string=fracture of carpal bone | Retrieves CUIs for a search term
-/search/current?string=fracture of carpal bone&searchType=exact | Uses 'exact' searching
-/search/current?string=fracture of carpal bone&sabs=SNOMEDCT_US&returnIdType=codes | Returns SNOMEDCT concepts associated with a search term.
-/search/current?string=82065001&inputType=code&searchType=exact&sabs=SNOMEDCT_US | Returns UMLS CUIs associated with a SNOMEDCT_US concept.
+/search/current?string=fracture of carpal bone | Retrieves CUIs for a search term | searchResults
+/search/current?string=fracture of carpal bone&searchType=exact | Uses 'exact' searching | searchResults
+/search/current?string=fracture of carpal bone&sabs=SNOMEDCT_US&returnIdType=codes | Returns SNOMEDCT concepts associated with a search term  | searchResults
+/search/current?string=82065001&inputType=code&searchType=exact&sabs=SNOMEDCT_US | Returns UMLS CUIs associated with a SNOMEDCT_US concept | searchResults
 
 ### Query Parameters
 
@@ -46,9 +46,7 @@ pageSize | N | Whole number that specifies the number of results to include per 
 
 ### Sample Output
 
-**Calls under /search will return a JSON object of classType 'searchResults'.**
-The default search parameters will return CUIs and their names.  If you ask for codes, sourceConcept, or sourceDescriptor as your returnIdType,
-you will get back source-asserted identifiers instead of CUIs.
+The default search parameters will return CUIs and their names.  If you ask for codes, sourceConcept, or sourceDescriptor as your returnIdType, you will get back source-asserted identifiers instead of CUIs.
 
 Note: Paging is not available for /search call results. When users reach the final result in the search output, the next result will have a name of 'NO RESULTS', which designates the end of the output.
 

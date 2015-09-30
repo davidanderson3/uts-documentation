@@ -1,6 +1,6 @@
 title=Retrieving UMLS Concept Relations
 date=2015-07-28
-updated=2015-08-28
+updated=2015-09-30
 type=page
 status=published
 category=Retrieving UMLS Concepts
@@ -24,9 +24,9 @@ You may use any valid UMLS release back to 2008AA in your URI if you would like 
 
 **The base URI is https://uts-ws.nlm.nih.gov/rest**
 
-Sample URI|Description
+Sample URI|Description|Returned JSON Object classType
 --- | ---
-/content/current/CUI/C0009044/relations | Retrieves NLM-asserted relationships of the CUI
+/content/current/CUI/C0009044/relations | Retrieves NLM-asserted relationships of the CUI | ConceptRelation
 
 
 
@@ -42,13 +42,13 @@ pageSize | N | Whole number that specifies the number of results to include per 
 
 ### Sample Output
 
-
-**Calls using /CUI/{CUI}/relations will return a JSON object with a classType of 'ConceptRelation'.**
-
 Sample output for /content/current/CUI/C0009044/relations?ticket=ST...
 
 ~~~~json
 {
+    "pageSize": 25,
+    "pageNumber": 1,
+    "pageCount": 1,
     "result": [
         {
             "classType": "ConceptRelation",
@@ -125,9 +125,6 @@ Sample output for /content/current/CUI/C0009044/relations?ticket=ST...
             "relatedAtom": "",
             "relatedConcept": "https://uts-ws.nlm.nih.gov/rest/content/2015AA/CUI/C0007285"
         }
-    ],
-    "pageNumber": 1,
-    "pageSize": 25,
-    "pageCount": 1
+    ]
 }
 ~~~~

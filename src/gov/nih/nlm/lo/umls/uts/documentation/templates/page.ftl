@@ -3,7 +3,7 @@
 	<#include "uts-documentation-menu.ftl">
 	<div class = "row">
 	<div class = "container-fluid">
-        <p class = "red notice">NOTE: The UMLS REST API is currently in alpha mode and is not production ready.</p>
+        <p class = "red notice">NOTE: The UMLS REST API is currently in beta mode and is not production ready.</p>
 	<p><b>API Version: ${config.restapi_version}</b></p>
 	<h1><#escape x as x?xml>${content.title}</#escape></h1>
 	${content.body}

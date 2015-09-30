@@ -1,6 +1,6 @@
 title=Retrieving UMLS Atoms
 date=2015-06-12
-updated=2015-09-18
+updated=2015-09-30
 type=page
 status=published
 category=Retrieving UMLS Concepts
@@ -27,13 +27,13 @@ You may use any valid UMLS release back to 2008AA in your URI if you would like 
 
 **The base URI is https://uts-ws.nlm.nih.gov/rest**
 
-Type of call|Sample URI|Description
+Type of call|Sample URI|Description|Returned JSON Object classType
 --- | --- | ---
-GET|/content/current/CUI/C0155502/atoms|Retrieves all atoms for C0155502
-GET|/content/current/CUI/C0155502/atoms?language=ENG|Retrieves all English language atoms for C0155502
-GET|/content/current/CUI/C0155502/atoms?sabs=SNOMEDCT_US,ICD9CM&ttys=PT | Retrieve SNOMEDCT_US and ICD9CM preferred terms in C0155502
-GET|/content/current/source/SNOMEDCT_US/111541001/atoms | Retrieve atoms belonging to SNOMED CT concept 111541001
-GET|/content/2015AA/AUI/A8345234 | Retrieve information about AUI A8345234.
+GET|/content/current/CUI/C0155502/atoms|Retrieves all atoms for C0155502 | Atom
+GET|/content/current/CUI/C0155502/atoms?language=ENG|Retrieves all English language atoms for C0155502| Atom
+GET|/content/current/CUI/C0155502/atoms?sabs=SNOMEDCT_US,ICD9CM&ttys=PT | Retrieve SNOMEDCT_US and ICD9CM preferred terms in C0155502| Atom
+GET|/content/current/source/SNOMEDCT_US/111541001/atoms | Retrieve atoms belonging to SNOMED CT concept 111541001| Atom
+GET|/content/2015AA/AUI/A8345234 | Retrieve information about AUI A8345234| Atom
 
 
 ### Query Parameters
@@ -52,45 +52,63 @@ pageSize | N | Whole number that specifies the number of results to include per 
 
 ### Sample Output
 
-**Calls under /atoms will return JSON objects of classType='Atom'.**
-
 Sample output for /content/current/CUI/C0155502/atoms?ttys=PT&sabs=SNOMEDCT_US%2CICD9CM&ticket=ST...
 
 ~~~~json
 {
+    "pageSize": 25,
+    "pageNumber": 1,
+    "pageCount": 1,
     "result": [
         {
             "classType": "Atom",
-            "ui": "A8345234",
-            "suppressible": false,
-            "obsolete": false,
-            "rootSource": "ICD9CM",
-            "termType": "PT",
-            "memberships": {
-                "code": "https://uts-ws.nlm.nih.gov/rest/content/2015AA/source/ICD9CM/386.11",
-                "concept": "https://uts-ws.nlm.nih.gov/rest/content/2015AA/CUI/C0155502",
-                "sourceDescriptor": "https://uts-ws.nlm.nih.gov/rest/content/2015AA/source/ICD9CM/386.11"
-            },
-            "attributes": "NONE",
+            "ui": "A2994854",
+            "suppressible": "false",
+            "obsolete": "false",
+            "rootSource": "SNOMEDCT_US",
+            "termType": "SY",
+            "code": "https://uts-ws.nlm.nih.gov/rest/content/2015AA/source/SNOMEDCT_US/111541001",
+            "concept": "https://uts-ws.nlm.nih.gov/rest/content/2015AA/CUI/C0155502",
+            "sourceConcept": "https://uts-ws.nlm.nih.gov/rest/content/2015AA/source/SNOMEDCT_US/111541001",
+            "sourceDescriptor": "NONE",
+            "attributes": "https://uts-ws.nlm.nih.gov/rest/content/2015AA/AUI/A2994854/attributes",
             "parents": "NONE",
             "children": "NONE",
             "relations": "NONE",
             "definitions": "NONE",
-            "name": "Benign paroxysmal positional vertigo",
+            "name": "BPPV - Benign paroxysmal positional vertigo",
+            "language": "ENG"
+        },
+        {
+            "classType": "Atom",
+            "ui": "A2955676",
+            "suppressible": "false",
+            "obsolete": "false",
+            "rootSource": "SNOMEDCT_US",
+            "termType": "SY",
+            "code": "https://uts-ws.nlm.nih.gov/rest/content/2015AA/source/SNOMEDCT_US/111541001",
+            "concept": "https://uts-ws.nlm.nih.gov/rest/content/2015AA/CUI/C0155502",
+            "sourceConcept": "https://uts-ws.nlm.nih.gov/rest/content/2015AA/source/SNOMEDCT_US/111541001",
+            "sourceDescriptor": "NONE",
+            "attributes": "https://uts-ws.nlm.nih.gov/rest/content/2015AA/AUI/A2955676/attributes",
+            "parents": "NONE",
+            "children": "NONE",
+            "relations": "NONE",
+            "definitions": "NONE",
+            "name": "Benign paroxysmal positional nystagmus",
             "language": "ENG"
         },
         {
             "classType": "Atom",
             "ui": "A2892933",
-            "suppressible": false,
-            "obsolete": false,
+            "suppressible": "false",
+            "obsolete": "false",
             "rootSource": "SNOMEDCT_US",
             "termType": "PT",
-            "memberships": {
-                "code": "https://uts-ws.nlm.nih.gov/rest/content/2015AA/source/SNOMEDCT_US/111541001",
-                "concept": "https://uts-ws.nlm.nih.gov/rest/content/2015AA/CUI/C0155502",
-                "sourceConcept": "https://uts-ws.nlm.nih.gov/rest/content/2015AA/source/SNOMEDCT_US/111541001"
-            },
+            "code": "https://uts-ws.nlm.nih.gov/rest/content/2015AA/source/SNOMEDCT_US/111541001",
+            "concept": "https://uts-ws.nlm.nih.gov/rest/content/2015AA/CUI/C0155502",
+            "sourceConcept": "https://uts-ws.nlm.nih.gov/rest/content/2015AA/source/SNOMEDCT_US/111541001",
+            "sourceDescriptor": "NONE",
             "attributes": "https://uts-ws.nlm.nih.gov/rest/content/2015AA/AUI/A2892933/attributes",
             "parents": "NONE",
             "children": "NONE",
@@ -101,16 +119,34 @@ Sample output for /content/current/CUI/C0155502/atoms?ttys=PT&sabs=SNOMEDCT_US%2
         },
         {
             "classType": "Atom",
+            "ui": "A3808177",
+            "suppressible": "false",
+            "obsolete": "false",
+            "rootSource": "SNOMEDCT_US",
+            "termType": "FN",
+            "code": "https://uts-ws.nlm.nih.gov/rest/content/2015AA/source/SNOMEDCT_US/111541001",
+            "concept": "https://uts-ws.nlm.nih.gov/rest/content/2015AA/CUI/C0155502",
+            "sourceConcept": "https://uts-ws.nlm.nih.gov/rest/content/2015AA/source/SNOMEDCT_US/111541001",
+            "sourceDescriptor": "NONE",
+            "attributes": "https://uts-ws.nlm.nih.gov/rest/content/2015AA/AUI/A3808177/attributes",
+            "parents": "NONE",
+            "children": "NONE",
+            "relations": "NONE",
+            "definitions": "NONE",
+            "name": "Benign paroxysmal positional vertigo (disorder)",
+            "language": "ENG"
+        },
+        {
+            "classType": "Atom",
             "ui": "A3101021",
-            "suppressible": false,
-            "obsolete": false,
+            "suppressible": "false",
+            "obsolete": "false",
             "rootSource": "SNOMEDCT_US",
             "termType": "PT",
-            "memberships": {
-                "code": "https://uts-ws.nlm.nih.gov/rest/content/2015AA/source/SNOMEDCT_US/232285008",
-                "concept": "https://uts-ws.nlm.nih.gov/rest/content/2015AA/CUI/C0155502",
-                "sourceConcept": "https://uts-ws.nlm.nih.gov/rest/content/2015AA/source/SNOMEDCT_US/232285008"
-            },
+            "code": "https://uts-ws.nlm.nih.gov/rest/content/2015AA/source/SNOMEDCT_US/232285008",
+            "concept": "https://uts-ws.nlm.nih.gov/rest/content/2015AA/CUI/C0155502",
+            "sourceConcept": "https://uts-ws.nlm.nih.gov/rest/content/2015AA/source/SNOMEDCT_US/232285008",
+            "sourceDescriptor": "NONE",
             "attributes": "https://uts-ws.nlm.nih.gov/rest/content/2015AA/AUI/A3101021/attributes",
             "parents": "NONE",
             "children": "NONE",
@@ -118,11 +154,27 @@ Sample output for /content/current/CUI/C0155502/atoms?ttys=PT&sabs=SNOMEDCT_US%2
             "definitions": "NONE",
             "name": "Benign recurrent vertigo",
             "language": "ENG"
+        },
+        {
+            "classType": "Atom",
+            "ui": "A3808204",
+            "suppressible": "false",
+            "obsolete": "false",
+            "rootSource": "SNOMEDCT_US",
+            "termType": "FN",
+            "code": "https://uts-ws.nlm.nih.gov/rest/content/2015AA/source/SNOMEDCT_US/232285008",
+            "concept": "https://uts-ws.nlm.nih.gov/rest/content/2015AA/CUI/C0155502",
+            "sourceConcept": "https://uts-ws.nlm.nih.gov/rest/content/2015AA/source/SNOMEDCT_US/232285008",
+            "sourceDescriptor": "NONE",
+            "attributes": "https://uts-ws.nlm.nih.gov/rest/content/2015AA/AUI/A3808204/attributes",
+            "parents": "NONE",
+            "children": "NONE",
+            "relations": "NONE",
+            "definitions": "NONE",
+            "name": "Benign recurrent vertigo (disorder)",
+            "language": "ENG"
         }
-    ],
-    "pageNumber": 1,
-    "pageSize": 25,
-    "pageCount": 1
+    ]
 }
 ~~~~
 

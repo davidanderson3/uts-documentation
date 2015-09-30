@@ -1,6 +1,6 @@
 title=Retrieving UMLS Concept Definitions
 date=2015-07-09
-updated=2015-08-28
+updated=2015-09-30
 type=page
 status=published
 category=Retrieving UMLS Concepts
@@ -22,9 +22,9 @@ You may use any valid UMLS release back to 2008AA in your URI if you would like 
 
 *The base URI is https://uts-ws.nlm.nih.gov/rest*
 
-Sample URI|Description
+Sample URI|Description|Returned JSON Object classType
 --- | ---
-/content/current/CUI/C0155502/definitions | Retrieves definitions of the CUI
+/content/current/CUI/C0155502/definitions | Retrieves definitions of the CUI | Definition
 
 
 ### Query Parameters
@@ -39,29 +39,21 @@ pageSize | N | Whole number that specifies the number of results to include per 
 
 ### Sample Output
 
-**Calls using /CUI/{CUI}/definitions will return a JSON object with a classType of 'Definition'.**
-
 Sample output for /content/current/CUI/C0155502/definitions?ticket=ST...
 
 ~~~~json
 {
-
-    "result": 
-
-[
-
+    "pageSize": 25,
+    "pageNumber": 1,
+    "pageCount": 1,
+    "result": [
         {
             "classType": "Definition",
             "sourceOriginated": true,
             "rootSource": "MSH",
             "value": "Idiopathic recurrent VERTIGO associated with POSITIONAL NYSTAGMUS. It is associated with a vestibular loss without other neurological or auditory signs. Unlike in LABYRINTHITIS and VESTIBULAR NEURONITIS inflammation in the ear is not observed."
         }
-    ],
-    "pageNumber": 1,
-    "pageSize": 25,
-    "pageCount": 1
-
+    ]
 }
-
 ~~~~
 
