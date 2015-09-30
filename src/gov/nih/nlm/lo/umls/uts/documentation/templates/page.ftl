@@ -3,8 +3,10 @@
 	<#include "uts-documentation-menu.ftl">
 	<div class = "row">
 	<div class = "container-fluid">
-        <p class = "red notice">NOTE: The UMLS REST API is currently in beta mode and is not production ready.</p>
-	<p><b>API Version: ${config.restapi_version}</b></p>
+        <p class = "red"><b>API Version: ${config.restapi_version}</b></p>
+        <p class = "notice"><span class = "red">The UMLS REST API is currently in beta mode.</span><br/>
+	We welcome your feedback on our <a href = "http://apps.nlm.nih.gov/mainweb/siebel/nlm/index.cfm">customer service form</a>.
+	Please use &quot;UMLS REST API feedback&quot; in your subject line.</p>
 	<h1><#escape x as x?xml>${content.title}</#escape></h1>
 	${content.body}
 

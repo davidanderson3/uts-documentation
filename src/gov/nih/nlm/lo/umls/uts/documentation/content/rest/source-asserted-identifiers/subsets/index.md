@@ -71,16 +71,17 @@ Sample output for /content/2015AA/subsets?ticket=ST...
 ...
         {
             "classType": "Subset",
-            "ui": "C3645703",
-            "sourceUi": "446608001",
+            "ui": "C3882623",
+            "sourceUi": "6011000124106",
             "rootSource": "SNOMEDCT_US",
-            "name": "ICD-O simple map reference set",
-            "description": "ICD-O simple map reference set",
+            "name": "ICD-10-CM complex map reference set",
+            "description": "ICD-10-CM complex map reference set",
             "attributeCount": 1,
             "atomMemberCount": 0,
-            "sourceConceptMemberCount": 26175,
+            "sourceConceptMemberCount": 54262,
             "relationMemberCount": 0,
-            "uri": "https://uts-ws.nlm.nih.gov/rest/content/2015AA/subsets/source/SNOMEDCT_US/446608001"
+            "uri": "https://uts-ws.nlm.nih.gov/rest/content/2015AA/subsets/source/SNOMEDCT_US/6011000124106",
+            "subsetAttributes": "https://uts-ws.nlm.nih.gov/rest/content/2015AA/subsets/source/SNOMEDCT_US/6011000124106/attributes"
         },
 ...
         {

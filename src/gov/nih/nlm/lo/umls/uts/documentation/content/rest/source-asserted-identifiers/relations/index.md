@@ -24,7 +24,7 @@ You may use any valid UMLS release back to 2008AA in your URI if you would like 
 
 Sample URI|Description|Returned JSON Object classType
 --- | ---
-/content/current/source/SNOMEDCT_US/9468002/relations| Retrieves relationships of the SNOMED concept | AtomClusterAtomClusterRelation
+/content/current/source/LNC/44255-8/relations| Retrieves relationships of LOINC code 44255-8 | AtomClusterAtomClusterRelation
 
 
 ### Query Parameters
@@ -40,60 +40,74 @@ pageSize | N | Whole number that specifies the number of results to include per 
 
 ### Sample Output
 
-Sample output for /content/2015AA/source/SNOMEDCT_US/9468002/relations?ticket=ST...
+Sample output for /content/2015AA/source/LNC/44255-8/relations?includeAdditionalRelationLabels=has_answer&ticket=ST...
 
 ~~~~json
 {
     "pageSize": 25,
     "pageNumber": 1,
-    "pageCount": 2,
+    "pageCount": 1,
     "result": [
         {
             "classType": "AtomClusterAtomClusterRelation",
-            "ui": "R88901452",
+            "ui": "R150379228",
             "suppressible": false,
             "sourceUi": "NONE",
             "obsolete": false,
             "sourceOriginated": true,
-            "rootSource": "MEDCIN",
-            "relationLabel": "SY",
-            "additionalRelationLabel": "same_as",
+            "rootSource": "LNC",
+            "relationLabel": "RO",
+            "additionalRelationLabel": "has_answer",
             "groupId": "NONE",
             "attributeCount": 0,
             "relatedAtom": "NONE",
-            "relatedConcept": "https://uts-ws.nlm.nih.gov/rest/content/2015AA/source/MEDCIN/34696"
+            "relatedConcept": "https://uts-ws.nlm.nih.gov/rest/content/2015AA/source/LNC/LA6571-9"
         },
         {
             "classType": "AtomClusterAtomClusterRelation",
-            "ui": "R88701069",
+            "ui": "R150401508",
             "suppressible": false,
             "sourceUi": "NONE",
             "obsolete": false,
             "sourceOriginated": true,
-            "rootSource": "MEDCIN",
-            "relationLabel": "RB",
-            "additionalRelationLabel": "inverse_isa",
+            "rootSource": "LNC",
+            "relationLabel": "RO",
+            "additionalRelationLabel": "has_answer",
             "groupId": "NONE",
             "attributeCount": 0,
             "relatedAtom": "NONE",
-            "relatedConcept": "https://uts-ws.nlm.nih.gov/rest/content/2015AA/source/MEDCIN/91573"
+            "relatedConcept": "https://uts-ws.nlm.nih.gov/rest/content/2015AA/source/LNC/LA6569-3"
         },
         {
             "classType": "AtomClusterAtomClusterRelation",
-            "ui": "R88980836",
+            "ui": "R150349583",
             "suppressible": false,
             "sourceUi": "NONE",
             "obsolete": false,
             "sourceOriginated": true,
-            "rootSource": "MEDCIN",
-            "relationLabel": "RB",
-            "additionalRelationLabel": "inverse_isa",
+            "rootSource": "LNC",
+            "relationLabel": "RO",
+            "additionalRelationLabel": "has_answer",
             "groupId": "NONE",
             "attributeCount": 0,
             "relatedAtom": "NONE",
-            "relatedConcept": "https://uts-ws.nlm.nih.gov/rest/content/2015AA/source/MEDCIN/91574"
+            "relatedConcept": "https://uts-ws.nlm.nih.gov/rest/content/2015AA/source/LNC/LA6570-1"
         },
-...
+        {
+            "classType": "AtomClusterAtomClusterRelation",
+            "ui": "R150334726",
+            "suppressible": false,
+            "sourceUi": "NONE",
+            "obsolete": false,
+            "sourceOriginated": true,
+            "rootSource": "LNC",
+            "relationLabel": "RO",
+            "additionalRelationLabel": "has_answer",
+            "groupId": "NONE",
+            "attributeCount": 0,
+            "relatedAtom": "NONE",
+            "relatedConcept": "https://uts-ws.nlm.nih.gov/rest/content/2015AA/source/LNC/LA6568-5"
+        }
     ]
 }
 ~~~~
