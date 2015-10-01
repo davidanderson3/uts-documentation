@@ -7,7 +7,7 @@ navorder=3
 ~~~~~~
 
 
-[URIs](#uris) | [Query Parameters](#query-parameters) | [Sample Output](#sample-output)
+[URIs](#uris) | [Query Parameters](#query-parameters) | [Sample Output](#sample-output) | [Paging through results](#paging-through-results)
 
 URIs with /search support the following use cases:
 
@@ -17,6 +17,7 @@ URIs with /search support the following use cases:
 
 Note that 'current' in the URI can always be used to search against the latest UMLS publication.
 You may use any valid UMLS release back to 2008AA in your URI if you would like to search against a particular version of the UMLS.
+
 
 ### URIs
 
@@ -146,3 +147,31 @@ Sample output for /search/current?string="fracture of carpal bone"&returnIdType=
 
 }
 ~~~~
+
+
+### Paging through results
+
+Many times a search will return more than one page of results.  Json data returned by the /search endpoint will tell you what page number you are on,
+but the current implementation does not tell you how many total pages of results there are as a result of your search.  So how do you know when you've reached the end of
+your search results?   On the /search endpoint, the end of your search results will always:
+
+*   Exist on their on page (not live on the same page with the rest of your search results)
+*   Contain the following structure:
+
+~~~~.json
+{
+    "pageSize": 25, 
+    "pageNumber": 2, //your final page number may be different.  
+    "result": {
+        "classType": "searchResults", 
+        "results": [
+            {
+                "ui": "NONE", 
+                "name": "NO RESULTS"
+            }
+        ]
+    }
+}
+~~~~
+
+This structure will also be displayed if your original search returns null.

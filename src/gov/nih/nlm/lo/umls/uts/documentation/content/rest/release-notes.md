@@ -18,7 +18,9 @@ Released: September 30, 2015
 * **Retrieving obsolete/suppressible terms and codes**
   Obsolete and suppressible terms and codes are no longer be retrieved by default. Users can take advantage of obsolete/suppressible parameters for some calls to include this information in the output.
 * **Searching the UMLS - paging**
-  The pageCount parameter has been removed from the /search endpoint. Paging is not available for /search calls.
+  The pageCount parameter has been removed from the /search endpoint.  See our notes about [paging through results](/rest/search/index.html#paging-through-results) on the /search endpoint for more details.
+* **Change in output for semanticTypes**
+  For convenience, semantic type names (in addition to the semantic type identifier) are now included in Concept classes when retrieving UMLS CUIs on the /rest/content/CUI/{CUI} endpoint, such as ```"T037: Injury or Poisoning"```
   
 ### Planned Updates
 
