@@ -155,7 +155,7 @@ Many times a search will return more than one page of results.  Json data return
 but the current implementation does not tell you how many total pages of results there are as a result of your search.  So how do you know when you've reached the end of
 your search results?   On the /search endpoint, the end of your search results will always:
 
-*   Exist on their on page (not live on the same page with the rest of your search results)
+*   Exist on their own unique page (not live on the same page with the rest of your search results)
 *   Contain the following structure:
 
 ~~~~.json
