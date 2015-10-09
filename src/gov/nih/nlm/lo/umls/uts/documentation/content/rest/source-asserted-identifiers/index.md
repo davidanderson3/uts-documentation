@@ -1,6 +1,6 @@
 title=Retrieving Source-Asserted Information
 date=2015-07-01
-updated=2015-08-28
+updated=2015-10-09
 type=page
 status=published
 category=Retrieving Source-Asserted Data
@@ -51,6 +51,9 @@ Sample output for /content/current/source/SNOMEDCT_US/9468002?ticket=ST...
 
 ~~~~json
 {
+    "pageSize": 25,
+    "pageNumber": 1,
+    "pageCount": 1,
     "result": {
         "classType": "SourceAtomCluster",
         "ui": "9468002",
@@ -66,13 +69,9 @@ Sample output for /content/current/source/SNOMEDCT_US/9468002?ticket=ST...
         "ancestors": "https://uts-ws.nlm.nih.gov/rest/content/2015AA/SNOMEDCT_US/9468002/ancestors",
         "parents": "https://uts-ws.nlm.nih.gov/rest/content/2015AA/SNOMEDCT_US/9468002/parents",
         "children": "https://uts-ws.nlm.nih.gov/rest/content/2015AA/SNOMEDCT_US/9468002/children",
-        "relations": "NONE",
+        "relations": "https://uts-ws.nlm.nih.gov/rest/content/2015AA/SNOMEDCT_US/9468002/relations",
         "definitions": "NONE",
-        "memberships": "NONE",
         "name": "Closed fracture carpal bone"
-    },
-    "pageNumber": 1,
-    "pageSize": 25,
-    "pageCount": 1
+    }
 }
 ~~~~

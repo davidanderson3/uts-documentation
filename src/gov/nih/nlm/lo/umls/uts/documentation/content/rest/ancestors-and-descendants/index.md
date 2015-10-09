@@ -1,6 +1,6 @@
 title=Retrieving Source-Asserted Ancestors and Descendants
 date=2015-08-28
-updated=2015-09-30
+updated=2015-10-09
 type=page
 status=published
 category=Retrieving Source-Asserted Data
@@ -44,6 +44,9 @@ Sample output for /content/current/source/SNOMEDCT_US/9468002/ancestors?ticket=S
 
 ~~~~json
 {
+    "pageSize": 25,
+    "pageNumber": 1,
+    "pageCount": 2,
     "result": [
         {
             "classType": "SourceAtomCluster",
@@ -60,9 +63,8 @@ Sample output for /content/current/source/SNOMEDCT_US/9468002/ancestors?ticket=S
             "ancestors": "https://uts-ws.nlm.nih.gov/rest/content/2015AA/SNOMEDCT_US/105606008/ancestors",
             "parents": "https://uts-ws.nlm.nih.gov/rest/content/2015AA/SNOMEDCT_US/105606008/parents",
             "children": "https://uts-ws.nlm.nih.gov/rest/content/2015AA/SNOMEDCT_US/105606008/children",
-            "relations": "NONE",
+            "relations": "https://uts-ws.nlm.nih.gov/rest/content/2015AA/SNOMEDCT_US/105606008/relations",
             "definitions": "NONE",
-            "memberships": "NONE",
             "name": "Injury of musculoskeletal system"
         },
         {
@@ -80,9 +82,8 @@ Sample output for /content/current/source/SNOMEDCT_US/9468002/ancestors?ticket=S
             "ancestors": "https://uts-ws.nlm.nih.gov/rest/content/2015AA/SNOMEDCT_US/105969002/ancestors",
             "parents": "https://uts-ws.nlm.nih.gov/rest/content/2015AA/SNOMEDCT_US/105969002/parents",
             "children": "https://uts-ws.nlm.nih.gov/rest/content/2015AA/SNOMEDCT_US/105969002/children",
-            "relations": "NONE",
+            "relations": "https://uts-ws.nlm.nih.gov/rest/content/2015AA/SNOMEDCT_US/105969002/relations",
             "definitions": "NONE",
-            "memberships": "NONE",
             "name": "Disorder of connective tissue"
         },
         {
@@ -100,18 +101,13 @@ Sample output for /content/current/source/SNOMEDCT_US/9468002/ancestors?ticket=S
             "ancestors": "https://uts-ws.nlm.nih.gov/rest/content/2015AA/SNOMEDCT_US/106028002/ancestors",
             "parents": "https://uts-ws.nlm.nih.gov/rest/content/2015AA/SNOMEDCT_US/106028002/parents",
             "children": "https://uts-ws.nlm.nih.gov/rest/content/2015AA/SNOMEDCT_US/106028002/children",
-            "relations": "NONE",
+            "relations": "https://uts-ws.nlm.nih.gov/rest/content/2015AA/SNOMEDCT_US/106028002/relations",
             "definitions": "NONE",
-            "memberships": "NONE",
             "name": "Musculoskeletal finding"
         },
         
 ...
-
-    ],
-    "pageNumber": 1,
-    "pageSize": 25,
-    "pageCount": 2
+    ]
 }
 ~~~~
 
