@@ -8,12 +8,13 @@ navorder=3
 
 
 
-Method | Use Case | Object or Data type Returned | Interface
--- | --
-[getConcept](#getconcept) | Retrieve information for a known UMLS CUI, such as preferred name, number of atoms, number of definitions. | ConceptDTO | UtsWsContentController
-[getConceptAtoms](#getconceptatoms) | Retrieve atoms (terms that are considered synonymous) for a known UMLS CUI | ArrayList<AtomDTO> | UtsWsContentController
-[getNewConcepts](#getnewconcepts) | Retrieves new Concepts for a known UMLS publication. | ArrayList<ConceptDTO> | UtsWsContentController
-[getNewConceptsCount](#getnewconceptscount) | Retrieves the number of new concepts for a known UMLS publication | int | UtsWsContentController
+Interface | Method | Use Case | Object or Data type Returned 
+-- | -- | -- | --
+**UtsWsContentController**|||
+ |[getConcept](#getconcept)|Retrieve information for a known UMLS CUI, such as preferred name, number of atoms, number of definitions.|ConceptDTO
+ |[getConceptAtoms](#getconceptatoms)|Retrieve atoms (terms that are considered synonymous) for a known UMLS CUI|ArrayList<AtomDTO>
+ |[getNewConcepts](#getnewconcepts)|Retrieves new Concepts for a known UMLS publication.|ArrayList<ConceptDTO>
+ |[getNewConceptsCount](#getnewconceptscount)|Retrieves the number of new concepts for a known UMLS publication|int
 
 **Each of these methods requires an instance of the UtsWsContentController interface, such as**:
 

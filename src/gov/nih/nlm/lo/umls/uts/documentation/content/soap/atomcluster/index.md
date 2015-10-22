@@ -8,12 +8,12 @@ navorder=6
 ~~~~~~
 
 
-
-Method | Use Case | Object or Data type Returned | Interface
--- | --
-[getCode](#getcode) | Retrieve information for a known source-asserted code | SourceAtomClusterDTO | UtsWsContentController
-[getSourceConcept](#getsourceconcept) | Retrieve information for a known source-asserted concept | SourceAtomClusterDTO | UtsWsContentController
-[getSourceDescriptor](#getsourcedescriptor) | Retrieve information for a known source-asserted descriptor | SourceAtomClusterDTO | UtsWsContentController
+Interface| Method|Use Case|Object or Data type Returned 
+-- | -- | -- | --
+**UtsWsContentController**|||
+ |[getCode](#getcode)|Retrieve information for a known source-asserted code|SourceAtomClusterDTO 
+ |[getSourceConcept](#getsourceconcept)|Retrieve information for a known source-asserted concept |SourceAtomClusterDTO 
+ |[getSourceDescriptor](#getsourcedescriptor)|Retrieve information for a known source-asserted descriptor|SourceAtomClusterDTO 
 
 **Each of these methods requires an instance of the UtsWsContentController interface, such as**:
 
