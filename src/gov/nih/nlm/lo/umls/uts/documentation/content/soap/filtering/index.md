@@ -1,4 +1,4 @@
-title=Filtering
+title=Paging and Filtering
 date=2015-08-19
 updated=2015-08-19
 type=page
@@ -7,120 +7,89 @@ category=Paging, sorting, Filtering
 navorder=3
 ~~~~~~
 
-**Method: **setIncludeObsolete( boolean value )
+The UMLS SOAP API's PSF (paging, sorting, and filtering object) allows you to customize your search results based on certain use cases.
 
-**Use Case:**  This method allows you to set a true/false flag on the PSF object to include or exclude atoms flagged obsolete (by either the source or NLM). Obsolete atoms are included by default.
-
-
-#### Sample Input (Java):
-
-~~~~
-psfMetaContent.setIncludeObsolete(false);
-~~~~
->
-
-**Method: **setIncludeSuppressible( boolean value )
-
-**Use Case:**  This method allows you to set a true/false flag on the PSF object to include or exclude atoms flagged suppressible by NLM editors. Suppressible content in the Metathesaurus can be either flagged "E", suppressed by NLM editors, or "Y", suppressed upon source inversion (pre-editing). Suppressible atoms are included by default.
-
-
-#### Sample Input (Java):
-
-~~~~
-psfMetaContent.setIncludeSuppressible(false);
-~~~~
->
-
-**Method: **getIncludedRelationLabels().add()( String value )
-
-**Use Case:** This method lets you specify which Relation Labels you would like to include in your result set. This is useful for filtering RelationDTOs.
+Method | Use With | Use Case | Permitted Values | Default Value
+-- | -- | -- | --
+[setIncludeObsolete](#setincludeobsolete) | UiLabel, UiLabelRootSource, AtomDTO | Include or exclude search results based on source-asserted obsolscence. | True, False | True
+[setIncludeSuppressible](#setincludesuppressible)| UiLabel, UiLabelRootSource, AtomDTO | Include or exclude search results based on source-asserted obsolscence. | True, False | True
+[setIncludedLanguage](#setincludedlanguage) | AtomDTO | Limit results to only include terms that meet the specified language abbreviation provided | Any valid language abbreviation in the UMLS | All languages are included by default
+[getIncludedTermTypes](#getincludedtermtypes) | AtomDTO | Limit results to include only atoms that match the specified term types | Any vaid term type in the UMLS | All term types are include by default
+[getIncludedSources](#getincludedsources) | AtomDTO | Limit results to only include specific source vocabularies | Any valid source abbreviation (rsab) in the UMLS | All source vocabularies are included by default
+[getIncludedRelationLabels](#getincludedrelationlabels) | AtomClusterRelationDTO | Limit results to include only relationships that meet the provided criteria | Any relation label in the UMLS | All relation labels are included by default
+[getIncludedAdditionalRelationLabels](#getincludedrelationlabels)| AtomClusterRelationDTO | Limit results to include only additional relation labels that meet the provided criteria | Any additional relation label | All additional relation labels are included by default
+[getIncludedAttributeNames](#getincludedattributenames)| AttributeDTO | Limit results to include only attributes that match the specified names | Any valid attribute name in the UMLS | All attribute names are included by default
+[setPageNum](#setpagenum) | any | Specify page number to retrieve | Any positive integer | 1
+[setPageLn](#setpageln) | any | Specify number of objects returned per page | Any positive integer between 25 - 1000 | 25
 
 
-#### Sample Input (Java):
+#### setIncludeSuppressible
 
-~~~~
-//Running getAllRelationLabels on a UtsWsMetadataController object will return all available relation labels for a given release.
-//see the Metathesaurus Metadata tab above for more details
-
- psfMetaContent.getIncludedRelationLabels().add("PAR");
- psfMetaContent.getIncludedRelationLabels().add("SY");
-~~~~
->
-
-**Method: **getIncludedAdditionalRelationLabels().add()( String value )
-
-**Use Case:** This method lets you specify which Additional Relation Labels (relas) you would like to include in your result set. This is useful for filtering RelationDTOs.
-
-
-#### Sample Input (Java):
-
-~~~~
-//Running getAllAdditionalRelationLabels on a UtsWsMetadataController object will return all available additional relation labels for a given release.
-//see the Metathesaurus Metadata tab above for more details
-
-psfMetaContent.getIncludedAdditionalRelationLabels().add("has\_finding\_site");
-psfMetaContent.getIncludedAdditionalRelationLabels().add("has\_procedure\_site");
+~~~~java
+Psf.setIncludeObsolete(false);
 ~~~~
 
-**Method: **getIncludedAttributeNames().add()( String value )
+#### setIncludeObsolete
 
-**Use Case:** This method lets you specify which Attribute Names you would like to include in your result set. This is useful for filtering AttributeDTOs.
-
-#### Sample Input (Java):
-
+~~~~java
+Psf.setIncludeSuppressible(false);
 ~~~~
-//Running getAllAttributeNames on a UtsWsMetadataController object will return all available attribute names for a given release.
-//see the Metathesaurus Metadata tab above for more details
 
- psfMetaContent.getIncludedAttributeNames().add("CONCEPTSTATUS");
- psfMetaContent.getIncludedAttributeNames().add("ISPRIMITIVE");
+#### getIncludedTermTypes
+
+~~~~java
+Psf.getIncludedTermTypes().add("PT");
+Psf.getIncludedTermTypes().add("FN");
 ~~~~
->
 
-**Method: **setIncludedLanguage( String value )
+#### getIncludedRelationLabels
 
-
-**Use Case:** This method lets you specify which language you would like to include in your result set. This is useful for filtering TermDTOs and AtomDTOs.
-
-
-#### Sample Input (Java):
-
+~~~~java
+Psf.getIncludedRelationLabels().add("PAR");
+Psf.getIncludedRelationLabels().add("SY");
 ~~~~
-//the returned ArrayList &lt;AtomDTO&gt; will return only Czech language terms
-//Running getAllLanguages on a UtsWsMetadataController object will return all available languages for a given release.
-//see the Metathesaurus Metadata tab above for more details
 
- psfMetaContent.setIncludedLanguage("CZE");
+#### getIncludedAdditionalRelationLabels
+
+~~~~java
+Psf.getIncludedAdditionalRelationLabels().add("has_finding_site");
+Psf.getIncludedAdditionalRelationLabels().add("has_procedure_site");
 ~~~~
->
 
-**Method: **getIncludedSources().add()( String value )
-
-**Use Case:** This method lets you specify which sources you would like to include in your result set. This is useful for filtering SourceDataDTOs.
+#### getIncludedAttributeNames
 
 
-#### Sample Input (Java):
-
+~~~~java
+Psf.getIncludedAttributeNames().add("CONCEPTSTATUS");
+Psf.getIncludedAttributeNames().add("ISPRIMITIVE");
 ~~~~
-//Running getAllSources on a UtsWsMetadataController object will return all available sources for a given release.
-//see the Metathesaurus Metadata tab above for more details
 
- psfMetaContent.getIncludedSources().add("SNOMEDCT");
- psfMetaContent.getIncludedSources().add("ICD10CM");
+#### setIncludedLanguage
+
+~~~~java
+ Psf.setIncludedLanguage("CZE");
 ~~~~
->
-
-**Method: **getIncludedTermTypes().add()( String value )
-
-**Use Case:** This method lets you specify which term types you would like to include in your result set. This is useful for filtering AtomDTOs.
 
 
-#### Sample Input (Java):
+#### getIncludedSources
 
+~~~~java
+Psf.getIncludedSources().add("SNOMEDCT_US");
+Psf.getIncludedSources().add("ICD10CM");
 ~~~~
-//Running getAllTermTypes on a UtsWsMetadataController object will return all available term types for a given release.
-//see the Metathesaurus Metadata tab above for more details
 
- psfMetaContent.getIncludedTermTypes().add("PT");
- psfMetaContent.getIncludedTermTypes().add("FN");
+#### setPageNum
+
+~~~~java
+Psf.setPageNum(2);
 ~~~~
+
+#### setPageLn
+
+~~~~java
+Psf.setPageLn(50);
+~~~~
+
+
+
+

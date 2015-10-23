@@ -13,7 +13,7 @@ Interface | Method | Use Case | Object or Data type Returned
  |[getSourceConceptAtoms](#getsourceconceptatoms)|Retrieve atoms for a known source-asserted concept. You can then filter atoms according to term type, suppressibility, etc. |ArrayList\<AtomDTO\>
  |[getSourceDescriptorAtoms](#getsourcedescriptoratoms)|Retrieve atoms for a known source-asserted descriptor. You can then filter atoms according to term type, suppressibility, etc. |ArrayList\<AtomDTO\>
  |[getCodeAtoms](#getcodeatoms)|Retrieve atoms for a known source-asserted code. You can then filter atoms according to term type, suppressibility, etc. |ArrayList\<AtomDTO\>
- 
+ |[getAtom](#getatom)|Retrieve information for a known UMLS AUI. | AtomDTO
  
 ### getConceptAtoms
 
@@ -158,4 +158,56 @@ A18199351|OSN|Barbiturates Pnl Ur|false|false
 A21121706|LC|Barbiturates panel - Urine|false|false
 A18825952|MTH_LN|Barbiturates panel:-:Point in time:Urine:-|false|false
 A18160664|LN|Barbiturates panel:-:Pt:Urine:-|false|false
+~~~~
+ No newline at end of file
+ 
+ 
+### getAtom
+
+**Method Signature:** ```getAtom(String ticket,String version,String atomId)```
+
+#### Sample Input (Java):
+
+~~~~java
+AtomDTO myAtom = utsContentService.getAtom(ticket, 2011AB, "A6955581");
+ String atomName = myAtom.getTermString().getName();
+ String source = myAtom.getRootSource();
+ String sourceConceptUi = myAtom.getSourceConcept().getUi();
+ String sourceConceptName = myAtom.getSourceConcept().getDefaultPreferredName();
+ String sourceDescriptorUi = myAtom.getSourceDescriptor().getUi();
+ String sourceDescriptorName = myAtom.getSourceDescriptor().getDefaultPreferredName();
+ String conceptUi = myAtom.getConcept().getUi();
+ String conceptName = myAtom.getConcept().getDefaultPreferredName();
+~~~~
+
+#### Sample Input (C#):
+
+~~~~c#
+content.atomDTO myAtom = utsContentService.getAtom(ticket, "2011AB","A6955581");
+
+ string atomName = myAtom.termString.name;
+ string source = myAtom.rootSource;
+ string sourceConceptUi = myAtom.sourceConcept.ui;
+ string sourceConceptName = myAtom.sourceConcept.defaultPreferredName;
+ string sourceDescriptorUi = myAtom.sourceDescriptor.ui;
+ string sourceDescriptorName = myAtom.sourceDescriptor.defaultPreferredName;
+ string conceptUi = myAtom.concept.ui;
+ string conceptName = myAtom.concept.defaultPreferredName;
+
+~~~~
+
+#### Sample Output:
+
+~~~~text
+   Atom Name: Heart Hypertrophy
+   Source Vocabulary: MSH
+  
+   Concept Id: C1383860
+   Concept Preferred Name: Cardiac Hypertrophy
+  
+   Source Concept Id: M0453089
+   Source Concept Preferred Name: Cardiac Hypertrophy
+  
+   Source Descriptor Id: D006332
+   Source Descriptor Preferred Name: Cardiomegaly
 ~~~~
