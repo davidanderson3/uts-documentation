@@ -21,7 +21,7 @@ Section|Method|Use Case
  |[Finder](../search/index.html) | Search the UMLS
 **UMLS Content**|||
  |[Concept](../concept/index.html)| Retrieve UMLS Concept Information 
- |[Atom](../atom/index.html)| Retrieve UMLS Atoms 
+ |[Atoms](../atoms/index.html)| Retrieve UMLS Atoms 
  |[Definitions](../definitions/index.html)| Retrieve UMLS Definitions 
  |[Term](../term/index.html)| Retrieve UMLS Terms
  |[SUI](../sui/index.html)| Retrieve UMLS Strings  

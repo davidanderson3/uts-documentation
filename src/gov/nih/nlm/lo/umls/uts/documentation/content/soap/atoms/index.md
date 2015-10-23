@@ -1,4 +1,4 @@
-title=Retrieving UMLS atoms from the UTS SOAP API
+title=Retrieving atoms from the UTS SOAP API
 date=2015-10-22
 updated=2015-10-22
 type=page
@@ -10,14 +10,58 @@ Interface | Method | Use Case | Object or Data type Returned
 -- | -- | -- | --
 **UtsWsContentController**|||
  |[getConceptAtoms](#getconceptatoms)|Retrieve atoms for a known UMLS CUI. You can then filter atoms according to term type, source vocabulary, suppressibility, etc. |ArrayList\<AtomDTO\>
- |[getSourceConceptAtoms](#getsourceconceptatoms)|Retrieve atoms for a known source-asserted concept. You can then filter atoms according to term type, source vocabulary, suppressibility, etc. |ArrayList\<AtomDTO\>
- |[getSourceDescriptorAtoms](#getsourcedescriptoratoms)|Retrieve atoms for a known source-asserted descriptor. You can then filter atoms according to term type, source vocabulary, suppressibility, etc. |ArrayList\<AtomDTO\>
- |[getCodeAtoms](#getsourcedescriptoratoms)|Retrieve atoms for a known source-asserted code. You can then filter atoms according to term type, source vocabulary, suppressibility, etc. |ArrayList\<AtomDTO\>
- 
+ |[getSourceConceptAtoms](#getsourceconceptatoms)|Retrieve atoms for a known source-asserted concept. You can then filter atoms according to term type, suppressibility, etc. |ArrayList\<AtomDTO\>
+ |[getSourceDescriptorAtoms](#getsourcedescriptoratoms)|Retrieve atoms for a known source-asserted descriptor. You can then filter atoms according to term type, suppressibility, etc. |ArrayList\<AtomDTO\>
+ |[getCodeAtoms](#getcodeatoms)|Retrieve atoms for a known source-asserted code. You can then filter atoms according to term type, suppressibility, etc. |ArrayList\<AtomDTO\>
  
  
 ### getConceptAtoms
 
+**Method Signature:** ```getConceptAtoms(String ticket, String version, String conceptId, PSF psf)```
+
+
+#### Sample Input (Java):
+
+~~~~java
+
+    //exclude obsolete and suppressible atoms
+    myPsf.setIncludeSuppressible(false);
+    myPsf.setIncludeObsolete(false);
+    
+    //only include SNOMEDCT_US and OMIM source vocabularies
+    myPsf.getIncludedSources().add("SNOMEDCT_US");
+    myPsf.getIncludedSources().add("OMIM");
+		
+    List<AtomDTO> atoms = new ArrayList<AtomDTO>();
+    atoms = utsContentService.getConceptAtoms(ticket, "2015AB", "C0595985", myPsf);
+        
+    for (AtomDTO atom:atoms) {
+			
+    String aui = atom.getUi();
+    String tty = atom.getTermType();
+    String name = atom.getTermString().getName();
+    String sourceId = atom.getCode().getUi();
+    String rsab = atom.getRootSource();
+    
+
+    }
+
+~~~~
+
+
+#### Sample Output
+
+~~~~text
+AUI|TTY|Name|Source-asserted identifier|Source vocabulary
+A2953834|PT|Aglossia-adactyly syndrome|205817005|SNOMEDCT_US
+A3527513|FN|Aglossia-adactyly syndrome (disorder)|205817005|SNOMEDCT_US
+A11979234|ET|HANHART SYNDROME|103300|OMIM
+A17326723|SY|Hanhart syndrome|35031005|SNOMEDCT_US
+A2966719|PT|Hanhart's syndrome|35031005|SNOMEDCT_US
+A3486540|FN|Hanhart's syndrome (disorder)|35031005|SNOMEDCT_US
+A2972867|SY|Micrognathia with peromelia|35031005|SNOMEDCT_US
+
+~~~~
 
 ### getSourceConceptAtoms
 
@@ -54,5 +98,64 @@ A4754444|IS|Closed fracture of wrist, NOS|true
 
 ### getSourceDescriptorAtoms
 
+**Method Signature:** ```getSourceDescriptorAtoms(String ticket, String version, String sourceDescriptorId, String rootSourceAbbreviation, PSF psf)```
+
+
+#### Sample Input (Java):
+
+~~~~
+ gov.nih.nlm.uts.webservice.content.Psf myPsf = new gov.nih.nlm.uts.webservice.content.Psf();
+ List<AtomDTO> myAtoms = new ArrayList<AtomDTO>();
+ myAtoms = utsContentService.getSourceDescriptorAtoms(ticket, "2015AA","I63.422","ICD10CM",myPsf);
+
+ for (AtomDTO atom:myAtoms) {
+
+ String aui = atom.getUi();
+ String tty = atom.getTermType();
+ String name = atom.getTermString().getName();
+ boolean isObsolete = atom.isObsolete();
+ boolean isSuppressible = atom.isSuppressible();
+
+ }
+~~~~
+
+#### Sample Output
+
+~~~~text
+AUI|TTY|Name|Obsolete|Suppressible
+A17813522|PT|Cerebral infarction due to embolism of left anterior cerebral artery|false|false
+A20134276|AB|Cerebral infrc due to embolism of left ant cerebral artery|false|true
+~~~~
+
 
 ### getCodeAtoms
+
+**Method Signature:** ```getCodeAtoms(String ticket, String version, String sourceDescriptorId, String rootSourceAbbreviation, PSF psf)```
+
+#### Sample Input (java)
+
+~~~~
+ gov.nih.nlm.uts.webservice.content.Psf myPsf = new gov.nih.nlm.uts.webservice.content.Psf();
+ List<AtomDTO> myAtoms = new ArrayList<AtomDTO>();
+ myAtoms = utsContentService.getCodeAtoms(ticket, "2015AA","53746-4","LNC",myPsf);
+
+ for (AtomDTO atom:myAtoms) {
+
+ String aui = atom.getUi();
+ String tty = atom.getTermType();
+ String name = atom.getTermString().getName();
+ boolean isObsolete = atom.isObsolete();
+ boolean isSuppressible = atom.isSuppressible();
+
+ }
+~~~~
+
+#### Sample Output
+
+~~~~text
+AUI|TTY|Name|Obsolete|Suppressible
+A18199351|OSN|Barbiturates Pnl Ur|false|false
+A21121706|LC|Barbiturates panel - Urine|false|false
+A18825952|MTH_LN|Barbiturates panel:-:Point in time:Urine:-|false|false
+A18160664|LN|Barbiturates panel:-:Pt:Urine:-|false|false
+~~~~

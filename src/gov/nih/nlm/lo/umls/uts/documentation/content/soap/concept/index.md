@@ -12,8 +12,8 @@ Interface | Method | Use Case | Object or Data type Returned
 -- | -- | -- | --
 **UtsWsContentController**|||
  |[getConcept](#getconcept)|Retrieve information for a known UMLS CUI, such as preferred name, number of atoms, number of definitions.|ConceptDTO
- |[getConceptAtoms](#getconceptatoms)|Retrieve atoms (terms that are considered synonymous) for a known UMLS CUI|ArrayList<AtomDTO>
- |[getNewConcepts](#getnewconcepts)|Retrieves new Concepts for a known UMLS publication.|ArrayList<ConceptDTO>
+ |[getConceptAtoms](/soap/atoms/index.html#getconceptatoms)|Retrieve atoms (terms that are considered synonymous) for a known UMLS CUI|ArrayList\<AtomDTO\>
+ |[getNewConcepts](#getnewconcepts)|Retrieves new Concepts for a known UMLS publication.|ArrayList\<ConceptDTO\>
  |[getNewConceptsCount](#getnewconceptscount)|Retrieves the number of new concepts for a known UMLS publication|int
 
 **Each of these methods requires an instance of the UtsWsContentController interface, such as**:
@@ -54,84 +54,6 @@ int numberofAtoms = concept.getAtomCount();
    Semantic Types: [T109, T121]
    # of Atoms in this Concept: 140
 ~~~~
-
-### getConceptAtoms
-
-**Method Signature:** getConceptAtoms(String ticket,String version,String conceptId,PSF psf)
-
-#### Sample Input (Java):
-
-~~~~java
-
- List<AtomDTO> atoms = new ArrayList<AtomDTO>();
- atoms = utsContentService.getConceptAtoms(ticket, "2011AB","C0004775",myPsf);
- UtsMetathesaurusContent.Psf myPsf = new UtsMetathesaurusContent.Psf();
- myPsf.getIncludedSources().add("SNOMEDCT");
- myPsf.getIncludedTermTypes().add("FSN");
- myPsf.getIncludedTermTypes().add("SY");
- myPsf.getIncludedTermTypes().add("PT");
-
- for (AtomDTO atom:atoms) {
-
-   String aui = atom.getUi();
-   String source = atom.getRootSource();
-   String name = atom.getTermString().getName();
-   String tty = atom.getTermType();
-
- }
-~~~~
-
-#### Sample Input (C#):
-
-~~~~c#
-content.psf myPsf = new content.psf();
- string[] tmpSources = new string[1];
- tmpSources[0] = "SNOMEDCT";
- string[] tmpTermTypes = new string[3];
- tmpTermTypes[0] ="FSN";
- tmpTermTypes[1] ="SY";
- tmpTermTypes[2] ="PT";
- myPsf.includedSources = tmpSources;;
- myPsf.includedTermTypes = tmpTermTypes;
-
- content.atomDTO[] myAtoms = utsContentService.getConceptAtoms(ticket,"2011AB", "C0004775", myPsf);
- for (int i = 0; i < myAtoms.Length; i++){
-
- content.atomDTO myAtomDTO = myAtoms[i];
- string aui = myAtomDTO.ui;
- string source = myAtomDTO.rootSource;
- string name = myAtomDTO.termString.name;
- string termType = myAtomDTO.termType;
- }
- 
-~~~~
-
-
-#### Sample Output:
-
-~~~~text
- //print out the results
-   AUI: A2944080
-     Source Vocabulary SNOMEDCT
-     Term Type:SY
-     Atom Name: Rib cage
-  
-   AUI: A3322451
-     Source Vocabulary SNOMEDCT
-     Term Type:SY
-     Atom Name: Thoracic cage
-  
-   AUI: A3753371
-     Source Vocabulary SNOMEDCT
-     Term Type:PT
-     Atom Name: Thoracic cage structure
-  
-   AUI: A3753370
-     Source Vocabulary SNOMEDCT
-     Term Type:FN
-     Atom Name: Thoracic cage structure (body structure)
-~~~~
-
 
 ### getNewConcepts
 
