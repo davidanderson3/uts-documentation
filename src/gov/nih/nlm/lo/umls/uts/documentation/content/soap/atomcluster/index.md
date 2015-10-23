@@ -13,7 +13,9 @@ Interface| Method|Use Case|Object or Data type Returned
 **UtsWsContentController**|||
  |[getCode](#getcode)|Retrieve information for a known source-asserted code|SourceAtomClusterDTO 
  |[getSourceConcept](#getsourceconcept)|Retrieve information for a known source-asserted concept |SourceAtomClusterDTO 
- |[getSourceDescriptor](#getsourcedescriptor)|Retrieve information for a known source-asserted descriptor|SourceAtomClusterDTO 
+ |[getSourceDescriptor](#getsourcedescriptor)|Retrieve information for a known source-asserted descriptor|SourceAtomClusterDTO
+ |[getDefaultPreferredAtom](/soap/atoms/#getdefaultpreferredatom)|Retrieve the highest-ranking atom for a known source-asserted concept, code, or descriptor | AtomDTO
+
 
 **Each of these methods requires an instance of the UtsWsContentController interface, such as**:
 

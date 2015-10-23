@@ -14,6 +14,7 @@ Interface | Method | Use Case | Object or Data type Returned
  |[getSourceDescriptorAtoms](#getsourcedescriptoratoms)|Retrieve atoms for a known source-asserted descriptor. You can then filter atoms according to term type, suppressibility, etc. |ArrayList\<AtomDTO\>
  |[getCodeAtoms](#getcodeatoms)|Retrieve atoms for a known source-asserted code. You can then filter atoms according to term type, suppressibility, etc. |ArrayList\<AtomDTO\>
  |[getAtom](#getatom)|Retrieve information for a known UMLS AUI. | AtomDTO
+ |[getDefaultPreferredAtom](#getdefaultpreferredatom)|Retrieve the highest-ranking atom for a known source-asserted concept, code, or descriptor | AtomDTO
  
 ### getConceptAtoms
 
@@ -159,7 +160,6 @@ A21121706|LC|Barbiturates panel - Urine|false|false
 A18825952|MTH_LN|Barbiturates panel:-:Point in time:Urine:-|false|false
 A18160664|LN|Barbiturates panel:-:Pt:Urine:-|false|false
 ~~~~
- No newline at end of file
  
  
 ### getAtom
@@ -210,4 +210,36 @@ content.atomDTO myAtom = utsContentService.getAtom(ticket, "2011AB","A6955581");
   
    Source Descriptor Id: D006332
    Source Descriptor Preferred Name: Cardiomegaly
+~~~~
+
+### getDefaultPreferredAtom
+
+**Method Signature**: ```utsContentService.getDefaultPreferredAtom(ticket, String version, String atomClusterId, String rootSourceAbbrevation);```
+
+#### Sample Input (Java)
+
+~~~~java
+
+AtomDTO atom = new AtomDTO();
+atom = utsContentService.getDefaultPreferredAtom(ticketClient.getSingleUseTicket(tgt), "2015AB", "9468002","SNOMEDCT_US");
+String aui = atom.getUi();
+String tty = atom.getTermType();
+String name = atom.getTermString().getName();
+boolean isObsolete = atom.isObsolete();
+boolean isSuppressible = atom.isSuppressible();
+~~~~
+
+#### Sample Output
+
+~~~~text
+AUI:
+  A3357646
+TTY:
+  PT
+Name:
+  Closed fracture of carpal bone
+Obsolete:
+  False
+Suppressible:
+  False
 ~~~~
