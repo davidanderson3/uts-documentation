@@ -13,10 +13,8 @@ navorder=1
 Section|Method|Use Case
 --- | --- | ---
 **Installation**|[Installation](/soap/installation/index.html)|Install the API
-**PSF**|||
- |[Paging](/soap/paging/index.html)| Paging Results
- |[Sorting](/soap/sorting/index.html)| Sort Results
- |[Filtering](/soap/filtering/index.html)| Filter Results
+**PSF (Paging, sorting, and filtering)**|||
+ |[Filtering](/soap/paging-sorting-filtering/index.html)| Filter Results
 **Searching the UMLS**|||
  |[Finder](/soap/search/index.html) | Search the UMLS
 **UMLS Content**|||

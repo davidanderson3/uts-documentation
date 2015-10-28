@@ -30,9 +30,16 @@
 <div class = "row">
   <div class="container-fluid uts-nav">
         <a href="${content.rootpath}rest/home.html"><img class= "img-responsive pull-left" style = "padding-top:.2em; padding-left:1em; margin-right:1em;" alt="UTS Logo" src="<#if (content.rootpath)??>${content.rootpath}<#else></#if>umls-xs.gif"></a>
-        <p class = "orange uts-title">UMLS REST API Technical Documentation</p>
+        <div class = "row pull-right">
+          <div class = "container-fluid">
+            <a href = "https://www.nlm.nih.gov/research/umls/" class = "orange"><b>UMLS Home Page</b></a>&nbsp;<b>|</b>&nbsp;<a href = "https://uts.nlm.nih.gov" class = "orange"><b>Browse the UMLS</b></a>&nbsp;<b>|</b>&nbsp;<a href = "https://uts.nlm.nih.gov/license.html" class = "orange"><b>Get a UMLS License</b></a>
+          </div>
+        </div>
+        <p class = "orange uts-title">UMLS API Technical Documentation</p>
   </div>
 </div>
+<!-- only build the REST Menu if we're in the REST API -->
+<#if (content.uri)??  && content.uri?starts_with("rest/")>
 <div class = "row">
   <div class = "container-fluid navbar navbar-default" role = "navigation">
    <div class="btn-group navbar-btn visible-*" role="group">
@@ -48,8 +55,9 @@
           </#list>
          </ul>
       </div><!--//btn-group-->
-     </#list>
+     </#list>  
    </div>
  </div>
 </div>
+</#if>   
 <br/>

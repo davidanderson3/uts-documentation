@@ -10,7 +10,7 @@ navorder=6
 
 Interface| Method|Use Case|Object or Data type Returned 
 -- | -- | -- | --
-**UtsWsContentController**|||
+**UtsWsContentController**||||
  |[getCode](#getcode)|Retrieve information for a known source-asserted code|SourceAtomClusterDTO 
  |[getSourceConcept](#getsourceconcept)|Retrieve information for a known source-asserted concept |SourceAtomClusterDTO 
  |[getSourceDescriptor](#getsourcedescriptor)|Retrieve information for a known source-asserted descriptor|SourceAtomClusterDTO

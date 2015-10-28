@@ -10,7 +10,7 @@ navorder=3
 
 Interface | Method | Use Case | Object or Data type Returned 
 -- | -- | -- | --
-**UtsWsContentController**|||
+**UtsWsContentController**||||
  |[getConcept](#getconcept)|Retrieve information for a known UMLS CUI, such as preferred name, number of atoms, number of definitions.|ConceptDTO
  |[getConceptAtoms](/soap/atoms/index.html#getconceptatoms)|Retrieve atoms (terms that are considered synonymous) for a known UMLS CUI|ArrayList\<AtomDTO\>
  |[getNewConcepts](#getnewconcepts)|Retrieves new Concepts for a known UMLS publication.|ArrayList\<ConceptDTO\>

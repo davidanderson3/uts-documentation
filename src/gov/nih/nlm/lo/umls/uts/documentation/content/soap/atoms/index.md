@@ -1,4 +1,4 @@
-title=Retrieving atoms from the UTS SOAP API
+title=Retrieving atoms and atom information from the UMLS SOAP API
 date=2015-10-22
 updated=2015-10-22
 type=page
@@ -8,7 +8,7 @@ navorder=3
 
 Interface | Method | Use Case | Object or Data type Returned 
 -- | -- | -- | --
-**UtsWsContentController**|||
+**UtsWsContentController**||||
  |[getConceptAtoms](#getconceptatoms)|Retrieve atoms for a known UMLS CUI. You can then filter atoms according to term type, source vocabulary, suppressibility, etc. |ArrayList\<AtomDTO\>
  |[getSourceConceptAtoms](#getsourceconceptatoms)|Retrieve atoms for a known source-asserted concept. You can then filter atoms according to term type, suppressibility, etc. |ArrayList\<AtomDTO\>
  |[getSourceDescriptorAtoms](#getsourcedescriptoratoms)|Retrieve atoms for a known source-asserted descriptor. You can then filter atoms according to term type, suppressibility, etc. |ArrayList\<AtomDTO\>
