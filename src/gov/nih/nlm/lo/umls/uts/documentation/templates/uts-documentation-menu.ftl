@@ -30,12 +30,10 @@
 <div class = "row">
   <div class="container-fluid uts-nav">
         <a href="${content.rootpath}rest/home.html"><img class= "img-responsive pull-left" style = "padding-top:.2em; padding-left:1em; margin-right:1em;" alt="UTS Logo" src="<#if (content.rootpath)??>${content.rootpath}<#else></#if>umls-xs.gif"></a>
-        <div class = "row pull-right">
-          <div class = "container-fluid" style = "margin-right:1em;">
+          <div class = "container-fluid pull-right">
             <a href = "https://www.nlm.nih.gov/research/umls/" class = "orange"><b>UMLS Home Page</b></a>&nbsp;<b>|</b>&nbsp;<a href = "https://uts.nlm.nih.gov" class = "orange"><b>Browse the UMLS</b></a>&nbsp;<b>|</b>&nbsp;<a href = "https://uts.nlm.nih.gov/license.html" class = "orange"><b>Get a UMLS License</b></a>
           </div>
-        </div>
-        <p class = "orange uts-title">UMLS API Technical Documentation</p>
+        <p class = "orange uts-title">UMLS API Technical Documentation</p> 
   </div>
 </div>
 <!-- only build the REST Menu if we're in the REST API -->
