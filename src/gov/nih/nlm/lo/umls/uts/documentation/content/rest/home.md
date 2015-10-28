@@ -1,4 +1,4 @@
-title=UTS REST API Home Page
+title=UMLS REST API Home Page
 date=2015-06-10
 updated=2015-09-30
 type=page
@@ -33,4 +33,4 @@ GET | [/content/{version}/source/{source}/{id}/relations](source-asserted-identi
 GET | [/content/{version}/source/{source}/{id}/subsets](source-asserted-identifiers/subsets/) | Retrieves information about source-asserted subsets
 
 ### Code Sample Repository
-The [Code Sample Repository on GitHub](https://github.com/HHS/uts-rest-api) features code samples in various languages that show how to use the UTS REST API. The repository currently includes code samples in Java and Perl with more samples in more programming languages to follow.
+The [Code Sample Repository on GitHub](https://github.com/HHS/uts-rest-api) features code samples in various languages that show how to use the UMLS REST API. The repository currently includes code samples in Java, Perl, and Python.
