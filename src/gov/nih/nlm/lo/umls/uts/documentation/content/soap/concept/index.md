@@ -16,10 +16,7 @@ Interface | Method | Use Case | Object or Data type Returned
  |[getNewConcepts](#getnewconcepts)|Retrieves new Concepts for a known UMLS publication.|ArrayList\<ConceptDTO\>
  |[getNewConceptsCount](#getnewconceptscount)|Retrieves the number of new concepts for a known UMLS publication|int
 
-**Each of these methods requires an instance of the UtsWsContentController interface, such as**:
-
-```ConceptDTO concept = utsContentService.getConcept(ticket, "2015AA", "C0018787");```
-
+**Each of these examples below requires an instance of the [UtsWsContentController](/soap/installation/content.html) and [UtsWsSecurityController](/soap/installation/security.html) interfaces**.
 
 ### getConcept
 
