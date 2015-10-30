@@ -1,4 +1,4 @@
-title=UTS Soap API Installation
+title=UMLS SOAP API Installation
 date=2015-08-13
 updated=2015-08-13
 type=page

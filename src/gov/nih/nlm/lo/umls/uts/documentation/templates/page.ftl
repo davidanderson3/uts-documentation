@@ -1,13 +1,14 @@
 <#include "header.ftl">
 	<#include "uts-documentation-menu.ftl">
 	<div class = "row">
-	<div class = "container-fluid">
+	<div class = "container-fluid breadcrumbs-container">
 	<#include "breadcrumbs.ftl">
 	</div>
 	</div>
 	<div class = "row">
 	<div class = "container-fluid">
 	<#if (content.uri)??  && content.uri?starts_with("rest/")>
+	<br/>
 	<p class = "red"><b>API Version: ${config.restapi_version}</b></p>
         <p class = "notice"><span class = "red">The UMLS REST API is currently in beta mode.</span><br/>
 	We welcome your feedback on our <a href = "http://apps.nlm.nih.gov/mainweb/siebel/nlm/index.cfm">customer service form</a>.

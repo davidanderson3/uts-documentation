@@ -27,6 +27,12 @@
    color: #78a22f;
       
 }
+
+.navbar {
+    /*overrides default bootstrap.min.css setting*/
+    margin-bottom: 0px !important;
+}
+
 .navbar  * > a {
    
   color: #000;
@@ -43,6 +49,19 @@
    
   background-color:#f8f8f8;
   border:none;
+}
+
+.breadcrumbs-container {
+   
+background-color:#000000;
+
+}
+
+.breadcrumbs, .breadcrumbs a {
+   
+color:#ffffff;
+font-size:.9em;
+   
 }
 
 h1 {
