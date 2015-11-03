@@ -2,7 +2,7 @@ title=UTS SOAP API Updates
 date=2015-08-18
 updated=2015-08-18
 type=page
-status=unpublished
+status=published
 navorder=8
 ~~~~~~
 

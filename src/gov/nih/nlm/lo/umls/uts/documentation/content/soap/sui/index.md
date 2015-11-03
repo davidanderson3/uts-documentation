@@ -2,12 +2,9 @@ title=Retrieving UMLS SUI Information from UTS SOAP API
 date=2015-08-14
 updated=2015-08-14
 type=page
-status=unpublished
-category=Retrieving UMLS Concepts
+status=published
 navorder=5
 ~~~~~~
-
->
 
 **Method:**getTermStrings(String ticket,String version,String termId,PSF psf)
 

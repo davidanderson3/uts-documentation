@@ -2,7 +2,7 @@ title=The UtsWsContentController interface
 date=2015-08-21
 updated=2015-08-21
 type=page
-status=unpublished
+status=published
 navorder=1
 ~~~~~~
 

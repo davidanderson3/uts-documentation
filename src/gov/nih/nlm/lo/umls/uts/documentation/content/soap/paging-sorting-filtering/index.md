@@ -2,8 +2,7 @@ title=Paging and Filtering
 date=2015-08-19
 updated=2015-08-19
 type=page
-status=unpublished
-category=Paging, sorting, Filtering
+status=published
 navorder=3
 ~~~~~~
 

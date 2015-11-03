@@ -2,8 +2,7 @@ title=UMLS Version Metadata
 date=2015-08-21
 updated=2015-08-21
 type=page
-status=unpublished
-category=Metadata
+status=published
 navorder=4
 ~~~~~~
 

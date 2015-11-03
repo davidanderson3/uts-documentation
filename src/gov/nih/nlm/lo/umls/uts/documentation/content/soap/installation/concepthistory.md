@@ -2,7 +2,7 @@ title=Setting up a Concept History object
 date=2015-08-21
 updated=2015-08-21
 type=page
-status=unpublished
+status=published
 navorder=1
 ~~~~~~
 
@@ -18,9 +18,7 @@ To query UMLS Metathesaurus history, create an instance of a UtsWsHistoryControl
 ~~~~
 //create the reference variables
  private UtsWsHistoryController utsHistoryService;
- private UtsWsSecurityController utsSecurityService;
 
-//instantiate and handshake
  try {
  utsHistoryService = (new UtsWsHistoryControllerImplService()).getUtsWsHistoryControllerImplPort();
 
@@ -30,6 +28,4 @@ To query UMLS Metathesaurus history, create an instance of a UtsWsHistoryControl
  catch (Exception e) {
  out.println("Error!!!" + e.getMessage());
  }
-//note that PSF objects are not passed as parameters to methods associated with UtsWsHistoryController objects.
 ~~~~
->

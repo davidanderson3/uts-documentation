@@ -42,7 +42,7 @@
   <div class = "container-fluid navbar navbar-default" role = "navigation">
    <div class="btn-group navbar-btn visible-*" role="group">
     <#list published_pages?sort_by('navorder') as page>
-    <#if !(page.category)?? && page.uri != "rest/home.html"><#if (content.rootpath)??><a class = "btn btn-md" role = "button" href = "${content.rootpath}${page.uri}">${page.title}</a><#else></#if></#if>
+    <#if !(page.category)?? && (page.uri != "rest/home.html" && page.uri?starts_with("rest/"))><#if (content.rootpath)??><a class = "btn btn-md" role = "button" href = "${content.rootpath}${page.uri}">${page.title}</a><#else></#if></#if>
     </#list>
       <#list categories as cat>
       <div class="btn-group" role="group">

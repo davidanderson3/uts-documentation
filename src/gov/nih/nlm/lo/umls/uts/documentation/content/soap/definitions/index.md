@@ -2,7 +2,7 @@ title=Retrieving Definitions from the UMLS SOAP API
 date=2015-08-14
 updated=2015-08-14
 type=page
-status=unpublished
+status=published
 navorder=3
 ~~~~~~
 

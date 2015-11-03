@@ -2,7 +2,7 @@ title=Setting up a Metadata object
 date=2015-08-21
 updated=2015-08-21
 type=page
-status=unpublished
+status=published
 navorder=1
 ~~~~~~
 
@@ -16,16 +16,11 @@ The UtsWsMetadataController object allows access to UMLS Metadata. This can be v
 
 In order to make calls on Metathesaurus Metadata, you must create reference variables, and instantiate them, for the UtsWsMetadataController and UtsWsSecurityController objects somewhere in your code.
 
-~~~~
-//create the reference variables
- private UtsWsMetadataController utsMetadataService;
- private UtsWsSecurityController utsSecurityService;
+~~~~java
+private UtsWsMetadataController utsMetadataService;
 
-//instantiate and handshake
  try {
  utsMetadataService = (new UtsWsMetadataControllerImplService()).getUtsWsMetadataControllerImplPort();
-
- utsSecurityService = (new UtsWsSecurityControllerImplService()).getUtsWsSecurityControllerImplPort();\
  }
 
  catch (Exception e) {

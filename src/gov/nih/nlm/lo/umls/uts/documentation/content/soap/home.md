@@ -2,11 +2,13 @@ title=UMLS SOAP API Home Page
 date=2015-08-18
 updated=2015-08-26
 type=page
-status=unpublished
+status=published
 navorder=1
 ~~~~~~
 
 ### Use cases and methods
+
+**Note:** Most of the sample code displayed in the SOAP API is in Java. 
 
 Section|Method|Use Case
 --- | --- | ---

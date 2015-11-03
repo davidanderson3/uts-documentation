@@ -2,7 +2,7 @@ title=UMLS SOAP API Installation
 date=2015-08-13
 updated=2015-08-13
 type=page
-status=unpublished
+status=published
 navorder=1
 ~~~~~~
 
@@ -59,4 +59,3 @@ import gov.nih.nlm.uts.webservice.semNet.*;
 [Concept History](../installation/concepthistory.html)
 [Finder](../installation/finder.html)
 [Paging, Sorting, Filtering](../installation/psf.html)
->

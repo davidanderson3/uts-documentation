@@ -2,7 +2,7 @@ title=Retrieving UMLS Concept Information from UTS SOAP API
 date=2015-08-14
 updated=2015-08-14
 type=page
-status=unpublished
+status=published
 navorder=3
 ~~~~~~
 

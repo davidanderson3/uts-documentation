@@ -2,7 +2,7 @@ title=Searching the UMLS with the SOAP API
 date=2015-08-14
 updated=2015-08-14
 type=page
-status=unpublished
+status=published
 navorder=2
 ~~~~~~
 

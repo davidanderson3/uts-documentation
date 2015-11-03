@@ -2,7 +2,7 @@ title=Retrieving atoms and atom information from the UMLS SOAP API
 date=2015-10-22
 updated=2015-10-22
 type=page
-status=unpublished
+status=published
 navorder=3
 ~~~~~~
 

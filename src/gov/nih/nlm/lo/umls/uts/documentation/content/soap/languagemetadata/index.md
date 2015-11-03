@@ -2,8 +2,7 @@ title=Language Metadata
 date=2015-08-24
 updated=2015-08-24
 type=page
-status=unpublished
-category=Metadata
+status=published
 navorder=4
 ~~~~~~
 
