@@ -1,4 +1,4 @@
-<#assign categories = ['Retrieving UMLS Concepts', 'Retrieving Source-Asserted Data']>
+<#assign categories = ['Retrieving UMLS Data', 'Retrieving Source-Asserted Data']>
 <div class = "row header">
   <div class="container-fluid col-md-12 col-sm-12 col-xs-12">
      <div class = "row">
@@ -27,14 +27,17 @@
       </div>
   </div>
 </div>
-<div class = "row">
-  <div class="container-fluid uts-nav">
-        <a href="${content.rootpath}rest/home.html"><img class= "img-responsive pull-left" style = "padding-top:.2em; padding-left:1em; margin-right:1em;" alt="UTS Logo" src="<#if (content.rootpath)??>${content.rootpath}<#else></#if>umls-xs.gif"></a>
-          <div class = "container-fluid pull-right">
-            <a href = "https://www.nlm.nih.gov/research/umls/" class = "orange"><b>UMLS Home Page</b></a>&nbsp;<b>|</b>&nbsp;<a href = "https://uts.nlm.nih.gov" class = "orange"><b>Browse the UMLS</b></a>&nbsp;<b>|</b>&nbsp;<a href = "https://uts.nlm.nih.gov/license.html" class = "orange"><b>Get a UMLS License</b></a>
-          </div>
-        <p class = "orange uts-title">UMLS API Technical Documentation</p> 
-  </div>
+<div class = "row uts-nav">
+   <div class="col-md-6 col-sm-12 col-xs-12">
+      <a href="${content.rootpath}rest/home.html"><img class= "img-responsive pull-left" style = "padding-top:.2em; padding-left:1em; margin-right:1em;" alt="UTS Logo" src="<#if (content.rootpath)??>${content.rootpath}<#else></#if>umls-xs.gif"></a>
+      <p class = "orange uts-title">UMLS API Technical Documentation</p>
+   </div>
+   <div class="col-md-6 col-sm-12 col-xs-12 umls-menu">
+     <a href = "https://www.nlm.nih.gov/research/umls/quickstart.html">UMLS Quick Start Guide</a>&nbsp;<b>|</b>&nbsp;
+     <a href = "https://www.nlm.nih.gov/research/umls/faq_main.html">FAQs</a>&nbsp;<b>|</b>&nbsp;
+     <a href = "https://uts.nlm.nih.gov/license.html">Get a UMLS License</a>&nbsp;<b>|</b>&nbsp;
+     <a href = "https://www.nlm.nih.gov/research/umls/support.html">Customer Support</a>
+   </div>
 </div>
 <!-- only build the REST Menu if we're in the REST API -->
 <#if (content.uri)??  && content.uri?starts_with("rest/")>

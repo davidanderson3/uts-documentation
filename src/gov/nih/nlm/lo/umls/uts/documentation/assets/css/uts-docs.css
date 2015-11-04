@@ -43,7 +43,18 @@
    text-decoration: underline;
 }
 
+.umls-menu {
+   
+text-align:right;
+margin-top:1em;
+   
+}
 
+.umls-menu > a{
+   
+   color:#698E29;
+   font-weight: bold;
+}
 
 .dropdown-toggle {
    
