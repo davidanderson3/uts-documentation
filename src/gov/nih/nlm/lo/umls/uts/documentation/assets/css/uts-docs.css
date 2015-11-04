@@ -3,6 +3,11 @@
    
 }
 
+.nlm-logo {
+   
+   max-width: 500px;
+}
+
 .header * > a:hover{
    
    color:white;

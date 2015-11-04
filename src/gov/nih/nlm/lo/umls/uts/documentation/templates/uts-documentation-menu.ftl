@@ -12,7 +12,7 @@
          <input type="hidden" name="v:project" value="nlm-main-website" />
          </form>
        </div>
-       <div class = "col-md-6 col-sm-6 col-xs-6">
+       <div class = "col-md-6 col-sm-12 col-xs-12">
            <a class = "pull-right white" style = "margin-right:1em;" href="http://apps.nlm.nih.gov/mainweb/siebel/nlm/index.cfm"><b>Contact NLM</b></a>
        </div>
     </div>
