@@ -16,6 +16,8 @@ Interface | Method | Use Case | Object or Data type Returned
  |[getAtom](#getatom)|Retrieve information for a known UMLS AUI. | AtomDTO
  |[getDefaultPreferredAtom](#getdefaultpreferredatom)|Retrieve the highest-ranking atom for a known source-asserted concept, code, or descriptor | AtomDTO
  
+**Each of these examples below requires an instance of the [UtsWsContentController](/soap/installation/content.html) and [UtsWsSecurityController](/soap/installation/authentication.html) interfaces**.
+ 
 ### getConceptAtoms
 
 **Method Signature:** ```getConceptAtoms(String ticket, String version, String conceptId, PSF psf)```

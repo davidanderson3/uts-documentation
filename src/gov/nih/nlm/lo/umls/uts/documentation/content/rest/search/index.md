@@ -50,8 +50,6 @@ pageSize | N | Whole number that specifies the number of results to include per 
 
 The default search parameters will return CUIs and their names.  If you ask for codes, sourceConcept, or sourceDescriptor as your returnIdType, you will get back source-asserted identifiers instead of CUIs.
 
-Note: Paging is not available for /search call results. When users reach the final result in the search output, the next result will have a name of 'NO RESULTS', which designates the end of the output.
-
 Sample output for /search/current?string="fracture of carpal bone"&ticket=ST...
 
 ~~~~json

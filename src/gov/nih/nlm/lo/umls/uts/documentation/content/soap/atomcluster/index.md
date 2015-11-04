@@ -15,19 +15,8 @@ Interface| Method|Use Case|Object or Data type Returned
  |[getSourceDescriptor](#getsourcedescriptor)|Retrieve information for a known source-asserted descriptor|SourceAtomClusterDTO
  |[getDefaultPreferredAtom](/soap/atoms/#getdefaultpreferredatom)|Retrieve the highest-ranking atom for a known source-asserted concept, code, or descriptor | AtomDTO
 
+**Each of these examples below requires an instance of the [UtsWsContentController](/soap/installation/content.html) and [UtsWsSecurityController](/soap/installation/authentication.html) interfaces**.
 
-**Each of these methods requires an instance of the UtsWsContentController interface, such as**:
-
-```SourceAtomClusterDTO mySourceConcept = utsContentService.getSourceConcept(ticketClient.getSingleUseTicket(tgt), currentUmlsRelease, identifier, rsab);```
-
-**Method:**getDefaultPreferredAtom(String ticket,String version,String atomClusterId,String rootSourceAbbreviation)
-
-**Returns:**AtomDTO(see javadocs)(javadocs/gov/nih/nlm/umls/dto/content/AtomDTO.html)
-
-**Use Case:** You have a source concept id (SCUI), source descriptor id (SDUI), or CODE from a known source vocabulary. You want the name and term type of the default preferred atom of the cluster, as well as the default preferred name of the CUI to which it belongs for comparison.
-
-**Note:** AtomDTOs have other embedded objects such as SourceAtomClusterDTO, ConceptDTO, and TermStringDTO. These other objects and their methods are accessible via getters. You can access, for example, the CUI that the atom belongs to by using getConcept().getUi();
-See Javadocs for more details.
 
 #### Sample Input (Java):
 

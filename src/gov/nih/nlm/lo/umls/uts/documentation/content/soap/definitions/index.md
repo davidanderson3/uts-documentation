@@ -16,6 +16,7 @@ Interface | Method | Use Case | Object or Data type Returned | Guidance
  |[getSourceDescriptorDefinitions](#getsourcedescriptordefinitions) | Retrieve definitions for a known source-asserted descriptor | List\<DefinitionDTO\> | Use ```getDefinitionCount``` on your SourceAtomClusterDTO to see if there are definitions for the atom cluster before making this call.
  |[getAtomDefinitions](#getatomdefinitions) | Retrieve definitions for a known UMLS AUI | List\<DefinitionDTO\> | Use ```getDefinitionCount``` on your AtomDTO to see if there are definitions for the AUI before making this call.
 
+**Each of these examples below requires an instance of the [UtsWsContentController](/soap/installation/content.html) and [UtsWsSecurityController](/soap/installation/authentication.html) interfaces**.
 
 ### getConceptDefinitions
 
