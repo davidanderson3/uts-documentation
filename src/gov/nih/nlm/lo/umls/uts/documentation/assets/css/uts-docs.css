@@ -7,17 +7,14 @@ body {
    
    background-color:white;
    box-shadow: -2px 0px 10px 1px #777;
-   padding:0 !important;
-
+   margin-left:2em;
+   margin-right:2em;
 }
+
+
 
 .header {
    background-color:#134181;
-}
-
-.nlm-logo {
-   
-   /*max-width: 500px;*/
 }
 
 .header * > a:hover{
