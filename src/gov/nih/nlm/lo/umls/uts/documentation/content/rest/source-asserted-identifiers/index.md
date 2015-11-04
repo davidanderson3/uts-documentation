@@ -29,7 +29,7 @@ Sample URI|Description|Returned JSON Object classType
 /content/current/source/SNOMEDCT_US/9468002 | Retrieves Source Concept | SourceAtomCluster
 /content/current/source/MSH/D015242 | Retrieves Source Descriptor | SourceAtomCluster
 /content/current/source/LNC/54112-8 | Retrieves Code | SourceAtomCluster
-[/content/current/source/SNOMEDCT_US/9468002/atoms](../atoms/index.html)| Retrieve atoms in a source-asserted identifier | SourceAtomCluster
+[/content/current/source/SNOMEDCT_US/9468002/atoms](../atoms/index.html)| Retrieve atoms in a source-asserted identifier | Atom
 [/content/current/source/SNOMEDCT_US/9468002/parents](../parents-and-children/index.html) | Retrieve immediate parents of a source-asserted identifier | SourceAtomCluster
 [/content/current/source/SNOMEDCT_US/9468002/children](../parents-and-children/index.html) | Retrieve immediate children of source-asserted identifier | SourceAtomCluster
 [/content/current/source/SNOMEDCT_US/9468002/ancestors](../ancestors-and-descendants/index.html) | Retrieve all ancestors of a source-asserted identifier | SourceAtomCluster

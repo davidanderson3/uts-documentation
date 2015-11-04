@@ -37,6 +37,6 @@ The following new items are planned for upcoming versions of the API.
 * **Retrieving content views**
   Retrieve all content views, retrieve members of a specified content views.
 * **Python code samples in repository**
-  Python code samples for authenticating and making other API calls will be added to the code sample repository. See the [code sample repository on GitHub](https://github.com/HHS/uts-rest-api) for details.
+  Python code samples for authenticating and making other API calls are in the code sample repository. See the [code sample repository on GitHub](https://github.com/HHS/uts-rest-api) for details.
 
 
