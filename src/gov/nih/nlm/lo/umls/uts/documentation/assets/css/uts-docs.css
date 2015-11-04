@@ -11,6 +11,10 @@ body {
 
 }
 
+td {
+   
+   word-break:break-all;
+}
 
 .header {
    background-color:#134181;
