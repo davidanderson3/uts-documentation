@@ -5,7 +5,7 @@
         <div class = "col-md-6 col-sm-8 col-xs-12">
             <a href = "https://www.nlm.nih.gov"><img class= "nlm-logo img-responsive" alt="National Library of Medicine" style="margin-right:1em;" src="<#if (content.rootpath)??>${content.rootpath}<#else></#if>nlm-logo.png"></a>
         </div>
-        <div class = "col-md-6 col-sm-8 col-xs-12 clearfix" id = "search-form">
+        <div class = "col-md-6 col-sm-8 col-xs-12" id = "search-form">
          <form method="get" action="//vsearch.nlm.nih.gov/vivisimo/cgi-bin/query-meta" target="_self" name="searchForm" id="searchForm">
          <label for="search" class="hidden">Search</label>
          <input type="text" name="query" value="Search" class="search-input" id="search"/>
@@ -28,14 +28,13 @@
   </div>
 </div>
 <div class = "row uts-nav">
-   <div class="col-md-7 col-sm-8 col-xs-12">
+   <div class="col-md-8 col-sm-8 col-xs-12">
       <a href="${content.rootpath}rest/home.html"><img class= "img-responsive pull-left" style = "padding-top:.2em; padding-left:1em; margin-right:1em;" alt="UTS Logo" src="<#if (content.rootpath)??>${content.rootpath}<#else></#if>umls-xs.gif"></a>
       <p class = "orange uts-title">UMLS API Technical Documentation</p>
    </div>
-   <div class="col-md-5 col-sm-8 col-xs-12 umls-menu">
+   <div class="col-md-4 col-sm-8 col-xs-12 umls-menu">
      <a href = "https://www.nlm.nih.gov/research/umls/quickstart.html">UMLS Quick Start Guide</a>&nbsp;<b>|</b>&nbsp;
      <a href = "https://www.nlm.nih.gov/research/umls/faq_main.html">FAQs</a>&nbsp;<b>|</b>&nbsp;
-     <a href = "https://uts.nlm.nih.gov/license.html">Get a UMLS License</a>&nbsp;<b>|</b>&nbsp;
      <a href = "https://www.nlm.nih.gov/research/umls/support.html">Customer Support</a>
    </div>
 </div>
