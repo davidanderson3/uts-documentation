@@ -61,6 +61,7 @@
     </script>
   </head>
   <body onload="prettyPrint();hljs.initHighlighting();">
+    <div class = "container" id = "wrapper">
      <div class="container-fluid">
       <!--header to hold banner + top navigation area -->
       <!-- responsive design header using bootstrap css framework -->

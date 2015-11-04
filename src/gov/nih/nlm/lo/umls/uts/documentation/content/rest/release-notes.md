@@ -26,6 +26,11 @@ Released: September 30, 2015
 * **sourceUi**
   The ```sourceUi``` data element returned in [SourceAtomCluster objects](/rest/source-asserted-identifiers/#sample-output) is deprecated.  Please use ```ui``` instead.
 
+#### Known issues:
+
+Item | Issue | Resolution
+-- | -- | --
+1|The /subset endpoint does not return results when version is defined as 'current' in the URI|Users can specify a specific UMLS publication, such as '2015AA' a workaround.  The issue will be resolved in the next deployment the week of November 9, 2015
 
 ### Planned Updates
 

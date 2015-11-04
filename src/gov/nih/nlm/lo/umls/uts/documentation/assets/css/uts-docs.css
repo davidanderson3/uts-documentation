@@ -1,6 +1,18 @@
+body {
+   
+   background:url(/images/husk.png) repeat;
+}
+
+#wrapper {
+   
+   background-color:white;
+   box-shadow: -2px 0px 10px 1px #777;
+   padding:0 !important;
+
+}
+
 .header {
    background-color:#134181;
-   
 }
 
 .nlm-logo {
