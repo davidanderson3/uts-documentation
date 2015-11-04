@@ -53,6 +53,8 @@
           $(this).attr("value","Search");
           
         });
+        
+        $("table").addClass("table-responsive");
        
       });
       
@@ -61,7 +63,7 @@
     </script>
   </head>
   <body onload="prettyPrint();hljs.initHighlighting();">
-    <div id = "wrapper">
+    <div id = "wrapper" class = "container">
      <div class="container-fluid">
       <!--header to hold banner + top navigation area -->
       <!-- responsive design header using bootstrap css framework -->
