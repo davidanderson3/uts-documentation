@@ -1,11 +1,11 @@
 <#assign categories = ['Retrieving UMLS Data', 'Retrieving Source-Asserted Data']>
 <div class = "row header">
-  <div class="container-fluid col-md-12 col-sm-12 col-xs-12">
+  <div class="container-fluid">
      <div class = "row">
-        <div class = "col-md-6 col-sm-6 col-xs-6">
+        <div class = "col-md-6 col-sm-12 col-xs-12">
             <a href = "https://www.nlm.nih.gov"><img class= "nlm-logo img-responsive" alt="National Library of Medicine" style="margin-right:1em;" src="<#if (content.rootpath)??>${content.rootpath}<#else></#if>nlm-logo.png"></a>
         </div>
-        <div class = "col-md-6 col-sm-6 col-xs-6" id = "search-form">
+        <div class = "col-md-6 col-sm-12 col-xs-12" id = "search-form">
          <form method="get" action="//vsearch.nlm.nih.gov/vivisimo/cgi-bin/query-meta" target="_self" name="searchForm" id="searchForm">
          <label for="search" class="hidden">Search</label>
          <input type="text" name="query" value="Search" class="search-input" id="search"/>
