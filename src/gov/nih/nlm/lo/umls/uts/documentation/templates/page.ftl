@@ -6,7 +6,7 @@
 	</div>
 	</div>
 	<div class = "row">
-	<div class = "container-fluid main-content-container">
+	<div class = "container-fluid">
 	<#if (content.uri)??  && content.uri?starts_with("rest/")>
 	<br/>
 	<p class = "red"><b>API Version: ${config.restapi_version}</b></p>
@@ -20,4 +20,3 @@
 	</div><!--end row-->
 	</div><!--end container--> 
 <#include "footer.ftl">
-</div>
