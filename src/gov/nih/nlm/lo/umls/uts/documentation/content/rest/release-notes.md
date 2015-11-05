@@ -30,7 +30,8 @@ Released: September 30, 2015
 
 Item | Issue | Resolution
 -- | -- | --
-1|The /subset endpoint does not return results when version is defined as 'current' in the URI|Users can specify a specific UMLS publication, such as '2015AA' a workaround.  The issue will be resolved in the next deployment the week of November 9, 2015
+1|The /subset endpoint does not return results when version is defined as 'current' in the URI|Users can specify a specific UMLS publication, such as '2015AA' a workaround.  The issue will be resolved in the next deployment on November 9, 2015
+2|Calls to retrieve [Source-asserted identifiers](https://documentation.uts.nlm.nih.gov/rest/source-asserted-identifiers/index.html ) are returning incomplete URIs in the Json output, such as ```https://uts-ws.nlm.nih.gov/rest/content/2015AA/SNOMEDCT_US/9468002/atoms``` instead of ```https://uts-ws.nlm.nih.gov/rest/content/2015AA/source/SNOMEDCT_US/9468002/atoms```| Users can prepend 'source/' in front of the source vocabulary in question in the URI structure. The issue will be resolved in the next deployment on November 9, 2015 
 
 ### Planned Updates
 
