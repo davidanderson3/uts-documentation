@@ -1,48 +1,33 @@
 title=Release Notes and Roadmap
-date=2015-07-10
-updated=2015-11-02
+date=2015-11-09
+updated=2015-11-09
 type=page
 status=published
 navorder=1
 ~~~~~~
 
-Released: September 30, 2015
+Released: November 9, 2015
 
 #### Features:
-* **Retrieving subset members**
-  Retrieve all subsets, retrieve members of a specified subset.
-* **Retrieving source-asserted relation data**
-  Retrieve source-asserted relationship information of a source-asserted identifier.
+* **New data**
+    The 2015AB UMLS data are now searchable via the API.  See the UMLS [Release Notes](https://www.nlm.nih.gov/research/umls/knowledge_sources/metathesaurus/release/index.html) for details.
 
 #### Change:
-* **Retrieving obsolete/suppressible terms and codes**
-  Obsolete and suppressible terms and codes are no longer be retrieved by default. Users can take advantage of obsolete/suppressible parameters for some calls to include this information in the output.
-* **Searching the UMLS - paging**
-  The pageCount parameter has been removed from the /search endpoint.  See our notes about [paging through results](/rest/search/index.html#paging-through-results) on the /search endpoint for more details.
-* **Change in output for semanticTypes**
-  For convenience, semantic type names (in addition to the semantic type identifier) are now included in Concept classes when retrieving UMLS CUIs on the /rest/content/CUI/{CUI} endpoint, such as ```"T037: Injury or Poisoning"```
-
-#### Deprecation notice:
 * **sourceUi**
-  The ```sourceUi``` data element returned in [SourceAtomCluster objects](/rest/source-asserted-identifiers/#sample-output) is deprecated.  Please use ```ui``` instead.
+  The ```sourceUi``` data element returned in [SourceAtomCluster objects](/rest/source-asserted-identifiers/#sample-output) has been removed.
 
 #### Known issues:
 
-Item | Issue | Resolution
--- | -- | --
-1|The /subset endpoint does not return results when version is defined as 'current' in the URI|Users can specify a specific UMLS publication, such as '2015AA' a workaround.  The issue will be resolved in the next deployment on November 9, 2015
-2|Calls to retrieve [Source-asserted identifiers](https://documentation.uts.nlm.nih.gov/rest/source-asserted-identifiers/index.html ) are returning incomplete URIs in the Json output, such as ```https://uts-ws.nlm.nih.gov/rest/content/2015AA/SNOMEDCT_US/9468002/atoms``` instead of ```https://uts-ws.nlm.nih.gov/rest/content/2015AA/source/SNOMEDCT_US/9468002/atoms```| Users can prepend 'source/' in front of the source vocabulary in question in the URI structure. The issue will be resolved in the next deployment on November 9, 2015 
+There are no known issues at this time.
 
-### Planned Updates
+#### Planned Updates
 
 The following new items are planned for upcoming versions of the API.    
 
-#### Features:
+##### Features:
 * **Retrieving source-asserted attributes**
   Retrieve source-asserted attributes of a source-asserted identifier.
 * **Retrieving content views**
   Retrieve all content views, retrieve members of a specified content views.
-* **Python code samples in repository**
-  Python code samples for authenticating and making other API calls are in the code sample repository. See the [code sample repository on GitHub](https://github.com/HHS/uts-rest-api) for details.
-
-
+* **Add links to SourceAtomCluster objects to discover CUIs**
+  This will allows users to easily discover the UMLS CUI(s) associated with a source-asserted code, concept, or descriptor.

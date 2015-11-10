@@ -119,7 +119,7 @@ Sample output for /search/current?string="fracture of carpal bone"&returnIdType=
 
     "ui": "9468002",
     "rootSource": "SNOMEDCT_US",
-    "uri": "https://uts-ws.nlm.nih.gov/rest/content/2015AA/SNOMEDCT_US/9468002",
+    "uri": "https://uts-ws.nlm.nih.gov/rest/content/2015AA/source/SNOMEDCT_US/9468002",
     "name": "Closed fracture carpal bone"
 
 },
@@ -127,7 +127,7 @@ Sample output for /search/current?string="fracture of carpal bone"&returnIdType=
 
     "ui": "C34488",
     "rootSource": "NCI",
-    "uri": "https://uts-ws.nlm.nih.gov/rest/content/2015AA/NCI/C34488",
+    "uri": "https://uts-ws.nlm.nih.gov/rest/content/2015AA/source/NCI/C34488",
     "name": "Closed Fracture of Carpal Bone"
 
 },
@@ -135,7 +135,7 @@ Sample output for /search/current?string="fracture of carpal bone"&returnIdType=
 
     "ui": "34696",
     "rootSource": "MEDCIN",
-    "uri": "https://uts-ws.nlm.nih.gov/rest/content/2015AA/MEDCIN/34696",
+    "uri": "https://uts-ws.nlm.nih.gov/rest/content/2015AA/source/MEDCIN/34696",
     "name": "closed fracture of carpal bone"
 
 },
