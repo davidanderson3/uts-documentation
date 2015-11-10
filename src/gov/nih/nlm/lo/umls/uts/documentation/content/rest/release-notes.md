@@ -31,3 +31,4 @@ The following new items are planned for upcoming versions of the API.
   Retrieve all content views, retrieve members of a specified content views.
 * **Add links to SourceAtomCluster objects to discover CUIs**
   This will allows users to easily discover the UMLS CUI(s) associated with a source-asserted code, concept, or descriptor.
+* **Add history mechanism so users can retrieve CUIs that are no longer in the latest UMLS release**
