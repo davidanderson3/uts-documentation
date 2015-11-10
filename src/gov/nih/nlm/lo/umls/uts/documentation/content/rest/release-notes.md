@@ -10,7 +10,7 @@ Released: November 9, 2015
 
 #### Features:
 * **New data**
-    The 2015AB UMLS data are now searchable via the API.  See the UMLS [Release Notes](https://www.nlm.nih.gov/research/umls/knowledge_sources/metathesaurus/release/index.html) for details.
+    The 2015AB UMLS data are now searchable via the API.
 
 #### Change:
 * **sourceUi**
