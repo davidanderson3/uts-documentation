@@ -1,6 +1,6 @@
 title=Retrieving Source-Asserted Parents and Children
 date=2015-07-06
-updated=2015-10-09
+updated=2015-09-30
 type=page
 status=published
 category=Retrieving Source-Asserted Data
@@ -44,9 +44,6 @@ Sample output for /content/current/source/SNOMEDCT_US/9468002/parents?ticket=ST.
 
 ~~~~json
 {
-    "pageSize": 25,
-    "pageNumber": 1,
-    "pageCount": 1,
     "result": [
         {
             "classType": "SourceAtomCluster",
@@ -63,8 +60,9 @@ Sample output for /content/current/source/SNOMEDCT_US/9468002/parents?ticket=ST.
             "ancestors": "https://uts-ws.nlm.nih.gov/rest/content/2015AA/SNOMEDCT_US/20511007/ancestors",
             "parents": "https://uts-ws.nlm.nih.gov/rest/content/2015AA/SNOMEDCT_US/20511007/parents",
             "children": "https://uts-ws.nlm.nih.gov/rest/content/2015AA/SNOMEDCT_US/20511007/children",
-            "relations": "https://uts-ws.nlm.nih.gov/rest/content/2015AA/SNOMEDCT_US/20511007/relations",
+            "relations": "NONE",
             "definitions": "NONE",
+            "memberships": "NONE",
             "name": "Fracture of hand"
         },
         {
@@ -82,8 +80,9 @@ Sample output for /content/current/source/SNOMEDCT_US/9468002/parents?ticket=ST.
             "ancestors": "https://uts-ws.nlm.nih.gov/rest/content/2015AA/SNOMEDCT_US/36991002/ancestors",
             "parents": "https://uts-ws.nlm.nih.gov/rest/content/2015AA/SNOMEDCT_US/36991002/parents",
             "children": "https://uts-ws.nlm.nih.gov/rest/content/2015AA/SNOMEDCT_US/36991002/children",
-            "relations": "https://uts-ws.nlm.nih.gov/rest/content/2015AA/SNOMEDCT_US/36991002/relations",
+            "relations": "NONE",
             "definitions": "NONE",
+            "memberships": "NONE",
             "name": "Closed fracture of upper limb"
         },
         {
@@ -101,11 +100,15 @@ Sample output for /content/current/source/SNOMEDCT_US/9468002/parents?ticket=ST.
             "ancestors": "https://uts-ws.nlm.nih.gov/rest/content/2015AA/SNOMEDCT_US/82065001/ancestors",
             "parents": "https://uts-ws.nlm.nih.gov/rest/content/2015AA/SNOMEDCT_US/82065001/parents",
             "children": "https://uts-ws.nlm.nih.gov/rest/content/2015AA/SNOMEDCT_US/82065001/children",
-            "relations": "https://uts-ws.nlm.nih.gov/rest/content/2015AA/SNOMEDCT_US/82065001/relations",
+            "relations": "NONE",
             "definitions": "NONE",
+            "memberships": "NONE",
             "name": "Fracture of carpal bone"
         }
-    ]
+    ],
+    "pageNumber": 1,
+    "pageSize": 25,
+    "pageCount": 1
 }
 ~~~~
 
