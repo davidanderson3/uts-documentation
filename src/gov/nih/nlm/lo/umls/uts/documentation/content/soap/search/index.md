@@ -1,444 +1,349 @@
-title=Searching the SOAP API in UMLS
+title=Searching the UMLS with the SOAP API
 date=2015-08-14
 updated=2015-08-14
 type=page
-status=unpublished
+status=published
 navorder=2
 ~~~~~~
 
 
-**Method:**findConcepts(String ticket,String version,String target,String str, String searchType,PSF psf)
+Interface|Method|Object or Data type Returned |Use Cases
+:-- | :-- | :-- | --:
+**UtsWsFinderController**||||
+ |**[findConcepts](#findconcepts)**|ArrayList\<UiLabel\>||
+ |||Accepts a term and returns UMLS CUIs|
+ |||Accepts a known source-asserted identifier and returns UMLS CUIs|
+ |||Extracts terms according to term type|
+ |**[findAtoms](#findatoms)**|ArrayList\<UiLabel\>||
+ |||Accepts a term and returns UMLS atoms (AUIs)|
+ |**[findSourceConcepts](#findsourceconcepts)**|ArrayList\<UiLabelRootSource\>||
+ |||Accepts a term and returns source-asserted concepts|
+ |**[findSourceDescriptors](#findsourcedescriptors)**|ArrayList\<UiLabelRootSource\>||
+ |||Accepts a term and returns a source-asserted descriptor|
+ |**[findCode](#findcode)**|ArrayList\<UiLabelRootSource\>||
+ |||Takes a term and returns a source-asserted code|
 
-**Returns:**ArrayList< UiLabel> 
+
+### findConcepts
 
 
-**Use Case:**You want to see a list of UMLS CUIs and their associated preferred names. You have a search string "lou gehrig disease" and want to return a list of CUIs having at least one atom that contains all of those words.
- ***It's important to note that the preferred names of the concepts returned may not match your search string.***
+**Method Signature:** ```findConcepts(String ticket,String version,String target,String str, String searchType,PSF psf)```
 
+#### Additional parameters and values
+
+Parameter name|Definition|Valid values
+-- | --
+target|Indicates the data type you're using in your search|aui,atom (used for searching by term), code, concept, sourceConcept, sourceDescriptor,tty
+searchType|Type of search you're performing|exact (use this when passing codes to the finder service), approximate,leftTruncation,rightTruncation,words,normalizedWords
+
+#### Sample Input (Java):
+
+~~~~java
+Psf myPsf = new UtsMetathesaurusFinder.Psf();
+int pageNum = 1;
+//exclude suppressible + obsolete term matches
+myPsf.setIncludeObsolete(false);
+myPsf.setIncludeSuppressible(false);
+List<UiLabel> results = new ArrayList<UiLabel>();
+        
+    do {
+        //we need a new service ticket for each call since we're asking for a new page each time
+	String ticket = ticketClient.getSingleUseTicket(tgt);
+	myPsf.setPageNum(pageNum);
+	results = utsFinderService.findConcepts(ticket, "2015AB", "atom", "aglossia", "words", myPsf);
+		    
+        for (UiLabel result:results) {
+			
+	    String ui = result.getUi();
+	    String name = result.getLabel();
+
+	}
+        pageNum++;
+		
+    } while (results.size() > 0);
 ~~~~
-**Note:**The "target" parameter indicates what kind of cluster on which you're basing a search. In findConcepts, the following values can be passed for target:
--   aui
--   atom (this is used for string searching)
--   code
--   concept
--   sourceConcept
--   sourceDescriptor
 
+#### Sample Output:
 
- The following values can be used for searchType in all of the finder service calls
--   exact
--   approximate
--   leftTruncation
--   rightTruncation
--   words
--   normalizedWords
--   normalizedString
+~~~~text
+ui: C0158663
+name: Tongue absent
+ui: C1863203
+name: Hypoglossia-Hypodactylia
+ui: C0595985
+name: Hanhart's syndrome
 ~~~~
+
+### findAtoms
+
+**Method Signature:** ```findAtoms(String ticket,String version,String target,String str,String searchType,PSF psf)```
+
+Parameter name|Definition|Valid values
+-- | --
+target|Indicates the data type you're using in your search|atom (used for searching by term), code, concept, sourceConcept, sourceDescriptor
+searchType|Type of search you're performing|exact (use this when passing codes to the finder service), approximate,leftTruncation,rightTruncation,words,normalizedWords
 
 
 #### Sample Input (Java):
-~~~~
-UtsMetathesaurusFinder.Psf myPsf = new UtsMetathesaurusFinder.Psf();
- myPsf.setPageLn(50);
- List<UiLabel> myUiLabels = new ArrayList<UiLabel>();
+~~~~java
+Psf myPsf = new UtsMetathesaurusFinder.Psf();
+int pageNum = 1;
+//exclude suppressible + obsolete term matches
+myPsf.setIncludeObsolete(false);
+myPsf.setIncludeSuppressible(false);
+//only include atoms from US Edition of SNOMED CT
+myPsf.getIncludedSources().add("SNOMEDCT_US");
+List<UiLabel> results = new ArrayList<UiLabel>();
+        
+    do {
+        //we need a new service ticket for each page of our call
+	String ticket = ticketClient.getSingleUseTicket(tgt);
+	myPsf.setPageNum(pageNum);
+	results = utsFinderService.findAtoms(ticket, "20215AB", "atom", "aglossia", "words", myPsf);
+		    
+        for (UiLabel result:results) {
+			
+	    String ui = result.getUi();
+	    String name = result.getLabel();
 
- myUiLabels = UtsFinderService.findConcepts(ticket, 2011AB, "atom", "lou gehrig disease", "words", myPsf);
-
- for (int i = 0; i < myUiLabels.size(); i++) {
- UiLabel myUiLabel = myUiLabels.get(i);
- String ui = myUiLabel.getUi();
- String label = myUiLabel.getLabel();
-
- }
-~~~~
-
-
-#### Sample Input (C♯):
-~~~~
-Finder.psf myPsf = new Finder.psf();
- Finder.uiLabel[] myUiLabels = utsFinderService.findConcepts(ticket,"2011AB", "atom", "lou gehrig disease", "words", myPsf);
-
- myPsf.pageLn = 50 ;
- for (int i = 0; i < myUiLabels.Length; i++){
-
- Finder.uiLabel myUiLabel = myUiLabels[i];
- string ui = myUiLabel.ui;
- string label = myUiLabel.label;
- }
+	}
+        pageNum++;
+		
+    } while (results.size() > 0);
 ~~~~
 
 
 #### Sample Output:
 
-~~~~
-//print out the results 
-   UI: C0002736
-   Name: Amyotrophic Lateral Sclerosis
- 
-   UI: C2317803
-   Name: acquired amyotrophic lateral sclerosis
-  
-   UI: C2317805
-   Name: multifactorial amyotrophic lateral sclerosis
-  
-   UI: C1862939
-   Name: AMYOTROPHIC LATERAL SCLEROSIS 1
-  
-   UI: C1862940
-   Name: AMYOTROPHIC LATERAL SCLEROSIS, AUTOSOMAL RECESSIVE
-  
-   UI: C2317804
-   Name: X-linked amyotrophic lateral sclerosis
-  
-   UI: C2956919
-   Name: Lou Gehrig's Disease Gene Mutation Reagents
-~~~~
-
->
-
-
-**Method:**findAtoms(String ticket,String version,String target,String str,String searchType,PSF psf)
-
-**Returns:**�ArrayList< UiLabel>
-
-**Use Case:** Given a UMLS release, a searchType, and the string or code you would like to search, this call returns a set of atom unique identifiers (AUI) each with its corresponding atom name (Label), that meet your search criteria.
-
-~~~~
-**Note:**  In findAtoms, the following values can be used for the "target" parameter:
--   aui
--   atom
--   code
--   sourceConcept
--   sourceDescriptor
-
-
- The following values can be used for searchType in all of the finder service calls
--   exact
--   approximate
--   leftTruncation
--   rightTruncation
--   words
--   normalizedWords
--   normalizedString
-~~~~
-
-#### Sample Input (Java):
-~~~~
-UtsMetathesaurusFinder.Psf myPsf = new UtsMetathesaurusFinder.Psf();
- myPsf.setPageLn(50);
- List<UiLabel> myUiLabels = new ArrayList<UiLabel>();
- myUiLabels = UtsFinderService.findAtoms(ticket, 2011AB, "atom", "lou gehrig disease", "exact", myPsf);
-
- for (int i = 0; i < myUiLabels.size(); i++) {
- UiLabel myUiLabel = myUiLabels.get(i);
- String ui = myUiLabel.getUi();
- String label = myUiLabel.getLabel();
- }
-~~~~
-
-#### Sample Input (C♯):
-~~~~
-Finder.psf myPsf = new Finder.psf();
- Finder.uiLabel[] myUiLabels = utsFinderService.findAtoms(ticket,"2011AB", "atom", "lou gehrig disease", "exact", myPsf);
- myPsf.pageLn = 50; 
- 
- for (int i = 0; i < myUiLabels.Length; i++){
-
- Finder.uiLabel myUiLabel = myUiLabels[i];
- string ui = myUiLabel.ui;
- string label = myUiLabel.label;
- }
-~~~~
-
-#### Sample Output:
-
-~~~~
- //print out the results
-   UI: A17970785
-   Name: Lou Gehrig Disease
-  
-   UI: A7571806
-   Name: Lou Gehrig Disease
-  
-   UI: A0081037
-   Name: Lou Gehrig Disease
-  
-   UI: A0428150
-   Name: LOU GEHRIG DISEASE
-  
-   UI: A18552743
-   Name: lou gehrig disease
-~~~~
->
-
-**Method:**findCodes(String ticket,String version,String target,String str,String searchType,PSF psf)
-
-**Returns:**ArrayList< UiLabelRootSource> 
-
-
-**Use Case:** Starting with an atom, source concept, source descriptor, or aui, you want to find codes, their preferred names, and the source vocabularies that provide them.
-
-
-**Note:**  You should consider excluding **code = "NOCODE"** results from your result set. Some atoms from source vocabularies are assigned "NOCODE" during source processing, and will not be useful in the context of most finder search results.
-
-~~~~
-**Note:**  In findCodes, the following values can be used for the "target" parameter:
--   aui
--   atom
--   sourceConcept
--   sourceDescriptor
-
-
- The following values can be used for searchType in all of the finder service calls
--   exact
--   approximate
--   leftTruncation
--   rightTruncation
--   words
--   normalizedWords
--   normalizedString
-~~~~
-
-#### Sample Input (Java):
-~~~~
-UtsMetathesaurusFinder.Psf myPsf = new UtsMetathesaurusFinder.Psf();
- myPsf.setPageLn(50);
- List<UiLabelRootSource> myUiLabelsRootSource = new ArrayList<UiLabelRootSource>();
- myUiLabelsRootSource = UtsFinderService.findCodes(ticket, 2011AB, "atom", "diabetic foot", "exact", myPsf);
-
- for (int i = 0; i < myUiLabelsRootSource.size(); i++) {
- UiLabelRootSource myUiLabelRootSource = myUiLabelsRootSource.get(i);
- String ui = myUiLabelRootSource.getUi();
- String label = myUiLabelRootSource.getLabel();
- String source = myUiLabelRootSource.getRootSource();
- }
+~~~~text
+ui: A2953834
+name: Aglossia-adactyly syndrome
+ui: A3527513
+name: Aglossia-adactyly syndrome (disorder)
 ~~~~
 
 
-#### Sample Input (C♯):
-~~~~
-Finder.psf myPsf = new Finder.psf();
- myPsf.pageLn = 50;
- Finder.uiLabelRootSource[] myUiLabelsRootSource = utsFinderService.findCodes(ticket, "2011AB", "atom", "diabetic foot", "exact", myPsf);
+### findCodes
 
- for (int i = 0; i < myUiLabelsRootSource.Length; i++){
+**Method Signature:** ```findSourceCodes(String ticket,String version,String target,String str,String searchType,PSF psf)```
 
- Finder.uiLabelRootSource myUiLabelRootSource = myUiLabelsRootSource[i];
- string ui = myUiLabelRootSource.ui;
- string label = myUiLabelRootSource.label;
- string source = myUiLabelRootSource.rootSource
- }
-~~~~
-
-#### Sample Output:
-
-~~~~
-//print out the results
-   UI: D017719
-   Name: Diabetic Foot
-   Source: MSH
-  
-   UI: T1341
-   Name: Diabetic Foot
-   Source: MEDLINEPLUS
-  
-   UI: N0000003630
-   Name: Diabetic Foot [Disease/Finding]
-   Source: NDFRT
-  
-   UI: NOCODE
-   Name: Diabetic foot
-   Source: RCD
-  
-   UI: 10060734
-   Name: Diabetic foot
-   Source: MDR
-  
-   UI: 280137006
-   Name: Diabetic foot
-   Source: SNOMEDCT
-  
-   UI: 0000020837
-   Name: diabetic foot
-   Source: CHV
-  
-   UI: 1002126
-   Name: DIABETIC FOOT
-   Source: CCPSS
-~~~~
->
-
-
-**Method:**findSourceConcepts(String ticket,String version,String target,String str,String searchType,PSF psf);
-
-**Returns:**ArrayList< UiLabelRootSource>
-
-**Use Case:**Starting with an atom, code, source descriptor, or aui, you want to find source concepts, their preferred names, and the source vocabularies that provide them.
-
-~~~~
-**Note:**  In findSourceConcepts, the following values can be used for the "target" parameter:
--   aui
--   atom
--   code
--   sourceDescriptor
-
-
- The following values can be used for searchType in all of the finder service calls
--   exact
--   approximate
--   leftTruncation
--   rightTruncation
--   words
--   normalizedWords
--   normalizedString
-~~~~
+Argument name|Definition|Valid values
+-- | --
+target|Indicates the data type you're using in your search|atom (used for searching by term), aui, sourceDescriptor, sourceConcept
+searchType|Type of search you're performing|exact, approximate, leftTruncation, rightTruncation, words, normalizedWords
 
 
 #### Sample Input (Java):
-~~~~
-UtsMetathesaurusFinder.Psf myPsf = new UtsMetathesaurusFinder.Psf();
- myPsf.setPageLn(50);
- List<UiLabelRootSource> myUiLabelsRootSource = new ArrayList<UiLabelRootSource>();
- myUiLabelsRootSource = UtsFinderService.findSourceConcepts(ticket, 2011AB, "atom", "myocardial infarction", "words", myPsf);
-
- for (int i = 0; i < myUiLabelsRootSource.size(); i++) {
- UiLabelRootSource myUiLabelRootSource = myUiLabelsRootSource.get(i);
- String ui = myUiLabelRootSource.getUi();
- String label = myUiLabelRootSource.getLabel();
- String source = myUiLabelRootSource.getRootSource();
- }
-~~~~
-
-
-#### Sample Input (C♯):
-~~~~
-Finder.psf myPsf = new Finder.psf();
- myPsf.pageLn = 50;
- Finder.uiLabelRootSource[] myUiLabelsRootSource = utsFinderService.findSourceConcepts(ticket, "2011AB", "atom","myocardial infarction", "words", myPsf);
-
- for (int i = 0; i < myUiLabelsRootSource.Length; i++){
-
- Finder.uiLabelRootSource myUiLabelRootSource = myUiLabelsRootSource[i];
- string ui = myUiLabelRootSource.ui;
- string label = myUiLabelRootSource.label;
- string source = myUiLabelRootSource.rootSource
- }
+~~~~java
+List<UiLabelRootSource> results = new ArrayList<UiLabelRootSource>();
+Psf myPsf = new UtsMetathesaurusFinder.Psf();
+myPsf.setIncludeObsolete(false);
+myPsf.setIncludeSuppressible(false);
+int pageNum = 1;
+    
+    do {
+	
+        //we need a new service ticket for each page of our call	
+        String ticket = ticketClient.getSingleUseTicket(tgt);
+	myPsf.setPageNum(pageNum);
+	results = utsFinderService.findCodes(ticket, "2015AB", "atom", "aglossia", "words", myPsf);
+		
+	for(UiLabelRootSource result:results) {
+		
+	    String ui = result.getUi();
+	    String rsab = result.getRootSource();
+	    String name = result.getLabel();
+         
+	    }
+	pageNum++;
+	
+	} while (results.size() > 0);
 ~~~~
 
 
 #### Sample Output:
 
+~~~~text
+ui: 10001501
+Source:MDR
+name: Aglossia
+----
+ui: PA11.
+Source:RCD
+name: Aglossia
+----
+ui: D4-52002
+Source:SNMI
+name: Aglossia
+----
+ui: Q38.3
+Source:ICD10CM
+name: Other congenital malformations of tongue
+----
+ui: MTHU037232
+Source:OMIM
+name: Aglossia
+----
+ui: 750.11
+Source:ICD9CM
+name: Aglossia
+----
+ui: MTHU004751
+Source:ICPC2ICD10ENG
+name: aglossia
+----
+ui: 99025
+Source:MEDCIN
+name: aglossia
+----
+ui: C566308
+Source:MSH
+name: Hypoglossia-Hypodactylia
+----
+ui: 103300
+Source:OMIM
+name: HYPOGLOSSIA-HYPODACTYLIA
+----
+ui: MTHU004752
+Source:ICPC2ICD10ENG
+name: aglossia-adactylia syndrome
+----
+ui: D-6036
+Source:SNM
+name: Aglossia-adactylia syndrome
+----
+ui: D4-01305
+Source:SNMI
+name: Oromandibular-limb hypogenesis spectrum
+----
+ui: 205817005
+Source:SNOMEDCT_US
+name: Aglossia-adactyly syndrome
+----
+
 ~~~~
- //print out the results
-   UI: M0014340
-   Name: Myocardial Infarction
-   Source: MSH
-  
-   UI: N0000002085
-   Name: Myocardial Infarction [Disease/Finding]
-   Source: NDFRT
-  
-   UI: C27996
-   Name: Myocardial Infarction
-   Source: NCI
-  
-   UI: LP98884-7
-   Name: Myocardial infarction
-   Source: LNC
-  
-   UI: 66514008
-   Name: Coronary artery thrombosis
-   Source: SNOMEDCT
-  
-   UI: 233824008
-   Name: Myocardial infarction
-   Source: SNOMEDCT
-~~~~
->
+
+### findSourceConcepts
 
 
-**Method:**findSourceDescriptors(String ticket,String version,String target,String str,String searchType,PSF psf)
+**Method Signature:** ```findSourceConcepts(String ticket,String version,String target,String str,String searchType,PSF psf)```
 
-**Returns:**ArrayList< UiLabelRootSource>;
-
-**Use Case:**Given a UMLS release, a searchType, the string or code you would like to search, and a root source abbreviation (RSAB), this call returns a set of source descriptor identifiers (SDUI) each with its corresponding name (Label), for the specified RSAB.
-
-~~~~
-**Note:**In findSourceDescriptors, the following values can be used for the "target" parameter:
--   aui
--   atom
--   code
--   sourceConcept
-
-
- The following values can be used for searchType in all of the finder service calls
--   exact
--   approximate
--   leftTruncation
--   rightTruncation
--   words
--   normalizedWords
--   normalizedString
-~~~~
+Argument name|Definition|Valid values
+-- | --
+target|Indicates the data type you're using in your search|atom (used for searching by term), aui, code, sourceDescriptor
+searchType|Type of search you're performing|exact, approximate, leftTruncation, rightTruncation, words, normalizedWords
 
 
 #### Sample Input (Java):
+~~~~java
+List<UiLabelRootSource> results = new ArrayList<UiLabelRootSource>();
+Psf myPsf = new UtsMetathesaurusFinder.Psf();
+myPsf.setIncludeObsolete(false);
+myPsf.setIncludeSuppressible(false);
+int pageNum = 1;
+    
+    do {
+	
+        //we need a new service ticket for each page of our call	
+        String ticket = ticketClient.getSingleUseTicket(tgt);
+	myPsf.setPageNum(pageNum);
+	results = utsFinderService.findSourceConcepts(ticket, "2015AB", "atom", "aglossia", "words", myPsf);
+		
+	for(UiLabelRootSource result:results) {
+		
+	    String ui = result.getUi();
+	    String rsab = result.getRootSource();
+	    String name = result.getLabel();
+         
+	    }
+	pageNum++;
+	
+	} while (results.size() > 0);
 ~~~~
-UtsMetathesaurusFinder.Psf myPsf = new UtsMetathesaurusFinder.Psf();
-myPsf.setPageLn(50);
- List<UiLabelRootSource>; myUiLabelsRootSource = new ArrayList<UiLabelRootSource>();
- myUiLabelsRootSource = UtsFinderService.findSourceDescriptors(ticket, 2011AB, "atom", "trophy", "leftTruncation", myPsf);
 
- for (int i = 0; i < myUiLabelsRootSources.size(); i++) {
- UiLabelRootSource myUiLabelRootSource = myUiLabelsRootSource.get(i);
- String ui = myUiLabelRootSource.getUi();
- String label = myUiLabelRootSource.getLabel();
- String source = myUiLabelRootSource.getRootSource();
- }
-~~~~
-
-
-#### Sample Input (C♯):
-~~~~
-Finder.psf myPsf = new Finder.psf();
- myPsf.pageLn = 50;
- Finder.uiLabelRootSource[] myUiLabelsRootSource = utsFinderService.findSourceDescriptors(ticket, "2011AB", "atom","trophy", "leftTruncation", myPsf);
-
- for (int i = 0; i < myUiLabelsRootSource.Length; i++){
-
- Finder.uiLabelRootSource myUiLabelRootSource = myUiLabelsRootSource[i];
- string ui = myUiLabelRootSource.ui;
- string label = myUiLabelRootSource.label;
- string source = myUiLabelRootSource.rootSource;
- }
-~~~~
 
 #### Sample Output:
 
+~~~~text
+ui: 99025
+Source:MEDCIN
+name: aglossia
+----
+ui: M0566608
+Source:MSH
+name: Hypoglossia-Hypodactylia
+----
+ui: 205817005
+Source:SNOMEDCT_US
+name: Aglossia-adactyly syndrome
+----
 ~~~~
-  //print out the results
-   UI: D047508
-   Name: Massive Hepatic Necrosis 
-   Source: MSH
-  
-   UI: 570
-   Name: Parenchymatous degeneration of liver
-   Source: MTHICD9
-  
-   UI: 10070815
-   Name: Acute yellow liver atrophy
-   Source: MDR
-  
-   UI: D016301
-   Name: Alveolar Bone Loss
-   Source: MSH
-  
-   UI: 10004446
-   Name: Benign prostatic hyperplasia
-   Source: MDR
-  
-   UI: 600.0
-   Name: Benign prostatic hypertrophy
-   Source: MTHICD9
+
+### findSourceDescriptors
+
+
+**Method Signature:** ```findSourceDescriptors(String ticket,String version,String target,String str,String searchType,PSF psf)```
+
+Argument name|Definition|Valid values
+-- | --
+target|Indicates the data type you're using in your search|atom (used for searching by term), aui, code, sourceConcept
+searchType|Type of search you're performing|exact, approximate, leftTruncation, rightTruncation, words, normalizedWords
+
+
+#### Sample Input (Java):
+~~~~java
+List<UiLabelRootSource> results = new ArrayList<UiLabelRootSource>();
+Psf myPsf = new UtsMetathesaurusFinder.Psf();
+myPsf.setIncludeObsolete(false);
+myPsf.setIncludeSuppressible(false);
+int pageNum = 1;
+    
+    do {
+	
+        //we need a new service ticket for each page of our call	
+        String ticket = ticketClient.getSingleUseTicket(tgt);
+	myPsf.setPageNum(pageNum);
+	results = utsFinderService.findSourceDescriptors(ticket, "2015AB", "atom", "aglossia", "words", myPsf);
+		
+	for(UiLabelRootSource result:results) {
+		
+	    String ui = result.getUi();
+	    String rsab = result.getRootSource();
+	    String name = result.getLabel();
+         
+	    }
+	pageNum++;
+	
+	} while (results.size() > 0);
+~~~~
+
+
+#### Sample Output:
+
+~~~~text
+ui: 10001501
+Source:MDR
+name: Aglossia
+----
+ui: Q38.3
+Source:ICD10CM
+name: Other congenital malformations of tongue
+----
+ui: MTHU037232
+Source:OMIM
+name: Aglossia
+----
+ui: 750.11
+Source:ICD9CM
+name: Aglossia
+----
+ui: C566308
+Source:MSH
+name: Hypoglossia-Hypodactylia
+----
+ui: 103300
+Source:OMIM
+name: HYPOGLOSSIA-HYPODACTYLIA
+----
 ~~~~
 

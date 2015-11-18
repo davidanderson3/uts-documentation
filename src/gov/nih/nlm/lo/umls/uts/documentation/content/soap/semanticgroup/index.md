@@ -2,7 +2,7 @@ title=Semantic Group
 date=2015-08-26
 updated=2015-08-26
 type=page
-status=unpublished
+status=published
 navorder=5
 ~~~~~~
 

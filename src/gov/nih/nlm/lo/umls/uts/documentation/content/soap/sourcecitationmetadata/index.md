@@ -2,8 +2,7 @@ title=Source Citation Metadata
 date=2015-08-25
 updated=2015-08-25
 type=page
-status=unpublished
-category=Metadata
+status=published
 navorder=4
 ~~~~~~
 

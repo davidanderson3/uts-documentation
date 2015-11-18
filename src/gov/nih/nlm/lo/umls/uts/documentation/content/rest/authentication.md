@@ -1,6 +1,6 @@
 title=User Authentication
 date=2015-06-10
-updated=2015-06-25
+updated=2015-11-05
 type=page
 status=published
 navorder=2
@@ -9,6 +9,9 @@ navorder=2
 
 **Each call to https://uts-ws.nlm.nih.gov/rest requires a Service Ticket as a query parameter.
 A service ticket is good for one call and will expire after 5 minutes if not used.**
+
+The UMLS REST API requires a UMLS username and password for the authentication described below.   If you do not have a UMLS account, you may apply for a license
+on the [UMLS Terminology Services](https://uts.nlm.nih.gov/license.html) website.  
 
 The UTS REST authentication involves 2 steps:
 

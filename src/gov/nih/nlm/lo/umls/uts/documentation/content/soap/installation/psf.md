@@ -2,7 +2,7 @@ title=Setting up a PSF object
 date=2015-08-21
 updated=2015-08-21
 type=page
-status=unpublished
+status=published
 navorder=1
 ~~~~~~
 
@@ -15,7 +15,8 @@ The Paging, Sorting, and Filtering (PSF) object of the UTS API 2.0 allows you to
 -   choose number of pages of results returned
 
 You can pass PSF objects as parameters on methods related to the UtsWsContentController and UtsWsFinderController objects.
-*You must specify in your code the type of PSF object you are creating, since it exists under both the Metathesaurus Content and Finder packages.*
+*You may need to specify in your code the type of PSF object you are creating, since it exists under both the Metathesaurus Content and Finder packages
+,such as ```gov.nih.nlm.umls.uts.webservices.Finder.Psf```*
 
 You can create the objects as follows:
 

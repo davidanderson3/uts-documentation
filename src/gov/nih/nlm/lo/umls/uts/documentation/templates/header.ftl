@@ -21,6 +21,8 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/8.6/styles/default.min.css" type="text/css">
     <link rel="stylesheet" href="https://www.nlm.nih.gov/core/nlm-autocomplete/1.0/nlm-autocomplete.css" type="text/css">
     <link rel="stylesheet" href="https://www.nlm.nih.gov/core/jquery-ui/1.8/jquery-ui.css" type="text/css">
+    <link href="//cdn.datatables.net/1.10.3/css/jquery.dataTables.css" rel="stylesheet" />
+    <link href="//cdn.datatables.net/responsive/1.0.2/css/dataTables.responsive.css" rel="stylesheet" />
 
 
     <script src="//code.jquery.com/jquery-1.11.3.min.js" type="text/javascript"></script>
@@ -30,6 +32,8 @@
     <script src="<#if (content.rootpath)??>${content.rootpath}<#else></#if>js/bootstrap.min.js" type="text/javascript"></script>
     <script src="<#if (content.rootpath)??>${content.rootpath}<#else></#if>js/prettify.js" type="text/javascript"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/8.6/highlight.min.js" type="text/javascript"></script>
+    <script type="text/javascript" src="//cdn.datatables.net/1.10.3/js/jquery.dataTables.min.js"></script>
+    <script type="text/javascript" src="//cdn.datatables.net/responsive/1.0.2/js/dataTables.responsive.min.js"></script>
     
     <!-- HTML5 shim, for IE6-8 support of HTML5 elements -->
     <!--[if lt IE 9]>
@@ -53,6 +57,7 @@
           $(this).attr("value","Search");
           
         });
+        
        
       });
       

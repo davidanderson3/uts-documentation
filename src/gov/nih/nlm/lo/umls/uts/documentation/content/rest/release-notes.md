@@ -1,28 +1,26 @@
 title=Release Notes and Roadmap
-date=2015-07-10
-updated=2015-09-30
+date=2015-11-09
+updated=2015-11-09
 type=page
 status=published
 navorder=1
 ~~~~~~
 
-Released: September 30, 2015
+Released: November 9, 2015
 
-##### Features:
-* **Retrieving subset members**
-  Retrieve all subsets, retrieve members of a specified subset.
-* **Retrieving source-asserted relation data**
-  Retrieve source-asserted relationship information of a source-asserted identifier.
+#### Features:
+* **New data**
+    The 2015AB UMLS data are now searchable via the API.
 
-##### Change:
-* **Retrieving obsolete/suppressible terms and codes**
-  Obsolete and suppressible terms and codes are no longer be retrieved by default. Users can take advantage of obsolete/suppressible parameters for some calls to include this information in the output.
-* **Searching the UMLS - paging**
-  The pageCount parameter has been removed from the /search endpoint.  See our notes about [paging through results](/rest/search/index.html#paging-through-results) on the /search endpoint for more details.
-* **Change in output for semanticTypes**
-  For convenience, semantic type names (in addition to the semantic type identifier) are now included in Concept classes when retrieving UMLS CUIs on the /rest/content/CUI/{CUI} endpoint, such as ```"T037: Injury or Poisoning"```
-  
-### Planned Updates
+#### Change:
+* **sourceUi**
+  The ```sourceUi``` data element returned in [SourceAtomCluster objects](/rest/source-asserted-identifiers/#sample-output) has been removed.
+
+#### Known issues:
+
+There are no known issues at this time.
+
+#### Planned Updates
 
 The following new items are planned for upcoming versions of the API.    
 
@@ -31,7 +29,6 @@ The following new items are planned for upcoming versions of the API.
   Retrieve source-asserted attributes of a source-asserted identifier.
 * **Retrieving content views**
   Retrieve all content views, retrieve members of a specified content views.
-* **Python code samples in repository**
-  Python code samples for authenticating and making other API calls will be added to the code sample repository. See the [code sample repository on GitHub](https://github.com/HHS/uts-rest-api) for details.
-
-
+* **Add links to SourceAtomCluster objects to discover CUIs**
+  This will allows users to easily discover the UMLS CUI(s) associated with a source-asserted code, concept, or descriptor.
+* **Add history mechanism so users can retrieve CUIs that are no longer in the latest UMLS release**

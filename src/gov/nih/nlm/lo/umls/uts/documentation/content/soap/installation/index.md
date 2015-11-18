@@ -1,8 +1,8 @@
-title=UTS Soap API Installation
+title=UMLS SOAP API Installation
 date=2015-08-13
 updated=2015-08-13
 type=page
-status=unpublished
+status=published
 navorder=1
 ~~~~~~
 
@@ -51,55 +51,6 @@ import gov.nih.nlm.uts.webservice.history.*;
 import gov.nih.nlm.uts.webservice.semNet.*;
 ~~~~
 
-
-
-#### Authentication
-
-In general, your application will follow this sequence when making calls to the API:
-
-1.  Obtain a Proxy Grant Ticket using the getProxyGrantTicket method described below. This is good for 8 hours and is needed for step #2
-2.  Generate a Single Use Ticket (using the Proxy Grant Ticket and the string "http://umlsks.nlm.nih.gov" as parameters) with the getProxyTicket method described below.
-3.  Make a call to the API, passing the Single Use Ticket as one of the parameters.
-
-
-The UTS API 2.0 uses two types of "tickets" to authenticate users and calls: 
-
--   **Proxy Grant Ticket** (valid for 8 hours) This kind of ticket validates your UTS username and password. **It is not necessary to obtain a new Proxy Grant Ticket each time you make a call to the API. However, it is necessary to use the proxy grant ticket each time you make a call to the API to request a single-use ticket.** A Proxy Grant Ticket could be considered "the ticket that gets you a ticket."
--   **"Single-Use" Ticket** - This ticket expires after an individual call is completed. Therefore, each time you make a call to the API, you must request a new Proxy Ticket.
-
-
-##### Proxy Grant Ticket
-~~~~
-private String username = "foofoo";
-private String password = "B@rB@z_1";
-
-//initialize the security service
- private UtsWsSecurityController securityService = (new UtsWsSecurityControllerImplService()).getUtsWsSecurityControllerImplPort();
- private String ticketGrantingTicket = securityService.getProxyGrantTicket(username, password);
-//use the ticketGrantingTicket to generate a Single Use Ticket with each call
-~~~~
-
-
-##### Single Use Ticket
-~~~~
-// set the service name, perhaps somewhere else in your code\
-private String serviceName = "http://umlsks.nlm.nih.gov";
-
-/*Do not be confused by the "serviceName" variable value above, "https://umlsks.nlm.nih.gov"
- This is simply a generic service name to access Terminology Services APIs at the National Library of Medicine, and has nothing to do with the legacy UMLSKS Knowledge Sources Server. */
- private String getProxyTicket() {
- try {
- return securityService.getProxyTicket(ticketGrantingTicket, serviceName);
- }
- catch (Exception e) {
- return "";
- }
- }
-
-//Pass the Single-Use ticket as a parameter with each call to the API. 
-~~~~
->
-
 ####Here are steps on how to create the reference variables for each web service:
 
 [Content](../installation/content.html)
@@ -108,4 +59,3 @@ private String serviceName = "http://umlsks.nlm.nih.gov";
 [Concept History](../installation/concepthistory.html)
 [Finder](../installation/finder.html)
 [Paging, Sorting, Filtering](../installation/psf.html)
->

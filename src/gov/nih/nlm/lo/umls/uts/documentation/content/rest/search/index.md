@@ -50,8 +50,6 @@ pageSize | N | Whole number that specifies the number of results to include per 
 
 The default search parameters will return CUIs and their names.  If you ask for codes, sourceConcept, or sourceDescriptor as your returnIdType, you will get back source-asserted identifiers instead of CUIs.
 
-Note: Paging is not available for /search call results. When users reach the final result in the search output, the next result will have a name of 'NO RESULTS', which designates the end of the output.
-
 Sample output for /search/current?string="fracture of carpal bone"&ticket=ST...
 
 ~~~~json
@@ -121,7 +119,7 @@ Sample output for /search/current?string="fracture of carpal bone"&returnIdType=
 
     "ui": "9468002",
     "rootSource": "SNOMEDCT_US",
-    "uri": "https://uts-ws.nlm.nih.gov/rest/content/2015AA/SNOMEDCT_US/9468002",
+    "uri": "https://uts-ws.nlm.nih.gov/rest/content/2015AA/source/SNOMEDCT_US/9468002",
     "name": "Closed fracture carpal bone"
 
 },
@@ -129,7 +127,7 @@ Sample output for /search/current?string="fracture of carpal bone"&returnIdType=
 
     "ui": "C34488",
     "rootSource": "NCI",
-    "uri": "https://uts-ws.nlm.nih.gov/rest/content/2015AA/NCI/C34488",
+    "uri": "https://uts-ws.nlm.nih.gov/rest/content/2015AA/source/NCI/C34488",
     "name": "Closed Fracture of Carpal Bone"
 
 },
@@ -137,7 +135,7 @@ Sample output for /search/current?string="fracture of carpal bone"&returnIdType=
 
     "ui": "34696",
     "rootSource": "MEDCIN",
-    "uri": "https://uts-ws.nlm.nih.gov/rest/content/2015AA/MEDCIN/34696",
+    "uri": "https://uts-ws.nlm.nih.gov/rest/content/2015AA/source/MEDCIN/34696",
     "name": "closed fracture of carpal bone"
 
 },
@@ -155,7 +153,7 @@ Many times a search will return more than one page of results.  Json data return
 but the current implementation does not tell you how many total pages of results there are as a result of your search.  So how do you know when you've reached the end of
 your search results?   On the /search endpoint, the end of your search results will always:
 
-*   Exist on their on page (not live on the same page with the rest of your search results)
+*   Exist on their own unique page (not live on the same page with the rest of your search results)
 *   Contain the following structure:
 
 ~~~~.json

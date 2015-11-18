@@ -2,12 +2,9 @@ title=Retrieving UMLS Relationship Information from UTS SOAP API
 date=2015-08-18
 updated=2015-08-18
 type=page
-status=unpublished
-category=Retrieving UMLS Concepts in SOAP API
+status=published
 navorder=10
 ~~~~~~
-
->
 
 **Method: **getConceptConceptRelations(String ticket,String version,String conceptId,PSF psf)
 

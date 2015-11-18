@@ -2,20 +2,21 @@ title=Retrieving UMLS Atom Cluster Information from UTS SOAP API
 date=2015-08-17
 updated=2015-08-17
 type=page
-status=unpublished
-category=Retrieving UMLS Concepts
+status=published
 navorder=6
 ~~~~~~
->
 
-**Method:**getDefaultPreferredAtom(String ticket,String version,String atomClusterId,String rootSourceAbbreviation)
 
-**Returns:**AtomDTO(see javadocs)(javadocs/gov/nih/nlm/umls/dto/content/AtomDTO.html)
+Interface| Method|Use Case|Object or Data type Returned 
+-- | -- | -- | --
+**UtsWsContentController**||||
+ |[getCode](#getcode)|Retrieve information for a known source-asserted code|SourceAtomClusterDTO 
+ |[getSourceConcept](#getsourceconcept)|Retrieve information for a known source-asserted concept |SourceAtomClusterDTO 
+ |[getSourceDescriptor](#getsourcedescriptor)|Retrieve information for a known source-asserted descriptor|SourceAtomClusterDTO
+ |[getDefaultPreferredAtom](/soap/atoms/#getdefaultpreferredatom)|Retrieve the highest-ranking atom for a known source-asserted concept, code, or descriptor | AtomDTO
 
-**Use Case:** You have a source concept id (SCUI), source descriptor id (SDUI), or CODE from a known source vocabulary. You want the name and term type of the default preferred atom of the cluster, as well as the default preferred name of the CUI to which it belongs for comparison.
+**Each of these examples below requires an instance of the [UtsWsContentController](/soap/installation/content.html) and [UtsWsSecurityController](/soap/installation/authentication.html) interfaces**.
 
-**Note:** AtomDTOs have other embedded objects such as SourceAtomClusterDTO, ConceptDTO, and TermStringDTO. These other objects and their methods are accessible via getters. You can access, for example, the CUI that the atom belongs to by using getConcept().getUi();
-See Javadocs for more details.
 
 #### Sample Input (Java):
 
@@ -44,7 +45,7 @@ content.atomDTO myAtom = utsContentService.getDefaultPreferredAtom(ticket, "2011
 
 #### Sample Output:
 
-~~~~
+~~~~text
   AUI: A3577659
    Atom Name: Neoplasm of brain
    Term Type: PT
@@ -53,19 +54,15 @@ content.atomDTO myAtom = utsContentService.getDefaultPreferredAtom(ticket, "2011
    Concept Preferred Name: Brain Neoplasms
   
 ~~~~
->
 
+### getCode
 
-**Method:**getCode(String ticket,String version,String codeId,String rootSourceAbbreviation)
-
-**Returns:**SourceAtomClusterDTO(see javadocs)</span>](javadocs/gov/nih/nlm/umls/dto/content/SourceAtomClusterDTO.html)
-
-**Use Case:** You have a known code from a known source and want to find out information such as its name, as well as if the code has any code-level relations or attributes attached to it.
+**Method Signature**: ```getCode(String ticket,String version,String codeId,String rootSourceAbbreviation)```
 
 #### Sample Input (Java):
 
-~~~~
-SourceAtomClusterDTO myCode = utsContentService.getCode(ticket, 2011AB, "53746-4", "LNC");
+~~~~java
+SourceAtomClusterDTO myCode = utsContentService.getCode(ticket, "2015AA", "53746-4", "LNC");
  String name = myCode.getDefaultPreferredName();
  int atomCount = myCode.getAtomCount();
  int codeRelationCount = myCode.getCodeRelationCount();
@@ -74,8 +71,8 @@ SourceAtomClusterDTO myCode = utsContentService.getCode(ticket, 2011AB, "53746-4
 
 #### Sample Input (C#):
 
-~~~~
-content.sourceAtomClusterDTO myCode = utsContentService.getCode(ticket, "2011AB", "53746-4", "LNC");
+~~~~c#
+content.sourceAtomClusterDTO myCode = utsContentService.getCode(ticket, "2015AA", "53746-4", "LNC");
 
  string name = myCode.defaultPreferredName;
  int atomCount = myCode.atomCount;
@@ -86,95 +83,84 @@ content.sourceAtomClusterDTO myCode = utsContentService.getCode(ticket, "2011AB"
 
 #### Sample Output:
 
-~~~~
+~~~~text
    Code Name: Barbiturates panel:-:Point in time:Urine:-
    Number of Atoms in this code: 4
-   Number of code-level relations: 7
-   Number of attributes of this code: 0
+   Number of Code relations: 14
+   Number of Code attributes: 16
 ~~~~
->
 
-**Method:**getSourceConcept(String ticket,String version,String sourceConceptId,String rootSourceAbbreviation)
+### getSourceConcept
 
-**Returns:**SourceAtomClusterDTO(see javadocs)(javadocs/gov/nih/nlm/umls/dto/content/SourceAtomClusterDTO.html)
-
-
-**Use Case:** Given a UMLS release, source-asserted concept identifier (SCUI) and root source abbreviation (RSAB) this call returns details of the concept as it appears in the source. Details include some of the same details returned by getConcept (atomCount, atomRelationCount, attributeCount, defaultPreferredName, suppressible), as well as a number
-of source-specific details
-
+**Method Signature**: ```getSourceConcept(String ticket,String version,String sourceConceptId,String rootSourceAbbreviation)```
 
 #### Sample Input (Java):
 
-~~~~
-SourceAtomClusterDTO myCode = utsContentService.getSourceConcept(ticket, umlsRelease, "150618008", "SNOMEDCT");
+~~~~java
+SourceAtomClusterDTO myCode = utsContentService.getSourceConcept(ticket, "2015AA", "9468002", "SNOMEDCT_US");
 
- String name = myCode.getDefaultPreferredName();
- int atomCount = myCode.getAtomCount();
- int codeRelationCount = myCode.getCodeRelationCount();
- int attributeCount = myCode.getAttributeCount();
+ String name = mySourceConcept.getDefaultPreferredName();
+ int atomCount = mySourceConcept.getAtomCount();
+ int codeRelationCount = mySourceConcept.getSourceConceptRelationCount();
+ int attributeCount = mySourceConcept.getAttributeCount();
 ~~~~
 
 #### Sample Input (C#):
 
-~~~~
-content.sourceAtomClusterDTO myCode = utsContentService.getSourceConcept(ticket, "2012AA", "150618008", "SNOMEDCT");
+~~~~c#
+content.sourceAtomClusterDTO mySourceConcept = utsContentService.getSourceConcept(ticket, "2015AA", "9468002", "SNOMEDCT_US");
 
- string name = myCode.defaultPreferredName;
- int atomCount = myCode.atomCount;
- int codeRelationCount = myCode.codeRelationCount;
- int attributeCount = myCode.attributeCount;
+ string name = mySourceConcept.defaultPreferredName;
+ int atomCount = mySourceConcept.atomCount;
+ int codeRelationCount = mySourceConcept.sourceConceptRelationCount;
+ int attributeCount = mySourceConcept.attributeCount;
 ~~~~
 
 #### Sample Output:
 
+~~~~text
+Source Concept Name: Closed fracture carpal bone               
+Number of Atoms in Source Concept: 6
+Number of Source Concept relations: 28
+Number of Source Concept attributes: 5
 ~~~~
-SRCConcept DefPrefName: Closed reduction of fracture of hip                 
-SRCConcept AtomCnt: 3
-SRCConcept CodeRelCnt: 0
-SRCConcept AttrCnt: 4
-~~~~
 
->
+### getSourceDescriptor
 
-**Method:**getSourceDescriptor(String ticket,String version,String sourceDescriptorId,String rootSourceAbbreviation)
-
-**Returns:**SourceAtomClusterDTO(see javadocs)](javadocs/gov/nih/nlm/umls/dto/content/SourceAtomClusterDTO.html)
-
-**Use Case:** Given a UMLS release, source descriptor identifier (SDUI) and root source abbreviation (RSAB), this call returns the details of the source descriptor.
+**Method Signature**: ```getSourceDescriptor(String ticket,String version,String sourceDescriptorId,String rootSourceAbbreviation)```
 
 
 #### Sample Input (Java):
 
-~~~~
-SourceAtomClusterDTO myCode = utsContentService.getSourceDescriptor(ticket, umlsRelease, "D015060", "MSH");
+~~~~java
+SourceAtomClusterDTO mySourceDescriptor = utsContentService.getSourceDescriptor(ticket, "2015AA", "D009369", "MSH");
 
- String name = myCode.getDefaultPreferredName();
- int atomCount = myCode.getAtomCount();
- int codeRelationCount = myCode.getCodeRelationCount();
- int attributeCount = myCode.getAttributeCount();
+ String name = mySourceDescriptor.getDefaultPreferredName();
+ int atomCount = mySourceDescriptor.getAtomCount();
+ int codeRelationCount = mySourceDescriptor.getSourceDescriptorRelationCount();
+ int attributeCount = mySourceDescriptor.getAttributeCount();
 ~~~~
 
 #### Sample Input (C#):
 
-~~~~
-content.sourceAtomClusterDTO myCode = utsContentService.getSourceDescriptor(ticket, "2012AA", "D015060", "MSH");
+~~~~c#
+content.sourceAtomClusterDTO myCode = utsContentService.getSourceDescriptor(ticket, "2015AA", "D009369", "MSH");
 
- string name = myCode.defaultPreferredName;
- int atomCount = myCode.atomCount;
- int codeRelationCount = myCode.codeRelationCount;
- int attributeCount = myCode.attributeCount;
+ string name = mySourceDescriptor.defaultPreferredName;
+ int atomCount = mySourceDescriptor.atomCount;
+ int codeRelationCount = mySourceDescriptor.codeRelationCount;
+ int attributeCount = mySourceDescriptor.attributeCount;
 ~~~~
 
 
 #### Sample Output:
 
+~~~~text
+Source Descriptor name: Neoplasms            
+Number of atoms in Source Descriptor: 14
+Number of Source Descriptor Relations: 96
+Number of Source Descriptor Attributes: 22         
 ~~~~
-SRCDescriptor DefPrefName: 1,2-Dipalmitoylphosphatidylcholine            
-SRCDescriptor AtomCnt:14
-SRCDescriptor CodeRelCnt: 0   
-SRCDescriptor AttrCnt: 10           
-~~~~
->
 
 
 **Method:**getCodeAtoms(String ticket,String version,String codeId,String rootSourceAbbreviation,PSF psf)
