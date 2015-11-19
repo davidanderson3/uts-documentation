@@ -29,7 +29,7 @@ Section|Method|Use Case
  |[Relationships](/soap/relationships/index.html) | Retrieve UMLS relationships
  |[Attributes](/soap/attributes/index.html) | Retrieve CUI and code attributes
 **UMLS Metadata**|||
- |[UMLS Version](/soap/umlsversionmetadata/index.html) | Retrieve information about UMLS versions
+ |[UMLS Metadata](/soap/umlsmetadata/index.html) | Retrieve UMLS Metadata such as updated vocabluaries within a UMLS version
 **Semantic Types**|||
  |[Semantic Type](/soap/semantictypes/index.html) | Retrieve information about semantic types
  |[Semantic Group](/soap/semanticgroup/index.html) | Retrieve information about semantic groups
