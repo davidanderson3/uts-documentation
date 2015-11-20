@@ -9,10 +9,7 @@ navorder=1
 Released: November 20, 2015
 
 #### Features:
-* **Retrieving source-asserted attributes**
-  Retrieve source-asserted attributes of a source-asserted identifier.
-* **Add links to SourceAtomCluster objects to discover CUIs**
-  This will allows users to easily discover the UMLS CUI(s) associated with a source-asserted code, concept, or descriptor.
+* **Retrieving [source-asserted attributes](/rest/source-asserted-identifiers/attributes/index.html) of a source-asserted identifier, such as ```EFFECTIVE_TIME``` of a SNOMEDCT concept**
 
 #### Change:
 * **sourceUi**
@@ -20,7 +17,7 @@ Released: November 20, 2015
 
 #### Known issues:
 
-There are no known issues at this time.
+* ```concepts``` link in the output of SourceAtomCluster objects returns incorrect list of CUIs.
 
 #### Planned Updates
 
