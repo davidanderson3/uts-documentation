@@ -25,8 +25,8 @@ You may use any valid UMLS release back to 2008AA in your URI if you would like 
 
 Sample URI|Description|Returned JSON Object classType
 --- | ---
-/content/current/source/SNOMEDCT_US/9468002/ancestors| Retrieves ancestors of the SNOMED concept| SourceAtomCluster
-/content/current/source/SNOMEDCT_US/9468002/descendants| Retrieves descendants of the SNOMED concept| SourceAtomCluster
+/content/current/source/SNOMEDCT_US/9468002/ancestors|Retrieves ancestors of a source-asserted identifier|SourceAtomCluster
+/content/current/source/SNOMEDCT_US/9468002/descendants|Retrieves descendants of a source-asserted identifier|SourceAtomCluster
 
 
 ### Query Parameters
