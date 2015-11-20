@@ -1,20 +1,22 @@
 title=Release Notes and Roadmap
 date=2015-11-09
-updated=2015-11-09
+updated=2015-11-20
 type=page
 status=published
 navorder=1
 ~~~~~~
 
-Released: November 9, 2015
+Released: November 20, 2015
 
 #### Features:
-* **New data**
-    The 2015AB UMLS data are now searchable via the API.
+* **Retrieving source-asserted attributes**
+  Retrieve source-asserted attributes of a source-asserted identifier.
+* **Add links to SourceAtomCluster objects to discover CUIs**
+  This will allows users to easily discover the UMLS CUI(s) associated with a source-asserted code, concept, or descriptor.
 
 #### Change:
 * **sourceUi**
-  The ```sourceUi``` data element returned in [SourceAtomCluster objects](/rest/source-asserted-identifiers/#sample-output) has been removed.
+  The ```sourceUi``` data element has been added to [Source-Asserted Subsets Member Attributes output](/rest/source-asserted-identifiers/subsets/#sample-output).
 
 #### Known issues:
 
@@ -25,10 +27,6 @@ There are no known issues at this time.
 The following new items are planned for upcoming versions of the API.    
 
 ##### Features:
-* **Retrieving source-asserted attributes**
-  Retrieve source-asserted attributes of a source-asserted identifier.
 * **Retrieving content views**
   Retrieve all content views, retrieve members of a specified content views.
-* **Add links to SourceAtomCluster objects to discover CUIs**
-  This will allows users to easily discover the UMLS CUI(s) associated with a source-asserted code, concept, or descriptor.
 * **Add history mechanism so users can retrieve CUIs that are no longer in the latest UMLS release**

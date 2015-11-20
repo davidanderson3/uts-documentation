@@ -1,6 +1,6 @@
 title=Retrieving Source-Asserted Subsets
 date=2015-09-30
-updated=2015-09-30
+updated=2015-11-20
 type=page
 status=published
 category=Retrieving Source-Asserted Data
@@ -47,7 +47,7 @@ pageSize | N | Whole number that specifies the number of results to include per 
 
 ### Sample Output
 
-Sample output for /content/2015AA/subsets?ticket=ST...
+Sample output for /content/current/subsets?ticket=ST...
 
 ~~~~json
 {
@@ -66,40 +66,140 @@ Sample output for /content/2015AA/subsets?ticket=ST...
             "atomMemberCount": 0,
             "sourceConceptMemberCount": 4,
             "relationMemberCount": 0,
-            "uri": "https://uts-ws.nlm.nih.gov/rest/content/2015AA/subsets/source/SCTSPA/900000000000534007"
+            "uri": "https://uts-ws.nlm.nih.gov/rest/content/2015AA/subsets/source/SCTSPA/900000000000534007",
+            "subsetAttributes": "https://uts-ws.nlm.nih.gov/rest/content/2015AA/subsets/source/SCTSPA/900000000000534007/attributes"
         },
 ...
         {
             "classType": "Subset",
-            "ui": "C3882623",
-            "sourceUi": "6011000124106",
+            "ui": "C3853348",
+            "sourceUi": "442311000124105",
             "rootSource": "SNOMEDCT_US",
-            "name": "ICD-10-CM complex map reference set",
-            "description": "ICD-10-CM complex map reference set",
+            "name": "Route of administration reference set",
+            "description": "Route of administration reference set",
             "attributeCount": 1,
             "atomMemberCount": 0,
-            "sourceConceptMemberCount": 54262,
+            "sourceConceptMemberCount": 144,
             "relationMemberCount": 0,
-            "uri": "https://uts-ws.nlm.nih.gov/rest/content/2015AA/subsets/source/SNOMEDCT_US/6011000124106",
-            "subsetAttributes": "https://uts-ws.nlm.nih.gov/rest/content/2015AA/subsets/source/SNOMEDCT_US/6011000124106/attributes"
+            "uri": "https://uts-ws.nlm.nih.gov/rest/content/2015AA/subsets/source/SNOMEDCT_US/442311000124105",
+            "subsetAttributes": "https://uts-ws.nlm.nih.gov/rest/content/2015AA/subsets/source/SNOMEDCT_US/442311000124105/attributes"
         },
 ...
         {
             "classType": "Subset",
-            "ui": "C3645570",
-            "sourceUi": "900000000000509007",
+            "ui": "C3714467",
+            "sourceUi": "447562003",
             "rootSource": "SNOMEDCT_US",
-            "name": "US English",
-            "description": "US English",
+            "name": "ICD-10 complex map reference set",
+            "description": "ICD-10 complex map reference set",
             "attributeCount": 1,
-            "atomMemberCount": 1213661,
-            "sourceConceptMemberCount": 0,
+            "atomMemberCount": 0,
+            "sourceConceptMemberCount": 43041,
             "relationMemberCount": 0,
-            "uri": "https://uts-ws.nlm.nih.gov/rest/content/2015AA/subsets/source/SNOMEDCT_US/900000000000509007"
+            "uri": "https://uts-ws.nlm.nih.gov/rest/content/2015AA/subsets/source/SNOMEDCT_US/447562003",
+            "subsetAttributes": "https://uts-ws.nlm.nih.gov/rest/content/2015AA/subsets/source/SNOMEDCT_US/447562003/attributes"
         },
 ...
     ]
 }
-
 ~~~~
 
+Sample output for /content/current/subsets/source/SNOMEDCT_US/442311000124105/members?ticket=ST...
+
+~~~~json
+{
+    "pageSize": 25,
+    "pageNumber": 1,
+    "pageCount": 6,
+    "result": [
+        {
+            "classType": "SourceConceptSubsetMember",
+            "name": "Suborbital route",
+            "attributeCount": 0,
+            "ui": "AT201016710",
+            "sourceUi": "416174007",
+            "rootSource": "SNOMEDCT_US",
+            "sourceConcept": "https://uts-ws.nlm.nih.gov/rest/content/2015AA/source/SNOMEDCT_US/416174007",
+            "subsetMemberAttributes": "https://uts-ws.nlm.nih.gov/rest/content/2015AA/subsets/source/SNOMEDCT_US/442311000124105/members/416174007/attributes"
+        },
+        {
+            "classType": "SourceConceptSubsetMember",
+            "name": "Intraocular route",
+            "attributeCount": 0,
+            "ui": "AT201110390",
+            "sourceUi": "372468001",
+            "rootSource": "SNOMEDCT_US",
+            "sourceConcept": "https://uts-ws.nlm.nih.gov/rest/content/2015AA/source/SNOMEDCT_US/372468001",
+            "subsetMemberAttributes": "https://uts-ws.nlm.nih.gov/rest/content/2015AA/subsets/source/SNOMEDCT_US/442311000124105/members/372468001/attributes"
+        },
+        {
+            "classType": "SourceConceptSubsetMember",
+            "name": "Intracerebral route",
+            "attributeCount": 0,
+            "ui": "AT200236815",
+            "sourceUi": "446540005",
+            "rootSource": "SNOMEDCT_US",
+            "sourceConcept": "https://uts-ws.nlm.nih.gov/rest/content/2015AA/source/SNOMEDCT_US/446540005",
+            "subsetMemberAttributes": "https://uts-ws.nlm.nih.gov/rest/content/2015AA/subsets/source/SNOMEDCT_US/442311000124105/members/446540005/attributes"
+        },
+...
+    ]
+}
+~~~~
+
+Sample output for /content/current/subsets/source/SNOMEDCT_US/442311000124105/attributes?ticket=ST...
+
+~~~~json
+{
+    "pageSize": 25,
+    "pageNumber": 1,
+    "pageCount": 1,
+    "result": [
+        {
+            "classType": "Attribute",
+            "ui": "ATM255",
+            "sourceUi": "NONE",
+            "rootSource": "SNOMEDCT_US",
+            "name": "LANG",
+            "value": "ENG"
+        }
+    ]
+}
+~~~~
+
+Sample output for /content/current/subsets/source/SNOMEDCT_US/6011000124106/members/89361000119103/attributes?ticket=ST...
+
+~~~~json
+{
+    "pageSize": 25,
+    "pageNumber": 1,
+    "pageCount": 1,
+    "result": [
+        {
+            "classType": "Attribute",
+            "ui": "ATM36778504",
+            "sourceUi": "0c9ff6e0-ca17-5d8e-930a-0bc839769e34",
+            "rootSource": "SNOMEDCT_US",
+            "name": "MAPGROUP",
+            "value": "1"
+        },
+        {
+            "classType": "Attribute",
+            "ui": "ATM36778505",
+            "sourceUi": "0c9ff6e0-ca17-5d8e-930a-0bc839769e34",
+            "rootSource": "SNOMEDCT_US",
+            "name": "MAPADVICE",
+            "value": "ALWAYS F80.0"
+        },
+        {
+            "classType": "Attribute",
+            "ui": "ATM36778506",
+            "sourceUi": "0c9ff6e0-ca17-5d8e-930a-0bc839769e34",
+            "rootSource": "SNOMEDCT_US",
+            "name": "MAPTARGET",
+            "value": "F80.0"
+        },
+...
+    ]
+}
+~~~~

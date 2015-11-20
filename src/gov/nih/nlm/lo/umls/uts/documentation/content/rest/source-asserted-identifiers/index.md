@@ -1,6 +1,6 @@
 title=Retrieving Source-Asserted Information
 date=2015-07-01
-updated=2015-11-19
+updated=2015-11-20
 type=page
 status=published
 category=Retrieving Source-Asserted Data
@@ -60,14 +60,15 @@ Sample output for /content/current/source/SNOMEDCT_US/9468002?ticket=ST...
         "rootSource": "SNOMEDCT_US",
         "atomCount": 6,
         "cVMemberCount": 0,
-        "attributes": "https://uts-ws.nlm.nih.gov/rest/content/2015AB/source/SNOMEDCT_US/9468002/attributes",
-        "atoms": "https://uts-ws.nlm.nih.gov/rest/content/2015AB/source/SNOMEDCT_US/9468002/atoms",
-        "descendants": "https://uts-ws.nlm.nih.gov/rest/content/2015AB/source/SNOMEDCT_US/9468002/descendants",
-        "ancestors": "https://uts-ws.nlm.nih.gov/rest/content/2015AB/source/SNOMEDCT_US/9468002/ancestors",
-        "parents": "https://uts-ws.nlm.nih.gov/rest/content/2015AB/source/SNOMEDCT_US/9468002/parents",
-        "children": "https://uts-ws.nlm.nih.gov/rest/content/2015AB/source/SNOMEDCT_US/9468002/children",
-        "relations": "https://uts-ws.nlm.nih.gov/rest/content/2015AB/source/SNOMEDCT_US/9468002/relations",
+        "attributes": "https://uts-ws.nlm.nih.gov/rest/content/2015AA/source/SNOMEDCT_US/9468002/attributes",
+        "atoms": "https://uts-ws.nlm.nih.gov/rest/content/2015AA/source/SNOMEDCT_US/9468002/atoms",
+        "descendants": "https://uts-ws.nlm.nih.gov/rest/content/2015AA/source/SNOMEDCT_US/9468002/descendants",
+        "ancestors": "https://uts-ws.nlm.nih.gov/rest/content/2015AA/source/SNOMEDCT_US/9468002/ancestors",
+        "parents": "https://uts-ws.nlm.nih.gov/rest/content/2015AA/source/SNOMEDCT_US/9468002/parents",
+        "children": "https://uts-ws.nlm.nih.gov/rest/content/2015AA/source/SNOMEDCT_US/9468002/children",
+        "relations": "https://uts-ws.nlm.nih.gov/rest/content/2015AA/source/SNOMEDCT_US/9468002/relations",
         "definitions": "NONE",
+        "concepts": "https://uts-ws.nlm.nih.gov/rest/search/2015AA?string=9468002&sabs=SNOMEDCT_US&searchType=exact&inputType=sourceUi",
         "name": "Closed fracture carpal bone"
     }
 }
