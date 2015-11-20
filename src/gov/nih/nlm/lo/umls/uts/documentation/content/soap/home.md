@@ -22,23 +22,14 @@ Section|Method|Use Case
  |[Atoms](/soap/atoms/index.html)| Retrieve UMLS Atoms 
  |[Definitions](/soap/definitions/index.html)| Retrieve UMLS Definitions 
  |[Term](/soap/term/index.html)| Retrieve UMLS Terms
- |[SUI](/soap/sui/index.html)| Retrieve UMLS Strings  
- |[Atom Cluster](/soap/atomcluster/index.html)| Retrieve source-asserted data
+ |[Strings](/soap/sui/index.html)| Retrieve UMLS Strings  
+ |[Atom Cluster](/soap/atomcluster/index.html)| Retrieve source-asserted concepts,descriptors, and codes
  |[Content View](/soap/contentview/index.html) | Retrieve UMLS content views
  |[Subset](/soap/subset/index.html)| Retrieve UMLS subsets
- |[Mappings](/soap/mappings/index.html) | Retrieve UMLS mappings
  |[Relationships](/soap/relationships/index.html) | Retrieve UMLS relationships
  |[Attributes](/soap/attributes/index.html) | Retrieve CUI and code attributes
- |[Tree Positions](/soap/treepositions/index.html) | Retrieve Tree Positions
-**Source vocabulary metadata**|||
- |[UMLS Version](/soap/umlsversionmetadata/index.html) | Retrieve information about UMLS versions
- |[Source Metadata](/soap/sourcemetadata/index.html) | Retrieve information about UMLS source vocabularies
- |[Language Metadata](/soap/languagemetadata/index.html) | Retrieve information about which languages are in the UMLS
- |[Source Citation Metadata](/soap/sourcecitationmetadata/index.html) | Retrieve source vocabulary citation information
- |[Subheading Metadata](/soap/subheading/index.html) | Retrieve source vocabulary subheading information
- |[TermType Metadata](/soap/termtypemetadata/index.html) | Retrieve information about UMLS term types
- |[Relationship Metadata](/soap/relationshipmetadata/index.html) | Retrieve information about relationships
- |[Attribute Metadata](/soap/attributemetadata/index.html) | Retrieve information about attributes
+**UMLS Metadata**|||
+ |[UMLS Metadata](/soap/umlsmetadata/index.html) | Retrieve UMLS Metadata such as updated vocabluaries within a UMLS version
 **Semantic Types**|||
  |[Semantic Type](/soap/semantictypes/index.html) | Retrieve information about semantic types
  |[Semantic Group](/soap/semanticgroup/index.html) | Retrieve information about semantic groups

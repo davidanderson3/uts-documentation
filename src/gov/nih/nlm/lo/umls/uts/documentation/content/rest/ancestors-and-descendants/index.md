@@ -25,8 +25,8 @@ You may use any valid UMLS release back to 2008AA in your URI if you would like 
 
 Sample URI|Description|Returned JSON Object classType
 --- | ---
-/content/current/source/SNOMEDCT_US/9468002/ancestors| Retrieves ancestors of the SNOMED concept| SourceAtomCluster
-/content/current/source/SNOMEDCT_US/9468002/descendants| Retrieves descendants of the SNOMED concept| SourceAtomCluster
+/content/current/source/SNOMEDCT_US/9468002/ancestors|Retrieves ancestors of a source-asserted identifier|SourceAtomCluster
+/content/current/source/SNOMEDCT_US/9468002/descendants|Retrieves descendants of a source-asserted identifier|SourceAtomCluster
 
 
 ### Query Parameters
@@ -44,6 +44,9 @@ Sample output for /content/current/source/SNOMEDCT_US/9468002/ancestors?ticket=S
 
 ~~~~json
 {
+    "pageSize": 25,
+    "pageNumber": 1,
+    "pageCount": 2,
     "result": [
         {
             "classType": "SourceAtomCluster",
@@ -53,15 +56,14 @@ Sample output for /content/current/source/SNOMEDCT_US/9468002/ancestors?ticket=S
             "rootSource": "SNOMEDCT_US",
             "atomCount": 3,
             "cVMemberCount": 0,
-            "attributes": "https://uts-ws.nlm.nih.gov/rest/content/2015AA/source/SNOMEDCT_US/105606008/attributes",
-            "atoms": "https://uts-ws.nlm.nih.gov/rest/content/2015AA/source/SNOMEDCT_US/105606008/atoms",
-            "descendants": "https://uts-ws.nlm.nih.gov/rest/content/2015AA/source/SNOMEDCT_US/105606008/descendants",
-            "ancestors": "https://uts-ws.nlm.nih.gov/rest/content/2015AA/source/SNOMEDCT_US/105606008/ancestors",
-            "parents": "https://uts-ws.nlm.nih.gov/rest/content/2015AA/source/SNOMEDCT_US/105606008/parents",
-            "children": "https://uts-ws.nlm.nih.gov/rest/content/2015AA/source/SNOMEDCT_US/105606008/children",
-            "relations": "NONE",
+            "attributes": "https://uts-ws.nlm.nih.gov/rest/content/2015AB/source/SNOMEDCT_US/105606008/attributes",
+            "atoms": "https://uts-ws.nlm.nih.gov/rest/content/2015AB/source/SNOMEDCT_US/105606008/atoms",
+            "descendants": "https://uts-ws.nlm.nih.gov/rest/content/2015AB/source/SNOMEDCT_US/105606008/descendants",
+            "ancestors": "https://uts-ws.nlm.nih.gov/rest/content/2015AB/source/SNOMEDCT_US/105606008/ancestors",
+            "parents": "https://uts-ws.nlm.nih.gov/rest/content/2015AB/source/SNOMEDCT_US/105606008/parents",
+            "children": "https://uts-ws.nlm.nih.gov/rest/content/2015AB/source/SNOMEDCT_US/105606008/children",
+            "relations": "https://uts-ws.nlm.nih.gov/rest/content/2015AB/source/SNOMEDCT_US/105606008/relations",
             "definitions": "NONE",
-            "memberships": "NONE",
             "name": "Injury of musculoskeletal system"
         },
         {
@@ -72,15 +74,14 @@ Sample output for /content/current/source/SNOMEDCT_US/9468002/ancestors?ticket=S
             "rootSource": "SNOMEDCT_US",
             "atomCount": 5,
             "cVMemberCount": 0,
-            "attributes": "https://uts-ws.nlm.nih.gov/rest/content/2015AA/source/SNOMEDCT_US/105969002/attributes",
-            "atoms": "https://uts-ws.nlm.nih.gov/rest/content/2015AA/source/SNOMEDCT_US/105969002/atoms",
-            "descendants": "https://uts-ws.nlm.nih.gov/rest/content/2015AA/source/SNOMEDCT_US/105969002/descendants",
-            "ancestors": "https://uts-ws.nlm.nih.gov/rest/content/2015AA/source/SNOMEDCT_US/105969002/ancestors",
-            "parents": "https://uts-ws.nlm.nih.gov/rest/content/2015AA/source/SNOMEDCT_US/105969002/parents",
-            "children": "https://uts-ws.nlm.nih.gov/rest/content/2015AA/source/SNOMEDCT_US/105969002/children",
-            "relations": "NONE",
+            "attributes": "https://uts-ws.nlm.nih.gov/rest/content/2015AB/source/SNOMEDCT_US/105969002/attributes",
+            "atoms": "https://uts-ws.nlm.nih.gov/rest/content/2015AB/source/SNOMEDCT_US/105969002/atoms",
+            "descendants": "https://uts-ws.nlm.nih.gov/rest/content/2015AB/source/SNOMEDCT_US/105969002/descendants",
+            "ancestors": "https://uts-ws.nlm.nih.gov/rest/content/2015AB/source/SNOMEDCT_US/105969002/ancestors",
+            "parents": "https://uts-ws.nlm.nih.gov/rest/content/2015AB/source/SNOMEDCT_US/105969002/parents",
+            "children": "https://uts-ws.nlm.nih.gov/rest/content/2015AB/source/SNOMEDCT_US/105969002/children",
+            "relations": "https://uts-ws.nlm.nih.gov/rest/content/2015AB/source/SNOMEDCT_US/105969002/relations",
             "definitions": "NONE",
-            "memberships": "NONE",
             "name": "Disorder of connective tissue"
         },
         {
@@ -91,24 +92,19 @@ Sample output for /content/current/source/SNOMEDCT_US/9468002/ancestors?ticket=S
             "rootSource": "SNOMEDCT_US",
             "atomCount": 5,
             "cVMemberCount": 0,
-            "attributes": "https://uts-ws.nlm.nih.gov/rest/content/2015AA/source/SNOMEDCT_US/106028002/attributes",
-            "atoms": "https://uts-ws.nlm.nih.gov/rest/content/2015AA/source/SNOMEDCT_US/106028002/atoms",
-            "descendants": "https://uts-ws.nlm.nih.gov/rest/content/2015AA/source/SNOMEDCT_US/106028002/descendants",
-            "ancestors": "https://uts-ws.nlm.nih.gov/rest/content/2015AA/source/SNOMEDCT_US/106028002/ancestors",
-            "parents": "https://uts-ws.nlm.nih.gov/rest/content/2015AA/source/SNOMEDCT_US/106028002/parents",
-            "children": "https://uts-ws.nlm.nih.gov/rest/content/2015AA/source/SNOMEDCT_US/106028002/children",
-            "relations": "NONE",
+            "attributes": "https://uts-ws.nlm.nih.gov/rest/content/2015AB/source/SNOMEDCT_US/106028002/attributes",
+            "atoms": "https://uts-ws.nlm.nih.gov/rest/content/2015AB/source/SNOMEDCT_US/106028002/atoms",
+            "descendants": "https://uts-ws.nlm.nih.gov/rest/content/2015AB/source/SNOMEDCT_US/106028002/descendants",
+            "ancestors": "https://uts-ws.nlm.nih.gov/rest/content/2015AB/source/SNOMEDCT_US/106028002/ancestors",
+            "parents": "https://uts-ws.nlm.nih.gov/rest/content/2015AB/source/SNOMEDCT_US/106028002/parents",
+            "children": "https://uts-ws.nlm.nih.gov/rest/content/2015AB/source/SNOMEDCT_US/106028002/children",
+            "relations": "https://uts-ws.nlm.nih.gov/rest/content/2015AB/source/SNOMEDCT_US/106028002/relations",
             "definitions": "NONE",
-            "memberships": "NONE",
             "name": "Musculoskeletal finding"
         },
         
 ...
-
-    ],
-    "pageNumber": 1,
-    "pageSize": 25,
-    "pageCount": 2
+    ]
 }
 ~~~~
 

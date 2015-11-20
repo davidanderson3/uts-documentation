@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="DC.Title" content = "UMLS Terminology Services REST API Technical Documentation" />
     <meta name="DC.Publisher" content="U.S. National Library of Medicine" />
-    <meta name="DC.Subject.Keyword" content="Unified Medical Language System API, UTS REST API, Terminology Service, Biomedical Terminology Endpoint">
+    <meta name="DC.Subject.Keyword" content="Unified Medical Language System API, UMLS REST API, UMLS API, Terminology Service, Biomedical Terminology Endpoint">
     <meta name="DC.Rights" content="Public Domain" />
     <meta name="DC.Language" content="eng" />
     <meta name="generator" content="JBake">

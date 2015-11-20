@@ -28,7 +28,7 @@ Sample URI|Description|Returned JSON Object classType
 /search/current?string=fracture of carpal bone | Retrieves CUIs for a search term | searchResults
 /search/current?string=fracture of carpal bone&searchType=exact | Uses 'exact' searching | searchResults
 /search/current?string=fracture of carpal bone&sabs=SNOMEDCT_US&returnIdType=codes | Returns SNOMEDCT concepts associated with a search term  | searchResults
-/search/current?string=82065001&inputType=code&searchType=exact&sabs=SNOMEDCT_US | Returns UMLS CUIs associated with a SNOMEDCT_US concept | searchResults
+/search/current?string=9468002&inputType=sourceUi&searchType=exact&sabs=SNOMEDCT_US | Returns UMLS CUIs associated with a SNOMEDCT_US concept | searchResults
 
 ### Query Parameters
 
@@ -36,7 +36,7 @@ Parameter name | Required? Y/N | Description|  Valid Values | Default value | Us
 --- | ---
 ticket | Y | A single-use service ticket is required for each call to the API. See [authentication](../authentication.html) for more information | n/a | n/a | n/a
 string | Y|  A human readable term, such as 'gestatational diabetes', or a code from a source vocabulary, such as 11687002 from SNOMEDCT_US. | Any term or code in the UMLS. | n/a | n/a
-inputType | N | Specifies the data type you are using as your search parameter.  | 'atom', 'code','sourceConcept','sourceDescriptor' | 'atom' | n/a
+inputType | N | Specifies the data type you are using as your search parameter.  | 'atom', 'code','sourceConcept','sourceDescriptor', 'sourceUi' | 'atom' | n/a
 includeObsolete | N | Return content that is a result of matches on obsolete terms. | true or false | false | n/a
 includeSuppressible | N | Return content that is a result of matches on suppressible terms. | true or false | false | n/a
 returnIdType | N | Specifies the type of identifier you wish to retrieve. | 'aui','concept','code','sourceConcept','sourceDescriptor' | 'concept' | Use 'code','sourceConcept', or 'sourceDescriptor' if you prefer source-asserted identifiers rather than CUIs in your search results.

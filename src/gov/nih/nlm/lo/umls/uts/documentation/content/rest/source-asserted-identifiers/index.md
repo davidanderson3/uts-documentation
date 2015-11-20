@@ -1,6 +1,6 @@
 title=Retrieving Source-Asserted Information
 date=2015-07-01
-updated=2015-10-08
+updated=2015-11-19
 type=page
 status=published
 category=Retrieving Source-Asserted Data
@@ -29,12 +29,12 @@ Sample URI|Description|Returned JSON Object classType
 /content/current/source/SNOMEDCT_US/9468002 | Retrieves Source Concept | SourceAtomCluster
 /content/current/source/MSH/D015242 | Retrieves Source Descriptor | SourceAtomCluster
 /content/current/source/LNC/54112-8 | Retrieves Code | SourceAtomCluster
-[/content/current/source/SNOMEDCT_US/9468002/atoms](../atoms/index.html)| Retrieve atoms in a source-asserted identifier | Atom
-[/content/current/source/SNOMEDCT_US/9468002/parents](../parents-and-children/index.html) | Retrieve immediate parents of a source-asserted identifier | SourceAtomCluster
-[/content/current/source/SNOMEDCT_US/9468002/children](../parents-and-children/index.html) | Retrieve immediate children of source-asserted identifier | SourceAtomCluster
-[/content/current/source/SNOMEDCT_US/9468002/ancestors](../ancestors-and-descendants/index.html) | Retrieve all ancestors of a source-asserted identifier | SourceAtomCluster
-[/content/current/source/SNOMEDCT_US/9468002/descendants](../ancestors-and-descendants/index.html) | Retrieve all descendants of source-asserted identifier | SourceAtomCluster
-
+[/content/current/source/SNOMEDCT_US/9468002/atoms](/rest/atoms/index.html)| Retrieve atoms in a source-asserted identifier | Atom
+[/content/current/source/SNOMEDCT_US/9468002/parents](/rest/parents-and-children/index.html) | Retrieve immediate parents of a source-asserted identifier | SourceAtomCluster
+[/content/current/source/SNOMEDCT_US/9468002/children](/rest/parents-and-children/index.html) | Retrieve immediate children of source-asserted identifier | SourceAtomCluster
+[/content/current/source/SNOMEDCT_US/9468002/ancestors](/rest/ancestors-and-descendants/index.html) | Retrieve all ancestors of a source-asserted identifier | SourceAtomCluster
+[/content/current/source/SNOMEDCT_US/9468002/descendants](/rest/ancestors-and-descendants/index.html) | Retrieve all descendants of source-asserted identifier | SourceAtomCluster
+[/content/current/source/SNOMEDCT_US/9468002/attributes](/rest/source-asserted-identifiers/attributes/index.html) | Retrieves information about source-asserted attributes | Attribute
 
 ### Query Parameters
 
@@ -49,6 +49,9 @@ Sample output for /content/current/source/SNOMEDCT_US/9468002?ticket=ST...
 
 ~~~~json
 {
+    "pageSize": 25,
+    "pageNumber": 1,
+    "pageCount": 1,
     "result": {
         "classType": "SourceAtomCluster",
         "ui": "9468002",
@@ -57,19 +60,15 @@ Sample output for /content/current/source/SNOMEDCT_US/9468002?ticket=ST...
         "rootSource": "SNOMEDCT_US",
         "atomCount": 6,
         "cVMemberCount": 0,
-        "attributes": "https://uts-ws.nlm.nih.gov/rest/content/2015AA/source/SNOMEDCT_US/9468002/attributes",
-        "atoms": "https://uts-ws.nlm.nih.gov/rest/content/2015AA/source/SNOMEDCT_US/9468002/atoms",
-        "descendants": "https://uts-ws.nlm.nih.gov/rest/content/2015AA/source/SNOMEDCT_US/9468002/descendants",
-        "ancestors": "https://uts-ws.nlm.nih.gov/rest/content/2015AA/source/SNOMEDCT_US/9468002/ancestors",
-        "parents": "https://uts-ws.nlm.nih.gov/rest/content/2015AA/source/SNOMEDCT_US/9468002/parents",
-        "children": "https://uts-ws.nlm.nih.gov/rest/content/2015AA/source/SNOMEDCT_US/9468002/children",
-        "relations": "NONE",
+        "attributes": "https://uts-ws.nlm.nih.gov/rest/content/2015AB/source/SNOMEDCT_US/9468002/attributes",
+        "atoms": "https://uts-ws.nlm.nih.gov/rest/content/2015AB/source/SNOMEDCT_US/9468002/atoms",
+        "descendants": "https://uts-ws.nlm.nih.gov/rest/content/2015AB/source/SNOMEDCT_US/9468002/descendants",
+        "ancestors": "https://uts-ws.nlm.nih.gov/rest/content/2015AB/source/SNOMEDCT_US/9468002/ancestors",
+        "parents": "https://uts-ws.nlm.nih.gov/rest/content/2015AB/source/SNOMEDCT_US/9468002/parents",
+        "children": "https://uts-ws.nlm.nih.gov/rest/content/2015AB/source/SNOMEDCT_US/9468002/children",
+        "relations": "https://uts-ws.nlm.nih.gov/rest/content/2015AB/source/SNOMEDCT_US/9468002/relations",
         "definitions": "NONE",
-        "memberships": "NONE",
         "name": "Closed fracture carpal bone"
-    },
-    "pageNumber": 1,
-    "pageSize": 25,
-    "pageCount": 1
+    }
 }
 ~~~~
