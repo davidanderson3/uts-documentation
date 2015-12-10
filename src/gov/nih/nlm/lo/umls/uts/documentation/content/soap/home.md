@@ -10,30 +10,33 @@ navorder=1
 
 **Note:** Most of the sample code displayed in the SOAP API is in Java. 
 
-Section|Method|Use Case
+Section|Interface|Use Case
 --- | --- | ---
-**Installation**|[Installation](/soap/installation/index.html)|Install the API
+**Installation**|||
+[Installation using Maven](/soap/installation/maven-installation.html)|||
+[Set up instances of the UMLS SOAP API interfaces](/soap/installation/interface-setup.html)|||
 **PSF (Paging, sorting, and filtering)**|||
- |[Filtering](/soap/paging-sorting-filtering/index.html)| Filter Results
-**Searching the UMLS**|||
- |[Finder](/soap/search/index.html) | Search the UMLS
-**UMLS Content**|||
- |[Concept](/soap/concept/index.html)| Retrieve UMLS Concept Information 
- |[Atoms](/soap/atoms/index.html)| Retrieve UMLS Atoms 
- |[Definitions](/soap/definitions/index.html)| Retrieve UMLS Definitions 
- |[Term](/soap/term/index.html)| Retrieve UMLS Terms
- |[Strings](/soap/sui/index.html)| Retrieve UMLS Strings  
- |[Atom Cluster](/soap/atomcluster/index.html)| Retrieve source-asserted concepts,descriptors, and codes
- |[Content View](/soap/contentview/index.html) | Retrieve UMLS content views
- |[Subset](/soap/subset/index.html)| Retrieve UMLS subsets
- |[Relationships](/soap/relationships/index.html) | Retrieve UMLS relationships
- |[Attributes](/soap/attributes/index.html) | Retrieve CUI and code attributes
-**UMLS Metadata**|||
- |[UMLS Metadata](/soap/umlsmetadata/index.html) | Retrieve UMLS Metadata such as updated vocabluaries within a UMLS version
-**Semantic Types**|||
- |[Semantic Type](/soap/semantictypes/index.html) | Retrieve information about semantic types
- |[Semantic Group](/soap/semanticgroup/index.html) | Retrieve information about semantic groups
-**Concept History**|||
- |[Concept History](/soap/concepthistory/index.html) | Retrieve concept history
+[Setup](/soap/installation/psf.html) |||
+[Filtering](/soap/paging-sorting-filtering/index.html)||Page and Filter Results|
+**Searching the UMLS**|**[UtsWsFinderController](/soap/installation/interface-setup.html#utswsfindercontroller)**||
+[Finder](/soap/search/index.html)||Search the UMLS
+**Retrieving UMLS Content**|**[UtsWsContentController](/soap/installation/interface-setup.html#utswscontentcontroller)**||
+[Concept](/soap/concept/index.html)||Retrieve UMLS Concept Information 
+[Atoms](/soap/atoms/index.html)||Retrieve UMLS Atoms 
+[Definitions](/soap/definitions/index.html)||Retrieve UMLS Definitions 
+[Term](/soap/term/index.html)||Retrieve UMLS Terms
+[Strings](/soap/sui/index.html)||Retrieve UMLS Strings  
+[Atom Cluster](/soap/atomcluster/index.html)||Retrieve source-asserted concepts,descriptors, and codes
+[Content View](/soap/contentview/index.html)||Retrieve UMLS content views
+[Subset](/soap/subset/index.html)||Retrieve UMLS subsets
+[Relationships](/soap/relationships/index.html)||Retrieve UMLS relationships
+[Attributes](/soap/attributes/index.html)||Retrieve CUI and code attributes
+**Retrieving UMLS Metadata**|**[UtsWsMetadataController](/soap/installation/interface-setup.html#utswsmetadatacontroller)**||
+[UMLS Metadata](/soap/umlsmetadata/index.html) ||Retrieve UMLS Metadata such as updated vocabluaries within a UMLS version
+**Retrieving UMLS Semantic Type Information**|**[UtsWsSemanticNetworkController](/soap/installation/interface-setup.html#utswssemanticnetworkcontroller)**||
+[Semantic Type](/soap/semantictypes/index.html)||Retrieve information about semantic types
+[Semantic Group](/soap/semanticgroup/index.html)||Retrieve information about semantic groups
+**Retrieving Concept History**|**[UtsWsHistoryController](/soap/installation/interface-setup.html#utswshistorycontroller)**||
+[Concept History](/soap/concepthistory/index.html) ||Retrieve concept history
 
 

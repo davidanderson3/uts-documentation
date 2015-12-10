@@ -65,5 +65,5 @@ Your settings.xml file is normally located in the .m2 directory of the $HOME acc
 ~~~~
 
 #####Step 3 - Complete the installation:
-Install the pom.xml file.  In Eclipse, for example, right click on your pom.xml file and click ```'Run As' -> 'Maven install'```
+Install the API classes.  In Eclipse, for example, right click on your pom.xml file and click ```'Run As' -> 'Maven install'```
 The UMLS SOAP API classes will download into your .m2/repository directory into a package named ```gov.nih.nlm.uts.webservice```.
