@@ -10,8 +10,8 @@ There are 6 interfaces available in the UMLS SOAP API.  You may use as many or a
 of the UtsWsSecurityController interface to handle retrieving service tickets for each call to the API.
 
 Interface | Use Cases | Guidance
--- | -- | --
-[UtsWsSecurityController](#utswssecuritycontroller) | Retrieve Ticket Granting Tickets and Service Tickets | Retrieve **one** ticket granting ticket when starting your application. Use that same ticket granting ticket to retrieve single-use service tickets for each call to the API.
+--|--|--
+[UtsWsSecurityController](#utswssecuritycontroller) | Retrieve Ticket Granting Tickets and Service Tickets | An instance of this interface is always needed to generate service tickets when making API calls.  Retrieve **one** ticket granting ticket when starting your application. Use that same ticket granting ticket to retrieve single-use service tickets for each call to the API.|
 [UtsWsContentController](#utswscontentcontroller) | Retrieve information about known identifiers such as UMLS Concepts, Atoms, Relationships, Subsets, and Attributes | |
 [UtsWsFinderController](#utswsfindercontroller) | Search for UMLS Concepts or codes using a term. | |
 [UtsWsMetadataController](#utswsmetadatacontroller) | Retrieve information about UMLS term types and source vocabularies | |
@@ -103,7 +103,7 @@ try {
 Here is an example of how to set up an instance of the UtsWsHistoryController interface.
 
 ~~~~java
- private UtsWsSemanticNetworkController utsSemanticNetworkService;
+ private UtsWsSemanticNetworkController utsHistoryService;
 
  try {
  utsHistoryService = (new UtsWsHistoryControllerImplService()).getUtsWsHistoryControllerImplPort();
