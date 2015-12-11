@@ -11,15 +11,16 @@ navorder=1
 **Note:** Most of the sample code displayed in the SOAP API is in Java. 
 
 Section|Interface|Use Case
---- | --- | ---
-**Installation**|||
+--- | --- | ---:
+**Installation**|**[UtsWsMetadataController](/soap/installation/interface-setup.html#utswsmetadatacontroller)**||
 [Installation using Maven](/soap/installation/maven-installation.html)|||
 [Set up instances of the UMLS SOAP API interfaces](/soap/installation/interface-setup.html)|||
+**Authentication**|**[UtsWsSecurityController](/soap/installation/interface-setup.html#utswssecuritycontroller)**||
+[Request authentication tickets](/soap/installation/authentication.html)||Request ticket granting tickets and single-use service tickets
 **PSF (Paging, sorting, and filtering)**|||
-[Setup](/soap/installation/psf.html) |||
-[Filtering](/soap/paging-sorting-filtering/index.html)||Page and Filter Results|
+[Using the PSF object](/soap/paging-sorting-filtering/index.html)||Page and Filter Results|
 **Searching the UMLS**|**[UtsWsFinderController](/soap/installation/interface-setup.html#utswsfindercontroller)**||
-[Finder](/soap/search/index.html)||Search the UMLS
+[Using the Finder Service](/soap/search/index.html)||Find CUIs, codes, source-asserted concepts/descriptors from human readable terms.
 **Retrieving UMLS Content**|**[UtsWsContentController](/soap/installation/interface-setup.html#utswscontentcontroller)**||
 [Concept](/soap/concept/index.html)||Retrieve UMLS Concept Information 
 [Atoms](/soap/atoms/index.html)||Retrieve UMLS Atoms 

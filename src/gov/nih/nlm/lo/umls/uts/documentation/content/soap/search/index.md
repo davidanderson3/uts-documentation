@@ -39,7 +39,7 @@ searchType|Type of search you're performing|exact (use this when passing codes t
 #### Sample Input (Java):
 
 ~~~~java
-Psf myPsf = new UtsMetathesaurusFinder.Psf();
+Psf myPsf = new Psf();
 int pageNum = 1;
 //exclude suppressible + obsolete term matches
 myPsf.setIncludeObsolete(false);
@@ -47,8 +47,8 @@ myPsf.setIncludeSuppressible(false);
 List<UiLabel> results = new ArrayList<UiLabel>();
         
     do {
-        //we need a new service ticket for each call since we're asking for a new page each time
-	String ticket = ticketClient.getSingleUseTicket(tgt);
+        //you'll need a new service ticket for each page of your call.  Here is an example.
+	String ticket = utsSecurityService.getProxyTicket(tgt,"http://umlsks.nlm.nih.gov");
 	myPsf.setPageNum(pageNum);
 	results = utsFinderService.findConcepts(ticket, "2015AB", "atom", "aglossia", "words", myPsf);
 		    
@@ -86,7 +86,7 @@ searchType|Type of search you're performing|exact (use this when passing codes t
 
 #### Sample Input (Java):
 ~~~~java
-Psf myPsf = new UtsMetathesaurusFinder.Psf();
+Psf myPsf = new Psf();
 int pageNum = 1;
 //exclude suppressible + obsolete term matches
 myPsf.setIncludeObsolete(false);
@@ -96,8 +96,8 @@ myPsf.getIncludedSources().add("SNOMEDCT_US");
 List<UiLabel> results = new ArrayList<UiLabel>();
         
     do {
-        //we need a new service ticket for each page of our call
-	String ticket = ticketClient.getSingleUseTicket(tgt);
+        //you'll need a new service ticket for each page of your call.  Here is an example.
+	String ticket = utsSecurityService.getProxyTicket(tgt,"http://umlsks.nlm.nih.gov");
 	myPsf.setPageNum(pageNum);
 	results = utsFinderService.findAtoms(ticket, "20215AB", "atom", "aglossia", "words", myPsf);
 		    
@@ -136,15 +136,15 @@ searchType|Type of search you're performing|exact, approximate, leftTruncation, 
 #### Sample Input (Java):
 ~~~~java
 List<UiLabelRootSource> results = new ArrayList<UiLabelRootSource>();
-Psf myPsf = new UtsMetathesaurusFinder.Psf();
+Psf myPsf = new Psf();
 myPsf.setIncludeObsolete(false);
 myPsf.setIncludeSuppressible(false);
 int pageNum = 1;
     
     do {
 	
-        //we need a new service ticket for each page of our call	
-        String ticket = ticketClient.getSingleUseTicket(tgt);
+        //you'll need a new service ticket for each page of your call.  Here is an example.
+	String ticket = utsSecurityService.getProxyTicket(tgt,"http://umlsks.nlm.nih.gov");
 	myPsf.setPageNum(pageNum);
 	results = utsFinderService.findCodes(ticket, "2015AB", "atom", "aglossia", "words", myPsf);
 		
@@ -237,15 +237,15 @@ searchType|Type of search you're performing|exact, approximate, leftTruncation, 
 #### Sample Input (Java):
 ~~~~java
 List<UiLabelRootSource> results = new ArrayList<UiLabelRootSource>();
-Psf myPsf = new UtsMetathesaurusFinder.Psf();
+Psf myPsf = new Psf();
 myPsf.setIncludeObsolete(false);
 myPsf.setIncludeSuppressible(false);
 int pageNum = 1;
     
     do {
 	
-        //we need a new service ticket for each page of our call	
-        String ticket = ticketClient.getSingleUseTicket(tgt);
+        //you'll need a new service ticket for each page of your call.  Here is an example.
+	String ticket = utsSecurityService.getProxyTicket(tgt,"http://umlsks.nlm.nih.gov");
 	myPsf.setPageNum(pageNum);
 	results = utsFinderService.findSourceConcepts(ticket, "2015AB", "atom", "aglossia", "words", myPsf);
 		
@@ -293,15 +293,15 @@ searchType|Type of search you're performing|exact, approximate, leftTruncation, 
 #### Sample Input (Java):
 ~~~~java
 List<UiLabelRootSource> results = new ArrayList<UiLabelRootSource>();
-Psf myPsf = new UtsMetathesaurusFinder.Psf();
+Psf myPsf = new Psf();
 myPsf.setIncludeObsolete(false);
 myPsf.setIncludeSuppressible(false);
 int pageNum = 1;
     
     do {
 	
-        //we need a new service ticket for each page of our call	
-        String ticket = ticketClient.getSingleUseTicket(tgt);
+        //you'll need a new service ticket for each page of your call.  Here is an example.
+	String ticket = utsSecurityService.getProxyTicket(tgt,"http://umlsks.nlm.nih.gov");
 	myPsf.setPageNum(pageNum);
 	results = utsFinderService.findSourceDescriptors(ticket, "2015AB", "atom", "aglossia", "words", myPsf);
 		
