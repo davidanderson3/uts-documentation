@@ -16,7 +16,7 @@ Interface | Method | Use Case | Object or Data type Returned
  |[getNewConcepts](#getnewconcepts)|Retrieves new Concepts for a known UMLS publication.|ArrayList\<ConceptDTO\>
  |[getNewConceptsCount](#getnewconceptscount)|Retrieves the number of new concepts for a known UMLS publication|int
 
-**Each of these examples below requires an instance of the [UtsWsContentController](/soap/installation/content.html) and [UtsWsSecurityController](/soap/installation/authentication.html) interfaces**.
+**Each of these examples below requires an instance of the [UtsWsContentController](/soap/installation/interface-setup.html#utswscontentcontroller), [UtsWsMetadataController](/soap/installation/interface-setup.html#utswsmetadatacontroller) and [UtsWsSecurityController](/soap/installation/interface-setup.html#utswssecuritycontroller) interfaces**.
 
 ### getConcept
 

@@ -6,163 +6,154 @@ status=published
 navorder=8
 ~~~~~~
 
+Interface | Method | Use Case | Object or Data type Returned 
+-- | -- | -- | --
+**UtsWsContentController**||||
+ |[getSubsets](#getsubsets)|Retrieve information about all subsets in the UMLS|ArrayList\<SubsetDTO\>
+ |[getSubset](#getsubset)|Retrieve information about one subset in the UMLS|SubsetDTO
+ |[getSubsetSourceConceptMembers](#getsubsetsourceconceptmembers)|Retrieve (and perhaps store locally) all source concepts that belong to a known subset|ArrayList\<SourceConceptSubsetMemberDTO\>
+ 
+**Each of these examples below requires an instance of the [UtsWsContentController](/soap/installation/interface-setup.html#utswscontentcontroller), [UtsWsMetadataController](/soap/installation/interface-setup.html#utswsmetadatacontroller) and [UtsWsSecurityController](/soap/installation/interface-setup.html#utswssecuritycontroller) interfaces**.
 
-**Method:**getSubsets(String ticket,String version,PSF psf)
 
-**Returns:**ArrayList<SubsetDTO>(see javadocs)(javadocs/gov/nih/nlm/umls/dto/content/SubsetDTO.html)
+### getSubsets
 
-**Use Case:** Given a UMLS release, this call returns details of the subsets of the given release. Each subset is a named collection of information that may be of specific interest. Details of each subset include its identifiers, description, e.g., Spanish Language Edition," a count of the number of atoms in each subset, and other information.
+**Method Signature:** ```getSubsets(String ticket,String version,PSF psf)```
 
 #### Sample Input (Java):
 
-~~~~
-gov.nih.nlm.uts.webservice.content.Psf myPsf = new gov.nih.nlm.uts.webservice.content.Psf();
- java.util.List<SubsetDTO> myAtoms = new ArrayList<SubsetDTO>();
- mySubsetsDTO = utsContentService.getSubsets(ticket, umlsRelease, myPsf);
- for (int i = 0; i < mySubsetsDTO.size(); i++) {
-  SubsetDTO mySubsets = mySubsetsDTO.get(i);
- String ui = mySubsets.getUi();
- String name = mySubsets.getName();
- String srcui = mySubsets.getSourceUi();
- int atommemcnt = mySubsets.getAtomMemberCount();
- }
+~~~~java
+
+    int pageNum = 1;
+    String currentUmlsRelease = utsMetadataService.getCurrentUMLSVersion(ticket);
+    List<SubsetDTO> subsets = new ArrayList<SubsetDTO>();
+
+        do {
+        //page through all the references to subsets in the UMLS
+           myPsf.setPageNum(pageNum);
+           subsets = utsContentService.getSubsets(ticket, currentUmlsRelease, myPsf);
+           for (SubsetDTO subset:subsets) {
+        	
+        	  String ui = subset.getUi();
+        	  String sourceUi = subset.getSourceUi();
+        	  String name = subset.getName();
+        	  int sourceConceptCount = subset.getSourceConceptMemberCount();
+        	  int atomCount = subset.getAtomMemberCount();
+        	  System.out.println(ui+"|"+sourceUi+"|"+name+"|"+atomCount+"|"+sourceConceptCount);
+            }
+            
+        pageNum++;
+        } while(subsets.size() > 0);
+
 ~~~~
 
-#### Sample Input (C#):
 
+#### Sample Output:
+
+~~~~text
+...
+Ui|sourceUi|name|atomCount|sourceConceptCount
+C4018850|6011000124106|ICD-10-CM complex map reference set|0|66488
+C3714465|900000000000527005|SAME AS association reference set|0|47641
+C3714470|900000000000526001|REPLACED BY association reference set|0|9813
+C3645571|900000000000508004|GB English|1221637|0
+C3645571|900000000000508004|GB English|1221637|0
+C3693266|900000000000526001|REPLACED BY association reference set|0|0
+C3693268|900000000000524003|MOVED TO association reference set|0|17001
+C3669481|332501000009101|VTSL Veterinary Preferences|89374|0
+C3693269|900000000000523009|POSSIBLY EQUIVALENT TO association reference set|0|18034
+C3693271|900000000000489007|Concept inactivation indicator reference set|0|0
+C3693270|900000000000490003|Description inactivation indicator reference set|0|0
+C3693267|900000000000525002|MOVED FROM association reference set|0|0
+C3693265|900000000000527005|SAME AS association reference set|0|0
 ~~~~
-content.psf myPsf = new content.psf();
- content.subsetDTO[] mySubsetsDTO = utsContentService.getSubsets(ticket, "2011AB", myPsf);
- for (int i = 0; i < mySubsetsDTO.Length; i++) {
- content.subsetDTO mySubsets = mySubsetsDTO[i];
- string ui = mySubsets.ui;
- string name = mySubsets.name;
- string srcui = mySubsets.sourceUi;
- int atommemcnt = mySubsets.atomMemberCount;
+
+
+### getSubset
+
+**Method Signature:** ```getSubset(String ticket,String version,String subsetId)```
+
+#### Sample Input (Java):
+
+~~~~java
+String currentUmlsRelease = utsMetadataService.getCurrentUMLSVersion(ticket);
+SubsetDTO subset = utsContentService.getSubset(ticket, currentUmlsRelease, "C4018850");
+	    
+String sourceUi = subset.getSourceUi();
+String name = subset.getName();
+int sourceConceptCount = subset.getSourceConceptMemberCount();
+String description = subset.getDescription();
+System.out.println(sourceUi+"|"+name+"|"+sourceConceptCount);
 ~~~~
 
 #### Sample Output:
 
- Subset UI |  Subset Name   |    Subset SRCUI |  Subset AtomMemCount 
- ---| --- | --- | ---
-C1368722  |  Spanish Language Edition   | 1145035      |  740793   
-C1321498   | US English Dialect Subset |  1146039     |   740906
-C3165220  |  GB English Dialect Subset  | 1147034      |  740991 
+~~~~text
+6011000124106|ICD-10-CM complex map reference set|66488
+~~~~
 
->
+### getSubsetSourceConceptMembers
 
-**Method: **getSubset(String ticket,String version,String conceptId)
+**Method Signature:** ```getSubsetSourceConceptMembers(String ticket,String version,String subsetId, PSF psf)```
 
-**Returns:**SubsetDTO(see javadocs)</span>](javadocs/gov/nih/nlm/umls/dto/content/SubsetDTO.html)
-
-**Use Case:**Given a UMLS release and a concept unique identifier (CUI) for a subset, this call returns details of the subset such as its identifiers, description, and a count of the number of atoms in the subset.
 
 #### Sample Input (Java):
 
-~~~~
-SubsetDTO mySubsetDTO = new SubsetDTO();
- mySubsetDTO = utsContentService.getSubset(ticket, umlsRelease, "C1368722");
- String ui = mySubsetDTO.getUi();
- String name = mySubsetDTO.getName();
- String srcui = mySubsetDTO.getSourceUi();
- int atommemcnt = mySubsetDTO.getAtomMemberCount();
-~~~~
+~~~~text
+String currentUmlsRelease = utsMetadataService.getCurrentUMLSVersion(ticketClient.getSingleUseTicket(tgt));
+List<SourceConceptSubsetMemberDTO> sctSubsetMembers = new ArrayList<SourceConceptSubsetMemberDTO>();
+int pageNum = 1;
+Psf myPsf = new Psf();
+        	
+    do {
+        myPsf.setPageNum(pageNum);
+        System.out.println("Fetching page "+ pageNum);
+        //here we ask for the identifier for the SNOMED CT -> ICD10-CM refset, and retrieve the members and subset member attributes
+        sctSubsetMembers = utsContentService.getSubsetSourceConceptMembers(ticket, currentUmlsRelease,"C4018850", myPsf);  
 
-#### Sample Input (C#):
+          for(SourceConceptSubsetMemberDTO sctSubsetMember:sctSubsetMembers) {
+        	    
+            //create a second psf object to handle calls to subset member attributes
+            Psf psf2 = new Psf();
+            String scui = sctSubsetMember.getSourceConcept().getUi();
+            String subsetMemberId = sctSubsetMember.getUi();
+            String name = sctSubsetMember.getSourceConcept().getDefaultPreferredName();
+            System.out.println(scui+"|"+name);
+            List<AttributeDTO> subsetMemberAttributes = utsContentService.getSubsetMemberAttributes(ticket, currentUmlsRelease, subsetMemberId, psf2);
+        		    
+        	for (AttributeDTO subsetMemberAttribute:subsetMemberAttributes){
+        				
+        	    String satui = subsetMemberAttribute.getSourceUi();
+        	    String atn = subsetMemberAttribute.getName();
+        	    String atv = subsetMemberAttribute.getValue();
 
-~~~~
-content.subsetDTO mySubsetsDTO = utsContentService.getSubset(ticket, "2011AB", "C1368722");
- string ui = mySubsetsDTO.ui;
- string name = mySubsetsDTO.name;
- string srcui = mySubsetsDTO.sourceUi;
- int atommemcnt = mySubsetsDTO.atomMemberCount;
+                    System.out.println(    satui+"|"+atn+"|"+atv);
+        	   }
+        			
+           }
+           pageNum++;
+        	
+        }
+        while(sctSubsetMembers.size() > 0);
 ~~~~
 
 #### Sample Output:
 
-Subset UI  | Subset Name   | Subset SRCUI |  Subset AtomMemCount      
- ---| --- | --- | ---                                                                |
-C1368722 |   Spanish Language Edition  | 1145035  |   740793    
-
->
-
-**Method:**getAtomSubsetMemberships(String ticket,String version,String conceptId,PSF psf)
-
-**Returns:**ArrayList<AtomSubsetMemberDTO>(see javadocs)</span>](javadocs/gov/nih/nlm/umls/dto/content/AtomSubsetMemberDTO.html)
-
-**Use Case:** Given a UMLS release and concept unique identifier (CUI) for a subset, this call returns details of the atoms that are members of the subset.
-
-#### Sample Input (Java):
-
+~~~~text
+92843003|Congenital abnormal fusion of carpal bone
+6fffc599-d4a2-591b-bd70-f2c731df6110|CORRELATIONID|447561005
+39b5ce33-e881-5cd9-bf5c-ca332236c51b|CORRELATIONID|447561005
+6fffc599-d4a2-591b-bd70-f2c731df6110|MAPADVICE|ALWAYS Q79.8
+39b5ce33-e881-5cd9-bf5c-ca332236c51b|MAPADVICE|IF CARPAL SYNOSTOSIS CHOOSE Q74.0 &#x7C; MAP OF SOURCE CONCEPT IS CONTEXT DEPENDENT
+6fffc599-d4a2-591b-bd70-f2c731df6110|MAPCATEGORYID|447637006
+39b5ce33-e881-5cd9-bf5c-ca332236c51b|MAPCATEGORYID|447639009
+39b5ce33-e881-5cd9-bf5c-ca332236c51b|MAPGROUP|1
+6fffc599-d4a2-591b-bd70-f2c731df6110|MAPGROUP|1
+39b5ce33-e881-5cd9-bf5c-ca332236c51b|MAPPRIORITY|1
+6fffc599-d4a2-591b-bd70-f2c731df6110|MAPPRIORITY|2
+6fffc599-d4a2-591b-bd70-f2c731df6110|MAPRULE|OTHERWISE TRUE
+39b5ce33-e881-5cd9-bf5c-ca332236c51b|MAPRULE|IFA 253930002 &#x7C; Carpal synostosis (disorder) &#x7C;
+39b5ce33-e881-5cd9-bf5c-ca332236c51b|MAPTARGET|Q74.0
+6fffc599-d4a2-591b-bd70-f2c731df6110|MAPTARGET|Q79.8
 ~~~~
-gov.nih.nlm.uts.webservice.content.Psf myPsf = new gov.nih.nlm.uts.webservice.content.Psf();
- java.util.List<AtomSubsetMemberDTO> myAtoms = new ArrayList<AtomSubsetMemberDTO>();
- AtomSubsetMem = utsContentService.getAtomSubsetMemberships(ticket, umlsRelease, "A6943203", myPsf);
- for (int i = 0; i < AtomSubsetMem.size(); i++) {
- AtomSubsetMemberDTO myAtomSubsetMem = AtomSubsetMem.get(i);
- String ui = myAtomSubsetMem.getAtom().getConcept().getUi();
- String defprefname = myAtomSubsetMem.getAtom().getConcept().getDefaultPreferredName();
- String contviewhandle = myAtomSubsetMem.getSubsetHandle();
- String termtype = myAtomSubsetMem.getAtom().getTermType();
- }
-~~~~
-
-#### Sample Input (C#):
-
-~~~~
-content.psf myPsf = new content.psf();
- content.atomSubsetMemberDTO[] AtomSubsetMemberDTO =
-utsContentService.getAtomSubsetMemberships(ticket, "2011AB", "A6943203", myPsf);
- for (int i = 0; i < AtomSubsetMemberDTO.Length; i++) {
- content.atomSubsetMemberDTO myAtomContentViewMemberDTO = AtomSubsetMemberDTO[i];
- string ui = myAtomContentViewMemberDTO.atom.concept.ui;
- string defprefname = myAtomContentViewMemberDTO.atom.concept.defaultPreferredName;
- string contviewhandle = myAtomContentViewMemberDTO.subsetHandle;
- string termtype = myAtomContentViewMemberDTO.atom.termType;
-~~~~
-
-#### Sample Output:
-
-Concept UI  | Concept DefaultPrefferedName  |   Subset Handle |  Atom TermType 
- ---| --- | --- | ---
-C0553662   |  Arthritis, Juvenile Rheumatoid  | IC1321498  |  SY    
-C0553662    | Arthritis, Juvenile Rheumatoid  | IC3165220   |    SY  
-
->
-
-**Method: **getSourceConceptSubsetMemberships(String ticket,String version,String sourceConceptId,String rootSourceAbbreviation,PSF psf)
-
-**Returns:**ArrayList<SourceConceptSubsetMemberDTO>(see javadocs)(javadocs/gov/nih/nlm/umls/dto/content/SourceConceptSubsetMemberDTO.html)
-
-**Use Case:** Given a UMLS release and source concept Id for a subset, this call returns details of the source concept that are members of the subset.
-
-#### Sample Input (Java):
-
-~~~~
-gov.nih.nlm.uts.webservice.content.Psf myPsf = new gov.nih.nlm.uts.webservice.content.Psf();
- java.util.List<SourceConceptSubsetMemberDTO> myAtoms = new ArrayList<SourceConceptSubsetMemberDTO>();
- mySourceConceptSubsetMember = utsContentService.getSourceConceptSubsetMemberships(securityService.getProxyTicket(ticketGrantingTicket(), serviceName), umlsRelease, "193003", "SNOMEDCT_US", myPsf));
- for (int i = 0; i < mySourceConceptSubsetMember.size(); i++) {
- SourceConceptSubsetMemberDTO mySourceConceptCont = mySourceConceptSubsetMember.get(i);
- String ui = mySourceConceptCont.getUi();
- String name = mySourceConceptCont.getSourceConcept().getDefaultPreferredName();
- }
-~~~~
-
-#### Sample Output:
-
-
-Ui|Src Concept DefaultPreferredName
- ---| ---
-AT188567505|Benign hypertensive renal disease
-AT188485731|Benign hypertensive renal disease
-AT188345133|Benign hypertensive renal disease
-AT188195552|Benign hypertensive renal disease
-AT188195551|Benign hypertensive renal disease
-AT188025182|Benign hypertensive renal disease
-AT187982299|Benign hypertensive renal disease
-AT187918348|Benign hypertensive renal disease
-AT187854130|Benign hypertensive renal disease
-AT187832812|Benign hypertensive renal disease
-AT187747644|Benign hypertensive renal disease
 
