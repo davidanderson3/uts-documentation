@@ -229,7 +229,7 @@ content.atomDTO myAtom = utsContentService.getAtom(ticket, "2011AB","A6955581");
 ~~~~java
 String currentUmlsRelease = utsMetadataService.getCurrentUMLSVersion(ticket);
 AtomDTO atom = new AtomDTO();
-atom = utsContentService.getDefaultPreferredAtom(ticketClient.getSingleUseTicket(tgt), currentUmlsRelease, "9468002","SNOMEDCT_US");
+atom = utsContentService.getDefaultPreferredAtom(ticket, currentUmlsRelease, "9468002","SNOMEDCT_US");
 String aui = atom.getUi();
 String tty = atom.getTermType();
 String name = atom.getTermString().getName();

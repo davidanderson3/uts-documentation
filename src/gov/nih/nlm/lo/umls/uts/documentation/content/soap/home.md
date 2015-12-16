@@ -12,9 +12,9 @@ navorder=1
 
 Section (Interface)|Use Case
 --- | ---:
-**Installation** ([UtsWsMetadataController](/soap/installation/interface-setup.html#utswsmetadatacontroller))||
+**Installation**||
 [Installation using Maven](/soap/installation/maven-installation.html)|Install the API
-[Set up instances of the UMLS SOAP API interfaces](/soap/installation/interface-setup.html)||
+[Set up instances of the UMLS SOAP API interfaces](/soap/installation/interface-setup.html)|Install the API
 **Authentication** ([UtsWsSecurityController](/soap/installation/interface-setup.html#utswssecuritycontroller))||
 [Request authentication tickets](/soap/installation/authentication.html)|Request ticket granting tickets and single-use service tickets
 **PSF (Paging, sorting, and filtering)**||

@@ -20,8 +20,10 @@ Interface|Method|Object or Data type Returned |Use Cases
  |||Accepts a term and returns source-asserted concepts|
  |**[findSourceDescriptors](#findsourcedescriptors)**|ArrayList\<UiLabelRootSource\>||
  |||Accepts a term and returns a source-asserted descriptor|
- |**[findCode](#findcode)**|ArrayList\<UiLabelRootSource\>||
+ |**[findCodes](#findcodes)**|ArrayList\<UiLabelRootSource\>||
  |||Takes a term and returns a source-asserted code|
+
+**Each of these examples below requires an instance of the [UtsWsFinderController](/soap/installation/interface-setup.html#utswsfindercontroller), [UtsWsMetadataController](/soap/installation/interface-setup.html#utswsmetadatacontroller) and [UtsWsSecurityController](/soap/installation/interface-setup.html#utswssecuritycontroller) interfaces**.
 
 
 ### findConcepts
@@ -33,7 +35,7 @@ Interface|Method|Object or Data type Returned |Use Cases
 
 Parameter name|Definition|Valid values
 -- | --
-target|Indicates the data type you're using in your search|aui,atom (used for searching by term), code, concept, sourceConcept, sourceDescriptor,tty
+target|Specifies the data type provided in your 'str' parameter|aui,atom (used for searching by term), code, concept, sourceConcept, sourceDescriptor,tty
 searchType|Type of search you're performing|exact (use this when passing codes to the finder service), approximate,leftTruncation,rightTruncation,words,normalizedWords
 
 #### Sample Input (Java):
@@ -45,12 +47,13 @@ int pageNum = 1;
 myPsf.setIncludeObsolete(false);
 myPsf.setIncludeSuppressible(false);
 List<UiLabel> results = new ArrayList<UiLabel>();
+String currentUmlsRelease = utsMetadataService.getCurrentUMLSVersion(ticket);
         
     do {
-        //you'll need a new service ticket for each page of your call.  Here is an example.
+        //you'll need a new service ticket to retrieve each page of your call.  Here is an example.
 	String ticket = utsSecurityService.getProxyTicket(tgt,"http://umlsks.nlm.nih.gov");
 	myPsf.setPageNum(pageNum);
-	results = utsFinderService.findConcepts(ticket, "2015AB", "atom", "aglossia", "words", myPsf);
+	results = utsFinderService.findConcepts(ticket, currentUmlsRelease, "atom", "aglossia", "words", myPsf);
 		    
         for (UiLabel result:results) {
 			
@@ -80,7 +83,7 @@ name: Hanhart's syndrome
 
 Parameter name|Definition|Valid values
 -- | --
-target|Indicates the data type you're using in your search|atom (used for searching by term), code, concept, sourceConcept, sourceDescriptor
+target|Specifies the data type provided in your 'str' parameter|atom (used for searching by term), code, concept, sourceConcept, sourceDescriptor
 searchType|Type of search you're performing|exact (use this when passing codes to the finder service), approximate,leftTruncation,rightTruncation,words,normalizedWords
 
 
@@ -94,12 +97,14 @@ myPsf.setIncludeSuppressible(false);
 //only include atoms from US Edition of SNOMED CT
 myPsf.getIncludedSources().add("SNOMEDCT_US");
 List<UiLabel> results = new ArrayList<UiLabel>();
+String currentUmlsRelease = utsMetadataService.getCurrentUMLSVersion(ticket);
+
         
     do {
-        //you'll need a new service ticket for each page of your call.  Here is an example.
+        //you'll need a new service ticket to retrieve each page of your call.  Here is an example.
 	String ticket = utsSecurityService.getProxyTicket(tgt,"http://umlsks.nlm.nih.gov");
 	myPsf.setPageNum(pageNum);
-	results = utsFinderService.findAtoms(ticket, "20215AB", "atom", "aglossia", "words", myPsf);
+	results = utsFinderService.findAtoms(ticket, currentUmlsRelease, "atom", "aglossia", "words", myPsf);
 		    
         for (UiLabel result:results) {
 			
@@ -127,9 +132,9 @@ name: Aglossia-adactyly syndrome (disorder)
 
 **Method Signature:** ```findSourceCodes(String ticket,String version,String target,String str,String searchType,PSF psf)```
 
-Argument name|Definition|Valid values
+Parameter name|Definition|Valid values
 -- | --
-target|Indicates the data type you're using in your search|atom (used for searching by term), aui, sourceDescriptor, sourceConcept
+target|Specifies the data type provided in your 'str' parameter|atom (used for searching by term), aui, sourceDescriptor, sourceConcept
 searchType|Type of search you're performing|exact, approximate, leftTruncation, rightTruncation, words, normalizedWords
 
 
@@ -140,13 +145,15 @@ Psf myPsf = new Psf();
 myPsf.setIncludeObsolete(false);
 myPsf.setIncludeSuppressible(false);
 int pageNum = 1;
+String currentUmlsRelease = utsMetadataService.getCurrentUMLSVersion(ticket);
+
     
     do {
 	
-        //you'll need a new service ticket for each page of your call.  Here is an example.
+        //you'll need a new service ticket to retrieve each page of your call.  Here is an example.
 	String ticket = utsSecurityService.getProxyTicket(tgt,"http://umlsks.nlm.nih.gov");
 	myPsf.setPageNum(pageNum);
-	results = utsFinderService.findCodes(ticket, "2015AB", "atom", "aglossia", "words", myPsf);
+	results = utsFinderService.findCodes(ticket, currentUmlsRelease, "atom", "aglossia", "words", myPsf);
 		
 	for(UiLabelRootSource result:results) {
 		
@@ -228,9 +235,9 @@ name: Aglossia-adactyly syndrome
 
 **Method Signature:** ```findSourceConcepts(String ticket,String version,String target,String str,String searchType,PSF psf)```
 
-Argument name|Definition|Valid values
+Parameter name|Definition|Valid values
 -- | --
-target|Indicates the data type you're using in your search|atom (used for searching by term), aui, code, sourceDescriptor
+target|Specifies the data type provided in your 'str' parameter|atom (used for searching by term), aui, code, sourceDescriptor
 searchType|Type of search you're performing|exact, approximate, leftTruncation, rightTruncation, words, normalizedWords
 
 
@@ -241,13 +248,15 @@ Psf myPsf = new Psf();
 myPsf.setIncludeObsolete(false);
 myPsf.setIncludeSuppressible(false);
 int pageNum = 1;
+String currentUmlsRelease = utsMetadataService.getCurrentUMLSVersion(ticket);
+
     
     do {
 	
-        //you'll need a new service ticket for each page of your call.  Here is an example.
+       //you'll need a new service ticket to retrieve each page of your call.  Here is an example.
 	String ticket = utsSecurityService.getProxyTicket(tgt,"http://umlsks.nlm.nih.gov");
 	myPsf.setPageNum(pageNum);
-	results = utsFinderService.findSourceConcepts(ticket, "2015AB", "atom", "aglossia", "words", myPsf);
+	results = utsFinderService.findSourceConcepts(ticket, currentUmlsRelease, "atom", "aglossia", "words", myPsf);
 		
 	for(UiLabelRootSource result:results) {
 		
@@ -284,9 +293,9 @@ name: Aglossia-adactyly syndrome
 
 **Method Signature:** ```findSourceDescriptors(String ticket,String version,String target,String str,String searchType,PSF psf)```
 
-Argument name|Definition|Valid values
+Parameter name|Definition|Valid values
 -- | --
-target|Indicates the data type you're using in your search|atom (used for searching by term), aui, code, sourceConcept
+target|Specifies the data type provided in your 'str' parameter|atom (used for searching by term), aui, code, sourceConcept
 searchType|Type of search you're performing|exact, approximate, leftTruncation, rightTruncation, words, normalizedWords
 
 
@@ -297,13 +306,15 @@ Psf myPsf = new Psf();
 myPsf.setIncludeObsolete(false);
 myPsf.setIncludeSuppressible(false);
 int pageNum = 1;
+String currentUmlsRelease = utsMetadataService.getCurrentUMLSVersion(ticket);
+
     
     do {
 	
         //you'll need a new service ticket for each page of your call.  Here is an example.
 	String ticket = utsSecurityService.getProxyTicket(tgt,"http://umlsks.nlm.nih.gov");
 	myPsf.setPageNum(pageNum);
-	results = utsFinderService.findSourceDescriptors(ticket, "2015AB", "atom", "aglossia", "words", myPsf);
+	results = utsFinderService.findSourceDescriptors(ticket, currentUmlsRelease, "atom", "aglossia", "words", myPsf);
 		
 	for(UiLabelRootSource result:results) {
 		
