@@ -12,7 +12,7 @@ Interface | Method | Use Case | Object or Data type Returned
  |[getSubsets](#getsubsets)|Retrieve a list of all subsets in the UMLS|ArrayList\<SubsetDTO\>
  |[getSubset](#getsubset)|Retrieve information about one subset in the UMLS|SubsetDTO
  |[getSubsetSourceConceptMembers](#getsubsetsourceconceptmembers)|Retrieve (and perhaps store locally) all source concepts that belong to a known subset|ArrayList\<SourceConceptSubsetMemberDTO\>
- 
+ |[getSourceConceptSubsetMemberships](#getsourceconceptsubsetmemberships)|Find out to which subsets a known source concept belongs|ArrayList\<SubsetDTO\>
 **Each of these examples below requires an instance of the [UtsWsContentController](/soap/installation/interface-setup.html#utswscontentcontroller), [UtsWsMetadataController](/soap/installation/interface-setup.html#utswsmetadatacontroller) and [UtsWsSecurityController](/soap/installation/interface-setup.html#utswssecuritycontroller) interfaces**.
 
 
@@ -157,3 +157,35 @@ Psf myPsf = new Psf();
 6fffc599-d4a2-591b-bd70-f2c731df6110|MAPTARGET|Q79.8
 ~~~~
 
+### getSourceConceptSubsetMemberships
+
+**Method Signature:** ```getSourceConceptSubsetMemberships(String ticket,String version, String sourceConceptId, String rootSourceAbbreviation, PSF psf);```
+
+#### Sample Input
+
+~~~~java
+//to which subsets does SNOMEDCT_US concept 92843003, "Congenital abnormal fusion of carpal bone", belong?
+String currentUmlsRelease = utsMetadataService.getCurrentUMLSVersion(ticketClient.getSingleUseTicket(tgt));
+List<SubsetDTO> subsets = new ArrayList<SubsetDTO>();
+subsets = utsContentService.getSourceConceptSubsetMemberships(ticketClient.getSingleUseTicket(tgt),currentUmlsRelease, "92843003", "SNOMEDCT_US", myPsf);
+
+    for(SubsetDTO subset:subsets) {
+			
+	String sourceUi = subset.getSourceUi();
+	String name = subset.getName();
+	System.out.println(sourceUi+"|"+name);
+			
+	}
+	
+    }
+
+~~~~
+
+#### Sample Output
+
+~~~~text
+447563008|ICD-9-CM equivalence complex map reference set
+900000000000498005|SNOMED RT ID simple map
+900000000000497000|CTV3 simple map
+6011000124106|ICD-10-CM complex map reference set
+~~~~

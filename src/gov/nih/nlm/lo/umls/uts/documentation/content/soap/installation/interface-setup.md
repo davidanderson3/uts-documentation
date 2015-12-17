@@ -11,12 +11,12 @@ of the UtsWsSecurityController interface to handle retrieving service tickets fo
 
 Interface | Use Cases | Guidance
 --|--|--
-[UtsWsSecurityController](#utswssecuritycontroller) | Retrieve Ticket Granting Tickets and Service Tickets | An instance of this interface is always needed to generate service tickets when making API calls.  Retrieve **one** ticket granting ticket when starting your application. Use that same ticket granting ticket to retrieve single-use service tickets for each call to the API.|
-[UtsWsContentController](#utswscontentcontroller) | Retrieve information about known identifiers such as UMLS Concepts, Atoms, Relationships, Subsets, and Attributes | |
-[UtsWsFinderController](#utswsfindercontroller) | Search for UMLS Concepts or codes using a term. | |
-[UtsWsMetadataController](#utswsmetadatacontroller) | Retrieve information about UMLS term types and source vocabularies | |
-[UtsWsHistoryController](#utswshistorycontroller) | Track merges, deletions, and bequeathals of UMLS Concepts | | 
-[UtsWsSemanticNetworkController](#utswssemanticnetworkcontroller) | Retrieve information about semantic types and semantic groups | |
+[UtsWsSecurityController](#utswssecuritycontroller) ( [javadocs](https://uts.nlm.nih.gov/doc/ws/javadocs/gov/nih/nlm/umls/uts/webservice/UtsWsSecurityController.html) )| Retrieve Ticket Granting Tickets and Service Tickets | An instance of this interface is always needed to generate service tickets when making API calls.  Retrieve **one** ticket granting ticket when starting your application. Use that same ticket granting ticket to retrieve single-use service tickets for each call to the API.|
+[UtsWsContentController](#utswscontentcontroller) ( [javadocs](https://uts.nlm.nih.gov/doc/ws/javadocs/gov/nih/nlm/umls/uts/webservice/UtsWsContentController.html) ) | Retrieve information about known identifiers such as UMLS Concepts, Atoms, Relationships, Subsets, and Attributes | |
+[UtsWsFinderController](#utswsfindercontroller) ( [javadocs](https://uts.nlm.nih.gov/doc/ws/javadocs/gov/nih/nlm/umls/uts/webservice/UtsWsFinderController.html) ) | Search for UMLS Concepts or codes using a term. | |
+[UtsWsMetadataController](#utswsmetadatacontroller) ( [javadocs](https://uts.nlm.nih.gov/doc/ws/javadocs/gov/nih/nlm/umls/uts/webservice/UtsWsMetadataController.html) ) | Retrieve information about UMLS term types and source vocabularies | |
+[UtsWsHistoryController](#utswshistorycontroller) ( [javadocs](https://uts.nlm.nih.gov/doc/ws/javadocs/gov/nih/nlm/umls/uts/webservice/UtsWsHistoryController.html) ) | Track merges, deletions, and bequeathals of UMLS Concepts | | 
+[UtsWsSemanticNetworkController](#utswssemanticnetworkcontroller) ( [javadocs](https://uts.nlm.nih.gov/doc/ws/javadocs/gov/nih/nlm/umls/uts/webservice/UtsWsSemanticNetworkController.html) ) | Retrieve information about semantic types and semantic groups | |
 
 
 #### UtsWsSecurityController

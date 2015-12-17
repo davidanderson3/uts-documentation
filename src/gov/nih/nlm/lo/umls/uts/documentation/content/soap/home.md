@@ -1,6 +1,6 @@
 title=UMLS SOAP API Home Page
 date=2015-08-18
-updated=2015-08-26
+updated=2015-12-17
 type=page
 status=published
 navorder=1
@@ -8,7 +8,7 @@ navorder=1
 
 ### Use cases and methods
 
-**Note:** Most of the sample code displayed in the SOAP API is in Java. 
+**Note:** Most of the sample code displayed in the SOAP API is in Java.
 
 Section (Interface)|Use Case
 --- | ---:
@@ -32,10 +32,5 @@ Section (Interface)|Use Case
 [Attributes](/soap/attributes/index.html)|Retrieve CUI and code attributes
 **Retrieving UMLS Metadata** ([UtsWsMetadataController](/soap/installation/interface-setup.html#utswsmetadatacontroller))||
 [UMLS Metadata](/soap/umlsmetadata/index.html)|Retrieve UMLS Metadata such as updated vocabluaries within a UMLS version
-**Retrieving UMLS Semantic Type Information** ([UtsWsSemanticNetworkController](/soap/installation/interface-setup.html#utswssemanticnetworkcontroller))||
-[Semantic Type](/soap/semantictypes/index.html)|Retrieve information about semantic types
-[Semantic Group](/soap/semanticgroup/index.html)|Retrieve information about semantic groups
-**Retrieving Concept History** ([UtsWsHistoryController](/soap/installation/interface-setup.html#utswshistorycontroller))||
-[Concept History](/soap/concepthistory/index.html)|Retrieve concept history
 
 

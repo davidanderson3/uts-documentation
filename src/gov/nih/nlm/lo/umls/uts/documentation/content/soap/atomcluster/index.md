@@ -15,45 +15,7 @@ Interface| Method|Use Case|Object or Data type Returned
  |[getSourceDescriptor](#getsourcedescriptor)|Retrieve information for a known source-asserted descriptor|SourceAtomClusterDTO
  |[getDefaultPreferredAtom](/soap/atoms/#getdefaultpreferredatom)|Retrieve the highest-ranking atom for a known source-asserted concept, code, or descriptor | AtomDTO
 
-**Each of these examples below requires an instance of the [UtsWsContentController](/soap/installation/content.html) and [UtsWsSecurityController](/soap/installation/authentication.html) interfaces**.
-
-
-#### Sample Input (Java):
-
-~~~~
-AtomDTO myAtom = utsContentService.getDefaultPreferredAtom(ticket,2011AB, "126952004", "SNOMEDCT");
-
- String atomName = myAtom.getTermString().getName();
- String aui = myAtom.getUi();
- String termType = myAtom.getTermType();
- String conceptUi = myAtom.getConcept().getUi();
- String conceptName = myAtom.getConcept().getDefaultPreferredName();
-~~~~
-
-#### Sample Input (C#):
-
-~~~~
-content.atomDTO myAtom = utsContentService.getDefaultPreferredAtom(ticket, "2011AB", "126952004", "SNOMEDCT");
-
- string atomName = myAtom.termString.name;
- string aui = myAtom.ui;
- string termType = myAtom.termType;
- string conceptUi = myAtom.concept.ui;
- string conceptName = myAtom.concept.defaultPreferredName;
-~~~~
-
-
-#### Sample Output:
-
-~~~~text
-  AUI: A3577659
-   Atom Name: Neoplasm of brain
-   Term Type: PT
-  
-   Concept Id: C0006118
-   Concept Preferred Name: Brain Neoplasms
-  
-~~~~
+**Each of these examples below requires an instance of the [UtsWsContentController](/soap/installation/interface-setup.html#utswscontentcontroller) and [UtsWsSecurityController](/soap/installation/interface-setup.html#utswssecuritycontroller) interfaces**.
 
 ### getCode
 
@@ -97,7 +59,7 @@ content.sourceAtomClusterDTO myCode = utsContentService.getCode(ticket, "2015AA"
 #### Sample Input (Java):
 
 ~~~~java
-SourceAtomClusterDTO myCode = utsContentService.getSourceConcept(ticket, "2015AA", "9468002", "SNOMEDCT_US");
+SourceAtomClusterDTO mySourceConcept = utsContentService.getSourceConcept(ticket, "2015AA", "9468002", "SNOMEDCT_US");
 
  String name = mySourceConcept.getDefaultPreferredName();
  int atomCount = mySourceConcept.getAtomCount();
@@ -160,4 +122,44 @@ Source Descriptor name: Neoplasms
 Number of atoms in Source Descriptor: 14
 Number of Source Descriptor Relations: 96
 Number of Source Descriptor Attributes: 22         
+~~~~
+
+
+### getDefaultPreferredAtom
+
+#### Sample Input (Java):
+
+~~~~
+AtomDTO myAtom = utsContentService.getDefaultPreferredAtom(ticket,2011AB, "126952004", "SNOMEDCT");
+
+ String atomName = myAtom.getTermString().getName();
+ String aui = myAtom.getUi();
+ String termType = myAtom.getTermType();
+ String conceptUi = myAtom.getConcept().getUi();
+ String conceptName = myAtom.getConcept().getDefaultPreferredName();
+~~~~
+
+#### Sample Input (C#):
+
+~~~~
+content.atomDTO myAtom = utsContentService.getDefaultPreferredAtom(ticket, "2011AB", "126952004", "SNOMEDCT");
+
+ string atomName = myAtom.termString.name;
+ string aui = myAtom.ui;
+ string termType = myAtom.termType;
+ string conceptUi = myAtom.concept.ui;
+ string conceptName = myAtom.concept.defaultPreferredName;
+~~~~
+
+
+#### Sample Output:
+
+~~~~text
+  AUI: A3577659
+   Atom Name: Neoplasm of brain
+   Term Type: PT
+  
+   Concept Id: C0006118
+   Concept Preferred Name: Brain Neoplasms
+  
 ~~~~

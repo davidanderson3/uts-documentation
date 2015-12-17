@@ -11,276 +11,232 @@ Interface | Method | Use Case | Object or Data type Returned
 **UtsWsContentController**||||
  |[getContentViews](#getcontentviews)|Retrieve a list of all content views available in the UMLS|ArrayList\<ContentViewDTO\>
  |[getContentView](#getcontentview)|Retrieve information about a particular content view given its identifier|ContentViewDTO
- |[getContentViewSourceConceptMembers]|Retrieve all source concepts (and perhaps store them locally) that belong to a particular content view|ArrayList\<SourceConceptContentViewMemberDTO\>
- |[getContentViewAtomMembers]|Retrieve all atoms (and perhaps store them locally) that belong to a particular content view|ArrayList\<AtomContentViewMemberDTO\>
- 
+ |[getContentViewSourceConceptMembers](#getcontentviewsourceconceptmembers)|Retrieve all source concepts (and perhaps store them locally) that belong to a particular content view|ArrayList\<SourceConceptContentViewMemberDTO\>
+ |[getContentViewAtomMembers](#getcontentviewatommembers)|Retrieve all atoms (and perhaps store them locally) that belong to a particular content view|ArrayList\<AtomContentViewMemberDTO\>
+
+**Each of these examples below requires an instance of the [UtsWsContentController](/soap/installation/interface-setup.html#utswscontentcontroller), [UtsWsMetadataController](/soap/installation/interface-setup.html#utswsmetadatacontroller) and [UtsWsSecurityController](/soap/installation/interface-setup.html#utswssecuritycontroller) interfaces**.
+
+### getContentViews
  
 **Method Signature:** ```getContentViews(String ticket,String version,PSF psf)```
 
 #### Sample Input (Java):
 
 ~~~~
-gov.nih.nlm.uts.webservice.content.Psf myPsf = new gov.nih.nlm.uts.webservice.content.Psf();
- java.util.List<ContentViewDTO> myAtoms = new ArrayList<ContentViewDTO>();
- myContentViews = utsContentService.getContentViews(ticket, umlsRelease, myPsf);
+List<ContentViewDTO> contentViews = new ArrayList<ContentViewDTO>();
+String currentUmlsRelease = utsMetadataService.getCurrentUMLSVersion(ticket);
+contentViews = utsContentService.getContentViews(ticket, currentUmlsRelease, myPsf);
+		
+    for (ContentViewDTO contentView:contentViews) {
+			
+	String ui = contentView.getUi();
+	String name = contentView.getName();
+	int numberOfScuis = contentView.getSourceConceptMemberCount();
+	int numberOfAtoms = contentView.getAtomMemberCount();
+	String algorithm = contentView.getAlgorithm();
 
- for (int i = 0; i < myContentViews.size(); i++) {
- ContentViewDTO myContentViewDTO = myContentViews.get(i);
- String name = myContentViewDTO.getName();
- int atommembercnt = myContentViewDTO.getAtomMemberCount();
- String contributor = myContentViewDTO.getContributor();
- String contributorurl = myContentViewDTO.getContributorURL();
- }
- 
+    }
 ~~~~
 
-#### Sample Input (C#):
+#### Sample Output
 
+~~~~text
+ui:C1700357
+name:MetaMap NLP View
+# sourceConcepts: 0
+# atoms: 4231900
+algorithm: This content view is built from mrconso.filtered.strict (a subset of RRF MRCONSO) and converted into an AUI list based on 2015AA. This view is not algorithmically generated during Metathesaurus construction.
+--------
+ui:C1964027
+name:UMLS enhanced VA/KP Problem List Subset of SNOMED (Level 0+SNOMED)
+# sourceConcepts: 0
+# atoms: 212274
+algorithm: This content view includes UMLS atoms sharing a UMLS CUI with a SNOMEDCT_US atom having a SCUI value on the VA/KP Problem List Subset which is marked active.  Only atoms from the SNOMED family and level 0 sources with LAT=ENG and SUPPRESS=N are included.
+--------
+ui:C1964028
+name:UMLS enhanced VA/KP Problem List Subset of SNOMED (Level 0+SNOMED+MDR)
+# sourceConcepts: 0
+# atoms: 234633
+algorithm: This content view includes UMLS atoms sharing a UMLS CUI with a SNOMEDCT atom having a SCUI value on the VA/KP Problem List Subset which is marked active.  Only atoms from the SNOMED family, MDR and level 0 sources with LAT=ENG and SUPPRESS=N are included.
+--------
+ui:C2711988
+name:CORE Problem List Subset of SNOMED CT
+# sourceConcepts: 6347
+# atoms: 0
+algorithm: The creation of this content view is based on the list of SNOMED CT concept IDs in the latest release of the CORE Problem List Subset of SNOMED CT, excluding those that are retired from the Subset. It contains all atoms linked to that SNOMED CT concept with LAT=ENG and SUPPRESS=N.
+--------
+ui:C3503753
+name:Prescribable List Subset of RXNORM
+# sourceConcepts: 0
+# atoms: 220464
+algorithm: The creation of this content view is based on the set of RXNORM concepts marked as prescribable in the RXNCONSO.RRF file.
+--------
+ui:C3812142
+name:SNOMEDCT US Extension Subset
+# sourceConcepts: 4627
+# atoms: 0
+algorithm: AUIs with module_id of SNOMEDCT US Extension, '731000124108'
+--------
 ~~~~
-content.psf myPsf = new content.psf();
- content.contentViewDTO[] myContentViews =  utsContentService.getContentViews(ticket, "2012AA", myPsf);
- for (int i = 0; i < myContentViews.Length; i++) {
- content.contentViewDTO myContentViewDTO = myContentViews[i];
- string name = myContentViewDTO.name;
- int atommembercnt = myContentViewDTO.atomMemberCount;
- string contributor = myContentViewDTO.contributor;\
- string contributorurl = myContentViewDTO.contributorURL;
-  }
-~~~~
 
-#### Sample Output:
+### getContentView
 
-
-Content Name|Content AtomMemCount|Content Contributer|Content ContributerURL
---- |--- | --- | --- 
-MetaMap NLP View|3494896|Dr. Alan (Lan) R. Aronson|http://ii-public.nlm.nih.gov/Xfer/ContentView/
-UMLS enhanced VA/KP Problem List Subset of SNOMED (Level 0+SNOMED)|192014|Veterans Health Administration, Kaiser Permanente|ftp://ftp1.nci.nih.gov/pub/cacore/EVS/FDA/ProblemList/
-UMLS enhanced VA/KP Problem List Subset of SNOMED (Level 0+SNOMED+MDR)|213615|Veterans Health Administration, Kaiser Permanente|ftp://ftp1.nci.nih.gov/pub/cacore/EVS/FDA/ProblemList/
-CORE Problem List Subset of SNOMED CT|0|National Library of Medicine|http://www.nlm.nih.gov/research/umls/Snomed/core_subset.html
-
-
->
-
-
-**Method:**getContentView(String ticket,String version,String conceptId)
-
-**Returns:**ArrayList<ContentViewDTO>(see javadocs)(javadocs/gov/nih/nlm/umls/dto/content/ContentViewDTO.html)
-
-
-**Use Case:**Given a UMLS release and a concept unique identifier (CUI) for a content view, this call returns meta-data about the queried content view in the specified release, such as the name CUI of the content view, the atom member count, contributer, and a description of the content view.
+**Method Signature:** ```getContentView(String ticket,String version,String conceptId)```
 
 #### Sample Input (Java):
 
-~~~~
+~~~~java
+String currentUmlsRelease = utsMetadataService.getCurrentUMLSVersion(ticket);
 ContentViewDTO myContentView = new ContentViewDTO();
- myContentView = utsContentService.getContentView(ticket, umlsRelease, "C2711988");
-
- String name = myContentView.getName();
- int atommembercnt = myContentView.getAtomMemberCount();
- String contributor = myContentView.getContributor();
- String contributorurl = myContentView.getContributorURL();
+myContentView = utsContentService.getContentView(ticket, currentUmlsRelease, "C2711988");
+String name = myContentView.getName();
+int numberOfScuis = myContentView.getSourceConceptMemberCount();
+String algorithm = myContentView.getAlgorithm();
+String contributorurl = myContentView.getContributorURL();
 ~~~~
 
-#### Sample Input (C#):
-
-~~~~
-content.contentViewDTO myContentView = utsContentService.getContentView(ticket, "2011AB", "C2711988");
- string name = myContentView.name;
- int atommembercnt = myContentView.atomMemberCount; 
- string contributor = myContentView.contributor;
- string contributorurl = myContentView.contributorURL;
-~~~~
 
 #### Sample Output:
 
+~~~~text
+ui:C2711988
+name:CORE Problem List Subset of SNOMED CT
+# sourceConcepts: 6347
+# atoms: 0
+algorithm: The creation of this content view is based on the list of SNOMED CT concept IDs in the latest release of the CORE Problem List Subset of SNOMED CT, excluding those that are retired from the Subset. It contains all atoms linked to that SNOMED CT concept with LAT=ENG and SUPPRESS=N.
+url: http://www.nlm.nih.gov/research/umls/Snomed/core_subset.html
+--------        
 ~~~~
-Content Name | Content AtomMemCount  | Content Contributer  | Content ContributerURL  
-CORE Problem List Subset of SNOMED CT |  0   |  National Library of Medicine |  http://www.nlm.nih.gov/research/umls/Snomed/core_subset.html          
+
+
+### getContentViewAtomMembers
+
+**Method Signature:** ```getContentViewAtomMembers(String ticket,String version,String conceptId,PSF psf)```
+
+#### Sample Input (Java):
+
+~~~~java
+//retrieve members MetaMap NLP View content view
+int pageNum = 1;
+List<AtomContentViewMemberDTO> members = new ArrayList<AtomContentViewMemberDTO>();
+String currentUmlsRelease = utsMetadataService.getCurrentUMLSVersion(ticket);
+		
+    do {
+	myPsf.setPageNum(pageNum);
+	members = utsContentService.getContentViewAtomMembers(ticket, currentUmlsRelease, "C1700357", myPsf);
+	for (AtomContentViewMemberDTO member:members) {
+            	
+	    String ui = member.getAtom().getUi();
+	    String name = member.getAtom().getTermString().getDefaultPreferredName();
+            String tty = member.getAtom().getTermType();
+            String rsab = member.getAtom().getRootSource();
+            System.out.println(ui+"|"+tty+"|"+rsab+"|"+name);
+            	
+        }pageNum++;
+			 
+    } while(members.size() > 0);
 ~~~~
->
 
-**Method:**getAtomContentViewMemberships(String ticket,String version,String atomId,PSF psf)
 
-**Returns:**ArrayList<AtomContentViewMemberDTO>(see javadocs)</span>](javadocs/gov/nih/nlm/umls/dto/content/AtomContentViewMemberDTO.html)
+#### Sample Output:
 
-**Use Case:** Given a UMLS release and an atom unique identifier (AUI), this call returns details of the supplied atom identifier and all content view identifiers for content views that contain the atom as a member.
+~~~~text
+...
+A23780681|PTCS|OMIM|Chronic thrombotic microangiopathy
+A23789255|PTCS|OMIM|Skin blistering, intermittent
+A23786614|PTCS|OMIM|Residual slightly atrophic scarring
+A23782656|PTCS|OMIM|Acanthosis, mild
+A23788588|PTCS|OMIM|Basement membrane keratinocyte disruption within lower epidermis
+A23782658|PTCS|OMIM|Aggregated intermediate filaments
+A23786615|PTCS|OMIM|Increased number of perinuclear vesicles
+A23780012|PTCS|OMIM|Central apnea, episodic
+A23787281|PTCS|OMIM|Abnormal lipid peak on brain MRS
+A23784679|PTCS|OMIM|Dystonic posturing of the upper limb
+A23781991|PTCS|OMIM|Laryngeal tremor
+A23787282|PTCS|OMIM|Arthrogryposis of the small joints
+A23780014|PT|OMIM|EPISODIC PAIN SYNDROME, FAMILIAL, 1
+A23788592|ACR|OMIM|FEPS1
+A23788593|PTCS|OMIM|Pain, episodic
+A21307920|SCN|NCBI|bacterium ENA08R
+A21307921|SCN|NCBI|Bacillus sp. ENA08F
+A21389116|SCN|NCBI|Luetzelburgia sp. DC-2012b
+A21372830|SCN|NCBI|Dyckia distachya
+A21324097|SCN|NCBI|Synodus bondi
+A21340193|SCN|NCBI|Ypthima similis
+A21356392|SCN|NCBI|Pseudovidalia
+A21275800|SCN|NCBI|Pseudovidalia furialis
+...
+~~~~
+
+### getContentViewSourceConceptMembers
+
+**Method Signature:** ```getContentViewSourceConceptMembers(String ticket,String version,String conceptId,PSF psf)```
 
 #### Sample Input (Java):
 
 ~~~~
-gov.nih.nlm.uts.webservice.content.Psf myPsf = new gov.nih.nlm.uts.webservice.content.Psf();
- java.util.List<AtomContentViewMemberDTO> myAtoms = new ArrayList<AtomContentViewMemberDTO>();
- myAtomContentViewMember = utsContentService.getAtomContentViewMemberships(ticket, umlsRelease, "A2878777", myPsf);
 
- for (int i = 0; i < myAtomContentViewMember.size(); i++) {
- AtomContentViewMemberDTO myAtomContentViewMemberDTO = myAtomContentViewMember.get(i);
- String ui = myAtomContentViewMemberDTO.getAtom().getConcept().getUi();
- String defprefname = myAtomContentViewMemberDTO.getAtom().getConcept().getDefaultPreferredName();
- String contviewhandle = myAtomContentViewMemberDTO.getContentViewHandle();
- String termtype = myAtomContentViewMemberDTO.getAtom().getTermType();
- }
-~~~~
-
-#### Sample Input (C#):
-
-~~~~
-content.psf myPsf = new content.psf();
- content.atomContentViewMemberDTO[] myAtomContentViewMember= utsContentService.getAtomContentViewMemberships(ticket, "2011AB", "A2878777", myPsf);
- for (int i = 0; i < myAtomContentViewMember.Length; i++) {
- content.atomContentViewMemberDTO myAtomContentViewMemberDTO = myAtomContentViewMember[i];
- string ui = myAtomContentViewMemberDTO.atom.concept.ui;
- string defprefname = myAtomContentViewMemberDTO.atom.concept.defaultPreferredName;
- string contviewhandle = myAtomContentViewMemberDTO.contentViewHandle;
- string termtype = myAtomContentViewMemberDTO.atom.termType;
- }
-~~~~
-
-#### Sample Output:
-
-Content UI |  Content DefPrefName |  Content ContentViewHandle |  Content TermType 
---- | --- | --- | --- 
-C0004096   |  Asthma  |  IC1964027   | PT   
-C0004096   |  Asthma |IC1964028  | PT     
-C0004096  |   Asthma | IC1700357  | PT  
-
->
-
-**Method:**getSourceConceptContentViewMemberships(String ticket,String version,String sourceConceptId,String rootSourceAbbreviation,PSF psf)
-
-**Returns:**ArrayList<SourceConceptContentViewMemberDTO>(see javadocs)(javadocs/gov/nih/nlm/umls/dto/content/SourceConceptContentViewMemberDTO.html)
-
-**Use Case:** Given a UMLS release and a source-asserted concept unique identifier (SCUI), a release and a root source abbreviation (RSAB), this call returns the content view identifier information for the content view of which the SCUI is a member.
-
-
-#### Sample Input (Java):
-
-~~~~
-gov.nih.nlm.uts.webservice.content.Psf myPsf = new gov.nih.nlm.uts.webservice.content.Psf();
- java.util.List<SourceConceptContentViewMemberDTO> myAtoms = new ArrayList<SourceConceptContentViewMemberDTO>();
- mySourceConceptContentViewMember = utsContentService.getSourceConceptContentViewMemberships(ticket, umlsRelease, "195967001", "SNOMEDCT", myPsf);
-
- for (int i = 0; i < mySourceConceptContentViewMember.size(); i++) {
- SourceConceptContentViewMemberDTO mySourceConceptCont = mySourceConceptContentViewMember.get(i);
- String ui = mySourceConceptCont.getSourceConcept().getUi();
- String name = mySourceConceptCont.getSourceConcept().getDefaultPreferredName();
- String contviewhandle = mySourceConceptCont.getContentViewHandle();
- int attributeCount = mySourceConceptCont.getSourceConcept().getCVMemberCount();
- }
-~~~~
-
-#### Sample Input (C#):
-
-~~~~
-content.psf myPsf = new content.psf();
-content.sourceConceptContentViewMemberDTO[] mySourceConceptContentViewMember = utsContentService.getSourceConceptContentViewMemberships(ticket, "2012AA", "195967001", "SNOMEDCT", myPsf);
- for (int i = 0; i < mySourceConceptContentViewMember.Length; i++) {
- content.sourceConceptContentViewMemberDTO mySourceConceptContentViewMemberDTO = mySourceConceptContentViewMember[i];
- string ui = mySourceConceptContentViewMemberDTO.sourceConcept.ui;
- string name = mySourceConceptContentViewMemberDTO.sourceConcept.defaultPreferredName;
- string contviewhandle = mySourceConceptContentViewMemberDTO.contentViewHandle;
- int attributeCount = mySourceConceptContentViewMemberDTO.sourceConcept.cVMemberCount;
- }
+//retrieve members of the SNOMED CT CORE Problem List content view, along with attributes of each member
+int pageNum = 1;
+List<SourceConceptContentViewMemberDTO> members = new ArrayList<SourceConceptContentViewMemberDTO>();
+String currentUmlsRelease = utsMetadataService.getCurrentUMLSVersion(ticket);
+		
+    do {
+	myPsf.setPageNum(pageNum);
+	members = utsContentService.getContentViewSourceConceptMembers(ticket, currentUmlsRelease, "C2711988", myPsf);
+	for (SourceConceptContentViewMemberDTO member:members) {
+            	
+	    String ui = member.getSourceConcept().getUi();
+	    String name = member.getSourceConcept().getDefaultPreferredName();
+            int attributeCount = member.getAttributeCount();
+                
+            System.out.println(ui+"|"+name);
+            //check for attribute of each content view member
+            if (attributeCount > 0) {
+                  
+            Psf psf2 = new Psf();
+            //only include IS_RETIRED_FROM_SUBSET attributes
+            psf2.getIncludedAttributeNames().add("IS_RETIRED_FROM_SUBSET");
+            List<AttributeDTO> attributes = utsContentService.getContentViewMemberAttributes(ticket, currentUmlsRelease, member.getUi(), psf2);
+                  
+            for (AttributeDTO attribute:attributes) {
+            		
+            	System.out.println("---"+attribute.getName()+"|"+attribute.getValue());
+            	  
+            }
+            	
+        }pageNum++;
+			 
+    } while(members.size() > 0);
 ~~~~
 
 #### Sample Output:
 
-Content Ui |  Content Name | ContentView Handle  | ContentView Member count              
---- | --- | --- | ---        
-195967001   |   Asthma | IC2711988   |  1  
->
-
-**Method:**getContentViewAtomMembers(String ticket,String version,String conceptId,PSF psf)
-
-**Returns:**ArrayList<AtomContentViewMemberDTO>(see javadocs)(javadocs/gov/nih/nlm/umls/dto/content/AtomContentViewMemberDTO.html)
-
-**Use Case:** Given a release and a concept unique identifier (CUI) for a content view, this call returns all the atoms that are members of the supplied content view.
-
-#### Sample Input (Java):
-
+~~~~text
+...
+18165001|Jaundice
+---IS_RETIRED_FROM_SUBSET|False
+36222008|Carcinoid heart disease
+---IS_RETIRED_FROM_SUBSET|False
+189607006|Carcinoid tumor - morphology
+---IS_RETIRED_FROM_SUBSET|True
+443492008|Carcinoid tumor
+---IS_RETIRED_FROM_SUBSET|False
+60853003|Disorder of magnesium metabolism
+---IS_RETIRED_FROM_SUBSET|False
+165816005|HIV positive
+---IS_RETIRED_FROM_SUBSET|False
+54319003|Disruptive behavior disorder
+---IS_RETIRED_FROM_SUBSET|False
+308546005|Dissection of aorta
+---IS_RETIRED_FROM_SUBSET|False
+74390002|Wolff-Parkinson-White pattern
+---IS_RETIRED_FROM_SUBSET|False
+76844004|Local infection of wound
+---IS_RETIRED_FROM_SUBSET|False
+312608009|Laceration - injury
+---IS_RETIRED_FROM_SUBSET|False
+7484005|Double outlet right ventricle
+---IS_RETIRED_FROM_SUBSET|False
+...
 ~~~~
-gov.nih.nlm.uts.webservice.content.Psf myPsf = new gov.nih.nlm.uts.webservice.content.Psf();
- java.util.List<AtomContentViewMemberDTO> myAtoms = new ArrayList<AtomContentViewMemberDTO>();
- myAtomContentViewMember = utsContentService.getContentViewAtomMembers(ticket, umlsRelease, "C1700357", myPsf);
-
- for (int i = 0; i < myAtomContentViewMember.size(); i++) {
- AtomContentViewMemberDTO myAtomContentViewMemberDTO = myAtomContentViewMember.get(i);
- String ui = myAtomContentViewMemberDTO.getAtom().getConcept().getUi();
- String defprefname = myAtomContentViewMemberDTO.getAtom().getConcept().getDefaultPreferredName();
- String contviewhandle = myAtomContentViewMemberDTO.getContentViewHandle();
- String termtype = myAtomContentViewMemberDTO.getAtom().getTermType();
- }
-~~~~
-
-#### Sample Input (C#):
-
-~~~~
-content.psf myPsf = new content.psf();
- content.atomContentViewMemberDTO[] myAtomContentViewMember = utsContentService.getContentViewAtomMembers(ticket, "2011AB", "C1700357", myPsf);
- for (int i = 0; i < myAtomContentViewMember.Length; i++) {
-
- content.atomContentViewMemberDTO myAtomContentViewMemberDTO = myAtomContentViewMember[i];
- string ui = myAtomContentViewMemberDTO.atom.concept.ui;
- string defprefname = myAtomContentViewMemberDTO.atom.concept.defaultPreferredName;
- string contviewhandle = myAtomContentViewMemberDTO.contentViewHandle;
- string termtype = myAtomContentViewMemberDTO.atom.termType;
- }
-~~~~
-
-#### Sample Output:
-
-Content UI |  Content DefPrefName | Content ContentViewHandle  | Content TermType    
---- | --- | --- | --- 
-C2212218  |   adenocarcinoma of scrotum with squamous metaplasia  | IC1700357 |   SY  
-C2212220    | adenocarcinoma of scrotum with spindle cell metaplasia| IC1700357  | PT
- C2212220   |  adenocarcinoma of scrotum with spindle cell metaplasia    |IC1700357|   SY
- C2212221    | adenocarcinoma of scrotum with apocrine metaplasia        |IC1700357  |  PT        
-C2212221 |   adenocarcinoma of scrotum with apocrine metaplasia        |IC1700357 |SY 
-C2212223  |   nodular melanoma of scrotum     |IC1700357| PT 
-C2212224  |   balloon cell melanoma of scrotum   | IC1700357  | PT
->
-
-
-**Method:**getContentViewSourceConceptMembers(String ticket,String version,String conceptId,PSF psf)
-
-**Returns:**ArrayList<SourceConceptContentViewMemberDTO>(see javadocs)</span>](javadocs/gov/nih/nlm/umls/dto/content/SourceConceptContentViewMemberDTO.html)
-
-**Use Case:** Given a release and a concept unique identifier (CUI) for a content view, this call returns the source-asserted concept identifiers (SCUI) that are members of the supplied content view.
-
-#### Sample Input (Java):
-
-~~~~
-gov.nih.nlm.uts.webservice.content.Psf myPsf = new gov.nih.nlm.uts.webservice.content.Psf();
- java.util.List<SourceConceptContentViewMemberDTO> myAtoms = new ArrayList<SourceConceptContentViewMemberDTO>();
- mySourceConceptContentViewMember = utsContentService.getContentViewSourceConceptMembers(ticket, umlsRelease, "C2711988", myPsf);
- for (int i = 0; i < mySourceConceptContentViewMember.size(); i++) {
- SourceConceptContentViewMemberDTO mySourceConceptCont = mySourceConceptContentViewMember.get(i);
- String ui = mySourceConceptCont.getSourceConcept().getUi();
- String name = mySourceConceptCont.getSourceConcept().getDefaultPreferredName();
- String contviewhandle = mySourceConceptCont.getContentViewHandle();
- int attributeCount = mySourceConceptCont.getSourceConcept().getCVMemberCount();
- }
-~~~~
-
-#### Sample Input (C#):
-
-~~~~
-content.psf myPsf = new content.psf();
- content.sourceConceptContentViewMemberDTO[] mySourceConceptContentViewMember = utsContentService.getContentViewSourceConceptMembers(ticket, "2011AB", "C2711988", myPsf);
- for (int i = 0; i < mySourceConceptContentViewMember.Length; i++) {
- content.sourceConceptContentViewMemberDTO mySourceConceptContentViewMemberDTO = mySourceConceptContentViewMember[i];
- string ui = mySourceConceptContentViewMemberDTO.sourceConcept.ui;
- string name = mySourceConceptContentViewMemberDTO.sourceConcept.defaultPreferredName;
- string contviewhandle = mySourceConceptContentViewMemberDTO.contentViewHandle;
- int attributeCount = mySourceConceptContentViewMemberDTO.sourceConcept.cVMemberCount;
- }
-~~~~
-
-#### Sample Output:
-
-Content Source Concept Ui  | Content Name   | ContentView Hanlde |  ContentView Member count 
---- | --- | --- | ---|
-414581006   |   Laryngopharyngeal reflux   |IC2711988   |   1 
-197377009  |Gallbladder calculus with acute cholecystitis and no obstruction   |  IC2711988    |  1    
-301913002  |Lesion of eyelid    | IC2711988   |   1    
-62120000 |  Unilateral recurrent inguinal hernia     |IC2711988    |    1
-52278004  | Unilateral inguinal hernia     | IC2711988    |   1     
