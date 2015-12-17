@@ -103,7 +103,7 @@ try {
 Here is an example of how to set up an instance of the UtsWsHistoryController interface.
 
 ~~~~java
- private UtsWsSemanticNetworkController utsHistoryService;
+ private UtsWsHistoryController utsHistoryService;
 
  try {
  utsHistoryService = (new UtsWsHistoryControllerImplService()).getUtsWsHistoryControllerImplPort();
