@@ -1,4 +1,4 @@
-title=Retrieving UMLS Content View Information from UTS SOAP API
+title=Retrieving UMLS Content View Information from UMLS SOAP API
 date=2015-08-17
 updated=2015-08-17
 type=page
@@ -6,12 +6,16 @@ status=published
 navorder=7
 ~~~~~~
 
-
-**Method:**getContentViews(String ticket,String version,PSF psf)
-
-**Returns:**ArrayList<ContentViewDTO>(see javadocs)(javadocs/gov/nih/nlm/umls/dto/content/ContentViewDTO.html)
-
-**Use Case:**Given a UMLS release, this call returns meta-data about each available content view in the supplied UMLS release, such as the name and concept unique identifier (CUI) of the content view, the atom member count, contributer, and a description of the content view.
+Interface | Method | Use Case | Object or Data type Returned 
+-- | -- | -- | --
+**UtsWsContentController**||||
+ |[getContentViews](#getcontentviews)|Retrieve a list of all content views available in the UMLS|ArrayList\<ContentViewDTO\>
+ |[getContentView](#getcontentview)|Retrieve information about a particular content view given its identifier|ContentViewDTO
+ |[getContentViewSourceConceptMembers]|Retrieve all source concepts (and perhaps store them locally) that belong to a particular content view|ArrayList\<SourceConceptContentViewMemberDTO\>
+ |[getContentViewAtomMembers]|Retrieve all atoms (and perhaps store them locally) that belong to a particular content view|ArrayList\<AtomContentViewMemberDTO\>
+ 
+ 
+**Method Signature:** ```getContentViews(String ticket,String version,PSF psf)```
 
 #### Sample Input (Java):
 

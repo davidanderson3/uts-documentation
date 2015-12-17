@@ -24,9 +24,7 @@ Section (Interface)|Use Case
 **Retrieving UMLS Content** ([UtsWsContentController](/soap/installation/interface-setup.html#utswscontentcontroller))||
 [Concept](/soap/concept/index.html)|Retrieve UMLS Concept Information 
 [Atoms](/soap/atoms/index.html)|Retrieve UMLS Atoms 
-[Definitions](/soap/definitions/index.html)|Retrieve UMLS Definitions 
-[Term](/soap/term/index.html)|Retrieve UMLS Terms
-[Strings](/soap/sui/index.html)|Retrieve UMLS Strings  
+[Definitions](/soap/definitions/index.html)|Retrieve UMLS Definitions  
 [Atom Cluster](/soap/atomcluster/index.html)|Retrieve source-asserted concepts,descriptors, and codes
 [Content View](/soap/contentview/index.html)|Retrieve UMLS content views
 [Subset](/soap/subset/index.html)|Retrieve UMLS subsets

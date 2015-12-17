@@ -9,7 +9,7 @@ navorder=8
 Interface | Method | Use Case | Object or Data type Returned 
 -- | -- | -- | --
 **UtsWsContentController**||||
- |[getSubsets](#getsubsets)|Retrieve information about all subsets in the UMLS|ArrayList\<SubsetDTO\>
+ |[getSubsets](#getsubsets)|Retrieve a list of all subsets in the UMLS|ArrayList\<SubsetDTO\>
  |[getSubset](#getsubset)|Retrieve information about one subset in the UMLS|SubsetDTO
  |[getSubsetSourceConceptMembers](#getsubsetsourceconceptmembers)|Retrieve (and perhaps store locally) all source concepts that belong to a known subset|ArrayList\<SourceConceptSubsetMemberDTO\>
  

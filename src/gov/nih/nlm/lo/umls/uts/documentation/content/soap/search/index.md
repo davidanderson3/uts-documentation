@@ -130,7 +130,7 @@ name: Aglossia-adactyly syndrome (disorder)
 
 ### findCodes
 
-**Method Signature:** ```findSourceCodes(String ticket,String version,String target,String str,String searchType,PSF psf)```
+**Method Signature:** ```findCodes(String ticket,String version,String target,String str,String searchType,PSF psf)```
 
 Parameter name|Definition|Valid values
 -- | --

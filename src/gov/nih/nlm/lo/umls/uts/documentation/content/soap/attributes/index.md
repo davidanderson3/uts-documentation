@@ -14,6 +14,8 @@ Interface | Method | Use Case | Object or Data type Returned
  |[getCodeAttributes](#getcodeattributes)|Retrieve attributes of known source-asserted codes|ArrayList\<AttributeDTO\>
  |[getAtomAttributes](#getatomattributes)|Retrieve attributes of known source-asserted atoms|ArrayList\<AttributeDTO\>
 
+**Each of these examples below requires an instance of the [UtsWsContentController](/soap/installation/interface-setup.html#utswscontentcontroller), [UtsWsMetadataController](/soap/installation/interface-setup.html#utswsmetadatacontroller) and [UtsWsSecurityController](/soap/installation/interface-setup.html#utswssecuritycontroller) interfaces**.
+
 ### getCodeAttributes
 
 **Method Signature:** ```getCodeAttributes(String ticket,String version,String codeId,String rootSourceAbbreviation,PSF psf)```
