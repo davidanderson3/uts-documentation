@@ -1,6 +1,6 @@
 title=Retrieving UMLS Concept Information
 date=2015-06-12
-updated=2015-10-08
+updated=2015-12-21
 type=page
 status=published
 category=Retrieving UMLS Data
@@ -54,7 +54,7 @@ Sample output for /content/current/CUI/C0009044?ticket=ST...
         "ui": "C0009044",
         "suppressible": false,
         "dateAdded": "09-30-1990",
-        "majorRevisionDate": "07-04-2012",
+        "majorRevisionDate": "08-18-2015",
         "status": "R",
         "semanticTypes": [
             "T037: Injury or Poisoning"
@@ -62,9 +62,10 @@ Sample output for /content/current/CUI/C0009044?ticket=ST...
         "atomCount": 63,
         "attributeCount": 0,
         "cvMemberCount": 0,
-        "atoms": "https://uts-ws.nlm.nih.gov/rest/content/2015AA/CUI/C0009044/atoms",
+        "atoms": "https://uts-ws.nlm.nih.gov/rest/content/2015AB/CUI/C0009044/atoms",
         "definitions": "NONE",
-        "relations": "https://uts-ws.nlm.nih.gov/rest/content/2015AA/CUI/C0009044/relations",
+        "relations": "https://uts-ws.nlm.nih.gov/rest/content/2015AB/CUI/C0009044/relations",
+        "defaultPreferredAtom": "https://uts-ws.nlm.nih.gov/rest/content/2015AB/CUI/C0009044/atoms/preferred",
         "relationCount": 5,
         "name": "Closed fracture carpal bone"
     }
