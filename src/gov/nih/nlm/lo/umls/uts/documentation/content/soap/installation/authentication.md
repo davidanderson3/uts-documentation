@@ -6,27 +6,15 @@ status=published
 navorder=1
 ~~~~~~
 
-Interface | Method | Use Case | Object or Data type Returned | Usage Guidance
+Interface | Method | Use Case | Object or Data type Returned | Guidance
 -- | -- | -- | --
 **UtsWsSecurityControllerController**|||||
  |[getProxyGrantTicket](#getproxygrantticket)|Retrieve a proxy grant ticket (also known as a ticket granting ticket).|String|Generate one time, normally when your application starts up. A ticket granting ticket is good for 8 hours, and is needed for the getProxyTicket() method below.  **You do not need to generate a new ticket granting ticket for each call to the API**.
  |[getProxyTicket](#getproxyticket)|Retrieve a **single-use** service ticket to make calls to the API.|String|Use these service tickets when making calls to the content, history, metadata, etc interfaces.  These tickets are good for one use or 5 minutes, whichever comes first. 
- |[validateProxyTicket](#validateproxyticket)|Validate a single-use service ticket.|String||
+ |[validateProxyTicket](#validateproxyticket)|Validate a single-use service ticket.|String| Returns the username of the person who requested the service ticket.  This is useful if you are hosting UMLS content and want to validate that your users are UMLS licensees|
 
  **Below is an example of how to create an instance of the UtsWsSecurityInterface**
  
-~~~~java
-private UtsWsSecurityController utsSecurityService;
-
- try {
- utsSecurityService = (new UtsWsSecurityControllerImplService()).getUtsWsSecurityControllerImplPort();
- }
-
- catch (Exception e) {
- out.println("Error!!!" + e.getMessage());
- }
-~~~~
-
 ### Authentication
 
 In general, your application will follow this sequence when making calls to the API:

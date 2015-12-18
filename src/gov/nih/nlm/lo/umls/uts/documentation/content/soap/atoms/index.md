@@ -16,7 +16,7 @@ Interface | Method | Use Case | Object or Data type Returned
  |[getAtom](#getatom)|Retrieve information for a known UMLS AUI. | AtomDTO
  |[getDefaultPreferredAtom](#getdefaultpreferredatom)|Retrieve the highest-ranking atom for a known source-asserted concept, code, or descriptor | AtomDTO
  
-**Each of these examples below requires an instance of the [UtsWsContentController](/soap/installation/content.html) and [UtsWsSecurityController](/soap/installation/authentication.html) interfaces**.
+**Each of these examples below requires an instance of the [UtsWsContentController](/soap/installation/interface-setup.html#utswscontentcontroller), [UtsWsMetadataController](/soap/installation/interface-setup.html#utswsmetadatacontroller) and [UtsWsSecurityController](/soap/installation/interface-setup.html#utswssecuritycontroller) interfaces**.
  
 ### getConceptAtoms
 
@@ -27,6 +27,8 @@ Interface | Method | Use Case | Object or Data type Returned
 
 ~~~~java
 
+    String currentUmlsRelease = utsMetadataService.getCurrentUMLSVersion(ticket);
+    Psf myPsf = new Psf();
     //exclude obsolete and suppressible atoms
     myPsf.setIncludeSuppressible(false);
     myPsf.setIncludeObsolete(false);
@@ -36,7 +38,7 @@ Interface | Method | Use Case | Object or Data type Returned
     myPsf.getIncludedSources().add("OMIM");
 		
     List<AtomDTO> atoms = new ArrayList<AtomDTO>();
-    atoms = utsContentService.getConceptAtoms(ticket, "2015AB", "C0595985", myPsf);
+    atoms = utsContentService.getConceptAtoms(ticket, currentUmlsRelease, "C0595985", myPsf);
         
     for (AtomDTO atom:atoms) {
 			
@@ -74,9 +76,10 @@ A2972867|SY|Micrognathia with peromelia|35031005|SNOMEDCT_US
 #### Sample Input (Java):
 
 ~~~~
- gov.nih.nlm.uts.webservice.content.Psf myPsf = new gov.nih.nlm.uts.webservice.content.Psf();
+ String currentUmlsRelease = utsMetadataService.getCurrentUMLSVersion(ticket);
+ Psf myPsf = new Psf();
  List<AtomDTO> myAtoms = new ArrayList<AtomDTO>();
- myAtoms = utsContentService.getSourceConceptAtoms(ticket, "2015AA","9468002","SNOMEDCT_US",myPsf);
+ myAtoms = utsContentService.getSourceConceptAtoms(ticket, currentUmlsRelease,"9468002","SNOMEDCT_US",myPsf);
 
  for (AtomDTO atom:myAtoms) {
 
@@ -107,9 +110,10 @@ A4754444|IS|Closed fracture of wrist, NOS|true
 #### Sample Input (Java):
 
 ~~~~
- gov.nih.nlm.uts.webservice.content.Psf myPsf = new gov.nih.nlm.uts.webservice.content.Psf();
+ String currentUmlsRelease = utsMetadataService.getCurrentUMLSVersion(ticket);
+ Psf myPsf = new Psf();
  List<AtomDTO> myAtoms = new ArrayList<AtomDTO>();
- myAtoms = utsContentService.getSourceDescriptorAtoms(ticket, "2015AA","I63.422","ICD10CM",myPsf);
+ myAtoms = utsContentService.getSourceDescriptorAtoms(ticket, currentUmlsRelease,"I63.422","ICD10CM",myPsf);
 
  for (AtomDTO atom:myAtoms) {
 
@@ -138,9 +142,10 @@ A20134276|AB|Cerebral infrc due to embolism of left ant cerebral artery|false|tr
 #### Sample Input (java)
 
 ~~~~
- gov.nih.nlm.uts.webservice.content.Psf myPsf = new gov.nih.nlm.uts.webservice.content.Psf();
+ String currentUmlsRelease = utsMetadataService.getCurrentUMLSVersion(ticket);
+ Psf myPsf = new Psf();
  List<AtomDTO> myAtoms = new ArrayList<AtomDTO>();
- myAtoms = utsContentService.getCodeAtoms(ticket, "2015AA","53746-4","LNC",myPsf);
+ myAtoms = utsContentService.getCodeAtoms(ticket, currentUmlsRelease,"53746-4","LNC",myPsf);
 
  for (AtomDTO atom:myAtoms) {
 
@@ -171,7 +176,8 @@ A18160664|LN|Barbiturates panel:-:Pt:Urine:-|false|false
 #### Sample Input (Java):
 
 ~~~~java
-AtomDTO myAtom = utsContentService.getAtom(ticket, 2011AB, "A6955581");
+ String currentUmlsRelease = utsMetadataService.getCurrentUMLSVersion(ticket);
+ AtomDTO myAtom = utsContentService.getAtom(ticket, currentUmlsRelease, "A6955581");
  String atomName = myAtom.getTermString().getName();
  String source = myAtom.getRootSource();
  String sourceConceptUi = myAtom.getSourceConcept().getUi();
@@ -221,9 +227,9 @@ content.atomDTO myAtom = utsContentService.getAtom(ticket, "2011AB","A6955581");
 #### Sample Input (Java)
 
 ~~~~java
-
+String currentUmlsRelease = utsMetadataService.getCurrentUMLSVersion(ticket);
 AtomDTO atom = new AtomDTO();
-atom = utsContentService.getDefaultPreferredAtom(ticketClient.getSingleUseTicket(tgt), "2015AB", "9468002","SNOMEDCT_US");
+atom = utsContentService.getDefaultPreferredAtom(ticket, currentUmlsRelease, "9468002","SNOMEDCT_US");
 String aui = atom.getUi();
 String tty = atom.getTermType();
 String name = atom.getTermString().getName();
@@ -234,14 +240,9 @@ boolean isSuppressible = atom.isSuppressible();
 #### Sample Output
 
 ~~~~text
-AUI:
-  A3357646
-TTY:
-  PT
-Name:
-  Closed fracture of carpal bone
-Obsolete:
-  False
-Suppressible:
-  False
+AUI: A3357646
+TTY: PT
+Name: Closed fracture of carpal bone
+Obsolete: False
+Suppressible: False
 ~~~~

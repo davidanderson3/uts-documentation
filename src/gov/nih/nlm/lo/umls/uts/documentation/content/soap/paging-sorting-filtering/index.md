@@ -1,4 +1,4 @@
-title=Paging and Filtering
+title=Paging, Sorting and Filtering
 date=2015-08-19
 updated=2015-08-19
 type=page
@@ -6,7 +6,16 @@ status=published
 navorder=3
 ~~~~~~
 
-The UMLS SOAP API's PSF (paging, sorting, and filtering object) allows you to customize your search results based on certain use cases.
+The Paging, Sorting, and Filtering (PSF) object of the UMLS SOAP allows you to customize the results of your Web service calls in a variety of ways. The PSF object allows a great deal of flexibility in customizing your view of returned data.
+You can:
+
+* include or exclude criteria such as source vocabularies, language, term types, obsolescence, and suppressibilty
+* sort your results by different fields, depending on the return type
+* choose the number of results displayed per page
+* choose number of pages of results returned
+
+You can create a PSF object in java as follows:
+```Psf psf = new Psf();```
 
 Method | Use With | Use Case | Permitted Values | Default Value
 -- | -- | -- | --
@@ -25,68 +34,68 @@ Method | Use With | Use Case | Permitted Values | Default Value
 #### setIncludeSuppressible
 
 ~~~~java
-Psf.setIncludeObsolete(false);
+psf.setIncludeObsolete(false);
 ~~~~
 
 #### setIncludeObsolete
 
 ~~~~java
-Psf.setIncludeSuppressible(false);
+psf.setIncludeSuppressible(false);
 ~~~~
 
 #### getIncludedTermTypes
 
 ~~~~java
-Psf.getIncludedTermTypes().add("PT");
-Psf.getIncludedTermTypes().add("FN");
+psf.getIncludedTermTypes().add("PT");
+psf.getIncludedTermTypes().add("FN");
 ~~~~
 
 #### getIncludedRelationLabels
 
 ~~~~java
-Psf.getIncludedRelationLabels().add("PAR");
-Psf.getIncludedRelationLabels().add("SY");
+psf.getIncludedRelationLabels().add("PAR");
+psf.getIncludedRelationLabels().add("SY");
 ~~~~
 
 #### getIncludedAdditionalRelationLabels
 
 ~~~~java
-Psf.getIncludedAdditionalRelationLabels().add("has_finding_site");
-Psf.getIncludedAdditionalRelationLabels().add("has_procedure_site");
+psf.getIncludedAdditionalRelationLabels().add("has_finding_site");
+psf.getIncludedAdditionalRelationLabels().add("has_procedure_site");
 ~~~~
 
 #### getIncludedAttributeNames
 
 
 ~~~~java
-Psf.getIncludedAttributeNames().add("CONCEPTSTATUS");
-Psf.getIncludedAttributeNames().add("ISPRIMITIVE");
+psf.getIncludedAttributeNames().add("CONCEPTSTATUS");
+psf.getIncludedAttributeNames().add("ISPRIMITIVE");
 ~~~~
 
 #### setIncludedLanguage
 
 ~~~~java
- Psf.setIncludedLanguage("CZE");
+psf.setIncludedLanguage("CZE");
 ~~~~
 
 
 #### getIncludedSources
 
 ~~~~java
-Psf.getIncludedSources().add("SNOMEDCT_US");
-Psf.getIncludedSources().add("ICD10CM");
+psf.getIncludedSources().add("SNOMEDCT_US");
+psf.getIncludedSources().add("ICD10CM");
 ~~~~
 
 #### setPageNum
 
 ~~~~java
-Psf.setPageNum(2);
+psf.setPageNum(2);
 ~~~~
 
 #### setPageLn
 
 ~~~~java
-Psf.setPageLn(50);
+psf.setPageLn(50);
 ~~~~
 
 

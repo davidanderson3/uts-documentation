@@ -1,4 +1,4 @@
-title=UMLS SOAP API Installation
+title=Installing the UMLS SOAP API as individual packages
 date=2015-08-13
 updated=2015-08-13
 type=page

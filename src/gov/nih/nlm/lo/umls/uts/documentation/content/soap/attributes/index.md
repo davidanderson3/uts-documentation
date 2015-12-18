@@ -6,374 +6,179 @@ status=published
 navorder=11
 ~~~~~~
 
+Interface | Method | Use Case | Object or Data type Returned 
+-- | -- | -- | --
+**UtsWsContentController**||||
+ |[getSourceConceptAttributes](#getsourceconceptattributes)|Retrieve attributes of known source-asserted concepts|ArrayList\<AttributeDTO\>
+ |[getSourceDescriptorAttributes](#getsourcedescriptorattributes)|Retrieve attributes of known source-asserted descriptors|ArrayList\<AttributeDTO\>
+ |[getCodeAttributes](#getcodeattributes)|Retrieve attributes of known source-asserted codes|ArrayList\<AttributeDTO\>
+ |[getAtomAttributes](#getatomattributes)|Retrieve attributes of known source-asserted atoms|ArrayList\<AttributeDTO\>
 
-**Method: **getRelationAttributes(String ticket,String version,String relationId,PSF psf)
+**Each of these examples below requires an instance of the [UtsWsContentController](/soap/installation/interface-setup.html#utswscontentcontroller), [UtsWsMetadataController](/soap/installation/interface-setup.html#utswsmetadatacontroller) and [UtsWsSecurityController](/soap/installation/interface-setup.html#utswssecuritycontroller) interfaces**.
 
-**Returns:** ArrayList< AttributeDTO>
+### getCodeAttributes
 
-**Use Case:** Given a UMLS release and a relation identifier (RUI), this call returns the attributes of the relation.
+**Method Signature:** ```getCodeAttributes(String ticket,String version,String codeId,String rootSourceAbbreviation,PSF psf)```
 
 #### Sample Input (Java):
 
-~~~~
-UtsMetathesaurusContent.Psf myPsf = new UtsMetathesaurusContent.Psf();
- List<AttributeDTO> myAttributes = new ArrayList<AttributeDTO>();
- myAttributes = utsContentService.getRelationAttributes(ticket, umlsRelease, "R74224153",myPsf);
- for (int i = 0; i < myAttributes.size(); i++) {
- AttributeDTO myAttributeDTO = myAttributes.get(i);
- String attributeName = myAttributeDTO.getName();
- String attributeValue = myAttributeDTO.getValue();
- }
+~~~~java
+int pageNum = 1;
+String currentUmlsRelease = utsMetadataService.getCurrentUMLSVersion(ticket);
+List<AttributeDTO> attributes = new ArrayList<AttributeDTO>();
+     
+     do {
+    	 myPsf.setPageNum(pageNum);
+         //attributes of LOINC code 2742-5, "Angiotensin converting enzyme [Enzymatic activity/volume] in Serum or Plasma"
+    	 attributes = utsContentService.getCodeAttributes(ticket, currentUmlsRelease, "2742-5", "LNC",myPsf);
+    	 
+    	 for(AttributeDTO attribute:attributes) {
+    		 
+    		 String atui = attribute.getUi();
+    		 String atn = attribute.getName();
+    		 String atv = attribute.getValue();
+    		 System.out.println(atui+"|"+atn+"|"+atv);
+    	 }
+    	 pageNum++;
+     }while (attributes.size() > 0);
 ~~~~
 
-#### Sample Input (C#):
-
-~~~~
-content.psf myPsf = new content.psf();
- content.attributeDTO[] myAttributes =utsContentService.getRelationAttributes(ticket, "2012AA", "R74224153",myPsf);
- for (int i = 0; i < myAttributes.Length; i++){
- content.attributeDTO myAttributeDTO = myAttributes[i];
- string attributeName = myAttributeDTO.name;
- string attributeValue = myAttributeDTO.value;
-~~~~
 
 #### Sample Output:
 
 ~~~~
-   Attribute Name: CHARACTERISTICTYPE
-   Attribute Value: 3
-  
-   Attribute Name: REFINABILITY
-   Attribute Value: 0
+AT186723331|COMMON_ORDER_RANK|250
+AT187103490|COMMON_SI_TEST_RANK|730
+AT186491909|COMMON_TEST_RANK|730
+AT186681377|EXAMPLE_UCUM_UNITS|U/L
+AT186218127|EXAMPLE_UNITS|U/L
+AT186618402|LCL|CHEM
+AT186660398|LCN|1
+AT186765123|LCS|ACTIVE
+AT203414718|LCT|MIN
+AT206772358|LLR|20150311
+AT187250950|LOINC_COMPONENT|Angiotensin converting enzyme
+AT186576103|LOINC_PROPERTY|CCnc
+AT186555093|LOINC_SCALE_TYP|Qn
+AT186744305|LOINC_SYSTEM|Ser/Plas
+AT187229875|LOINC_TIME_ASPECT|Pt
+AT186597386|LOR|Both
+AT206802621|LRN2|ACE; AGT; Angio convert enzy; Angiotensin I converting enzyme; Carboxycathepsin; Catalytic Concentration; Chemistry; Dipeptidylcarboxypeptidase; Enz; Enzymes; Kininase II; PDPA; Peptidase P; Peptidyl dipeptidase A; Pl; Plasma; Plsm; Point in time; Proangiotensin; QNT; Quan; Quant; Quantitative; Random; SerP; SerPl; SerPlas; Serum; Serum or plasma; SR
+AT186576104|LUR|Y
 ~~~~
->
 
-**Method: **getCodeAttributes(String ticket,String version,String codeId,String rootSourceAbbreviation,PSF psf)
 
-**Returns:** ArrayList< AttributeDTO>
+### getSourceConceptAttributes
 
-**Use Case:** Given a UMLS release, a root source abbreviation (RSAB) and a codeId, this call returns the attributes of the supplied code.
+**Method Signature:** ```getSourceConceptAttributes(String ticket,String version,String sourceConceptId,String rootSourceAbbreviation,PSF psf)```
 
 #### Sample Input (Java):
 
-~~~~
-UtsMetathesaurusContent.Psf myPsf = new UtsMetathesaurusContent.Psf();
- List<AttributeDTO> myAttributes = new ArrayList<AttributeDTO>();
- myAttributes = utsContentService.getCodeAttributes(ticket, umlsRelease, "10042784","MDR",myPsf);
- for (int i = 0; i < myAttributes.size(); i++) {
- AttributeDTO myAttributeDTO = myAttributes.get(i);
- String attributeName = myAttributeDTO.getName();
- String attributeValue = myAttributeDTO.getValue();
- }
-~~~~
-
-#### Sample Input (C#):
-
-~~~~
-content.psf myPsf = new content.psf();
- content.attributeDTO[] myAttributes =utsContentService.getCodeAttributes(ticket, "2012AA", "10042784","MDR",myPsf);
- for (int i = 0; i < myAttributes.Length; i++) {
- content.attributeDTO myAttributeDTO = myAttributes[i];
- string attributeName = myAttributeDTO.name;
- string attributeValue = myAttributeDTO.value;
+~~~~java
+int pageNum = 1;
+String currentUmlsRelease = utsMetadataService.getCurrentUMLSVersion(ticket);
+List<AttributeDTO> attributes = new ArrayList<AttributeDTO>();
+     
+     do {
+    	 myPsf.setPageNum(pageNum);
+         //attributes of SNOMED CT concept 449161000124101, "Distention of jugular vein"
+    	 attributes = utsContentService.getSourceConceptAttributes(ticket, currentUmlsRelease, "449161000124101", "SNOMEDCT_US",myPsf);
+    	 
+    	 for(AttributeDTO attribute:attributes) {
+    		 
+    		 String atui = attribute.getUi();
+    		 String atn = attribute.getName();
+    		 String atv = attribute.getValue();
+    		 System.out.println(atui+"|"+atn+"|"+atv);
+    	 }
+    	 pageNum++;
+     }while (attributes.size() > 0);
 ~~~~
 
 #### Sample Output:
 
+~~~~text
+AT208833331|ACTIVE|1
+AT208636611|DEFINITION_STATUS_ID|900000000000073002
+AT208664845|EFFECTIVE_TIME|20150901
+AT209059262|MODULE_ID|731000124108
 ~~~~
-   Attribute Name: SMQ_TERM_LEVEL
-   Attribute Value: 5
-~~~~
->
 
-**Method: **getSourceConceptAttributes(String ticket,String version,String sourceConceptId,String rootSourceAbbreviation,PSF psf)
+### getSourceDescriptorAttributes
 
-**Returns:** ArrayList< AttributeDTO>
-
-**Use Case:** Given a UMLS release, a root source abbreviation (RSAB) and a source concept identifier (SCUI), this call returns the attributes of the supplied source concept identifier.
+**Method Signature**: ```getSourceDescriptorAttributes(String ticket,String version,String sourceDescriptorId,String rootSourceAbbreviation,PSF psf)```
 
 #### Sample Input (Java):
 
-~~~~
-UtsMetathesaurusContent.Psf myPsf = new UtsMetathesaurusContent.Psf();
- List<AttributeDTO> myAttributes = new ArrayList<AttributeDTO>();
- myAttributes = utsContentService.getSourceConceptAttributes(ticket, umlsRelease, "102735002","SNOMEDCT",myPsf);
- for (int i = 0; i < myAttributes.size(); i++) {
- AttributeDTO myAttributeDTO = myAttributes.get(i);
- String attributeName = myAttributeDTO.getName();
- String attributeValue = myAttributeDTO.getValue();
- }
+~~~~java
+int pageNum = 1;
+String currentUmlsRelease = utsMetadataService.getCurrentUMLSVersion(ticket);
+List<AttributeDTO> attributes = new ArrayList<AttributeDTO>();
+     
+     do {
+    	 myPsf.setPageNum(pageNum);
+         //attributes of MSH Descriptor D009369, "Neoplasms"
+    	 attributes = utsContentService.getSourceDescriptorAttributes(ticket, currentUmlsRelease, "D009369", "MSH",myPsf);
+    	 
+    	 for(AttributeDTO attribute:attributes) {
+    		 
+    		 String atui = attribute.getUi();
+    		 String atn = attribute.getName();
+    		 String atv = attribute.getValue();
+    		 System.out.println(atui+"|"+atn+"|"+atv);
+    	 }
+    	 pageNum++;
+     }while (attributes.size() > 0);
 ~~~~
 
-#### Sample Input (C#):
-
-~~~~
-content.psf myPsf = new content.psf();
- content.attributeDTO[] myAttributes =utsContentService.getSourceConceptAttributes(ticket, "2012AA", "102735002", "SNOMEDCT", myPsf);
- for (int i = 0; i < myAttributes.Length; i++) {
- content.attributeDTO myAttributeDTO = myAttributes[i];
- string attributeName = myAttributeDTO.name;
- string attributeValue = myAttributeDTO.value;
-~~~~
 
 #### Sample Output:
 
+~~~~text
+AT199367652|AN|general; prefer specifics; policy: see Manual Chapter 24; familial: consider also NEOPLASTIC SYNDROMES, HEREDITARY; metastatic cancer of unknown origin: index under NEOPLASM METASTASIS
+AT38096768|AQL|BL BS CF CH CI CL CN CO DH DI DT EC EH EM EN EP ET GE HI IM ME MI MO NU PA PC PP PS PX RA RH RI RT SE SU TH UL UR US VE VI
+AT38110444|CX|consider also terms at CANCER, CARCINO-, ONCO-, and TUMOR
+AT38119677|DC|1
+AT134959705|EC|secondary:Neoplasm Metastasis
+...
 ~~~~
-   Attribute Name: CONCEPTSTATUS
-   Attribute Value: 2
-  
-   Attribute Name: CTV3ID
-   Attribute Value: XU0kZ
-  
-   Attribute Name: ISPRIMITIVE
-   Attribute Value: 1
-  
-   Attribute Name: SNOMEDID
-   Attribute Value: F-63675
-~~~~
->
 
-**Method: **getSourceDescriptorAttributes(String ticket,String version,String sourceDescriptorId,String rootSourceAbbreviation,PSF psf)
-**Returns:** ArrayList< AttributeDTO>
+### getAtomAttributes
 
-**Use Case:** Given a UMLS release, a root source abbreviation (RSAB) and a source descriptor identifier (SDUI), this call returns the attributes of the supplied source descriptor.
+**Method Signature:** ```getAtomAttributes(String ticket,String version,String atomId,PSF psf)```
 
 #### Sample Input (Java):
 
-~~~~
-UtsMetathesaurusContent.Psf myPsf = new UtsMetathesaurusContent.Psf();
- List<AttributeDTO> myAttributes = new ArrayList<AttributeDTO>();
- myAttributes = utsContentService.getSourceDescriptorAttributes(ticket, umlsRelease, "D015060","MSH",myPsf);
- for (int i = 0; i < myAttributes.size(); i++) {
- AttributeDTO myAttributeDTO = myAttributes.get(i);
- String attributeName = myAttributeDTO.getName();
- String attributeValue = myAttributeDTO.getValue();
- }
+~~~~java
+int pageNum = 1;
+String currentUmlsRelease = utsMetadataService.getCurrentUMLSVersion(ticket);
+List<AttributeDTO> attributes = new ArrayList<AttributeDTO>();
+//retrieve the highest ranking atom of a SNOMED CT Concept, then retrieve the attributes
+AtomDTO atom = utsContentService.getDefaultPreferredAtom(ticket, currentUmlsRelease, "449161000124101", "SNOMEDCT_US");
+
+     
+     do {
+    	 myPsf.setPageNum(pageNum);
+    	 attributes = utsContentService.getAtomAttributes(ticket, currentUmlsRelease, atom.getUi(),myPsf);
+    	 
+    	 for(AttributeDTO attribute:attributes) {
+    		 
+    		 String atui = attribute.getUi();
+    		 String atn = attribute.getName();
+    		 String atv = attribute.getValue();
+    		 System.out.println(atui+"|"+atn+"|"+atv);
+    	 }
+    	 pageNum++;
+     }while (attributes.size() > 0);
 ~~~~
 
-#### Sample Input (C#):
-
-~~~~
-content.psf myPsf = new content.psf();
- content.attributeDTO[] myAttributes = utsContentService.getSourceDescriptorAttributes(ticket, "2012AA", "D015060", "MSH", myPsf);
- for (int i = 0; i < myAttributes.Length; i++) {
- content.attributeDTO myAttributeDTO = myAttributes[i];
- string attributeName = myAttributeDTO.name;
- string attributeValue = myAttributeDTO.value;
- }
-~~~~
 
 #### Sample Output:
 
-~~~~
-   Attribute Name: AN
-   Attribute Value: "a major constituent of pulmonary surfactants"; /biosyn /physiol permitted; DF: DPPC
- 
-   Attribute Name: AQL
-   Attribute Value: AA AD AE AG AI AN BI BL CF CH CL CS CT DF DU EC GE HI IM IP ME PD PH PK PO RE SD SE ST TO TU UR
-  
-   Attribute Name: DC
-   Attribute Value: 1
-  
-   Attribute Name: DX
-   Attribute Value: 19870101
-  
-   Attribute Name: HN
-   Attribute Value: 87
-  
-   Attribute Name: MDA
-   Attribute Value: 19860612
-  
-   Attribute Name: MMR
-   Attribute Value: 20030709
-  
-   Attribute Name: MN
-   Attribute Value: D10.570.755.375.760.400.800.224
-  
-   Attribute Name: OL
-   Attribute Value: search PULMONARY SURFACTANTS 1977-86
-  
-   Attribute Name: PM
-   Attribute Value: 87; was DIPALMITOYL PHOSPHATIDYLCHOLINE see PULMONARY SURFACTANT 1977-86
-~~~~
->
-
-**Method: **getAtomAttributes(String ticket,String version,String atomId,PSF psf)
-
-**Returns:** ArrayList< AttributeDTO>
-
-**Use Case:** Given a UMLS release and an atom unique identifier (AUI), this call returns the attributes of the supplied atom.
-
-#### Sample Input (Java):
-
-~~~~
-UtsMetathesaurusContent.Psf myPsf = new UtsMetathesaurusContent.Psf();
- List<AttributeDTO> myAttributes = new ArrayList<AttributeDTO>();
- myAttributes = utsContentService.getAtomAttributes(ticket, umlsRelease, "A7755565",myPsf);
- for (int i = 0; i < myAttributes.size(); i++) {
- AttributeDTO myAttributeDTO = myAttributes.get(i);
- String attributeName = myAttributeDTO.getName();
- String attributeValue = myAttributeDTO.getValue();
- }
+~~~~text
+AT208608459|CASE_SIGNIFICANCE_ID|900000000000448009
+AT209143461|MODULE_ID|731000124108
+AT209115558|TYPE_ID|900000000000013009
 ~~~~
 
-#### Sample Input (C#):
-
-~~~~
-content.psf myPsf = new content.psf();
- content.attributeDTO[] myAttributes =utsContentService.getAtomAttributes(ticket, "2012AA", "A7755565",myPsf);
- for (int i = 0; i < myAttributes.Length; i++) {
- content.attributeDTO myAttributeDTO = myAttributes[i];
- string attributeName = myAttributeDTO.name;
- string attributeValue = myAttributeDTO.value;
- }
-~~~~
-
-#### Sample Output:
-
-~~~~
-   Attribute Name: TERMUI
-   Attribute Value: T037573
-  
-   Attribute Name: TH
-   Attribute Value: UNK (19XX)
-~~~~
->
-
-**Method: **getSubsetMemberAttributes(String ticket,String version,String id,PSF psf)
-
-**Returns:** ArrayList< AttributeDTO>
-
-**Use Case:** Given a UMLS release and an identifier for a specified subset member, this call returns the attributes of the subset member.
-
-#### Sample Input (Java):
-
-~~~~
-UtsMetathesaurusContent.Psf myPsf = new UtsMetathesaurusContent.Psf();
- List<AttributeDTO> myAttributes = new ArrayList<AttributeDTO>();
- myAttributes = utsContentService.getSubsetMemberAttributes(ticket, umlsRelease, "AT188025182",myPsf);
- for (int i = 0; i < myAttributes.size(); i++) {
- AttributeDTO myAttributeDTO = myAttributes.get(i);
- String attributeName = myAttributeDTO.getName();
- String attributeValue = myAttributeDTO.getValue();
- }
-~~~~
-
-#### Sample Input (C#):
-
-~~~~
-content.psf myPsf = new content.psf();
- content.attributeDTO[] myAttributes = utsContentService.getSubsetMemberAttributes(ticket, "2012AA", "AT139571931", myPsf);
- for (int i = 0; i < myAttributes.Length; i++) {
- content.attributeDTO myAttributeDTO = myAttributes[i];
- string attributeName = myAttributeDTO.name;
- string attributeValue = myAttributeDTO.value;
- }
-~~~~
-
-#### Sample Output:
-
-~~~~
-   Attribute Name: MAPTARGET
-   Attribute Value: 403.10
-~~~~
->
-
-**Method: **getMapSetAttributes(String ticket,String version,String id,PSF psf)
-
-**Returns:** ArrayList<AttributeDTO>
-
-**Use Case:** Given a UMLS release and a mapset identifier, this call returns the attributes of each member of the map set.
-
-#### Sample Input (Java):
-
-~~~~
-UtsMetathesaurusContent.Psf myPsf = new UtsMetathesaurusContent.Psf();
- List<AttributeDTO> myAttributes = new ArrayList<AttributeDTO>();
- myAttributes = utsContentService.getMapSetAttributes(ticket, umlsRelease, "C2963202",myPsf);
- for (int i = 0; i < myAttributes.size(); i++) {
- AttributeDTO myAttributeDTO = myAttributes.get(i);
- String attributeName = myAttributeDTO.getName();
- String attributeValue = myAttributeDTO.getValue();
- }
-~~~~
-
-#### Sample Input (C#):
-
-~~~~
-content.psf myPsf = new content.psf();
- content.attributeDTO[] myAttributes =utsContentService.getMapSetAttributes(ticket, "2011AB", "C2963202",myPsf);
- for (int i = 0; i < myAttributes.Length; i++) {
- content.attributeDTO myAttributeDTO = myAttributes[i];
- string attributeName = myAttributeDTO.name;
- string attributeValue = myAttributeDTO.value;
- }
-~~~~
-
-#### Sample Output:
-
-~~~~
-   Attribute Name: CODE
-   Attribute Value: MTHU000002
-  
-   Attribute Name: SOS
-   Attribute Value: This set maps ICD-10-PCS codes to ICD-9-CM. These are "General Equivalence Mappings" (GEMs) and are rule-based.
-  
-   Attribute Name: LANG
-   Attribute Value: ENG
-~~~~
->
-
-**Method: **getSubsetAttributes(String ticket,String version,String id,PSF psf)
-
-**Returns:** ArrayList<AttributeDTO>
-
-**Use Case:** Given a UMLS release and a subset identifier, this call returns the attributes of the supplied subset CUI.
-
-#### Sample Input (Java):
-
-~~~~
-UtsMetathesaurusContent.Psf myPsf = new UtsMetathesaurusContent.Psf();
- List<AttributeDTO> myAttributes = new ArrayList<AttributeDTO>();
- myAttributes = utsContentService.getSubsetAttributes(ticket, umlsRelease, "IC1321498",myPsf);
- for (int i = 0; i < myAttributes.size(); i++) {
- AttributeDTO myAttributeDTO = myAttributes.get(i);
- String attributeName = myAttributeDTO.getName();
- String attributeValue = myAttributeDTO.getValue();
- }
-~~~~
-
-#### Sample Input (C#):
-
-~~~~
-content.psf myPsf = new content.psf();
- content.attributeDTO[] myAttributes =utsContentService.getSubsetAttributes(ticket, "2011AB", "IC1321498",myPsf);
- for (int i = 0; i < myAttributes.Length; i++) {
- content.attributeDTO myAttributeDTO = myAttributes[i];
- string attributeName = myAttributeDTO.name;
- string attributeValue = myAttributeDTO.value;
- }
-~~~~
-
-#### Sample Output:
-
-~~~~
-   Attribute Name: LANG
-   Attribute Value: ENG
-  
-   Attribute Name: SUBSETCONTEXTID
-   Attribute Value: 0
-  
-   Attribute Name: SUBSETORIGINALID
-   Attribute Value: 100033
-  
-   Attribute Name: SUBSETREALMID
-   Attribute Value: 0
-  
-   Attribute Name: SUBSETTYPE
-   Attribute Value: 1
-  
-   Attribute Name: SUBSETVERSION
-   Attribute Value: 21
-~~~~
 
