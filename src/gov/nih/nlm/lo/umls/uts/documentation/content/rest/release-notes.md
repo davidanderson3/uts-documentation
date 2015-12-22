@@ -12,10 +12,6 @@ Released: December 21, 2015
 * **Add links to Concept and SourceAtomCluster objects to discover default preferred atom**
   The ```defaultPreferredAtom``` link in the output of Concept and SourceAtomCluster objects allows users to easily discover the default preferred atom associated with a source-asserted code, concept, or descriptor.
 
-#### Change:
-* **Subset language parameter**
-  The ```language``` parameter has been added to [Source-Asserted Subsets calls](/rest/source-asserted-identifiers/subsets/).
-
 #### Known issues:
 
 There are no known issues at this time.
