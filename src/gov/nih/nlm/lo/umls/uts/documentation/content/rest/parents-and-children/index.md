@@ -1,6 +1,6 @@
 title=Retrieving Source-Asserted Parents and Children
 date=2015-07-06
-updated=2015-11-20
+updated=2015-12-21
 type=page
 status=published
 category=Retrieving Source-Asserted Data
@@ -56,15 +56,16 @@ Sample output for /content/current/source/SNOMEDCT_US/9468002/parents?ticket=ST.
             "rootSource": "SNOMEDCT_US",
             "atomCount": 6,
             "cVMemberCount": 0,
-            "attributes": "https://uts-ws.nlm.nih.gov/rest/content/2015AA/source/SNOMEDCT_US/20511007/attributes",
-            "atoms": "https://uts-ws.nlm.nih.gov/rest/content/2015AA/source/SNOMEDCT_US/20511007/atoms",
-            "descendants": "https://uts-ws.nlm.nih.gov/rest/content/2015AA/source/SNOMEDCT_US/20511007/descendants",
-            "ancestors": "https://uts-ws.nlm.nih.gov/rest/content/2015AA/source/SNOMEDCT_US/20511007/ancestors",
-            "parents": "https://uts-ws.nlm.nih.gov/rest/content/2015AA/source/SNOMEDCT_US/20511007/parents",
-            "children": "https://uts-ws.nlm.nih.gov/rest/content/2015AA/source/SNOMEDCT_US/20511007/children",
-            "relations": "https://uts-ws.nlm.nih.gov/rest/content/2015AA/source/SNOMEDCT_US/20511007/relations",
+            "attributes": "https://uts-ws.nlm.nih.gov/rest/content/2015AB/source/SNOMEDCT_US/20511007/attributes",
+            "atoms": "https://uts-ws.nlm.nih.gov/rest/content/2015AB/source/SNOMEDCT_US/20511007/atoms",
+            "descendants": "https://uts-ws.nlm.nih.gov/rest/content/2015AB/source/SNOMEDCT_US/20511007/descendants",
+            "ancestors": "https://uts-ws.nlm.nih.gov/rest/content/2015AB/source/SNOMEDCT_US/20511007/ancestors",
+            "parents": "https://uts-ws.nlm.nih.gov/rest/content/2015AB/source/SNOMEDCT_US/20511007/parents",
+            "children": "https://uts-ws.nlm.nih.gov/rest/content/2015AB/source/SNOMEDCT_US/20511007/children",
+            "relations": "https://uts-ws.nlm.nih.gov/rest/content/2015AB/source/SNOMEDCT_US/20511007/relations",
             "definitions": "NONE",
-            "concepts": "https://uts-ws.nlm.nih.gov/rest/search/2015AA?string=20511007&sabs=SNOMEDCT_US&searchType=exact&inputType=sourceUi",
+            "concepts": "https://uts-ws.nlm.nih.gov/rest/search/2015AB?string=20511007&sabs=SNOMEDCT_US&searchType=exact&inputType=sourceUi",
+            "defaultPreferredAtom": "https://uts-ws.nlm.nih.gov/rest/content/2015AB/source/SNOMEDCT_US/20511007/atoms/preferred",
             "name": "Fracture of hand"
         },
         {
@@ -75,15 +76,16 @@ Sample output for /content/current/source/SNOMEDCT_US/9468002/parents?ticket=ST.
             "rootSource": "SNOMEDCT_US",
             "atomCount": 5,
             "cVMemberCount": 0,
-            "attributes": "https://uts-ws.nlm.nih.gov/rest/content/2015AA/source/SNOMEDCT_US/36991002/attributes",
-            "atoms": "https://uts-ws.nlm.nih.gov/rest/content/2015AA/source/SNOMEDCT_US/36991002/atoms",
-            "descendants": "https://uts-ws.nlm.nih.gov/rest/content/2015AA/source/SNOMEDCT_US/36991002/descendants",
-            "ancestors": "https://uts-ws.nlm.nih.gov/rest/content/2015AA/source/SNOMEDCT_US/36991002/ancestors",
-            "parents": "https://uts-ws.nlm.nih.gov/rest/content/2015AA/source/SNOMEDCT_US/36991002/parents",
-            "children": "https://uts-ws.nlm.nih.gov/rest/content/2015AA/source/SNOMEDCT_US/36991002/children",
-            "relations": "https://uts-ws.nlm.nih.gov/rest/content/2015AA/source/SNOMEDCT_US/36991002/relations",
+            "attributes": "https://uts-ws.nlm.nih.gov/rest/content/2015AB/source/SNOMEDCT_US/36991002/attributes",
+            "atoms": "https://uts-ws.nlm.nih.gov/rest/content/2015AB/source/SNOMEDCT_US/36991002/atoms",
+            "descendants": "https://uts-ws.nlm.nih.gov/rest/content/2015AB/source/SNOMEDCT_US/36991002/descendants",
+            "ancestors": "https://uts-ws.nlm.nih.gov/rest/content/2015AB/source/SNOMEDCT_US/36991002/ancestors",
+            "parents": "https://uts-ws.nlm.nih.gov/rest/content/2015AB/source/SNOMEDCT_US/36991002/parents",
+            "children": "https://uts-ws.nlm.nih.gov/rest/content/2015AB/source/SNOMEDCT_US/36991002/children",
+            "relations": "https://uts-ws.nlm.nih.gov/rest/content/2015AB/source/SNOMEDCT_US/36991002/relations",
             "definitions": "NONE",
-            "concepts": "https://uts-ws.nlm.nih.gov/rest/search/2015AA?string=36991002&sabs=SNOMEDCT_US&searchType=exact&inputType=sourceUi",
+            "concepts": "https://uts-ws.nlm.nih.gov/rest/search/2015AB?string=36991002&sabs=SNOMEDCT_US&searchType=exact&inputType=sourceUi",
+            "defaultPreferredAtom": "https://uts-ws.nlm.nih.gov/rest/content/2015AB/source/SNOMEDCT_US/36991002/atoms/preferred",
             "name": "Closed fracture of upper limb"
         },
         {
@@ -94,15 +96,16 @@ Sample output for /content/current/source/SNOMEDCT_US/9468002/parents?ticket=ST.
             "rootSource": "SNOMEDCT_US",
             "atomCount": 7,
             "cVMemberCount": 0,
-            "attributes": "https://uts-ws.nlm.nih.gov/rest/content/2015AA/source/SNOMEDCT_US/82065001/attributes",
-            "atoms": "https://uts-ws.nlm.nih.gov/rest/content/2015AA/source/SNOMEDCT_US/82065001/atoms",
-            "descendants": "https://uts-ws.nlm.nih.gov/rest/content/2015AA/source/SNOMEDCT_US/82065001/descendants",
-            "ancestors": "https://uts-ws.nlm.nih.gov/rest/content/2015AA/source/SNOMEDCT_US/82065001/ancestors",
-            "parents": "https://uts-ws.nlm.nih.gov/rest/content/2015AA/source/SNOMEDCT_US/82065001/parents",
-            "children": "https://uts-ws.nlm.nih.gov/rest/content/2015AA/source/SNOMEDCT_US/82065001/children",
-            "relations": "https://uts-ws.nlm.nih.gov/rest/content/2015AA/source/SNOMEDCT_US/82065001/relations",
+            "attributes": "https://uts-ws.nlm.nih.gov/rest/content/2015AB/source/SNOMEDCT_US/82065001/attributes",
+            "atoms": "https://uts-ws.nlm.nih.gov/rest/content/2015AB/source/SNOMEDCT_US/82065001/atoms",
+            "descendants": "https://uts-ws.nlm.nih.gov/rest/content/2015AB/source/SNOMEDCT_US/82065001/descendants",
+            "ancestors": "https://uts-ws.nlm.nih.gov/rest/content/2015AB/source/SNOMEDCT_US/82065001/ancestors",
+            "parents": "https://uts-ws.nlm.nih.gov/rest/content/2015AB/source/SNOMEDCT_US/82065001/parents",
+            "children": "https://uts-ws.nlm.nih.gov/rest/content/2015AB/source/SNOMEDCT_US/82065001/children",
+            "relations": "https://uts-ws.nlm.nih.gov/rest/content/2015AB/source/SNOMEDCT_US/82065001/relations",
             "definitions": "NONE",
-            "concepts": "https://uts-ws.nlm.nih.gov/rest/search/2015AA?string=82065001&sabs=SNOMEDCT_US&searchType=exact&inputType=sourceUi",
+            "concepts": "https://uts-ws.nlm.nih.gov/rest/search/2015AB?string=82065001&sabs=SNOMEDCT_US&searchType=exact&inputType=sourceUi",
+            "defaultPreferredAtom": "https://uts-ws.nlm.nih.gov/rest/content/2015AB/source/SNOMEDCT_US/82065001/atoms/preferred",
             "name": "Fracture of carpal bone"
         }
     ]

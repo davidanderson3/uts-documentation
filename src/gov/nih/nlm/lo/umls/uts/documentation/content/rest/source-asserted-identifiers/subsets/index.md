@@ -1,6 +1,6 @@
 title=Retrieving Source-Asserted Subsets
 date=2015-09-30
-updated=2015-11-20
+updated=2015-12-21
 type=page
 status=published
 category=Retrieving Source-Asserted Data
@@ -43,7 +43,7 @@ Parameter name | Required? Y/N | Description|  Valid Values | Default value | Us
 ticket | Y | A single-use service ticket is required for each call to the API. See [authentication](../authentication.html) for more information | n/a | n/a | n/a
 pageNumber | N | Whole number that specifies which page of results to fetch. | 1,2,3, etc | 1 | n/a
 pageSize | N | Whole number that specifies the number of results to include per page. | 1,2,3, etc | 25 | n/a
-
+language | N | 3-letter abbreviation for language | ENG, SPA, GER, etc | n/a | n/a
 
 ### Sample Output
 

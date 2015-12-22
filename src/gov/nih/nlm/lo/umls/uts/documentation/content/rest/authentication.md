@@ -32,7 +32,7 @@ https://uts-ws.nlm.nih.gov/rest/content/current/CUI/C0018787?ticket=ST-134-HUbXG
 Call # | Type of Request|URI|Required Parameters| Parameter values |Description
 --- | --- | --
 1|POST|https://utslogin.nlm.nih.gov/cas/v1/tickets | username,password | Your UMLS username and password |Retrieves a Ticket Granting Ticket (TGT) to be used repeatedly in call #2.
-2|POST| https://utslogin.nlm.nih.gov/cas/v1/tickets/{TGT}| service | http://umlsks.nlm.nih.gov | Retrieves a single-use Service Ticket
+2|POST| https://utslogin.nlm.nih.gov/cas/v1/tickets/{TGT}| service | http://umlsks.nlm.nih.gov | Retrieves a single-use Service Ticket for the UMLS REST API. **You may also use these service tickets for the AccessGUDID API (when retrieving SNOMED CT information).**
 
 ###Sample Output:
 

@@ -19,7 +19,7 @@ Base URI|Method Type|Path|Description
 
 ### Endpoints to search and retrieve UMLS content
 
-Base URI|Method Type|Path|Description
+Base URI|HTTP Request Type|Path|Description
 --- | --- | --- | --
 **https://uts-ws.nlm.nih.gov/rest**||||
  |GET | [/search/{version}](search/)| Retrieves CUIs when searching by term or code

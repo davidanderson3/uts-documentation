@@ -1,21 +1,16 @@
 title=Release Notes and Roadmap
 date=2015-11-09
-updated=2015-11-24
+updated=2015-12-21
 type=page
 status=published
 navorder=1
 ~~~~~~
 
-Released: November 20, 2015
+Released: December 21, 2015
 
 #### Features:
-* **Retrieving [source-asserted attributes](/rest/source-asserted-identifiers/attributes/index.html) of a source-asserted identifier, such as ```EFFECTIVE_TIME``` of a SNOMEDCT concept**
-* **Add links to SourceAtomCluster objects to discover CUIs**
-  The ```concepts``` link in the output of SourceAtomCluster objects allows users to easily discover the UMLS CUI(s) associated with a source-asserted code, concept, or descriptor.
-
-#### Change:
-* **sourceUi**
-  The ```sourceUi``` data element has been added to [Source-Asserted Subsets Member Attributes output](/rest/source-asserted-identifiers/subsets/#sample-output).
+* **Add links to Concept and SourceAtomCluster objects to discover default preferred atom**
+  The ```defaultPreferredAtom``` link in the output of Concept and SourceAtomCluster objects allows users to easily discover the default preferred atom associated with a source-asserted code, concept, or descriptor.
 
 #### Known issues:
 

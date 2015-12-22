@@ -10,11 +10,11 @@ Interface | Method | Use Case | Object or Data type Returned | Guidance
 -- | -- | -- | --
 **UtsWsSecurityControllerController**|||||
  |[getProxyGrantTicket](#getproxygrantticket)|Retrieve a proxy grant ticket (also known as a ticket granting ticket).|String|Generate one time, normally when your application starts up. A ticket granting ticket is good for 8 hours, and is needed for the getProxyTicket() method below.  **You do not need to generate a new ticket granting ticket for each call to the API**.
- |[getProxyTicket](#getproxyticket)|Retrieve a **single-use** service ticket to make calls to the API.|String|Use these service tickets when making calls to the content, history, metadata, etc interfaces.  These tickets are good for one use or 5 minutes, whichever comes first. 
+ |[getProxyTicket](#getproxyticket)|Retrieve a **single-use** service ticket to make calls to the API.|String|Use these service tickets when making calls to the content, history, metadata, etc interfaces.  These tickets are good for one use or 5 minutes, whichever comes first. **You may also use these service tickets for the AccessGUDID API (when retrieving SNOMED CT information).**
  |[validateProxyTicket](#validateproxyticket)|Validate a single-use service ticket.|String| Returns the username of the person who requested the service ticket.  This is useful if you are hosting UMLS content and want to validate that your users are UMLS licensees|
 
- **Below is an example of how to create an instance of the UtsWsSecurityInterface**
- 
+**The examples below requires an instance of the [UtsWsSecurityController](/soap/installation/interface-setup.html#utswssecuritycontroller) interface**.
+
 ### Authentication
 
 In general, your application will follow this sequence when making calls to the API:
@@ -33,7 +33,7 @@ In general, your application will follow this sequence when making calls to the 
 private String username = "InformaticsResearcher";
 private String password = "C0des@reCool";
 
-private String ticketGrantingTicket = securityService.getProxyGrantTicket(username, password);
+private String ticketGrantingTicket = utsSecurityService.getProxyGrantTicket(username, password);
 ~~~~
 
 
@@ -46,12 +46,24 @@ private String serviceName = "http://umlsks.nlm.nih.gov";
 
 private String getProxyTicket() {
  try {
- return securityService.getProxyTicket(ticketGrantingTicket, serviceName);
+ return utsSecurityService.getProxyTicket(ticketGrantingTicket, serviceName);
  }
  catch (Exception e) {
  return "";
  }
 }
 
-//Pass the Single-Use ticket as a parameter with each call to the API. 
 ~~~~
+
+### validateProxyTicket
+
+**Method Signature**: ```validateProxyTicket(String serviceTicket, String targetService)```
+
+~~~~java
+private String serviceName = "http://umlsks.nlm.nih.gov";
+
+//below is a SAMPLE service ticket
+String user = utsSecurityService.validateProxyTicket("ST-890427-tH2kLYxbuOMSKWUOcbH5-cas", "http://umlsks.nlm.nih.gov")
+~~~~
+
+The validateProxyTicket returns the UMLS username who requested the ticket, such as ```JoeCoolResearcher```
