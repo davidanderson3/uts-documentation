@@ -20,17 +20,18 @@ Section (Interface)|Use Case
 **PSF (Paging, sorting, and filtering)**||
 [Using the PSF object](/soap/paging-sorting-filtering/index.html)|Page and Filter Results
 **Searching the UMLS** ([UtsWsFinderController](/soap/installation/interface-setup.html#utswsfindercontroller))||
-[Using the Finder Service](/soap/search/index.html)|Find CUIs, codes, source-asserted concepts/descriptors from human readable terms.
+[Using the Finder Service](/soap/search/)|Find CUIs, codes, source-asserted concepts/descriptors from human readable terms.
 **Retrieving UMLS Content** ([UtsWsContentController](/soap/installation/interface-setup.html#utswscontentcontroller))||
-[Concept](/soap/concept/index.html)|Retrieve UMLS Concept Information 
-[Atoms](/soap/atoms/index.html)|Retrieve UMLS Atoms 
-[Definitions](/soap/definitions/index.html)|Retrieve UMLS Definitions  
-[Atom Cluster](/soap/atomcluster/index.html)|Retrieve source-asserted concepts,descriptors, and codes
-[Content View](/soap/contentview/index.html)|Retrieve UMLS content views
-[Subset](/soap/subset/index.html)|Retrieve UMLS subsets
-[Relationships](/soap/relationships/index.html)|Retrieve UMLS relationships
-[Attributes](/soap/attributes/index.html)|Retrieve CUI and code attributes
+[Concept](/soap/concept/)|Retrieve UMLS Concept Information 
+[Atoms](/soap/atoms/)|Retrieve UMLS Atoms 
+[Definitions](/soap/definitions/)|Retrieve UMLS Definitions  
+[Atom Cluster](/soap/atomcluster/)|Retrieve source-asserted concepts,descriptors, and codes
+[Content View](/soap/contentview/)|Retrieve UMLS content views
+[Subset](/soap/subset/)|Retrieve UMLS subsets
+[Parents and Children](/soap/parents-and-children/) | Retrieve parents, children, and siblings based on source-asserted contextual relationships.
+[Relationships](/soap/relationships/)|Retrieve UMLS relationships
+[Attributes](/soap/attributes/)|Retrieve CUI and code attributes
 **Retrieving UMLS Metadata** ([UtsWsMetadataController](/soap/installation/interface-setup.html#utswsmetadatacontroller))||
-[UMLS Metadata](/soap/umlsmetadata/index.html)|Retrieve UMLS Metadata such as updated vocabluaries within a UMLS version
+[UMLS Metadata](/soap/umlsmetadata/)|Retrieve UMLS Metadata such as updated vocabluaries within a UMLS version
 
 
