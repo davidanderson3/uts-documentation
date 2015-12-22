@@ -6,15 +6,15 @@ status=published
 navorder=3
 ~~~~~~
 
-Interface | Method | Use Case | Object or Data type Returned 
+Interface | Method | Use Case | Object or Data type Returned
 -- | -- | -- | --
 **UtsWsContentController**||||
  |[getSourceConceptTreePositionChildren](#getsourceconcepttreepositionchildren)|Retrieve immediate children for a known source-asserted concept |ArrayList\<SourceAtomClusterTreePositionDTO\>
- |[getSourceConceptTreePositionPathsToRoot](#getsourceconceptreepositionpathstoroot)|Retrieve ancestors for a known source-asserted concept | ArrayList\<SourceAtomClusterTreePositionPathDTO\>
- |[getSourceConceptTreePositionSiblings](#getsourceconcepttreepositionsiblings)|Retrieve siblings for a known source-asserted concept | ArrayList\<SourceAtomClusterTreePositionPathDTO\>
+ |[getSourceConceptTreePositionPathsToRoot](#getsourceconceptreepositionpathstoroot)|Retrieve ancestors for a known source-asserted concept | ArrayList\<SourceAtomClusterTreePositionPathDTO\>, ArrayList\<SourceAtomClusterTreePositionDTO\>
+ |[getSourceConceptTreePositionSiblings](#getsourceconcepttreepositionsiblings)|Retrieve siblings for a known source-asserted concept | ArrayList\<SourceAtomClusterTreePositionDTO\>
  |[getSourceDescriptorTreePositionChildren](#getsourcedescriptortreepositionchildren)|Retrieve immediate children for a known source-asserted descriptor |ArrayList\<SourceAtomClusterTreePositionDTO\>
- |[getSourceDescriptorTreePositionPathsToRoot](#getsourcedescriptortreepositionpathstoroot)|Retrieve ancestors for a known source-asserted descriptor | ArrayList\<SourceAtomClusterTreePositionPathDTO\>
- |[getSourceDescriptorTreePositionSiblings](#getsourcedescriptortreepositionsiblings)|Retrieve siblings for a known source-asserted descriptor | ArrayList\<SourceAtomClusterTreePositionPathDTO\>
+ |[getSourceDescriptorTreePositionPathsToRoot](#getsourcedescriptortreepositionpathstoroot)|Retrieve ancestors for a known source-asserted descriptor | ArrayList\<SourceAtomClusterTreePositionPathDTO\>, ArrayList\<SourceAtomClusterTreePositionDTO\>
+ |[getSourceDescriptorTreePositionSiblings](#getsourcedescriptortreepositionsiblings)|Retrieve siblings for a known source-asserted descriptor | ArrayList\<SourceAtomClusterTreePositionDTO\>
 
 **Each of these examples below requires an instance of the [UtsWsContentController](/soap/installation/interface-setup.html#utswscontentcontroller), [UtsWsMetadataController](/soap/installation/interface-setup.html#utswsmetadatacontroller) and [UtsWsSecurityController](/soap/installation/interface-setup.html#utswssecuritycontroller) interfaces**.
 
@@ -99,11 +99,51 @@ sct concept|name
 
 ### getSourceConceptTreePositionPathsToRoot
 
-coming soon
+**Method Signature**: ```getSourceConceptTreePositionPathsToRoot(String ticket, String version,String scuiPosId,PSF psf)```
 
 ### getSourceDescriptorTreePositionPathsToRoot
 
-coming soon
+**Method Signature**: ```getSourceDescriptorTreePositionPathsToRoot(String ticket, String version,String scuiPosId,PSF psf)```
+
+~~~~java
+
+List<SourceAtomClusterTreePositionDTO> treePositions = new ArrayList<SourceAtomClusterTreePositionDTO>();
+String currentUmlsRelease = utsMetadataService.getCurrentUMLSVersion(ticket);
+treePositions = utsContentService
+		.getSourceDescriptorTreePositions(ticket,currentUmlsRelease,"O24.4",rsab,myPsf);
+		
+    for (SourceAtomClusterTreePositionDTO treePosition:treePositions) {
+			
+	List<SourceAtomClusterTreePositionPathDTO> ancestors = new ArrayList<SourceAtomClusterTreePositionPathDTO>();
+	ancestors = utsContentService
+                    .getSourceDescriptorTreePositionPathsToRoot(ticket,currentUmlsRelease, treePosition.getUi(), myPsf);
+			        
+		    for (SourceAtomClusterTreePositionPathDTO parent:ancestors) {
+		    	
+		    	List<SourceAtomClusterTreePositionDTO> parentTreePositions = new ArrayList<SourceAtomClusterTreePositionDTO>();
+		    	parentTreePositions = parent.getTreePositions();
+                        //we reverse the array list to sort the collection from the tree-top downwards
+		    	Collections.reverse(parentTreePositions);
+		    	for (SourceAtomClusterTreePositionDTO parentTreePosition:parentTreePositions) {
+		    		
+		    	    String ui = parentTreePosition.getCluster().getSourceUi();
+		    	    String name = parentTreePosition.getCluster().getDefaultPreferredName();
+		    	    System.out.println(ui +"|" + name );
+		    	}
+		    }
+    }
+
+~~~~
+
+
+#### Sample Output
+
+~~~~text
+ICD-10-CM|ICD-10-CM TABULAR LIST of DISEASES and INJURIES
+O00-O9A|Pregnancy, childbirth and the puerperium (O00-O9A)
+O20-O29|Other maternal disorders predominantly related to pregnancy (O20-O29)
+O24|Diabetes mellitus in pregnancy, childbirth, and the puerperium
+~~~~
 
 ### getSourceConceptTreePositionSiblings
 
