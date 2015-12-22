@@ -5,7 +5,6 @@
          
         <div class = "row">
 	<div class = "container-fluid col-md-12 col-sm-8 col-xs-6">
-        <p style="color:red;font-weight:bold;">NOTE: The UMLS REST API is currently in alpha mode and is not production ready.</p>
 
 	<#list published_pages as page>
   		<#if (page.status == "published")>
