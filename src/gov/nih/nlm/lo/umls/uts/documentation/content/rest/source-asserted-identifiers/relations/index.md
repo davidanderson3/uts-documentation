@@ -1,6 +1,6 @@
 title=Retrieving Source-Asserted Relations
 date=2015-09-30
-updated=2015-09-30
+updated=2016-02-09
 type=page
 status=published
 category=Retrieving Source-Asserted Data
@@ -24,7 +24,7 @@ You may use any valid UMLS release back to 2008AA in your URI if you would like 
 
 Sample URI|Description|Returned JSON Object classType
 --- | ---
-/content/current/source/LNC/44255-8/relations| Retrieves relationships of LOINC code 44255-8 | AtomClusterAtomClusterRelation
+/content/current/source/LNC/44255-8/relations| Retrieves relationships of LOINC code 44255-8 | AtomClusterRelation
 
 
 ### Query Parameters
@@ -49,64 +49,68 @@ Sample output for /content/2015AA/source/LNC/44255-8/relations?includeAdditional
     "pageCount": 1,
     "result": [
         {
-            "classType": "AtomClusterAtomClusterRelation",
-            "ui": "R150379228",
-            "suppressible": false,
-            "sourceUi": "NONE",
-            "obsolete": false,
-            "sourceOriginated": true,
-            "rootSource": "LNC",
-            "relationLabel": "RO",
-            "additionalRelationLabel": "has_answer",
-            "groupId": "NONE",
-            "attributeCount": 0,
-            "relatedAtom": "NONE",
-            "relatedConcept": "https://uts-ws.nlm.nih.gov/rest/content/2015AA/source/LNC/LA6571-9"
-        },
-        {
-            "classType": "AtomClusterAtomClusterRelation",
-            "ui": "R150401508",
-            "suppressible": false,
-            "sourceUi": "NONE",
-            "obsolete": false,
-            "sourceOriginated": true,
-            "rootSource": "LNC",
-            "relationLabel": "RO",
-            "additionalRelationLabel": "has_answer",
-            "groupId": "NONE",
-            "attributeCount": 0,
-            "relatedAtom": "NONE",
-            "relatedConcept": "https://uts-ws.nlm.nih.gov/rest/content/2015AA/source/LNC/LA6569-3"
-        },
-        {
-            "classType": "AtomClusterAtomClusterRelation",
-            "ui": "R150349583",
-            "suppressible": false,
-            "sourceUi": "NONE",
-            "obsolete": false,
-            "sourceOriginated": true,
-            "rootSource": "LNC",
-            "relationLabel": "RO",
-            "additionalRelationLabel": "has_answer",
-            "groupId": "NONE",
-            "attributeCount": 0,
-            "relatedAtom": "NONE",
-            "relatedConcept": "https://uts-ws.nlm.nih.gov/rest/content/2015AA/source/LNC/LA6570-1"
-        },
-        {
-            "classType": "AtomClusterAtomClusterRelation",
+            "classType": "AtomClusterRelation",
             "ui": "R150334726",
             "suppressible": false,
             "sourceUi": "NONE",
             "obsolete": false,
-            "sourceOriginated": true,
+            "sourceOriginated": false,
             "rootSource": "LNC",
             "relationLabel": "RO",
             "additionalRelationLabel": "has_answer",
             "groupId": "NONE",
-            "attributeCount": 0,
-            "relatedAtom": "NONE",
-            "relatedConcept": "https://uts-ws.nlm.nih.gov/rest/content/2015AA/source/LNC/LA6568-5"
+            "attributeCount": 1,
+            "relatedAtom": "",
+            "relatedConcept": "https://uts-ws.nlm.nih.gov/rest/content/2015AA/source/LNC/LA6568-5",
+            "relatedConceptName": "Not at all"
+        },
+        {
+            "classType": "AtomClusterRelation",
+            "ui": "R150349583",
+            "suppressible": false,
+            "sourceUi": "NONE",
+            "obsolete": false,
+            "sourceOriginated": false,
+            "rootSource": "LNC",
+            "relationLabel": "RO",
+            "additionalRelationLabel": "has_answer",
+            "groupId": "NONE",
+            "attributeCount": 1,
+            "relatedAtom": "",
+            "relatedConcept": "https://uts-ws.nlm.nih.gov/rest/content/2015AA/source/LNC/LA6570-1",
+            "relatedConceptName": "More than half the days"
+        },
+        {
+            "classType": "AtomClusterRelation",
+            "ui": "R150379228",
+            "suppressible": false,
+            "sourceUi": "NONE",
+            "obsolete": false,
+            "sourceOriginated": false,
+            "rootSource": "LNC",
+            "relationLabel": "RO",
+            "additionalRelationLabel": "has_answer",
+            "groupId": "NONE",
+            "attributeCount": 1,
+            "relatedAtom": "",
+            "relatedConcept": "https://uts-ws.nlm.nih.gov/rest/content/2015AA/source/LNC/LA6571-9",
+            "relatedConceptName": "Nearly every day"
+        },
+        {
+            "classType": "AtomClusterRelation",
+            "ui": "R150401508",
+            "suppressible": false,
+            "sourceUi": "NONE",
+            "obsolete": false,
+            "sourceOriginated": false,
+            "rootSource": "LNC",
+            "relationLabel": "RO",
+            "additionalRelationLabel": "has_answer",
+            "groupId": "NONE",
+            "attributeCount": 1,
+            "relatedAtom": "",
+            "relatedConcept": "https://uts-ws.nlm.nih.gov/rest/content/2015AA/source/LNC/LA6569-3",
+            "relatedConceptName": "Several days"
         }
     ]
 }

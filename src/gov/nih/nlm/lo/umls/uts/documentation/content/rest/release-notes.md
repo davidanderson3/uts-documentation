@@ -1,16 +1,20 @@
 title=Release Notes and Roadmap
 date=2015-11-09
-updated=2015-12-21
+updated=2016-02-09
 type=page
 status=published
 navorder=1
 ~~~~~~
 
-Released: December 21, 2015
+Released: February 9, 2016
 
 #### Features:
-* **Add links to Concept and SourceAtomCluster objects to discover default preferred atom**
-  The ```defaultPreferredAtom``` link in the output of Concept and SourceAtomCluster objects allows users to easily discover the default preferred atom associated with a source-asserted code, concept, or descriptor.
+* **Added all relations to source-asserted /relations calls**
+  Source-asserted /relations calls now include all types of relations in the output, so users no longer need to make multiple calls to get all relations.
+  
+#### Change:
+* **relatedConceptName**
+  The ```relatedConceptName``` data element has been added to [Source-Asserted Relations output](/rest/source-asserted-identifiers/relations/#sample-output).
 
 #### Known issues:
 
