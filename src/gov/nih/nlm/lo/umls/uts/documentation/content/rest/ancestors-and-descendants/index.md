@@ -1,6 +1,6 @@
 title=Retrieving Source-Asserted Ancestors and Descendants
 date=2015-08-28
-updated=2015-12-21
+updated=2016-02-09
 type=page
 status=published
 category=Retrieving Source-Asserted Data
@@ -25,9 +25,10 @@ You may use any valid UMLS release back to 2008AA in your URI if you would like 
 
 Sample URI|Description|Returned JSON Object classType
 --- | ---
-/content/current/source/SNOMEDCT_US/9468002/ancestors|Retrieves ancestors of a source-asserted identifier|SourceAtomCluster
-/content/current/source/SNOMEDCT_US/9468002/descendants|Retrieves descendants of a source-asserted identifier|SourceAtomCluster
+/content/current/source/SNOMEDCT_US/9468002/ancestors|Retrieves ancestors of a source-asserted identifier|SourceAtomCluster*
+/content/current/source/SNOMEDCT_US/9468002/descendants|Retrieves descendants of a source-asserted identifier|SourceAtomCluster*
 
+*Calls using codes from HL7V2.5 and HL7V3.0 return output with an "Atom" JSON Object classType.
 
 ### Query Parameters
 
