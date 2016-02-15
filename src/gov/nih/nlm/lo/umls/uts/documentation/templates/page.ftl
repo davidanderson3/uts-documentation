@@ -13,6 +13,7 @@
         <p class = "notice">
 	We welcome your feedback on our <a href = "http://apps.nlm.nih.gov/mainweb/siebel/nlm/index.cfm">customer service form</a>.
 	Please use &quot;UMLS REST API feedback&quot; in your subject line.<br/>
+	Gotta question for other UMLS users?  Join the <a href = "https://list.nih.gov/cgi-bin/wa.exe?A0=umlsusers-l" target = "_blank">UMLS listserv</a>.<br/>
 	Check out the <a href = "https://github.com/HHS/uts-rest-api">code samples in Python, Java, and Perl on Github</a> to help you get started using the UMLS REST API.
 	</p>
 	
