@@ -1,6 +1,6 @@
 title=Release Notes and Roadmap
 date=2015-11-09
-updated=2016-02-09
+updated=2016-02-22
 type=page
 status=published
 navorder=1
@@ -18,7 +18,7 @@ Released: February 9, 2016
 
 #### Known issues:
 
-There are no known issues at this time.
+See our github sample code area for a list of [known issues](https://github.com/HHS/uts-rest-api/issues) with the API.
 
 #### Planned Updates
 
