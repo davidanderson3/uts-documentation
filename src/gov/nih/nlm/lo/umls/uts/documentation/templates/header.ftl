@@ -2,9 +2,9 @@
 <html lang="en">
   <head>
     <meta charset="utf-8"/>
-    <title><#if (page.title)??><#escape x as x?xml>${page.title}</#escape><#else>UMLS Terminology Services REST API Technical Documentation</#if></title>
+    <title><#if (content.title)??><#escape x as x?xml>${content.title}</#escape><#else>UMLS Terminology Services REST API Technical Documentation</#if></title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="DC.Title" content = "UMLS Terminology Services REST API Technical Documentation" />
+    <meta name="DC.Title" content = "<#if (content.title)??><#escape x as x?xml>${content.title}</#escape><#else>UMLS Terminology Services REST API Technical Documentation</#if>"/>
     <meta name="DC.Publisher" content="U.S. National Library of Medicine" />
     <meta name="DC.Subject.Keyword" content="Unified Medical Language System API, UMLS REST API, UMLS API, Terminology Service, Biomedical Terminology Endpoint">
     <meta name="DC.Rights" content="Public Domain" />
