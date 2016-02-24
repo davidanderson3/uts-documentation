@@ -4,7 +4,7 @@ updated=2016-01-08
 type=page
 status=published
 category=Retrieving UMLS Data
-navorder=2
+navorder=4
 ~~~~~~
 
 
