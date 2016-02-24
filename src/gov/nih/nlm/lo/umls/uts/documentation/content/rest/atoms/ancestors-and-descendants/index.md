@@ -12,8 +12,8 @@ navorder=6
 
 URIs with /ancestors or /descendants support the following use cases:
 
-*  Retrieve all ancestors of a known source asserted identifier.
-*  Retrieve all descendants of a known source asserted identifier.
+*  Retrieve all ancestors of a known UMLS atom.
+*  Retrieve all descendants of a known UMLS atom.
 
 Note that 'current' in the URI can always be used to search against the latest UMLS publication.
 You may use any valid UMLS release back to 2008AA in your URI if you would like to search against a particular version of the UMLS.
@@ -25,10 +25,9 @@ You may use any valid UMLS release back to 2008AA in your URI if you would like 
 
 Sample URI|Description|Returned JSON Object classType
 --- | ---
-/content/current/source/SNOMEDCT_US/9468002/ancestors|Retrieves ancestors of a source-asserted identifier|SourceAtomCluster*
-/content/current/source/SNOMEDCT_US/9468002/descendants|Retrieves descendants of a source-asserted identifier|SourceAtomCluster*
+/content/current/AUI/A8345234/ancestors|Retrieves ancestors of a UMLS atom|Atom
+/content/current/AUI/A8345234/descendants|Retrieves descendants of a UMLS atom|Atom
 
-*Calls using codes from HL7V2.5 and HL7V3.0 return output with an "Atom" JSON Object classType.
 
 ### Query Parameters
 

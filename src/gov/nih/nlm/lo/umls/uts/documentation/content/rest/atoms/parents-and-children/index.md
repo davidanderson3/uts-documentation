@@ -12,8 +12,8 @@ navorder=5
 
 URIs with /parents or /children support the following use cases:
 
-*  Retrieve the immediate parents of a known source asserted identifier.
-*  Retrieve all immediate children of a known source asserted identifier.
+*  Retrieve the immediate parents of a known UMLS atom.
+*  Retrieve all immediate children of a known UMLS atom.
 
 Note that 'current' in the URI can always be used to search against the latest UMLS publication.
 You may use any valid UMLS release back to 2008AA in your URI if you would like to search against a particular version of the UMLS.
@@ -25,10 +25,9 @@ You may use any valid UMLS release back to 2008AA in your URI if you would like 
 
 Sample URI|Description|Returned JSON Object classType
 --- | ---
-/content/current/source/SNOMEDCT_US/9468002/parents| Retrieves parents a source-asserted identifier|SourceAtomCluster*
-/content/current/source/SNOMEDCT_US/9468002/children| Retrieves children of a source-asserted identifier|SourceAtomCluster*
+/content/current/AUI/A8345234/parents|Retrieves parents of a UMLS atom|Atom
+/content/current/AUI/A8345234/children|Retrieves children of a UMLS atom|Atom
 
-*Calls using codes from HL7V2.5 and HL7V3.0 return output with an "Atom" JSON Object classType.
 
 ### Query Parameters
 
