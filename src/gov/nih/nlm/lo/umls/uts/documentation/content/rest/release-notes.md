@@ -9,12 +9,17 @@ navorder=1
 Released: February 24, 2016
 
 #### Features:
-* **Added all relations to source-asserted /relations calls**
-  Source-asserted /relations calls now include all types of relations in the output, so users no longer need to make multiple calls to get all relations.
+* **Retrieving parents/children of UMLS atoms**
+  Retrieve all parents/children of UMLS atoms. See [Retrieving UMLS Atom Parents and Children](/rest/atoms/parents-and-children/) for details.
+* **Retrieving ancestors/descendants of UMLS atoms**
+  Retrieve all ancestors/descendants of UMLS atoms.  See [Retrieving UMLS Atom Ancestors and Descendants](/rest/atoms/ancestors-and-descendants/) for details.
   
 #### Change:
-* **relatedConceptName**
-  The ```relatedConceptName``` data element has been added to [Source-Asserted Relations output](/rest/source-asserted-identifiers/relations/#sample-output).
+* **Added sourceUi parameter to /search calls**
+  The ```sourceUi``` parameter has been added to [/search](/rest/search/index.html) calls.
+  
+* **Expired service ticket handling**
+  When a call is submitted with an expired service ticket, the API now returns a 404 status.
 
 #### Known issues:
 
