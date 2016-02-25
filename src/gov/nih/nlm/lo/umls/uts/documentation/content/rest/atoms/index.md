@@ -1,10 +1,10 @@
 title=Retrieving UMLS Atoms
 date=2015-06-12
-updated=2016-01-08
+updated=2016-02-25
 type=page
 status=published
 category=Retrieving UMLS Data
-navorder=2
+navorder=4
 ~~~~~~
 
 
@@ -24,19 +24,22 @@ You may use any valid UMLS release back to 2008AA in your URI if you would like 
 
 
 ### URIs
-
+ 
 **The base URI is https://uts-ws.nlm.nih.gov/rest**
 
-Type of call|Sample URI|Description|Returned JSON Object classType
+Sample URI|Description|Returned JSON Object classType
 --- | --- | ---
-GET|/content/current/CUI/C0155502/atoms|Retrieves all atoms for C0155502 | Atom
-GET|/content/current/CUI/C0155502/atoms/preferred|Retrieves the default preferred atom of C0155502 | Atom
-GET|/content/current/CUI/C0155502/atoms?language=ENG|Retrieves all English language atoms for C0155502| Atom
-GET|/content/current/CUI/C0155502/atoms?sabs=SNOMEDCT_US,ICD9CM&ttys=PT | Retrieve SNOMEDCT_US and ICD9CM preferred terms in C0155502| Atom
-GET|/content/current/source/SNOMEDCT_US/111541001/atoms | Retrieve atoms belonging to SNOMED CT concept 111541001| Atom
-GET|/content/current/source/SNOMEDCT_US/111541001/atoms/preferred | Retrieve the default preferred atom belonging to SNOMED CT concept 111541001| Atom
-GET|/content/current/AUI/A8345234 | Retrieve information about AUI A8345234| Atom
-
+/content/current/CUI/C0155502/atoms|Retrieves all atoms for C0155502 | Atom
+/content/current/CUI/C0155502/atoms/preferred|Retrieves the default preferred atom of C0155502 | Atom
+/content/current/CUI/C0155502/atoms?language=ENG|Retrieves all English language atoms for C0155502| Atom
+/content/current/CUI/C0155502/atoms?sabs=SNOMEDCT_US,ICD9CM&ttys=PT | Retrieve SNOMEDCT_US and ICD9CM preferred terms in C0155502| Atom
+/content/current/source/SNOMEDCT_US/111541001/atoms | Retrieve atoms belonging to SNOMED CT concept 111541001| Atom
+/content/current/source/SNOMEDCT_US/111541001/atoms/preferred | Retrieve the default preferred atom belonging to SNOMED CT concept 111541001| Atom
+/content/current/AUI/A8345234 | Retrieve information about AUI A8345234| Atom
+[/content/current/AUI/A8345234/ancestors](../atoms/ancestors-and-descendants/index.html)|Retrieve ancestors of a UMLS atom|Atom
+[/content/current/AUI/A8345234/descendants](../atoms/ancestors-and-descendants/index.html)|Retrieve descendants of a UMLS atom|Atom
+[/content/current/AUI/A8345234/parents](../atoms/parents-and-children/index.html)|Retrieve parents of a UMLS atom|Atom
+[/content/current/AUI/A8345234/children](../atoms/parents-and-children/index.html)|Retrieve children of a UMLS atom|Atom
 
 ### Query Parameters
 
