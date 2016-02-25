@@ -1,6 +1,6 @@
 title=Retrieving UMLS Atom Ancestors and Descendants
-date=2016-02-24
-updated=2016-02-24
+date=2016-02-25
+updated=2016-02-25
 type=page
 status=published
 category=Retrieving UMLS Data
@@ -25,8 +25,8 @@ You may use any valid UMLS release back to 2008AA in your URI if you would like 
 
 Sample URI|Description|Returned JSON Object classType
 --- | ---
-/content/current/AUI/A8345234/ancestors|Retrieves ancestors of a UMLS atom|Atom
-/content/current/AUI/A8345234/descendants|Retrieves descendants of a UMLS atom|Atom
+/content/current/AUI/A10134087/ancestors|Retrieves ancestors of a UMLS atom|Atom
+/content/current/AUI/A10134087/descendants|Retrieves descendants of a UMLS atom|Atom
 
 
 ### Query Parameters
@@ -40,73 +40,55 @@ pageSize | N | Whole number that specifies the number of results to include per 
 
 ### Sample Output
 
-Sample output for /content/current/source/SNOMEDCT_US/9468002/ancestors?ticket=ST...
+Sample output for /content/current/AUI/A10134087/descendants?ticket=ST...
 
 ~~~~json
 {
     "pageSize": 25,
     "pageNumber": 1,
-    "pageCount": 2,
+    "pageCount": 15,
     "result": [
         {
-            "classType": "SourceAtomCluster",
-            "ui": "105606008",
-            "suppressible": false,
-            "obsolete": false,
-            "rootSource": "SNOMEDCT_US",
-            "atomCount": 3,
-            "cVMemberCount": 0,
-            "attributes": "https://uts-ws.nlm.nih.gov/rest/content/2015AB/source/SNOMEDCT_US/105606008/attributes",
-            "atoms": "https://uts-ws.nlm.nih.gov/rest/content/2015AB/source/SNOMEDCT_US/105606008/atoms",
-            "descendants": "https://uts-ws.nlm.nih.gov/rest/content/2015AB/source/SNOMEDCT_US/105606008/descendants",
-            "ancestors": "https://uts-ws.nlm.nih.gov/rest/content/2015AB/source/SNOMEDCT_US/105606008/ancestors",
-            "parents": "https://uts-ws.nlm.nih.gov/rest/content/2015AB/source/SNOMEDCT_US/105606008/parents",
-            "children": "https://uts-ws.nlm.nih.gov/rest/content/2015AB/source/SNOMEDCT_US/105606008/children",
-            "relations": "https://uts-ws.nlm.nih.gov/rest/content/2015AB/source/SNOMEDCT_US/105606008/relations",
-            "definitions": "NONE",
-            "concepts": "https://uts-ws.nlm.nih.gov/rest/search/2015AB?string=105606008&sabs=SNOMEDCT_US&searchType=exact&inputType=sourceUi",
-            "defaultPreferredAtom": "https://uts-ws.nlm.nih.gov/rest/content/2015AB/source/SNOMEDCT_US/105606008/atoms/preferred",
-            "name": "Injury of musculoskeletal system"
+            "classType": "Atom",
+            "ui": "A10133773",
+            "suppressible": "false",
+            "obsolete": "false",
+            "rootSource": "HL7V3.0",
+            "termType": "PT",
+            "code": "https://uts-ws.nlm.nih.gov/rest/content/2015AA/source/HL7V3.0/_IntrabursalRoute",
+            "concept": "https://uts-ws.nlm.nih.gov/rest/content/2015AA/CUI/C1522205",
+            "sourceConcept": "https://uts-ws.nlm.nih.gov/rest/content/2015AA/source/HL7V3.0/21172",
+            "sourceDescriptor": "NONE",
+            "attributes": "https://uts-ws.nlm.nih.gov/rest/content/2015AA/AUI/A10133773/attributes",
+            "parents": "https://uts-ws.nlm.nih.gov/rest/content/2015AA/AUI/A10133773/parents",
+            "ancestors": "https://uts-ws.nlm.nih.gov/rest/content/2015AA/AUI/A10133773/ancestors",
+            "children": "https://uts-ws.nlm.nih.gov/rest/content/2015AA/AUI/A10133773/children",
+            "descendants": "https://uts-ws.nlm.nih.gov/rest/content/2015AA/AUI/A10133773/descendants",
+            "relations": "NONE",
+            "definitions": "https://uts-ws.nlm.nih.gov/rest/content/2015AA/AUI/A10133773/definitions",
+            "name": "IntrabursalRoute",
+            "language": "ENG"
         },
         {
-            "classType": "SourceAtomCluster",
-            "ui": "105969002",
-            "suppressible": false,
-            "obsolete": false,
-            "rootSource": "SNOMEDCT_US",
-            "atomCount": 5,
-            "cVMemberCount": 0,
-            "attributes": "https://uts-ws.nlm.nih.gov/rest/content/2015AB/source/SNOMEDCT_US/105969002/attributes",
-            "atoms": "https://uts-ws.nlm.nih.gov/rest/content/2015AB/source/SNOMEDCT_US/105969002/atoms",
-            "descendants": "https://uts-ws.nlm.nih.gov/rest/content/2015AB/source/SNOMEDCT_US/105969002/descendants",
-            "ancestors": "https://uts-ws.nlm.nih.gov/rest/content/2015AB/source/SNOMEDCT_US/105969002/ancestors",
-            "parents": "https://uts-ws.nlm.nih.gov/rest/content/2015AB/source/SNOMEDCT_US/105969002/parents",
-            "children": "https://uts-ws.nlm.nih.gov/rest/content/2015AB/source/SNOMEDCT_US/105969002/children",
-            "relations": "https://uts-ws.nlm.nih.gov/rest/content/2015AB/source/SNOMEDCT_US/105969002/relations",
-            "definitions": "NONE",
-            "concepts": "https://uts-ws.nlm.nih.gov/rest/search/2015AB?string=105969002&sabs=SNOMEDCT_US&searchType=exact&inputType=sourceUi",
-            "defaultPreferredAtom": "https://uts-ws.nlm.nih.gov/rest/content/2015AB/source/SNOMEDCT_US/105969002/atoms/preferred",
-            "name": "Disorder of connective tissue"
-        },
-        {
-            "classType": "SourceAtomCluster",
-            "ui": "106028002",
-            "suppressible": false,
-            "obsolete": false,
-            "rootSource": "SNOMEDCT_US",
-            "atomCount": 5,
-            "cVMemberCount": 0,
-            "attributes": "https://uts-ws.nlm.nih.gov/rest/content/2015AB/source/SNOMEDCT_US/106028002/attributes",
-            "atoms": "https://uts-ws.nlm.nih.gov/rest/content/2015AB/source/SNOMEDCT_US/106028002/atoms",
-            "descendants": "https://uts-ws.nlm.nih.gov/rest/content/2015AB/source/SNOMEDCT_US/106028002/descendants",
-            "ancestors": "https://uts-ws.nlm.nih.gov/rest/content/2015AB/source/SNOMEDCT_US/106028002/ancestors",
-            "parents": "https://uts-ws.nlm.nih.gov/rest/content/2015AB/source/SNOMEDCT_US/106028002/parents",
-            "children": "https://uts-ws.nlm.nih.gov/rest/content/2015AB/source/SNOMEDCT_US/106028002/children",
-            "relations": "https://uts-ws.nlm.nih.gov/rest/content/2015AB/source/SNOMEDCT_US/106028002/relations",
-            "definitions": "NONE",
-            "concepts": "https://uts-ws.nlm.nih.gov/rest/search/2015AB?string=106028002&sabs=SNOMEDCT_US&searchType=exact&inputType=sourceUi",
-            "defaultPreferredAtom": "https://uts-ws.nlm.nih.gov/rest/content/2015AB/source/SNOMEDCT_US/106028002/atoms/preferred",
-            "name": "Musculoskeletal finding"
+            "classType": "Atom",
+            "ui": "A8317632",
+            "suppressible": "false",
+            "obsolete": "false",
+            "rootSource": "HL7V3.0",
+            "termType": "PT",
+            "code": "https://uts-ws.nlm.nih.gov/rest/content/2015AA/source/HL7V3.0/IBURSINJ",
+            "concept": "https://uts-ws.nlm.nih.gov/rest/content/2015AA/CUI/C0848586",
+            "sourceConcept": "https://uts-ws.nlm.nih.gov/rest/content/2015AA/source/HL7V3.0/14643",
+            "sourceDescriptor": "NONE",
+            "attributes": "https://uts-ws.nlm.nih.gov/rest/content/2015AA/AUI/A8317632/attributes",
+            "parents": "https://uts-ws.nlm.nih.gov/rest/content/2015AA/AUI/A8317632/parents",
+            "ancestors": "https://uts-ws.nlm.nih.gov/rest/content/2015AA/AUI/A8317632/ancestors",
+            "children": "NONE",
+            "descendants": null,
+            "relations": "NONE",
+            "definitions": "https://uts-ws.nlm.nih.gov/rest/content/2015AA/AUI/A8317632/definitions",
+            "name": "Injection, intrabursal",
+            "language": "ENG"
         },
 ...
     ]

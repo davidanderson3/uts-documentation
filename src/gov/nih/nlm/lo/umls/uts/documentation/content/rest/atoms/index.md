@@ -1,6 +1,6 @@
 title=Retrieving UMLS Atoms
 date=2015-06-12
-updated=2016-02-24
+updated=2016-02-25
 type=page
 status=published
 category=Retrieving UMLS Data

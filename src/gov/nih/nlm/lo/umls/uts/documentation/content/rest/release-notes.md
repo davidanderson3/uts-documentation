@@ -1,12 +1,12 @@
 title=Release Notes and Roadmap
 date=2015-11-09
-updated=2016-02-24
+updated=2016-02-25
 type=page
 status=published
 navorder=1
 ~~~~~~
 
-Released: February 24, 2016
+Released: February 25, 2016
 
 #### Features:
 * **Retrieving parents/children of UMLS atoms**
