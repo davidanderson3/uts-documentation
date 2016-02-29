@@ -19,11 +19,11 @@ is the equivalent code from vocabulary according to UMLS synonymy?'. Although UM
     - inputType=sourceUi
     - sabs=SNOMEDCT_US
     - ticket=\<your service ticket\>.  See [authentication](/rest/authentication.html) for details
-+ Parse the concept object (CUI) returned and ask for atoms from the US Edition of SNOMED CT
++ Parse the concept object (CUI) returned and ask for atoms (preferred terms or synonyms) from the US Edition of SNOMED CT
 + Query the URI of the SNOMED CT concept returned to retrieve complete information about the SNOMED CT concept
 
 
-Your initial URL should look like this:
+Your initial `GET` call should look like this:
 `https://uts-ws.nlm.nih.gov/rest/search/current?string=HP:0001947&searchType=exact&inputType=sourceUi&sabs=HPO&ticket=<your-ticket>`
 
 
@@ -48,12 +48,14 @@ result: {
 }
 ~~~~
 
-Now that we have the CUI, we can use a linked data approach to make one more ```GET``` call to the [/atoms](/rest/atoms/index.html) endpoint of the CUI in question.
+Now that we have the CUI, we can use a linked data approach to make one more `GET` call to the [/atoms](/rest/atoms/index.html) endpoint of the CUI in question.
 This will give us back a list of Atom objects that have all the terms that NLM editors have determined to be synonymous with 'Renal tubular acidosis'.
-We can ask the API to include only atoms from the US Edition of SNOMED CT, and further ask for only preferred terms.  Normally you'll only receive one atom back using
+We can ask the API to include only atoms from the US Edition of SNOMED CT, and further ask for only preferred terms and synonyms.  Normally you'll only receive one atom back using
 this algorithm.  Occasionally NLM Editors may merge more than one SNOMED CT concept into the same UMLS CUI if they determine the meaning is the same.
+For example, HP:0001596 'Alopecia', maps to SNOMED CT concepts 278040002 'Loss of Hair', and 56317004 'Alopecia'.  There are also instances where synonyms asserted by SNOMED CT
+have been split out from their preferred terms.  An example is HP:0000787, 'Nephrolithiasis', which maps to a CUI containing what SNOMED CT refers to as a synonym, 'Nephrolithiasis', but not the preferred term of 'Kidney Stone'.
 
-`https://uts-ws.nlm.nih.gov/rest/content/2015AB/CUI/C0001126/atoms?sabs=SNOMEDCT_US&ttys=PT&ticket=\<your-ticket\>`
+`https://uts-ws.nlm.nih.gov/rest/content/2015AB/CUI/C0001126/atoms?sabs=SNOMEDCT_US&ttys=PT,SY&ticket=<your-ticket>`
 
 In this example we receive the following Atom object:
 
@@ -89,7 +91,7 @@ result: [
 
 ~~~~
 
-Finally, make one additional `GET` call to the SNOMED CT sourceConcept URI - `https://uts-ws.nlm.nih.gov/rest/content/2015AB/source/SNOMEDCT_US/1776003?ticket=\<your-ticket\>`
+Finally, make one additional `GET` call to the SNOMED CT sourceConcept URI - `https://uts-ws.nlm.nih.gov/rest/content/2015AB/source/SNOMEDCT_US/1776003?ticket=<your-ticket>`
 This exposes complete information about the SNOMED CT concept, such as links to additional properties (attributes), parents, children, descendants, etc.
 
 ~~~~.json
