@@ -1,4 +1,4 @@
-<#assign categories = ['Retrieving UMLS Data', 'Retrieving Source-Asserted Data']>
+<#assign categories = ['Retrieving UMLS Data', 'Retrieving Source-Asserted Data', 'REST API Cookbook']>
 <div class = "row header">
   <div class="container-fluid">
      <div class = "row">
