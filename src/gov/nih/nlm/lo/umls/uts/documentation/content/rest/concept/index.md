@@ -57,7 +57,10 @@ Sample output for /content/current/CUI/C0009044?ticket=ST...
         "majorRevisionDate": "08-18-2015",
         "status": "R",
         "semanticTypes": [
-            "T037: Injury or Poisoning"
+            {
+                "name": "Injury or Poisoning",
+                "uri": "https://uts-ws-qa.nlm.nih.gov/rest/semantic-network/2015AB/TUI/T037"
+            }
         ],
         "atomCount": 63,
         "attributeCount": 0,
