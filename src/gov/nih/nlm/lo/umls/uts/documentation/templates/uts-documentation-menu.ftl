@@ -13,7 +13,7 @@
          </form>
        </div>
        <div class = "col-md-6 col-sm-8 col-xs-12">
-           <a class = "pull-right white" style = "margin-right:1em;" href="http://apps.nlm.nih.gov/mainweb/siebel/nlm/index.cfm"><b>Contact NLM</b></a>
+           <a class = "pull-right white" style = "margin-right:1em;" href="https://support.nlm.nih.gov/ics/support/ticketnewwizard.asp?style=classic&deptID=28054&category=umls"><b>Contact NLM</b></a>
        </div>
     </div>
   </div>
