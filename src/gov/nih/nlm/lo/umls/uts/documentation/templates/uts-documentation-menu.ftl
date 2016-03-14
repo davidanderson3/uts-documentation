@@ -35,7 +35,7 @@
    <div class="col-md-4 col-sm-8 col-xs-12 umls-menu">
      <a href = "https://www.nlm.nih.gov/research/umls/quickstart.html">UMLS Quick Start Guide</a>&nbsp;<b>|</b>&nbsp;
      <a href = "https://www.nlm.nih.gov/research/umls/faq_main.html">FAQs</a>&nbsp;<b>|</b>&nbsp;
-     <a href = "https://www.nlm.nih.gov/research/umls/support.html">Customer Support</a>
+     <a href = "https://support.nlm.nih.gov/ics/support/ticketnewwizard.asp?style=classic&deptID=28054&category=umls">Customer Support</a>
    </div>
 </div>
 <!-- only build the REST Menu if we're in the REST API -->
