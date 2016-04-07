@@ -4,7 +4,7 @@ updated=2016-02-26
 type=page
 status=published
 category=REST API Cookbook
-navorder=1
+navorder=2
 ~~~~~~
 
 A common use case of the CUIs in the UMLS is as a sort of 'bridge of synonymy' between code sets. It is important to note that the synonymy asserted by the UMLS in the MRCONSO.RRF files (and the APIs derived from them) has not been rigorously tested and maintained in actual clinical care.
@@ -14,11 +14,11 @@ In this example, we'll use the API to crosswalk the [Human Phenotype Ontology](h
 'Renal tubular acidosis', to see if there are any SNOMEDCT codes available.  The algorithm is as follows:
 
 + Query the /search endpoint for HPO concept HP:0001947 with the following parameters:
-    - string=HP:0001947
-    - searchType=exact
-    - inputType=sourceUi
-    - sabs=HPO
-    - ticket=\<your service ticket\>.  See [authentication](/rest/authentication.html) for details
+    - `string=HP:0001947`
+    - `searchType=exact`
+    - `inputType=sourceUi`
+    - `sabs=HPO`
+    - `ticket=\<your service ticket\>`.  See [authentication](/rest/authentication.html) for details
 + Parse the concept object (CUI) returned and ask for atoms (preferred terms or synonyms) from the US Edition of SNOMED CT
 + Query the URI of the SNOMED CT concept returned to retrieve complete information about the SNOMED CT concept
 

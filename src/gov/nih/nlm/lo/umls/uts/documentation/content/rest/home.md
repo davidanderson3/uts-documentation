@@ -1,6 +1,6 @@
 title=UMLS REST API Home Page
 date=2015-06-10
-updated=2015-11-19
+updated=2015-03-14
 type=page
 status=published
 navorder=1
@@ -36,6 +36,4 @@ Base URI|HTTP Request Type|Path|Description
  |GET | [/content/{version}/source/{source}/{id}/relations](source-asserted-identifiers/relations/) | Retrieves all relationships of a source-asserted identifier
  |GET | [/content/{version}/source/{source}/{id}/subsets](source-asserted-identifiers/subsets/) | Retrieves information about source-asserted subsets
  |GET | [/content/{version}/source/{source}/{id}/attributes](source-asserted-identifiers/attributes/) | Retrieves information about source-asserted attributes
-
-### Code Sample Repository
-The [Code Sample Repository on GitHub](https://github.com/HHS/uts-rest-api) features code samples in various languages that show how to use the UMLS REST API. The repository currently includes code samples in Java, Perl, and Python.
+ |GET | [/semantic-network/{version}/TUI/{id}](/rest/semantic-network/) | Retrieves information for a known Semantic Type identifier (TUI)
