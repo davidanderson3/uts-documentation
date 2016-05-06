@@ -44,16 +44,13 @@ Sample output for /content-views/2015AB?ticket=ST-...
 
 ~~~~json
 {
-
     "pageSize": 25,
     "pageNumber": 1,
     "pageCount": 1,
     "result": 
-
 [
 
 {
-
     "classType": "ContentView",
     "ui": "C1700357",
     "name": "MetaMap NLP View",
@@ -81,11 +78,10 @@ Sample output for /content-views/2015AB?ticket=ST-...
     "relationMemberCount": 0,
     "conceptMemberCount": 0,
     "uri": "https://uts-ws.nlm.nih.gov/rest/content-views/2015AB/CUI/C1700357",
-    "memberUri": "https://uts-ws.nlm.nih.gov/rest/content-views/2015AB/CUI/C1700357/members"
+    "members": "https://uts-ws.nlm.nih.gov/rest/content-views/2015AB/CUI/C1700357/members"
 
 },
 {
-
     "classType": "ContentView",
     "ui": "C1964027",
     "name": "UMLS enhanced VA/KP Problem List Subset of SNOMED (Level 0+SNOMED)",
@@ -113,11 +109,10 @@ Sample output for /content-views/2015AB?ticket=ST-...
     "relationMemberCount": 0,
     "conceptMemberCount": 0,
     "uri": "https://uts-ws.nlm.nih.gov/rest/content-views/2015AB/CUI/C1964027",
-    "memberUri": "https://uts-ws.nlm.nih.gov/rest/content-views/2015AB/CUI/C1964027/members"
+    "members": "https://uts-ws.nlm.nih.gov/rest/content-views/2015AB/CUI/C1964027/members"
 
 },
 {
-
     "classType": "ContentView",
     "ui": "C1964028",
     "name": "UMLS enhanced VA/KP Problem List Subset of SNOMED (Level 0+SNOMED+MDR)",
@@ -145,11 +140,10 @@ Sample output for /content-views/2015AB?ticket=ST-...
     "relationMemberCount": 0,
     "conceptMemberCount": 0,
     "uri": "https://uts-ws.nlm.nih.gov/rest/content-views/2015AB/CUI/C1964028",
-    "memberUri": "https://uts-ws.nlm.nih.gov/rest/content-views/2015AB/CUI/C1964028/members"
+    "members": "https://uts-ws.nlm.nih.gov/rest/content-views/2015AB/CUI/C1964028/members"
 
 },
 ...
-
 }
 ~~~~
 
@@ -158,12 +152,12 @@ Sample output for /content-views/2015AB/CUI/C1700357?ticket=ST-...
 ~~~~json
 {
 
-    "pageSize": 25,
-    "pageNumber": 1,
-    "pageCount": 1,
-    "result": 
+   "pageSize": 25,
+   "pageNumber": 1,
+   "pageCount": 1,
+   "result": 
 
-    {
+   {
         "classType": "ContentView",
         "ui": "C1700357",
         "name": "MetaMap NLP View",
@@ -191,7 +185,7 @@ Sample output for /content-views/2015AB/CUI/C1700357?ticket=ST-...
         "relationMemberCount": 0,
         "conceptMemberCount": 0,
         "uri": "https://uts-ws.nlm.nih.gov/rest/content-views/2015AB/CUI/C1700357",
-        "memberUri": "https://uts-ws.nlm.nih.gov/rest/content-views/2015AB/CUI/C1700357/members"
+        "members": "https://uts-ws.nlm.nih.gov/rest/content-views/2015AB/CUI/C1700357/members"
     }
 
 }
@@ -202,41 +196,40 @@ Sample output for /content-views/2015AB/CUI/C1700357/members?ticket=ST-...
 ~~~~json
 {
 
-    "pageSize": 25,
-    "pageNumber": 1,
-    "pageCount": 1,
-    "result": 
+   "pageSize": 25,
+   "pageNumber": 1,
+   "pageCount": 1,
+   "result": 
 
 [
 
 {
 
-    "classType": "AtomContentViewMember",
-    "ui": "A19582446",
-    "uri": "https://uts-ws.nlm.nih.gov/rest/content/2015AB/AUI/A19582446",
-    "name": "KPNA6 protein, mouse",
-    "contentViewMemberAttributes": [ ]
+   "classType": "AtomContentViewMember",
+   "ui": "A19582446",
+   "uri": "https://uts-ws.nlm.nih.gov/rest/content/2015AB/AUI/A19582446",
+   "name": "KPNA6 protein, mouse",
+   "contentViewMemberAttributes": [ ]
 
 },
 {
 
-    "classType": "AtomContentViewMember",
-    "ui": "A19580305",
-    "uri": "https://uts-ws.nlm.nih.gov/rest/content/2015AB/AUI/A19580305",
-    "name": "importin alpha7 protein, mouse",
-    "contentViewMemberAttributes": [ ]
+   "classType": "AtomContentViewMember",
+   "ui": "A19580305",
+   "uri": "https://uts-ws.nlm.nih.gov/rest/content/2015AB/AUI/A19580305",
+   "name": "importin alpha7 protein, mouse",
+   "contentViewMemberAttributes": [ ]
 
 },
 {
 
-    "classType": "AtomContentViewMember",
-    "ui": "A19592982",
-    "uri": "https://uts-ws.nlm.nih.gov/rest/content/2015AB/AUI/A19592982",
-    "name": "FBXL2 protein, mouse",
-    "contentViewMemberAttributes": [ ]
+   "classType": "AtomContentViewMember",
+   "ui": "A19592982",
+   "uri": "https://uts-ws.nlm.nih.gov/rest/content/2015AB/AUI/A19592982",
+   "name": "FBXL2 protein, mouse",
+   "contentViewMemberAttributes": [ ]
 
 },
 ...
-
 }
 ~~~~
