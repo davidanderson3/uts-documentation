@@ -28,6 +28,8 @@ https://uts-ws.nlm.nih.gov/rest/content/current/CUI/C0018787?ticket=ST-134-HUbXG
 
 **The base URI for authentication is https://utslogin.nlm.nih.gov/cas/v1**
 
+---------------------------------------
+
 **Choose ONE of the following methods for getting a Ticket-Granting Ticket (TGT):**
 
 Getting a Ticket-Granting Ticket (TGT) with your username and password
@@ -41,6 +43,8 @@ Getting a Ticket-Granting Ticket (TGT) with your API key
 Type of Request|URI|Key Names| Key Values|Description
 --- | --- | --
 POST| /api-key | apikey | Your UMLS API key |Retrieves a Ticket Granting Ticket (TGT) to be used repeatedly for getting Service Tickets.
+
+---------------------------------------
 
 **Once you have a TGT, use the TGT to generate Service Tickets:** 
 
