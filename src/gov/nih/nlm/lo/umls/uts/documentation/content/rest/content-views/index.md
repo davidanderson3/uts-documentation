@@ -13,7 +13,7 @@ navorder=8
 URIs with /content-views support the following use cases:
 
 * Retrieve all content views for a known UMLS Release. 
-* Retrieve information (name, description, member count, etc.) for a known content views.
+* Retrieve information (name, description, member count, etc.) for a known content view.
 * Retrieve all members of a known content view.
 
 Note that 'current' in the URI can always be used to search against the latest UMLS publication.
