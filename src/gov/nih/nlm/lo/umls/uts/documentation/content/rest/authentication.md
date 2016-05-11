@@ -32,13 +32,13 @@ https://uts-ws.nlm.nih.gov/rest/content/current/CUI/C0018787?ticket=ST-134-HUbXG
 
 **Choose ONE of the following methods for getting a Ticket-Granting Ticket (TGT):**
 
-Getting a Ticket-Granting Ticket (TGT) with your username and password
+**Option 1:** Getting a Ticket-Granting Ticket (TGT) with your username and password
 
 Type of Request|URI|Key Names| Key Values|Description
 --- | --- | --
 POST| /tickets | username,password | Your UMLS username and password |Retrieves a Ticket Granting Ticket (TGT) to be used repeatedly for getting Service Tickets.
 
-Getting a Ticket-Granting Ticket (TGT) with your API key
+**Option 2:** Getting a Ticket-Granting Ticket (TGT) with your API key
 
 Type of Request|URI|Key Names| Key Values|Description
 --- | --- | --
@@ -85,6 +85,6 @@ The easiest way to verify you've implemented authentication correctly is to use 
 
 **http://utslogin.nlm.nih.gov/cas/serviceValidate?ticket={ST}&service=http://umlsks.nlm.nih.gov**
 
-If your service ticket is valid, you'll receive a string that corresponds to your UMLS username, such as ```InformaticsUser```.
+If your service ticket is valid, you'll receive a string that corresponds to either your UMLS username or API Key (depending on how you generated your ticket granting ticket), such as ```InformaticsUser```.
 A ticket generated against the wrong service will return a ```<cas:authenticationFailure code='INVALID_SERVICE'>``` error in the response.
 An invalid service ticket will return a ```<cas:authenticationFailure code='INVALID_TICKET'>``` error in the response.
