@@ -24,7 +24,7 @@ Parameter name | Required? Y/N | Description|  Valid Values | Default value | Us
 ticket | Y | A single-use service ticket is required for each call to the API. See [authentication](../authentication.html) for more information | n/a | n/a | n/a
 
 Here is a sample of what is returned when making a call to the following URL:
-**https://uts-ws.nlm.nih.gov/rest/semantic-network/2015AB/TUI/T109**
+**https://uts-ws.nlm.nih.gov/rest/semantic-network/2015AB/TUI/T109?ticket=ST-...**
 
 ### Sample Output
 

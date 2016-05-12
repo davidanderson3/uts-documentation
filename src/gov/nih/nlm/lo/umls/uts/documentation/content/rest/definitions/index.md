@@ -20,7 +20,7 @@ You may use any valid UMLS release back to 2008AA in your URI if you would like 
 
 ### URIs
 
-*The base URI is https://uts-ws.nlm.nih.gov/rest*
+**The base URI is https://uts-ws.nlm.nih.gov/rest**
 
 Sample URI|Description|Returned JSON Object classType
 --- | ---
