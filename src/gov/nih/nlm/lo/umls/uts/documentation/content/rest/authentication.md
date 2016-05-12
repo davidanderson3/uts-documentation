@@ -7,12 +7,13 @@ navorder=2
 ~~~~~~
 
 
-The UMLS REST API requires a UMLS username and password or a UMLS API key for the authentication described below. If you do not have a UMLS account, you may apply for a license on the [UMLS Terminology Services (UTS) website](https://uts.nlm.nih.gov). 
+The UMLS REST API requires a UMLS account for the authentication described below. If you do not have a UMLS account, you may apply for a license on the [UMLS Terminology Services (UTS) website](https://uts.nlm.nih.gov). 
 
 The UTS REST authentication involves 3 steps:
 
-1. Determining whether you want to use your UMLS username and password OR a UMLS API key to authenticate that you have an active UTS account.
-	+ If you choose to use an API key instead of your username and password, you can find the API key in the [UTS 'My Profile' area](https://uts.nlm.nih.gov) after signing in. An API key remains active as long as the associated UTS account is active.
+1. Determining whether you want to use your UMLS username and password OR a UMLS API key.
+    + If you choose to use an API key instead of your username and password, you can find the API key in the [UTS 'My Profile' area](https://uts.nlm.nih.gov) after signing in. An API key remains active as long as the associated UTS account is active.
+    + If the API Key field in your UTS profile is blank, click 'Edit Profile', select the 'Generate new API Key' checkbox, then scroll down and click 'Save Profile'.  Your new API Key is now available for use.
 2. Getting a Ticket-Granting Ticket (TGT) using UMLS credentials. The TGT is valid for 8 hours. **You do not need a new TGT for each call to the REST API.**
 3. Getting a Service Ticket using the Ticket Granting Ticket. **A  Service Ticket expires five minutes from the time of generation or after one use, which ever comes first. Each REST call requires a new Service Ticket.** 
     + You can also [validate a service ticket](#ticket-validation) if you want to make sure you've implemented the authentication service correctly. Once validated, the service ticket can no longer be used.
@@ -32,13 +33,13 @@ https://uts-ws.nlm.nih.gov/rest/content/current/CUI/C0018787?ticket=ST-134-HUbXG
 
 **Choose ONE of the following methods for getting a Ticket-Granting Ticket (TGT):**
 
-**Option 1:** Getting a Ticket-Granting Ticket (TGT) with your username and password
+##### Option 1: Getting a Ticket-Granting Ticket (TGT) with your username and password
 
 Type of Request|URI|Key Names| Key Values|Description
 --- | --- | --
 POST| /tickets | username,password | Your UMLS username and password |Retrieves a Ticket Granting Ticket (TGT) to be used repeatedly for getting Service Tickets.
 
-**Option 2:** Getting a Ticket-Granting Ticket (TGT) with your API key
+##### Option 2: Getting a Ticket-Granting Ticket (TGT) with your API key
 
 Type of Request|URI|Key Names| Key Values|Description
 --- | --- | --
