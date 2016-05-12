@@ -28,8 +28,8 @@ Sample URI|Description|Returned JSON Object classType
 --- | ---
 /content-views/current/ | Retrieves information about all content views from the current release | ContentView
 /content-views/current/CUI/C2711988 | Retrieves information for the 'CORE Problem List Subset of SNOMED CT' content view | ContentView
-[/content-views/current/CUI/C2711988/members](#sourceconceptcontentviewmember-sample-output) | Retrieves members of the 'CORE Problem List Subset of SNOMED CT' content view* | SourceConceptContentViewMember
-[/content-views/current/CUI/C1700357/members](#atomcontentviewmember-sample-output) | Retrieves members of the 'MetaMap NLP View' content view | AtomContentViewMember*
+[/content-views/current/CUI/C2711988/members](#sourceconceptcontentviewmember-sample-output) | Retrieves members of the 'CORE Problem List Subset of SNOMED CT' content view| SourceConceptContentViewMember
+[/content-views/current/CUI/C1700357/members](#atomcontentviewmember-sample-output) | Retrieves members of the 'MetaMap NLP View' content view | AtomContentViewMember
 
 Content view members that do not contain attributes will return an empty contentViewMemberAttributes array with each content view member object.
 
