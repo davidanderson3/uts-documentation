@@ -1,6 +1,6 @@
 title=Release Notes and Roadmap
 date=2015-11-09
-updated=2016-05-09
+updated=2016-05-18
 type=page
 status=published
 navorder=1
@@ -28,4 +28,7 @@ See our github sample code area for a list of [known issues](https://github.com/
 The following new items are planned for upcoming versions of the API.    
 
 ##### Features:
+
+* **Add a crosswalk endpoint that allows users to find codes from one vocabulary that live in the same CUI as codes from another vocabulary.**
+
 * **Add history mechanism so users can retrieve CUIs that are no longer in the latest UMLS release**

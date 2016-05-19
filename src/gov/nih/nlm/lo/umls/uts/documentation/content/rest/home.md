@@ -1,6 +1,6 @@
 title=UMLS REST API Home Page
 date=2015-06-10
-updated=2015-03-14
+updated=2015-05-18
 type=page
 status=published
 navorder=1
@@ -37,3 +37,6 @@ Base URI|HTTP Request Type|Path|Description
  |GET | [/content/{version}/source/{source}/{id}/subsets](source-asserted-identifiers/subsets/) | Retrieves information about source-asserted subsets
  |GET | [/content/{version}/source/{source}/{id}/attributes](source-asserted-identifiers/attributes/) | Retrieves information about source-asserted attributes
  |GET | [/semantic-network/{version}/TUI/{id}](/rest/semantic-network/) | Retrieves information for a known Semantic Type identifier (TUI)
+ |GET | [/content-views/{version}](/rest/content-views/) | Retrieve all available [content views](https://www.nlm.nih.gov/research/umls/knowledge_sources/metathesaurus/release/content_views.html) in the UMLS
+ |GET | [/content-views/{version}/CUI/{CUI}/members](/rest/content-views/index.html#uris) | Retrieve members for a specific content view
+ 

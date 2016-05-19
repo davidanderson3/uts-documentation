@@ -8,7 +8,7 @@ navorder=2
 ~~~~~~
 
 A common use case of the CUIs in the UMLS is as a sort of 'bridge of synonymy' between code sets. It is important to note that the synonymy asserted by the UMLS in the MRCONSO.RRF files (and the APIs derived from them) has not been rigorously tested and maintained in actual clinical care.
-With that disclaimer, users often have questions such as 'I have a code from vocabulary x, what is the equivalent code from vocabulary y according to UMLS synonymy?'. Although UMLS CUIs can be used as a starting point, results should be carefully reviewed for relevancy in your use case.
+With that disclaimer, users often have questions such as 'I have a code from vocabulary "x", what is the equivalent code from vocabulary "y" according to UMLS synonymy?'. Although UMLS CUIs can be used as a starting point, results should be carefully reviewed for relevancy in your use case.
 
 In this example, we'll use the API to crosswalk the [Human Phenotype Ontology](https://www.nlm.nih.gov/research/umls/sourcereleasedocs/current/HPO/) (HPO) code HP:0001947,
 'Renal tubular acidosis', to see if there are any SNOMEDCT codes available.  The algorithm is as follows:
@@ -18,7 +18,7 @@ In this example, we'll use the API to crosswalk the [Human Phenotype Ontology](h
     - `searchType=exact`
     - `inputType=sourceUi`
     - `sabs=HPO`
-    - `ticket=\<your service ticket\>`.  See [authentication](/rest/authentication.html) for details
+    - `ticket=<your service ticket>`.  See [authentication](/rest/authentication.html) for details
 + Parse the concept object (CUI) returned and ask for atoms (preferred terms or synonyms) from the US Edition of SNOMED CT
 + Query the URI of the SNOMED CT concept returned to retrieve complete information about the SNOMED CT concept
 
