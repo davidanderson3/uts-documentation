@@ -1,6 +1,6 @@
 title=Retrieving UMLS Atoms
 date=2015-06-12
-updated=2016-02-25
+updated=2016-06-28
 type=page
 status=published
 category=Retrieving UMLS Data
@@ -57,129 +57,93 @@ pageSize | N | Whole number that specifies the number of results to include per 
 
 ### Sample Output
 
-Sample output for /content/current/CUI/C0155502/atoms?ttys=PT&sabs=SNOMEDCT_US%2CICD9CM&ticket=ST...
+Sample output for https://uts-ws.nlm.nih.gov/rest/content/current/CUI/C0155502/atoms?ttys=PT&sabs=SNOMEDCT_US%2CICD9CM&ticket=ST...
 
 ~~~~json
 {
-    "pageSize": 25,
-    "pageNumber": 1,
-    "pageCount": 1,
-    "result": [
-        {
-            "classType": "Atom",
-            "ui": "A2994854",
-            "suppressible": "false",
-            "obsolete": "false",
-            "rootSource": "SNOMEDCT_US",
-            "termType": "SY",
-            "code": "https://uts-ws.nlm.nih.gov/rest/content/2015AA/source/SNOMEDCT_US/111541001",
-            "concept": "https://uts-ws.nlm.nih.gov/rest/content/2015AA/CUI/C0155502",
-            "sourceConcept": "https://uts-ws.nlm.nih.gov/rest/content/2015AA/source/SNOMEDCT_US/111541001",
-            "sourceDescriptor": "NONE",
-            "attributes": "https://uts-ws.nlm.nih.gov/rest/content/2015AA/AUI/A2994854/attributes",
-            "parents": "NONE",
-            "children": "NONE",
-            "relations": "NONE",
-            "definitions": "NONE",
-            "name": "BPPV - Benign paroxysmal positional vertigo",
-            "language": "ENG"
-        },
-        {
-            "classType": "Atom",
-            "ui": "A2955676",
-            "suppressible": "false",
-            "obsolete": "false",
-            "rootSource": "SNOMEDCT_US",
-            "termType": "SY",
-            "code": "https://uts-ws.nlm.nih.gov/rest/content/2015AA/source/SNOMEDCT_US/111541001",
-            "concept": "https://uts-ws.nlm.nih.gov/rest/content/2015AA/CUI/C0155502",
-            "sourceConcept": "https://uts-ws.nlm.nih.gov/rest/content/2015AA/source/SNOMEDCT_US/111541001",
-            "sourceDescriptor": "NONE",
-            "attributes": "https://uts-ws.nlm.nih.gov/rest/content/2015AA/AUI/A2955676/attributes",
-            "parents": "NONE",
-            "children": "NONE",
-            "relations": "NONE",
-            "definitions": "NONE",
-            "name": "Benign paroxysmal positional nystagmus",
-            "language": "ENG"
-        },
-        {
-            "classType": "Atom",
-            "ui": "A2892933",
-            "suppressible": "false",
-            "obsolete": "false",
-            "rootSource": "SNOMEDCT_US",
-            "termType": "PT",
-            "code": "https://uts-ws.nlm.nih.gov/rest/content/2015AA/source/SNOMEDCT_US/111541001",
-            "concept": "https://uts-ws.nlm.nih.gov/rest/content/2015AA/CUI/C0155502",
-            "sourceConcept": "https://uts-ws.nlm.nih.gov/rest/content/2015AA/source/SNOMEDCT_US/111541001",
-            "sourceDescriptor": "NONE",
-            "attributes": "https://uts-ws.nlm.nih.gov/rest/content/2015AA/AUI/A2892933/attributes",
-            "parents": "NONE",
-            "children": "NONE",
-            "relations": "NONE",
-            "definitions": "NONE",
-            "name": "Benign paroxysmal positional vertigo",
-            "language": "ENG"
-        },
-        {
-            "classType": "Atom",
-            "ui": "A3808177",
-            "suppressible": "false",
-            "obsolete": "false",
-            "rootSource": "SNOMEDCT_US",
-            "termType": "FN",
-            "code": "https://uts-ws.nlm.nih.gov/rest/content/2015AA/source/SNOMEDCT_US/111541001",
-            "concept": "https://uts-ws.nlm.nih.gov/rest/content/2015AA/CUI/C0155502",
-            "sourceConcept": "https://uts-ws.nlm.nih.gov/rest/content/2015AA/source/SNOMEDCT_US/111541001",
-            "sourceDescriptor": "NONE",
-            "attributes": "https://uts-ws.nlm.nih.gov/rest/content/2015AA/AUI/A3808177/attributes",
-            "parents": "NONE",
-            "children": "NONE",
-            "relations": "NONE",
-            "definitions": "NONE",
-            "name": "Benign paroxysmal positional vertigo (disorder)",
-            "language": "ENG"
-        },
-        {
-            "classType": "Atom",
-            "ui": "A3101021",
-            "suppressible": "false",
-            "obsolete": "false",
-            "rootSource": "SNOMEDCT_US",
-            "termType": "PT",
-            "code": "https://uts-ws.nlm.nih.gov/rest/content/2015AA/source/SNOMEDCT_US/232285008",
-            "concept": "https://uts-ws.nlm.nih.gov/rest/content/2015AA/CUI/C0155502",
-            "sourceConcept": "https://uts-ws.nlm.nih.gov/rest/content/2015AA/source/SNOMEDCT_US/232285008",
-            "sourceDescriptor": "NONE",
-            "attributes": "https://uts-ws.nlm.nih.gov/rest/content/2015AA/AUI/A3101021/attributes",
-            "parents": "NONE",
-            "children": "NONE",
-            "relations": "NONE",
-            "definitions": "NONE",
-            "name": "Benign recurrent vertigo",
-            "language": "ENG"
-        },
-        {
-            "classType": "Atom",
-            "ui": "A3808204",
-            "suppressible": "false",
-            "obsolete": "false",
-            "rootSource": "SNOMEDCT_US",
-            "termType": "FN",
-            "code": "https://uts-ws.nlm.nih.gov/rest/content/2015AA/source/SNOMEDCT_US/232285008",
-            "concept": "https://uts-ws.nlm.nih.gov/rest/content/2015AA/CUI/C0155502",
-            "sourceConcept": "https://uts-ws.nlm.nih.gov/rest/content/2015AA/source/SNOMEDCT_US/232285008",
-            "sourceDescriptor": "NONE",
-            "attributes": "https://uts-ws.nlm.nih.gov/rest/content/2015AA/AUI/A3808204/attributes",
-            "parents": "NONE",
-            "children": "NONE",
-            "relations": "NONE",
-            "definitions": "NONE",
-            "name": "Benign recurrent vertigo (disorder)",
-            "language": "ENG"
-        }
-    ]
+	"pageSize" : 25,
+	"pageNumber" : 1,
+	"pageCount" : 1,
+	"result" : [{
+			"classType" : "Atom",
+			"ui" : "A8345234",
+			"suppressible" : "false",
+			"obsolete" : "false",
+			"rootSource" : "ICD9CM",
+			"termType" : "PT",
+			"code" : "https://uts-ws.nlm.nih.gov/rest/content/2016AA/source/ICD9CM/386.11",
+			"concept" : "https://uts-ws.nlm.nih.gov/rest/content/2016AA/CUI/C0155502",
+			"sourceConcept" : "NONE",
+			"sourceDescriptor" : "NONE",
+			"attributes" : "NONE",
+			"parents" : "NONE",
+			"ancestors" : null,
+			"children" : "NONE",
+			"descendants" : null,
+			"relations" : "https://uts-ws.nlm.nih.gov/rest/content/2016AA/AUI/A8345234/relations",
+			"definitions" : "NONE",
+			"name" : "Benign paroxysmal positional vertigo",
+			"language" : "ENG",
+			"contentViewMemberships" : [{
+					"memberUri" : "https://uts-ws.nlm.nih.gov/rest/content-views/2016AA/CUI/C1700357/member/A8345234",
+					"uri" : "https://uts-ws.nlm.nih.gov/rest/content-views/2016AA/CUI/C1700357",
+					"name" : "MetaMap NLP View"
+				}
+			]
+		}, {
+			"classType" : "Atom",
+			"ui" : "A2892933",
+			"suppressible" : "false",
+			"obsolete" : "false",
+			"rootSource" : "SNOMEDCT_US",
+			"termType" : "PT",
+			"code" : "https://uts-ws.nlm.nih.gov/rest/content/2016AA/source/SNOMEDCT_US/111541001",
+			"concept" : "https://uts-ws.nlm.nih.gov/rest/content/2016AA/CUI/C0155502",
+			"sourceConcept" : "https://uts-ws.nlm.nih.gov/rest/content/2016AA/source/SNOMEDCT_US/111541001",
+			"sourceDescriptor" : "NONE",
+			"attributes" : "https://uts-ws.nlm.nih.gov/rest/content/2016AA/AUI/A2892933/attributes",
+			"parents" : "NONE",
+			"ancestors" : null,
+			"children" : "NONE",
+			"descendants" : null,
+			"relations" : "NONE",
+			"definitions" : "NONE",
+			"name" : "Benign paroxysmal positional vertigo",
+			"language" : "ENG",
+			"contentViewMemberships" : [{
+					"memberUri" : "https://uts-ws.nlm.nih.gov/rest/content-views/2016AA/CUI/C1700357/member/A2892933",
+					"uri" : "https://uts-ws.nlm.nih.gov/rest/content-views/2016AA/CUI/C1700357",
+					"name" : "MetaMap NLP View"
+				}
+			]
+		}, {
+			"classType" : "Atom",
+			"ui" : "A3101021",
+			"suppressible" : "false",
+			"obsolete" : "false",
+			"rootSource" : "SNOMEDCT_US",
+			"termType" : "PT",
+			"code" : "https://uts-ws.nlm.nih.gov/rest/content/2016AA/source/SNOMEDCT_US/232285008",
+			"concept" : "https://uts-ws.nlm.nih.gov/rest/content/2016AA/CUI/C0155502",
+			"sourceConcept" : "https://uts-ws.nlm.nih.gov/rest/content/2016AA/source/SNOMEDCT_US/232285008",
+			"sourceDescriptor" : "NONE",
+			"attributes" : "https://uts-ws.nlm.nih.gov/rest/content/2016AA/AUI/A3101021/attributes",
+			"parents" : "NONE",
+			"ancestors" : null,
+			"children" : "NONE",
+			"descendants" : null,
+			"relations" : "NONE",
+			"definitions" : "NONE",
+			"name" : "Benign recurrent vertigo",
+			"language" : "ENG",
+			"contentViewMemberships" : [{
+					"memberUri" : "https://uts-ws.nlm.nih.gov/rest/content-views/2016AA/CUI/C1700357/member/A3101021",
+					"uri" : "https://uts-ws.nlm.nih.gov/rest/content-views/2016AA/CUI/C1700357",
+					"name" : "MetaMap NLP View"
+				}
+			]
+		}
+	]
 }
 ~~~~
 
