@@ -1,6 +1,6 @@
 title=Retrieving Source-Asserted Ancestors and Descendants
 date=2015-08-28
-updated=2016-03-07
+updated=2016-06-28
 type=page
 status=published
 category=Retrieving Source-Asserted Data
@@ -41,95 +41,109 @@ pageSize | N | Whole number that specifies the number of results to include per 
 
 ### Sample Output
 
-Sample output for /content/current/source/SNOMEDCT_US/9468002/descendants?ticket=ST...
+Sample output for https://uts-ws.nlm.nih.gov/rest/content/current/source/SNOMEDCT_US/9468002/descendants?ticket=ST...
 
 ~~~~.json
 {
-    "pageSize": 25,
-    "pageNumber": 1,
-    "pageCount": 1,
-    "result": [
-        {
-            "classType": "SourceAtomCluster",
-            "ui": "10934241000119100",
-            "suppressible": false,
-            "obsolete": false,
-            "rootSource": "SNOMEDCT_US",
-            "atomCount": 2,
-            "cVMemberCount": 0,
-            "attributes": "https://uts-ws.nlm.nih.gov/rest/content/2015AB/source/SNOMEDCT_US/10934241000119100/attributes",
-            "atoms": "https://uts-ws.nlm.nih.gov/rest/content/2015AB/source/SNOMEDCT_US/10934241000119100/atoms",
-            "descendants": "NONE",
-            "ancestors": "https://uts-ws.nlm.nih.gov/rest/content/2015AB/source/SNOMEDCT_US/10934241000119100/ancestors",
-            "parents": "https://uts-ws.nlm.nih.gov/rest/content/2015AB/source/SNOMEDCT_US/10934241000119100/parents",
-            "children": "NONE",
-            "relations": "https://uts-ws.nlm.nih.gov/rest/content/2015AB/source/SNOMEDCT_US/10934241000119100/relations",
-            "definitions": "NONE",
-            "concepts": "https://uts-ws.nlm.nih.gov/rest/search/2015AB?string=10934241000119100&sabs=SNOMEDCT_US&searchType=exact&inputType=sourceUi",
-            "defaultPreferredAtom": "https://uts-ws.nlm.nih.gov/rest/content/2015AB/source/SNOMEDCT_US/10934241000119100/atoms/preferred",
-            "name": "Closed fracture of pisiform bone of left wrist"
-        },
-        {
-            "classType": "SourceAtomCluster",
-            "ui": "10934361000119105",
-            "suppressible": false,
-            "obsolete": false,
-            "rootSource": "SNOMEDCT_US",
-            "atomCount": 3,
-            "cVMemberCount": 0,
-            "attributes": "https://uts-ws.nlm.nih.gov/rest/content/2015AB/source/SNOMEDCT_US/10934361000119105/attributes",
-            "atoms": "https://uts-ws.nlm.nih.gov/rest/content/2015AB/source/SNOMEDCT_US/10934361000119105/atoms",
-            "descendants": "NONE",
-            "ancestors": "https://uts-ws.nlm.nih.gov/rest/content/2015AB/source/SNOMEDCT_US/10934361000119105/ancestors",
-            "parents": "https://uts-ws.nlm.nih.gov/rest/content/2015AB/source/SNOMEDCT_US/10934361000119105/parents",
-            "children": "NONE",
-            "relations": "https://uts-ws.nlm.nih.gov/rest/content/2015AB/source/SNOMEDCT_US/10934361000119105/relations",
-            "definitions": "NONE",
-            "concepts": "https://uts-ws.nlm.nih.gov/rest/search/2015AB?string=10934361000119105&sabs=SNOMEDCT_US&searchType=exact&inputType=sourceUi",
-            "defaultPreferredAtom": "https://uts-ws.nlm.nih.gov/rest/content/2015AB/source/SNOMEDCT_US/10934361000119105/atoms/preferred",
-            "name": "Closed fracture of navicular bone of right wrist"
-        },
-        {
-            "classType": "SourceAtomCluster",
-            "ui": "10934401000119101",
-            "suppressible": false,
-            "obsolete": false,
-            "rootSource": "SNOMEDCT_US",
-            "atomCount": 3,
-            "cVMemberCount": 0,
-            "attributes": "https://uts-ws.nlm.nih.gov/rest/content/2015AB/source/SNOMEDCT_US/10934401000119101/attributes",
-            "atoms": "https://uts-ws.nlm.nih.gov/rest/content/2015AB/source/SNOMEDCT_US/10934401000119101/atoms",
-            "descendants": "NONE",
-            "ancestors": "https://uts-ws.nlm.nih.gov/rest/content/2015AB/source/SNOMEDCT_US/10934401000119101/ancestors",
-            "parents": "https://uts-ws.nlm.nih.gov/rest/content/2015AB/source/SNOMEDCT_US/10934401000119101/parents",
-            "children": "NONE",
-            "relations": "https://uts-ws.nlm.nih.gov/rest/content/2015AB/source/SNOMEDCT_US/10934401000119101/relations",
-            "definitions": "NONE",
-            "concepts": "https://uts-ws.nlm.nih.gov/rest/search/2015AB?string=10934401000119101&sabs=SNOMEDCT_US&searchType=exact&inputType=sourceUi",
-            "defaultPreferredAtom": "https://uts-ws.nlm.nih.gov/rest/content/2015AB/source/SNOMEDCT_US/10934401000119101/atoms/preferred",
-            "name": "Closed fracture of navicular bone of left wrist"
-        },
-        {
-            "classType": "SourceAtomCluster",
-            "ui": "208375001",
-            "suppressible": false,
-            "obsolete": false,
-            "rootSource": "SNOMEDCT_US",
-            "atomCount": 2,
-            "cVMemberCount": 0,
-            "attributes": "https://uts-ws.nlm.nih.gov/rest/content/2015AB/source/SNOMEDCT_US/208375001/attributes",
-            "atoms": "https://uts-ws.nlm.nih.gov/rest/content/2015AB/source/SNOMEDCT_US/208375001/atoms",
-            "descendants": "NONE",
-            "ancestors": "https://uts-ws.nlm.nih.gov/rest/content/2015AB/source/SNOMEDCT_US/208375001/ancestors",
-            "parents": "https://uts-ws.nlm.nih.gov/rest/content/2015AB/source/SNOMEDCT_US/208375001/parents",
-            "children": "NONE",
-            "relations": "https://uts-ws.nlm.nih.gov/rest/content/2015AB/source/SNOMEDCT_US/208375001/relations",
-            "definitions": "NONE",
-            "concepts": "https://uts-ws.nlm.nih.gov/rest/search/2015AB?string=208375001&sabs=SNOMEDCT_US&searchType=exact&inputType=sourceUi",
-            "defaultPreferredAtom": "https://uts-ws.nlm.nih.gov/rest/content/2015AB/source/SNOMEDCT_US/208375001/atoms/preferred",
-            "name": "Closed fracture carpal bones, multiple"
-        }
-    ]
+	"pageSize" : 25,
+	"pageNumber" : 1,
+	"pageCount" : 2,
+	"result" : [{
+			"classType" : "SourceAtomCluster",
+			"ui" : "10934241000119100",
+			"suppressible" : false,
+			"obsolete" : false,
+			"rootSource" : "SNOMEDCT_US",
+			"atomCount" : 2,
+			"cVMemberCount" : 0,
+			"attributes" : "https://uts-ws.nlm.nih.gov/rest/content/2016AA/source/SNOMEDCT_US/10934241000119100/attributes",
+			"atoms" : "https://uts-ws.nlm.nih.gov/rest/content/2016AA/source/SNOMEDCT_US/10934241000119100/atoms",
+			"descendants" : "NONE",
+			"ancestors" : "https://uts-ws.nlm.nih.gov/rest/content/2016AA/source/SNOMEDCT_US/10934241000119100/ancestors",
+			"parents" : "https://uts-ws.nlm.nih.gov/rest/content/2016AA/source/SNOMEDCT_US/10934241000119100/parents",
+			"children" : "NONE",
+			"relations" : "https://uts-ws.nlm.nih.gov/rest/content/2016AA/source/SNOMEDCT_US/10934241000119100/relations",
+			"definitions" : "NONE",
+			"concepts" : "https://uts-ws.nlm.nih.gov/rest/search/2016AA?string=10934241000119100&sabs=SNOMEDCT_US&searchType=exact&inputType=sourceUi",
+			"defaultPreferredAtom" : "https://uts-ws.nlm.nih.gov/rest/content/2016AA/source/SNOMEDCT_US/10934241000119100/atoms/preferred",
+			"subsetMemberships" : [{
+					"memberUri" : "https://uts-ws.nlm.nih.gov/rest/subsets/2016AA/source/SNOMEDCT_US/6011000124106/member/10934241000119100",
+					"name" : "ICD-10-CM complex map reference set",
+					"uri" : "https://uts-ws.nlm.nih.gov/rest/subsets/2016AA/source/SNOMEDCT_US/6011000124106"
+				}
+			],
+			"contentViewMemberships" : [{
+					"memberUri" : "https://uts-ws.nlm.nih.gov/rest/content-views/2016AA/CUI/C3812142/member/10934241000119100",
+					"name" : "SNOMEDCT US Extension Subset",
+					"uri" : "https://uts-ws.nlm.nih.gov/rest/content-views/2016AA/CUI/C3812142"
+				}
+			],
+			"name" : "Closed fracture of pisiform bone of left wrist"
+		}, {
+			"classType" : "SourceAtomCluster",
+			"ui" : "10934281000119105",
+			"suppressible" : false,
+			"obsolete" : false,
+			"rootSource" : "SNOMEDCT_US",
+			"atomCount" : 3,
+			"cVMemberCount" : 0,
+			"attributes" : "https://uts-ws.nlm.nih.gov/rest/content/2016AA/source/SNOMEDCT_US/10934281000119105/attributes",
+			"atoms" : "https://uts-ws.nlm.nih.gov/rest/content/2016AA/source/SNOMEDCT_US/10934281000119105/atoms",
+			"descendants" : "NONE",
+			"ancestors" : "https://uts-ws.nlm.nih.gov/rest/content/2016AA/source/SNOMEDCT_US/10934281000119105/ancestors",
+			"parents" : "https://uts-ws.nlm.nih.gov/rest/content/2016AA/source/SNOMEDCT_US/10934281000119105/parents",
+			"children" : "NONE",
+			"relations" : "https://uts-ws.nlm.nih.gov/rest/content/2016AA/source/SNOMEDCT_US/10934281000119105/relations",
+			"definitions" : "NONE",
+			"concepts" : "https://uts-ws.nlm.nih.gov/rest/search/2016AA?string=10934281000119105&sabs=SNOMEDCT_US&searchType=exact&inputType=sourceUi",
+			"defaultPreferredAtom" : "https://uts-ws.nlm.nih.gov/rest/content/2016AA/source/SNOMEDCT_US/10934281000119105/atoms/preferred",
+			"subsetMemberships" : [{
+					"memberUri" : "https://uts-ws.nlm.nih.gov/rest/subsets/2016AA/source/SNOMEDCT_US/6011000124106/member/10934281000119105",
+					"name" : "ICD-10-CM complex map reference set",
+					"uri" : "https://uts-ws.nlm.nih.gov/rest/subsets/2016AA/source/SNOMEDCT_US/6011000124106"
+				}
+			],
+			"contentViewMemberships" : [{
+					"memberUri" : "https://uts-ws.nlm.nih.gov/rest/content-views/2016AA/CUI/C3812142/member/10934281000119105",
+					"name" : "SNOMEDCT US Extension Subset",
+					"uri" : "https://uts-ws.nlm.nih.gov/rest/content-views/2016AA/CUI/C3812142"
+				}
+			],
+			"name" : "Closed fracture of capitate bone of right wrist"
+		}, {
+			"classType" : "SourceAtomCluster",
+			"ui" : "10934321000119100",
+			"suppressible" : false,
+			"obsolete" : false,
+			"rootSource" : "SNOMEDCT_US",
+			"atomCount" : 3,
+			"cVMemberCount" : 0,
+			"attributes" : "https://uts-ws.nlm.nih.gov/rest/content/2016AA/source/SNOMEDCT_US/10934321000119100/attributes",
+			"atoms" : "https://uts-ws.nlm.nih.gov/rest/content/2016AA/source/SNOMEDCT_US/10934321000119100/atoms",
+			"descendants" : "NONE",
+			"ancestors" : "https://uts-ws.nlm.nih.gov/rest/content/2016AA/source/SNOMEDCT_US/10934321000119100/ancestors",
+			"parents" : "https://uts-ws.nlm.nih.gov/rest/content/2016AA/source/SNOMEDCT_US/10934321000119100/parents",
+			"children" : "NONE",
+			"relations" : "https://uts-ws.nlm.nih.gov/rest/content/2016AA/source/SNOMEDCT_US/10934321000119100/relations",
+			"definitions" : "NONE",
+			"concepts" : "https://uts-ws.nlm.nih.gov/rest/search/2016AA?string=10934321000119100&sabs=SNOMEDCT_US&searchType=exact&inputType=sourceUi",
+			"defaultPreferredAtom" : "https://uts-ws.nlm.nih.gov/rest/content/2016AA/source/SNOMEDCT_US/10934321000119100/atoms/preferred",
+			"subsetMemberships" : [{
+					"memberUri" : "https://uts-ws.nlm.nih.gov/rest/subsets/2016AA/source/SNOMEDCT_US/6011000124106/member/10934321000119100",
+					"name" : "ICD-10-CM complex map reference set",
+					"uri" : "https://uts-ws.nlm.nih.gov/rest/subsets/2016AA/source/SNOMEDCT_US/6011000124106"
+				}
+			],
+			"contentViewMemberships" : [{
+					"memberUri" : "https://uts-ws.nlm.nih.gov/rest/content-views/2016AA/CUI/C3812142/member/10934321000119100",
+					"name" : "SNOMEDCT US Extension Subset",
+					"uri" : "https://uts-ws.nlm.nih.gov/rest/content-views/2016AA/CUI/C3812142"
+				}
+			],
+			"name" : "Closed fracture of capitate bone of left wrist"
+		}, 
+...
+	]
 }
 ~~~~
 

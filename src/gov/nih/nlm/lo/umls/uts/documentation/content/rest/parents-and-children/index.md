@@ -1,6 +1,6 @@
 title=Retrieving Source-Asserted Parents and Children
 date=2015-07-06
-updated=2016-02-09
+updated=2016-06-28
 type=page
 status=published
 category=Retrieving Source-Asserted Data
@@ -41,75 +41,99 @@ pageSize | N | Whole number that specifies the number of results to include per 
 
 ### Sample Output
 
-Sample output for /content/current/source/SNOMEDCT_US/9468002/parents?ticket=ST...
+Sample output for https://uts-ws.nlm.nih.gov/rest/content/current/source/SNOMEDCT_US/9468002/parents?ticket=ST...
 
 ~~~~json
 {
-    "pageSize": 25,
-    "pageNumber": 1,
-    "pageCount": 1,
-    "result": [
-        {
-            "classType": "SourceAtomCluster",
-            "ui": "20511007",
-            "suppressible": false,
-            "obsolete": false,
-            "rootSource": "SNOMEDCT_US",
-            "atomCount": 6,
-            "cVMemberCount": 0,
-            "attributes": "https://uts-ws.nlm.nih.gov/rest/content/2015AB/source/SNOMEDCT_US/20511007/attributes",
-            "atoms": "https://uts-ws.nlm.nih.gov/rest/content/2015AB/source/SNOMEDCT_US/20511007/atoms",
-            "descendants": "https://uts-ws.nlm.nih.gov/rest/content/2015AB/source/SNOMEDCT_US/20511007/descendants",
-            "ancestors": "https://uts-ws.nlm.nih.gov/rest/content/2015AB/source/SNOMEDCT_US/20511007/ancestors",
-            "parents": "https://uts-ws.nlm.nih.gov/rest/content/2015AB/source/SNOMEDCT_US/20511007/parents",
-            "children": "https://uts-ws.nlm.nih.gov/rest/content/2015AB/source/SNOMEDCT_US/20511007/children",
-            "relations": "https://uts-ws.nlm.nih.gov/rest/content/2015AB/source/SNOMEDCT_US/20511007/relations",
-            "definitions": "NONE",
-            "concepts": "https://uts-ws.nlm.nih.gov/rest/search/2015AB?string=20511007&sabs=SNOMEDCT_US&searchType=exact&inputType=sourceUi",
-            "defaultPreferredAtom": "https://uts-ws.nlm.nih.gov/rest/content/2015AB/source/SNOMEDCT_US/20511007/atoms/preferred",
-            "name": "Fracture of hand"
-        },
-        {
-            "classType": "SourceAtomCluster",
-            "ui": "36991002",
-            "suppressible": false,
-            "obsolete": false,
-            "rootSource": "SNOMEDCT_US",
-            "atomCount": 5,
-            "cVMemberCount": 0,
-            "attributes": "https://uts-ws.nlm.nih.gov/rest/content/2015AB/source/SNOMEDCT_US/36991002/attributes",
-            "atoms": "https://uts-ws.nlm.nih.gov/rest/content/2015AB/source/SNOMEDCT_US/36991002/atoms",
-            "descendants": "https://uts-ws.nlm.nih.gov/rest/content/2015AB/source/SNOMEDCT_US/36991002/descendants",
-            "ancestors": "https://uts-ws.nlm.nih.gov/rest/content/2015AB/source/SNOMEDCT_US/36991002/ancestors",
-            "parents": "https://uts-ws.nlm.nih.gov/rest/content/2015AB/source/SNOMEDCT_US/36991002/parents",
-            "children": "https://uts-ws.nlm.nih.gov/rest/content/2015AB/source/SNOMEDCT_US/36991002/children",
-            "relations": "https://uts-ws.nlm.nih.gov/rest/content/2015AB/source/SNOMEDCT_US/36991002/relations",
-            "definitions": "NONE",
-            "concepts": "https://uts-ws.nlm.nih.gov/rest/search/2015AB?string=36991002&sabs=SNOMEDCT_US&searchType=exact&inputType=sourceUi",
-            "defaultPreferredAtom": "https://uts-ws.nlm.nih.gov/rest/content/2015AB/source/SNOMEDCT_US/36991002/atoms/preferred",
-            "name": "Closed fracture of upper limb"
-        },
-        {
-            "classType": "SourceAtomCluster",
-            "ui": "82065001",
-            "suppressible": false,
-            "obsolete": false,
-            "rootSource": "SNOMEDCT_US",
-            "atomCount": 7,
-            "cVMemberCount": 0,
-            "attributes": "https://uts-ws.nlm.nih.gov/rest/content/2015AB/source/SNOMEDCT_US/82065001/attributes",
-            "atoms": "https://uts-ws.nlm.nih.gov/rest/content/2015AB/source/SNOMEDCT_US/82065001/atoms",
-            "descendants": "https://uts-ws.nlm.nih.gov/rest/content/2015AB/source/SNOMEDCT_US/82065001/descendants",
-            "ancestors": "https://uts-ws.nlm.nih.gov/rest/content/2015AB/source/SNOMEDCT_US/82065001/ancestors",
-            "parents": "https://uts-ws.nlm.nih.gov/rest/content/2015AB/source/SNOMEDCT_US/82065001/parents",
-            "children": "https://uts-ws.nlm.nih.gov/rest/content/2015AB/source/SNOMEDCT_US/82065001/children",
-            "relations": "https://uts-ws.nlm.nih.gov/rest/content/2015AB/source/SNOMEDCT_US/82065001/relations",
-            "definitions": "NONE",
-            "concepts": "https://uts-ws.nlm.nih.gov/rest/search/2015AB?string=82065001&sabs=SNOMEDCT_US&searchType=exact&inputType=sourceUi",
-            "defaultPreferredAtom": "https://uts-ws.nlm.nih.gov/rest/content/2015AB/source/SNOMEDCT_US/82065001/atoms/preferred",
-            "name": "Fracture of carpal bone"
-        }
-    ]
+	"pageSize" : 25,
+	"pageNumber" : 1,
+	"pageCount" : 1,
+	"result" : [{
+			"classType" : "SourceAtomCluster",
+			"ui" : "36991002",
+			"suppressible" : false,
+			"obsolete" : false,
+			"rootSource" : "SNOMEDCT_US",
+			"atomCount" : 5,
+			"cVMemberCount" : 0,
+			"attributes" : "https://uts-ws.nlm.nih.gov/rest/content/2016AA/source/SNOMEDCT_US/36991002/attributes",
+			"atoms" : "https://uts-ws.nlm.nih.gov/rest/content/2016AA/source/SNOMEDCT_US/36991002/atoms",
+			"descendants" : "https://uts-ws.nlm.nih.gov/rest/content/2016AA/source/SNOMEDCT_US/36991002/descendants",
+			"ancestors" : "https://uts-ws.nlm.nih.gov/rest/content/2016AA/source/SNOMEDCT_US/36991002/ancestors",
+			"parents" : "https://uts-ws.nlm.nih.gov/rest/content/2016AA/source/SNOMEDCT_US/36991002/parents",
+			"children" : "https://uts-ws.nlm.nih.gov/rest/content/2016AA/source/SNOMEDCT_US/36991002/children",
+			"relations" : "https://uts-ws.nlm.nih.gov/rest/content/2016AA/source/SNOMEDCT_US/36991002/relations",
+			"definitions" : "NONE",
+			"concepts" : "https://uts-ws.nlm.nih.gov/rest/search/2016AA?string=36991002&sabs=SNOMEDCT_US&searchType=exact&inputType=sourceUi",
+			"defaultPreferredAtom" : "https://uts-ws.nlm.nih.gov/rest/content/2016AA/source/SNOMEDCT_US/36991002/atoms/preferred",
+			"subsetMemberships" : [{
+					"memberUri" : "https://uts-ws.nlm.nih.gov/rest/subsets/2016AA/source/SNOMEDCT_US/447563008/member/36991002",
+					"name" : "ICD-9-CM equivalence complex map reference set",
+					"uri" : "https://uts-ws.nlm.nih.gov/rest/subsets/2016AA/source/SNOMEDCT_US/447563008"
+				}, {
+					"memberUri" : "https://uts-ws.nlm.nih.gov/rest/subsets/2016AA/source/SNOMEDCT_US/900000000000497000/member/36991002",
+					"name" : "CTV3 simple map",
+					"uri" : "https://uts-ws.nlm.nih.gov/rest/subsets/2016AA/source/SNOMEDCT_US/900000000000497000"
+				}, {
+					"memberUri" : "https://uts-ws.nlm.nih.gov/rest/subsets/2016AA/source/SNOMEDCT_US/900000000000498005/member/36991002",
+					"name" : "SNOMED RT ID simple map",
+					"uri" : "https://uts-ws.nlm.nih.gov/rest/subsets/2016AA/source/SNOMEDCT_US/900000000000498005"
+				}, {
+					"memberUri" : "https://uts-ws.nlm.nih.gov/rest/subsets/2016AA/source/SNOMEDCT_US/447562003/member/36991002",
+					"name" : "ICD-10 complex map reference set",
+					"uri" : "https://uts-ws.nlm.nih.gov/rest/subsets/2016AA/source/SNOMEDCT_US/447562003"
+				}, {
+					"memberUri" : "https://uts-ws.nlm.nih.gov/rest/subsets/2016AA/source/SNOMEDCT_US/6011000124106/member/36991002",
+					"name" : "ICD-10-CM complex map reference set",
+					"uri" : "https://uts-ws.nlm.nih.gov/rest/subsets/2016AA/source/SNOMEDCT_US/6011000124106"
+				}
+			],
+			"contentViewMemberships" : [],
+			"name" : "Closed fracture of upper limb"
+		}, {
+			"classType" : "SourceAtomCluster",
+			"ui" : "82065001",
+			"suppressible" : false,
+			"obsolete" : false,
+			"rootSource" : "SNOMEDCT_US",
+			"atomCount" : 7,
+			"cVMemberCount" : 0,
+			"attributes" : "https://uts-ws.nlm.nih.gov/rest/content/2016AA/source/SNOMEDCT_US/82065001/attributes",
+			"atoms" : "https://uts-ws.nlm.nih.gov/rest/content/2016AA/source/SNOMEDCT_US/82065001/atoms",
+			"descendants" : "https://uts-ws.nlm.nih.gov/rest/content/2016AA/source/SNOMEDCT_US/82065001/descendants",
+			"ancestors" : "https://uts-ws.nlm.nih.gov/rest/content/2016AA/source/SNOMEDCT_US/82065001/ancestors",
+			"parents" : "https://uts-ws.nlm.nih.gov/rest/content/2016AA/source/SNOMEDCT_US/82065001/parents",
+			"children" : "https://uts-ws.nlm.nih.gov/rest/content/2016AA/source/SNOMEDCT_US/82065001/children",
+			"relations" : "https://uts-ws.nlm.nih.gov/rest/content/2016AA/source/SNOMEDCT_US/82065001/relations",
+			"definitions" : "NONE",
+			"concepts" : "https://uts-ws.nlm.nih.gov/rest/search/2016AA?string=82065001&sabs=SNOMEDCT_US&searchType=exact&inputType=sourceUi",
+			"defaultPreferredAtom" : "https://uts-ws.nlm.nih.gov/rest/content/2016AA/source/SNOMEDCT_US/82065001/atoms/preferred",
+			"subsetMemberships" : [{
+					"memberUri" : "https://uts-ws.nlm.nih.gov/rest/subsets/2016AA/source/SNOMEDCT_US/900000000000498005/member/82065001",
+					"name" : "SNOMED RT ID simple map",
+					"uri" : "https://uts-ws.nlm.nih.gov/rest/subsets/2016AA/source/SNOMEDCT_US/900000000000498005"
+				}, {
+					"memberUri" : "https://uts-ws.nlm.nih.gov/rest/subsets/2016AA/source/SNOMEDCT_US/900000000000497000/member/82065001",
+					"name" : "CTV3 simple map",
+					"uri" : "https://uts-ws.nlm.nih.gov/rest/subsets/2016AA/source/SNOMEDCT_US/900000000000497000"
+				}, {
+					"memberUri" : "https://uts-ws.nlm.nih.gov/rest/subsets/2016AA/source/SNOMEDCT_US/447563008/member/82065001",
+					"name" : "ICD-9-CM equivalence complex map reference set",
+					"uri" : "https://uts-ws.nlm.nih.gov/rest/subsets/2016AA/source/SNOMEDCT_US/447563008"
+				}, {
+					"memberUri" : "https://uts-ws.nlm.nih.gov/rest/subsets/2016AA/source/SNOMEDCT_US/447562003/member/82065001",
+					"name" : "ICD-10 complex map reference set",
+					"uri" : "https://uts-ws.nlm.nih.gov/rest/subsets/2016AA/source/SNOMEDCT_US/447562003"
+				}, {
+					"memberUri" : "https://uts-ws.nlm.nih.gov/rest/subsets/2016AA/source/SNOMEDCT_US/6011000124106/member/82065001",
+					"name" : "ICD-10-CM complex map reference set",
+					"uri" : "https://uts-ws.nlm.nih.gov/rest/subsets/2016AA/source/SNOMEDCT_US/6011000124106"
+				}
+			],
+			"contentViewMemberships" : [],
+			"name" : "Fracture of carpal bone"
+		}
+	]
 }
 ~~~~
 

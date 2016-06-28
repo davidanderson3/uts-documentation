@@ -1,23 +1,29 @@
 title=Release Notes and Roadmap
 date=2015-11-09
-updated=2016-05-18
+updated=2016-06-28
 type=page
 status=published
 navorder=1
 ~~~~~~
 
-Released: May 9, 2016
+Released: June 28, 2016
 
 #### Features:
-* **The API has been updated with data from the 2016AA UMLS release. Calls including 'current' in the URI will query the 2016AA data**.
+* **New endpoint created for using UMLS CUIs for [Crosswalking Source-Asserted Identifiers](/rest/source-asserted-identifiers/crosswalk/index.html). This endpoint simplifies the multi-step crosswalk process previously outlined in the REST API Cookbook.**
 
-* **New endpoint created for retrieving [Content View information](/rest/content-views/index.html)**.
+* **New endpoint created for [individual content view members](/rest/content-views/index.html#uris).**
 
-* **The API key method gives users an additional [authentication](authentication.html) option when requesting a Ticket-Granting Ticket (TGT).  Rather than username/password, users can pass their API key (available in the UTS 'My Profile' area) as a parameter to this method to obtain a TGT**.
+* **New endpoint created for [individual subset members](/rest/source-asserted-identifiers/subsets/index.html#uris).**
+
 
 #### Change:
-* **The output for source-asserted relation calls has been modified to include relatedId and relatedIdName. See the source-asserted relation [sample output](/rest/source-asserted-identifiers/relations/index.html#sample-output) for an example**.
+* **The URI pattern for the [Source-Asserted Subset endpoint](/rest/source-asserted-identifiers/subsets/index.html#uris) has been simplified from '/content/current/subsets' to '/subsets/current'.**
 
+* **Subset objects now have attributes embedded and include a link to the endpoint for members of the subset. See the [sample output](/rest/source-asserted-identifiers/subsets/index.html#sample-output) for an example.**
+
+* **SourceConceptSubsetMember objects, which are the output of subset members calls, now have attributes embedded, and the subset member attributes endpoint has been removed. See the [sample output](/rest/source-asserted-identifiers/subsets/index.html#sample-output) for an example.**
+
+* **SourceAtomCluster objects and Atom objects now have subset and content view membership information embedded.**
   
 #### Known issues:
 
@@ -28,7 +34,4 @@ See our github sample code area for a list of [known issues](https://github.com/
 The following new items are planned for upcoming versions of the API.    
 
 ##### Features:
-
-* **Add a crosswalk endpoint that allows users to find codes from one vocabulary that live in the same CUI as codes from another vocabulary.**
-
 * **Add history mechanism so users can retrieve CUIs that are no longer in the latest UMLS release**

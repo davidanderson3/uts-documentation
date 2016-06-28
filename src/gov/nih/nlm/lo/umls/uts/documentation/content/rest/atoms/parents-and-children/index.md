@@ -1,6 +1,6 @@
 title=Retrieving UMLS Atom Parents and Children
 date=2016-02-25
-updated=2016-02-25
+updated=2016-06-28
 type=page
 status=published
 category=Retrieving UMLS Data
@@ -40,36 +40,36 @@ pageSize | N | Whole number that specifies the number of results to include per 
 
 ### Sample Output
 
-Sample output for /content/current/AUI/A10134087/parents?ticket=ST...
+Sample output for https://uts-ws.nlm.nih.gov/rest/content/current/AUI/A10134087/parents?ticket=ST...
 
 ~~~~json
 {
-    "pageSize": 25,
-    "pageNumber": 1,
-    "pageCount": 1,
-    "result": [
-        {
-            "classType": "Atom",
-            "ui": "A19720766",
-            "suppressible": "false",
-            "obsolete": "false",
-            "rootSource": "HL7V3.0",
-            "termType": "CSY",
-            "code": "https://uts-ws.nlm.nih.gov/rest/content/2015AA/source/HL7V3.0/RouteOfAdministration",
-            "concept": "https://uts-ws.nlm.nih.gov/rest/content/2015AA/CUI/C0013153",
-            "sourceConcept": "https://uts-ws.nlm.nih.gov/rest/content/2015AA/source/HL7V3.0/2.16.840.1.113883.5.112",
-            "sourceDescriptor": "NONE",
-            "attributes": "https://uts-ws.nlm.nih.gov/rest/content/2015AA/AUI/A19720766/attributes",
-            "parents": "https://uts-ws.nlm.nih.gov/rest/content/2015AA/AUI/A19720766/parents",
-            "ancestors": "https://uts-ws.nlm.nih.gov/rest/content/2015AA/AUI/A19720766/ancestors",
-            "children": "https://uts-ws.nlm.nih.gov/rest/content/2015AA/AUI/A19720766/children",
-            "descendants": "https://uts-ws.nlm.nih.gov/rest/content/2015AA/AUI/A19720766/descendants",
-            "relations": "NONE",
-            "definitions": "https://uts-ws.nlm.nih.gov/rest/content/2015AA/AUI/A19720766/definitions",
-            "name": "RouteOfAdministration",
-            "language": "ENG"
-        }
-    ]
+	"pageSize" : 25,
+	"pageNumber" : 1,
+	"pageCount" : 1,
+	"result" : [{
+			"classType" : "Atom",
+			"ui" : "A19720766",
+			"suppressible" : "false",
+			"obsolete" : "false",
+			"rootSource" : "HL7V3.0",
+			"termType" : "CSY",
+			"code" : "https://uts-ws.nlm.nih.gov/rest/content/2016AA/source/HL7V3.0/RouteOfAdministration",
+			"concept" : "https://uts-ws.nlm.nih.gov/rest/content/2016AA/CUI/C0013153",
+			"sourceConcept" : "https://uts-ws.nlm.nih.gov/rest/content/2016AA/source/HL7V3.0/2.16.840.1.113883.5.112",
+			"sourceDescriptor" : "NONE",
+			"attributes" : "https://uts-ws.nlm.nih.gov/rest/content/2016AA/AUI/A19720766/attributes",
+			"parents" : "https://uts-ws.nlm.nih.gov/rest/content/2016AA/AUI/A19720766/parents",
+			"ancestors" : "https://uts-ws.nlm.nih.gov/rest/content/2016AA/AUI/A19720766/ancestors",
+			"children" : "https://uts-ws.nlm.nih.gov/rest/content/2016AA/AUI/A19720766/children",
+			"descendants" : "https://uts-ws.nlm.nih.gov/rest/content/2016AA/AUI/A19720766/descendants",
+			"relations" : "https://uts-ws.nlm.nih.gov/rest/content/2016AA/AUI/A19720766/relations",
+			"definitions" : "https://uts-ws.nlm.nih.gov/rest/content/2016AA/AUI/A19720766/definitions",
+			"name" : "RouteOfAdministration",
+			"language" : "ENG",
+			"contentViewMemberships" : []
+		}
+	]
 }
 ~~~~
 

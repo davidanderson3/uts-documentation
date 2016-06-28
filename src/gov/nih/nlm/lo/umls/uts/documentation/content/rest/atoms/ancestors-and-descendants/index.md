@@ -1,6 +1,6 @@
 title=Retrieving UMLS Atom Ancestors and Descendants
 date=2016-02-25
-updated=2016-02-25
+updated=2016-06-28
 type=page
 status=published
 category=Retrieving UMLS Data
@@ -40,58 +40,79 @@ pageSize | N | Whole number that specifies the number of results to include per 
 
 ### Sample Output
 
-Sample output for /content/current/AUI/A10134087/descendants?ticket=ST...
+Sample output for https://uts-ws.nlm.nih.gov/rest/content/current/AUI/A10134087/descendants?ticket=ST...
 
 ~~~~json
 {
-    "pageSize": 25,
-    "pageNumber": 1,
-    "pageCount": 15,
-    "result": [
-        {
-            "classType": "Atom",
-            "ui": "A10133773",
-            "suppressible": "false",
-            "obsolete": "false",
-            "rootSource": "HL7V3.0",
-            "termType": "PT",
-            "code": "https://uts-ws.nlm.nih.gov/rest/content/2015AA/source/HL7V3.0/_IntrabursalRoute",
-            "concept": "https://uts-ws.nlm.nih.gov/rest/content/2015AA/CUI/C1522205",
-            "sourceConcept": "https://uts-ws.nlm.nih.gov/rest/content/2015AA/source/HL7V3.0/21172",
-            "sourceDescriptor": "NONE",
-            "attributes": "https://uts-ws.nlm.nih.gov/rest/content/2015AA/AUI/A10133773/attributes",
-            "parents": "https://uts-ws.nlm.nih.gov/rest/content/2015AA/AUI/A10133773/parents",
-            "ancestors": "https://uts-ws.nlm.nih.gov/rest/content/2015AA/AUI/A10133773/ancestors",
-            "children": "https://uts-ws.nlm.nih.gov/rest/content/2015AA/AUI/A10133773/children",
-            "descendants": "https://uts-ws.nlm.nih.gov/rest/content/2015AA/AUI/A10133773/descendants",
-            "relations": "NONE",
-            "definitions": "https://uts-ws.nlm.nih.gov/rest/content/2015AA/AUI/A10133773/definitions",
-            "name": "IntrabursalRoute",
-            "language": "ENG"
-        },
-        {
-            "classType": "Atom",
-            "ui": "A8317632",
-            "suppressible": "false",
-            "obsolete": "false",
-            "rootSource": "HL7V3.0",
-            "termType": "PT",
-            "code": "https://uts-ws.nlm.nih.gov/rest/content/2015AA/source/HL7V3.0/IBURSINJ",
-            "concept": "https://uts-ws.nlm.nih.gov/rest/content/2015AA/CUI/C0848586",
-            "sourceConcept": "https://uts-ws.nlm.nih.gov/rest/content/2015AA/source/HL7V3.0/14643",
-            "sourceDescriptor": "NONE",
-            "attributes": "https://uts-ws.nlm.nih.gov/rest/content/2015AA/AUI/A8317632/attributes",
-            "parents": "https://uts-ws.nlm.nih.gov/rest/content/2015AA/AUI/A8317632/parents",
-            "ancestors": "https://uts-ws.nlm.nih.gov/rest/content/2015AA/AUI/A8317632/ancestors",
-            "children": "NONE",
-            "descendants": null,
-            "relations": "NONE",
-            "definitions": "https://uts-ws.nlm.nih.gov/rest/content/2015AA/AUI/A8317632/definitions",
-            "name": "Injection, intrabursal",
-            "language": "ENG"
-        },
+	"pageSize" : 25,
+	"pageNumber" : 1,
+	"pageCount" : 15,
+	"result" : [{
+			"classType" : "Atom",
+			"ui" : "A10133773",
+			"suppressible" : "false",
+			"obsolete" : "false",
+			"rootSource" : "HL7V3.0",
+			"termType" : "PT",
+			"code" : "https://uts-ws.nlm.nih.gov/rest/content/2016AA/source/HL7V3.0/_IntrabursalRoute",
+			"concept" : "https://uts-ws.nlm.nih.gov/rest/content/2016AA/CUI/C1522205",
+			"sourceConcept" : "https://uts-ws.nlm.nih.gov/rest/content/2016AA/source/HL7V3.0/21172",
+			"sourceDescriptor" : "NONE",
+			"attributes" : "https://uts-ws.nlm.nih.gov/rest/content/2016AA/AUI/A10133773/attributes",
+			"parents" : "https://uts-ws.nlm.nih.gov/rest/content/2016AA/AUI/A10133773/parents",
+			"ancestors" : "https://uts-ws.nlm.nih.gov/rest/content/2016AA/AUI/A10133773/ancestors",
+			"children" : "https://uts-ws.nlm.nih.gov/rest/content/2016AA/AUI/A10133773/children",
+			"descendants" : "https://uts-ws.nlm.nih.gov/rest/content/2016AA/AUI/A10133773/descendants",
+			"relations" : "https://uts-ws.nlm.nih.gov/rest/content/2016AA/AUI/A10133773/relations",
+			"definitions" : "https://uts-ws.nlm.nih.gov/rest/content/2016AA/AUI/A10133773/definitions",
+			"name" : "IntrabursalRoute",
+			"language" : "ENG",
+			"contentViewMemberships" : []
+		}, {
+			"classType" : "Atom",
+			"ui" : "A8317632",
+			"suppressible" : "false",
+			"obsolete" : "false",
+			"rootSource" : "HL7V3.0",
+			"termType" : "PT",
+			"code" : "https://uts-ws.nlm.nih.gov/rest/content/2016AA/source/HL7V3.0/IBURSINJ",
+			"concept" : "https://uts-ws.nlm.nih.gov/rest/content/2016AA/CUI/C0848586",
+			"sourceConcept" : "https://uts-ws.nlm.nih.gov/rest/content/2016AA/source/HL7V3.0/14643",
+			"sourceDescriptor" : "NONE",
+			"attributes" : "https://uts-ws.nlm.nih.gov/rest/content/2016AA/AUI/A8317632/attributes",
+			"parents" : "https://uts-ws.nlm.nih.gov/rest/content/2016AA/AUI/A8317632/parents",
+			"ancestors" : "https://uts-ws.nlm.nih.gov/rest/content/2016AA/AUI/A8317632/ancestors",
+			"children" : "NONE",
+			"descendants" : null,
+			"relations" : "https://uts-ws.nlm.nih.gov/rest/content/2016AA/AUI/A8317632/relations",
+			"definitions" : "https://uts-ws.nlm.nih.gov/rest/content/2016AA/AUI/A8317632/definitions",
+			"name" : "Injection, intrabursal",
+			"language" : "ENG",
+			"contentViewMemberships" : []
+		}, {
+			"classType" : "Atom",
+			"ui" : "A10133791",
+			"suppressible" : "false",
+			"obsolete" : "false",
+			"rootSource" : "HL7V3.0",
+			"termType" : "PT",
+			"code" : "https://uts-ws.nlm.nih.gov/rest/content/2016AA/source/HL7V3.0/_IntraepidermalRoute",
+			"concept" : "https://uts-ws.nlm.nih.gov/rest/content/2016AA/CUI/C1512941",
+			"sourceConcept" : "https://uts-ws.nlm.nih.gov/rest/content/2016AA/source/HL7V3.0/21190",
+			"sourceDescriptor" : "NONE",
+			"attributes" : "https://uts-ws.nlm.nih.gov/rest/content/2016AA/AUI/A10133791/attributes",
+			"parents" : "https://uts-ws.nlm.nih.gov/rest/content/2016AA/AUI/A10133791/parents",
+			"ancestors" : "https://uts-ws.nlm.nih.gov/rest/content/2016AA/AUI/A10133791/ancestors",
+			"children" : "https://uts-ws.nlm.nih.gov/rest/content/2016AA/AUI/A10133791/children",
+			"descendants" : "https://uts-ws.nlm.nih.gov/rest/content/2016AA/AUI/A10133791/descendants",
+			"relations" : "https://uts-ws.nlm.nih.gov/rest/content/2016AA/AUI/A10133791/relations",
+			"definitions" : "https://uts-ws.nlm.nih.gov/rest/content/2016AA/AUI/A10133791/definitions",
+			"name" : "IntraepidermalRoute",
+			"language" : "ENG",
+			"contentViewMemberships" : []
+		}, 
 ...
-    ]
+	]
 }
 ~~~~
 

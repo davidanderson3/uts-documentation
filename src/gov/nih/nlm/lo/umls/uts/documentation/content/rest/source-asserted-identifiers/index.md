@@ -1,6 +1,6 @@
 title=Retrieving Source-Asserted Information
 date=2015-07-01
-updated=2015-12-21
+updated=2016-06-28
 type=page
 status=published
 category=Retrieving Source-Asserted Data
@@ -45,32 +45,56 @@ ticket | Y | A single-use service ticket is required for each call to the API. S
 
 ### Sample Output
 
-Sample output for /content/current/source/SNOMEDCT_US/9468002?ticket=ST...
+Sample output for https://uts-ws.nlm.nih.gov/rest/content/current/source/SNOMEDCT_US/9468002?ticket=ST...
 
 ~~~~json
 {
-    "pageSize": 25,
-    "pageNumber": 1,
-    "pageCount": 1,
-    "result": {
-        "classType": "SourceAtomCluster",
-        "ui": "9468002",
-        "suppressible": false,
-        "obsolete": false,
-        "rootSource": "SNOMEDCT_US",
-        "atomCount": 6,
-        "cVMemberCount": 0,
-        "attributes": "https://uts-ws.nlm.nih.gov/rest/content/2015AB/source/SNOMEDCT_US/9468002/attributes",
-        "atoms": "https://uts-ws.nlm.nih.gov/rest/content/2015AB/source/SNOMEDCT_US/9468002/atoms",
-        "descendants": "https://uts-ws.nlm.nih.gov/rest/content/2015AB/source/SNOMEDCT_US/9468002/descendants",
-        "ancestors": "https://uts-ws.nlm.nih.gov/rest/content/2015AB/source/SNOMEDCT_US/9468002/ancestors",
-        "parents": "https://uts-ws.nlm.nih.gov/rest/content/2015AB/source/SNOMEDCT_US/9468002/parents",
-        "children": "https://uts-ws.nlm.nih.gov/rest/content/2015AB/source/SNOMEDCT_US/9468002/children",
-        "relations": "https://uts-ws.nlm.nih.gov/rest/content/2015AB/source/SNOMEDCT_US/9468002/relations",
-        "definitions": "NONE",
-        "concepts": "https://uts-ws.nlm.nih.gov/rest/search/2015AB?string=9468002&sabs=SNOMEDCT_US&searchType=exact&inputType=sourceUi",
-        "defaultPreferredAtom": "https://uts-ws.nlm.nih.gov/rest/content/2015AB/source/SNOMEDCT_US/9468002/atoms/preferred",
-        "name": "Closed fracture carpal bone"
-    }
+	"pageSize" : 25,
+	"pageNumber" : 1,
+	"pageCount" : 1,
+	"result" : {
+		"classType" : "SourceAtomCluster",
+		"ui" : "9468002",
+		"suppressible" : false,
+		"obsolete" : false,
+		"rootSource" : "SNOMEDCT_US",
+		"atomCount" : 8,
+		"cVMemberCount" : 0,
+		"attributes" : "https://uts-ws.nlm.nih.gov/rest/content/2016AA/source/SNOMEDCT_US/9468002/attributes",
+		"atoms" : "https://uts-ws.nlm.nih.gov/rest/content/2016AA/source/SNOMEDCT_US/9468002/atoms",
+		"descendants" : "https://uts-ws.nlm.nih.gov/rest/content/2016AA/source/SNOMEDCT_US/9468002/descendants",
+		"ancestors" : "https://uts-ws.nlm.nih.gov/rest/content/2016AA/source/SNOMEDCT_US/9468002/ancestors",
+		"parents" : "https://uts-ws.nlm.nih.gov/rest/content/2016AA/source/SNOMEDCT_US/9468002/parents",
+		"children" : "https://uts-ws.nlm.nih.gov/rest/content/2016AA/source/SNOMEDCT_US/9468002/children",
+		"relations" : "https://uts-ws.nlm.nih.gov/rest/content/2016AA/source/SNOMEDCT_US/9468002/relations",
+		"definitions" : "NONE",
+		"concepts" : "https://uts-ws.nlm.nih.gov/rest/search/2016AA?string=9468002&sabs=SNOMEDCT_US&searchType=exact&inputType=sourceUi",
+		"defaultPreferredAtom" : "https://uts-ws.nlm.nih.gov/rest/content/2016AA/source/SNOMEDCT_US/9468002/atoms/preferred",
+		"subsetMemberships" : [{
+				"memberUri" : "https://uts-ws.nlm.nih.gov/rest/subsets/2016AA/source/SNOMEDCT_US/900000000000498005/member/9468002",
+				"name" : "SNOMED RT ID simple map",
+				"uri" : "https://uts-ws.nlm.nih.gov/rest/subsets/2016AA/source/SNOMEDCT_US/900000000000498005"
+			}, {
+				"memberUri" : "https://uts-ws.nlm.nih.gov/rest/subsets/2016AA/source/SNOMEDCT_US/447563008/member/9468002",
+				"name" : "ICD-9-CM equivalence complex map reference set",
+				"uri" : "https://uts-ws.nlm.nih.gov/rest/subsets/2016AA/source/SNOMEDCT_US/447563008"
+			}, {
+				"memberUri" : "https://uts-ws.nlm.nih.gov/rest/subsets/2016AA/source/SNOMEDCT_US/900000000000497000/member/9468002",
+				"name" : "CTV3 simple map",
+				"uri" : "https://uts-ws.nlm.nih.gov/rest/subsets/2016AA/source/SNOMEDCT_US/900000000000497000"
+			}, {
+				"memberUri" : "https://uts-ws.nlm.nih.gov/rest/subsets/2016AA/source/SNOMEDCT_US/447562003/member/9468002",
+				"name" : "ICD-10 complex map reference set",
+				"uri" : "https://uts-ws.nlm.nih.gov/rest/subsets/2016AA/source/SNOMEDCT_US/447562003"
+			}
+		],
+		"contentViewMemberships" : [{
+				"memberUri" : "https://uts-ws.nlm.nih.gov/rest/content-views/2016AA/CUI/C2711988/member/9468002",
+				"name" : "CORE Problem List Subset of SNOMED CT",
+				"uri" : "https://uts-ws.nlm.nih.gov/rest/content-views/2016AA/CUI/C2711988"
+			}
+		],
+		"name" : "Closed fracture of carpal bone"
+	}
 }
 ~~~~
