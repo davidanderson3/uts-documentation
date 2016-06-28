@@ -32,6 +32,7 @@ Sample URI|Description|Returned JSON Object classType
 /subsets/current | Retrieves information about all subsets from the current release | Subset
 /subsets/current/source/SNOMEDCT_US/6011000124106 | Retrieves information for a SNOMED CT subset | Subset
 /subsets/current/source/SNOMEDCT_US/6011000124106/members | Retrieves members of a SNOMED CT subset | SourceConceptSubsetMember
+/subsets/current/source/SNOMEDCT_US/6011000124106/member/89361000119103 | Retrieves an individual member of a SNOMED CT subset | SourceConceptSubsetMember
 
 
 ### Query Parameters
@@ -164,5 +165,49 @@ Sample output for https://uts-ws.nlm.nih.gov/rest/subsets/current/source/SNOMEDC
 		}, 
 ...
 	]
+}
+~~~~
+
+Sample output for https://uts-ws.nlm.nih.gov/rest/subsets/current/source/SNOMEDCT_US/6011000124106/member/89361000119103?ticket=ST...
+
+~~~~json
+{
+	"pageSize" : 25,
+	"pageNumber" : 1,
+	"pageCount" : 1,
+	"result" : {
+		"classType" : "SourceConceptSubsetMember",
+		"name" : "Mild developmental articulation disorder",
+		"attributeCount" : 7,
+		"ui" : "AT199566985",
+		"sourceUi" : "89361000119103",
+		"rootSource" : "SNOMEDCT_US",
+		"sourceConcept" : "https://uts-ws.nlm.nih.gov/rest/content/2016AA/source/SNOMEDCT_US/89361000119103",
+		"obsolete" : false,
+		"subsetMemberAttributes" : [{
+				"classType" : "Attribute",
+				"ui" : "ATM37541478",
+				"sourceUi" : "0c9ff6e0-ca17-5d8e-930a-0bc839769e34",
+				"rootSource" : "SNOMEDCT_US",
+				"name" : "MAPGROUP",
+				"value" : "1"
+			}, {
+				"classType" : "Attribute",
+				"ui" : "ATM37541479",
+				"sourceUi" : "0c9ff6e0-ca17-5d8e-930a-0bc839769e34",
+				"rootSource" : "SNOMEDCT_US",
+				"name" : "MAPADVICE",
+				"value" : "ALWAYS F80.0"
+			}, {
+				"classType" : "Attribute",
+				"ui" : "ATM37541480",
+				"sourceUi" : "0c9ff6e0-ca17-5d8e-930a-0bc839769e34",
+				"rootSource" : "SNOMEDCT_US",
+				"name" : "MAPTARGET",
+				"value" : "F80.0"
+			}, 
+...
+		]
+	}
 }
 ~~~~

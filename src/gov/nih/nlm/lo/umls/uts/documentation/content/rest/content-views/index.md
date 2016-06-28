@@ -29,6 +29,7 @@ Sample URI|Description|Returned JSON Object classType
 /content-views/current/ | Retrieves information about all subsets from the current release | ContentView
 /content-views/current/CUI/C1700357 | Retrieves information for the MetaMap NLP View content view | ContentView
 /content-views/current/CUI/C1700357/members | Retrieves members of the MetaMap NLP View content view | AtomContentViewMember*
+/content-views/current/CUI/C1700357/member/A21290378 | Retrieves an individual member of the MetaMap NLP View content view | AtomContentViewMember
 
 *Calls for members of certain content views return output with a "SourceConceptContentViewMember" JSON Object classType*.
 
@@ -208,5 +209,22 @@ Sample output for https://uts-ws.nlm.nih.gov/rest/content-views/current/CUI/C170
 		}, 
 ...
 	]
+}
+~~~~
+
+Sample output for https://uts-ws.nlm.nih.gov/rest/content-views/current/CUI/C1700357/member/A21290378?ticket=ST...
+
+~~~~json
+{
+	"pageSize" : 25,
+	"pageNumber" : 1,
+	"pageCount" : 1,
+	"result" : {
+		"classType" : "AtomContentViewMember",
+		"atom" : "https://uts-ws.nlm.nih.gov/rest/content/2016AA/AUI/A21290378",
+		"name" : "Herbertia tigridioides",
+		"contentViewMemberAttributes" : [],
+		"ui" : "A21290378"
+	}
 }
 ~~~~
