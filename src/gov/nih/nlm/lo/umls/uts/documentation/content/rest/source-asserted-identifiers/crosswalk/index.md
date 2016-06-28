@@ -1,6 +1,6 @@
-title=Crosswalking from One Source to Another
-date=2016-06-24
-updated=2016-06-24
+title=Crosswalking Source-Asserted Identifiers Using CUIs
+date=2016-06-27
+updated=2016-06-27
 type=page
 status=published
 category=Retrieving Source-Asserted Data
