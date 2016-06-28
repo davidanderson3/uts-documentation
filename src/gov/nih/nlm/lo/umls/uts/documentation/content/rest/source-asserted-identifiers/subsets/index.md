@@ -1,6 +1,6 @@
 title=Retrieving Source-Asserted Subsets
 date=2015-09-30
-updated=2015-12-21
+updated=2016-06-28
 type=page
 status=published
 category=Retrieving Source-Asserted Data
@@ -29,11 +29,9 @@ You may use any valid UMLS release back to 2008AA in your URI if you would like 
 
 Sample URI|Description|Returned JSON Object classType
 --- | ---
-/content/current/subsets | Retrieves information about all subsets from the current release | Subset
-/content/2015AA/subsets/source/SNOMEDCT_US/6011000124106 | Retrieves information for a SNOMED CT subset | Subset
-/content/2015AA/subsets/source/SNOMEDCT_US/6011000124106/attributes | Retrieves attributes for a SNOMED CT subset | Attribute
-/content/2015AA/subsets/source/SNOMEDCT_US/6011000124106/members | Retrieves members of a SNOMED CT subset | SourceConceptSubsetMember
-/content/2015AA/subsets/source/SNOMEDCT_US/6011000124106/members/77147000/attributes | Retrieves attribute information for a specified member of a SNOMED CT subset | Attribute
+/subsets/current | Retrieves information about all subsets from the current release | Subset
+/subsets/current/source/SNOMEDCT_US/6011000124106 | Retrieves information for a SNOMED CT subset | Subset
+/subsets/current/source/SNOMEDCT_US/6011000124106/members | Retrieves members of a SNOMED CT subset | SourceConceptSubsetMember
 
 
 ### Query Parameters
@@ -47,159 +45,124 @@ language | N | 3-letter abbreviation for language | ENG, SPA, GER, etc | n/a | n
 
 ### Sample Output
 
-Sample output for /content/current/subsets?ticket=ST...
+Sample output for https://uts-ws.nlm.nih.gov/rest/subsets/current?ticket=ST...
 
 ~~~~json
 {
-    "pageSize": 25,
-    "pageNumber": 1,
-    "pageCount": 2,
-    "result": [
-        {
-            "classType": "Subset",
-            "ui": "C3853926",
-            "sourceUi": "900000000000534007",
-            "rootSource": "SCTSPA",
-            "name": "conjunto de referencias de dependencia entre m\u00f3dulos",
-            "description": "conjunto de referencias de dependencia entre m\u00f3dulos",
-            "attributeCount": 1,
-            "atomMemberCount": 0,
-            "sourceConceptMemberCount": 4,
-            "relationMemberCount": 0,
-            "uri": "https://uts-ws.nlm.nih.gov/rest/content/2015AA/subsets/source/SCTSPA/900000000000534007",
-            "subsetAttributes": "https://uts-ws.nlm.nih.gov/rest/content/2015AA/subsets/source/SCTSPA/900000000000534007/attributes"
-        },
+	"pageSize" : 25,
+	"pageNumber" : 1,
+	"pageCount" : 2,
+	"result" : [{
+			"classType" : "Subset",
+			"ui" : "C3853926",
+			"sourceUi" : "900000000000534007",
+			"rootSource" : "SCTSPA",
+			"name" : "conjunto de referencias de dependencia entre módulos",
+			"description" : "conjunto de referencias de dependencia entre módulos",
+			"attributeCount" : 1,
+			"atomMemberCount" : 0,
+			"sourceConceptMemberCount" : 4,
+			"relationMemberCount" : 0,
+			"uri" : "https://uts-ws.nlm.nih.gov/rest/subsets/2016AA/source/SCTSPA/900000000000534007",
+			"subsetMembers" : "https://uts-ws.nlm.nih.gov/rest/subsets/2016AA/source/SCTSPA/900000000000534007/members",
+			"subsetAttributes" : [{
+					"classType" : "Attribute",
+					"ui" : "ATM283",
+					"sourceUi" : "NONE",
+					"rootSource" : "SCTSPA",
+					"name" : "LANG",
+					"value" : "SPA"
+				}
+			]
+		}, {
+			"classType" : "Subset",
+			"ui" : "C3853923",
+			"sourceUi" : "450828004",
+			"rootSource" : "SCTSPA",
+			"name" : "conjunto de referencias de lenguaje castellano para América Latina",
+			"description" : "conjunto de referencias de lenguaje castellano para América Latina",
+			"attributeCount" : 1,
+			"atomMemberCount" : 1041168,
+			"sourceConceptMemberCount" : 0,
+			"relationMemberCount" : 0,
+			"uri" : "https://uts-ws.nlm.nih.gov/rest/subsets/2016AA/source/SCTSPA/450828004",
+			"subsetMembers" : "https://uts-ws.nlm.nih.gov/rest/subsets/2016AA/source/SCTSPA/450828004/members",
+			"subsetAttributes" : [{
+					"classType" : "Attribute",
+					"ui" : "ATM262",
+					"sourceUi" : "NONE",
+					"rootSource" : "SCTSPA",
+					"name" : "LANG",
+					"value" : "SPA"
+				}
+			]
+		}, {
+			"classType" : "Subset",
+			"ui" : "C3853925",
+			"sourceUi" : "900000000000456007",
+			"rootSource" : "SCTSPA",
+			"name" : "conjunto de referencias descriptivas de la estructura de otros conjuntos de referencias",
+			"description" : "conjunto de referencias descriptivas de la estructura de otros conjuntos de referencias",
+			"attributeCount" : 1,
+			"atomMemberCount" : 0,
+			"sourceConceptMemberCount" : 0,
+			"relationMemberCount" : 0,
+			"uri" : "https://uts-ws.nlm.nih.gov/rest/subsets/2016AA/source/SCTSPA/900000000000456007",
+			"subsetMembers" : "https://uts-ws.nlm.nih.gov/rest/subsets/2016AA/source/SCTSPA/900000000000456007/members",
+			"subsetAttributes" : [{
+					"classType" : "Attribute",
+					"ui" : "ATM274",
+					"sourceUi" : "NONE",
+					"rootSource" : "SCTSPA",
+					"name" : "LANG",
+					"value" : "SPA"
+				}
+			]
+		}, 
 ...
-        {
-            "classType": "Subset",
-            "ui": "C3853348",
-            "sourceUi": "442311000124105",
-            "rootSource": "SNOMEDCT_US",
-            "name": "Route of administration reference set",
-            "description": "Route of administration reference set",
-            "attributeCount": 1,
-            "atomMemberCount": 0,
-            "sourceConceptMemberCount": 144,
-            "relationMemberCount": 0,
-            "uri": "https://uts-ws.nlm.nih.gov/rest/content/2015AA/subsets/source/SNOMEDCT_US/442311000124105",
-            "subsetAttributes": "https://uts-ws.nlm.nih.gov/rest/content/2015AA/subsets/source/SNOMEDCT_US/442311000124105/attributes"
-        },
-...
-        {
-            "classType": "Subset",
-            "ui": "C3714467",
-            "sourceUi": "447562003",
-            "rootSource": "SNOMEDCT_US",
-            "name": "ICD-10 complex map reference set",
-            "description": "ICD-10 complex map reference set",
-            "attributeCount": 1,
-            "atomMemberCount": 0,
-            "sourceConceptMemberCount": 43041,
-            "relationMemberCount": 0,
-            "uri": "https://uts-ws.nlm.nih.gov/rest/content/2015AA/subsets/source/SNOMEDCT_US/447562003",
-            "subsetAttributes": "https://uts-ws.nlm.nih.gov/rest/content/2015AA/subsets/source/SNOMEDCT_US/447562003/attributes"
-        },
-...
-    ]
+	]
 }
 ~~~~
 
-Sample output for /content/current/subsets/source/SNOMEDCT_US/442311000124105/members?ticket=ST...
+Sample output for https://uts-ws.nlm.nih.gov/rest/subsets/current/source/SNOMEDCT_US/442311000124105/members?ticket=ST...
 
 ~~~~json
 {
-    "pageSize": 25,
-    "pageNumber": 1,
-    "pageCount": 6,
-    "result": [
-        {
-            "classType": "SourceConceptSubsetMember",
-            "name": "Suborbital route",
-            "attributeCount": 0,
-            "ui": "AT201016710",
-            "sourceUi": "416174007",
-            "rootSource": "SNOMEDCT_US",
-            "sourceConcept": "https://uts-ws.nlm.nih.gov/rest/content/2015AA/source/SNOMEDCT_US/416174007",
-            "subsetMemberAttributes": "https://uts-ws.nlm.nih.gov/rest/content/2015AA/subsets/source/SNOMEDCT_US/442311000124105/members/416174007/attributes"
-        },
-        {
-            "classType": "SourceConceptSubsetMember",
-            "name": "Intraocular route",
-            "attributeCount": 0,
-            "ui": "AT201110390",
-            "sourceUi": "372468001",
-            "rootSource": "SNOMEDCT_US",
-            "sourceConcept": "https://uts-ws.nlm.nih.gov/rest/content/2015AA/source/SNOMEDCT_US/372468001",
-            "subsetMemberAttributes": "https://uts-ws.nlm.nih.gov/rest/content/2015AA/subsets/source/SNOMEDCT_US/442311000124105/members/372468001/attributes"
-        },
-        {
-            "classType": "SourceConceptSubsetMember",
-            "name": "Intracerebral route",
-            "attributeCount": 0,
-            "ui": "AT200236815",
-            "sourceUi": "446540005",
-            "rootSource": "SNOMEDCT_US",
-            "sourceConcept": "https://uts-ws.nlm.nih.gov/rest/content/2015AA/source/SNOMEDCT_US/446540005",
-            "subsetMemberAttributes": "https://uts-ws.nlm.nih.gov/rest/content/2015AA/subsets/source/SNOMEDCT_US/442311000124105/members/446540005/attributes"
-        },
+	"pageSize" : 25,
+	"pageNumber" : 1,
+	"pageCount" : 6,
+	"result" : [{
+			"classType" : "SourceConceptSubsetMember",
+			"name" : "Intravascular route",
+			"attributeCount" : 0,
+			"ui" : "AT199486277",
+			"sourceUi" : "445755006",
+			"rootSource" : "SNOMEDCT_US",
+			"sourceConcept" : "https://uts-ws.nlm.nih.gov/rest/content/2016AA/source/SNOMEDCT_US/445755006",
+			"obsolete" : false,
+			"subsetMemberAttributes" : []
+		}, {
+			"classType" : "SourceConceptSubsetMember",
+			"name" : "Intrabiliary route",
+			"attributeCount" : 0,
+			"ui" : "AT200860004",
+			"sourceUi" : "404819002",
+			"rootSource" : "SNOMEDCT_US",
+			"sourceConcept" : "https://uts-ws.nlm.nih.gov/rest/content/2016AA/source/SNOMEDCT_US/404819002",
+			"obsolete" : false,
+			"subsetMemberAttributes" : []
+		}, {
+			"classType" : "SourceConceptSubsetMember",
+			"name" : "Sublingual route",
+			"attributeCount" : 0,
+			"ui" : "AT199923610",
+			"sourceUi" : "37839007",
+			"rootSource" : "SNOMEDCT_US",
+			"sourceConcept" : "https://uts-ws.nlm.nih.gov/rest/content/2016AA/source/SNOMEDCT_US/37839007",
+			"obsolete" : false,
+			"subsetMemberAttributes" : []
+		}, 
 ...
-    ]
-}
-~~~~
-
-Sample output for /content/current/subsets/source/SNOMEDCT_US/442311000124105/attributes?ticket=ST...
-
-~~~~json
-{
-    "pageSize": 25,
-    "pageNumber": 1,
-    "pageCount": 1,
-    "result": [
-        {
-            "classType": "Attribute",
-            "ui": "ATM255",
-            "sourceUi": "NONE",
-            "rootSource": "SNOMEDCT_US",
-            "name": "LANG",
-            "value": "ENG"
-        }
-    ]
-}
-~~~~
-
-Sample output for /content/current/subsets/source/SNOMEDCT_US/6011000124106/members/89361000119103/attributes?ticket=ST...
-
-~~~~json
-{
-    "pageSize": 25,
-    "pageNumber": 1,
-    "pageCount": 1,
-    "result": [
-        {
-            "classType": "Attribute",
-            "ui": "ATM36778504",
-            "sourceUi": "0c9ff6e0-ca17-5d8e-930a-0bc839769e34",
-            "rootSource": "SNOMEDCT_US",
-            "name": "MAPGROUP",
-            "value": "1"
-        },
-        {
-            "classType": "Attribute",
-            "ui": "ATM36778505",
-            "sourceUi": "0c9ff6e0-ca17-5d8e-930a-0bc839769e34",
-            "rootSource": "SNOMEDCT_US",
-            "name": "MAPADVICE",
-            "value": "ALWAYS F80.0"
-        },
-        {
-            "classType": "Attribute",
-            "ui": "ATM36778506",
-            "sourceUi": "0c9ff6e0-ca17-5d8e-930a-0bc839769e34",
-            "rootSource": "SNOMEDCT_US",
-            "name": "MAPTARGET",
-            "value": "F80.0"
-        },
-...
-    ]
+	]
 }
 ~~~~
