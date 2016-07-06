@@ -3,8 +3,8 @@ date=2016-06-27
 updated=2016-06-27
 type=page
 status=published
-category=REST API Cookbook
-navorder=2
+category=Retrieving Source-Asserted Data
+navorder=7
 ~~~~~~
 
 [URIs](#uris) | [Query Parameters](#query-parameters) | [Sample Output](#sample-output)
