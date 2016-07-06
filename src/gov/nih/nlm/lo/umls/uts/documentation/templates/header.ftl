@@ -64,6 +64,11 @@
       
        
     </script>
+   <#if (content.redirect)??>
+   <script type = "text/javascript" language = "javascript">
+	window.location.replace("${content.redirect}");
+   </script>
+   </#if>
   </head>
   <body onload="prettyPrint();hljs.initHighlighting();">
      <div class="container-fluid">
