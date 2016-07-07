@@ -1,0 +1,103 @@
+{
+	"id": "b11636e9-7ed6-130f-6d57-caa0eed4ced6",
+	"name": "CAS Authentication",
+	"description": "",
+	"order": [
+		"45869cdd-e816-e89b-9473-7b689f8797f5",
+		"cc57a7c7-b9b9-91a6-2c6c-c67ab0a4f512",
+		"27244176-0d9b-4777-f149-6e8990cc7f47"
+	],
+	"folders": [],
+	"timestamp": 1467312905814,
+	"owner": 0,
+	"remoteLink": "",
+	"public": false,
+	"published": false,
+	"requests": [
+		{
+			"id": "27244176-0d9b-4777-f149-6e8990cc7f47",
+			"headers": "",
+			"url": "https://utslogin.nlm.nih.gov/cas/v1/api-key/{TGT}",
+			"pathVariables": {},
+			"preRequestScript": null,
+			"method": "POST",
+			"collectionId": "b11636e9-7ed6-130f-6d57-caa0eed4ced6",
+			"data": [
+				{
+					"key": "service",
+					"value": "http://umlsks.nlm.nih.gov",
+					"type": "text",
+					"enabled": true
+				}
+			],
+			"dataMode": "urlencoded",
+			"name": "Request a Single-use service ticket",
+			"description": "Substitue the {TGT} portion of the URL with your ticket granting ticket.  Make the POST call and you'll receive a service ticket that you can use one time to make a request to the API.  Re-run this call each time you need a new service ticket.",
+			"descriptionFormat": "html",
+			"time": 1467922814928,
+			"version": 2,
+			"responses": [],
+			"tests": null,
+			"currentHelper": "normal",
+			"helperAttributes": {}
+		},
+		{
+			"id": "45869cdd-e816-e89b-9473-7b689f8797f5",
+			"headers": "",
+			"url": "https://utslogin.nlm.nih.gov/cas/v1/api-key",
+			"preRequestScript": null,
+			"pathVariables": {},
+			"method": "POST",
+			"data": [
+				{
+					"key": "apikey",
+					"value": "{api-key}",
+					"type": "text",
+					"enabled": true
+				}
+			],
+			"dataMode": "urlencoded",
+			"version": 2,
+			"tests": null,
+			"currentHelper": "normal",
+			"helperAttributes": {},
+			"time": 1467921385175,
+			"name": "Request a ticket granting ticket with your API Key",
+			"description": "Use the API key in your UTS Profile in the body of your post request in this example to obtain a ticket granting ticket.",
+			"collectionId": "b11636e9-7ed6-130f-6d57-caa0eed4ced6",
+			"responses": []
+		},
+		{
+			"id": "cc57a7c7-b9b9-91a6-2c6c-c67ab0a4f512",
+			"headers": "",
+			"url": "https://utslogin.nlm.nih.gov/cas/v1/tickets",
+			"preRequestScript": null,
+			"pathVariables": {},
+			"method": "POST",
+			"data": [
+				{
+					"key": "username",
+					"value": "{username}",
+					"type": "text",
+					"enabled": true
+				},
+				{
+					"key": "password",
+					"value": "{password}",
+					"type": "text",
+					"enabled": true
+				}
+			],
+			"dataMode": "urlencoded",
+			"version": 2,
+			"tests": null,
+			"currentHelper": "normal",
+			"helperAttributes": {},
+			"time": 1467921397559,
+			"name": "Request a ticket granting ticket with your UMLS username and password",
+			"description": "Use your UMLS username and password in the body of your post request in this example to obtain a ticket granting ticket.",
+			"collectionId": "b11636e9-7ed6-130f-6d57-caa0eed4ced6",
+			"responses": []
+		}
+	]
+}
