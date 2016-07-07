@@ -1,4 +1,4 @@
-title=Crosswalking Source-Asserted Identifiers Using CUIs
+title=Crosswalking Vocabularies Using CUIs
 date=2016-06-27
 updated=2016-06-27
 type=page

@@ -1,9 +1,9 @@
-title=Crosswalking Source-Asserted Identifiers Using CUIs
+title=Crosswalking Vocabularies Using CUIs
 date=2015-08-28
 updated=2016-03-07
 type=page
 status=published
-redirect=https://documentation.uts.nlm.nih.gov/rest/source-asserted-identifiers/crosswalk/index.html
+redirect=/rest/source-asserted-identifiers/crosswalk/index.html
 category=REST API Cookbook
 navorder=2
 ~~~~~~
