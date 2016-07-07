@@ -16,7 +16,7 @@
 		{
 			"id": "04d31ed8-3ed9-3b97-9f1e-69dd1607942a",
 			"headers": "",
-			"url": "https://uts-ws.nlm.nih.gov/rest/crosswalk/current/source/HPO/HP:0001947?ticket={ticket}",
+			"url": "https://uts-ws.nlm.nih.gov/rest/crosswalk/current/source/HPO/HP:0001947?ticket={service-ticket}",
 			"preRequestScript": null,
 			"pathVariables": {},
 			"method": "GET",
@@ -26,7 +26,7 @@
 			"tests": null,
 			"currentHelper": "normal",
 			"helperAttributes": {},
-			"time": 1467922379490,
+			"time": 1467924794252,
 			"name": "Crosswalk from HPO to all vocabularies",
 			"description": "Retrieve codes from any vocabulary that share a UMLS CUI with HPO identifier HP:0001947, Renal tubular acidosis",
 			"collectionId": "3f79f4ab-9837-213e-4815-c049278fc859",
@@ -35,22 +35,21 @@
 		{
 			"id": "9c42606e-9ae9-2de9-41b9-97497c5ddb7b",
 			"headers": "",
-			"url": "https://uts-ws.nlm.nih.gov/rest/crosswalk/current/source/HPO/HP:0001947?targetSource=SNOMEDCT_US&ticket=ST-809155-ZNc17iLYUyuf1R2abzjf-cas",
-			"pathVariables": {},
+			"url": "https://uts-ws.nlm.nih.gov/rest/crosswalk/current/source/HPO/HP:0001947?targetSource=SNOMEDCT_US&ticket={service-ticket}",
 			"preRequestScript": null,
+			"pathVariables": {},
 			"method": "GET",
-			"collectionId": "3f79f4ab-9837-213e-4815-c049278fc859",
 			"data": null,
 			"dataMode": "params",
-			"name": "Crosswalk from HPO to SNOMED CT",
-			"description": "Retrieve all SNOMED CT concepts that share a UMLS CUI with HPO identifier HP:0001947, Renal tubular acidosis",
-			"descriptionFormat": "html",
-			"time": 1467922247007,
 			"version": 2,
-			"responses": [],
 			"tests": null,
 			"currentHelper": "normal",
-			"helperAttributes": {}
+			"helperAttributes": {},
+			"time": 1467924772892,
+			"name": "Crosswalk from HPO to SNOMED CT",
+			"description": "Retrieve all SNOMED CT concepts that share a UMLS CUI with HPO identifier HP:0001947, Renal tubular acidosis",
+			"collectionId": "3f79f4ab-9837-213e-4815-c049278fc859",
+			"responses": []
 		}
 	]
 }

@@ -54,22 +54,21 @@
 		{
 			"id": "c70eb476-72a8-b902-3fb1-b78692d7c0ed",
 			"headers": "",
-			"url": "https://uts-ws.nlm.nih.gov/rest/content/current/source/SNOMEDCT_US/36991002/atoms/preferred?ticket=ST-807879-BKDuI5hOEnANoMarhZdj-cas",
-			"pathVariables": {},
+			"url": "https://uts-ws.nlm.nih.gov/rest/content/current/source/SNOMEDCT_US/36991002/atoms/preferred?ticket={service-ticket}",
 			"preRequestScript": null,
+			"pathVariables": {},
 			"method": "GET",
-			"collectionId": "0d70ea24-b88a-1280-269e-463c1ca2bfd6",
 			"data": null,
 			"dataMode": "params",
-			"name": "Retrieve highest ranking atom of a SNOMED CT concept",
-			"description": "Retrieves the highest ranking term in 36991002, Closed fracture of upper limb.",
-			"descriptionFormat": "html",
-			"time": 1467921545847,
 			"version": 2,
-			"responses": [],
 			"tests": null,
 			"currentHelper": "normal",
-			"helperAttributes": {}
+			"helperAttributes": {},
+			"time": 1467924739508,
+			"name": "Retrieve highest ranking atom of a SNOMED CT concept",
+			"description": "Retrieves the highest ranking term in 36991002, Closed fracture of upper limb.",
+			"collectionId": "0d70ea24-b88a-1280-269e-463c1ca2bfd6",
+			"responses": []
 		}
 	]
 }
