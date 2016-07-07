@@ -1,6 +1,6 @@
 title=Crosswalking Vocabularies Using CUIs
 date=2016-06-27
-updated=2016-06-27
+updated=2016-07-07
 type=page
 status=published
 category=Retrieving Source-Asserted Data
@@ -41,12 +41,10 @@ You may use any valid UMLS release back to 2008AA in your URI if you would like 
 Parameter name | Required? Y/N | Description|  Valid Values | Default value | Usage Note
 --- | ---
 ticket | Y | A single-use service ticket is required for each call to the API. See [authentication](../../authentication.html) for more information | n/a | n/a | n/a
-targetSource | N | The UMLS source for which you want to return codes. | n/a | n/a | n/a
-includeObsolete | N | Determines whether to return obsolete codes. | n/a | false | n/a
+targetSource | N | Returns codes from the specified UMLS vocabulary | Any [root source abbreviation](https://www.nlm.nih.gov/research/umls/sourcereleasedocs/index.html) in the UMLS | n/a | n/a
+includeObsolete | N | Determines whether to return obsolete codes. | true,false | false | n/a
 pageNumber | N | Whole number that specifies which page of results to fetch. | 1,2,3, etc | 1 | n/a
 pageSize | N | Whole number that specifies the number of results to include per page. | 1,2,3, etc | 25 | n/a
-
-Use a comma between each attribute name to specify more than one.
 
 
 ### Sample Output
