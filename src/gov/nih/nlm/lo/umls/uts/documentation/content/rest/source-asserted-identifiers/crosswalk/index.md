@@ -33,6 +33,7 @@ Sample URI|Description|Returned JSON Object classType
 /crosswalk/current/source/HPO/HP:0001947?targetSource=SNOMEDCT_US| Retrieves all SNOMEDCT_US codes that share a UMLS CUI with HP:0001947 | SourceAtomCluster
 
 Note that 'current' in the URI can always be used to search against the latest UMLS publication.
+
 You may use any valid UMLS release back to 2008AA in your URI if you would like to search against a particular version of the UMLS.
 
 
