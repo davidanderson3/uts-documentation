@@ -52,51 +52,6 @@ Sample output for /content/current/CUI/C0009044/relations?ticket=ST...
     "result": [
         {
             "classType": "ConceptRelation",
-            "ui": "R18927471",
-            "suppressible": false,
-            "sourceUi": "NONE",
-            "obsolete": false,
-            "sourceOriginated": false,
-            "rootSource": "MTH",
-            "relationLabel": "RO",
-            "additionalRelationLabel": "",
-            "groupId": "NONE",
-            "attributeCount": 0,
-            "relatedAtom": "",
-            "relatedConcept": "https://uts-ws.nlm.nih.gov/rest/content/2015AA/CUI/C0159738"
-        },
-        {
-            "classType": "ConceptRelation",
-            "ui": "R03033072",
-            "suppressible": false,
-            "sourceUi": "NONE",
-            "obsolete": false,
-            "sourceOriginated": false,
-            "rootSource": "MTH",
-            "relationLabel": "RO",
-            "additionalRelationLabel": "",
-            "groupId": "NONE",
-            "attributeCount": 0,
-            "relatedAtom": "",
-            "relatedConcept": "https://uts-ws.nlm.nih.gov/rest/content/2015AA/CUI/C0009353"
-        },
-        {
-            "classType": "ConceptRelation",
-            "ui": "R03164258",
-            "suppressible": false,
-            "sourceUi": "NONE",
-            "obsolete": false,
-            "sourceOriginated": false,
-            "rootSource": "MTH",
-            "relationLabel": "RO",
-            "additionalRelationLabel": "",
-            "groupId": "NONE",
-            "attributeCount": 0,
-            "relatedAtom": "",
-            "relatedConcept": "https://uts-ws.nlm.nih.gov/rest/content/2015AA/CUI/C0347757"
-        },
-        {
-            "classType": "ConceptRelation",
             "ui": "R02986047",
             "suppressible": false,
             "sourceUi": "NONE",
@@ -107,8 +62,8 @@ Sample output for /content/current/CUI/C0009044/relations?ticket=ST...
             "additionalRelationLabel": "",
             "groupId": "NONE",
             "attributeCount": 0,
-            "relatedAtom": "",
-            "relatedConcept": "https://uts-ws.nlm.nih.gov/rest/content/2015AA/CUI/C0029509"
+            "relatedId": "https://uts-ws.nlm.nih.gov/rest/content/2016AA/CUI/C0029509",
+            "relatedIdName": "Unspecified site injury"
         },
         {
             "classType": "ConceptRelation",
@@ -122,8 +77,53 @@ Sample output for /content/current/CUI/C0009044/relations?ticket=ST...
             "additionalRelationLabel": "",
             "groupId": "NONE",
             "attributeCount": 0,
-            "relatedAtom": "",
-            "relatedConcept": "https://uts-ws.nlm.nih.gov/rest/content/2015AA/CUI/C0007285"
+            "relatedId": "https://uts-ws.nlm.nih.gov/rest/content/2016AA/CUI/C0007285",
+            "relatedIdName": "Bone structure of carpus"
+        },
+        {
+            "classType": "ConceptRelation",
+            "ui": "R03033072",
+            "suppressible": false,
+            "sourceUi": "NONE",
+            "obsolete": false,
+            "sourceOriginated": false,
+            "rootSource": "MTH",
+            "relationLabel": "RO",
+            "additionalRelationLabel": "",
+            "groupId": "NONE",
+            "attributeCount": 0,
+            "relatedId": "https://uts-ws.nlm.nih.gov/rest/content/2016AA/CUI/C0009353",
+            "relatedIdName": "Colles' Fracture"
+        },
+        {
+            "classType": "ConceptRelation",
+            "ui": "R18927471",
+            "suppressible": false,
+            "sourceUi": "NONE",
+            "obsolete": false,
+            "sourceOriginated": false,
+            "rootSource": "MTH",
+            "relationLabel": "RO",
+            "additionalRelationLabel": "",
+            "groupId": "NONE",
+            "attributeCount": 0,
+            "relatedId": "https://uts-ws.nlm.nih.gov/rest/content/2016AA/CUI/C0159738",
+            "relatedIdName": "Closed fracture of lower end of radius AND ulna"
+        },
+        {
+            "classType": "ConceptRelation",
+            "ui": "R03164258",
+            "suppressible": false,
+            "sourceUi": "NONE",
+            "obsolete": false,
+            "sourceOriginated": false,
+            "rootSource": "MTH",
+            "relationLabel": "RO",
+            "additionalRelationLabel": "",
+            "groupId": "NONE",
+            "attributeCount": 0,
+            "relatedId": "https://uts-ws.nlm.nih.gov/rest/content/2016AA/CUI/C0347757",
+            "relatedIdName": "Closed fracture dislocation of wrist"
         }
     ]
 }
