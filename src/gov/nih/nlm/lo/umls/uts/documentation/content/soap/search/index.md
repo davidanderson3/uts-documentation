@@ -35,7 +35,7 @@ Interface|Method|Object or Data type Returned |Use Cases
 
 Parameter name|Definition|Valid values
 -- | --
-target|Specifies the data type provided in your 'str' parameter|aui,atom (used for searching by term), code, concept, sourceConcept, sourceDescriptor,tty
+target|Specifies the input type of your search, which is usually either a human-readable string or an identifer from a vocabulary.|aui,atom (used for searching by term), code, concept, sourceConcept, sourceDescriptor,tty
 searchType|Type of search you're performing|exact (use this when passing codes to the finder service), approximate,leftTruncation,rightTruncation,words,normalizedWords
 
 #### Sample Input (Java):

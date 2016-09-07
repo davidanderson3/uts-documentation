@@ -1,6 +1,6 @@
 title=UMLS REST API Home Page
 date=2015-06-10
-updated=2015-03-14
+updated=2016-07-07
 type=page
 status=published
 navorder=1
@@ -34,6 +34,15 @@ Base URI|HTTP Request Type|Path|Description
  |GET | [/content/{version}/source/{source}/{id}/ancestors](ancestors-and-descendants/) | Retrieves all ancestors of a source-asserted identifier
  |GET | [/content/{version}/source/{source}/{id}/descendants](ancestors-and-descendants/) | Retrieves all descendants of a source-asserted identifier
  |GET | [/content/{version}/source/{source}/{id}/relations](source-asserted-identifiers/relations/) | Retrieves all relationships of a source-asserted identifier
- |GET | [/content/{version}/source/{source}/{id}/subsets](source-asserted-identifiers/subsets/) | Retrieves information about source-asserted subsets
+ |GET | [/subsets/{version}/](source-asserted-identifiers/subsets/) | Retrieves all available source-asserted subsets
+ |GET | [/subsets/{version}/source/{source}/{id}](source-asserted-identifiers/subsets/) | Retrieves information about a specific source-asserted subset
+ |GET | [/subsets/{version}/source/{source}/{id}/members](source-asserted-identifiers/subsets/) | Retrieves members of a specific source-asserted subset
+ |GET | [/subsets/{version}/source/{source}/{id}/member/{id}](source-asserted-identifiers/subsets/) | Retrieves an individual member of a specific source-asserted subset
  |GET | [/content/{version}/source/{source}/{id}/attributes](source-asserted-identifiers/attributes/) | Retrieves information about source-asserted attributes
  |GET | [/semantic-network/{version}/TUI/{id}](/rest/semantic-network/) | Retrieves information for a known Semantic Type identifier (TUI)
+ |GET | [/content-views/{version}](/rest/content-views/) | Retrieve all available [content views](https://www.nlm.nih.gov/research/umls/knowledge_sources/metathesaurus/release/content_views.html) in the UMLS
+ |GET | [/content-views/{version}/CUI/{CUI}](/rest/content-views/) | Retrieve information about a specific content view
+ |GET | [/content-views/{version}/CUI/{CUI}/members](/rest/content-views/) | Retrieve members of a specific content view
+ |GET | [/content-views/{version}/CUI/{CUI}/member/{id}](/rest/content-views/) | Retrieves an individual member of a specific content view
+ |GET | [/crosswalk/{version}/source/{source}/{id}](/rest/source-asserted-identifiers/crosswalk/) | Retrieves all source-asserted identifiers that share a UMLS CUI with a particular code
+ 

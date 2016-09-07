@@ -4,7 +4,7 @@ updated=2016-03-08
 type=page
 status=published
 category=REST API Cookbook
-navorder=1
+navorder=2
 ~~~~~~
 
 Many times users want to use the UMLS search terms and retrieve identifiers from specific vocabularies such as SNOMED CT or LOINC.

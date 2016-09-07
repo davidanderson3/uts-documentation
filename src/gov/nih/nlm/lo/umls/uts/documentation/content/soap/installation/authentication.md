@@ -8,7 +8,13 @@ navorder=1
 
 **New**: The [getProxyGrantTicketWithApiKey](#getproxygrantticketwithapikey) method gives users an additional authentication option when requesting a
 ticket-granting ticket (or Proxy Grant Ticket).  Rather than username/password, users can pass their api key (available in the UTS 'My Profile' area) as a parameter to
-this method to obtain a ticket-granting ticket.
+this method to obtain a ticket-granting ticket.   If your API Key appears blank in your profile, perform the following steps:
+*  Click 'Edit Profile'
+*  Click 'Generate New API Key'
+*  Click 'Save Profile'
+
+Your new API Key is now available for use.
+
 
 Interface | Method | Use Case | Object or Data type Returned | Guidance
 -- | -- | -- | --
