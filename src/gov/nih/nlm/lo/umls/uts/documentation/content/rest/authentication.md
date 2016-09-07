@@ -20,17 +20,18 @@ Authentication involves **3 steps** and requires you to generate and submit form
 
 * NOTE: You should include the key names and key values within the url-encoded body of the form in your POST call.
 
-**Option 1**: Use your username and password
+**Option 1**: Use your API key
+
+Type of Request|URI|Key Names|Key Values|Description
+--- | --- | --
+POST| https://utslogin.nlm.nih.gov/cas/v1/api-key | apikey | Your UMLS API key |Retrieves a TGT to be used repeatedly for getting Service Tickets.
+
+**Option 2**: Use your username and password
 
 Type of Request|URI|Key Names|Key Values|Description
 --- | --- | --
 POST| https://utslogin.nlm.nih.gov/cas/v1/tickets | username,password | Your UMLS username and password |Retrieves a TGT to be used repeatedly for getting Service Tickets.
 
-**Option 2**: Use your API key
-
-Type of Request|URI|Key Names|Key Values|Description
---- | --- | --
-POST| https://utslogin.nlm.nih.gov/cas/v1/api-key | apikey | Your UMLS API key |Retrieves a TGT to be used repeatedly for getting Service Tickets.
 
 Sample response to the POST call for getting a TGT (your TGT of course will be unique):
 
