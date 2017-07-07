@@ -10,13 +10,14 @@
         U.S. National Library of Medicine, 8600 Rockville Pike, Bethesda, MD 20894 <br />
         <a href="http://www.nih.gov/">National Institutes of Health</a>, <a href="http://www.hhs.gov/">Health &amp; Human Services</a>
         <br />
-        <a href="http://www.nih.gov/icd/od/foia/index.htm">Freedom of Information Act</a>, <a href="http://apps.nlm.nih.gov/mainweb/siebel/nlm/index.cfm">Contact Us</a>
+        <a href="http://www.nih.gov/icd/od/foia/index.htm">Freedom of Information Act</a>, <a class="paratureLink" href="https://support.nlm.nih.gov/ics/support/default.asp?deptID=28054&amp;from=" target="_blank">NLM Customer Support</a>
 	<br/>
 	 Baked with <a href="http://jbake.org">JBake ${version}</a>
        </div>
       </div>
       </div>
     </div>
+	<script src="https://www.nlm.nih.gov/scripts/paratureNLMmain.js"></script>
   </body>
   <noscript><iframe src="//www.googletagmanager.com/ns.html?id= GTM-MT6MLL " height="0" width="0" style="display:none;visibility:hidden" title="googletagmanager"></iframe></noscript>
 </html>
