@@ -17,5 +17,7 @@ Import these Postman collection files to see examples of how the UMLS API works:
 
 You will need the [Chrome postman application](http://www.getpostman.com/) to interact with these examples.
 
+For help with making authentication calls using Postman, see our tutorial: [UMLS REST API: Authentication and Calling](https://www.nlm.nih.gov/research/umls/user_education/quick_tours/UTS-API/UTS_REST_API_Authentication.html). 
+
 \* The authentication collection is needed to generate service tickets, which are required to run the calls in the rest of the collections.
 Running the examples requires a UMLS username and password (or an api key) - [apply for a license](https://uts.nlm.nih.gov/license.html) today!
