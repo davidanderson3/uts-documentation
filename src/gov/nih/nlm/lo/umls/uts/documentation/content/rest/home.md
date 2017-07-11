@@ -9,7 +9,8 @@ navorder=1
 
 ### Authentication Service Endpoint
 The authentication service provides methods for retrieving a ticket granting ticket as well as single-use service tickets.
-Service tickets are needed each time you search or retrieve content from the UMLS REST API.
+Service tickets are needed each time you search or retrieve content from the UMLS REST API. 
+For help with making authentication calls using Postman, see our tutorial: [UMLS REST API: Authentication and Calling](https://www.nlm.nih.gov/research/umls/user_education/quick_tours/UTS-API/UTS_REST_API_Authentication.html).
 
 Base URI|Method Type|Path|Description
 --- | --- | --- | --
