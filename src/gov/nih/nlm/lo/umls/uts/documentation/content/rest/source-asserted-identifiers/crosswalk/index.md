@@ -49,7 +49,7 @@ pageSize | N | Whole number that specifies the number of results to include per 
 
 ### Sample Output
 
-Sample output for /crosswalk/current/source/HPO/HP:0001947?targetSource=SNOMEDCT_US&ticket=ST...
+Sample output for https://uts-ws.nlm.nih.gov/rest/crosswalk/current/source/HPO/HP:0001947?targetSource=SNOMEDCT_US&ticket=ST...
 
 ~~~~json
 {

@@ -39,7 +39,7 @@ pageSize | N | Whole number that specifies the number of results to include per 
 
 ### Sample Output
 
-Sample output for /content/current/CUI/C0155502/definitions?ticket=ST...
+Sample output for https://uts-ws.nlm.nih.gov/rest/content/current/CUI/C0155502/definitions?ticket=ST...
 
 ~~~~json
 {

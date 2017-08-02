@@ -40,7 +40,7 @@ pageSize | N | Whole number that specifies the number of results to include per 
 
 ### Sample Output
 
-Sample output for /content/2015AA/source/LNC/44255-8/relations?includeAdditionalRelationLabels=has_answer&ticket=ST...
+Sample output for https://uts-ws.nlm.nih.gov/rest/content/2015AA/source/LNC/44255-8/relations?includeAdditionalRelationLabels=has_answer&ticket=ST...
 
 ~~~~json
 {

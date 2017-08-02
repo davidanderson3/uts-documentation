@@ -8,7 +8,7 @@ navorder=8
 ~~~~~~
 
 
-[URIs](#uris) | [Query Parameters](#query-parameters) | [Sample Output](#sample-output)
+[URIs](#uris) | [Query Parameters](#query-parameters) | [Sample Output](#sample-output-1)
 
 URIs with /content-views support the following use cases:
 

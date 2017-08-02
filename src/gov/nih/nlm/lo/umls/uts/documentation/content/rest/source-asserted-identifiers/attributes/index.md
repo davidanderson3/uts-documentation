@@ -39,7 +39,7 @@ includeAttributeNames | N | One or more attribute names | Any [attribute name] (
 
 ### Sample Output
 
-Sample output for /content/current/source/SNOMEDCT_US/9468002/attributes?ticket=ST...
+Sample output for https://uts-ws.nlm.nih.gov/rest/content/current/source/SNOMEDCT_US/9468002/attributes?ticket=ST...
 
 ~~~~json
 {

@@ -50,7 +50,7 @@ pageSize | N | Whole number that specifies the number of results to include per 
 
 The default search parameters will return CUIs and their names.  If you ask for codes, sourceConcept, or sourceDescriptor as your returnIdType, you will get back source-asserted identifiers instead of CUIs.
 
-Sample output for /search/current?string="fracture of carpal bone"&ticket=ST...
+Sample output for https://uts-ws.nlm.nih.gov/rest/search/current?string=fracture of carpal bone&ticket=ST...
 
 ~~~~json
 {
@@ -99,7 +99,7 @@ Sample output for /search/current?string="fracture of carpal bone"&ticket=ST...
 
 **Specifying returnIdType = 'code','sourceConcept',or 'sourceDescriptor' will result in output as follows:**
 
-Sample output for /search/current?string="fracture of carpal bone"&returnIdType=sourceConcept&ticket=ST...
+Sample output for https://uts-ws.nlm.nih.gov/rest/search/current?string=fracture of carpal bone&returnIdType=sourceConcept&ticket=ST...
 
 ~~~~json
 {

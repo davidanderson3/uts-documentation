@@ -42,7 +42,7 @@ ticket | Y | A single-use service ticket is required for each call to the API. S
 
 **The default for calls under /CUI/{CUI} is to return UMLS CUIs.**
 
-Sample output for /content/current/CUI/C0009044?ticket=ST...
+Sample output for https://uts-ws.nlm.nih.gov/rest/content/current/CUI/C0009044?ticket=ST...
 
 ~~~~json
 {

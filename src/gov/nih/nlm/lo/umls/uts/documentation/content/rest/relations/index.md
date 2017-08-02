@@ -42,7 +42,7 @@ pageSize | N | Whole number that specifies the number of results to include per 
 
 ### Sample Output
 
-Sample output for /content/current/CUI/C0009044/relations?ticket=ST...
+Sample output for https://uts-ws.nlm.nih.gov/rest/content/current/CUI/C0009044/relations?ticket=ST...
 
 ~~~~json
 {
