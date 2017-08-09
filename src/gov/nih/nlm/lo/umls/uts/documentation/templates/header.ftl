@@ -1,6 +1,13 @@
 <!DOCTYPE html>  
 <html lang="en">
   <head>
+      <!-- Google Tag Manager -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'//www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-MT6MLL');</script>
+<!-- End Google Tag Manager -->
     <meta charset="utf-8"/>
     <title><#if (content.title)??><#escape x as x?xml>${content.title}</#escape><#else>UMLS Terminology Services REST API Technical Documentation</#if></title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -64,16 +71,7 @@
       
        
     </script>
-        
-    <!-- Google Tag Manager -->
-<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
-new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
-j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
-'//www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-})(window,document,'script','dataLayer','GTM-MT6MLL');</script>
-<!-- End Google Tag Manager -->
-    
-    
+
    <#if (content.redirect)??>
    <script type = "text/javascript" language = "javascript">
 	window.location.replace("${content.redirect}");
@@ -81,6 +79,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
    </#if>
   </head>
   <body onload="prettyPrint();hljs.initHighlighting();">
+  <noscript><iframe src="//www.googletagmanager.com/ns.html?id= GTM-MT6MLL " height="0" width="0" style="display:none;visibility:hidden" title="googletagmanager"></iframe></noscript>
      <div class="container-fluid">
       <!--header to hold banner + top navigation area -->
       <!-- responsive design header using bootstrap css framework -->

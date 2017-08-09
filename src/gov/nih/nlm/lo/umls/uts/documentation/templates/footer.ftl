@@ -19,5 +19,4 @@
     </div>
 	<script src="https://www.nlm.nih.gov/scripts/paratureNLMmain.js"></script>
   </body>
-  <noscript><iframe src="//www.googletagmanager.com/ns.html?id= GTM-MT6MLL " height="0" width="0" style="display:none;visibility:hidden" title="googletagmanager"></iframe></noscript>
 </html>
