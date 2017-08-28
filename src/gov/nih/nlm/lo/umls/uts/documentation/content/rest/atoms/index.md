@@ -50,7 +50,7 @@ sabs| N | One or more source abbreviations | Any [root source abbreviation](http
 ttys | N | One or more term types | Any valid [term type](https://www.nlm.nih.gov/research/umls/knowledge_sources/metathesaurus/release/abbreviations.html#TTYC) in the UMLS | n/a| Use a comma between each term type to specify more than one.
 language | N | Retrieve only atoms that have a specific language | Any 3 letter language abbreviation in the UMLS, such as "ENG","FRE","SPA","GER","DUT","JPN", etc | All languages are returned by default | Currently filtering by one language is supported.
 includeObsolete | N |  Include content that is obsolete according to the content provider or NLM. | true or false | false | n/a
-includeSuppressible | N |  Include content that is suppressible according to NLM Editors .| true or false | false | n/a
+includeSuppressible | N |  Include content that is suppressible according to NLM Editors.| true or false | false | n/a
 pageNumber | N | Whole number that specifies which page of results to fetch. | 1,2,3, etc | 1 | n/a
 pageSize | N | Whole number that specifies the number of results to include per page. | 1,2,3, etc | 25 | n/a
 
