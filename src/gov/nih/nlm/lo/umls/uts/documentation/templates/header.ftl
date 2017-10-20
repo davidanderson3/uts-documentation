@@ -18,6 +18,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     <meta name="DC.Language" content="eng" />
     <meta name="generator" content="JBake">
     <meta http-equiv="X-UA-Compatible" content="IE=edge;IE=9;IE=8;"/>
+	<meta name="NLM.Contact.Email" content="nlmumlscustserv@mail.nlm.nih.gov" />
 
     <!-- Le styles -->
     <link href="<#if (content.rootpath)??>${content.rootpath}<#else></#if>css/nlm-dropdown.css" rel="stylesheet" type="text/css">

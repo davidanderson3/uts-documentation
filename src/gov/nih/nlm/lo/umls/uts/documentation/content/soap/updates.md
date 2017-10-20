@@ -15,8 +15,7 @@ December 2014|Deprecation|The following methods of the UTS API 2.0 are deprecate
 -   getCooccurrenceType
 -   getAllCooccurrenceTypes
 Users who are using these methods should begin removing them from their
-code. Cooccurrence data are now available from the [MEDLINE Baseline
-Repository.](http://mbr.nlm.nih.gov/MRCOC.shtml)|
+code. Co-occurrence data are now available from the [MEDLINE Co-Occurence File (MRCOC)](https://ii.nlm.nih.gov/MRCOC.shtml).|
 October 2014|New Method|New method introduced- getNewConcepts(): Retrives all new concepts for a given UMLS release.|Content
 October 2014|New Method|New method introduced- getNewConceptsCount(): Retrives the count of all new concepts for a given UMLS release.|Content
 September 2013|New Method|New method introduced- getConceptDefinitions(): Retrieves|source-provided definition(s) for a given conceptId.|Content
