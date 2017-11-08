@@ -12,7 +12,6 @@
         <br />
         <a href="http://www.nih.gov/icd/od/foia/index.htm">Freedom of Information Act</a>, <a class="paratureLink" href="https://support.nlm.nih.gov/ics/support/default.asp?deptID=28054&amp;from=" target="_blank">NLM Customer Support</a>
 	<br/>
-	 Baked with <a href="http://jbake.org">JBake ${version}</a>
        </div>
       </div>
       </div>
