@@ -17,6 +17,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     <meta name="DC.Rights" content="Public Domain" />
     <meta name="DC.Language" content="eng" />
     <meta name="generator" content="JBake">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge;IE=9;IE=8;"/>
 	<meta name="NLM.Contact.Email" content="nlmumlscustserv@mail.nlm.nih.gov" />
 
     <!-- Le styles -->
@@ -41,7 +42,11 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/8.6/highlight.min.js" type="text/javascript"></script>
     <script type="text/javascript" src="//cdn.datatables.net/1.10.3/js/jquery.dataTables.min.js"></script>
     <script type="text/javascript" src="//cdn.datatables.net/responsive/1.0.2/js/dataTables.responsive.min.js"></script>
-
+    
+    <!-- HTML5 shim, for IE6-8 support of HTML5 elements -->
+    <!--[if lt IE 9]>
+    <script src="<#if (content.rootpath)??>${content.rootpath}<#else></#if>js/html5shiv.min.js" type="text/javascript"></script>
+    <![endif]-->
     <link rel="shortcut icon" href="<#if (content.rootpath)??>${content.rootpath}<#else></#if>favicon.ico">
     
     <script type = "text/javascript" language = "javascript">
