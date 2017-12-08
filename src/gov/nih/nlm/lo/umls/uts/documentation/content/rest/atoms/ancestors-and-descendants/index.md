@@ -64,7 +64,6 @@ Sample output for https://uts-ws.nlm.nih.gov/rest/content/current/AUI/A10134087/
 			"children" : "https://uts-ws.nlm.nih.gov/rest/content/2016AA/AUI/A10133773/children",
 			"descendants" : "https://uts-ws.nlm.nih.gov/rest/content/2016AA/AUI/A10133773/descendants",
 			"relations" : "https://uts-ws.nlm.nih.gov/rest/content/2016AA/AUI/A10133773/relations",
-			"definitions" : "https://uts-ws.nlm.nih.gov/rest/content/2016AA/AUI/A10133773/definitions",
 			"name" : "IntrabursalRoute",
 			"language" : "ENG",
 			"contentViewMemberships" : []
@@ -85,7 +84,6 @@ Sample output for https://uts-ws.nlm.nih.gov/rest/content/current/AUI/A10134087/
 			"children" : "NONE",
 			"descendants" : null,
 			"relations" : "https://uts-ws.nlm.nih.gov/rest/content/2016AA/AUI/A8317632/relations",
-			"definitions" : "https://uts-ws.nlm.nih.gov/rest/content/2016AA/AUI/A8317632/definitions",
 			"name" : "Injection, intrabursal",
 			"language" : "ENG",
 			"contentViewMemberships" : []
@@ -106,7 +104,6 @@ Sample output for https://uts-ws.nlm.nih.gov/rest/content/current/AUI/A10134087/
 			"children" : "https://uts-ws.nlm.nih.gov/rest/content/2016AA/AUI/A10133791/children",
 			"descendants" : "https://uts-ws.nlm.nih.gov/rest/content/2016AA/AUI/A10133791/descendants",
 			"relations" : "https://uts-ws.nlm.nih.gov/rest/content/2016AA/AUI/A10133791/relations",
-			"definitions" : "https://uts-ws.nlm.nih.gov/rest/content/2016AA/AUI/A10133791/definitions",
 			"name" : "IntraepidermalRoute",
 			"language" : "ENG",
 			"contentViewMemberships" : []

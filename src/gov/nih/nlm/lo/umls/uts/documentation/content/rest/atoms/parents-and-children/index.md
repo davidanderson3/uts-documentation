@@ -64,7 +64,6 @@ Sample output for https://uts-ws.nlm.nih.gov/rest/content/current/AUI/A10134087/
 			"children" : "https://uts-ws.nlm.nih.gov/rest/content/2016AA/AUI/A19720766/children",
 			"descendants" : "https://uts-ws.nlm.nih.gov/rest/content/2016AA/AUI/A19720766/descendants",
 			"relations" : "https://uts-ws.nlm.nih.gov/rest/content/2016AA/AUI/A19720766/relations",
-			"definitions" : "https://uts-ws.nlm.nih.gov/rest/content/2016AA/AUI/A19720766/definitions",
 			"name" : "RouteOfAdministration",
 			"language" : "ENG",
 			"contentViewMemberships" : []

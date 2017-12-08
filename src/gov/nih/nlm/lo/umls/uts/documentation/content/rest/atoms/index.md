@@ -81,7 +81,6 @@ Sample output for https://uts-ws.nlm.nih.gov/rest/content/current/CUI/C0155502/a
 			"children" : "NONE",
 			"descendants" : null,
 			"relations" : "https://uts-ws.nlm.nih.gov/rest/content/2016AA/AUI/A8345234/relations",
-			"definitions" : "NONE",
 			"name" : "Benign paroxysmal positional vertigo",
 			"language" : "ENG",
 			"contentViewMemberships" : [{
@@ -107,7 +106,6 @@ Sample output for https://uts-ws.nlm.nih.gov/rest/content/current/CUI/C0155502/a
 			"children" : "NONE",
 			"descendants" : null,
 			"relations" : "NONE",
-			"definitions" : "NONE",
 			"name" : "Benign paroxysmal positional vertigo",
 			"language" : "ENG",
 			"contentViewMemberships" : [{
@@ -133,7 +131,6 @@ Sample output for https://uts-ws.nlm.nih.gov/rest/content/current/CUI/C0155502/a
 			"children" : "NONE",
 			"descendants" : null,
 			"relations" : "NONE",
-			"definitions" : "NONE",
 			"name" : "Benign recurrent vertigo",
 			"language" : "ENG",
 			"contentViewMemberships" : [{
