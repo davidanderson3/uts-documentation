@@ -1,0 +1,236 @@
+title=Authentication Test
+date=2015-06-10
+updated=2016-09-06
+type=post
+status=published
+~~~~~~
+
+<html>
+    <head>
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">          
+        <style type="text/css">
+            body {
+                font-family: Arial;
+            }
+            input[type=text], input[type=password] {
+                width: 15%;
+                padding: 12px 15px;
+                margin: 8px 0;
+                border: 1px solid #ccc;
+                border-radius: 4px;
+                box-sizing: border-box;
+            }
+            
+            input[type=submit], .formButton {
+                width: 10%;
+                background-color: #4CAF50;
+                color: white;
+                padding: 12px 20px;
+                margin: 8px 0;
+                border: none;
+                border-radius: 4px;
+                cursor: pointer;
+            }
+            
+            input[type=submit]:hover {
+                background-color: #45a049;
+            }
+            
+            #stUrl {
+                width: 50%;
+            }
+            
+            div {
+                border-radius: 5px;
+                background-color: #f2f2f2;
+                padding: 5px 20px;;      
+            }
+
+            div.component {
+                margin-bottom:5px;
+            }
+            
+            ul.results {
+            list-style-type:none;
+            }
+            
+            ul.results li a {
+            text-decoration:none;
+            color: black;
+            text-decoration: underline;
+            }
+            
+            pre {
+                white-space: pre-wrap;       /* Since CSS 2.1 */
+                white-space: -moz-pre-wrap;  /* Mozilla, since 1999 */
+                white-space: -pre-wrap;      /* Opera 4-6 */
+                white-space: -o-pre-wrap;    /* Opera 7 */
+                word-wrap: break-word;       /* Internet Explorer 5.5+ */
+            }
+            .error {
+                color: red;
+                font-weight:bold;
+            }        
+        </style>        
+    <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+    <script>
+            $(document).ready(
+                function() {
+                $("#searchResults").hide();
+                $("#tgtForm").submit(function (event) {
+                    console.log("submitted");
+                    $.post(
+                        "https://utslogin.nlm.nih.gov/cas/v1/tickets", 
+                        $("#tgtForm").serialize())
+                    .done(function (data, status, jqXHR) {                            
+                        console.log(data);
+                        $('#tgtRes').text(data);
+                        var tgtPattern = RegExp(/action=\"(http.*)\" method.*/g);
+                        var tgt = tgtPattern.exec(data);
+                        if(tgt) {
+                            $("#tgtVal").text(tgt[1]);                            
+                            $("#stUrl").text(tgt[1]);
+                            $("#stUrlLabel").text(tgt[1]);                            
+                        }
+
+                    }).fail(function (error) {
+                        console.log("Error - " + error);
+                    });
+                    event.preventDefault();
+                });  
+
+                $("#clearTgt").click(function() {
+                    console.log("Clear called");
+                    $("#tgtRes").text('');
+                    $("#tgtVal").text('');
+                    $("#stUrl").text('');
+                    $("#stUrlLabel").text('');
+                    $("#stVal").text('');
+                    $("#searchResults").hide();
+                });
+
+                $("#stForm").submit(function(event) {
+                    console.log("submitted");
+                    var tgtUrl = $("#tgtVal").text();
+                    $("#stUrlLabel").text(tgtUrl);
+                    $.post(
+                        tgtUrl, 
+                        $("#stForm").serialize())
+                    .done(function (data, status, jqXHR) {                            
+                        console.log(data);
+                        $('#stVal').text(data);
+                    }).fail(function (error) {
+                        console.log("Error - " + error);
+                    });
+                    event.preventDefault();
+                });
+
+                $("#clearSt").click(function() {
+                    $("#stUrl").text('');
+                    $("#stUrlLabel").text('');
+                    $("#stVal").text('');
+                });                
+
+                $("#searchForm").submit(function(event) {
+                    console.log("submitted");
+                    var searchStr = $("#searchStr").val();                    
+                    var ticket = $("#stVal").text();
+                    $.get(
+                        "https://uts-ws.nlm.nih.gov/rest/search/current?ticket="+ticket+"&string="+searchStr)
+                    .done(function (data, status, jqXHR) {                            
+                        console.log(data);
+                        //var jsonStr = $("pre").text();
+                        //var jsonObj = JSON.parse(data);
+                        var jsonPretty = JSON.stringify(data, null, '\t');
+                        $('#results').text(jsonPretty);
+                        $("#searchResults").show();
+                    }).fail(function (error) {
+                        console.log("Error - " + error);
+                    });
+                    event.preventDefault();
+                });
+
+                $("#resetSearch").click(function() {
+                    $("#results").text('');
+                });                
+
+            });
+        
+        </script>         
+    </head>
+    <body>
+        <div class="component">
+            <form id="tgtForm" method="POST">
+            <p>Enter username and password to obtain a Ticket Granting Ticket.</p>
+            <p id="error" class="error"></p>
+                <label for="username">Username: </label>
+                <input type="text" id="username" name="username" placeholder="Username">
+          
+                <label for="password">Password: </label>
+                <input type="password" id="password" name="password" placeholder="Password">
+          
+                <input class="formButton" type="submit" id="getTGTBtn" value="Submit">
+                <input class="formButton" type="reset" id="clearTgt" value="Clear">
+            </form>
+            <p>
+            Request:
+            </p>
+            <pre>
+                Method: POST
+                Url: https://uts-login.nlm.nih.gov/cas/v1/tickets
+                Headers: Content-Type=application/x-www-form-urlencoded
+                Parameters: username, password
+            </pre>
+            <p>
+                Response: 
+            </p>
+            <pre id="tgtRes">           
+            </pre>
+        
+            <p>Extracted URL with TGT for obtaining Service Tickets:</p>
+            <pre id="tgtVal">            
+            </pre>
+        </div>      
+
+        <div class="component">
+            <p>URL to obtain Service Ticket:</p>
+            <pre><label id="stUrl"></label></pre>
+            <form id="stForm" method="POST">
+                <label>Service:</label>
+                <input type="text" name="service" id="service" value="http://umlsks.nlm.nih.gov"/>                
+                <input class="formButton" type="submit" id="getSTBtn" value="Get ST">
+                <input class="formButton" type="reset" id="clearSt" value="Clear">
+            </form>
+            <p>
+            Request:
+            </p>
+            <pre>
+                Method: POST
+                Url:<label id="stUrlLabel">https://uts-login.nlm.nih.gov/cas/v1/tickets</label>
+                Headers: Content-Type=application/x-www-form-urlencoded
+                Parameters: service
+            </pre>
+            <p>
+                Response (Service Ticket):
+            </p>
+            <pre id="stVal">            
+            </pre>
+        </div>           
+
+        <div class="component">
+            <form id="searchForm" method="POST">
+                <label>Search:</label>
+                <input id="searchStr" placeholder="Enter Search Term" type="text">
+                <input class="formButton" type="submit" id="searchBtn" value="Go">
+                <input class="formButton" type="reset" id="resetSearch" value="Reset">
+            </form>            
+        </div>   
+        <div id="searchResults" class="component">
+            Search Results
+        <pre>
+        <div id="results"></div>       
+        </pre>
+        </div>
+         
+    </body>
+</html>
