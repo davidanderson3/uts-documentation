@@ -9,9 +9,11 @@ navorder=2
 
 The UMLS REST API requires a UMLS account for the authentication described below. If you do not have a UMLS account, you may apply for a license on the [UMLS Terminology Services (UTS) website](https://uts.nlm.nih.gov). 
 
-Authentication involves **3 steps** and requires you to generate and submit forms using POST calls. You may find [Postman](https://www.getpostman.com/), [Hurl.it](https://www.hurl.it/), or a number of other tools useful for making these POST calls. You can also check out the [Postman sample collections](/rest/rest-api-cookbook/postman.html), or [code samples in Python, Java, and Perl on Github](https://github.com/HHS/uts-rest-api) to help you. 
+Authentication involves **3 steps** and requires you to generate and submit forms using POST calls. You may find [Postman](https://www.getpostman.com/), [Hurl.it](https://www.hurl.it/), or a number of other tools useful for making these POST calls. You can also check out the [Postman sample collections](/rest/rest-api-cookbook/postman.html), or [code samples in Python, Java, and Perl on Github](https://github.com/HHS/uts-rest-api) to help you. We also offer an [authentication demo](#demo).
 
 For help with making authentication calls using Postman, see our tutorial: [UMLS REST API: Authentication and Calling](https://www.nlm.nih.gov/research/umls/user_education/quick_tours/UTS-API/UTS_REST_API_Authentication.html). 
+
+<a href="#demo"><input class="formButton" type="submit" value="TRY OUR AUTHENTICATION DEMO"></a>
 
 #### Step 1: Determine whether you want to use your UMLS username and password OR your UMLS API key.
 
@@ -81,4 +83,5 @@ ST-134-HUbXGfI765aSj0UqtdvU-cas
 
 * If your service ticket is valid, you'll receive a string that corresponds to either your UMLS username or API Key, depending on which option you used to generate your ticket-granting ticket.  
     * A ticket generated against the wrong service will return the following error: ```<cas:authenticationFailure code='INVALID_SERVICE'>```  
-    * An invalid service ticket will return the following error: ```<cas:authenticationFailure code='INVALID_TICKET'>```  
+    * An invalid service ticket will return the following error: ```<cas:authenticationFailure code='INVALID_TICKET'>``` 
+    
