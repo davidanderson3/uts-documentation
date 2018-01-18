@@ -55,9 +55,10 @@
   </div>
   <div class="row">
     <div class="col-sm-12">
-    <p>Extracted URL with TGT for obtaining Service Tickets:</p>
+    <p><strong>Extracted URL with TGT for obtaining Service Tickets:</strong></p>
     <pre id="tgtVal">            
             </pre>
+    <p>Your Ticket-Granting Ticket will be valid for 8 hours.</p>
     </div>
   </div>
   <img src="../images/downarrow.png" class="arrow" alt="down arrow">
@@ -110,14 +111,14 @@
   <div class="row">
   <div class="col-sm-12"> 
   <h4>Request Data</h4>
-  <p>To request data, append your service ticket to your request URL. For example: https://uts-ws.nlm.nih.gov/rest/current?string={yourSearchTerm}&ticket={yourServiceTicket}. Each new request requires a new Service Ticket.
+  <p>To request data, append your Service Ticket to your request URL. For example: https://uts-ws.nlm.nih.gov/rest/current?string=diabetes&ticket={yourServiceTicket}. Each new request requires a new Service Ticket.
   <!--
     <img src="../images/downarrow.png" class="arrow" alt="down arrow">
   <div class="row">
   <div class="col-sm-12">
 <h4>Request Data</h4>
 
-<p> Append your service ticket to your request. For example: https://uts-ws.nlm.nih.gov/rest/current?string={yourSearchTerm}&ticket={yourServiceTicket}</p>
+<p> Append your Service Ticket to your request. For example: https://uts-ws.nlm.nih.gov/rest/current?string={yourSearchTerm}&ticket={yourServiceTicket}</p>
   <form id="apiForm" method="POST">
     <label>Search:</label>
     <input id="searchStr" placeholder="Enter Search Term" type="text">
