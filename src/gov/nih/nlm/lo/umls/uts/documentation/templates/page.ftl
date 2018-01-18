@@ -25,6 +25,9 @@
 	
 	<h1><#escape x as x?xml>${content.title}</#escape></h1>
 	${content.body}
+	<#if (content.uri)??  && content.uri?starts_with("rest/authentication.html")>
+	<#include "authdemo.ftl">
+	</#if>
 	</div><!--end row-->
 	</div><!--end container--> 
 <#include "footer.ftl">

@@ -78,6 +78,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 	window.location.replace("${content.redirect}");
    </script>
    </#if>
+   <#include "auth.ftl">
   </head>
   <body onload="prettyPrint();hljs.initHighlighting();">
   <noscript><iframe src="//www.googletagmanager.com/ns.html?id= GTM-MT6MLL " height="0" width="0" style="display:none;visibility:hidden" title="googletagmanager"></iframe></noscript>
