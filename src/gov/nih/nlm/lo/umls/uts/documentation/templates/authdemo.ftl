@@ -1,5 +1,5 @@
 <a id="demo"></a> 
-<div class="container-fluid">
+<div class="container-fluid authdemo">
   <div class="row">
    <div class="col-sm-12">
     <h3>Authentication Demo
