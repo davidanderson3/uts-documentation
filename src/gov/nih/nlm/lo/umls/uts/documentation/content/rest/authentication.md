@@ -30,12 +30,23 @@ Type of Request|URI|Key Names|Key Values|Description
 --- | --- | --
 POST| https://utslogin.nlm.nih.gov/cas/v1/api-key | apikey | Your UMLS API key |Retrieves a TGT to be used repeatedly for getting Service Tickets.
 
+curl example:
+
+~~~~text
+curl -X POST https://utslogin.nlm.nih.gov/cas/v1/api-key -H 'content-type: application/x-www-form-urlencoded' -d apikey={your_api_key_here}
+~~~~
+
 **Option 2**: Use your username and password
 
 Type of Request|URI|Key Names|Key Values|Description
 --- | --- | --
 POST| https://utslogin.nlm.nih.gov/cas/v1/tickets | username,password | Your UMLS username and password |Retrieves a TGT to be used repeatedly for getting Service Tickets.
 
+curl example:
+
+~~~~text
+curl -X POST https://utslogin.nlm.nih.gov/cas/v1/tickets -H 'content-type: application/x-www-form-urlencoded' -d username={your_username_here}&password={your_password_here}
+~~~~
 
 Sample response to the POST call for getting a TGT (your TGT of course will be unique):
 
@@ -63,6 +74,12 @@ Getting a Service Ticket
 Type of Request|URI|Key Name|Key Value|Description
 --- | --- | --
 POST|https://utslogin.nlm.nih.gov/cas/v1/tickets/{TGT}|service|http://umlsks.nlm.nih.gov|Retrieves a single-use service ticket for the UMLS REST API.
+
+curl example:
+
+~~~~text
+curl -X POST https://utslogin.nlm.nih.gov/cas/v1/tickets/{your_TGT_here} -H 'content-type: application/x-www-form-urlencoded' -d service=http%3A%2F%2Fumlsks.nlm.nih.gov
+~~~~
 
 Sample Response to a POST call for a Service Ticket:
 
