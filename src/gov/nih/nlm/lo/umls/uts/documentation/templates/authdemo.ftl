@@ -4,15 +4,11 @@
    <div class="col-sm-12">
     <h3>Authentication Demo
     <h4>Request a Ticket Granting Ticket (TGT)</h4>
-    <p>Enter your username and password.</p>
+    <p>Enter your API key. You can get your API key by visiting your profile at <a href="https://uts.nlm.nih.gov/">https://uts.nlm.nih.gov/</a>.</p>
     <form id="tgtForm" method="POST">
 
-      <p id="error" class="error">Invalid Credentials</p>
-      <label for="username">Username: </label>
-      <input type="text" id="username" name="username" placeholder="Username">
-
-      <label for="password">Password: </label>
-      <input type="password" id="password" name="password" placeholder="Password">
+      <label for="apikey">API Key: </label>
+      <input type="text" id="apikey" name="apikey" placeholder="API Key">
 
       <input class="formButton" type="submit" id="getTGTBtn" value="Get Ticket-Granting Ticket">
       <input class="formButton" type="reset" id="clearTgt" value="Clear">
@@ -67,7 +63,6 @@
 <h4>Request a Service Ticket (ST)</h4>
 <p>You must request a Ticket-Granting Ticket above before requesting a service ticket.</p>
   <form id="stForm" method="POST">
-  <p id="error" class="error">Invalid Service Name (hint: enter http://umlsks.nlm.nih.gov)</p>
     <label>Service:</label>
     <input type="text" name="service" id="service" class="apiInput" value="http://umlsks.nlm.nih.gov" />
     <input class="formButton" type="submit" id="getSTBtn" value="Get Service Ticket">

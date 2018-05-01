@@ -40,8 +40,8 @@
                 font-weight:bold;
             }        
             
-            .apiInput {
-            width: 200px;
+            input#apikey, input#service  {
+            width: 400px;
             }
             
             .arrow {
@@ -58,7 +58,7 @@
                 $("#tgtForm").submit(function (event) {
                     console.log("submitted");
                     $.post(
-                        "https://utslogin.nlm.nih.gov/cas/v1/tickets", 
+                        "https://utslogin.nlm.nih.gov/cas/v1/api-key", 
                         $("#tgtForm").serialize())
                     .done(function (data, status, jqXHR) {                            
                         console.log(data);
