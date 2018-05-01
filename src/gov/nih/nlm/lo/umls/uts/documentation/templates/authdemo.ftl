@@ -7,7 +7,7 @@
     <p>Enter your username and password.</p>
     <form id="tgtForm" method="POST">
 
-      <p id="error" class="error"></p>
+      <p id="error" class="error">Invalid Credentials</p>
       <label for="username">Username: </label>
       <input type="text" id="username" name="username" placeholder="Username">
 
@@ -67,6 +67,7 @@
 <h4>Request a Service Ticket (ST)</h4>
 <p>You must request a Ticket-Granting Ticket above before requesting a service ticket.</p>
   <form id="stForm" method="POST">
+  <p id="error" class="error">Invalid Service Name (hint: enter http://umlsks.nlm.nih.gov)</p>
     <label>Service:</label>
     <input type="text" name="service" id="service" class="apiInput" value="http://umlsks.nlm.nih.gov" />
     <input class="formButton" type="submit" id="getSTBtn" value="Get Service Ticket">
