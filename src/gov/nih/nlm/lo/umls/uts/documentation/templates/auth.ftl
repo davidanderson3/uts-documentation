@@ -71,10 +71,12 @@
                             $("#stUrlLabel").text(tgt[1]);                            
                         }
 
-                    }).fail(function (error) {
-                        console.log("Error - " + error);
+                    }).fail(function (response) {
+                        console.log("Error - " + response);
+                        alert('Error: Please enter a valid API key. Make sure there are no spaces.' + response.responseText);
                     });
                     event.preventDefault();
+
                 });  
 
                 $("#clearTgt").click(function() {
@@ -99,6 +101,7 @@
                         $('#stVal').text(data);
                     }).fail(function (error) {
                         console.log("Error - " + error);
+                        alert('Error: A Ticket-Granting Ticket must be created before requesting a Service Ticket. The "service" value must be "http://umlsks.nlm.nih.gov". ' + response.responseText);
                     });
                     event.preventDefault();
                 });
