@@ -13,8 +13,8 @@ For example, let's say we want look for concepts from the US Edition of SNOMED C
 +  `string=elevated cholesterol`
 +  `sabs=SNOMEDCT_US`
 +  `returnIdType=sourceUi`
-+  `pageNumber=\<pageNumber\>`<sup><b>[1](#1)</b></sup>
-+  `ticket=\<your service ticket\>` See [authentication](/rest/authentication.html) for details
++  `pageNumber=<pageNumber>`<sup><b>[1](#1)</b></sup>
++  `ticket=<your service ticket>` See [authentication](/rest/authentication.html) for details
 
 
 Our initial `GET` call looks like this:
