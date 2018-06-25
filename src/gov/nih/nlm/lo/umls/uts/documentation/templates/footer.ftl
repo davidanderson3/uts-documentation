@@ -4,6 +4,8 @@
     <div class = "row">
         <div class = "col-md-12 col-sm-8 col-xs-6">
 	<p class = "white"><#if (content.updated)??><b>Content last updated:</b> ${content.updated}</#if>
+	    <br/>
+	    <a href="/terms-of-service.html">API Terms of Service</a>
         <br/>
         <a href="https://www.nlm.nih.gov/copyright.html">Copyright</a>, <a href="https://www.nlm.nih.gov/privacy.html">Privacy</a>, <a href="https://www.nlm.nih.gov/accessibility.html">Accessibility</a>, <a href="https://www.nlm.nih.gov/index.html">Site Map</a>, <a href="https://www.nlm.nih.gov/plugins.html">Viewers and Players</a>
         <br />
