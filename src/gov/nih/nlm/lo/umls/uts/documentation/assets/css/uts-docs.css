@@ -111,9 +111,14 @@ color: #ff9900;
 
 }
 
-.white, .white a{
+.white, .white a {
    
    color:white;
+   text-decoration: none !important;
+}
+
+a.white:visited {
+	color:white;
 }
 
 .notice {

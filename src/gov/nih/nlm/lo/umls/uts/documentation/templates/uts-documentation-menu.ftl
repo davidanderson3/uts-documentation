@@ -13,7 +13,7 @@
          </form>
        </div>
        <div class = "col-md-6 col-sm-8 col-xs-12">
-           <a class = "pull-right white paratureLink" style = "margin-right:1em;" href="https://support.nlm.nih.gov/link/portal/28045/28054/ArticleFolder/151/umls?category=umls&amp;from=" target="_blank">NLM Customer Support</a>
+           <a class = "pull-right white paratureLink" style = "margin-right:1em;" href="https://support.nlm.nih.gov/" target="_blank">NLM Customer Support</a>
        </div>
     </div>
   </div>
@@ -35,7 +35,7 @@
    <div class="col-md-4 col-sm-8 col-xs-12 umls-menu">
      <a href = "https://www.nlm.nih.gov/research/umls/quickstart.html">UMLS Quick Start Guide</a>&nbsp;<b>|</b>&nbsp;
      <a href = "https://www.nlm.nih.gov/research/umls/faq_main.html">FAQs</a>&nbsp;<b>|</b>&nbsp;
-     <a href = "https://support.nlm.nih.gov/ics/support/ticketnewwizard.asp?style=classic&deptID=28054&category=umls">Customer Support</a>
+     <a href = "https://uts.nlm.nih.gov/metathesaurus.html">Browse the UMLS Metathesaurus</a>
    </div>
 </div>
 <!-- only build the REST Menu if we're in the REST API -->
