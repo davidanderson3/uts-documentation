@@ -1,6 +1,6 @@
-title=Release Notes and Roadmap
+title=Release Notes
 date=2015-11-09
-updated=2016-06-28
+updated=2018-10-04
 type=page
 status=published
 navorder=1
@@ -29,9 +29,3 @@ Released: June 28, 2016
 
 See our github sample code area for a list of [known issues](https://github.com/HHS/uts-rest-api/issues) with the API.
 
-#### Planned Updates
-
-The following new items are planned for upcoming versions of the API.    
-
-##### Features:
-* **Add history mechanism so users can retrieve CUIs that are no longer in the latest UMLS release**
