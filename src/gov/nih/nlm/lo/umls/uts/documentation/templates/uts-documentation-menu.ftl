@@ -1,23 +1,19 @@
 <#assign categories = ['Retrieving UMLS Data', 'Retrieving Source-Asserted Data', 'REST API Cookbook']>
-<div id="main-body" class="umls-green container">
- <!-- Begin Div Header Template -->
- <!--Start Branding Bar-->
-<div id="barbranding"><h3><span>UMLS API Technical Documentation</span></h3>
-<div class="breadcrumb-brand umls-div">
-<ul>
-<li><a href="//github.com/HHS/uts-rest-api" title="Sample Code on GitHub" id="anch_31"><strong>Sample Code on GitHub</strong></a></li>
+<div class="container-fluid bg-primary">
+<div class="container">
+<div id="barbranding">
+  <h3><span style="color: white;">UMLS API Technical Documentation</span></h3>
+  <div class="breadcrumb-brand umls-div">
+    <ul>
+
+      <li><a href="//github.com/HHS/uts-rest-api" title="Sample Code on GitHub" id="anch_31"><strong>Sample Code on GitHub</strong></a></li>
 <li><a href="//support.nlm.nih.gov/support/create-case/" title="Provide Feedback" id="anch_33"><strong>Provide Feedback</strong></a></li>
-</ul>
+    </ul>
+    </div>
  </div>
  </div>
-
-
-<!-- End Div Header Template -->
-
-<a name="skip" id="skipnav"></a>
-<div id="body">
-<!-- only build the REST Menu if we're in the REST API -->
-<#if (content.uri)??  && content.uri?starts_with("rest/")>
+ </div>
+ <#if (content.uri)??  && content.uri?starts_with("rest/")>
 <div class="container-fluid bg-secondary">
     <div class="container pl-0 pl-lg-3">
       <nav class="navbar navbar-expand-lg navbar-light">
@@ -32,7 +28,7 @@
           <#list categories as cat>
             <div class="nav-item dropdown"> 
                <a class="nav-link dropdown-toggle" href="#" id="products_services" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">${cat}</a>    
-               <div class="dropdown-menu ml-xl-5">
+               <div class="dropdown-menu dropdown-menu-right ml-xl-5">
                <#list published_pages?sort_by('navorder') as page>
                <#if (page.category)?? && page.category = cat><#if (content.rootpath)??>
                <a class="dropdown-item" href="${content.rootpath}${page.uri}">${page.title}</a> 

@@ -33,3 +33,12 @@ table {
     display: none;
   }
 }
+
+.uts-breadcrumbs {
+background-color: black;
+color: white;
+}
+
+.uts-breadcrumbs a {
+color: white;
+}
