@@ -3,20 +3,20 @@
   <div class="container-fluid">
     <div class="container pt-5">
       <div class="row mt-3">
-        <div class="col-lg-1 col-md-2 col-2 pr-0"><a href="https://www.nih.gov/"><img src="//wwwqa.nlm.nih.gov/images/NIH_White.png" class="img-fluid nih_logo mt-1"  alt="NIH logo"/></a></div>
+        <div class="col-lg-1 col-md-2 col-2 pr-0"><a href="https://www.nih.gov/"><img src="//www.nlm.nih.gov/images/NIH_White.png" class="img-fluid nih_logo mt-1"  alt="NIH logo"/></a></div>
         <div class="col-xl-2 col-lg-3 col-md-5 col-10 pr-4">
 
 <h4 class="mt-0"><a href="//www.nlm.nih.gov/" class="text-white" id="anch_63">U.S. National Library 
             of Medicine</a></h4>  
           <a href="https://www.google.com/maps/place/8600+Rockville+Pike,+Bethesda,+MD+20894/@38.9959508,-77.101021,17z/data=!3m1!4b1!4m5!3m4!1s0x89b7c95e25765ddb:0x19156f88b27635b8!8m2!3d38.9959508!4d-77.0988323">
-          <p class="address_footer pt-1 pt-md-3"> <img class="marker pr-2 d-none d-md-block" src="//wwwqa.nlm.nih.gov/images/map-marker.svg" alt="Map Marker">8600 Rockville Pike Bethesda, MD 20894</p>
+          <p class="address_footer pt-1 pt-md-3"> <img class="marker pr-2 d-none d-md-block" src="//www.nlm.nih.gov/images/map-marker.svg" alt="Map Marker">8600 Rockville Pike Bethesda, MD 20894</p>
           </a>
           <div class="d-none d-lg-block">
           <h6 class="text-white mt-3 mb-2">Follow Us</h6>
           <ul class="list-inline social_media">
-            <li class="list-inline-item"><a href="https://www.facebook.com/nationallibraryofmedicine"><img src="//wwwqa.nlm.nih.gov/images/Facebook_W.svg" class="img-fluid" alt="Facebook"></a></li>
-            <li class="list-inline-item"><a href="https://twitter.com/nlm_news"><img src="//wwwqa.nlm.nih.gov/images/Twitter_W.svg" class="img-fluid" alt="Twitter"></a></li>
-            <li class="list-inline-item"><a href="https://www.youtube.com/user/NLMNIH"><img src="//wwwqa.nlm.nih.gov/images/YouTube_W.svg" class="img-fluid" alt="You Tube"></a></li>
+            <li class="list-inline-item"><a href="https://www.facebook.com/nationallibraryofmedicine"><img src="//www.nlm.nih.gov/images/Facebook_W.svg" class="img-fluid" alt="Facebook"></a></li>
+            <li class="list-inline-item"><a href="https://twitter.com/nlm_news"><img src="//www.nlm.nih.gov/images/Twitter_W.svg" class="img-fluid" alt="Twitter"></a></li>
+            <li class="list-inline-item"><a href="https://www.youtube.com/user/NLMNIH"><img src="//www.nlm.nih.gov/images/YouTube_W.svg" class="img-fluid" alt="You Tube"></a></li>
           </ul>
             </div>
         </div>
@@ -60,9 +60,9 @@
               <div class="d-md-none">
                           <h6 class="text-white mt-4 mb-2">Follow Us</h6>
           <ul class="list-inline social_media">
-            <li class="list-inline-item"><a href="https://www.facebook.com/nationallibraryofmedicine"><img src="//wwwqa.nlm.nih.gov/images/Facebook_W.svg" class="img-fluid" alt="Facebook"></a></li>
-            <li class="list-inline-item"><a href="https://twitter.com/nlm_news"><img src="//wwwqa.nlm.nih.gov/images/Twitter_W.svg" class="img-fluid" alt="Twitter"></a></li>
-            <li class="list-inline-item"><a href="https://www.youtube.com/user/NLMNIH"><img src="//wwwqa.nlm.nih.gov/images/YouTube_W.svg" class="img-fluid" alt="You Tube"></a></li>
+            <li class="list-inline-item"><a href="https://www.facebook.com/nationallibraryofmedicine"><img src="//www.nlm.nih.gov/images/Facebook_W.svg" class="img-fluid" alt="Facebook"></a></li>
+            <li class="list-inline-item"><a href="https://twitter.com/nlm_news"><img src="//www.nlm.nih.gov/images/Twitter_W.svg" class="img-fluid" alt="Twitter"></a></li>
+            <li class="list-inline-item"><a href="https://www.youtube.com/user/NLMNIH"><img src="//www.nlm.nih.gov/images/YouTube_W.svg" class="img-fluid" alt="You Tube"></a></li>
           </ul>
                 </div>
               </div>
@@ -76,10 +76,10 @@
     </div>
   </div>
 </footer>
-<script src="//wwwqa.nlm.nih.gov/home_assets/vendor/bootstrap/dist/js/bootstrap.bundle.js"></script>
+<script src="//www.nlm.nih.gov/home_assets/vendor/bootstrap/dist/js/bootstrap.bundle.js"></script>
 <script src="//assets.nlm.nih.gov/jquery/jquery-3.3.1.min.js"></script>
 <script src="//assets.nlm.nih.gov/jquery/jquery-migrate-3.0.0.min.js"></script>
-<script src="//wwwqa.nlm.nih.gov/scripts/home.js"></script>
+<script src="//www.nlm.nih.gov/scripts/home.js"></script>
 
   </body>
 </html>
