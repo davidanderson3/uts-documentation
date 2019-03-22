@@ -1,4 +1,4 @@
-		</div>
+
 <footer class="bg-primary text-white insertfooter">
 
  <div class="container-fluid XINSERTEDX">
