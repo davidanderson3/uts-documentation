@@ -1,7 +1,7 @@
 
 <footer class="bg-primary text-white insertfooter">
 
- <div class="container-fluid XINSERTEDX">
+ <div class="container-fluid">
     <div class="container pt-5">
       <div class="row mt-3">
         <div class="col-xl-3 col-lg-4 col-md-5 offset-md-2 offset-lg-0 col-10 ">
