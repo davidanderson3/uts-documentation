@@ -32,7 +32,7 @@ Sample URI|Description|Returned JSON Object classType
 Parameter name | Required? Y/N | Description|  Valid Values | Default value | Usage Note
 --- | ---
 ticket | Y | A single-use service ticket is required for each call to the API. See [authentication](../authentication.html) for more information | n/a | n/a | n/a
-sabs | N | Comma-separated list of source vocabularies to include in your search | Any root source abbreviation in the UMLS. See the “Abbreviation” column for a list of [UMLS source vocabulary abbreviations](https://www.nlm.nih.gov/research/umls/sourcereleasedocs/current/source-abbreviations.html).  | All UMLS source vocabularies | Use a comma between each source abbreviation to specify more than one.
+sabs | N | Comma-separated list of source vocabularies to include in your search | Any root source abbreviation in the UMLS. See the “Abbreviation” column for a list of [UMLS source vocabulary abbreviations](https://www.nlm.nih.gov/research/umls/sourcereleasedocs/index.html).  | All UMLS source vocabularies | Use a comma between each source abbreviation to specify more than one.
 pageNumber | N | Whole number that specifies which page of results to fetch. | 1,2,3, etc | 1 | n/a
 pageSize | N | Whole number that specifies the number of results to include per page. | 1,2,3, etc | 25 | n/a
 
