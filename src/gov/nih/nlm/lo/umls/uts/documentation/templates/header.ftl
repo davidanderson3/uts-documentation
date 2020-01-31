@@ -3,7 +3,7 @@
 
 <head>
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <link rel="stylesheet" href="https://www.nlm.nih.gov/home_assets/css/nlm_main.css">
+  <link rel="stylesheet" href="https://wwwqa.nlm.nih.gov/home_assets/css/nlm_main.css">
   <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,500,500i,700,900" rel="stylesheet">
   <link rel="schema.DC" href="http://purl.org/dc/elements/1.1/" title="The Dublin Core metadata Element Set" />
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.10/css/all.css" integrity="sha384-+d0P83n9kaQMCwj8F4RJB66tzIwOKmrdb46+porD/OvrJ+37WqIM7UoBtwHO6Nlg" crossorigin="anonymous">
@@ -39,16 +39,6 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 <body onload="prettyPrint();hljs.initHighlighting();">
   <noscript><iframe src="//www.googletagmanager.com/ns.html?id= GTM-MT6MLL " height="0" width="0" style="display:none;visibility:hidden" title="googletagmanager"></iframe></noscript>
   <header>
-    <div class="container-fluid  bg-primary">
-      <div class="container top_row">
-        <div class="row">
-          <div class="col"> <a href="https://www.hhs.gov/" class="text-white"><img src="https://www.nlm.nih.gov/images/HHS_White.png" class="hhslogo float-left img-fluid d-none d-sm-block"  alt="HHS logo"/>
-          <p class="float-left mt-1 mb-0"><small> U.S. Department of Health & Human Services</small></p></a>
-          </div>
-
-        </div>
-      </div>
-    </div>
       <div class="container-fluid">
     <div class="container branding">
       <div class="row container py-3">
