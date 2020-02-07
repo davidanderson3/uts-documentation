@@ -1,6 +1,6 @@
 title=Searching the UMLS
 date=2015-06-08
-updated=2018-05-11
+updated=2020-02-07
 type=page
 status=published
 navorder=3
@@ -41,10 +41,20 @@ includeObsolete | N | Return content that is a result of matches on obsolete ter
 includeSuppressible | N | Return content that is a result of matches on suppressible terms. | true or false | false | n/a
 returnIdType | N | Specifies the type of identifier you wish to retrieve. | 'aui','concept','code','sourceConcept','sourceDescriptor', 'sourceUi' | 'concept' | Use 'code','sourceConcept', 'sourceDescriptor', or 'sourceUi' if you prefer source-asserted identifiers rather than CUIs in your search results.
 sabs | N | Comma-separated list of source vocabularies to include in your search | Any root source abbreviation in the UMLS. See the 'Abbreviation' column for a list of [UMLS source vocabulary abbreviations](https://www.nlm.nih.gov/research/umls/sourcereleasedocs/index.html).  | All UMLS source vocabularies | Use a comma between each source abbreviation to specify more than one.
-searchType | N | Type of search you wish to use | 'exact','words','leftTruncation', 'rightTruncation','approximate', 'normalizedString', 'normalizedWords' | 'words' | Use 'exact' when using inputType = 'code', 'sourceConcept', 'sourceDescriptor', or 'sourceUi'. For the 'normalizedWords' search type, separate each word using a pipe \(\|\) character. 
+searchType | N | Type of search you wish to use. | 'exact','words','leftTruncation', 'rightTruncation','approximate', 'normalizedString', 'normalizedWords' | 'words' | Use 'exact' when using inputType = 'code', 'sourceConcept', 'sourceDescriptor', or 'sourceUi'. For the 'normalizedWords' search type, separate each word using a pipe \(\|\) character. [More information...](#searchType)
 pageNumber | N | Whole number that specifies which page of results to fetch. | 1,2,3, etc | 1 | n/a
 pageSize | N | Whole number that specifies the number of results to include per page. | 1,2,3, etc | 25 | n/a
 
+<a name="searchType"></a>
+#### Expected Behaviors for the searchType Parameter
+
+* **words**: breaks a search term into its component parts, or words, and retrieves all concepts containing any of those words. For example: If you enter "Heart Disease, Acute" a Word search will retrieve all concepts containing any of the three words (heart, or disease, or acute). Word is the default Search Type selection and is appropriate for both English and non-English search terms.
+* **approximate**: applies lexical variant generation (LVG) rules to the search term and generally results in expanded retrieval of concepts. For example, a search for the term "cold" retrieves all concepts that contain any of the following words: COLDs, chronic obstructive lung disease, chronic obstructive lung diseases, cold, colder, coldest.
+* **exact**: retrieves only concepts that include a synonym that exactly matches the search term.
+Normalized String: use with English language terms only. Removes lexical variations such as plural and upper case text and compares search terms to the Metathesaurus normalized string index to retrieve relevant concepts.
+* **normalizedWords**: use with English language terms only. Removes lexical variations such as plural and upper case text, and compares search terms to the Metathesaurus normalized word index to retrieve relevant concepts.
+* **rightTruncation**: retrieves concepts with synonyms that begin with the letters of the search term. For example, a right truncation search for "bronch" retrieves concepts that contain synonyms such as bronchitis, bronchiole, bronchial artery.
+* **leftTruncation**: retrieves concepts with synonyms that end with the letters of the search term. For example, a left truncation search for "itis" retrieves concepts that contain synonyms such as colitis, bronchitis, pancreatitis.
 
 ### Sample Output
 
