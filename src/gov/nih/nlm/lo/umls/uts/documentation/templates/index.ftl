@@ -7,7 +7,7 @@
 <div class = "container-fluid">
 	<div class = "container">
 
-        <p class="mt-4">Welcome to the UMLS API Technical Documentation. There are 2 implementations of the UMLS API available for use:</p>
+        <p class="mt-4">Welcome to the UMLS API Technical Documentation.</p>
 
         <div class="row">
         <div class="col-sm uts-rest-description">
@@ -17,10 +17,11 @@
         </div>
         <div class="col-sm uts-soap-description">
         
-          <h2><a href="/soap/home.html">UMLS SOAP API</a></h2> <p>
-          Install all the classes for the SOAP API using Maven as described in the installation documentation. Code samples within the documentation are available, mainly in Java.
+          <h2><a href="/soap/home.html">UMLS SOAP API</a></h2> 
+          
+          <p style="background-color:pink;">
+          The UMLS SOAP API is <b>deprecated</b> as of the 2020AA release. The SOAP API will be discontinued on December 31, 2020. SOAP API users are encouraged to switch to the <a href="https://documentation.uts.nlm.nih.gov/rest/home.html">REST API</a>.</p>
           </p>
-
       </div>
     </div>
     </div>
