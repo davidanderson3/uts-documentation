@@ -70,7 +70,7 @@
 						"{TGT}"
 					]
 				},
-				"description": "Substitue the {TGT} portion of the URL with your ticket granting ticket.  Make the POST call and you'll receive a service ticket that you can use one time to make a request to the API.  Re-run this call each time you need a new service ticket."
+				"description": "Substitute the {TGT} portion of the URL with your ticket granting ticket.  Make the POST call and you'll receive a service ticket that you can use one time to make a request to the API.  Re-run this call each time you need a new service ticket."
 			},
 			"response": []
 		}
