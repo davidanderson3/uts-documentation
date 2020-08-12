@@ -15,16 +15,18 @@ For help with making authentication calls using Postman, see our tutorial: [UMLS
 
 <a href="#demo"><input class="formButton" type="submit" value="TRY OUR AUTHENTICATION DEMO"></a>
 
-#### Step 1: Determine whether you want to use your UMLS username and password OR your UMLS API key.
+#### **Step 1**: Get your API key from your UTS profile.
 
-* If you choose to use an API key instead of your username and password, you can find the API key in the [UTS 'My Profile' area](https://uts.nlm.nih.gov) after signing in. An API key remains active as long as the associated UTS account is active.
+* You can find the API key in the [UTS 'My Profile' area](https://uts.nlm.nih.gov) after signing in. An API key remains active as long as the associated UTS account is active.
 * If the API key field in your UTS profile is blank, click 'Edit Profile', select the 'Generate new API Key' checkbox, then scroll down and click 'Save Profile'. Your new API key is now available for use.
 
-#### Step 2: Get a Ticket-Granting Ticket (TGT). The TGT is valid for 8 hours. **You do not need a new TGT for each REST API call.**
+<span style="background-color:pink;padding:10px;">**NOTE**: Use of username and password with any API that requires UTS authentication is now deprecated.</span>
+
+#### **Step 2**: Get a Ticket-Granting Ticket (TGT). The TGT is valid for 8 hours. **You do not need a new TGT for each REST API call.**
 
 * NOTE: You should include the key names and key values within the url-encoded body of the form in your POST call.
 
-**Option 1**: Use your API key
+Use your API key:
 
 Type of Request|URI|Key Names|Key Values|Description
 --- | --- | --
@@ -34,18 +36,6 @@ curl example:
 
 ~~~~text
 curl -X POST https://utslogin.nlm.nih.gov/cas/v1/api-key -H 'content-type: application/x-www-form-urlencoded' -d apikey={your_api_key_here}
-~~~~
-
-**Option 2**: Use your username and password
-
-Type of Request|URI|Key Names|Key Values|Description
---- | --- | --
-POST| https://utslogin.nlm.nih.gov/cas/v1/tickets | username,password | Your UMLS username and password |Retrieves a TGT to be used repeatedly for getting Service Tickets.
-
-curl example:
-
-~~~~text
-curl -X POST https://utslogin.nlm.nih.gov/cas/v1/tickets -H 'content-type: application/x-www-form-urlencoded' -d username={your_username_here}&password={your_password_here}
 ~~~~
 
 Sample response to the POST call for getting a TGT (your TGT of course will be unique):
@@ -64,8 +54,7 @@ Sample response to the POST call for getting a TGT (your TGT of course will be u
 <!--take the 'action' attribute of the form element and re-use it as your URI to get a service ticket as in call #2 above.-->
 ~~~~
 
-
-#### Step 3: Get a Service Ticket. **A Service Ticket expires after one use or five minutes from the time of generation, whichever comes first. Each REST API call requires a new Service Ticket.**
+#### **Step 3**: Get a Service Ticket. **A Service Ticket expires after one use or five minutes from the time of generation, whichever comes first. Each REST API call requires a new Service Ticket.**
 
 * NOTE: You should include the key names and key values within the url-encoded body of the form in your POST call.
 
