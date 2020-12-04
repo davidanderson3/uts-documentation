@@ -8,7 +8,8 @@ navorder=1
 
 The following script will automate the download of RxNorm, UMLS, or SNOMED CT files. This script may need to be adapted for your local environment. 
 
-<center>###[SAMPLE DOWNLOAD SCRIPT](scripts/curl-uts-download-apikey.sh)</center>
+###[SAMPLE DOWNLOAD SCRIPT](scripts/curl-uts-download-apikey.sh)
+
 ~~~~text
 #!/bin/bash
 
