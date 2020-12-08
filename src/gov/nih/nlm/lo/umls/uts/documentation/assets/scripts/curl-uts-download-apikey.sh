@@ -33,6 +33,5 @@ echo $TGTVALUE
 STTICKET=$(curl -d "service="$DOWNLOAD_URL -H "Content-Type: application/x-www-form-urlencoded" -X POST https://utslogin.nlm.nih.gov/cas/v1/tickets/$TGTVALUE)
 echo $STTICKET
 
-#curl $DOWNLOAD_URL?ticket=$STTICKET -O -J -Lcurl
 curl -s -c cookie.txt -b cookie.txt -L -O -J $DOWNLOAD_URL?ticket=$STTICKET
 rm cookie.txt
