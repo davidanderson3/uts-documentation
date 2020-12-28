@@ -1,6 +1,6 @@
 title=Automating UMLS Terminology Services Downloads 
-date=2020-12-02
-updated=2020-12-02
+date=2020-12-28
+updated=2020-12-28
 type=page
 status=published
 navorder=1
@@ -85,6 +85,8 @@ curl -s -c cookie.txt -b cookie.txt -L -O -J https://download.nlm.nih.gov/umls/k
 
 ####Sample Script
 
+This script may need to be modified depending on your local environment. 
+
 ~~~~text
 #!/bin/bash
 
@@ -121,6 +123,6 @@ echo $TGTVALUE
 STTICKET=$(curl -d "service="$DOWNLOAD_URL -H "Content-Type: application/x-www-form-urlencoded" -X POST https://utslogin.nlm.nih.gov/cas/v1/tickets/$TGTVALUE)
 echo $STTICKET
 
-curl -s -c cookie.txt -b cookie.txt -L -O -J $DOWNLOAD_URL?ticket=$STTICKET
+curl -c cookie.txt -b cookie.txt -L -O -J $DOWNLOAD_URL?ticket=$STTICKET
 rm cookie.txt
 ~~~~
