@@ -15,7 +15,7 @@ For help with making authentication calls using Postman, see our tutorial: [UMLS
 Base URI|Method Type|Path|Description
 --- | --- | --- | --
 **https://utslogin.nlm.nih.gov**||||
- |POST|[/cas/v1/tickets](authentication.html) | Retrieves a Ticket Granting Ticket (TGT)
+ |POST|[/cas/v1/api-key](authentication.html) | Retrieves a Ticket Granting Ticket (TGT)
  |POST|[/cas/v1/tickets/{TGT}](authentication.html) | Retrieves a single-use Service Ticket
 
 ### Endpoints to search and retrieve UMLS content
