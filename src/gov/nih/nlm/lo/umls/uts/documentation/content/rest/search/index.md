@@ -1,6 +1,6 @@
 title=Searching the UMLS
 date=2015-06-08
-updated=2020-02-07
+updated=2021-03-03
 type=page
 status=published
 navorder=3
@@ -35,13 +35,13 @@ Sample URI|Description|Returned JSON Object classType
 Parameter name | Required? Y/N | Description|  Valid Values | Default value | Usage Note
 --- | ---
 ticket | Y | A single-use service ticket is required for each call to the API. See [authentication](../authentication.html) for more information | n/a | n/a | n/a
-string | Y|  A human readable term, such as 'gestatational diabetes', or a code from a source vocabulary, such as 11687002 from SNOMEDCT_US. | Any term or code in the UMLS. | n/a | n/a
+string | Y|  A human readable term, such as 'gestational diabetes', or a code from a source vocabulary, such as 11687002 from SNOMEDCT_US. | Any term or code in the UMLS. | n/a | n/a
 inputType | N | Specifies the data type you are using as your search parameter.  | 'atom', 'code','sourceConcept','sourceDescriptor','sourceUi','tty' | 'atom' | Use 'sourceUi' if you aren't sure if the identifier you're providing is a code, source concept, or source descriptor.  Using 'tty' is for advanced use cases and will extract codes from a specified vocabulary according to [term type](https://www.nlm.nih.gov/research/umls/knowledge_sources/metathesaurus/release/precedence_suppressibility.html).
 includeObsolete | N | Return content that is a result of matches on obsolete terms. | true or false | false | n/a
 includeSuppressible | N | Return content that is a result of matches on suppressible terms. | true or false | false | n/a
 returnIdType | N | Specifies the type of identifier you wish to retrieve. | 'aui','concept','code','sourceConcept','sourceDescriptor', 'sourceUi' | 'concept' | Use 'code','sourceConcept', 'sourceDescriptor', or 'sourceUi' if you prefer source-asserted identifiers rather than CUIs in your search results.
 sabs | N | Comma-separated list of source vocabularies to include in your search | Any root source abbreviation in the UMLS. See the 'Abbreviation' column for a list of [UMLS source vocabulary abbreviations](https://www.nlm.nih.gov/research/umls/sourcereleasedocs/index.html).  | All UMLS source vocabularies | Use a comma between each source abbreviation to specify more than one.
-searchType | N | Type of search you wish to use. | 'exact','words','leftTruncation', 'rightTruncation','approximate', 'normalizedString', 'normalizedWords' | 'words' | Use 'exact' when using inputType = 'code', 'sourceConcept', 'sourceDescriptor', or 'sourceUi'. For the 'normalizedWords' search type, separate each word using a pipe \(\|\) character. [More information...](#searchType)
+searchType | N | Type of search you wish to use. | 'exact','words','leftTruncation', 'rightTruncation','approximate', 'normalizedString', 'normalizedWords' | 'words' | Use 'exact' when using inputType = 'code', 'sourceConcept', 'sourceDescriptor', or 'sourceUi'. [More information...](#searchType)
 pageNumber | N | Whole number that specifies which page of results to fetch. | 1,2,3, etc | 1 | n/a
 pageSize | N | Whole number that specifies the number of results to include per page. | 1,2,3, etc | 25 | n/a
 
