@@ -1,4 +1,4 @@
-<#include "header.ftl">
+<#include "redirect.ftl">
   <#include "uts-documentation-menu.ftl">
 
 
@@ -20,7 +20,7 @@
           <h2><a href="/soap/home.html">UMLS SOAP API</a></h2> 
           
           <p style="background-color:pink;">
-          The UMLS SOAP API is <b>deprecated</b> as of the 2020AA release. The SOAP API will be discontinued on December 31, 2020. SOAP API users are encouraged to switch to the <a href="https://documentation.uts.nlm.nih.gov/rest/home.html">REST API</a>.</p>
+          The UMLS SOAP API was discontinued December 31, 2020. SOAP API users are encouraged to switch to the <a href="https://documentation.uts.nlm.nih.gov/rest/home.html">REST API</a>.</p>
           </p>
       </div>
     </div>
