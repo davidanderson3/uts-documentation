@@ -2,7 +2,7 @@
 <html lang="en">
 
 <head>
-  <meta http-equiv="refresh" content="0;url=https://documentation.uts.nlm.nih.gov/rest/home.html"  />
+  <meta http-equiv="refresh" content="0;url=/rest/home.html"  />
   <link rel="stylesheet" href="https://www.nlm.nih.gov/home_assets/css/nlm_main.css?20200206">
   <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,500,500i,700,900" rel="stylesheet">
   <link rel="schema.DC" href="http://purl.org/dc/elements/1.1/" title="The Dublin Core metadata Element Set" />
