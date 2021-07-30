@@ -1,6 +1,6 @@
 title=Automating UMLS Terminology Services Downloads 
 date=2020-12-28
-updated=2020-12-28
+updated=2021-07-29
 type=page
 status=published
 navorder=1
