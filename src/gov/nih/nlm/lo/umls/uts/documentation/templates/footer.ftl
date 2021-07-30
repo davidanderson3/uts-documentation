@@ -4,8 +4,8 @@
       <div class="col-md-3 col-sm-6 col-6">
         <p class="text-white"><a href="https://www.nlm.nih.gov/socialmedia/index.html" class="text-white">Connect with NLM</a></p>
         <ul class="list-inline social_media">
-          <li class="list-inline-item"><a href="https://www.facebook.com/nationallibraryofmedicine" title="External link: please review our privacy policy." id="anch_451"><img src="/images/Facebook_W.svg" class="img-fluid" alt="Facebook"></a></li>
-          <li class="list-inline-item"><a href="https://twitter.com/nlm_news" title="External link: please review our privacy policy." id="anch_452"><img src="/images/Twitter_W.svg" class="img-fluid" alt="Twitter"></a></li>
+          <li class="list-inline-item"><a href="https://twitter.com/NLM_NIH" title="External link: please review our privacy policy." id="anch_452"><img src="/images/Twitter_W.svg" class="img-fluid" alt="Twitter"></a></li>
+          <li class="list-inline-item"><a href="https://www.facebook.com/nationallibraryofmedicine" title="External link: please review our privacy policy." id="anch_451"><img src="/images/Facebook_W.svg" class="img-fluid" alt="Facebook"></a></li>          
           <li class="list-inline-item"><a href="https://www.youtube.com/user/NLMNIH" title="External link: please review our privacy policy." id="anch_453"><img src="/images/YouTube_W.svg" class="img-fluid" alt="You Tube"></a></li>
         </ul>
       </div>

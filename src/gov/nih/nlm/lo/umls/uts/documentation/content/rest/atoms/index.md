@@ -1,6 +1,6 @@
 title=Retrieving UMLS Atoms
 date=2015-06-12
-updated=2016-06-28
+updated=2021-07-29
 type=page
 status=published
 category=Retrieving UMLS Data
@@ -49,8 +49,8 @@ ticket | Y | A single-use service ticket is required for each call to the API. S
 sabs| N | Comma-separated list of source vocabularies to include in your search | Any root source abbreviation in the UMLS. See the "Abbreviation" column for a list of [UMLS source vocabulary abbreviations](https://www.nlm.nih.gov/research/umls/sourcereleasedocs/index.html).  | All UMLS source vocabularies | Use a comma between each source abbreviation to specify more than one.
 ttys | N | One or more term types | Any valid [term type](https://www.nlm.nih.gov/research/umls/knowledge_sources/metathesaurus/release/abbreviations.html#TTYC) in the UMLS | All term types | Use a comma between each term type to specify more than one.
 language | N | Retrieve only atoms that have a specific language | Any 3 letter language abbreviation in the UMLS, such as "ENG","FRE","SPA","GER","DUT","JPN", etc | All languages are returned by default | Currently filtering by one language is supported.
-includeObsolete | N |  Include content that is obsolete according to the content provider or NLM. | true or false | false | n/a
-includeSuppressible | N |  Include content that is suppressible according to NLM Editors.| true or false | false | n/a
+includeObsolete | N |  Include content that is obsolete according to the content provider or NLM. | true or false | false (except for atoms/preferred, which defaults to true) | n/a
+includeSuppressible | N |  Include content that is suppressible according to NLM Editors.| true or false | false (except for atoms/preferred, which defaults to true) | n/a
 pageNumber | N | Whole number that specifies which page of results to fetch. | 1,2,3, etc | 1 | n/a
 pageSize | N | Whole number that specifies the number of results to include per page. | 1,2,3, etc | 25 | n/a
 
