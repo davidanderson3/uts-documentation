@@ -18,4 +18,3 @@ Developers may not use the NLM name and/or logo in conjunction with their applic
 DISCLAIMER: It is not the intention of NLM to provide specific medical advice, but rather to provide users with information to better understand their health and their medications. NLM urges you to consult with a qualified physician for medical advice.
 
 [UMLS REST API Technical Documentation](/rest/home.html)
-[UMLS SOAP API Technical Documentation](/soap/home.html)
