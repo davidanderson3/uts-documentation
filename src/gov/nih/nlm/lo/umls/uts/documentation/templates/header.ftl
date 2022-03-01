@@ -41,17 +41,10 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
   <header>
       <div class="container-fluid">
     <div class="container branding">
-      <div class="row container py-3">
+      <div class="row container">
         <div class="col-lg-4 col-md-6 col-sm-6 col-xs-12 pb-md-0 pb-2">
-      <a href="https://www.nlm.nih.gov/"><img src="//www.nlm.nih.gov/images/nlm_logo.png" class="img-fluid" alt="NLM logo"></a>
+      <a href="https://www.nlm.nih.gov/"><img src="/images/NIH_National-Library-of-Medicine_blue-grey.png" class="img-fluid" alt="NLM logo"></a>
         </div>
-        <div class="col-lg-4 offset-lg-4 col-md-6 col-sm-6 col-xs-12 pt-xl-2 pt-lg-1 pt-md-2">
-          <form method="get" action="//vsearch.nlm.nih.gov/vivisimo/cgi-bin/query-meta" target="_self" name="searchForm" id="searchForm2" class="form-inline">
-            <input type="text" name="query" placeholder="Search for" aria-label="Search" class="form-control col-10" id="search2" autocomplete="off">
-            <input type="hidden" name="v:project" value="nlm-main-website">
-            <button class="btn btn-search" type="submit"><i class="fas fa-search"></i></button>
-          </form>
-        </div>  
       </div>  
     </div>  
   </div>  
