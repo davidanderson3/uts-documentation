@@ -11280,7 +11280,7 @@ Sample output for [https://uts-ws.nlm.nih.gov/rest/metadata/2018AA/sources](http
 	
 ~~~~
 
-Sample output for https://uts-ws.nlm.nih.gov/rest/subsets/current/source/SNOMEDCT_US/442311000124105/members?ticket=ST...
+Sample output for https://uts-ws.nlm.nih.gov/rest/subsets/current/source/SNOMEDCT_US/442311000124105/members?apiKey=YOUR_APIKEY...
 
 ~~~~json
 {
@@ -11323,7 +11323,7 @@ Sample output for https://uts-ws.nlm.nih.gov/rest/subsets/current/source/SNOMEDC
 }
 ~~~~
 
-Sample output for https://uts-ws.nlm.nih.gov/rest/subsets/current/source/SNOMEDCT_US/6011000124106/member/89361000119103?ticket=ST...
+Sample output for https://uts-ws.nlm.nih.gov/rest/subsets/current/source/SNOMEDCT_US/6011000124106/member/89361000119103?apiKey=YOUR_APIKEY...
 
 ~~~~json
 {

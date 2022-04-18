@@ -31,7 +31,7 @@ Sample URI|Description|Returned JSON Object classType
 
 Parameter name | Required? Y/N | Description|  Valid Values | Default value | Usage Note
 --- | ---
-ticket | Y | A single-use service ticket is required for each call to the API. See [authentication](../../authentication.html) for more information | n/a | n/a | n/a
+apiKey | Y | An API key is required for each call to the API. Visit [your UTS profile](https://uts.nlm.nih.gov/uts/profile) to obtain your API key. | n/a | n/a | n/a
 includeRelationLabels | N | One or more relation labels | Any [relation label](https://www.nlm.nih.gov/research/umls/knowledge_sources/metathesaurus/release/abbreviations.html#REL) in the UMLS |n/a| Use a comma between each relation label to specify more than one.
 includeAdditionalRelationLabels | N | One or more relation attribute | Any [relation attribute](https://www.nlm.nih.gov/research/umls/knowledge_sources/metathesaurus/release/abbreviations.html#RELA) in the UMLS |n/a| Use a comma between each relation attribute to specify more than one.
 includeObsolete | N |  Include content that is obsolete according to the content provider or NLM. | true or false | false | n/a
@@ -42,7 +42,7 @@ pageSize | N | Whole number that specifies the number of results to include per 
 
 ### Sample Output
 
-Sample output for https://uts-ws.nlm.nih.gov/rest/content/2015AA/source/LNC/44255-8/relations?includeAdditionalRelationLabels=has_answer&ticket=ST...
+Sample output for https://uts-ws.nlm.nih.gov/rest/content/2015AA/source/LNC/44255-8/relations?includeAdditionalRelationLabels=has_answer&apiKey=YOUR_APIKEY...
 
 ~~~~json
 {

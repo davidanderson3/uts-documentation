@@ -34,7 +34,7 @@ Sample URI|Description|Returned JSON Object classType
 
 Parameter name | Required? Y/N | Description|  Valid Values | Default value | Usage Note
 --- | ---
-ticket | Y | A single-use service ticket is required for each call to the API. See [authentication](../authentication.html) for more information | n/a | n/a | n/a
+apiKey | Y | An API key is required for each call to the API. Visit [your UTS profile](https://uts.nlm.nih.gov/uts/profile) to obtain your API key. | n/a | n/a | n/a
 string | Y|  A human readable term, such as 'gestational diabetes', or a code from a source vocabulary, such as 11687002 from SNOMEDCT_US. | Any term or code in the UMLS. | n/a | n/a
 inputType | N | Specifies the data type you are using as your search parameter.  | 'atom', 'code','sourceConcept','sourceDescriptor','sourceUi','tty' | 'atom' | Use 'sourceUi' if you aren't sure if the identifier you're providing is a code, source concept, or source descriptor.  Using 'tty' is for advanced use cases and will extract codes from a specified vocabulary according to [term type](https://www.nlm.nih.gov/research/umls/knowledge_sources/metathesaurus/release/precedence_suppressibility.html).
 includeObsolete | N | Return content that is a result of matches on obsolete terms. | true or false | false | n/a
@@ -51,7 +51,7 @@ pageSize | N | Whole number that specifies the number of results to include per 
 * **words**: breaks a search term into its component parts, or words, and retrieves all concepts containing any of those words. For example: If you enter "Heart Disease, Acute" a Word search will retrieve all concepts containing any of the three words (heart, or disease, or acute). Word is the default Search Type selection and is appropriate for both English and non-English search terms.
 * **approximate**: applies lexical variant generation (LVG) rules to the search term and generally results in expanded retrieval of concepts. For example, a search for the term "cold" retrieves all concepts that contain any of the following words: COLDs, chronic obstructive lung disease, chronic obstructive lung diseases, cold, colder, coldest.
 * **exact**: retrieves only concepts that include a synonym that exactly matches the search term.
-Normalized String: use with English language terms only. Removes lexical variations such as plural and upper case text and compares search terms to the Metathesaurus normalized string index to retrieve relevant concepts.
+* **normalizedString**: use with English language terms only. Removes lexical variations such as plural and upper case text and compares search terms to the Metathesaurus normalized string index to retrieve relevant concepts.
 * **normalizedWords**: use with English language terms only. Removes lexical variations such as plural and upper case text, and compares search terms to the Metathesaurus normalized word index to retrieve relevant concepts.
 * **rightTruncation**: retrieves concepts with synonyms that begin with the letters of the search term. For example, a right truncation search for "bronch" retrieves concepts that contain synonyms such as bronchitis, bronchiole, bronchial artery.
 * **leftTruncation**: retrieves concepts with synonyms that end with the letters of the search term. For example, a left truncation search for "itis" retrieves concepts that contain synonyms such as colitis, bronchitis, pancreatitis.
@@ -60,7 +60,7 @@ Normalized String: use with English language terms only. Removes lexical variati
 
 The default search parameters will return CUIs and their names.  If you ask for codes, sourceConcept, or sourceDescriptor as your returnIdType, you will get back source-asserted identifiers instead of CUIs.
 
-Sample output for https://uts-ws.nlm.nih.gov/rest/search/current?string=fracture of carpal bone&ticket=ST...
+Sample output for https://uts-ws.nlm.nih.gov/rest/search/current?string=fracture of carpal bone&apiKey=YOUR_APIKEY...
 
 ~~~~json
 {
@@ -109,7 +109,7 @@ Sample output for https://uts-ws.nlm.nih.gov/rest/search/current?string=fracture
 
 **Specifying returnIdType = 'code','sourceConcept',or 'sourceDescriptor' will result in output as follows:**
 
-Sample output for https://uts-ws.nlm.nih.gov/rest/search/current?string=fracture of carpal bone&returnIdType=sourceConcept&ticket=ST...
+Sample output for https://uts-ws.nlm.nih.gov/rest/search/current?string=fracture of carpal bone&returnIdType=sourceConcept&apiKey=YOUR_APIKEY...
 
 ~~~~json
 {

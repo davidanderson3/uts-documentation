@@ -37,13 +37,13 @@ Sample URI|Description|Returned JSON Object classType
 
 Parameter name | Required? Y/N | Description|  Valid Values | Default value | Usage Note
 --- | ---
-ticket | Y | A single-use service ticket is required for each call to the API. See [authentication](../authentication.html) for more information | n/a | n/a | n/a
+apiKey | Y | An API key is required for each call to the API. Visit [your UTS profile](https://uts.nlm.nih.gov/uts/profile) to obtain your API key. | n/a | n/a | n/a
 pageNumber | N | Whole number that specifies which page of results to fetch. | 1,2,3, etc | 1 | n/a
 pageSize | N | Whole number that specifies the number of results to include per page. | 1,2,3, etc | 25 | n/a
 
 ### Sample Output 1
 
-Sample output for https://uts-ws.nlm.nih.gov/rest/content-views/current?ticket=ST...
+Sample output for https://uts-ws.nlm.nih.gov/rest/content-views/current?apiKey=YOUR_APIKEY...
 
 ~~~~json
 {
@@ -144,7 +144,7 @@ Sample output for https://uts-ws.nlm.nih.gov/rest/content-views/current?ticket=S
 ~~~~
 
 ### Sample Output 2
-Sample output for https://uts-ws.nlm.nih.gov/rest/content-views/current/CUI/C2711988?ticket=ST...
+Sample output for https://uts-ws.nlm.nih.gov/rest/content-views/current/CUI/C2711988?apiKey=YOUR_APIKEY...
 
 
 ~~~~json
@@ -188,7 +188,7 @@ Sample output for https://uts-ws.nlm.nih.gov/rest/content-views/current/CUI/C271
 ~~~~
 
 ### Sample Output 3
-Sample output for members of the SNOMED CT CORE Problem List subset, https://uts-ws.nlm.nih.gov/rest/content-views/current/CUI/C1700357/members?ticket=ST...
+Sample output for members of the SNOMED CT CORE Problem List subset, https://uts-ws.nlm.nih.gov/rest/content-views/current/CUI/C1700357/members?apiKey=YOUR_APIKEY...
 
 ~~~~json
 {
@@ -301,7 +301,7 @@ Sample output for members of the SNOMED CT CORE Problem List subset, https://uts
 
 ~~~~
 ### Sample Output 4
-Sample output for one member of the SNOMED CT CORE Problem List subset, https://uts-ws.nlm.nih.gov/rest/content-views/current/CUI/C2711988/member/238788004?ticket=ST...
+Sample output for one member of the SNOMED CT CORE Problem List subset, https://uts-ws.nlm.nih.gov/rest/content-views/current/CUI/C2711988/member/238788004?apiKey=YOUR_APIKEY...
 
 ~~~~json
 {

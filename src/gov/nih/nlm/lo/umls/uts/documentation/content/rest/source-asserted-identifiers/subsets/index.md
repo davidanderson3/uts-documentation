@@ -39,14 +39,14 @@ Sample URI|Description|Returned JSON Object classType
 
 Parameter name | Required? Y/N | Description|  Valid Values | Default value | Usage Note
 --- | ---
-ticket | Y | A single-use service ticket is required for each call to the API. See [authentication](../../authentication.html) for more information | n/a | n/a | n/a
+apiKey | Y | An API key is required for each call to the API. Visit [your UTS profile](https://uts.nlm.nih.gov/uts/profile) to obtain your API key. | n/a | n/a | n/a
 pageNumber | N | Whole number that specifies which page of results to fetch. | 1,2,3, etc | 1 | n/a
 pageSize | N | Whole number that specifies the number of results to include per page. | 1,2,3, etc | 25 | n/a
 language | N | 3-letter abbreviation for language | ENG, SPA, GER, etc | n/a | n/a
 
 ### Sample Output
 
-Sample output for https://uts-ws.nlm.nih.gov/rest/subsets/current?ticket=ST...
+Sample output for https://uts-ws.nlm.nih.gov/rest/subsets/current?apiKey=YOUR_APIKEY...
 
 ~~~~json
 {
@@ -125,7 +125,7 @@ Sample output for https://uts-ws.nlm.nih.gov/rest/subsets/current?ticket=ST...
 }
 ~~~~
 
-Sample output for https://uts-ws.nlm.nih.gov/rest/subsets/current/source/SNOMEDCT_US/442311000124105/members?ticket=ST...
+Sample output for https://uts-ws.nlm.nih.gov/rest/subsets/current/source/SNOMEDCT_US/442311000124105/members?apiKey=YOUR_APIKEY...
 
 ~~~~json
 {
@@ -168,7 +168,7 @@ Sample output for https://uts-ws.nlm.nih.gov/rest/subsets/current/source/SNOMEDC
 }
 ~~~~
 
-Sample output for https://uts-ws.nlm.nih.gov/rest/subsets/current/source/SNOMEDCT_US/6011000124106/member/89361000119103?ticket=ST...
+Sample output for https://uts-ws.nlm.nih.gov/rest/subsets/current/source/SNOMEDCT_US/6011000124106/member/89361000119103?apiKey=YOUR_APIKEY...
 
 ~~~~json
 {

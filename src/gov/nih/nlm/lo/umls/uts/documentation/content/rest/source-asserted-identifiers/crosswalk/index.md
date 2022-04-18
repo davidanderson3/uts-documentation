@@ -19,7 +19,7 @@ A common use case of the CUIs in the UMLS is as a sort of 'bridge of synonymy' b
 
 The following GET call will crosswalk the [Human Phenotype Ontology](https://www.nlm.nih.gov/research/umls/sourcereleasedocs/current/HPO/) (HPO) code HP:0001947, 'Renal tubular acidosis', to see if there are any SNOMEDCT codes for which the UMLS has asserted synonymy. 
 
-`https://uts-ws.nlm.nih.gov/rest/crosswalk/current/source/HPO/HP:0001947?targetSource=SNOMEDCT_US&ticket=<your-ticket>`
+`https://uts-ws.nlm.nih.gov/rest/crosswalk/current/source/HPO/HP:0001947?targetSource=SNOMEDCT_US&apiKey=<your api key>`
 
 This call will return all SNOMED codes that share a UMLS CUI with the HPO code HP:0001947, 'Renal tubular acidosis'. 
 
@@ -40,7 +40,7 @@ You may use any valid UMLS release back to 2008AA in your URI if you would like 
 
 Parameter name | Required? Y/N | Description|  Valid Values | Default value | Usage Note
 --- | ---
-ticket | Y | A single-use service ticket is required for each call to the API. See [authentication](../../authentication.html) for more information | n/a | n/a | n/a
+apiKey | Y | An API key is required for each call to the API. Visit [your UTS profile](https://uts.nlm.nih.gov/uts/profile) to obtain your API key. | n/a | n/a | n/a
 targetSource | N | Returns codes from the specified UMLS vocabulary | Any root source abbreviation in the UMLS. See the "Abbreviation" column for a list of [UMLS source vocabulary abbreviations](https://www.nlm.nih.gov/research/umls/sourcereleasedocs/index.html).  | All UMLS source vocabularies | Use a comma between each source abbreviation to specify more than one.
 includeObsolete | N | Determines whether to return obsolete codes. | true,false | false | n/a
 pageNumber | N | Whole number that specifies which page of results to fetch. | 1,2,3, etc | 1 | n/a
@@ -49,7 +49,7 @@ pageSize | N | Whole number that specifies the number of results to include per 
 
 ### Sample Output
 
-Sample output for https://uts-ws.nlm.nih.gov/rest/crosswalk/current/source/HPO/HP:0001947?targetSource=SNOMEDCT_US&ticket=ST...
+Sample output for https://uts-ws.nlm.nih.gov/rest/crosswalk/current/source/HPO/HP:0001947?targetSource=SNOMEDCT_US&apiKey=YOUR_APIKEY...
 
 ~~~~json
 {

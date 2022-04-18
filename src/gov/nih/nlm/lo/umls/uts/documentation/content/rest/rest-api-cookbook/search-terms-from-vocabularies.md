@@ -14,11 +14,11 @@ For example, let's say we want look for concepts from the US Edition of SNOMED C
 +  `sabs=SNOMEDCT_US`
 +  `returnIdType=sourceUi`
 +  `pageNumber=<pageNumber>`<sup><b>[1](#1)</b></sup>
-+  `ticket=<your service ticket>` See [authentication](/rest/authentication.html) for details
++  `apiKey=<your api key>` See [authentication](/rest/authentication.html) for details
 
 
 Our initial `GET` call looks like this:
-`https://uts-ws.nlm.nih.gov/rest/search/current?string=high cholesterol&pageNumber=1&sabs=SNOMEDCT_US&returnIdType=sourceUi&ticket=<your-ticket>`
+`https://uts-ws.nlm.nih.gov/rest/search/current?string=high cholesterol&pageNumber=1&sabs=SNOMEDCT_US&returnIdType=sourceUi&apiKey=<YOUR_APIKEY>`
 
 This search returns over 30 results, not all of which may be relevant to you.  You can customize your [list of query parameters](/rest/search/index.html#query-parameters) according to your search needs.
 In this example we've used the `returnIdType` parameter to ask for source-asserted concepts from SNOMED CT.  If this parameter is not included (the default setting), the API will return UMLS CUIs.

@@ -36,13 +36,13 @@ Sample URI|Description|Returned JSON Object classType
 
 Parameter name | Required? Y/N | Description|  Valid Values | Default value | Usage Note
 --- | ---
-ticket | Y | A single-use service ticket is required for each call to the API. See [authentication](../authentication.html) for more information | n/a | n/a | n/a
+apiKey | Y | An API key is required for each call to the API. Visit [your UTS profile](https://uts.nlm.nih.gov/uts/profile) to obtain your API key. | n/a | n/a | n/a
 
 ### Sample Output
 
 **The default for calls under /CUI/{CUI} is to return UMLS CUIs.**
 
-Sample output for https://uts-ws.nlm.nih.gov/rest/content/current/CUI/C0009044?ticket=ST...
+Sample output for https://uts-ws.nlm.nih.gov/rest/content/current/CUI/C0009044?apiKey=YOUR_APIKEY...
 
 ~~~~json
 {
