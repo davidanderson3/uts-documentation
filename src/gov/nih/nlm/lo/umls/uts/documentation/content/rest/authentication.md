@@ -19,7 +19,7 @@ For example, https://uts-ws.nlm.nih.gov/rest/content/current/CUI/C0009044?apiKey
 
 <hr />
 
-####<span style="color:red;"><b>Note</b>: Ticket-Granting Tickets (TGTs) and Service Tickets are <b>deprecated</b>, but we will continue to support authentication using Ticket-Granting Tickets and Service Tickets until April 1, 2023. </span>
+####<span style="color:red;"><b>Note</b>: Ticket-Granting Tickets (TGTs) and Service Tickets are <b>deprecated</b>, but we will continue to support authentication using Ticket-Granting Tickets and Service Tickets until May 1, 2023. </span>
 
 [Ticket-Granting Ticket and Service Ticket Documentation](/authentication-deprecated.html)
 
