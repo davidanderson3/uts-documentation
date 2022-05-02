@@ -12,6 +12,7 @@ navorder=4
 
 URIs with /relations support the following use cases:
 
+*  Retrieve all relationships associated with a known CUI
 *  Retrieve the NLM-asserted relationships for a known CUI.
 
 **NLM does not assert parent or child relationships between concepts.**
@@ -26,7 +27,8 @@ You may use any valid UMLS release back to 2008AA in your URI if you would like 
 
 Sample URI|Description|Returned JSON Object classType
 --- | ---
-/content/current/CUI/C0009044/relations | Retrieves NLM-asserted relationships of the CUI | ConceptRelation
+/content/current/CUI/C0009044/relations | Retrieves all relationships associated with the CUI | ConceptRelation, AtomClusterRelation, AtomRelation
+/content/current/CUI/C0009044/relations?sabs=MTH | Retrieves NLM-asserted relationships of the CUI | ConceptRelation
 
 
 
@@ -35,6 +37,11 @@ Sample URI|Description|Returned JSON Object classType
 Parameter name | Required? Y/N | Description|  Valid Values | Default value | Usage Note
 --- | ---
 apiKey | Y | An API key is required for each call to the API. Visit [your UTS profile](https://uts.nlm.nih.gov/uts/profile) to obtain your API key. | n/a | n/a | n/a
+includeRelationLabels | N | One or more relation labels | Any [relation label](https://www.nlm.nih.gov/research/umls/knowledge_sources/metathesaurus/release/abbreviations.html#REL) in the UMLS |n/a| Use a comma between each relation label to specify more than one.
+includeAdditionalRelationLabels | N | One or more relation attribute | Any [relation attribute](https://www.nlm.nih.gov/research/umls/knowledge_sources/metathesaurus/release/abbreviations.html#RELA) in the UMLS |n/a| Use a comma between each relation attribute to specify more than one.
+includeObsolete | N |  Include content that is obsolete according to the content provider or NLM. | true or false | false | n/a
+includeSuppressible | N |  Include content that is suppressible according to NLM Editors.| true or false | false | n/a
+sabs | N | Comma-separated list of source vocabularies to include in your search | Any root source abbreviation in the UMLS. See the "Abbreviation" column for a list of [UMLS source vocabulary abbreviations](https://www.nlm.nih.gov/research/umls/sourcereleasedocs/index.html).  | All UMLS source vocabularies | Use a comma between each source abbreviation to specify more than one.
 pageNumber | N | Whole number that specifies which page of results to fetch. | 1,2,3, etc | 1 | n/a
 pageSize | N | Whole number that specifies the number of results to include per page. | 1,2,3, etc | 25 | n/a
 
