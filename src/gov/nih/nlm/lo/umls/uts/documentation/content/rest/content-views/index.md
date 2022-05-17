@@ -1,4 +1,4 @@
-title=Retrieving Content View Information
+title=Retrieving Content View Information [DEPRECATED]
 date=2016-05-09
 updated=2016-07-07
 type=page
@@ -7,6 +7,13 @@ category=Retrieving UMLS Data
 navorder=8
 ~~~~~~
 
+
+<span style="color:red">This endpoint is deprecated. We will no longer provide support for it. To retrieve content view information from the Metathesaurus, see: 
+
+* [https://www.ncbi.nlm.nih.gov/books/NBK9684/#ch02.sec2.9](https://www.ncbi.nlm.nih.gov/books/NBK9684/#ch02.sec2.9)
+* [https://www.nlm.nih.gov/research/umls/knowledge_sources/metathesaurus/release/content_views.html](https://www.nlm.nih.gov/research/umls/knowledge_sources/metathesaurus/release/content_views.html).</span>
+
+-------------------------------------
 
 [URIs](#uris) | [Query Parameters](#query-parameters) | [Sample Output](#sample-output-1)
 
