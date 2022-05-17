@@ -45,84 +45,81 @@ pageSize | N | Whole number that specifies the number of results to include per 
 Sample output for https://uts-ws.nlm.nih.gov/rest/content/2015AA/source/LNC/44255-8/relations?includeAdditionalRelationLabels=has_answer&apiKey=YOUR_APIKEY...
 
 ~~~~json
-{
-
-   "pageSize": 25,
-   "pageNumber": 1,
-   "pageCount": 1,
-   "result": 
-
-[
 
 {
-
-   "classType": "AtomClusterRelation",
-   "ui": "R150334726",
-   "suppressible": false,
-   "sourceUi": "NONE",
-   "obsolete": false,
-   "sourceOriginated": false,
-   "rootSource": "LNC",
-   "relationLabel": "RO",
-   "additionalRelationLabel": "has_answer",
-   "groupId": "NONE",
-   "attributeCount": 1,
-   "relatedId": "https://uts-ws.nlm.nih.gov/rest/content/2015AA/source/LNC/LA6568-5",
-   "relatedIdName": "Not at all"
-
-},
-{
-
-   "classType": "AtomClusterRelation",
-   "ui": "R150349583",
-   "suppressible": false,
-   "sourceUi": "NONE",
-   "obsolete": false,
-   "sourceOriginated": false,
-   "rootSource": "LNC",
-   "relationLabel": "RO",
-   "additionalRelationLabel": "has_answer",
-   "groupId": "NONE",
-   "attributeCount": 1,
-   "relatedId": "https://uts-ws.nlm.nih.gov/rest/content/2015AA/source/LNC/LA6570-1",
-   "relatedIdName": "More than half the days"
-
-},
-{
-
-   "classType": "AtomClusterRelation",
-   "ui": "R150379228",
-   "suppressible": false,
-   "sourceUi": "NONE",
-   "obsolete": false,
-   "sourceOriginated": false,
-   "rootSource": "LNC",
-   "relationLabel": "RO",
-   "additionalRelationLabel": "has_answer",
-   "groupId": "NONE",
-   "attributeCount": 1,
-   "relatedId": "https://uts-ws.nlm.nih.gov/rest/content/2015AA/source/LNC/LA6571-9",
-   "relatedIdName": "Nearly every day"
-
-},
-
-{
-    "classType": "AtomClusterRelation",
-    "ui": "R150401508",
-    "suppressible": false,
-    "sourceUi": "NONE",
-    "obsolete": false,
-    "sourceOriginated": false,
-    "rootSource": "LNC",
-    "relationLabel": "RO",
-    "additionalRelationLabel": "has_answer",
-    "groupId": "NONE",
-    "attributeCount": 1,
-    "relatedId": "https://uts-ws.nlm.nih.gov/rest/content/2015AA/source/LNC/LA6569-3",
-    "relatedIdName": "Several days"
-}
-]
-
+  "pageSize": 25,
+  "pageNumber": 1,
+  "pageCount": 1,
+  "result": [
+    {
+      "ui": "R150349583",
+      "suppressible": false,
+      "sourceUi": "NONE",
+      "obsolete": false,
+      "sourceOriginated": false,
+      "rootSource": "LNC",
+      "groupId": "NONE",
+      "attributeCount": 1,
+      "classType": "AtomClusterRelation",
+      "relatedFromId": "https://uts-ws.nlm.nih.gov/rest/content/2015AA/source/LNC/44255-8",
+      "relatedFromIdName": "Feeling down, depressed, or hopeless in last 2W:Find:Pt:^Patient:Ord:Reported.PHQ",
+      "relationLabel": "RO",
+      "additionalRelationLabel": "has_answer",
+      "relatedId": "https://uts-ws.nlm.nih.gov/rest/content/2015AA/source/LNC/LA6570-1",
+      "relatedIdName": "More than half the days"
+    },
+    {
+      "ui": "R150379228",
+      "suppressible": false,
+      "sourceUi": "NONE",
+      "obsolete": false,
+      "sourceOriginated": false,
+      "rootSource": "LNC",
+      "groupId": "NONE",
+      "attributeCount": 1,
+      "classType": "AtomClusterRelation",
+      "relatedFromId": "https://uts-ws.nlm.nih.gov/rest/content/2015AA/source/LNC/44255-8",
+      "relatedFromIdName": "Feeling down, depressed, or hopeless in last 2W:Find:Pt:^Patient:Ord:Reported.PHQ",
+      "relationLabel": "RO",
+      "additionalRelationLabel": "has_answer",
+      "relatedId": "https://uts-ws.nlm.nih.gov/rest/content/2015AA/source/LNC/LA6571-9",
+      "relatedIdName": "Nearly every day"
+    },
+    {
+      "ui": "R150401508",
+      "suppressible": false,
+      "sourceUi": "NONE",
+      "obsolete": false,
+      "sourceOriginated": false,
+      "rootSource": "LNC",
+      "groupId": "NONE",
+      "attributeCount": 1,
+      "classType": "AtomClusterRelation",
+      "relatedFromId": "https://uts-ws.nlm.nih.gov/rest/content/2015AA/source/LNC/44255-8",
+      "relatedFromIdName": "Feeling down, depressed, or hopeless in last 2W:Find:Pt:^Patient:Ord:Reported.PHQ",
+      "relationLabel": "RO",
+      "additionalRelationLabel": "has_answer",
+      "relatedId": "https://uts-ws.nlm.nih.gov/rest/content/2015AA/source/LNC/LA6569-3",
+      "relatedIdName": "Several days"
+    },
+    {
+      "ui": "R150334726",
+      "suppressible": false,
+      "sourceUi": "NONE",
+      "obsolete": false,
+      "sourceOriginated": false,
+      "rootSource": "LNC",
+      "groupId": "NONE",
+      "attributeCount": 1,
+      "classType": "AtomClusterRelation",
+      "relatedFromId": "https://uts-ws.nlm.nih.gov/rest/content/2015AA/source/LNC/44255-8",
+      "relatedFromIdName": "Feeling down, depressed, or hopeless in last 2W:Find:Pt:^Patient:Ord:Reported.PHQ",
+      "relationLabel": "RO",
+      "additionalRelationLabel": "has_answer",
+      "relatedId": "https://uts-ws.nlm.nih.gov/rest/content/2015AA/source/LNC/LA6568-5",
+      "relatedIdName": "Not at all"
+    }
+  ]
 }
 ~~~~
 
