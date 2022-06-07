@@ -1,4 +1,4 @@
-title=Retrieving Source-Asserted Subsets
+title=Retrieving Source-Asserted Subsets [DEPRECATED]
 date=2015-09-30
 updated=2016-06-28
 type=page
@@ -7,6 +7,9 @@ category=Retrieving Source-Asserted Data
 navorder=5
 ~~~~~~
 
+<span style="color:red">This endpoint is deprecated. We will no longer provide support for it.</span>
+
+-------------------------------------
 
 [URIs](#uris) | [Query Parameters](#query-parameters) | [Sample Output](#sample-output)
 
@@ -58,8 +61,8 @@ Sample output for https://uts-ws.nlm.nih.gov/rest/subsets/current?apiKey=YOUR_AP
 			"ui" : "C3853926",
 			"sourceUi" : "900000000000534007",
 			"rootSource" : "SCTSPA",
-			"name" : "conjunto de referencias de dependencia entre módulos",
-			"description" : "conjunto de referencias de dependencia entre módulos",
+			"name" : "conjunto de referencias de dependencia entre mï¿½dulos",
+			"description" : "conjunto de referencias de dependencia entre mï¿½dulos",
 			"attributeCount" : 1,
 			"atomMemberCount" : 0,
 			"sourceConceptMemberCount" : 4,
@@ -80,8 +83,8 @@ Sample output for https://uts-ws.nlm.nih.gov/rest/subsets/current?apiKey=YOUR_AP
 			"ui" : "C3853923",
 			"sourceUi" : "450828004",
 			"rootSource" : "SCTSPA",
-			"name" : "conjunto de referencias de lenguaje castellano para América Latina",
-			"description" : "conjunto de referencias de lenguaje castellano para América Latina",
+			"name" : "conjunto de referencias de lenguaje castellano para Amï¿½rica Latina",
+			"description" : "conjunto de referencias de lenguaje castellano para Amï¿½rica Latina",
 			"attributeCount" : 1,
 			"atomMemberCount" : 1041168,
 			"sourceConceptMemberCount" : 0,
