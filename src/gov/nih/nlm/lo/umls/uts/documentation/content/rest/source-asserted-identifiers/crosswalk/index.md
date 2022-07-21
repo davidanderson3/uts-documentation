@@ -7,7 +7,7 @@ category=Retrieving Source-Asserted Data
 navorder=7
 ~~~~~~
 
-[URIs](#uris) | [Query Parameters](#query-parameters) | [Sample Output](#sample-output)
+[URIs](#uris) | [Query Parameters](#query-parameters) | [Sample Output](#sample-output) | [Example Python Script](/rest/rest-api-cookbook/python-scripts.html#crosswalking-vocabularies-using-cuis)
 
 URIs with /crosswalk support the following use cases:
 
