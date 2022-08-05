@@ -1,10 +1,11 @@
-title=UMLS REST API Home Page
+title=UMLS API Home
 date=2015-06-10
 updated=2016-07-07
 type=page
 status=published
 navorder=1
 ~~~~~~
+
 
 ### Endpoints to search and retrieve UMLS content
 

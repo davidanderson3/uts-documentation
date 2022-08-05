@@ -26,6 +26,7 @@ table {
   border-radius: 5px;
   padding: 20px 20px 20px 20px;
   margin: 10px 0px 20px 20px;
+  height: 95%;
 }
 
 @media screen and (max-width: 768px) {
@@ -45,4 +46,10 @@ color: white;
 
 #barbranding {
 background-color: #326295 !important;
+}
+
+.uts-container::after {
+    content: "";
+    display: table;
+    clear: both;
 }

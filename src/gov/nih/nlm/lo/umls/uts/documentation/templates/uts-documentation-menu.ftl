@@ -19,7 +19,7 @@
         <div class="collapse navbar-collapse" id="navbarNavDropdown">
           <ul class="navbar-nav">
             <#list published_pages?sort_by('navorder') as page>
-            <#if !(page.category)?? && (page.uri != "rest/home.html" && page.uri?starts_with("rest/"))><#if (content.rootpath)??>    	
+            <#if !(page.category)?? && (page.uri?starts_with("rest/"))><#if (content.rootpath)??>    	
             <a class = "nav-link" href = "${content.rootpath}${page.uri}">${page.title}</a>
             <#else></#if></#if>
           </#list>

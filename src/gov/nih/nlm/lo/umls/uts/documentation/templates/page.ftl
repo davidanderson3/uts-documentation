@@ -10,22 +10,46 @@
 	</div>
 </div>
 	<div class = "container-fluid">
-	<div class = "container">
-	<#if (content.uri)??  && content.uri?starts_with("rest/")>
+	<div class = "container uts-container">
+	
         <div id = "uts-notice">
         <p>We welcome your feedback on our <a href = "http://support.nlm.nih.gov/support/create-case/">customer service form</a>. Please use &quot;UMLS REST API feedback&quot; in your subject line.</p>
         <p>Check out the <a href = "/rest/rest-api-cookbook/postman.html">Postman sample collection</a> to help you get started using the UMLS REST API.</p>
         <p><a href="/terms-of-service.html">API Terms of Service</a></p>
+        <#if (content.uri)??  && content.uri?starts_with("rest/home.html")>
+        <hr>
+        <h2>Change Log</h2>
+        <hr>
+        <h5>2022-07-13</h5>
+        <p><b>Search for a CUI, return a source-asserted code</b>: The search endpoint now supports searching for a UMLS CUI and returning a source-asserted
+        code, for example: 
+        <code>
+        <br/>/search/current
+        <br/>?string=C0009044
+        <br/>&sabs=SNOMEDCT_US
+        <br/>&returnIdType=code. 
+    	</code>
+        <br/>For more information see our <a href="/rest/relations/index.html">
+        search documentation</a>.</p>
+        <hr>
+        <h5>2022-06-06</h5>
+        <p><b>Changes to the concept relations endpoint</b>: The <a href="/rest/relations/index.html">concept relations api endpoint</a> will return any relation associated with a
+        UMLS CUI, including source-asserted relations. Previously, this endpoint only returned NLM-asserted relations. </p>
+		<hr>
+        <h5>2022-05-02</h5>
+        <p><b>New authentication method</b>: Users can request data by simply including an API key with a data request. For more information see:
+        <a href="https://www.nlm.nih.gov/pubs/techbull/mj22/mj22_umls_2022aa_release.html">2022AA release announcement</a> and 
+        <a href="/rest/authentication.html">authentication documentation.</a> Ticket-granting tickets and service tickets are 
+        deprecated.
+        <hr>
+        <h5>2022-04-12</h5>
+        <p><b>Changes to API search</b>: The UMLS API started using ElasticSearch for search. Users may notice changes in search ranking.</p>
+        <p><b>Changes to relation data returned</b>: Relations api requests will return additional data fields: relatedFromId and relatedFromIdName.
+        These data fields indicate the subject of the relationship, which can be a code, CUI, AUI, SCUI, or SDUI. See the sample output on the 
+        <a href="/rest/source-asserted-identifiers/relations/index.html">source-asserted relations documentation page</a>.</p>
+        </#if>
 	</div>
-	
-	</#if>
-	<#if (content.uri)??  && content.uri?starts_with("soap/")>
-	<br/>
-          <p style="background-color:pink;font-size:3em;">
-          The UMLS SOAP API was discontinued December 31, 2020. SOAP API users are encouraged to switch to the <a href="https://documentation.uts.nlm.nih.gov/rest/home.html">REST API</a>.</p>
-          </p>
-	</#if>
-	
+		
 	<h1><#escape x as x?xml>${content.title}</#escape></h1>
 	${content.body}
 	</div>
