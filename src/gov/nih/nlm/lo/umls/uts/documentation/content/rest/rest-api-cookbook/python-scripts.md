@@ -9,9 +9,7 @@ navorder=2
 
 Try these python scripts:
 
-
-
-####Crosswalking Vocabularies Using CUIs
+#### Crosswalking Vocabularies Using CUIs
 
 This script will crosswalk from a set of codes in one UMLS source vocabulary to a set of codes in another UMLS source vocabulary as long as the codes share a UMLS Concept. 
 
@@ -25,7 +23,7 @@ This script will crosswalk from a set of codes in one UMLS source vocabulary to 
 
 <hr>
 
-####Get Codes for a List of Concepts
+#### Get Codes for a List of Concepts
 
 This script will take a list of CUIs and return the corresponding codes for a particular UMLS source vocabulary. 
 
@@ -36,6 +34,67 @@ This script will take a list of CUIs and return the corresponding codes for a pa
 **Documentation**: [Search API Endpoint](/rest/search/index.html)
 
 <hr>
+
+#### Get Concepts for a List of Codes
+
+This script will take a list of codes and return the corresponding concepts for a particular UMLS source vocabulary. 
+
+**Script**: [get-concepts-for-a-list-of-codes.py](/scripts/get-concepts-for-a-list-of-codes.py)
+
+**Usage**: python get-codes-for-a-list-of-concepts.py -k YOUR_API_KEY -i cuis.txt -o output.txt -s SNOMEDCT_US
+
+**Documentation**: [Search API Endpoint](/rest/search/index.html)
+
+<hr>
+
+#### Get Concepts for a List of Strings
+
+This script will take a list of strings and return the corresponding concepts for one or more UMLS source vocabularies. 
+
+**Script**: [get-concepts-for-a-list-of-strings.py](/scripts/get-concepts-for-a-list-of-strings.py)
+
+**Usage**: python get-concepts-for-a-list-of-strings.py -k YOUR_API_KEY -i strings.txt -o output.txt
+
+**Documentation**: [Search API Endpoint](/rest/search/index.html)
+
+<hr>
+
+#### Retrieve Atoms Using a CUI or Code
+
+This script will return atoms from a single CUI or code. If using a code, a source vocabulary must be specified.
+
+**Script**: [retrieve-names-for-cui-or-code.py](/scripts/retrieve-names-for-cui-or-code.py)
+
+**Usage**: python retrieve-names-for-cui-or-code.py -k YOUR_API_KEY -i C0018787
+
+**Documentation**: [Concept API Endpoint](/rest/concept/index.html), [Source-Asserted Information API Endpoint](/rest/source-asserted-identifiers/index.html)
+
+<hr>
+
+#### Search for a Term 
+
+This script will return CUIs and associated information for a search term.
+
+**Script**: [search-terms.py](/scripts/search-terms.py)
+
+**Usage**: python search-terms.py -k YOUR_API_KEY -s diabetic-foot
+
+**Documentation**: [Search API Endpoint](/rest/search/index.html)
+
+<hr>
+
+#### Search for Hierarchical Relations 
+
+This script displays parents, children, descendants, or ancestors for a source-asserted code.
+
+**Script**: [walk-hierarchy.py](/scripts/walk-hierarchy.py)
+
+**Usage**: python walk-hierarchy.py -k YOUR_API_KEY -i 9468002 -s SNOMEDCT_US -o parents / children / ancestors / descendants
+
+**Documentation**: [Source-Asserted Information API Endpoint](/rest/source-asserted-identifiers/index.html)
+
+<hr>
+
 
 
 
