@@ -28,6 +28,8 @@ Sample URI|Description|Returned JSON Object classType
 /content/current/source/SNOMEDCT_US/9468002/parents| Retrieves parents a source-asserted identifier|SourceAtomCluster*
 /content/current/source/SNOMEDCT_US/9468002/children| Retrieves children of a source-asserted identifier|SourceAtomCluster*
 
+[Python example - Retrieve ancestors, descendants, parents, or children](/rest/rest-api-cookbook/python-scripts.html#retrieve-ancestors-descendants-parents-or-children)
+
 *Calls using codes from HL7V2.5 and HL7V3.0 return output with an "Atom" JSON Object classType.
 
 ### Query Parameters

@@ -28,7 +28,6 @@ Sample URI|Description|Returned JSON Object classType
 /content/current/AUI/A10134087/parents|Retrieves parents of a UMLS atom|Atom
 /content/current/AUI/A10134087/children|Retrieves children of a UMLS atom|Atom
 
-
 ### Query Parameters
 
 Parameter name | Required? Y/N | Description|  Valid Values | Default value | Usage Note

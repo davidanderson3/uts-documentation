@@ -83,13 +83,13 @@ This script will return CUIs and associated information for a search term.
 
 <hr>
 
-#### Search for Hierarchical Relations 
+#### Retrieve ancestors, descendants, parents, or children 
 
-This script displays parents, children, descendants, or ancestors for a source-asserted code.
+This script returns ancestors, descendants, parents, or children for a source-asserted code.
 
 **Script**: [walk-hierarchy.py](/scripts/walk-hierarchy.py)
 
-**Usage**: python walk-hierarchy.py -k YOUR_API_KEY -i 9468002 -s SNOMEDCT_US -o parents / children / ancestors / descendants
+**Usage**: python walk-hierarchy.py -k YOUR_API_KEY -i 9468002 -s SNOMEDCT_US -o ancestors / descendants / parents / children 
 
 **Documentation**: [Source-Asserted Information API Endpoint](/rest/source-asserted-identifiers/index.html)
 

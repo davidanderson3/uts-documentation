@@ -29,11 +29,11 @@ You may use any valid UMLS release back to 2008AA in your URI if you would like 
 
 Sample URI|Description|Returned JSON Object classType
 --- | --- | ---
-/content/current/CUI/C0155502/atoms|Retrieves all atoms for C0155502 | Atom
+/content/current/CUI/C0155502/atoms|Retrieves all atoms for C0155502 - [python example](/rest/rest-api-cookbook/python-scripts.html#retrieve-atoms-using-a-cui-or-code) | Atom
 /content/current/CUI/C0155502/atoms/preferred|Retrieves the default preferred atom of C0155502 | Atom
 /content/current/CUI/C0155502/atoms?language=ENG|Retrieves all English language atoms for C0155502| Atom
 /content/current/CUI/C0155502/atoms?sabs=SNOMEDCT_US,ICD9CM&ttys=PT | Retrieve SNOMEDCT_US and ICD9CM preferred terms in C0155502| Atom
-/content/current/source/SNOMEDCT_US/111541001/atoms | Retrieve atoms belonging to SNOMED CT concept 111541001| Atom
+/content/current/source/SNOMEDCT_US/111541001/atoms | Retrieve atoms belonging to SNOMED CT concept 111541001 - [python example](/rest/rest-api-cookbook/python-scripts.html#retrieve-atoms-using-a-cui-or-code)| Atom
 /content/current/source/SNOMEDCT_US/111541001/atoms/preferred | Retrieve the default preferred atom belonging to SNOMED CT concept 111541001| Atom
 /content/current/AUI/A8345234 | Retrieve information about AUI A8345234| Atom
 [/content/current/AUI/A8345234/ancestors](../atoms/ancestors-and-descendants/index.html)|Retrieve ancestors of a UMLS atom|Atom
