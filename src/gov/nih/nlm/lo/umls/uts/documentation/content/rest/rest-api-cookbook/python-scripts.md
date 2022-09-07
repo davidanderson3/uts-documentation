@@ -95,6 +95,18 @@ This script returns ancestors, descendants, parents, or children for a source-as
 
 <hr>
 
+#### Get Semantic Types for a List of Strings
+
+This script returns semantic types for concepts returned by string searches.
+
+**Script**: [get_semantic_types_for_a_list_of_strings.py](/scripts/get_semantic_types_for_a_list_of_strings.py)
+
+**Usage**: python get_semantic_types_for_a_list_of_strings.py -k YOUR_API_KEY -i strings.txt -o output.txt
+
+**Documentation**: [Searching the UMLS API Endpoint](/rest/search/index.html), [Retrieving UMLS Concept Information API Endpoint](/rest/concept/index.html)
+
+<hr>
+
 
 
 
