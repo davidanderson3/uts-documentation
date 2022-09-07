@@ -29,8 +29,8 @@
                 </#if>
               </#list>
               <#list categories as cat>
+                <li>
                 <div class="nav-item dropdown">
-                  <li>
                     <a class="nav-link dropdown-toggle" href="#" id="products_services" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">${cat}</a>
                     <div class="dropdown-menu dropdown-menu-right ml-xl-5">
                       <#list published_pages?sort_by('navorder') as page>
@@ -41,9 +41,9 @@
                           </#if>
                         </#if>
                       </#list>
-                    </div>
-                  </li>
-                </div>
+                    </div>  
+            	</div>
+                </li>
               </#list>
             </ul>
           </div>
