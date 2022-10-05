@@ -11,7 +11,7 @@
 </div>
 	<div class = "container-fluid">
 	<div class = "container uts-container">
-	
+	    <#if (content.uri)??  && content.uri?starts_with("rest/")>
         <div id = "uts-notice">
         <p>We welcome your feedback on our <a href = "http://support.nlm.nih.gov/support/create-case/">customer service form</a>. Please use &quot;UMLS REST API feedback&quot; in your subject line.</p>
         <p>Check out the <a href = "/rest/rest-api-cookbook/postman.html">Postman sample collection</a> to help you get started using the UMLS REST API.</p>
@@ -47,6 +47,7 @@
         <p><b>Changes to relation data returned</b>: Relations api requests will return additional data fields: relatedFromId and relatedFromIdName.
         These data fields indicate the subject of the relationship, which can be a code, CUI, AUI, SCUI, or SDUI. See the sample output on the 
         <a href="/rest/source-asserted-identifiers/relations/index.html">source-asserted relations documentation page</a>.</p>
+        </#if>
         </#if>
 	</div>
 		

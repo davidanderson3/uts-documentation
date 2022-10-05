@@ -6,11 +6,26 @@ status=published
 navorder=1
 ~~~~~~
 
-<hr />
+##<span style="color:red;">NEW: Download files using a single request</span>##
 
-###The following instructions will allow you to automate the download of RxNorm, UMLS, or SNOMED CT files. Implementation depends on your local environment. 
+Download any RxNorm, SNOMED CT, or UMLS release using our download API. 
 
-<hr />
+**The base URI is https://uts-ws.nlm.nih.gov/download**
+
+###Examples###
+<hr>
+####Download RxNorm Weekly Updates####
+https://uts-ws.nlm.nih.gov/download<br/><b>?url=</b>https://download.nlm.nih.gov/umls/kss/rxnorm/RxNorm_weekly_10052022.zip<br/><b>&apiKey=</b>YOUR_API_KEY 
+<hr>
+####Download the US Edition of SNOMED CT####
+https://uts-ws.nlm.nih.gov/download<br/><b>?url=</b>https://download.nlm.nih.gov/mlb/utsauth/USExt/SnomedCT_USEditionRF2_PRODUCTION_20220901T120000Z.zip<br/><b>&apiKey=</b>YOUR_API_KEY 
+<hr>
+####Download the UMLS Release####
+https://uts-ws.nlm.nih.gov/download<br/><b>?url=</b>https://download.nlm.nih.gov/umls/kss/2022AA/umls-2022AA-full.zip<br/><b>&apiKey=</b>YOUR_API_KEY 
+<hr>
+<div style="background-color:#E7E4E3;padding:10px;">
+###<span style="color:red;">DEPRECATED</span>: Instructions for downloading files using a TGT and Service Ticket
+
 #### **Step 1**: Get your API key from your UTS profile.
 
 * You can find the API key in the [UTS 'My Profile' area](https://uts.nlm.nih.gov/uts/) after signing in. An API key remains active as long as the associated UTS account is active.
@@ -437,4 +452,7 @@ print(r.encoding)
 
 print('completed')
 ~~~~
+
+.
+</div>
  

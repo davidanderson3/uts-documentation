@@ -25,7 +25,7 @@ You may use any valid UMLS release back to 2008AA in your URI if you would like 
 
 Sample URI|Description|Returned JSON Object classType
 --- | ---
-/search/current?string=fracture of carpal bone | Retrieves CUIs for a search term - [python example](http://localhost:8080/rest/rest-api-cookbook/python-scripts.html#get-concepts-for-a-list-of-strings)| searchResults
+/search/current?string=fracture of carpal bone | Retrieves CUIs for a search term - [python example](/rest/rest-api-cookbook/python-scripts.html#get-concepts-for-a-list-of-strings)| searchResults
 /search/current?string=fracture of carpal bone&searchType=exact | Uses 'exact' searching | searchResults
 /search/current?string=fracture of carpal bone&sabs=SNOMEDCT_US&returnIdType=code | Returns SNOMEDCT concepts associated with a search term  | searchResults
 /search/current?string=9468002&inputType=sourceUi&searchType=exact&sabs=SNOMEDCT_US | Returns UMLS CUIs associated with a SNOMEDCT_US concept  - [python example](/rest/rest-api-cookbook/python-scripts.html#get-concepts-for-a-list-of-codes) | searchResults
