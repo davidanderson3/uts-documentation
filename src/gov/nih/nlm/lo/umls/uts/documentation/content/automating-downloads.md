@@ -16,12 +16,31 @@ Download any RxNorm, SNOMED CT, or UMLS release using our download API.
 <hr>
 ####Download RxNorm Weekly Updates####
 https://uts-ws.nlm.nih.gov/download<br/><b>?url=</b>https://download.nlm.nih.gov/umls/kss/rxnorm/RxNorm_weekly_10052022.zip<br/><b>&apiKey=</b>YOUR_API_KEY 
+
+curl example:
+
+~~~~text
+curl "https://uts-ws.nlm.nih.gov/download?url=https://download.nlm.nih.gov/umls/kss/rxnorm/RxNorm_weekly_10052022.zip&apiKey=YOUR_API_KEY" -o RxNorm_weekly_10052022.zip
+~~~~
 <hr>
 ####Download the US Edition of SNOMED CT####
 https://uts-ws.nlm.nih.gov/download<br/><b>?url=</b>https://download.nlm.nih.gov/mlb/utsauth/USExt/SnomedCT_USEditionRF2_PRODUCTION_20220901T120000Z.zip<br/><b>&apiKey=</b>YOUR_API_KEY 
+
+curl example:
+
+~~~~text
+curl "https://uts-ws.nlm.nih.gov/download?url=https://download.nlm.nih.gov/mlb/utsauth/USExt/SnomedCT_USEditionRF2_PRODUCTION_20220901T120000Z.zip&apiKey=YOUR_API_KEY" -o SnomedCT_USEditionRF2_PRODUCTION_20220901T120000Z.zip
+~~~~
+
 <hr>
 ####Download the UMLS Release####
 https://uts-ws.nlm.nih.gov/download<br/><b>?url=</b>https://download.nlm.nih.gov/umls/kss/2022AA/umls-2022AA-full.zip<br/><b>&apiKey=</b>YOUR_API_KEY 
+
+curl example:
+
+~~~~text
+curl "https://uts-ws.nlm.nih.gov/download?url=https://download.nlm.nih.gov/umls/kss/2022AA/umls-2022AA-full.zip&apiKey=YOUR_API_KEY" -o umls-2022AA-full.zip
+~~~~
 <hr>
 <div style="background-color:#E7E4E3;padding:10px;">
 ###<span style="color:red;">DEPRECATED</span>: Instructions for downloading files using a TGT and Service Ticket

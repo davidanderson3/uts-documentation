@@ -20,15 +20,31 @@
         <hr>
         <h2>Change Log</h2>
         <hr>
+        <h5>2022-10-05</h5>
+        <p><b>Download any RxNorm, SNOMED CT, or UMLS release using a single command</b>, for example: <br/><br/>
+        <code>
+		curl <br/>
+		"https://uts-ws.nlm.nih.gov/download<br/>
+		?url=https://download.nlm.nih.gov/<br/>
+		umls/kss/rxnorm/<br/>
+		RxNorm_weekly_10052022.zip<br/>
+		&apiKey=YOUR_API_KEY" <br/>
+		-o RxNorm_weekly_10052022.zip
+		</code>
+		<br/><br/>
+		For more information, see our <a href="../automating-downloads.html">Automating UMLS Terminology Services Downloads page</a>.</p>
+		<hr>
         <h5>2022-07-13</h5>
         <p><b>Search for a CUI, return a source-asserted code</b>: The search endpoint now supports searching for a UMLS CUI and returning a source-asserted
-        code, for example: 
+        code, for example:
+        <br/> 
         <code>
         <br/>/search/current
         <br/>?string=C0009044
         <br/>&sabs=SNOMEDCT_US
         <br/>&returnIdType=code. 
     	</code>
+    	<br/>
         <br/>For more information see our <a href="/rest/relations/index.html">
         search documentation</a>.</p>
         <hr>
