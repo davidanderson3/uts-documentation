@@ -42,7 +42,7 @@ curl example:
 curl "https://uts-ws.nlm.nih.gov/download?url=https://download.nlm.nih.gov/umls/kss/2022AA/umls-2022AA-full.zip&apiKey=YOUR_API_KEY" -o umls-2022AA-full.zip
 ~~~~
 <hr>
-<div style="background-color:#E7E4E3;padding:10px;">
+
 ###<span style="color:red;">DEPRECATED</span>: Instructions for downloading files using a TGT and Service Ticket
 
 #### **Step 1**: Get your API key from your UTS profile.
@@ -472,6 +472,5 @@ print(r.encoding)
 print('completed')
 ~~~~
 
-.
-</div>
+
  
