@@ -5,7 +5,8 @@
         <h3><span style="color: white;">UMLS API Technical Documentation</span></h3>
         <div class="breadcrumb-brand umls-div">
           <ul>
-            <li><a href="//support.nlm.nih.gov/support/create-case/" title="Provide Feedback" id="anch_33"><strong>Provide Feedback</strong></a></li>
+            <li><a href="//uts.nlm.nih.gov/uts/profile""><strong>Get Your API Key</strong></a></li>
+            <li><a href="//support.nlm.nih.gov/support/create-case/"><strong>Provide Feedback</strong></a></li>
           </ul>
         </div>
       </div>

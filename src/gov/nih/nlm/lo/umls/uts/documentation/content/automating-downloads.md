@@ -5,15 +5,18 @@ type=page
 status=published
 navorder=1
 ~~~~~~
-
+<hr />
 ##<span style="color:red;">NEW: Download files using a single request</span>##
 
-Download any RxNorm, SNOMED CT, or UMLS release using our download API. 
+Download any [RxNorm](https://www.nlm.nih.gov/research/umls/rxnorm/docs/rxnormfiles.html), [SNOMED CT](https://www.nlm.nih.gov/healthit/snomedct/index.html), or [UMLS](https://www.nlm.nih.gov/research/umls/licensedcontent/umlsknowledgesources.html) release using our download API.
+<hr />
+#### **Step 1**: Get your API key from your UTS profile.
 
-**The base URI is https://uts-ws.nlm.nih.gov/download**
+* You can find the API key in the [UTS 'My Profile' area](https://uts.nlm.nih.gov/uts/) after signing in. An API key remains active as long as the associated UTS account is active.
 
-###Examples###
-<hr>
+#### **Step 2**: Find the URL for the file you want to download and send a request. Examples:
+
+<hr />
 ####Download RxNorm Weekly Updates####
 https://uts-ws.nlm.nih.gov/download<br/><b>?url=</b>https://download.nlm.nih.gov/umls/kss/rxnorm/RxNorm_weekly_10052022.zip<br/><b>&apiKey=</b>YOUR_API_KEY 
 
@@ -22,7 +25,7 @@ curl example:
 ~~~~text
 curl "https://uts-ws.nlm.nih.gov/download?url=https://download.nlm.nih.gov/umls/kss/rxnorm/RxNorm_weekly_10052022.zip&apiKey=YOUR_API_KEY" -o RxNorm_weekly_10052022.zip
 ~~~~
-<hr>
+<hr />
 ####Download the US Edition of SNOMED CT####
 https://uts-ws.nlm.nih.gov/download<br/><b>?url=</b>https://download.nlm.nih.gov/mlb/utsauth/USExt/SnomedCT_USEditionRF2_PRODUCTION_20220901T120000Z.zip<br/><b>&apiKey=</b>YOUR_API_KEY 
 
@@ -31,8 +34,7 @@ curl example:
 ~~~~text
 curl "https://uts-ws.nlm.nih.gov/download?url=https://download.nlm.nih.gov/mlb/utsauth/USExt/SnomedCT_USEditionRF2_PRODUCTION_20220901T120000Z.zip&apiKey=YOUR_API_KEY" -o SnomedCT_USEditionRF2_PRODUCTION_20220901T120000Z.zip
 ~~~~
-
-<hr>
+<hr />
 ####Download the UMLS Release####
 https://uts-ws.nlm.nih.gov/download<br/><b>?url=</b>https://download.nlm.nih.gov/umls/kss/2022AA/umls-2022AA-full.zip<br/><b>&apiKey=</b>YOUR_API_KEY 
 
@@ -41,8 +43,7 @@ curl example:
 ~~~~text
 curl "https://uts-ws.nlm.nih.gov/download?url=https://download.nlm.nih.gov/umls/kss/2022AA/umls-2022AA-full.zip&apiKey=YOUR_API_KEY" -o umls-2022AA-full.zip
 ~~~~
-<hr>
-
+<hr />
 ###<span style="color:red;">DEPRECATED</span>: Instructions for downloading files using a TGT and Service Ticket
 
 #### **Step 1**: Get your API key from your UTS profile.
