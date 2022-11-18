@@ -49,7 +49,7 @@ pageSize | N | Whole number that specifies the number of results to include per 
 <a name="searchType"></a>
 #### Expected Behaviors for the searchType Parameter
 
-* **words**: breaks a search term into its component parts, or words, and retrieves all concepts containing any of those words. For example: If you enter "Heart Disease, Acute" a Word search will retrieve all concepts containing any of the three words (heart, or disease, or acute). Word is the default Search Type selection and is appropriate for both English and non-English search terms.
+* **words**: default searchType. Retrieves results where all words in the query appear in a particular name. 
 * **exact**: retrieves only concepts that include a synonym that exactly matches the search term.
 * **normalizedString**: use with English language terms only. Removes lexical variations such as plural and upper case text and compares search terms to the Metathesaurus normalized string index to retrieve relevant concepts.
 * **normalizedWords**: use with English language terms only. Removes lexical variations such as plural and upper case text, and compares search terms to the Metathesaurus normalized word index to retrieve relevant concepts.
