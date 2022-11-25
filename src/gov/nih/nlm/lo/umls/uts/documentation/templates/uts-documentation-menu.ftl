@@ -16,7 +16,7 @@
     <div class="container-fluid bg-secondary">
       <div class="container pl-0 pl-lg-3">
         <nav class="navbar navbar-expand-lg navbar-light">
-          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation"> <span class="navbar-toggler-icon"></span> </button>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation"> <span class="navbar-toggler-icon"></span> </button>
           <div class="collapse navbar-collapse" id="navbarNavDropdown">
             <ul class="navbar-nav">
               <#list published_pages?sort_by('navorder') as page>
@@ -32,7 +32,7 @@
               <#list categories as cat>
                 <li>
                 <div class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle" href="#" id="products_services" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">${cat}</a>
+                    <a class="nav-link dropdown-toggle" href="#" id="products_services" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">${cat}</a>
                     <div class="dropdown-menu dropdown-menu-right ml-xl-5">
                       <#list published_pages?sort_by('navorder') as page>
                         <#if (page.category)?? && page.category=cat>
