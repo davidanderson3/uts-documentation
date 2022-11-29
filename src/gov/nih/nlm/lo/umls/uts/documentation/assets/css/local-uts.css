@@ -53,3 +53,8 @@ background-color: #326295 !important;
     display: table;
     clear: both;
 }
+
+table, th, td {
+  border: 1px solid;
+  padding: 4px;
+}

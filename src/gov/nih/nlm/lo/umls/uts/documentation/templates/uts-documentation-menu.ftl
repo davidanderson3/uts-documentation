@@ -1,17 +1,32 @@
 <#assign categories=['Retrieving UMLS Data', 'Retrieving Source-Asserted Data' , 'REST API Cookbook' ]>
-  <div class="container-fluid bg-primary">
-    <div class="container">
-      <div id="barbranding">
-        <h3><span style="color: white;">UMLS API Technical Documentation</span></h3>
-        <div class="breadcrumb-brand umls-div">
-          <ul>
-            <li><a href="//uts.nlm.nih.gov/uts/profile""><strong>Get Your API Key</strong></a></li>
-            <li><a href="//support.nlm.nih.gov/support/create-case/"><strong>Provide Feedback</strong></a></li>
-          </ul>
-        </div>
-      </div>
-    </div>
-  </div>
+
+<div id="barbranding">
+<div class="container">
+<div class="row text-white pt-3 pb-2">
+<div class="col breadcrumb-brand">
+<div class="floating-s">
+<h4 class="text-white">UMLS API Technical Documentation</h4>
+</div>
+<div class="floating-e">
+<ul class="ps-0">
+
+
+   
+<li class="list-inline-item"><a class="text-white" href="//uts.nlm.nih.gov/uts/profile" title="Get Your API Key"><strong>Get Your API Key</strong></a>&nbsp;&nbsp;|</li>
+
+   
+   
+<li class="list-inline-item"><a class="text-white" href="//support.nlm.nih.gov/support/create-case/" title="Unified Medical Language System Support" id="anch_31"><strong>Customer Support</strong></a>&nbsp;&nbsp;</li>
+
+   
+   
+</ul></div> <!-- 1 --> 
+
+
+ </div> <!-- 2 -->
+  
+
+</div> <!-- 3 --></div></div></div>
   <#if (content.uri)?? && content.uri?starts_with("rest/")>
     <div class="container-fluid bg-secondary">
       <div class="container pl-0 pl-lg-3">
