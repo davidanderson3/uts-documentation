@@ -4,7 +4,6 @@ table {
 
 .navbar-light .navbar-nav .nav-link {
   text-transform: none;
-  font-weight: 100;
 }
 
 .uts-rest-description {
@@ -57,4 +56,12 @@ background-color: #326295 !important;
 table, th, td {
   border: 1px solid;
   padding: 4px;
+}
+
+pre {
+  display: block;
+  font-family: monospace;
+  white-space: pre;
+  margin: 1em 0;
+  background-color: #f7f7f5 !important; 
 }

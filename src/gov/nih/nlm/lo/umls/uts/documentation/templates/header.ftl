@@ -33,7 +33,6 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
       window.location.replace("${content.redirect}");
     </script>
   </#if>
-  <#include "auth.ftl">
 </head>
 
 <body onload="prettyPrint();hljs.initHighlighting();">
