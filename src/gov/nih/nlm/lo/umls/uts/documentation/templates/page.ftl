@@ -20,6 +20,19 @@
         <hr>
         <h2>Change Log</h2>
         <hr>
+        <h5>2022-12-28</h5>
+        <p><b>Search for partial matches</b>, for example: <br/><br/>
+        <code>
+		/search/current<br/>
+		?string=Congenital Nephrogenic Diabetes Insipidus<br/>
+		&partialSearch=true
+		</code>
+		<br/><br/>
+		Adding partialSearch=true to your search query will return partial matches. If your query contains four words, it will return results that include all four words, then results that contain three of four words, then two of four words, then one of four words. 
+		<br/><br/>
+		For more information see our <a href="/rest/relations/index.html">
+        search documentation</a>.</p>
+		<hr>
         <h5>2022-10-05</h5>
         <p><b>Download any RxNorm, SNOMED CT, or UMLS release using a single command</b>, for example: <br/><br/>
         <code>

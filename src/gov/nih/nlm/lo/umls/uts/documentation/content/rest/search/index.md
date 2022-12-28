@@ -43,6 +43,7 @@ includeSuppressible | N | Return content that is a result of matches on suppress
 returnIdType | N | Specifies the type of identifier you wish to retrieve. | 'aui','concept','code','sourceConcept','sourceDescriptor', 'sourceUi' | 'concept' | Use 'code','sourceConcept', 'sourceDescriptor', or 'sourceUi' if you prefer source-asserted identifiers rather than CUIs in your search results.
 sabs | N | Comma-separated list of source vocabularies to include in your search | Any root source abbreviation in the UMLS. See the "Abbreviation" column for a list of [UMLS source vocabulary abbreviations](https://www.nlm.nih.gov/research/umls/sourcereleasedocs/index.html).  | All UMLS source vocabularies | Use a comma between each source abbreviation to specify more than one.
 searchType | N | Type of search you wish to use. | 'exact','words','leftTruncation', 'rightTruncation', 'normalizedString', 'normalizedWords' | 'words' | Use 'exact' when using inputType = 'code', 'sourceConcept', 'sourceDescriptor', or 'sourceUi'. [More information...](#searchType)
+partialSearch | N | Return partial matches for your query. | true or false | false | n/a
 pageNumber | N | Whole number that specifies which page of results to fetch. | 1,2,3, etc | 1 | n/a
 pageSize | N | Whole number that specifies the number of results to include per page. | 1,2,3, etc | 25 | n/a
 
