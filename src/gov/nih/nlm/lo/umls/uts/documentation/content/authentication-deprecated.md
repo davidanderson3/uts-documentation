@@ -1,11 +1,10 @@
-title=Ticket-Granting Ticket and Service Ticket Authentication Instructions (DEPRECATED)
+title=Ticket-Granting Ticket and Service Ticket Authentication Instructions for use with AccessGUDID
 date=2015-06-10
 updated=2018-05-01
 type=page
 status=published
 navorder=1
 ~~~~~~
-
 
 The UMLS REST API requires a UMLS account for the authentication described below. If you do not have a UMLS account, you may apply for a license on the [UMLS Terminology Services (UTS) website](https://uts.nlm.nih.gov). 
 
