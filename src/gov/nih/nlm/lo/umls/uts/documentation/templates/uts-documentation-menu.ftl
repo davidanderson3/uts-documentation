@@ -27,7 +27,6 @@
   
 
 </div> <!-- 3 --></div></div></div>
-  <#if (content.uri)?? && content.uri?starts_with("rest/")>
     <div class="container-fluid bg-secondary">
       <div class="container pl-0 pl-lg-3">
         <nav class="navbar navbar-expand-lg navbar-light">
@@ -66,4 +65,3 @@
         </nav>
       </div>
     </div>
-  </#if>
