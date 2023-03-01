@@ -19,7 +19,7 @@ For example, https://uts-ws.nlm.nih.gov/rest/content/current/CUI/C0009044?apiKey
 
 <hr />
 
-####<span style="color:red;"><b>Note</b>: AccessGUDID users should continue to use the Ticket-Granting Tickets and Service Tickets for authentication:</span>
+####<span style="color:red;"><b>Note</b>: AccessGUDID users can now use the [API Key authentication method](https://accessgudid.nlm.nih.gov/news). For AccessGUDID users that have previously implemented Ticket-Granting Tickets and Service Tickets for authentication, please refer to this documentation:</span>
 
 [Ticket-Granting Ticket and Service Ticket Documentation](/authentication-deprecated.html)
 
