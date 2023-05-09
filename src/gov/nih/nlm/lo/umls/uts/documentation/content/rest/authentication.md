@@ -25,6 +25,8 @@ Make a request that includes both your API key (validatorApiKey) and the API key
 
 https://utslogin.nlm.nih.gov/validateUser?validatorApiKey=YOUR_API_KEY&apiKey=USER_API_KEY
 
+<hr>
+
 <span style="color:red;"><b>Note</b>: AccessGUDID users can now use the [API Key authentication method](https://accessgudid.nlm.nih.gov/news). For AccessGUDID users that have previously implemented Ticket-Granting Tickets and Service Tickets for authentication, please refer to this documentation:</span>
 
 [Ticket-Granting Ticket and Service Ticket Documentation](/authentication-deprecated.html)
