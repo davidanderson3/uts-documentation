@@ -19,7 +19,13 @@ For example, https://uts-ws.nlm.nih.gov/rest/content/current/CUI/C0009044?apiKey
 
 <hr />
 
-####<span style="color:red;"><b>Note</b>: AccessGUDID users can now use the [API Key authentication method](https://accessgudid.nlm.nih.gov/news). For AccessGUDID users that have previously implemented Ticket-Granting Tickets and Service Tickets for authentication, please refer to this documentation:</span>
+We also offer an endpoint for validating API keys. If you have developed an application that integrates UMLS data and you need to determine whether a user is a UMLS licensee, you can use this endpoint to validate the user's API key. 
+
+Make a request that includes both your API key (validatorApiKey) and the API key of the user of your application (apiKey). For example: 
+
+https://utslogin.nlm.nih.gov/validateUser?validatorApiKey=YOUR_API_KEY&apiKey=USER_API_KEY
+
+<span style="color:red;"><b>Note</b>: AccessGUDID users can now use the [API Key authentication method](https://accessgudid.nlm.nih.gov/news). For AccessGUDID users that have previously implemented Ticket-Granting Tickets and Service Tickets for authentication, please refer to this documentation:</span>
 
 [Ticket-Granting Ticket and Service Ticket Documentation](/authentication-deprecated.html)
 

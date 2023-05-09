@@ -19,6 +19,16 @@
         <hr>
         <h2>Change Log</h2>
         <hr>
+        <h5>2022-05-09</h5>
+        <p>We now offer an endpoint for validating API keys. If you have developed an application that integrates UMLS data and you need to determine whether a user is a UMLS licensee, you can use this endpoint to validate the user's API key.<br/><br/>
+		Make a request that includes both your API key (validatorApiKey) and the API key of the user of your application (apiKey). For example:<br/><br/>
+		<code>https://utslogin.nlm.nih.gov/validateUser?validatorApiKey=YOUR_API_KEY&apiKey=USER_API_KEY
+		</code>
+		<br/><br/>
+		For more information see our  
+        <a href="/rest/authentication.html">authentication documentation</a>.
+		</p>
+		<hr>
         <h5>2022-12-28</h5>
         <p><b>Search for partial matches</b>, for example: <br/><br/>
         <code>
