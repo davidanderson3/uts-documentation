@@ -19,7 +19,14 @@
         <hr>
         <h2>Change Log</h2>
         <hr>
-        <h5>2022-05-09</h5>
+        <h5>2023-07-12</h5>
+		<p>We have made adjustments to the way in which the search API stems individual words.  
+		The most significant impact is that queries that include plural forms of words will now find singular forms, 
+		for example, a query for "lungs" will find all instances of "lung". In general, API search queries 
+		and search queries in the Metathesaurus Browser will produce a higher number of results than before.</p>
+		<p>
+		<hr>
+        <h5>2023-05-09</h5>
         <p>We now offer an endpoint for validating API keys. If you have developed an application that integrates UMLS data and you need to determine whether a user is a UMLS licensee, you can use this endpoint to validate the user's API key.<br/><br/>
 		Make a request that includes both your API key (validatorApiKey) and the API key of the user of your application (apiKey). For example:<br/><br/>
 		<code>https://utslogin.nlm.nih.gov/validateUser?validatorApiKey=YOUR_API_KEY&apiKey=USER_API_KEY
