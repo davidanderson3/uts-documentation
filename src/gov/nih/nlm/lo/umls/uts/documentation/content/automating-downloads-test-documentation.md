@@ -49,23 +49,23 @@ navorder=1
 </thead>
 <tbody>
 <tr>
-<td><a href="https://uts-ws.awsqa.nlm.nih.gov/releases?releaseType=rxnorm-full-monthly-release">RxNorm Full Monthly Release</a></td>
+<td><a href="https://uts-ws.nlm.nih.gov/releases?releaseType=rxnorm-full-monthly-release">RxNorm Full Monthly Release</a></td>
 <td>releaseType=rxnorm-full-monthly-release</td>
 </tr>
 <tr>
-<td><a href="https://uts-ws.awsqa.nlm.nih.gov/releases?releaseType=rxnorm-weekly-updates">RxNorm Weekly Updates</a></td>
+<td><a href="https://uts-ws.nlm.nih.gov/releases?releaseType=rxnorm-weekly-updates">RxNorm Weekly Updates</a></td>
 <td>releaseType=rxnorm-weekly-updates</td>
 </tr>
 <tr>
-<td><a href="https://uts-ws.awsqa.nlm.nih.gov/releases?releaseType=rxnorm-prescribable-content-monthly-release">RxNorm Prescribable Content Monthly Release</a></td>
+<td><a href="https://uts-ws.nlm.nih.gov/releases?releaseType=rxnorm-prescribable-content-monthly-release">RxNorm Prescribable Content Monthly Release</a></td>
 <td>releaseType=rxnorm-prescribable-content-monthly-release</td>
 </tr>
 <tr>
-<td><a href="https://uts-ws.awsqa.nlm.nih.gov/releases?releaseType=rxnorm-prescribable-content-weekly-updates">RxNorm Prescribable Content Weekly Updates</a></td>
+<td><a href="https://uts-ws.nlm.nih.gov/releases?releaseType=rxnorm-prescribable-content-weekly-updates">RxNorm Prescribable Content Weekly Updates</a></td>
 <td>releaseType=rxnorm-prescribable-content-weekly-updates</td>
 </tr>
 <tr>
-<td><a href="https://uts-ws.awsqa.nlm.nih.gov/releases?releaseType=rxnav-in-a-box">RxNav-in-a-Box</a></td>
+<td><a href="https://uts-ws.nlm.nih.gov/releases?releaseType=rxnav-in-a-box">RxNav-in-a-Box</a></td>
 <td>releaseType=rxnav-in-a-box</td>
 </tr>
 </tbody>
@@ -80,27 +80,27 @@ navorder=1
 </thead>
 <tbody>
 <tr>
-<td><a href="https://uts-ws.awsqa.nlm.nih.gov/releases?releaseType=snomed-ct-us-edition">SNOMED CT US Edition</a></td>
+<td><a href="https://uts-ws.nlm.nih.gov/releases?releaseType=snomed-ct-us-edition">SNOMED CT US Edition</a></td>
 <td>releaseType=snomed-ct-us-edition</td>
 </tr>
 <tr>
-<td><a href="https://uts-ws.awsqa.nlm.nih.gov/releases?releaseType=snomed-ct-us-edition-transitive-closure-resources">SNOMED CT US Edition Transitive Closure Resources</a></td>
+<td><a href="https://uts-ws.nlm.nih.gov/releases?releaseType=snomed-ct-us-edition-transitive-closure-resources">SNOMED CT US Edition Transitive Closure Resources</a></td>
 <td>releaseType=snomed-ct-us-edition-transitive-closure-resources</td>
 </tr>
 <tr>
-<td><a href="https://uts-ws.awsqa.nlm.nih.gov/releases?releaseType=snomed-ct-international-edition">SNOMED CT International Edition</a></td>
+<td><a href="https://uts-ws.nlm.nih.gov/releases?releaseType=snomed-ct-international-edition">SNOMED CT International Edition</a></td>
 <td>releaseType=snomed-ct-international-edition</td>
 </tr>
 <tr>
-<td><a href="https://uts-ws.awsqa.nlm.nih.gov/releases?releaseType=snomed-ct-core-problem-list-subset">SNOMED CT CORE Problem List Subset</a></td>
+<td><a href="https://uts-ws.nlm.nih.gov/releases?releaseType=snomed-ct-core-problem-list-subset">SNOMED CT CORE Problem List Subset</a></td>
 <td>releaseType=snomed-ct-core-problem-list-subset</td>
 </tr>
 <tr>
-<td><a href="https://uts-ws.awsqa.nlm.nih.gov/releases?releaseType=snomed-ct-to-icd-10-cm-mapping-resources">SNOMED CT to ICD-10-CM Mapping Resources</a></td>
+<td><a href="https://uts-ws.nlm.nih.gov/releases?releaseType=snomed-ct-to-icd-10-cm-mapping-resources">SNOMED CT to ICD-10-CM Mapping Resources</a></td>
 <td>releaseType=snomed-ct-to-icd-10-cm-mapping-resources</td>
 </tr>
 <tr>
-<td><a href="https://uts-ws.awsqa.nlm.nih.gov/releases?releaseType=snomed-ct-spanish-edition">SNOMED CT Spanish Edition</a></td>
+<td><a href="https://uts-ws.nlm.nih.gov/releases?releaseType=snomed-ct-spanish-edition">SNOMED CT Spanish Edition</a></td>
 <td>releaseType=snomed-ct-spanish-edition</td>
 </tr>
 </tbody>
@@ -115,15 +115,15 @@ navorder=1
 </thead>
 <tbody>
 <tr>
-<td><a href="https://uts-ws.awsqa.nlm.nih.gov/releases?releaseType=umls-metathesaurus-full-subset">UMLS Metathesaurus Full Subset</a></td>
+<td><a href="https://uts-ws.nlm.nih.gov/releases?releaseType=umls-metathesaurus-full-subset">UMLS Metathesaurus Full Subset</a></td>
 <td>releaseType=umls-metathesaurus-full-subset</td>
 </tr>
 <tr>
-<td><a href="https://uts-ws.awsqa.nlm.nih.gov/releases?releaseType=umls-metathesaurus-mrconso-file">UMLS Metathesaurus MRCONSO File</a></td>
+<td><a href="https://uts-ws.nlm.nih.gov/releases?releaseType=umls-metathesaurus-mrconso-file">UMLS Metathesaurus MRCONSO File</a></td>
 <td>releaseType=umls-metathesaurus-mrconso-file</td>
 </tr>
 <tr>
-<td><a href="https://uts-ws.awsqa.nlm.nih.gov/releases?releaseType=umls-full-release">UMLS Full Release</a></td>
+<td><a href="https://uts-ws.nlm.nih.gov/releases?releaseType=umls-full-release">UMLS Full Release</a></td>
 <td>releaseType=umls-full-release</td>
 </tr>
 </tbody>
