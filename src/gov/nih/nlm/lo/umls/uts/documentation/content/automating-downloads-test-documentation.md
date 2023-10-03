@@ -156,22 +156,19 @@ navorder=1
 <hr />
 <h3>Examples</h3>
 <h5>Download RxNorm Weekly Updates</h5>
-https://uts-ws.nlm.nih.gov/download<br /><b>?url=</b>https://download.nlm.nih.gov/umls/kss/rxnorm/RxNorm_weekly_10052022.zip<br /><b>&apiKey=</b>YOUR_API_KEY
-<br /><br />
+<p>https://uts-ws.nlm.nih.gov/download<br /><b>?url=</b>https://download.nlm.nih.gov/umls/kss/rxnorm/RxNorm_weekly_10052022.zip<br /><b>&apiKey=</b>YOUR_API_KEY</p>
 <p>curl example:</p>
- curl &quot;https://uts-ws.nlm.nih.gov/download?url=https://download.nlm.nih.gov/umls/kss/rxnorm/RxNorm_weekly_10052022.zip&amp;apiKey=YOUR_API_KEY&quot; -o RxNorm_weekly_10052022.zip
+<p>curl &quot;https://uts-ws.nlm.nih.gov/download?url=https://download.nlm.nih.gov/umls/kss/rxnorm/RxNorm_weekly_10052022.zip&amp;apiKey=YOUR_API_KEY&quot; -o RxNorm_weekly_10052022.zip</p>
 <hr />
 <h5>Download the US Edition of SNOMED CT</h5>
-https://uts-ws.nlm.nih.gov/download<br /><b>?url=</b>https://download.nlm.nih.gov/mlb/utsauth/USExt/SnomedCT_USEditionRF2_PRODUCTION_20220901T120000Z.zip<br /><b>&apiKey=</b>YOUR_API_KEY
-<br /><br />
+<p>https://uts-ws.nlm.nih.gov/download<br /><b>?url=</b>https://download.nlm.nih.gov/mlb/utsauth/USExt/SnomedCT_USEditionRF2_PRODUCTION_20220901T120000Z.zip<br /><b>&apiKey=</b>YOUR_API_KEY</p>
 <p>curl example:</p>
-curl &quot;https://uts-ws.nlm.nih.gov/download?url=https://download.nlm.nih.gov/mlb/utsauth/USExt/SnomedCT_USEditionRF2_PRODUCTION_20220901T120000Z.zip&amp;apiKey=YOUR_API_KEY&quot; -o SnomedCT_USEditionRF2_PRODUCTION_20220901T120000Z.zip
+<p>curl &quot;https://uts-ws.nlm.nih.gov/download?url=https://download.nlm.nih.gov/mlb/utsauth/USExt/SnomedCT_USEditionRF2_PRODUCTION_20220901T120000Z.zip&amp;apiKey=YOUR_API_KEY&quot; -o SnomedCT_USEditionRF2_PRODUCTION_20220901T120000Z.zip</p>
 <hr />
 <h5>Download the UMLS Release</h5>
-https://uts-ws.nlm.nih.gov/download<br /><b>?url=</b>https://download.nlm.nih.gov/umls/kss/2022AA/umls-2022AA-full.zip<br /><b>&apiKey=</b>YOUR_API_KEY
-<br /><br />
+<p>https://uts-ws.nlm.nih.gov/download<br /><b>?url=</b>https://download.nlm.nih.gov/umls/kss/2022AA/umls-2022AA-full.zip<br /><b>&apiKey=</b>YOUR_API_KEY</p>
 <p>curl example:</p>
-curl 
-&quot;https://uts-ws.nlm.nih.gov/download?url=https://download.nlm.nih.gov/umls/kss/2022AA/umls-2022AA-full.zip&amp;apiKey=YOUR_API_KEY&quot; -o umls-2022AA-full.zip
+<p>curl 
+&quot;https://uts-ws.nlm.nih.gov/download?url=https://download.nlm.nih.gov/umls/kss/2022AA/umls-2022AA-full.zip&amp;apiKey=YOUR_API_KEY&quot; -o umls-2022AA-full.zip</p>
 <hr />
 
