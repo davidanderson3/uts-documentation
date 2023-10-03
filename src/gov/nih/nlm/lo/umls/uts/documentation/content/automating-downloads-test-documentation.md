@@ -128,7 +128,7 @@ navorder=1
 </tr>
 </tbody>
 </table>
-</ul>
+<hr />
 <h2><a name="download-api"></a>Download API</h2>
 <p>This API endpoint allows you to download RxNorm, SNOMED CT, or UMLS releases by providing the download URL and your API key.</p>
 <p><strong>Base URL: https://uts-ws.nlm.nih.gov/download</strong></p>
@@ -161,7 +161,6 @@ https://uts-ws.nlm.nih.gov/download<br /><b>?url=</b>https://download.nlm.nih.go
 <p>curl example:</p>
  curl &quot;https://uts-ws.nlm.nih.gov/download?url=https://download.nlm.nih.gov/umls/kss/rxnorm/RxNorm_weekly_10052022.zip&amp;apiKey=YOUR_API_KEY&quot; -o RxNorm_weekly_10052022.zip
 <hr />
-
 <h5>Download the US Edition of SNOMED CT</h5>
 https://uts-ws.nlm.nih.gov/download<br /><b>?url=</b>https://download.nlm.nih.gov/mlb/utsauth/USExt/SnomedCT_USEditionRF2_PRODUCTION_20220901T120000Z.zip<br /><b>&apiKey=</b>YOUR_API_KEY
 <br /><br />
