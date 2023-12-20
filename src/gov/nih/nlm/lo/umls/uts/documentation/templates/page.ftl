@@ -19,12 +19,17 @@
         <hr>
         <h2>Change Log</h2>
         <hr>
+        <h5>2023-12-19</h5>
+		<p> 
+		We are pleased to announce the publication of a (/automating-downloads.html)[new API endpoint for NLM terminology releases]. 
+		This endpoint provides an updated list of releases for many of our terminology products. You can 
+		use this endpoint to automate the download of the latest release files for RxNorm, SNOMED CT, and UMLS. 
+		<hr>
         <h5>2023-07-12</h5>
 		<p>We have made adjustments to the way in which the search API stems individual words.  
 		The most significant impact is that queries that include plural forms of words will now find singular forms, 
 		for example, a query for "lungs" will find all instances of "lung". In general, API search queries 
 		and search queries in the Metathesaurus Browser will produce a higher number of results than before.</p>
-		<p>
 		<hr>
         <h5>2023-05-09</h5>
         <p>We now offer an endpoint for validating API keys. If you have developed an application that integrates UMLS data and you need to determine whether a user is a UMLS licensee, you can use this endpoint to validate the user's API key.<br/><br/>
