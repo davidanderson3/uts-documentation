@@ -68,18 +68,6 @@ Sample output for https://uts-ws.nlm.nih.gov/rest/content/current/source/SNOMEDC
 			"definitions" : "NONE",
 			"concepts" : "https://uts-ws.nlm.nih.gov/rest/search/2016AA?string=10934241000119100&sabs=SNOMEDCT_US&searchType=exact&inputType=sourceUi",
 			"defaultPreferredAtom" : "https://uts-ws.nlm.nih.gov/rest/content/2016AA/source/SNOMEDCT_US/10934241000119100/atoms/preferred",
-			"subsetMemberships" : [{
-					"memberUri" : "https://uts-ws.nlm.nih.gov/rest/subsets/2016AA/source/SNOMEDCT_US/6011000124106/member/10934241000119100",
-					"name" : "ICD-10-CM complex map reference set",
-					"uri" : "https://uts-ws.nlm.nih.gov/rest/subsets/2016AA/source/SNOMEDCT_US/6011000124106"
-				}
-			],
-			"contentViewMemberships" : [{
-					"memberUri" : "https://uts-ws.nlm.nih.gov/rest/content-views/2016AA/CUI/C3812142/member/10934241000119100",
-					"name" : "SNOMEDCT US Extension Subset",
-					"uri" : "https://uts-ws.nlm.nih.gov/rest/content-views/2016AA/CUI/C3812142"
-				}
-			],
 			"name" : "Closed fracture of pisiform bone of left wrist"
 		}, {
 			"classType" : "SourceAtomCluster",
@@ -99,18 +87,6 @@ Sample output for https://uts-ws.nlm.nih.gov/rest/content/current/source/SNOMEDC
 			"definitions" : "NONE",
 			"concepts" : "https://uts-ws.nlm.nih.gov/rest/search/2016AA?string=10934281000119105&sabs=SNOMEDCT_US&searchType=exact&inputType=sourceUi",
 			"defaultPreferredAtom" : "https://uts-ws.nlm.nih.gov/rest/content/2016AA/source/SNOMEDCT_US/10934281000119105/atoms/preferred",
-			"subsetMemberships" : [{
-					"memberUri" : "https://uts-ws.nlm.nih.gov/rest/subsets/2016AA/source/SNOMEDCT_US/6011000124106/member/10934281000119105",
-					"name" : "ICD-10-CM complex map reference set",
-					"uri" : "https://uts-ws.nlm.nih.gov/rest/subsets/2016AA/source/SNOMEDCT_US/6011000124106"
-				}
-			],
-			"contentViewMemberships" : [{
-					"memberUri" : "https://uts-ws.nlm.nih.gov/rest/content-views/2016AA/CUI/C3812142/member/10934281000119105",
-					"name" : "SNOMEDCT US Extension Subset",
-					"uri" : "https://uts-ws.nlm.nih.gov/rest/content-views/2016AA/CUI/C3812142"
-				}
-			],
 			"name" : "Closed fracture of capitate bone of right wrist"
 		}, {
 			"classType" : "SourceAtomCluster",
@@ -130,18 +106,6 @@ Sample output for https://uts-ws.nlm.nih.gov/rest/content/current/source/SNOMEDC
 			"definitions" : "NONE",
 			"concepts" : "https://uts-ws.nlm.nih.gov/rest/search/2016AA?string=10934321000119100&sabs=SNOMEDCT_US&searchType=exact&inputType=sourceUi",
 			"defaultPreferredAtom" : "https://uts-ws.nlm.nih.gov/rest/content/2016AA/source/SNOMEDCT_US/10934321000119100/atoms/preferred",
-			"subsetMemberships" : [{
-					"memberUri" : "https://uts-ws.nlm.nih.gov/rest/subsets/2016AA/source/SNOMEDCT_US/6011000124106/member/10934321000119100",
-					"name" : "ICD-10-CM complex map reference set",
-					"uri" : "https://uts-ws.nlm.nih.gov/rest/subsets/2016AA/source/SNOMEDCT_US/6011000124106"
-				}
-			],
-			"contentViewMemberships" : [{
-					"memberUri" : "https://uts-ws.nlm.nih.gov/rest/content-views/2016AA/CUI/C3812142/member/10934321000119100",
-					"name" : "SNOMEDCT US Extension Subset",
-					"uri" : "https://uts-ws.nlm.nih.gov/rest/content-views/2016AA/CUI/C3812142"
-				}
-			],
 			"name" : "Closed fracture of capitate bone of left wrist"
 		}, 
 ...

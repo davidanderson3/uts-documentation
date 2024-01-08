@@ -68,29 +68,6 @@ Sample output for https://uts-ws.nlm.nih.gov/rest/content/current/source/SNOMEDC
 			"definitions" : "NONE",
 			"concepts" : "https://uts-ws.nlm.nih.gov/rest/search/2016AA?string=36991002&sabs=SNOMEDCT_US&searchType=exact&inputType=sourceUi",
 			"defaultPreferredAtom" : "https://uts-ws.nlm.nih.gov/rest/content/2016AA/source/SNOMEDCT_US/36991002/atoms/preferred",
-			"subsetMemberships" : [{
-					"memberUri" : "https://uts-ws.nlm.nih.gov/rest/subsets/2016AA/source/SNOMEDCT_US/447563008/member/36991002",
-					"name" : "ICD-9-CM equivalence complex map reference set",
-					"uri" : "https://uts-ws.nlm.nih.gov/rest/subsets/2016AA/source/SNOMEDCT_US/447563008"
-				}, {
-					"memberUri" : "https://uts-ws.nlm.nih.gov/rest/subsets/2016AA/source/SNOMEDCT_US/900000000000497000/member/36991002",
-					"name" : "CTV3 simple map",
-					"uri" : "https://uts-ws.nlm.nih.gov/rest/subsets/2016AA/source/SNOMEDCT_US/900000000000497000"
-				}, {
-					"memberUri" : "https://uts-ws.nlm.nih.gov/rest/subsets/2016AA/source/SNOMEDCT_US/900000000000498005/member/36991002",
-					"name" : "SNOMED RT ID simple map",
-					"uri" : "https://uts-ws.nlm.nih.gov/rest/subsets/2016AA/source/SNOMEDCT_US/900000000000498005"
-				}, {
-					"memberUri" : "https://uts-ws.nlm.nih.gov/rest/subsets/2016AA/source/SNOMEDCT_US/447562003/member/36991002",
-					"name" : "ICD-10 complex map reference set",
-					"uri" : "https://uts-ws.nlm.nih.gov/rest/subsets/2016AA/source/SNOMEDCT_US/447562003"
-				}, {
-					"memberUri" : "https://uts-ws.nlm.nih.gov/rest/subsets/2016AA/source/SNOMEDCT_US/6011000124106/member/36991002",
-					"name" : "ICD-10-CM complex map reference set",
-					"uri" : "https://uts-ws.nlm.nih.gov/rest/subsets/2016AA/source/SNOMEDCT_US/6011000124106"
-				}
-			],
-			"contentViewMemberships" : [],
 			"name" : "Closed fracture of upper limb"
 		}, {
 			"classType" : "SourceAtomCluster",
@@ -110,29 +87,6 @@ Sample output for https://uts-ws.nlm.nih.gov/rest/content/current/source/SNOMEDC
 			"definitions" : "NONE",
 			"concepts" : "https://uts-ws.nlm.nih.gov/rest/search/2016AA?string=82065001&sabs=SNOMEDCT_US&searchType=exact&inputType=sourceUi",
 			"defaultPreferredAtom" : "https://uts-ws.nlm.nih.gov/rest/content/2016AA/source/SNOMEDCT_US/82065001/atoms/preferred",
-			"subsetMemberships" : [{
-					"memberUri" : "https://uts-ws.nlm.nih.gov/rest/subsets/2016AA/source/SNOMEDCT_US/900000000000498005/member/82065001",
-					"name" : "SNOMED RT ID simple map",
-					"uri" : "https://uts-ws.nlm.nih.gov/rest/subsets/2016AA/source/SNOMEDCT_US/900000000000498005"
-				}, {
-					"memberUri" : "https://uts-ws.nlm.nih.gov/rest/subsets/2016AA/source/SNOMEDCT_US/900000000000497000/member/82065001",
-					"name" : "CTV3 simple map",
-					"uri" : "https://uts-ws.nlm.nih.gov/rest/subsets/2016AA/source/SNOMEDCT_US/900000000000497000"
-				}, {
-					"memberUri" : "https://uts-ws.nlm.nih.gov/rest/subsets/2016AA/source/SNOMEDCT_US/447563008/member/82065001",
-					"name" : "ICD-9-CM equivalence complex map reference set",
-					"uri" : "https://uts-ws.nlm.nih.gov/rest/subsets/2016AA/source/SNOMEDCT_US/447563008"
-				}, {
-					"memberUri" : "https://uts-ws.nlm.nih.gov/rest/subsets/2016AA/source/SNOMEDCT_US/447562003/member/82065001",
-					"name" : "ICD-10 complex map reference set",
-					"uri" : "https://uts-ws.nlm.nih.gov/rest/subsets/2016AA/source/SNOMEDCT_US/447562003"
-				}, {
-					"memberUri" : "https://uts-ws.nlm.nih.gov/rest/subsets/2016AA/source/SNOMEDCT_US/6011000124106/member/82065001",
-					"name" : "ICD-10-CM complex map reference set",
-					"uri" : "https://uts-ws.nlm.nih.gov/rest/subsets/2016AA/source/SNOMEDCT_US/6011000124106"
-				}
-			],
-			"contentViewMemberships" : [],
 			"name" : "Fracture of carpal bone"
 		}
 	]
