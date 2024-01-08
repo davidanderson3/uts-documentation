@@ -65,8 +65,7 @@ Sample output for https://uts-ws.nlm.nih.gov/rest/content/current/AUI/A10134087/
 			"descendants" : "https://uts-ws.nlm.nih.gov/rest/content/2016AA/AUI/A10133773/descendants",
 			"relations" : "https://uts-ws.nlm.nih.gov/rest/content/2016AA/AUI/A10133773/relations",
 			"name" : "IntrabursalRoute",
-			"language" : "ENG",
-			"contentViewMemberships" : []
+			"language" : "ENG"
 		}, {
 			"classType" : "Atom",
 			"ui" : "A8317632",
@@ -85,8 +84,7 @@ Sample output for https://uts-ws.nlm.nih.gov/rest/content/current/AUI/A10134087/
 			"descendants" : null,
 			"relations" : "https://uts-ws.nlm.nih.gov/rest/content/2016AA/AUI/A8317632/relations",
 			"name" : "Injection, intrabursal",
-			"language" : "ENG",
-			"contentViewMemberships" : []
+			"language" : "ENG"
 		}, {
 			"classType" : "Atom",
 			"ui" : "A10133791",
@@ -105,8 +103,7 @@ Sample output for https://uts-ws.nlm.nih.gov/rest/content/current/AUI/A10134087/
 			"descendants" : "https://uts-ws.nlm.nih.gov/rest/content/2016AA/AUI/A10133791/descendants",
 			"relations" : "https://uts-ws.nlm.nih.gov/rest/content/2016AA/AUI/A10133791/relations",
 			"name" : "IntraepidermalRoute",
-			"language" : "ENG",
-			"contentViewMemberships" : []
+			"language" : "ENG"
 		}, 
 ...
 	]

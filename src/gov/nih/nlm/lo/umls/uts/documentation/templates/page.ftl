@@ -19,6 +19,12 @@
         <hr>
         <h2>Change Log</h2>
         <hr>
+        <h5>2024-01-08</h5>
+		<p> 
+		We have shut down the Source-Asserted Subsets API Endpoint and the Content Views API Endpoint as 
+		of December 31, 2023. We deprecated these endpoints in May of 2022. Source-Asserted Subset information 
+		and Content View information can be retrieved from the UMLS Metathesaurus files.
+        <hr>
         <h5>2023-12-19</h5>
 		<p> 
 		We are pleased to announce the publication of a (/automating-downloads.html)[new API endpoint for NLM terminology releases]. 

@@ -82,13 +82,7 @@ Sample output for https://uts-ws.nlm.nih.gov/rest/content/current/CUI/C0155502/a
 			"descendants" : null,
 			"relations" : "https://uts-ws.nlm.nih.gov/rest/content/2016AA/AUI/A8345234/relations",
 			"name" : "Benign paroxysmal positional vertigo",
-			"language" : "ENG",
-			"contentViewMemberships" : [{
-					"memberUri" : "https://uts-ws.nlm.nih.gov/rest/content-views/2016AA/CUI/C1700357/member/A8345234",
-					"uri" : "https://uts-ws.nlm.nih.gov/rest/content-views/2016AA/CUI/C1700357",
-					"name" : "MetaMap NLP View"
-				}
-			]
+			"language" : "ENG"
 		}, {
 			"classType" : "Atom",
 			"ui" : "A2892933",
@@ -107,13 +101,7 @@ Sample output for https://uts-ws.nlm.nih.gov/rest/content/current/CUI/C0155502/a
 			"descendants" : null,
 			"relations" : "NONE",
 			"name" : "Benign paroxysmal positional vertigo",
-			"language" : "ENG",
-			"contentViewMemberships" : [{
-					"memberUri" : "https://uts-ws.nlm.nih.gov/rest/content-views/2016AA/CUI/C1700357/member/A2892933",
-					"uri" : "https://uts-ws.nlm.nih.gov/rest/content-views/2016AA/CUI/C1700357",
-					"name" : "MetaMap NLP View"
-				}
-			]
+			"language" : "ENG"
 		}, {
 			"classType" : "Atom",
 			"ui" : "A3101021",
@@ -132,13 +120,7 @@ Sample output for https://uts-ws.nlm.nih.gov/rest/content/current/CUI/C0155502/a
 			"descendants" : null,
 			"relations" : "NONE",
 			"name" : "Benign recurrent vertigo",
-			"language" : "ENG",
-			"contentViewMemberships" : [{
-					"memberUri" : "https://uts-ws.nlm.nih.gov/rest/content-views/2016AA/CUI/C1700357/member/A3101021",
-					"uri" : "https://uts-ws.nlm.nih.gov/rest/content-views/2016AA/CUI/C1700357",
-					"name" : "MetaMap NLP View"
-				}
-			]
+			"language" : "ENG"
 		}
 	]
 }
