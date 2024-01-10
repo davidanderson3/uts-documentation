@@ -75,35 +75,6 @@ Sample output for https://uts-ws.nlm.nih.gov/rest/crosswalk/current/source/HPO/H
 		"definitions": "NONE",
 		"concepts": "https://uts-ws.nlm.nih.gov/rest/search/2016AA?string=1776003&sabs=SNOMEDCT_US&searchType=exact&inputType=sourceUi",
 		"defaultPreferredAtom": "https://uts-ws.nlm.nih.gov/rest/content/2016AA/source/SNOMEDCT_US/1776003/atoms/preferred",
-		"subsetMemberships": [
-			{
-				"memberUri": "https://uts-ws.nlm.nih.gov/rest/subsets/2016AA/source/SNOMEDCT_US/900000000000498005/member/1776003",
-				"name": "SNOMED RT ID simple map",
-				"uri": "https://uts-ws.nlm.nih.gov/rest/subsets/2016AA/source/SNOMEDCT_US/900000000000498005"
-			},
-			{
-				"memberUri": "https://uts-ws.nlm.nih.gov/rest/subsets/2016AA/source/SNOMEDCT_US/900000000000497000/member/1776003",
-				"name": "CTV3 simple map",
-				"uri": "https://uts-ws.nlm.nih.gov/rest/subsets/2016AA/source/SNOMEDCT_US/900000000000497000"
-			},
-			{
-				"memberUri": "https://uts-ws.nlm.nih.gov/rest/subsets/2016AA/source/SNOMEDCT_US/447562003/member/1776003",
-				"name": "ICD-10 complex map reference set",
-				"uri": "https://uts-ws.nlm.nih.gov/rest/subsets/2016AA/source/SNOMEDCT_US/447562003"
-			},
-			{
-				"memberUri": "https://uts-ws.nlm.nih.gov/rest/subsets/2016AA/source/SNOMEDCT_US/6011000124106/member/1776003",
-				"name": "ICD-10-CM complex map reference set",
-				"uri": "https://uts-ws.nlm.nih.gov/rest/subsets/2016AA/source/SNOMEDCT_US/6011000124106"
-			}
-		],
-		"contentViewMemberships": [
-			{
-				"memberUri": "https://uts-ws.nlm.nih.gov/rest/content-views/2016AA/CUI/C2711988/member/1776003",
-				"name": "CORE Problem List Subset of SNOMED CT",
-				"uri": "https://uts-ws.nlm.nih.gov/rest/content-views/2016AA/CUI/C2711988"
-			}
-		],
 		"name": "Renal tubular acidosis"
 	}
 	]
