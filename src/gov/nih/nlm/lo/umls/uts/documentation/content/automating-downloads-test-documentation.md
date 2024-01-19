@@ -6,4 +6,5 @@ status=published
 navorder=1
 ~~~~~~
 
-For current documentation, see: (/automating-downloads.html)[Automating Downloads]
+<p>For current documentation, see: 
+<a href="/automating-downloads.html">Automating Downloads</a>.</p>
