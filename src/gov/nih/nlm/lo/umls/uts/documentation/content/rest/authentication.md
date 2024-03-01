@@ -1,6 +1,6 @@
 title=User Authentication
 date=2015-06-10
-updated=2021-03-01
+updated=2024-03-01
 type=page
 status=published
 navorder=2
@@ -19,11 +19,7 @@ For example, https://uts-ws.nlm.nih.gov/rest/content/current/CUI/C0009044?apiKey
 
 <hr />
 
-We also offer an endpoint for validating API keys. If you have developed an application that integrates UMLS data and you need to determine whether a user is a UMLS licensee, you can use this endpoint to validate the user's API key. 
-
-Make a request that includes both your API key (validatorApiKey) and the API key of the user of your application (apiKey). For example: 
-
-https://utslogin.nlm.nih.gov/validateUser?validatorApiKey=YOUR_API_KEY&apiKey=USER_API_KEY
+We also offer an endpoint for validating API keys. If you have developed an application that integrates UMLS data and you need to determine whether a user is a UMLS licensee, see: <a href="/validating-licensees.html">Validating UMLS Licensees for Third-Party Application Developers</a>.
 
 <hr>
 
