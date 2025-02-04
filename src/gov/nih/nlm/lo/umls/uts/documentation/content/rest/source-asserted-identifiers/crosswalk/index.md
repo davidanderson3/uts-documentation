@@ -41,7 +41,7 @@ You may use any valid UMLS release back to 2008AA in your URI if you would like 
 Parameter name | Required? Y/N | Description|  Valid Values | Default value | Usage Note
 --- | ---
 apiKey | Y | An API key is required for each call to the API. Visit [your UTS profile](https://uts.nlm.nih.gov/uts/profile) to obtain your API key. | n/a | n/a | n/a
-targetSource | N | Returns codes from the specified UMLS vocabulary | Any root source abbreviation in the UMLS. See the "Abbreviation" column for a list of [UMLS source vocabulary abbreviations](https://www.nlm.nih.gov/research/umls/sourcereleasedocs/index.html).  | All UMLS source vocabularies | Use a comma between each source abbreviation to specify more than one.
+targetSource | N | Returns codes from the specified UMLS vocabulary | Any root source abbreviation in the UMLS. See the "Abbreviation" column for a list of [UMLS source vocabulary abbreviations](https://www.nlm.nih.gov/research/umls/sourcereleasedocs/).  | All UMLS source vocabularies | Use a comma between each source abbreviation to specify more than one.
 includeObsolete | N | Determines whether to return obsolete codes. | true,false | false | n/a
 pageNumber | N | Whole number that specifies which page of results to fetch. | 1,2,3, etc | 1 | n/a
 pageSize | N | Whole number that specifies the number of results to include per page. | 1,2,3, etc | 25 | n/a
