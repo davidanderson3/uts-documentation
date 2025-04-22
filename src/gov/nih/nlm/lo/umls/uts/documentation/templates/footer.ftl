@@ -4,10 +4,10 @@
       <div class="col-md-3 col-sm-6 col-6">
         <p class="text-white"><a href="https://www.nlm.nih.gov/socialmedia/index.html" class="text-white">Connect with NLM</a></p>
         <ul class="list-inline social_media">
-          <li class="margin-right-05"><a href="https://www.facebook.com/nationallibraryofmedicine" title="External link: please review our privacy policy."><img class="bg-secondary" src="https://www.nlm.nih.gov/images/facebook.svg" alt="Facebook"></a></li>
-          <li class="margin-right-05"><a title="External link: please review our privacy policy." href="https://www.linkedin.com/company/national-library-of-medicine-nlm/"><img class="bg-secondary" src="//www.nlm.nih.gov/images/linkedin.svg" alt="LinkedIn"></a></li>
-          <li class="margin-right-05"><a title="External link: please review our privacy policy." href="https://twitter.com/NLM_NIH"><img src="https://www.nlm.nih.gov/images/twitter.svg" class="padding-1 bg-secondary" alt="Twitter"></a></li>
-          <li class="margin-right-05"><a title="External link: please review our privacy policy." href="https://www.youtube.com/user/NLMNIH"><img src="//www.nlm.nih.gov/images/youtube.svg" class="bg-secondary" alt="You Tube"></a></li>
+          <li class="margin-right-05 list-inline-item"><a href="https://www.facebook.com/nationallibraryofmedicine" title="External link: please review our privacy policy."><img class="bg-secondary" src="https://www.nlm.nih.gov/images/facebook.svg" alt="Facebook"></a></li>
+          <li class="margin-right-05 list-inline-item"><a title="External link: please review our privacy policy." href="https://www.linkedin.com/company/national-library-of-medicine-nlm/"><img class="bg-secondary" src="//www.nlm.nih.gov/images/linkedin.svg" alt="LinkedIn"></a></li>
+          <li class="margin-right-05 list-inline-item"><a title="External link: please review our privacy policy." href="https://twitter.com/NLM_NIH"><img src="https://www.nlm.nih.gov/images/twitter.svg" class="padding-1 bg-secondary" alt="Twitter"></a></li>
+          <li class="margin-right-05 list-inline-item"><a title="External link: please review our privacy policy." href="https://www.youtube.com/user/NLMNIH"><img src="//www.nlm.nih.gov/images/youtube.svg" class="bg-secondary" alt="You Tube"></a></li>
         </ul>
       </div>
       <div class="col-md-3 col-sm-6 col-6">
