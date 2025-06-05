@@ -15,7 +15,7 @@ python preprocess.py
 ```
 This will identify candidate identifiers and strings that will LIKELY (99.9% chance) return API results. Takes a few minutes. 
 
-### Run tests
+## Run tests
 
 test.py will choose random examples from the preprocessed subset to test against the API. The examples will be different every time you test. 
 
@@ -28,6 +28,6 @@ python test.py --apiKey YOUR_API_KEY --env qa --count 20
 * Choose qa or prod for --env depending on which you want to test. 
 * --count determines how many random examples are sent for each test. 5 will be very quick. 1000 will take a while. 
 
-### View Report
+## View Report
 
 Open results.html in your browser. 
