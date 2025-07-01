@@ -1,4 +1,6 @@
 let modalCurrentData = { ui: null, sab: null };
+let fullRawData = null;
+let isRawDataExpanded = false;
 
 async function searchUMLS() {
   const apiKey = document.getElementById("api-key").value.trim();
@@ -15,6 +17,7 @@ async function searchUMLS() {
   const params = new URLSearchParams();
   params.set("string", searchString);
   params.set("returnIdType", returnIdType);
+  params.set("pageSize", 200);
   if (selectedVocabularies.length > 0) {
     params.set("sabs", selectedVocabularies.join(","));
   }
@@ -36,6 +39,7 @@ async function searchUMLS() {
   const url = new URL("https://uts-ws.nlm.nih.gov/rest/search/current");
   url.searchParams.append("string", searchString);
   url.searchParams.append("returnIdType", returnIdType);
+  url.searchParams.append("pageSize", "200");
   url.searchParams.append("apiKey", apiKey);
   if (selectedVocabularies.length > 0) {
     url.searchParams.append("sabs", selectedVocabularies.join(","));
@@ -51,7 +55,11 @@ async function searchUMLS() {
     });
     const data = await response.json();
 
-    resultsContainer.textContent = JSON.stringify(data, null, 2);
+    fullRawData = data;
+    isRawDataExpanded = false;
+    document.getElementById("toggle-raw-data").style.display = "block";
+    document.getElementById("toggle-raw-data").textContent = "Show Full Data";
+    resultsContainer.textContent = JSON.stringify(getTruncatedData(data, 3), null, 2);
 
     infoTableBody.innerHTML = "";
 
@@ -109,6 +117,29 @@ function colorizeUrl(urlObject) {
     colorized += `?${params.join("&")}`;
   }
   return colorized;
+}
+
+function getTruncatedData(data, limit) {
+  const clone = JSON.parse(JSON.stringify(data));
+  if (clone && clone.result && Array.isArray(clone.result.results)) {
+    clone.result.results = clone.result.results.slice(0, limit);
+  }
+  return clone;
+}
+
+function toggleRawData() {
+  const outputPre = document.getElementById("output");
+  const toggleBtn = document.getElementById("toggle-raw-data");
+  if (!outputPre || !toggleBtn || fullRawData === null) return;
+  if (isRawDataExpanded) {
+    outputPre.textContent = JSON.stringify(getTruncatedData(fullRawData, 3), null, 2);
+    toggleBtn.textContent = "Show Full Data";
+    isRawDataExpanded = false;
+  } else {
+    outputPre.textContent = JSON.stringify(fullRawData, null, 2);
+    toggleBtn.textContent = "Show Less";
+    isRawDataExpanded = true;
+  }
 }
 function openCuiOptionsModal(ui, sab) {
   modalCurrentData.ui = ui;
@@ -197,7 +228,11 @@ async function fetchConceptDetails(cui, detailType) {
     });
     const data = await response.json();
 
-    resultsContainer.textContent = JSON.stringify(data, null, 2);
+    fullRawData = data;
+    isRawDataExpanded = false;
+    document.getElementById("toggle-raw-data").style.display = "block";
+    document.getElementById("toggle-raw-data").textContent = "Show Full Data";
+    resultsContainer.textContent = JSON.stringify(getTruncatedData(data, 3), null, 2);
 
     infoTableBody.innerHTML = "";
 
@@ -324,7 +359,11 @@ async function fetchRelatedDetail(apiUrl, relatedType, rootSource) {
       headers: { Accept: "application/json" }
     });
     const data = await response.json();
-    resultsContainer.textContent = JSON.stringify(data, null, 2);
+    fullRawData = data;
+    isRawDataExpanded = false;
+    document.getElementById("toggle-raw-data").style.display = "block";
+    document.getElementById("toggle-raw-data").textContent = "Show Full Data";
+    resultsContainer.textContent = JSON.stringify(getTruncatedData(data, 3), null, 2);
     infoTableBody.innerHTML = "";
     if (typeof data === "object") {
       for (let key in data) {

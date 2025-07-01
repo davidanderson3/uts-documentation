@@ -29,7 +29,7 @@ Sample output for https://uts-ws.nlm.nih.gov/rest/semantic-network/2015AB/TUI/T1
 
 ~~~~.json
 {
-   pageSize: 25,
+   pageSize: 200,
    pageNumber: 1,
    pageCount: 1,
    result: {

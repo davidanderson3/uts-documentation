@@ -33,7 +33,7 @@ Parameter name | Required? Y/N | Description|  Valid Values | Default value | Us
 --- | ---
 apiKey | Y | An API key is required for each call to the API. Visit [your UTS profile](https://uts.nlm.nih.gov/uts/profile) to obtain your API key. | n/a | n/a | n/a
 pageNumber | N | Whole number that specifies which page of results to fetch. | 1,2,3, etc | 1 | n/a
-pageSize | N | Whole number that specifies the number of results to include per page. | 1,2,3, etc | 25 | n/a
+pageSize | N | Whole number that specifies the number of results to include per page. | 1,2,3, etc | 200 | n/a
 includeAttributeNames | N | One or more attribute names | Any [attribute name] (https://www.nlm.nih.gov/research/umls/knowledge_sources/metathesaurus/release/attribute_names.html) in the UMLS | n/a | Use a comma between each attribute name to specify more than one.
 
 
@@ -43,7 +43,7 @@ Sample output for https://uts-ws.nlm.nih.gov/rest/content/current/source/SNOMEDC
 
 ~~~~json
 {
-    "pageSize": 25,
+    "pageSize": 200,
     "pageNumber": 1,
     "pageCount": 1,
     "result": [
