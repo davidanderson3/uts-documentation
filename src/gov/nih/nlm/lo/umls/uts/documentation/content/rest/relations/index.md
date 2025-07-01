@@ -43,7 +43,7 @@ includeObsolete | N |  Include content that is obsolete according to the content
 includeSuppressible | N |  Include content that is suppressible according to NLM Editors.| true or false | false | n/a
 sabs | N | Comma-separated list of source vocabularies to include in your search | Any root source abbreviation in the UMLS. See the "Abbreviation" column for a list of [UMLS source vocabulary abbreviations](https://www.nlm.nih.gov/research/umls/sourcereleasedocs/).  | All UMLS source vocabularies | Use a comma between each source abbreviation to specify more than one.
 pageNumber | N | Whole number that specifies which page of results to fetch. | 1,2,3, etc | 1 | n/a
-pageSize | N | Whole number that specifies the number of results to include per page. | 1,2,3, etc | 200 | n/a
+pageSize | N | Whole number that specifies the number of results to include per page. | 1,2,3, etc | 25 | n/a
 
 
 
@@ -53,7 +53,7 @@ Sample output for https://uts-ws.nlm.nih.gov/rest/content/current/CUI/C0009044/r
 
 ~~~~json
 {
-  "pageSize": 200,
+  "pageSize": 25,
   "pageNumber": 1,
   "pageCount": 10,
   "result": [

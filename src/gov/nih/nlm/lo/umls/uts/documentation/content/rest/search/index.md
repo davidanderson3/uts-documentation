@@ -45,7 +45,7 @@ sabs | N | Comma-separated list of source vocabularies to include in your search
 searchType | N | Type of search you wish to use. | 'exact','words','leftTruncation', 'rightTruncation', 'normalizedString', 'normalizedWords' | 'words' | Use 'exact' when using inputType = 'code', 'sourceConcept', 'sourceDescriptor', or 'sourceUi'. [More information...](#searchType)
 partialSearch | N | Return partial matches for your query. | true or false | false | n/a
 pageNumber | N | Whole number that specifies which page of results to fetch. | 1,2,3, etc | 1 | n/a
-pageSize | N | Whole number that specifies the number of results to include per page. | 1,2,3, etc | 200 | n/a
+pageSize | N | Whole number that specifies the number of results to include per page. | 1,2,3, etc | 25 | n/a
 
 <a name="searchType"></a>
 #### Expected Behaviors for the searchType Parameter
@@ -67,7 +67,7 @@ Sample output for https://uts-ws.nlm.nih.gov/rest/search/current?string=fracture
 ~~~~json
 {
 
-    "pageSize": 200,
+    "pageSize": 25,
     "pageNumber": 1,
     "result": 
 
@@ -116,7 +116,7 @@ Sample output for https://uts-ws.nlm.nih.gov/rest/search/current?string=fracture
 ~~~~json
 {
 
-    "pageSize": 200,
+    "pageSize": 25,
     "pageNumber": 1,
     "result": 
 
@@ -170,7 +170,7 @@ your search results?   On the /search endpoint, the end of your search results w
 
 ~~~~.json
 {
-    "pageSize": 200, 
+    "pageSize": 25, 
     "pageNumber": 2, //your final page number may be different.  
     "result": {
         "classType": "searchResults", 

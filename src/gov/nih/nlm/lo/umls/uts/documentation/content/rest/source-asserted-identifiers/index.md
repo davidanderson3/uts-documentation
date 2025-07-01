@@ -49,7 +49,7 @@ Sample output for https://uts-ws.nlm.nih.gov/rest/content/current/source/SNOMEDC
 
 ~~~~json
 {
-	"pageSize" : 200,
+	"pageSize" : 25,
 	"pageNumber" : 1,
 	"pageCount" : 1,
 	"result" : {

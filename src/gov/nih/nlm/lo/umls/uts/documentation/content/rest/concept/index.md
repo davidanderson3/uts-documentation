@@ -46,7 +46,7 @@ Sample output for https://uts-ws.nlm.nih.gov/rest/content/current/CUI/C0009044?a
 
 ~~~~json
 {
-    "pageSize": 200,
+    "pageSize": 25,
     "pageNumber": 1,
     "pageCount": 1,
     "result": {

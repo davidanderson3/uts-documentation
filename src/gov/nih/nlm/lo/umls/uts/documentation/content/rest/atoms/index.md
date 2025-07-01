@@ -52,7 +52,7 @@ language | N | Retrieve only atoms that have a specific language | Any 3 letter 
 includeObsolete | N |  Include content that is obsolete according to the content provider or NLM. | true or false | false (except for atoms/preferred, which defaults to true) | n/a
 includeSuppressible | N |  Include content that is suppressible according to NLM Editors.| true or false | false (except for atoms/preferred, which defaults to true) | n/a
 pageNumber | N | Whole number that specifies which page of results to fetch. | 1,2,3, etc | 1 | n/a
-pageSize | N | Whole number that specifies the number of results to include per page. | 1,2,3, etc | 200 | n/a
+pageSize | N | Whole number that specifies the number of results to include per page. | 1,2,3, etc | 25 | n/a
 
 
 ### Sample Output
@@ -61,7 +61,7 @@ Sample output for https://uts-ws.nlm.nih.gov/rest/content/current/CUI/C0155502/a
 
 ~~~~json
 {
-	"pageSize" : 200,
+	"pageSize" : 25,
 	"pageNumber" : 1,
 	"pageCount" : 1,
 	"result" : [{
