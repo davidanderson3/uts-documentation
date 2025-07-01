@@ -1,4 +1,4 @@
-title=API Terms of Service
+title=UMLS API Terms of Service
 date=2018-06-25
 updated=2018-06-25
 type=page

@@ -1,0 +1,12 @@
+{
+  "name": "uts-documentation",
+  "version": "1.0.0",
+  "scripts": {
+    "serve": "jbake -b -s",
+    "watch": "chokidar \"content/**/*\" \"templates/**/*\" -c \"jbake -b\" --initial",
+    "dev": "npm run watch & npm run serve"
+  },
+  "devDependencies": {
+    "chokidar-cli": "^3.0.0"
+  }
+}

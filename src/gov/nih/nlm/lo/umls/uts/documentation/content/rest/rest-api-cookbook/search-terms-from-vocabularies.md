@@ -25,29 +25,29 @@ In this example we've used the `returnIdType` parameter to ask for source-assert
 
 ~~~~json
 {
-pageSize: 25,
-pageNumber: 1,
-result: {
-classType: "searchResults",
-results: [
-{
-ui: "13644009",
-rootSource: "SNOMEDCT_US",
-uri: "https://uts-ws.nlm.nih.gov/rest/content/2015AB/source/SNOMEDCT_US/13644009",
-name: "Hypercholesterolemia"
-},
-{
-ui: "102737005",
-rootSource: "SNOMEDCT_US",
-uri: "https://uts-ws.nlm.nih.gov/rest/content/2015AB/source/SNOMEDCT_US/102737005",
-name: "HDL cholesterol"
-},
-{
-ui: "370992007",
-rootSource: "SNOMEDCT_US",
-uri: "https://uts-ws.nlm.nih.gov/rest/content/2015AB/source/SNOMEDCT_US/370992007",
-name: "Dyslipidemia"
-},
+    pageSize: 25,
+        pageNumber: 1,
+            result: {
+        classType: "searchResults",
+            results: [
+                {
+                    ui: "13644009",
+                    rootSource: "SNOMEDCT_US",
+                    uri: "https://uts-ws.nlm.nih.gov/rest/content/2015AB/source/SNOMEDCT_US/13644009",
+                    name: "Hypercholesterolemia"
+                },
+                {
+                    ui: "102737005",
+                    rootSource: "SNOMEDCT_US",
+                    uri: "https://uts-ws.nlm.nih.gov/rest/content/2015AB/source/SNOMEDCT_US/102737005",
+                    name: "HDL cholesterol"
+                },
+                {
+                    ui: "370992007",
+                    rootSource: "SNOMEDCT_US",
+                    uri: "https://uts-ws.nlm.nih.gov/rest/content/2015AB/source/SNOMEDCT_US/370992007",
+                    name: "Dyslipidemia"
+                }
 ...
 ~~~~
 
@@ -59,19 +59,19 @@ This returns any source-asserted identifier containing a non-suppressible/non-ob
 
 ~~~~.text
 {
-pageSize: 25,
-pageNumber: 1,
-result: {
-classType: "searchResults",
-results: [
-{
-ui: "13644009",
-rootSource: "SNOMEDCT_US",
-uri: "https://uts-ws.nlm.nih.gov/rest/content/2015AB/source/SNOMEDCT_US/13644009",
-name: "Hypercholesterolemia"
-}
-]
-}
+    pageSize: 25,
+        pageNumber: 1,
+            result: {
+        classType: "searchResults",
+            results: [
+                {
+                    ui: "13644009",
+                    rootSource: "SNOMEDCT_US",
+                    uri: "https://uts-ws.nlm.nih.gov/rest/content/2015AB/source/SNOMEDCT_US/13644009",
+                    name: "Hypercholesterolemia"
+                }
+            ]
+    }
 ~~~~
 
 #####1
