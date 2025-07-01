@@ -35,7 +35,7 @@ Parameter name | Required? Y/N | Description|  Valid Values | Default value | Us
 --- | ---
 apiKey | Y | An API key is required for each call to the API. Visit [your UTS profile](https://uts.nlm.nih.gov/uts/profile) to obtain your API key. | n/a | n/a | n/a
 pageNumber | N | Whole number that specifies which page of results to fetch. | 1,2,3, etc | 1 | n/a
-pageSize | N | Whole number that specifies the number of results to include per page. | 1,2,3, etc | 25 | n/a
+pageSize | N | Whole number that specifies the number of results to include per page. | 1,2,3, etc | 200 | n/a
 
 
 ### Sample Output
@@ -44,7 +44,7 @@ Sample output for https://uts-ws.nlm.nih.gov/rest/content/current/AUI/A10134087/
 
 ~~~~json
 {
-	"pageSize" : 25,
+	"pageSize" : 200,
 	"pageNumber" : 1,
 	"pageCount" : 15,
 	"result" : [{

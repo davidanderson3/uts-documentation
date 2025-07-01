@@ -10326,7 +10326,7 @@ Sample output for [https://uts-ws.nlm.nih.gov/rest/metadata/2018AA/sources](http
         "name": "Jill Rosenthal/Naomi Siebert",
         "title": "NONE",
         "organization": "College of American Pathologists",
-        "address1": "325 Waukegan Road",
+        "address1": "3200 Waukegan Road",
         "address2": "NONE",
         "city": "Northfield",
         "stateOrProvince": "IL",
@@ -10336,7 +10336,7 @@ Sample output for [https://uts-ws.nlm.nih.gov/rest/metadata/2018AA/sources](http
         "fax": "(847)832-8335",
         "email": "jnrs@cap.org",
         "url": "NONE",
-        "value": "|Jill Rosenthal/Naomi Siebert||College of American Pathologists|325 Waukegan Road||Northfield|IL||60093-2750||(847)832-8335|jnrs@cap.org|"
+        "value": "|Jill Rosenthal/Naomi Siebert||College of American Pathologists|3200 Waukegan Road||Northfield|IL||60093-2750||(847)832-8335|jnrs@cap.org|"
       },
       "contextType": "FULL-NOSIB-MULTIPLE",
       "shortName": "SNOMED 1982",
@@ -10380,7 +10380,7 @@ Sample output for [https://uts-ws.nlm.nih.gov/rest/metadata/2018AA/sources](http
         "name": "Jill Rosenthal/Naomi Siebert",
         "title": "NONE",
         "organization": "College of American Pathologists",
-        "address1": "325 Waukegan Road",
+        "address1": "3200 Waukegan Road",
         "address2": "NONE",
         "city": "Northfield",
         "stateOrProvince": "IL",
@@ -10390,7 +10390,7 @@ Sample output for [https://uts-ws.nlm.nih.gov/rest/metadata/2018AA/sources](http
         "fax": "(847)832-8335",
         "email": "jnrs@cap.org",
         "url": "NONE",
-        "value": "|Jill Rosenthal/Naomi Siebert||College of American Pathologists|325 Waukegan Road||Northfield|IL||60093-2750||(847)832-8335|jnrs@cap.org|"
+        "value": "|Jill Rosenthal/Naomi Siebert||College of American Pathologists|3200 Waukegan Road||Northfield|IL||60093-2750||(847)832-8335|jnrs@cap.org|"
       },
       "contextType": "FULL-NOSIB",
       "shortName": "SNOMED Intl 1998",
@@ -11284,7 +11284,7 @@ Sample output for https://uts-ws.nlm.nih.gov/rest/subsets/current/source/SNOMEDC
 
 ~~~~json
 {
-	"pageSize" : 25,
+	"pageSize" : 200,
 	"pageNumber" : 1,
 	"pageCount" : 6,
 	"result" : [{
@@ -11327,7 +11327,7 @@ Sample output for https://uts-ws.nlm.nih.gov/rest/subsets/current/source/SNOMEDC
 
 ~~~~json
 {
-	"pageSize" : 25,
+	"pageSize" : 200,
 	"pageNumber" : 1,
 	"pageCount" : 1,
 	"result" : {

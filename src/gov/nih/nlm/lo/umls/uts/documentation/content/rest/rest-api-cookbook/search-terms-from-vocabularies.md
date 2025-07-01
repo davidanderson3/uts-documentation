@@ -25,7 +25,7 @@ In this example we've used the `returnIdType` parameter to ask for source-assert
 
 ~~~~json
 {
-    pageSize: 25,
+    pageSize: 200,
         pageNumber: 1,
             result: {
         classType: "searchResults",
@@ -59,7 +59,7 @@ This returns any source-asserted identifier containing a non-suppressible/non-ob
 
 ~~~~.text
 {
-    pageSize: 25,
+    pageSize: 200,
         pageNumber: 1,
             result: {
         classType: "searchResults",
@@ -75,5 +75,5 @@ This returns any source-asserted identifier containing a non-suppressible/non-ob
 ~~~~
 
 #####1
-You'll often receive more than the default 25 objects per page when querying the /search endpoint, unless you're using exact searching.
+You'll often receive more than the default 200 objects per page when querying the /search endpoint, unless you're using exact searching.
 Be sure your code is set up to use the `pageNumber` parameter to make calls to each page.  See [paging through search results](/rest/search/index.html#paging-through-results) for more information.
