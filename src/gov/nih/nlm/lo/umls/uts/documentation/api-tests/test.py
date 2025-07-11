@@ -53,12 +53,15 @@ ENDPOINTS = {
     "Concept Atoms": lambda a: f"/rest/content/{VERSION}/CUI/{a['CUI']}/atoms",
     "Concept Definitions": lambda a: f"/rest/content/{VERSION}/CUI/{a['CUI']}/definitions",
     "Concept Relations": lambda a: f"/rest/content/{VERSION}/CUI/{a['CUI']}/relations",
+    "Code": lambda a: f"/rest/content/{VERSION}/source/{a['SAB']}/{urllib.parse.quote(a['CODE'])}",
+    "Code Attributes": lambda a: f"/rest/content/{VERSION}/source/{a['SAB']}/{urllib.parse.quote(a['CODE'])}/attributes",
     "Code Children": lambda a: f"/rest/content/{VERSION}/source/{a['SAB']}/{urllib.parse.quote(a['CODE'])}/children",
     "Code Parents": lambda a: f"/rest/content/{VERSION}/source/{a['SAB']}/{urllib.parse.quote(a['CODE'])}/parents",
     "Code Ancestors": lambda a: f"/rest/content/{VERSION}/source/{a['SAB']}/{urllib.parse.quote(a['CODE'])}/ancestors",
     "Code Descendants": lambda a: f"/rest/content/{VERSION}/source/{a['SAB']}/{urllib.parse.quote(a['CODE'])}/descendants",
     "Code Relations": lambda a: f"/rest/content/{VERSION}/source/{a['SAB']}/{urllib.parse.quote(a['CODE'])}/relations",
     "Code Atoms": lambda a: f"/rest/content/{VERSION}/source/{a['SAB']}/{urllib.parse.quote(a['CODE'])}/atoms",
+    "Code Default Preferred Atom": lambda a: f"/rest/content/{VERSION}/source/{a['SAB']}/{urllib.parse.quote(a['CODE'])}/atoms/preferred",
     "Code Crosswalk": lambda a: f"/crosswalk/{VERSION}/source/{a['SAB']}/{urllib.parse.quote(a['CODE'])}",
 }
 # Some of these take several seconds, but you can run if you like. 
