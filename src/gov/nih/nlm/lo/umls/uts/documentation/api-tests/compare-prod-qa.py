@@ -1,8 +1,15 @@
 #!/usr/bin/env python3
+import os
 import sys
 import requests
 import html
 import urllib.parse
+
+# ─── Configuration: output directory ───────────────────────────────────────────
+# All HTML files will be written into a "reports" subfolder next to this script.
+OUTPUT_DIR = os.path.join(os.path.dirname(__file__), "reports")
+os.makedirs(OUTPUT_DIR, exist_ok=True)
+# ─────────────────────────────────────────────────────────────────────────────
 
 def fetch_results(term, base_url, api_key):
     url = f"{base_url}?string={urllib.parse.quote_plus(term)}&pageSize=1000&apiKey={api_key}"
@@ -14,7 +21,8 @@ def fetch_results(term, base_url, api_key):
     except Exception as e:
         return f"⚠️ {e}"
 
-def generate_html_report(counts, output_path="report.html"):
+
+def generate_html_report(counts, output_filename="report.html"):
     head = """<!DOCTYPE html>
 <html lang="en">
 <head>
@@ -52,43 +60,41 @@ def generate_html_report(counts, output_path="report.html"):
             f"<td><a href=\"{comp_file}\">View</a></td>"
             "</tr>\n"
         )
-
     tail = """    </tbody>
   </table>
 </body>
 </html>"""
 
+    output_path = os.path.join(OUTPUT_DIR, output_filename)
     with open(output_path, "w", encoding="utf-8") as f:
         f.write(head + rows + tail)
     print(f"✅ Wrote HTML report to {output_path}")
+
 
 def generate_comparison_pages(results_data):
     for term, env_data in results_data.items():
         safe_term = html.escape(term)
         filename = f"compare_{urllib.parse.quote_plus(term)}.html"
+        full_path = os.path.join(OUTPUT_DIR, filename)
 
         prod_list = env_data.get("PROD", [])
         qa_list   = env_data.get("QA",   [])
 
-        # map UI to index
-        prod_idx = {item.get("ui",""): i for i,item in enumerate(prod_list)} if isinstance(prod_list, list) else {}
-        qa_idx   = {item.get("ui",""): i for i,item in enumerate(qa_list)}   if isinstance(qa_list, list) else {}
+        prod_idx = {item.get("ui",""): i for i, item in enumerate(prod_list)} if isinstance(prod_list, list) else {}
+        qa_idx   = {item.get("ui",""): i for i, item in enumerate(qa_list)}   if isinstance(qa_list, list) else {}
 
-        # compute shifts and max_shift
         shifts = [abs(qa_idx[ui] - prod_idx[ui]) for ui in set(prod_idx) & set(qa_idx)]
         max_shift = max(shifts) if shifts else 0
         if max_shift == 0:
-            max_shift = 1   # avoid division by zero when orders are identical
+            max_shift = 1
 
-        # build comparison page
         head = f"""<!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Compare "{safe_term}"</title>
+  <title>Compare \"{safe_term}\"</title>
   <style>
     body {{ font-family: sans-serif; margin: 0; padding: 20px; }}
-    h1 {{ margin-bottom: 20px; }}
     .columns {{ display: flex; gap: 20px; }}
     .column {{ flex: 1; }}
     ol {{ padding-left: 20px; }}
@@ -96,7 +102,7 @@ def generate_comparison_pages(results_data):
   </style>
 </head>
 <body>
-  <h1>Compare results for "{safe_term}"</h1>
+  <h1>Compare results for \"{safe_term}\"</h1>
   <div class="columns">
     <div class="column">
       <h2>PROD</h2>
@@ -105,15 +111,15 @@ def generate_comparison_pages(results_data):
         prod_items_html = ""
         if isinstance(prod_list, list):
             for item in prod_list:
-                ui   = item.get("ui","")
-                name = html.escape(item.get("name",""))
+                ui = item.get("ui", "")
+                name = html.escape(item.get("name", ""))
                 if ui in qa_idx:
                     diff = qa_idx[ui] - prod_idx[ui]
                     norm = diff / max_shift
-                    hue  = (1 - norm) * 60    # green→yellow→red
+                    hue = (1 - norm) * 60
                     style = f' style="background-color:hsl({hue:.1f},100%,90%)"'
                 else:
-                    style = ' style="background-color:hsl(0,0%,90%)"'  # only in PROD
+                    style = ' style="background-color:hsl(0,0%,90%)"'
                 prod_items_html += f"        <li{style}>{name} [{ui}]</li>\n"
         else:
             prod_items_html = f"        <li>{html.escape(str(prod_list))}</li>\n"
@@ -127,15 +133,15 @@ def generate_comparison_pages(results_data):
         qa_items_html = ""
         if isinstance(qa_list, list):
             for item in qa_list:
-                ui   = item.get("ui","")
-                name = html.escape(item.get("name",""))
+                ui = item.get("ui", "")
+                name = html.escape(item.get("name", ""))
                 if ui in prod_idx:
                     diff = qa_idx[ui] - prod_idx[ui]
                     norm = diff / max_shift
-                    hue  = (1 - norm) * 60
+                    hue = (1 - norm) * 60
                     style = f' style="background-color:hsl({hue:.1f},100%,90%)"'
                 else:
-                    style = ' style="background-color:hsl(240,100%,90%)"'  # only in QA
+                    style = ' style="background-color:hsl(240,100%,90%)"'
                 qa_items_html += f"        <li{style}>{name} [{ui}]</li>\n"
         else:
             qa_items_html = f"        <li>{html.escape(str(qa_list))}</li>\n"
@@ -146,10 +152,11 @@ def generate_comparison_pages(results_data):
 </body>
 </html>"""
 
-        with open(filename, "w", encoding="utf-8") as f:
+        with open(full_path, "w", encoding="utf-8") as f:
             f.write(head + prod_items_html + mid + qa_items_html + tail)
 
-    print("✅ Wrote comparison pages for each variant")
+    print(f"✅ Wrote comparison pages into {OUTPUT_DIR}")
+
 
 def main():
     if len(sys.argv) < 2:
@@ -163,46 +170,18 @@ def main():
     }
 
     variant_list = [
-        # Alzheimer’s disease
-        'alzheimer', 'alzheimers', "alzheimer's", 'alzheimer disease',
-        'alzheimer-disease', 'alzheimer s disease',
-        # Parkinson’s disease
-        'parkinson', 'parkinsons', "parkinson's", 'parkinson disease',
-        "parkinson's disease", 'parkinsons disease', 'parkinson-disease',
-        'parkinson s disease',
-        # Crohn’s disease
-        'crohn', 'crohns', "crohn's", 'crohn disease', "crohn's disease",
-        'crohns disease', 'crohn-disease', 'crohn s disease',
-        # Lou Gehrig’s disease / ALS
-        'als', 'amyotrophic lateral sclerosis',
-        'lou gehrigs disease', "lou gehrig's disease", 'lou gehrig disease',
-        # Multiple sclerosis
-        'multiple sclerosis', 'ms',
-        # Diabetes
-        'diabetes', 'diabetes mellitus', 'diabetes type 1', 'diabetes type 2',
-        'type 1 diabetes', 'type i diabetes', 'type 2 diabetes', 'type ii diabetes',
-        't1d', 't2d',
-        # Heart attack / MI
-        'heart attack', 'myocardial infarction', 'mi', 'cardiac infarction',
-        # Acetaminophen / Paracetamol
-        'acetaminophen', 'paracetamol', 'tylenol', 'apap',
-        # Ibuprofen
-        'ibuprofen', 'advil', 'motrin', 'nurofen',
-        # Beta blockers
-        'beta blocker', 'beta-blocker', 'beta blockers', 'beta-blockers',
-        # Statins
-        'statin', 'statins', 'reductase inhibitor', 'cholesterol medication',
-        # COVID-19
-        'covid', 'covid19', 'covid-19', 'coronavirus', 'sars-cov-2', 'sarscov2',
-        # HIV/AIDS
-        'hiv', 'aids', 'hiv aids',
-        'human immunodeficiency virus', 'acquired immune deficiency syndrome',
-        # CUIs
-        'C0022646', 'C4554465',
-        # Codes
-        '42399005', 'D053579', '7623',
-        # SCUI
-        'M0023172'
+        'alzheimer', 'alzheimers', "alzheimer's", 'alzheimer disease', 'alzheimer-disease', 'alzheimer s disease',
+        'parkinson', 'parkinsons', "parkinson's", 'parkinson disease', "parkinson's disease", 'parkinsons disease',
+        'parkinson-disease', 'parkinson s disease', 'crohn', 'crohns', "crohn's", 'crohn disease', "crohn's disease", 
+        'crohns disease', 'crohn-disease', 'crohn s disease', 'als', 'amyotrophic lateral sclerosis',
+        'lou gehrigs disease', "lou gehrig's disease", 'lou gehrig disease', 'multiple sclerosis', 'ms',
+        'diabetes', 'diabetes mellitus', 'diabetes type 1', 'diabetes type 2', 'type 1 diabetes', 'type i diabetes',
+        'type 2 diabetes', 'type ii diabetes', 't1d', 't2d', 'heart attack', 'myocardial infarction', 'mi',
+        'cardiac infarction', 'acetaminophen', 'paracetamol', 'tylenol', 'apap', 'ibuprofen', 'advil', 'motrin',
+        'nurofen', 'beta blocker', 'beta-blocker', 'beta blockers', 'beta-blockers', 'statin', 'statins',
+        'reductase inhibitor', 'cholesterol medication', 'covid', 'covid19', 'covid-19', 'coronavirus',
+        'sars-cov-2', 'sarscov2', 'hiv', 'aids', 'hiv aids', 'human immunodeficiency virus', 
+        'acquired immune deficiency syndrome', 'C0022646', 'C4554465', '42399005', 'D053579', '7623', 'M0023172'
     ]
 
     results_data = {}
