@@ -13,11 +13,14 @@ Run:
 ```
 python preprocess.py 
 ```
-This will identify candidate identifiers and strings that will LIKELY (99.9% chance) return API results. Takes a few minutes. 
+This will identify candidate identifiers and strings that will LIKELY (99.9% chance) return API results.
+The script now saves a list of candidate atoms **per endpoint** in `subset/valid_codes.json`.
+Each test in `test.py` uses its own list of examples. Processing takes a few minutes.
 
 ## Run tests
 
-test.py will choose random examples from the preprocessed subset to test against the API. The examples will be different every time you test. 
+test.py will choose random examples from each endpoint's preprocessed subset to test
+against the API. The examples will be different every time you test.
 
 Run
 ```

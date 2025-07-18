@@ -17,6 +17,34 @@ MRSAT_PATH   = INPUT_DIR / "MRSAT.RRF"
 MRCONSO_PATH = INPUT_DIR / "MRCONSO.RRF"
 OUTPUT_FILE  = OUTPUT_DIR  / "valid_codes.json"
 
+# Endpoint names from test.py. Each will get its own list of candidate atoms.
+ENDPOINT_NAMES = [
+    "Search - basic",
+    "Search - basic - high page size",
+    "Search - exact",
+    "Search - return a CODE",
+    "Search - input CODE, return CUIs",
+    "Search - input CUI, return CODE",
+    "Search - left truncation",
+    "Search - right truncation",
+    "Search - normalized string",
+    "Search - normalized words",
+    "Concept",
+    "Concept Atoms",
+    "Concept Definitions",
+    "Concept Relations",
+    "Code",
+    "Code Attributes",
+    "Code Children",
+    "Code Parents",
+    "Code Ancestors",
+    "Code Descendants",
+    "Code Relations",
+    "Code Atoms",
+    "Code Default Preferred Atom",
+    "Code Crosswalk",
+]
+
 # ---- Step 1: Extract CUIs with Definitions ----
 def extract_cuis_with_definitions(def_path):
     cuis = set()
@@ -120,8 +148,12 @@ def main():
     print(f"✔️  Valid atoms extracted: {len(atoms):,}")
 
     print(f"💾 Saving results to {OUTPUT_FILE}...")
+    # Store a separate list of candidate atoms for each endpoint. Currently
+    # the same atom list works for all endpoints, but separating them makes it
+    # easy to further customize in the future.
+    data = {name: atoms for name in ENDPOINT_NAMES}
     with open(OUTPUT_FILE, "w", encoding="utf-8") as f:
-        json.dump(atoms, f, indent=2)
+        json.dump(data, f, indent=2)
 
     print(f"\n⏱️ Completed in {time.time() - start:.2f} seconds")
 
