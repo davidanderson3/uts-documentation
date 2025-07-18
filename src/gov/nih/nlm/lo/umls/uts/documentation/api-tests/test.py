@@ -31,11 +31,12 @@ if not VALID_CODES_PATH.exists():
     sys.exit(1)
 
 with open(VALID_CODES_PATH, "r", encoding="utf-8") as f:
-    atoms = json.load(f)
-if not atoms:
+    atoms_by_endpoint = json.load(f)
+if not atoms_by_endpoint:
     print("❌ No usable atoms found in valid_codes.json.")
     sys.exit(1)
-print(f"🧠 Loaded {len(atoms):,} prefiltered atoms from {VALID_CODES_PATH.name}")
+total_atoms = sum(len(v) for v in atoms_by_endpoint.values())
+print(f"🧠 Loaded {total_atoms:,} prefiltered atoms across {len(atoms_by_endpoint)} endpoints from {VALID_CODES_PATH.name}")
 
 VERSION = "current"
 ENDPOINTS = {
@@ -80,9 +81,13 @@ metrics = defaultdict(lambda: {"times": [], "failures": 0})
 # ---- Regular Requests ----
 for name, path_fn in ENDPOINTS.items():
     print(f"\n📊 Benchmarking: {name}")
+    candidates = atoms_by_endpoint.get(name)
+    if not candidates:
+        print(f"⚠️  No candidate atoms available for {name}; skipping")
+        continue
     start_time = time.time()
     for _ in range(NUM_TRIALS):
-        atom = random.choice(atoms)
+        atom = random.choice(candidates)
         path = path_fn(atom)
         full_url = f"{BASE_URL}{path}&apiKey={args.apiKey}" if "?" in path else f"{BASE_URL}{path}?apiKey={args.apiKey}"
         try:
