@@ -25,17 +25,52 @@ BASE_URL = {
     "prod": "https://uts-ws.nlm.nih.gov"
 }[args.env]
 
-VALID_CODES_PATH = Path("subset/valid_codes.json")
-if not VALID_CODES_PATH.exists():
-    print(f"❌ {VALID_CODES_PATH} not found. Run the preprocessing script first.")
+VALID_CODES_DIR = Path("subset")
+if not VALID_CODES_DIR.exists():
+    print(f"❌ {VALID_CODES_DIR} not found. Run the preprocessing script first.")
     sys.exit(1)
 
-with open(VALID_CODES_PATH, "r", encoding="utf-8") as f:
-    atoms = json.load(f)
-if not atoms:
-    print("❌ No usable atoms found in valid_codes.json.")
-    sys.exit(1)
-print(f"🧠 Loaded {len(atoms):,} prefiltered atoms from {VALID_CODES_PATH.name}")
+def sanitize(name: str) -> str:
+    return name.replace(" ", "_").replace("/", "_")
+
+endpoint_atoms = {}
+for endpoint in [
+    "Search - basic",
+    "Search - basic - high page size",
+    "Search - exact",
+    "Search - return a CODE",
+    "Search - input CODE, return CUIs",
+    "Search - input CUI, return CODE",
+    "Search - left truncation",
+    "Search - right truncation",
+    "Search - normalized string",
+    "Search - normalized words",
+    "Concept",
+    "Concept Atoms",
+    "Concept Definitions",
+    "Concept Relations",
+    "Code",
+    "Code Attributes",
+    "Code Children",
+    "Code Parents",
+    "Code Ancestors",
+    "Code Descendants",
+    "Code Relations",
+    "Code Atoms",
+    "Code Default Preferred Atom",
+    "Code Crosswalk",
+]:
+    path = VALID_CODES_DIR / f"{sanitize(endpoint)}.json"
+    if not path.exists():
+        print(f"❌ {path} not found. Run the preprocessing script first.")
+        sys.exit(1)
+    with open(path, "r", encoding="utf-8") as f:
+        data = json.load(f)
+    if not data:
+        print(f"❌ No usable atoms found in {path.name}.")
+        sys.exit(1)
+    endpoint_atoms[endpoint] = data
+    print(f"🧠 Loaded {len(data):,} atoms for {endpoint} from {path.name}")
 
 VERSION = "current"
 ENDPOINTS = {
@@ -80,6 +115,7 @@ metrics = defaultdict(lambda: {"times": [], "failures": 0})
 # ---- Regular Requests ----
 for name, path_fn in ENDPOINTS.items():
     print(f"\n📊 Benchmarking: {name}")
+    atoms = endpoint_atoms[name]
     start_time = time.time()
     for _ in range(NUM_TRIALS):
         atom = random.choice(atoms)
