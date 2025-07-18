@@ -15,7 +15,35 @@ MRDEF_PATH   = INPUT_DIR / "MRDEF.RRF"
 MRREL_PATH   = INPUT_DIR / "MRREL.RRF"
 MRSAT_PATH   = INPUT_DIR / "MRSAT.RRF"
 MRCONSO_PATH = INPUT_DIR / "MRCONSO.RRF"
-OUTPUT_FILE  = OUTPUT_DIR  / "valid_codes.json"
+OUTPUT_FILE  = OUTPUT_DIR  / "candidate_sets.json"
+
+# Endpoint names from test.py
+ENDPOINT_NAMES = [
+    "Search - basic",
+    "Search - basic - high page size",
+    "Search - exact",
+    "Search - return a CODE",
+    "Search - input CODE, return CUIs",
+    "Search - input CUI, return CODE",
+    "Search - left truncation",
+    "Search - right truncation",
+    "Search - normalized string",
+    "Search - normalized words",
+    "Concept",
+    "Concept Atoms",
+    "Concept Definitions",
+    "Concept Relations",
+    "Code",
+    "Code Attributes",
+    "Code Children",
+    "Code Parents",
+    "Code Ancestors",
+    "Code Descendants",
+    "Code Relations",
+    "Code Atoms",
+    "Code Default Preferred Atom",
+    "Code Crosswalk"
+]
 
 # ---- Step 1: Extract CUIs with Definitions ----
 def extract_cuis_with_definitions(def_path):
@@ -119,9 +147,19 @@ def main():
     atoms = extract_valid_atoms(MRCONSO_PATH, valid_auis, cuis)
     print(f"✔️  Valid atoms extracted: {len(atoms):,}")
 
+    print("📘 Building candidate sets for each endpoint...")
+
+    def filter_for_endpoint(name, items):
+        low = name.lower()
+        if "left truncation" in low or "right truncation" in low:
+            return [a for a in items if len(a["STR"]) > 4]
+        return items
+
+    candidate_sets = {n: filter_for_endpoint(n, atoms) for n in ENDPOINT_NAMES}
+
     print(f"💾 Saving results to {OUTPUT_FILE}...")
     with open(OUTPUT_FILE, "w", encoding="utf-8") as f:
-        json.dump(atoms, f, indent=2)
+        json.dump(candidate_sets, f, indent=2)
 
     print(f"\n⏱️ Completed in {time.time() - start:.2f} seconds")
 

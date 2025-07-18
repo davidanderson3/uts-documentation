@@ -25,17 +25,17 @@ BASE_URL = {
     "prod": "https://uts-ws.nlm.nih.gov"
 }[args.env]
 
-VALID_CODES_PATH = Path("subset/valid_codes.json")
-if not VALID_CODES_PATH.exists():
-    print(f"❌ {VALID_CODES_PATH} not found. Run the preprocessing script first.")
+CANDIDATE_SETS_PATH = Path("subset/candidate_sets.json")
+if not CANDIDATE_SETS_PATH.exists():
+    print(f"❌ {CANDIDATE_SETS_PATH} not found. Run the preprocessing script first.")
     sys.exit(1)
 
-with open(VALID_CODES_PATH, "r", encoding="utf-8") as f:
-    atoms = json.load(f)
-if not atoms:
-    print("❌ No usable atoms found in valid_codes.json.")
+with open(CANDIDATE_SETS_PATH, "r", encoding="utf-8") as f:
+    candidate_sets = json.load(f)
+if not candidate_sets:
+    print("❌ No usable candidates found in candidate_sets.json.")
     sys.exit(1)
-print(f"🧠 Loaded {len(atoms):,} prefiltered atoms from {VALID_CODES_PATH.name}")
+print(f"🧠 Loaded candidate sets from {CANDIDATE_SETS_PATH.name}")
 
 VERSION = "current"
 ENDPOINTS = {
@@ -81,8 +81,14 @@ metrics = defaultdict(lambda: {"times": [], "failures": 0})
 for name, path_fn in ENDPOINTS.items():
     print(f"\n📊 Benchmarking: {name}")
     start_time = time.time()
+    pool = candidate_sets.get(name)
+    if not pool:
+        print(f"⚠️  No candidates for test '{name}'. Skipping.")
+        metrics[name]["failures"] += NUM_TRIALS
+        endpoint_throughput[name] = {"start": start_time, "end": time.time()}
+        continue
     for _ in range(NUM_TRIALS):
-        atom = random.choice(atoms)
+        atom = random.choice(pool)
         path = path_fn(atom)
         full_url = f"{BASE_URL}{path}&apiKey={args.apiKey}" if "?" in path else f"{BASE_URL}{path}?apiKey={args.apiKey}"
         try:
